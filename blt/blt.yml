@@ -1,0 +1,12 @@
+project:
+  machine_name: justice
+  prefix: JGDR
+  human_name: "Drupal 9 BLT Starter"
+  profile:
+    name: acquia_cms
+  local: {  }
+git:
+  default_branch: develop
+deploy:
+  tag_source: true
+multisites: {  }

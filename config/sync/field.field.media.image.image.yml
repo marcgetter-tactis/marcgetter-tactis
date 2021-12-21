@@ -5,11 +5,11 @@ dependencies:
   config:
     - field.storage.media.image
     - media.type.image
+  module:
+    - image
   enforced:
     module:
       - acquia_cms_image
-  module:
-    - image
 _core:
   default_config_hash: ECtNK74jpST9OWYEQisJ7OXyweZeT1fDO4RBMy4aVgU
 id: media.image.image
@@ -23,6 +23,8 @@ translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
+  handler: 'default:file'
+  handler_settings: {  }
   file_directory: '[date:custom:Y]-[date:custom:m]'
   file_extensions: 'png gif jpg jpeg'
   max_filesize: ''
@@ -38,6 +40,4 @@ settings:
     title: ''
     width: null
     height: null
-  handler: 'default:file'
-  handler_settings: {  }
 field_type: image

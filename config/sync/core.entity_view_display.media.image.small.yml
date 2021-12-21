@@ -8,11 +8,11 @@ dependencies:
     - field.field.media.image.field_tags
     - field.field.media.image.image
     - media.type.image
+  module:
+    - image
   enforced:
     module:
       - acquia_cms_image
-  module:
-    - image
 _core:
   default_config_hash: '-2Jq2ME4ws_C-oW9K-c16dx3u0tZv-xAVprm406ilUk'
 id: media.image.small
@@ -22,13 +22,13 @@ mode: small
 content:
   image:
     type: image
-    weight: 0
-    region: content
     label: hidden
     settings:
-      image_style: ''
       image_link: ''
+      image_style: ''
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   created: true
   field_categories: true

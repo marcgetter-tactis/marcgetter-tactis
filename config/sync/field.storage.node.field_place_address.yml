@@ -2,13 +2,13 @@ uuid: 32c901c3-d825-4a1c-850b-163839201509
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - acquia_cms_place
   module:
     - acquia_cms_common
     - address
     - node
+  enforced:
+    module:
+      - acquia_cms_place
 third_party_settings:
   acquia_cms_common:
     search_index: content

@@ -2,11 +2,11 @@ uuid: 01e16620-12ec-4942-a41d-8626b6deadf0
 langcode: en
 status: true
 dependencies:
+  module:
+    - media
   enforced:
     module:
       - acquia_cms_video
-  module:
-    - media
 _core:
   default_config_hash: IjivCiZZ9NDQS782VkA3J58gS3tjHcyrLAWXb80YznA
 id: media.field_media_oembed_video
@@ -15,8 +15,8 @@ entity_type: media
 type: string
 settings:
   max_length: 255
-  is_ascii: false
   case_sensitive: false
+  is_ascii: false
 module: core
 locked: false
 cardinality: 1

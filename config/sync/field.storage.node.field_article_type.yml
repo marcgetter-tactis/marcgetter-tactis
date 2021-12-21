@@ -2,13 +2,13 @@ uuid: e7772bda-0e2e-4129-9e72-572d692b4b5d
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - acquia_cms_article
   module:
     - acquia_cms_common
     - node
     - taxonomy
+  enforced:
+    module:
+      - acquia_cms_article
 third_party_settings:
   acquia_cms_common:
     search_index: content

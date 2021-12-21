@@ -5,11 +5,11 @@ dependencies:
   config:
     - field.storage.node.body
     - node.type.article
+  module:
+    - text
   enforced:
     module:
       - acquia_cms_article
-  module:
-    - text
 _core:
   default_config_hash: 2Ej5UYaJNSj6E2GbACzOhc5mZzRHdJtgG9iGFEu0yVU
 id: node.article.body

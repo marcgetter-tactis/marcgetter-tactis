@@ -2,11 +2,11 @@ uuid: ad4d1a73-9c9e-4416-a7ca-7a2c161dd41f
 langcode: en
 status: true
 dependencies:
+  module:
+    - node
   enforced:
     module:
       - acquia_cms_place
-  module:
-    - node
 _core:
   default_config_hash: azMnTlm-CrgsTZhFOQnfbieqQk7LwX7xrt1rY833Hn8
 id: node.field_place

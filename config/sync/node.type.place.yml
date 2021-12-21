@@ -2,13 +2,13 @@ uuid: dde37c8b-5b91-40c1-a305-18383a3a3053
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - acquia_cms_place
   module:
     - acquia_cms_common
     - menu_ui
     - scheduler
+  enforced:
+    module:
+      - acquia_cms_place
 third_party_settings:
   acquia_cms_common:
     workflow_id: editorial
@@ -23,11 +23,11 @@ third_party_settings:
         open_graph: open_graph
         schema_place: schema_place
         twitter_cards: twitter_cards
-    search_index: content
     subtype:
       field: field_place_type
       facet: places_place_type
     sitemap_variant: default
+    search_index: content
   menu_ui:
     available_menus:
       - main

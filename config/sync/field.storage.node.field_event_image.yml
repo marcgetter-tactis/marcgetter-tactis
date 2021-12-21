@@ -2,12 +2,12 @@ uuid: cedd57fb-ae22-45d0-9f5a-547eb902da70
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - acquia_cms_event
   module:
     - media
     - node
+  enforced:
+    module:
+      - acquia_cms_event
 _core:
   default_config_hash: x5zVYpjGv3QZdhYuUd49NdIpMWWHmDHZ2Obl4DDes8Y
 id: node.field_event_image

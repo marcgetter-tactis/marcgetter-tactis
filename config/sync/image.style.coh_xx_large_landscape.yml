@@ -2,11 +2,11 @@ uuid: c17e238d-6097-4a13-adf0-b1682f922e72
 langcode: en
 status: true
 dependencies:
+  module:
+    - focal_point
   enforced:
     module:
       - acquia_cms_image
-  module:
-    - focal_point
 _core:
   default_config_hash: wxPh-0Tb8GDq1hJlfRIJ6SWQHvkRpInYmZ6CJ-B2NT8
 name: coh_xx_large_landscape

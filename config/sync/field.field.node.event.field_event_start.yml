@@ -5,11 +5,11 @@ dependencies:
   config:
     - field.storage.node.field_event_start
     - node.type.event
+  module:
+    - datetime
   enforced:
     module:
       - acquia_cms_event
-  module:
-    - datetime
 _core:
   default_config_hash: dTUwrSM_cmbY_gNp-hFn1X-sb_F50Xp6z9Oq3WiOpmI
 id: node.event.field_event_start

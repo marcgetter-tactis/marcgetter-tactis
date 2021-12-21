@@ -2,12 +2,12 @@ uuid: 3f9e4863-28b7-476b-81db-2219a1ce4faa
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - acquia_cms_event
   module:
     - acquia_cms_common
     - node
+  enforced:
+    module:
+      - acquia_cms_event
 third_party_settings:
   acquia_cms_common:
     search_index: content
@@ -20,8 +20,8 @@ entity_type: node
 type: string
 settings:
   max_length: 255
-  is_ascii: false
   case_sensitive: false
+  is_ascii: false
 module: core
 locked: false
 cardinality: 1

@@ -2,13 +2,13 @@ uuid: f300a995-2b73-42d3-95e2-c2e5eecdccc4
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - acquia_cms_person
   module:
     - acquia_cms_common
     - node
     - telephone
+  enforced:
+    module:
+      - acquia_cms_person
 third_party_settings:
   acquia_cms_common:
     search_index: content

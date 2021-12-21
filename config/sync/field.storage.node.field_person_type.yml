@@ -2,13 +2,13 @@ uuid: df1efccc-ca41-4fc5-87fc-09649aac2903
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - acquia_cms_person
   module:
     - acquia_cms_common
     - node
     - taxonomy
+  enforced:
+    module:
+      - acquia_cms_person
 third_party_settings:
   acquia_cms_common:
     search_index: content

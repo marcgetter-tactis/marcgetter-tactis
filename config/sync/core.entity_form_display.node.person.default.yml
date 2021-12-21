@@ -14,9 +14,6 @@ dependencies:
     - field.field.node.person.field_tags
     - node.type.person
     - workflows.workflow.editorial
-  enforced:
-    module:
-      - acquia_cms_person
   module:
     - content_moderation
     - field_group
@@ -26,6 +23,9 @@ dependencies:
     - scheduler_content_moderation_integration
     - telephone
     - text
+  enforced:
+    module:
+      - acquia_cms_person
 third_party_settings:
   field_group:
     group_taxonomy:
@@ -33,29 +33,29 @@ third_party_settings:
         - field_categories
         - field_tags
         - field_person_type
+      label: Taxonomy
+      region: content
       parent_name: ''
       weight: 6
       format_type: fieldset
-      region: content
       format_settings:
-        id: ''
         classes: ''
+        id: ''
         description: ''
         required_fields: true
-      label: Taxonomy
     group_media:
       children:
         - field_person_image
+      label: Media
+      region: content
       parent_name: ''
       weight: 4
       format_type: fieldset
-      region: content
       format_settings:
-        id: ''
         classes: ''
+        id: ''
         description: ''
         required_fields: true
-      label: Media
 _core:
   default_config_hash: mULONVnRvF_nFjG-uhySqPPmvDhHT-iP8KP3e0qvLZE
 id: node.person.default
@@ -90,17 +90,17 @@ content:
     weight: 10
     region: content
     settings:
-      size: 60
       placeholder: ''
+      size: 60
     third_party_settings: {  }
   field_job_title:
+    type: string_textfield
     weight: 1
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_person_image:
     type: media_library_widget
     weight: 4
@@ -109,12 +109,12 @@ content:
       media_types: {  }
     third_party_settings: {  }
   field_person_telephone:
+    type: telephone_default
     weight: 11
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: telephone_default
-    region: content
   field_person_type:
     type: options_select
     weight: 9
@@ -122,11 +122,11 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_place:
+    type: options_select
     weight: 5
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_tags:
     type: entity_reference_autocomplete_tags
     weight: 8
@@ -147,8 +147,8 @@ content:
   moderation_state:
     type: moderation_state_default
     weight: 12
-    settings: {  }
     region: content
+    settings: {  }
     third_party_settings: {  }
   path:
     type: path
@@ -170,9 +170,9 @@ content:
     third_party_settings: {  }
   scheduler_settings:
     weight: 20
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   title:
     type: string_textfield
     weight: 0
@@ -189,12 +189,12 @@ content:
   uid:
     type: entity_reference_autocomplete
     weight: 14
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
-    region: content
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default

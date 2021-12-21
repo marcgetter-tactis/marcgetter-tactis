@@ -1,22 +1,22 @@
-uuid: 283fc158-610c-4558-b44e-4d0fb9208763
+uuid: 3d702741-c337-4248-a0b2-f45cddebf65d
 langcode: en
 status: true
 dependencies:
   module:
-    - datetime
     - user
   enforced:
     module:
       - password_policy
 _core:
-  default_config_hash: fe_vhJzBU4DNfc97fsLUU54pydpOw-caxcFMckk-UA4
-id: user.field_last_password_reset
-field_name: field_last_password_reset
+  default_config_hash: FkcjtYqR-bTc6oZBLdP6A89u1UPfdRIV1NYQg_kkUkg
+id: user.field_pending_expire_sent
+field_name: field_pending_expire_sent
 entity_type: user
-type: datetime
+type: integer
 settings:
-  datetime_type: datetime
-module: datetime
+  unsigned: false
+  size: normal
+module: core
 locked: true
 cardinality: 1
 translatable: true

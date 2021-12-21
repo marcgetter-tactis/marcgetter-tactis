@@ -2,12 +2,12 @@ uuid: 8f2862a8-c31a-4c6d-9f5d-816ca2d29357
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - acquia_cms_document
   module:
     - file
     - media
+  enforced:
+    module:
+      - acquia_cms_document
 _core:
   default_config_hash: z2HbxGobB9jfzOSD0__GxILCQ5UrBH6amyMeI8c6cmI
 id: media.field_media_file

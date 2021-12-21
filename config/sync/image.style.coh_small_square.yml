@@ -2,11 +2,11 @@ uuid: 3459e068-d136-42cb-a121-a78b79dfb34c
 langcode: en
 status: true
 dependencies:
+  module:
+    - focal_point
   enforced:
     config:
       - core.entity_view_display.media.image.default
-  module:
-    - focal_point
 _core:
   default_config_hash: 8a9viyfyfyLjn8_Kf5gpRh3YKKQR32G3r8AtIFiqvn0
 name: coh_small_square

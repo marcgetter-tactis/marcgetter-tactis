@@ -2,13 +2,13 @@ uuid: 43f8d79e-87cb-40dc-ba20-56b1d08385ec
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - acquia_cms_event
   module:
     - acquia_cms_common
     - datetime
     - node
+  enforced:
+    module:
+      - acquia_cms_event
 third_party_settings:
   acquia_cms_common:
     search_index: content

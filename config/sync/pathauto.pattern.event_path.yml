@@ -13,12 +13,12 @@ pattern: 'event/[node:field_event_type]/[node:field_event_start:date:custom:Y]/[
 selection_criteria:
   02726a68-6063-4416-8fb1-0e32a4f82593:
     id: node_type
-    bundles:
-      event: event
     negate: false
+    uuid: 02726a68-6063-4416-8fb1-0e32a4f82593
     context_mapping:
       node: node
-    uuid: 02726a68-6063-4416-8fb1-0e32a4f82593
+    bundles:
+      event: event
 selection_logic: and
 weight: -5
 relationships: {  }

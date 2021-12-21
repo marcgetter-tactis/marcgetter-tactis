@@ -2,12 +2,12 @@ uuid: a6c92d2d-ae1b-41e6-8dea-615cc6e45ece
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - acquia_cms_article
   module:
     - media
     - node
+  enforced:
+    module:
+      - acquia_cms_article
 _core:
   default_config_hash: CtIskvaL3S81-IK2-odFpIH9z1FjeJGjqKm3KW6gV0c
 id: node.field_article_media

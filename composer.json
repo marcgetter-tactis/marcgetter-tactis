@@ -30,6 +30,7 @@
         "drupal/google_tag": "^1.4",
         "drupal/mysql56": "^1.0",
         "drupal/openstreetmap": "^1.0@beta",
+        "drupal/reroute_email": "^2",
         "drupal/samlauth": "^3.3",
         "drupal/scheduled_publish": "^3.9",
         "drupal/term_merge_manager": "^1.0@beta",

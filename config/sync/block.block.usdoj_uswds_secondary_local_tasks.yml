@@ -1,0 +1,22 @@
+uuid: 805cb045-4811-4122-9515-7b97a40a3db3
+langcode: en
+status: true
+dependencies:
+  theme:
+    - usdoj_uswds
+_core:
+  default_config_hash: D_hUB_AW2IvKbVo3lVG-B2KfTsX6xJ-CxfOcRYUnL3E
+id: usdoj_uswds_secondary_local_tasks
+theme: usdoj_uswds
+region: header_top
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  provider: core
+  label_display: '0'
+  primary: false
+  secondary: true
+visibility: {  }

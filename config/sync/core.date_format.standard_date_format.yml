@@ -1,0 +1,10 @@
+uuid: c1ac3e61-1315-4419-b7fd-2a6e7b699285
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: JHrc5DE8x3uLcW1JiKzPNums7O81pFzANABnqVjObJA
+id: standard_date_format
+label: 'Standard date format'
+locked: false
+pattern: 'F j, Y'

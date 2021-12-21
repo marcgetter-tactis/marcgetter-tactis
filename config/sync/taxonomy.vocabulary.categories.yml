@@ -1,0 +1,10 @@
+uuid: 2c02499f-9c3f-4c1f-a6a8-784fe9a3280c
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: iOz6vkJzPTnBCQvNtTcfC6ovJTn5wS1sCL0n533C29Y
+name: Categories
+vid: categories
+description: 'Descriptive metadata, for categorizing content and making search engines happy.'
+weight: 0

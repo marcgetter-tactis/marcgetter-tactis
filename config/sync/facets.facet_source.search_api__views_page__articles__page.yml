@@ -1,0 +1,14 @@
+uuid: d9e742e1-c79c-41ba-8365-449e7d88f8e5
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: giQHbAHgkcSe8X4O2Sl5pQm6qec4qjak8QU0lrhtdSY
+id: search_api__views_page__articles__page
+name: 'search_api:views_page__articles__page'
+filter_key: ''
+url_processor: facets_pretty_paths
+breadcrumb:
+  active: false
+  before: true
+  group: false

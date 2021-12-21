@@ -1,0 +1,9 @@
+uuid: 516e8706-b0c4-49e2-b97f-9165c5b9cae1
+langcode: en
+status: false
+dependencies: {  }
+_core:
+  default_config_hash: JWbmGm_KvY_3No38GsmOrkAy8N9u5Sm4yjJlDJlAW7c
+formId: contact_message_personal_form
+captchaType: default
+label: null

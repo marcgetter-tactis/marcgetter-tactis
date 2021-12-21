@@ -1,0 +1,22 @@
+uuid: 52359286-1dc6-4a08-a056-09dee4d39ffa
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - usdoj_uswds
+_core:
+  default_config_hash: QTwkfDaGeBUk6aerktJBDXso4fCsqLTQOuWKXE1xMPU
+id: usdoj_uswds_content
+theme: usdoj_uswds
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

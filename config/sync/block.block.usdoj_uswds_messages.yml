@@ -1,0 +1,22 @@
+uuid: 05c73ae0-60bc-4d39-befc-56da906e2616
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - usdoj_uswds
+_core:
+  default_config_hash: iIy-YIc9d9s1isAtTIKWDBKd6kd2r6LxoYz_-hkLJco
+id: usdoj_uswds_messages
+theme: usdoj_uswds
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

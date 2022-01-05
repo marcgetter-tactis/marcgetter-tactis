@@ -154,5 +154,8 @@
         "nuke": [
             "rm -rf docroot vendor composer.lock"
         ]
+    },
+    "require-dev": {
+        "acquia/blt-phpcs": "^1.0"
     }
 }

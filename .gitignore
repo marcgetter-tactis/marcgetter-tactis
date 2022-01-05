@@ -101,3 +101,12 @@ deployment_identifier
 /travis_wait*
 /files-private
 .phpcs-cache
+
+# Ignore node modules
+/docroot/themes/custom/usdoj_uswds/node_modules/
+
+# Ignore backup files
+*.tar
+*.tar.gz
+*.sql
+*.sql.gz

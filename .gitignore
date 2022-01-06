@@ -14,6 +14,11 @@
 /docroot/profiles/contrib
 /docroot/themes/contrib
 
+node_modules/
+dist/
+vendor/
+css/
+
 # Files and directories for common development environments, loosely inherited from BLT Project
 # @see https://github.com/acquia/blt-project/blob/11.x/.gitignore
 
@@ -101,3 +106,12 @@ deployment_identifier
 /travis_wait*
 /files-private
 .phpcs-cache
+
+# Ignore node modules
+/docroot/themes/custom/usdoj_uswds/node_modules/
+
+# Ignore backup files
+*.tar
+*.tar.gz
+*.sql
+*.sql.gz

@@ -4,9 +4,9 @@ dependencies:
   module:
     - search
   theme:
-    - uswds_base_subtheme
-id: uswds_base_subtheme_search
-theme: uswds_base_subtheme
+    - uswds_base
+id: uswds_base_search
+theme: uswds_base
 region: secondary_menu
 weight: 10
 provider: null

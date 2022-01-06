@@ -4,9 +4,9 @@ dependencies:
   module:
     - system
   theme:
-    - uswds_base_subtheme
-id: uswds_base_subtheme_breadcrumbs
-theme: uswds_base_subtheme
+    - uswds_base
+id: uswds_base_breadcrumbs
+theme: uswds_base
 region: breadcrumb
 weight: -100
 provider: null

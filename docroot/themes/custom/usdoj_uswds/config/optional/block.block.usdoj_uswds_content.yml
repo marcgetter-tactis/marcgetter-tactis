@@ -4,9 +4,9 @@ dependencies:
   module:
     - system
   theme:
-    - uswds_base_subtheme
-id: uswds_base_subtheme_content
-theme: uswds_base_subtheme
+    - uswds_base
+id: uswds_base_content
+theme: uswds_base
 region: content
 weight: 30
 provider: null

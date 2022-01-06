@@ -4,9 +4,9 @@ dependencies:
   module:
     - system
   theme:
-    - uswds_base_subtheme
-id: uswds_base_subtheme_messages
-theme: uswds_base_subtheme
+    - uswds_base
+id: uswds_base_messages
+theme: uswds_base
 region: highlighted
 weight: -50
 provider: null

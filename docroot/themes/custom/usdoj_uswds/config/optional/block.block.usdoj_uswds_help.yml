@@ -4,9 +4,9 @@ dependencies:
   module:
     - help
   theme:
-    - uswds_base_subtheme
-id: uswds_base_subtheme_help
-theme: uswds_base_subtheme
+    - uswds_base
+id: uswds_base_help
+theme: uswds_base
 region: help
 weight: -30
 provider: null

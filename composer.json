@@ -55,7 +55,9 @@
             "composer/installers": true,
             "ergebnis/composer-normalize": true,
             "acquia/blt": true,
-            "oomphinc/composer-installers-extender": true
+            "oomphinc/composer-installers-extender": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "acquia/blt-phpcs": true
         }
     },
     "extra": {

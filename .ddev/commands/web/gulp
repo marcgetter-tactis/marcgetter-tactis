@@ -1,0 +1,3 @@
+#!/bin/bash
+cd /var/www/html/docroot/themes/custom/usdoj_uswds
+gulp "$@"

@@ -1,0 +1,33 @@
+uuid: 172b098a-f1ca-482e-88fb-cdae6b460529
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+id: block_content.field_background_color
+field_name: field_background_color
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '#FFFFFF'
+      label: White
+    -
+      value: '#F6F6F2'
+      label: Taupe
+    -
+      value: '#162E51'
+      label: 'Dark Blue'
+    -
+      value: '#E9EEF5'
+      label: 'Light Blue'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

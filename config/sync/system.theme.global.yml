@@ -1,6 +1,7 @@
 _core:
   default_config_hash: 9rAU4Pku7eMBQxauQqAgjzlcicFZ2As6zEa6zvTlCB8
 favicon:
+  mimetype: image/png
   path: profiles/contrib/acquia_cms/acquia_cms.png
   url: ''
   use_default: false
@@ -10,6 +11,6 @@ features:
   favicon: true
   node_user_picture: true
 logo:
-  path: profiles/contrib/acquia_cms/acquia_cms.png
+  path: 'public://doj-header-logo.png'
   url: ''
   use_default: false

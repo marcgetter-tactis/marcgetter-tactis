@@ -1,5 +1,5 @@
 _core:
-  default_config_hash: qrHlwFEfb239M4DjfM6MntRFcJeFzirK0JMT-Abgb6M
+  default_config_hash: mBQkqZtj9jwv_ouYpQhiQ9KAMgTliiUG1PpDn1GAsNY
 favicon:
   use_default: true
 features:
@@ -10,7 +10,7 @@ features:
 logo:
   use_default: true
 schemas: {  }
-cdn_provider: ''
+cdn_provider: custom
 cdn_custom_img: 'https://cdn.jsdelivr.net/npm/uswds@2.11.2/dist/img'
 cdn_custom_css: 'https://cdn.jsdelivr.net/npm/uswds@2.11.2/dist/css/uswds.css'
 cdn_custom_css_min: 'https://cdn.jsdelivr.net/npm/uswds@2.11.2/dist/css/uswds.min.css'

@@ -1,0 +1,25 @@
+uuid: fccdbe42-07f7-4166-b41d-b8dc603a4f62
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.mission
+    - field.storage.block_content.field_statistics
+  module:
+    - entity_reference_revisions
+id: block_content.mission.field_statistics
+field_name: field_statistics
+entity_type: block_content
+bundle: mission
+label: Statistics
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles: null
+    negate: 0
+field_type: entity_reference_revisions

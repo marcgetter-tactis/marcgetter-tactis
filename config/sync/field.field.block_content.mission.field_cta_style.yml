@@ -1,0 +1,21 @@
+uuid: 0acd1221-931a-4674-a594-2dbaf3a12a76
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.mission
+    - field.storage.block_content.field_cta_style
+  module:
+    - options
+id: block_content.mission.field_cta_style
+field_name: field_cta_style
+entity_type: block_content
+bundle: mission
+label: 'CTA Style'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

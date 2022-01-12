@@ -39,7 +39,9 @@ module:
   devel_entity_updates: 0
   diff: 0
   editor: 0
+  embed: 0
   entity_clone: 0
+  entity_embed: 0
   entity_reference_revisions: 0
   facets: 0
   facets_pretty_paths: 0
@@ -81,6 +83,7 @@ module:
   page_cache: 0
   page_manager: 0
   panels: 0
+  paragraphs_entity_embed: 0
   password_policy_character_types: 0
   password_policy_length: 0
   password_policy_username: 0

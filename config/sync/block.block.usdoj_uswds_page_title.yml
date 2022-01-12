@@ -15,7 +15,7 @@ _core:
 id: usdoj_uswds_page_title
 theme: usdoj_uswds
 region: content
-weight: -4
+weight: -1
 provider: null
 plugin: page_title_block
 settings:

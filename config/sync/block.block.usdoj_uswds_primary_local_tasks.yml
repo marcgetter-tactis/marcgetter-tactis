@@ -9,7 +9,7 @@ _core:
 id: usdoj_uswds_primary_local_tasks
 theme: usdoj_uswds
 region: content
-weight: -3
+weight: 0
 provider: null
 plugin: local_tasks_block
 settings:

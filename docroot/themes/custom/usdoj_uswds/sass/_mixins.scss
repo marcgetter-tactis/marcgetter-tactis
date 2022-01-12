@@ -1,0 +1,18 @@
+@mixin center-ver($offset:50) {
+    position: absolute;
+    top: $offset * 1%;
+    transform: translateY(-$offset * 1%);
+}
+
+@mixin center-hor($offset:50) {
+    position: absolute;
+    left: $offset * 1%;
+    transform: translateX(-$offset * 1%);
+}
+
+@mixin center-both($offsetX:50, $offsetY:50) {
+    position: absolute;
+    left: $offsetX * 1%;
+    top: $offsetY * 1%;
+    transform: translate((-$offsetX * 1%),(-$offsetY * 1%));
+}

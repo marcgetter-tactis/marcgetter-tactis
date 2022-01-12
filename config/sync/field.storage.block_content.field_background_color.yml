@@ -1,4 +1,4 @@
-uuid: 9ec6becb-e5e5-4517-8457-26ba67237e03
+uuid: 172b098a-f1ca-482e-88fb-cdae6b460529
 langcode: en
 status: true
 dependencies:
@@ -12,20 +12,17 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: background1
-      label: background1
+      value: '#FFFFFF'
+      label: White
     -
-      value: background2
-      label: background2
+      value: '#F6F6F2'
+      label: Taupe
     -
-      value: background3
-      label: background3
+      value: '#162E51'
+      label: 'Dark Blue'
     -
-      value: background4
-      label: background4
-    -
-      value: background5
-      label: background5
+      value: '#E9EEF5'
+      label: 'Light Blue'
   allowed_values_function: ''
 module: options
 locked: false

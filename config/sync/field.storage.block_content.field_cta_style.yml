@@ -1,4 +1,4 @@
-uuid: 410801b8-09f1-4d07-9787-63836483cf34
+uuid: 77c1d07b-6573-4c74-89bd-43ba63fa1594
 langcode: en
 status: true
 dependencies:
@@ -12,20 +12,20 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: style1
-      label: style1
+      value: ''
+      label: Regular
     -
-      value: style2
-      label: style2
+      value: usa-button--outline
+      label: 'Ghost Button'
     -
-      value: style3
-      label: style3
+      value: 'usa-button--outline usa-button--inverse'
+      label: 'Dark BG Button'
     -
-      value: style4
-      label: style4
+      value: usa-button--big
+      label: 'Big Button'
     -
-      value: style5
-      label: style5
+      value: 'usa-button--big usa-button--unstyled'
+      label: Unstyled
   allowed_values_function: ''
 module: options
 locked: false

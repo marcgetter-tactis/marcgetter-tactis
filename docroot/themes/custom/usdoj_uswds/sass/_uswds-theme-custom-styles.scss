@@ -19,3 +19,80 @@ i.e.
 @include u-padding-right('05');
 ----------------------------------------
 */
+
+
+//Header
+header.usa-header--extended {
+   .usa-navbar {
+      background-color: color(primary-darker);
+      max-width: 100%;
+      display: block;
+      height: inherit;
+      .usa-logo {
+         margin: 1rem 0;
+         line-height: 0; 
+         max-width: inherit;
+      }
+      //utilities menu
+      nav ul {
+         list-style: none;
+         padding: 0;
+         margin: 2rem 0 .5rem;
+         float: right;
+         li {
+            display: inline;
+            &:nth-child(2) {
+               border-left: .5px solid white;
+               border-right: .5px solid white;
+               margin: 0 .5rem;
+               padding: 0 .5rem;
+            }
+            a {
+               color: white;
+               text-decoration: none;
+               @include typeset('ui');
+               font-size: .8rem;
+               letter-spacing: ls(1);
+            }
+         }
+      }
+      //search field
+      form.usa-search {
+         [type=search] {
+            border: 1px solid white;
+            border-top-left-radius: .25rem;
+            border-bottom-left-radius: .25rem;
+         }
+         button.usa-button {
+            background-color: color(warning);
+            &:hover {
+               background-color: color(warning-dark);
+            }
+            img.usa-search__submit-icon {
+               width: auto;
+               height: auto;
+            }
+         }
+      }
+      //mobile menu button
+      button.usa-menu-btn {
+         background: none;
+         height: inherit;
+         &:not([disabled]):focus {
+            outline: 0;
+         }
+         &:focus-visible {
+            outline: 0;
+         }
+      }
+   }
+   //main navigation
+   nav.usa-nav {
+      background-color: color(base-darkest);
+      border-top: 2px solid color(warning);
+      ul li a {
+         color: white;
+         padding: 1.5rem;
+      }
+   }
+}

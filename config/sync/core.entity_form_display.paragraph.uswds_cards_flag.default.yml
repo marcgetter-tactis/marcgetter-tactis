@@ -1,0 +1,131 @@
+uuid: 18355cca-3287-478e-a450-ac975f9720f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.uswds_cards_flag.field_button
+    - field.field.paragraph.uswds_cards_flag.field_card_breakpoints
+    - field.field.paragraph.uswds_cards_flag.field_card_image
+    - field.field.paragraph.uswds_cards_flag.field_card_title
+    - field.field.paragraph.uswds_cards_flag.field_image_position
+    - field.field.paragraph.uswds_cards_flag.field_make_card_link
+    - field.field.paragraph.uswds_cards_flag.field_text
+    - paragraphs.paragraphs_type.uswds_cards_flag
+  module:
+    - field_group
+    - link
+    - media_library
+    - paragraphs
+    - text
+third_party_settings:
+  field_group:
+    group_link_fe:
+      children:
+        - field_make_card_link
+        - field_button
+      parent_name: ''
+      weight: 4
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Link Features'
+    group_body_features:
+      children:
+        - field_text
+      parent_name: ''
+      weight: 3
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Body Features'
+    group_media_features:
+      children:
+        - field_image_position
+        - field_card_image
+      parent_name: ''
+      weight: 2
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Media Features'
+_core:
+  default_config_hash: 8n_5S7C2l5jDlZ0fb5vYWS6q2ek7RI1SOhX4xIzvIOw
+id: paragraph.uswds_cards_flag.default
+targetEntityType: paragraph
+bundle: uswds_cards_flag
+mode: default
+content:
+  field_button:
+    weight: 7
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_card_breakpoints:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: uswds_card_breakpoints
+    third_party_settings: {  }
+    region: content
+  field_card_image:
+    weight: 2
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  field_card_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_image_position:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_make_card_link:
+    weight: 6
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_text:
+    weight: 9
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true

@@ -20,6 +20,23 @@ i.e.
 ----------------------------------------
 */
 
+@mixin search-field {
+   .usa-input {
+      border: 1px solid white;
+      border-top-left-radius: .25rem;
+      border-bottom-left-radius: .25rem;
+   }
+   button.usa-button {
+      background-color: color(warning);
+      &:hover {
+         background-color: color(warning-dark);
+      }
+      img.usa-search__submit-icon {
+         width: auto;
+         height: auto;
+      }
+   }
+} 
 
 //Header
 header.usa-header--extended {
@@ -27,7 +44,6 @@ header.usa-header--extended {
       background-color: color(primary-darker);
       max-width: 100%;
       display: block;
-      height: inherit;
       .usa-logo {
          margin: 1rem 0;
          line-height: 0; 
@@ -56,34 +72,9 @@ header.usa-header--extended {
             }
          }
       }
-      //search field
+      //desktop search field
       form.usa-search {
-         [type=search] {
-            border: 1px solid white;
-            border-top-left-radius: .25rem;
-            border-bottom-left-radius: .25rem;
-         }
-         button.usa-button {
-            background-color: color(warning);
-            &:hover {
-               background-color: color(warning-dark);
-            }
-            img.usa-search__submit-icon {
-               width: auto;
-               height: auto;
-            }
-         }
-      }
-      //mobile menu button
-      button.usa-menu-btn {
-         background: none;
-         height: inherit;
-         &:not([disabled]):focus {
-            outline: 0;
-         }
-         &:focus-visible {
-            outline: 0;
-         }
+         @include search-field;
       }
    }
    //main navigation
@@ -95,4 +86,37 @@ header.usa-header--extended {
          padding: 1.5rem;
       }
    }
+
+   //mobile menu functionality
+   @media (max-width: 63.99em) {
+      label.hamburger {
+         background-image: url('/sites/default/files/icons/doj-icon-hamburger-menu.svg');
+         background-size: contain;
+         background-repeat: no-repeat;
+         background-position: center;
+         display: block;
+         width: 2rem;
+         height: 1.5rem;
+         bottom: 4.5rem;
+      }
+      #mobile-btn:checked {
+         &+ label.hamburger {
+            background-image: url('/sites/default/files/icons/doj-icon-hamburger-close.svg');
+            &> nav.usa-nav {
+               display: block;
+               width: 100vw;
+               height: 100vh;
+               top: 4.4rem;
+            }
+         }
+      }
+   }
+}
+
+//mobile search
+form.usa-search--mobile {
+   background-color: color(primary-darker);
+   bottom: 1.75rem;
+   justify-content: center;
+   @include search-field;
 }

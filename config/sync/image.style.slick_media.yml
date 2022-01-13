@@ -1,0 +1,15 @@
+uuid: a6e51715-c4fa-42a4-ac5e-77abc0a6db36
+langcode: en
+status: true
+dependencies: {  }
+name: slick_media
+label: 'Slick media'
+effects:
+  839fd36c-ce1f-4626-a1c6-55af9236f821:
+    uuid: 839fd36c-ce1f-4626-a1c6-55af9236f821
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 853
+      height: 480
+      anchor: center-center

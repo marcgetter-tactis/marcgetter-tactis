@@ -11,7 +11,11 @@ _core:
 id: usdoj_uswds_content
 theme: usdoj_uswds
 region: content
+<<<<<<< HEAD
 weight: -1
+=======
+weight: -7
+>>>>>>> develop
 provider: null
 plugin: system_main_block
 settings:

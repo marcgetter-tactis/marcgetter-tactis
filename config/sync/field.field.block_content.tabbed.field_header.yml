@@ -1,0 +1,19 @@
+uuid: e67e3c69-a70c-4a47-b814-c909add694c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.tabbed
+    - field.storage.block_content.field_header
+id: block_content.tabbed.field_header
+field_name: field_header
+entity_type: block_content
+bundle: tabbed
+label: Header
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

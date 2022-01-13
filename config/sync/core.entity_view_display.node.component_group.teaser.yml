@@ -1,0 +1,32 @@
+uuid: 7204733d-01be-48b1-9b53-42843bed3f09
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.component_group.field_org_abbreviation
+    - field.field.node.component_group.field_org_abbreviation_title
+    - field.field.node.component_group.field_org_body
+    - field.field.node.component_group.field_org_logo
+    - field.field.node.component_group.field_org_type
+    - node.type.component_group
+  module:
+    - user
+id: node.component_group.teaser
+targetEntityType: node
+bundle: component_group
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_org_abbreviation: true
+  field_org_abbreviation_title: true
+  field_org_body: true
+  field_org_logo: true
+  field_org_type: true
+  langcode: true
+  search_api_excerpt: true

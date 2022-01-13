@@ -1,0 +1,75 @@
+uuid: fe0d99b6-7464-411e-beb0-b534a6d43cd9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.component_group.field_org_abbreviation
+    - field.field.node.component_group.field_org_abbreviation_title
+    - field.field.node.component_group.field_org_body
+    - field.field.node.component_group.field_org_logo
+    - field.field.node.component_group.field_org_type
+    - node.type.component_group
+  module:
+    - og
+    - options
+    - text
+    - user
+id: node.component_group.default
+targetEntityType: node
+bundle: component_group
+mode: default
+content:
+  field_org_abbreviation:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_org_abbreviation_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_org_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_org_logo:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_org_type:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  og_group:
+    type: og_group_subscribe
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

@@ -1,8 +1,0 @@
-uuid: f4aaf634-3251-4540-a73e-09759c32f696
-langcode: en
-status: true
-dependencies: {  }
-id: action_center
-label: 'Action Center'
-revision: 1
-description: ''

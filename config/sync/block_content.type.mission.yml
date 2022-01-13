@@ -1,8 +1,0 @@
-uuid: c2ac0cf2-6f84-4a31-b981-dcf815523da4
-langcode: en
-status: true
-dependencies: {  }
-id: mission
-label: mission
-revision: 0
-description: 'This component will feature the mission and statistics.  This component could be used on the USAO or Component home pages as well and updated by the CMS admin.  This component includes text, link, image and statistic information.'

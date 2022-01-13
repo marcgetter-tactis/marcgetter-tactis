@@ -65,8 +65,7 @@ header.usa-header--extended {
             }
             a {
                color: white;
-               text-decoration: none;
-               @include typeset('ui');
+               text-decoration: none; 
                font-size: .8rem;
                letter-spacing: ls(1);
             }

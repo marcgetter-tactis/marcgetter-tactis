@@ -1,0 +1,29 @@
+uuid: 58ba8267-66d9-40a8-ace8-e96c8e3c81cc
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:general:b7fad6cb-f6df-4a2c-88a5-be78d7fc605d'
+  module:
+    - block_content
+    - collapsiblock
+  theme:
+    - usdoj_uswds
+third_party_settings:
+  collapsiblock:
+    collapse_action: 0
+id: footercolumn1
+theme: usdoj_uswds
+region: footer_secondary
+weight: 0
+provider: null
+plugin: 'block_content:b7fad6cb-f6df-4a2c-88a5-be78d7fc605d'
+settings:
+  id: 'block_content:b7fad6cb-f6df-4a2c-88a5-be78d7fc605d'
+  label: 'Footer column 1'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,10 @@
+uuid: 37591531-0172-4235-8c6b-f4365e69d324
+langcode: en
+status: true
+dependencies: {  }
+id: action_center_item
+label: 'Action Center Item'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

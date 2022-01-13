@@ -34,6 +34,7 @@
         "drupal/reroute_email": "^2",
         "drupal/samlauth": "^3.3",
         "drupal/scheduled_publish": "^3.9",
+        "drupal/structure_sync": "^2.0",
         "drupal/term_merge_manager": "^1.0@beta",
         "drupal/tmgmt": "^1.12",
         "drupal/usfedgov_google_analytics": "^1.2",

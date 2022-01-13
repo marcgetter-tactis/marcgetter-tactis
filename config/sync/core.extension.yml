@@ -17,6 +17,7 @@ module:
   admin_toolbar: 0
   admin_toolbar_tools: 0
   block: 0
+  block_class: 0
   block_content: 0
   breakpoint: 0
   captcha: 0
@@ -39,7 +40,9 @@ module:
   devel_entity_updates: 0
   diff: 0
   editor: 0
+  embed: 0
   entity_clone: 0
+  entity_embed: 0
   entity_reference_revisions: 0
   facets: 0
   facets_pretty_paths: 0
@@ -81,6 +84,7 @@ module:
   page_cache: 0
   page_manager: 0
   panels: 0
+  paragraphs_entity_embed: 0
   password_policy_character_types: 0
   password_policy_length: 0
   password_policy_username: 0
@@ -119,10 +123,13 @@ module:
   tmgmt: 0
   token: 0
   toolbar: 0
+  twig_tweak: 0
   update: 0
   user: 0
   username_enumeration_prevention: 0
+  uswds_paragraph_components: 0
   views_ui: 0
+  viewsreference: 0
   workbench_email: 0
   workflows: 0
   extlink: 1

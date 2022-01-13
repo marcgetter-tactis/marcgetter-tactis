@@ -8,7 +8,7 @@ _core:
   default_config_hash: 7cvXIzw8NabmQCWMPqBz0mvIQZzXUZB3OeOTa5eqbCo
 id: usdoj_uswds_primary_local_tasks
 theme: usdoj_uswds
-region: content
+region: header
 weight: 0
 provider: null
 plugin: local_tasks_block

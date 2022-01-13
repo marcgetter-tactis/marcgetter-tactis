@@ -74,14 +74,10 @@
     {{ page.header }}
     <input type="checkbox" class="display-none" id="mobile-btn" />
     <label class="hamburger float-right desktop:float-none position-relative desktop:position-static margin-right-2" for="mobile-btn">
-      <nav class="usa-nav position-absolute desktop:position-static right-neg-2" role="navigation">
+      <nav class="usa-nav position-absolute desktop:position-static right-neg-2 padding-0" role="navigation">
         {% if header_extended %}
         <div class="usa-nav__inner">
           {% endif %}
-
-          <!-- <button class="usa-nav__close">
-            <img src="{{ uswds_images }}close.svg" alt="close"/>
-          </button> -->
 
           {% if page.mobile_menu %}
             <div class="usa-nav-mobile">

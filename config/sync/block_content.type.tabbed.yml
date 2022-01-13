@@ -1,0 +1,8 @@
+uuid: 4832f764-c2e0-454b-be12-8b3553cc251d
+langcode: en
+status: true
+dependencies: {  }
+id: tabbed
+label: Tabbed
+revision: 0
+description: 'This component displays a header, tab headlines and tab content area and overall tab link.  The tab content area can feature images, text, links and cards.  As displayed on the DOJ home page, it will feature the top priority categories and priorities the CMS admin has selected.'

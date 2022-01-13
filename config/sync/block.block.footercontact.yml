@@ -1,0 +1,32 @@
+uuid: 3dcb5967-e924-4c10-898e-1099345a0489
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:general:0381b3b4-293c-4902-8fe0-edb6d3daa77b'
+  module:
+    - block_class
+    - block_content
+    - collapsiblock
+  theme:
+    - usdoj_uswds
+third_party_settings:
+  block_class:
+    classes: footer-contact-block
+  collapsiblock:
+    collapse_action: 0
+id: footercontact
+theme: usdoj_uswds
+region: footer
+weight: -3
+provider: null
+plugin: 'block_content:0381b3b4-293c-4902-8fe0-edb6d3daa77b'
+settings:
+  id: 'block_content:0381b3b4-293c-4902-8fe0-edb6d3daa77b'
+  label: 'Footer contact'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

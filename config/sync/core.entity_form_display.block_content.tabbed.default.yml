@@ -1,0 +1,58 @@
+uuid: 6aadd7c3-811d-4bc5-b16f-882d3e49aa51
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.tabbed
+    - field.field.block_content.tabbed.field_background_color
+    - field.field.block_content.tabbed.field_header
+    - field.field.block_content.tabbed.field_tabs
+  module:
+    - paragraphs
+id: block_content.tabbed.default
+targetEntityType: block_content
+bundle: tabbed
+mode: default
+content:
+  field_background_color:
+    type: options_select
+    weight: 29
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_header:
+    type: string_textfield
+    weight: 27
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_tabs:
+    type: entity_reference_paragraphs
+    weight: 28
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

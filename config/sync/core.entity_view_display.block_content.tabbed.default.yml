@@ -1,0 +1,44 @@
+uuid: e89a3b98-e427-4e15-9227-b02d3591ab28
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.tabbed
+    - field.field.block_content.tabbed.field_background_color
+    - field.field.block_content.tabbed.field_header
+    - field.field.block_content.tabbed.field_tabs
+  module:
+    - entity_reference_revisions
+    - options
+id: block_content.tabbed.default
+targetEntityType: block_content
+bundle: tabbed
+mode: default
+content:
+  field_background_color:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_header:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_tabs:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

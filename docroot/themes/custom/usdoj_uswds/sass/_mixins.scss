@@ -16,3 +16,21 @@
     top: $offsetY * 1%;
     transform: translate((-$offsetX * 1%),(-$offsetY * 1%));
 }
+
+@mixin search-field {
+    .usa-input {
+        border: 1px solid white;
+        border-top-left-radius: .25rem;
+        border-bottom-left-radius: .25rem;
+    }
+    button.usa-button {
+        background-color: color(warning);
+        &:hover {
+            background-color: color(warning-dark);
+        }
+        img.usa-search__submit-icon {
+            width: auto;
+            height: auto;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+uuid: bbb5b259-33d6-4127-b05f-5f5e89983e84
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_org_body
+    - node.type.component_group
+  module:
+    - text
+id: node.component_group.field_org_body
+field_name: field_org_body
+entity_type: node
+bundle: component_group
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

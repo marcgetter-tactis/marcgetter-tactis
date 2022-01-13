@@ -1,0 +1,32 @@
+uuid: 32770aac-4c55-426f-a873-21bdb14ae445
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: false
+    publish_past_date: error
+    publish_past_date_created: false
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    show_message_after_update: true
+    unpublish_enable: false
+    unpublish_required: false
+    unpublish_revision: false
+name: 'Component Group'
+type: component_group
+description: 'Components, topics, and other site sections currently use the Organization content type for it’s home page content. These pages have associated Organic Groups assigned to control user permission.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

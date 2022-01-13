@@ -1,0 +1,32 @@
+uuid: 8e4b2685-2855-4c9d-a9e6-44b398f47be5
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:general:1b39c993-9567-4158-9ff7-2a5c79235e51'
+  module:
+    - block_class
+    - block_content
+    - collapsiblock
+  theme:
+    - usdoj_uswds
+third_party_settings:
+  block_class:
+    classes: footer-address-block
+  collapsiblock:
+    collapse_action: 0
+id: footeraddress
+theme: usdoj_uswds
+region: footer
+weight: -7
+provider: null
+plugin: 'block_content:1b39c993-9567-4158-9ff7-2a5c79235e51'
+settings:
+  id: 'block_content:1b39c993-9567-4158-9ff7-2a5c79235e51'
+  label: 'Footer address'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

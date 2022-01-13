@@ -7,10 +7,8 @@ project:
   local: {  }
 git:
   default_branch: develop
+  remotes:
+    - 'git@github.com:marcgetter-tactis/justice-deploy.git'
 deploy:
   tag_source: true
 multisites: {  }
-command-hooks:
-  frontend-reqs:
-    dir: ${docroot}/themes/custom/usdoj_uswds
-    command: 'npm install'

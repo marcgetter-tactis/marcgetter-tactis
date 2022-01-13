@@ -23,12 +23,18 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
     target_bundles:
       uswds_step_indicator_item: uswds_step_indicator_item
+    negate: 0
     target_bundles_drag_drop:
       text_field:
         weight: 48
+        enabled: false
+      uswds_2_columns:
+        weight: 57
+        enabled: false
+      uswds_3_columns:
+        weight: 58
         enabled: false
       uswds_accordion:
         weight: 49
@@ -51,12 +57,6 @@ settings:
       uswds_cards_flag:
         weight: 55
         enabled: false
-      uswds_2_columns:
-        weight: 57
-        enabled: false
-      uswds_3_columns:
-        weight: 58
-        enabled: false
       uswds_process_item:
         weight: 59
         enabled: false
@@ -64,8 +64,8 @@ settings:
         weight: 60
         enabled: false
       uswds_step_indicator_item:
-        enabled: true
         weight: 61
+        enabled: true
       uswds_step_indicator_list:
         weight: 32
         enabled: false

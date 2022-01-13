@@ -10,3 +10,7 @@ git:
 deploy:
   tag_source: true
 multisites: {  }
+command-hooks:
+  frontend-reqs:
+    dir: ${docroot}/themes/custom/usdoj_uswds
+    command: 'npm install'

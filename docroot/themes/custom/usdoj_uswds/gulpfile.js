@@ -163,7 +163,7 @@ gulp.task("clean-sprite", function(cb) {
 gulp.task(
     "init",
     gulp.series(
-        "copy-uswds-setup",
+        //"copy-uswds-setup",
         "copy-uswds-fonts",
         "copy-uswds-images",
         "copy-uswds-js",

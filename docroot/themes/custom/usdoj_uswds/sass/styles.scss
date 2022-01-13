@@ -80,7 +80,6 @@
 
 // -------------------------------------
 // Import theme custom styles
-
-@import "variables";
-@import "mixins";
+@import "variables.scss";
+@import "mixins.scss";
 @import "uswds-theme-custom-styles";

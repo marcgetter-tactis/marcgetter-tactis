@@ -1,21 +1,18 @@
-uuid: 575897f4-36c8-4ae5-94ed-3f55e3011ce1
+uuid: 152e88d9-a0a0-4d3d-bc32-9fc20ddff0ef
 langcode: en
 status: true
 dependencies:
   module:
-    - block_class
     - collapsiblock
     - system
   theme:
     - usdoj_uswds
 third_party_settings:
-  block_class:
-    classes: site-logo
   collapsiblock:
     collapse_action: 0
 id: sitebranding
 theme: usdoj_uswds
-region: footer
+region: header
 weight: -5
 provider: null
 plugin: system_branding_block

@@ -23,13 +23,19 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
     target_bundles:
       text_field: text_field
+    negate: 0
     target_bundles_drag_drop:
       text_field:
-        enabled: true
         weight: 45
+        enabled: true
+      uswds_2_columns:
+        weight: 29
+        enabled: false
+      uswds_3_columns:
+        weight: 54
+        enabled: false
       uswds_accordion:
         weight: 46
         enabled: false
@@ -50,12 +56,6 @@ settings:
         enabled: false
       uswds_cards_flag:
         weight: 52
-        enabled: false
-      uswds_2_columns:
-        weight: 29
-        enabled: false
-      uswds_3_columns:
-        weight: 54
         enabled: false
       uswds_process_item:
         weight: 54

@@ -4,11 +4,13 @@ status: true
 dependencies:
   config:
     - block_content.type.action_center
+    - field.field.block_content.action_center.field_action_center_items
     - field.field.block_content.action_center.field_background_color
     - field.field.block_content.action_center.field_cta
     - field.field.block_content.action_center.field_display_items
     - field.field.block_content.action_center.field_heading
   module:
+    - entity_reference_revisions
     - link
     - options
 id: block_content.action_center.default
@@ -16,6 +18,15 @@ targetEntityType: block_content
 bundle: action_center
 mode: default
 content:
+  field_action_center_items:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
   field_background_color:
     type: list_default
     label: above

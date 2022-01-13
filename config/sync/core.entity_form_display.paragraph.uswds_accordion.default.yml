@@ -20,6 +20,7 @@ content:
   field_accordion_section:
     type: entity_reference_paragraphs
     weight: 3
+    region: content
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -28,28 +29,27 @@ content:
       form_display_mode: default
       default_paragraph_type: uswds_accordion_section
     third_party_settings: {  }
-    region: content
   field_bordered:
+    type: boolean_checkbox
     weight: 1
+    region: content
     settings:
       display_label: true
     third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   field_default_open:
+    type: number
     weight: 2
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_multiselect:
+    type: boolean_checkbox
     weight: 0
+    region: content
     settings:
       display_label: true
     third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
 hidden:
   created: true
   status: true

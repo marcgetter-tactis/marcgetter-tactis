@@ -5,7 +5,7 @@ php_version: "7.4"
 webserver_type: nginx-fpm
 router_http_port: "80"
 router_https_port: "443"
-xdebug_enabled: false
+xdebug_enabled: true
 additional_hostnames: []
 additional_fqdns: []
 mariadb_version: "10.3"
@@ -15,6 +15,9 @@ mutagen_enabled: false
 use_dns_when_possible: true
 composer_version: ""
 web_environment: []
+hooks:
+  post-start:
+    - exec: "ln -sf /var/www/html/vendor/acquia/blt/bin/blt /usr/bin/blt"
 
 # Key features of ddev's config.yaml:
 

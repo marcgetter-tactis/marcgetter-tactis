@@ -29,6 +29,7 @@
         "drupal/extlink": "^1.6",
         "drupal/fast_404": "^2.0@alpha",
         "drupal/google_tag": "^1.4",
+        "drupal/image_widget_crop": "^2.3",
         "drupal/group": "^1.4",
         "drupal/mysql56": "^1.0",
         "drupal/og": "^1.0@alpha",

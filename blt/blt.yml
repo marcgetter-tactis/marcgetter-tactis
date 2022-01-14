@@ -19,3 +19,10 @@ drush:
     local: self
     ci: self
   default_alias: '${drush.aliases.local}'
+command-hooks:
+  frontend-reqs:
+    dir: '${repo.root}'
+    command: ./blt/scripts/frontend-setup.sh
+  frontend-assets:
+    dir: '${repo.root}'
+    command: ./blt/scripts/frontend-build.sh

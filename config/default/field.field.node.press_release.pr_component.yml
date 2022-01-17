@@ -1,0 +1,29 @@
+uuid: b1f57c5a-dae5-4ee2-803e-9ab56bf1d2ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pr_topic
+    - node.type.press_release
+    - taxonomy.vocabulary.article_type
+id: node.press_release.pr_component
+field_name: pr_component
+entity_type: node
+bundle: press_release
+label: Component(s)
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      article_type: article_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

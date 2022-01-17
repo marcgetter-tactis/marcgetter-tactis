@@ -1,0 +1,19 @@
+uuid: b0b120bf-1f11-4e9d-9972-1649207aed0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pr_subtitle
+    - node.type.press_release
+id: node.press_release.field_pr_subtitle
+field_name: field_pr_subtitle
+entity_type: node
+bundle: press_release
+label: Subtitle
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

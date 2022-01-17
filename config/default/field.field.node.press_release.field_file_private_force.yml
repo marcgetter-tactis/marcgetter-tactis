@@ -1,0 +1,21 @@
+uuid: 998ffc0f-76d5-458c-ba3b-4c1481ac2229
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_file_private_force
+    - node.type.press_release
+  module:
+    - options
+id: node.press_release.field_file_private_force
+field_name: field_file_private_force
+entity_type: node
+bundle: press_release
+label: 'Override search index settings for all attached files'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

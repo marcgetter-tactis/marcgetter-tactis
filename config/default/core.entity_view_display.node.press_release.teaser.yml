@@ -1,0 +1,46 @@
+uuid: a9513df1-5618-4f6c-a779-7babdc672c90
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.press_release.field_archived
+    - field.field.node.press_release.field_file_private_force
+    - field.field.node.press_release.field_pr_contact
+    - field.field.node.press_release.field_pr_date
+    - field.field.node.press_release.field_pr_image
+    - field.field.node.press_release.field_pr_number
+    - field.field.node.press_release.field_pr_subtitle
+    - field.field.node.press_release.field_pr_teaser
+    - field.field.node.press_release.field_pr_teaser_image
+    - field.field.node.press_release.field_pr_topic
+    - field.field.node.press_release.pr_component
+    - field.field.node.press_release.pr_invisible
+    - node.type.press_release
+  module:
+    - user
+id: node.press_release.teaser
+targetEntityType: node
+bundle: press_release
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_archived: true
+  field_file_private_force: true
+  field_pr_contact: true
+  field_pr_date: true
+  field_pr_image: true
+  field_pr_number: true
+  field_pr_subtitle: true
+  field_pr_teaser: true
+  field_pr_teaser_image: true
+  field_pr_topic: true
+  langcode: true
+  pr_component: true
+  pr_invisible: true
+  search_api_excerpt: true

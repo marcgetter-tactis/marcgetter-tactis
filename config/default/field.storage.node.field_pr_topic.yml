@@ -1,0 +1,20 @@
+uuid: 411c631d-147f-46c1-aba5-71fd5b49cc4d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_pr_topic
+field_name: field_pr_topic
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

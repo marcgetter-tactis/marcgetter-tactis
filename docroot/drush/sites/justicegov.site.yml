@@ -1,0 +1,64 @@
+# Application 'justicegov', environment 'dev'.
+dev:
+  root: /var/www/html/justicegov.dev/docroot
+  ac-site: justicegov
+  ac-env: dev
+  ac-realm: prod
+  uri: justicegovdev.prod.acquia-sites.com
+  dev.livedev:
+    parent: '@justicegov.dev'
+    root: /mnt/gfs/justicegov.dev/livedev/docroot
+  host: justicegovdev.ssh.prod.acquia-sites.com
+  user: justicegov.dev
+  paths:
+    drush-script: drush9
+
+
+# Application 'justicegov', environment 'prod'.
+prod:
+  root: /var/www/html/justicegov.prod/docroot
+  ac-site: justicegov
+  ac-env: prod
+  ac-realm: prod
+  uri: justicegov.prod.acquia-sites.com
+  prod.livedev:
+    parent: '@justicegov.prod'
+    root: /mnt/gfs/justicegov.prod/livedev/docroot
+  host: justicegov.ssh.prod.acquia-sites.com
+  user: justicegov.prod
+  paths:
+    drush-script: drush9
+
+
+# Application 'justicegov', environment 'ra'.
+ra:
+  root: /var/www/html/justicegov.ra/docroot
+  ac-site: justicegov
+  ac-env: ra
+  ac-realm: prod
+  uri: justicegovra.prod.acquia-sites.com
+  ra.livedev:
+    parent: '@justicegov.ra'
+    root: /mnt/gfs/justicegov.ra/livedev/docroot
+  host: justicegovra.ssh.prod.acquia-sites.com
+  user: justicegov.ra
+  paths:
+    drush-script: drush9
+
+
+# Application 'justicegov', environment 'test'.
+test:
+  root: /var/www/html/justicegov.test/docroot
+  ac-site: justicegov
+  ac-env: test
+  ac-realm: prod
+  uri: justicegovstg.prod.acquia-sites.com
+  test.livedev:
+    parent: '@justicegov.test'
+    root: /mnt/gfs/justicegov.test/livedev/docroot
+  host: justicegovstg.ssh.prod.acquia-sites.com
+  user: justicegov.test
+  paths:
+    drush-script: drush9
+
+

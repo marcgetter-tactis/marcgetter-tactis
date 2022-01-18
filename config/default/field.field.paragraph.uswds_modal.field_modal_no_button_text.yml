@@ -1,0 +1,21 @@
+uuid: 7f00834c-16a0-469a-b0eb-7735a2f233a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_modal_no_button_text
+    - paragraphs.paragraphs_type.uswds_modal
+_core:
+  default_config_hash: 1VEhMYspF9X6unCRpz4xg07W1_dBT8nTA5QQjRABjog
+id: paragraph.uswds_modal.field_modal_no_button_text
+field_name: field_modal_no_button_text
+entity_type: paragraph
+bundle: uswds_modal
+label: 'No Button Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

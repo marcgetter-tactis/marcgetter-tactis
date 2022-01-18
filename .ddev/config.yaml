@@ -15,6 +15,9 @@ mutagen_enabled: false
 use_dns_when_possible: true
 composer_version: ""
 web_environment: []
+hooks:
+  post-start:
+    - exec: "ln -sf /var/www/html/vendor/acquia/blt/bin/blt /usr/bin/blt"
 
 # Key features of ddev's config.yaml:
 

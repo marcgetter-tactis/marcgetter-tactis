@@ -1,0 +1,27 @@
+uuid: d51309a9-64f6-4822-a258-dbe709049ced
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_uswds_breakpoints
+    - paragraphs.paragraphs_type.uswds_3_column_breakpoints
+_core:
+  default_config_hash: a85H_aniEvSAxHx9sojMAceisHi6mWdj-laisTM1bsU
+id: paragraph.uswds_3_column_breakpoints.field_uswds_breakpoints
+field_name: field_uswds_breakpoints
+entity_type: paragraph
+bundle: uswds_3_column_breakpoints
+label: 'USWDS Breakpoints'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: uswds_entity_references
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

@@ -22,9 +22,8 @@
 {% if content %}
 <div{{ attributes.addClass(classes) }}>
     <div class="grid-container">
-      <div class="grid-row">
-        {{ content }}
-      </div>
+      {{ content }}
+      
       <!-- mobile search -->
       <div class="grid-row desktop:display-none">
         <section class="grid-col" aria-label="Small search component">

@@ -49,346 +49,246 @@
 */
 #}
 {% if government_banner %}
-    {% block government_banner %}
-        <section class="usa-banner">
-            {{ government_banner }}
-        </section>
-    {% endblock %}
+{% block government_banner %}
+<section class="usa-banner">
+    {{ government_banner }}
+</section>
+{% endblock %}
 {% endif %}
 
 <div class="usa-overlay"></div>
 
 {% block header %}
-    <header class="{{ header_classes }}" id="header" role="banner">
+<header class="{{ header_classes }}" id="header" role="banner">
 
-        {% if page.header_top %}
-            <div class="usa-banner-inner">
-                {{ page.header_top }}
-            </div>
+    {% if page.header_top %}
+    <div class="usa-banner-inner">
+        {{ page.header_top }}
+    </div>
+    {% endif %}
+
+    {% if header_basic %}
+    <div class="usa-nav-container">
         {% endif %}
 
-        {% if header_basic %}
-        <div class="usa-nav-container">
-            {% endif %}
+        {{ page.header }}
+        <input type="checkbox" class="display-none" id="mobile-btn" />
+        <label class="hamburger float-right desktop:float-none position-relative desktop:position-static margin-right-2" for="mobile-btn">
+            <nav class="usa-nav position-absolute desktop:position-static right-neg-2 padding-0" role="navigation">
+                {% if header_extended %}
+                <div class="usa-nav__inner">
+                    {% endif %}
 
-            {{ page.header }}
-            <input type="checkbox" class="display-none" id="mobile-btn" />
-            <label class="hamburger float-right desktop:float-none position-relative desktop:position-static margin-right-2" for="mobile-btn">
-                <nav class="usa-nav position-absolute desktop:position-static right-neg-2 padding-0" role="navigation">
-                    {% if header_extended %}
-                    <div class="usa-nav__inner">
-                        {% endif %}
-
-                        {% if page.mobile_menu %}
-                            <div class="usa-nav-mobile">
-                                {{ page.mobile_menu }}
-                            </div>
-                        {% endif %}
-
-                        {% if page.mobile_menu %}
-                        <div class="usa-nav-desktop">
-                            {% endif %}
-
-                            {% if page.primary_menu %}
-                                {{ page.primary_menu }}
-                            {% endif %}
-
-                            {% if page.secondary_menu %}
-                                {{ page.secondary_menu }}
-                            {% endif %}
-
-                            {% if page.mobile_menu %}
-                        </div>
-                        {% endif %}
-
-                        {% if header_extended %}
+                    {% if page.mobile_menu %}
+                    <div class="usa-nav-mobile">
+                        {{ page.mobile_menu }}
                     </div>
                     {% endif %}
-                </nav>
-            </label>
 
-            <!-- mobile search -->
-            <div class="desktop:display-none">
-                <section aria-label="Small search component">
-                    <form class="usa-search usa-search--mobile padding-bottom-3 width-full position-relative" role="search">
-                        <div class="width-mobile border-top padding-top-2 border-gray-50">
-                            <label class="usa-sr-only" for="search-field-en-small"> Search </label>
-                            <input
-                                    class="usa-input"
-                                    id="search-field-en-small"
-                                    type="search"
-                                    name="search"
-                            />
-                            <button class="usa-button" type="submit">
-                                <img
-                                        src="/sites/default/files/icons/doj-icon-header-search.svg"
-                                        alt="Search"
-                                />
-                            </button>
-                        </div>
-                    </form>
-                </section>
-            </div>
+                    {% if page.mobile_menu %}
+                    <div class="usa-nav-desktop">
+                        {% endif %}
 
-            {% if header_basic %}
+                        {% if page.primary_menu %}
+                        {{ page.primary_menu }}
+                        {% endif %}
+
+                        {% if page.secondary_menu %}
+                        {{ page.secondary_menu }}
+                        {% endif %}
+
+                        {% if page.mobile_menu %}
+                    </div>
+                    {% endif %}
+
+                    {% if header_extended %}
+                </div>
+                {% endif %}
+            </nav>
+        </label>
+
+        <!-- mobile search -->
+        <div class="desktop:display-none">
+            <section aria-label="Small search component">
+                <form class="usa-search usa-search--mobile padding-bottom-3 width-full position-relative" role="search">
+                    <div class="width-mobile border-top padding-top-2 border-gray-50">
+                        <label class="usa-sr-only" for="search-field-en-small"> Search </label>
+                        <input
+                               class="usa-input"
+                               id="search-field-en-small"
+                               type="search"
+                               name="search"
+                               />
+                        <button class="usa-button" type="submit">
+                            <img
+                                 src="/sites/default/files/icons/doj-icon-header-search.svg"
+                                 alt="Search"
+                                 />
+                        </button>
+                    </div>
+                </form>
+            </section>
         </div>
-        {% endif %}
 
-    </header>
+        {% if header_basic %}
+    </div>
+    {% endif %}
+
+</header>
 {% endblock %}
 
 {% if page.hero %}
-    {% block hero %}
-        <section class="usa-hero">
-            <div class="grid-container">
-                {{ page.hero }}
-            </div>
-        </section>
-    {% endblock %}
+{% block hero %}
+<section class="usa-hero">
+    <div class="grid-container">
+        {{ page.hero }}
+    </div>
+</section>
+{% endblock %}
 {% endif %}
 
 {% block main %}
-    <main class="main-content usa-layout-docs usa-section {{ main_classes }}" role="main"
-          id="main-content">
-        <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+<main class="main-content usa-layout-docs usa-section {{ main_classes }}" role="main"
+      id="main-content">
+    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
-        <div class="grid-container">
+    <div class="grid-container">
 
-            {% if page.breadcrumb or page.highlighted or page.help %}
-                {% block breadcrumb %}
-                    <div class="grid-row">
-                        {{ page.breadcrumb }}
-                    </div>
-                {% endblock %}
+        {% if page.breadcrumb or page.highlighted or page.help %}
+        {% block breadcrumb %}
+        <div class="grid-row">
+            {{ page.breadcrumb }}
+        </div>
+        {% endblock %}
 
-                {% block highlighted %}
-                    <div class="">
-                        {{ page.highlighted }}
-                    </div>
-                {% endblock %}
+        {% block highlighted %}
+        <div class="">
+            {{ page.highlighted }}
+        </div>
+        {% endblock %}
 
-                {# Help #}
-                {% if page.help %}
-                    {% block help %}
-                        <div class="grid-row ">
-                            {{ page.help }}
-                        </div>
-                    {% endblock %}
-                {% endif %}
+        {# Help #}
+        {% if page.help %}
+        {% block help %}
+        <div class="grid-row ">
+            {{ page.help }}
+        </div>
+        {% endblock %}
+        {% endif %}
+        {% endif %}
+
+        <div class="grid-row grid-gap">
+            {% if page.sidebar_first %}
+            {% block sidebar_first %}
+            <div
+                 class="usa-layout-docs__sidenav desktop:grid-col-3 layout-sidebar-first">
+                {{ page.sidebar_first }}
+            </div>
+            {% endblock %}
             {% endif %}
 
-            <div class="grid-row grid-gap">
-                {% if page.sidebar_first %}
-                    {% block sidebar_first %}
-                        <div
-                                class="usa-layout-docs__sidenav desktop:grid-col-3 layout-sidebar-first">
-                            {{ page.sidebar_first }}
-                        </div>
-                    {% endblock %}
-                {% endif %}
+            {% block content %}
+            <div class="usa-layout-docs__main desktop:grid-col-{% if page.sidebar_first or page.sidebar_second %}9{% else %}fill{% endif %}">
+                {{ page.content }}
+            </div>{# /.layout-content #}
+            {% endblock %}
 
-                {% block content %}
-                <div class="usa-layout-docs__main desktop:grid-col-{% if page.sidebar_first or page.sidebar_second %}9{% else %}fill{% endif %}">
-                    {{ page.content }}
-                    </div>{# /.layout-content #}
-                {% endblock %}
-
-                {% if page.sidebar_second %}
-                    {% block sidebar_second %}
-                        <div
-                                class="usa-layout-docs__sidenav desktop:grid-col-3 layout-sidebar-second">
-                            {{ page.sidebar_second }}
-                        </div>
-                    {% endblock %}
-                {% endif %}
+            {% if page.sidebar_second %}
+            {% block sidebar_second %}
+            <div
+                 class="usa-layout-docs__sidenav desktop:grid-col-3 layout-sidebar-second">
+                {{ page.sidebar_second }}
             </div>
+            {% endblock %}
+            {% endif %}
         </div>
-    </main>
+    </div>
+</main>
 {% endblock %}
 
 {% block footer %}
-    <footer class="{{ footer_classes }}" role="contentinfo">
+<footer class="{{ footer_classes }}" role="contentinfo">
 
-        {% if display_footer_primary %}
-            <div class="usa-footer__primary-section">
+    {% if display_footer_primary %}
+    <div class="usa-footer__primary-section">
 
-                <div class="usa-footer__primary-content">
-                    {% if footer_style != 'medium' %}
-                    <div class="grid-container">
-                        <div class="grid-row grid-gap">
-                            {% endif %}
+        <div class="usa-footer__primary-content">
+            {% if footer_style != 'medium' %}
+            <div class="grid-container">
+                <div class="grid-row grid-gap">
+                    {% endif %}
 
-                            {% if page.footer_menu %}
-                                {{ page.footer_menu }}
-                            {% endif %}
+                    {% if page.footer_menu %}
+                    {{ page.footer_menu }}
+                    {% endif %}
 
-                            {% if footer_slim and (footer_phone or footer_email) %}
-                                <div class="mobile-lg:grid-col-4">
-                                    <address class="usa-footer__address">
-                                        <div class="grid-row grid-gap mobile-lg:grid-gap-0">
+                    {% if footer_slim and (footer_phone or footer_email) %}
+                    <div class="mobile-lg:grid-col-4">
+                        <address class="usa-footer__address">
+                            <div class="grid-row grid-gap mobile-lg:grid-gap-0">
 
-                                            {% if footer_phone %}
-                                                <div
-                                                        class="grid-col-auto mobile-lg:grid-col-12 desktop:grid-col-auto">
-                                                    <div class="usa-footer-contact_info">
-                                                        <a
-                                                                href="tel:{{ footer_phone }}">{{ footer_phone }}</a>
-                                                    </div>
-                                                </div>
-                                            {% endif %}
-
-                                            {% if footer_email %}
-                                                <div
-                                                        class="grid-col-auto mobile-lg:grid-col-12 desktop:grid-col-auto">
-                                                    <div class="usa-footer-contact_info">
-                                                        <a
-                                                                href="mailto:{{ footer_email }}">{{ footer_email }}</a>
-                                                    </div>
-                                                </div>
-                                            {% endif %}
-                                        </div>
-                                    </address>
+                                {% if footer_phone %}
+                                <div
+                                     class="grid-col-auto mobile-lg:grid-col-12 desktop:grid-col-auto">
+                                    <div class="usa-footer-contact_info">
+                                        <a
+                                           href="tel:{{ footer_phone }}">{{ footer_phone }}</a>
+                                    </div>
                                 </div>
-                            {% endif %}
+                                {% endif %}
 
-                            {% if footer_style != 'medium' %}
-                        </div>
+                                {% if footer_email %}
+                                <div
+                                     class="grid-col-auto mobile-lg:grid-col-12 desktop:grid-col-auto">
+                                    <div class="usa-footer-contact_info">
+                                        <a
+                                           href="mailto:{{ footer_email }}">{{ footer_email }}</a>
+                                    </div>
+                                </div>
+                                {% endif %}
+                            </div>
+                        </address>
                     </div>
                     {% endif %}
 
-                    {% if page.footer %}
-                        <div class="grid-container">
-                            <div class="blocks-wrapper">
-                                {{ page.footer }}
-                            </div>
-                        </div>
-                    {% endif %}
-                </div>
-
-            </div>
-        {% endif %}
-
-        {% if display_footer_secondary %}
-            <div class="usa-footer__secondary-section">
-                <div class="grid-container">
-                    <div class="grid-row grid-gap">
-                        {% if display_footer_agency %}
-                        <div
-                                class="usa-footer__logo grid-row mobile-lg:grid-col-6 mobile-lg:grid-gap-2">
-
-                            {% if footer_agency_url %}
-                            <a href="{{ footer_agency_url }}">
-                                {% endif %}
-
-                                {% if footer_agency_logo %}
-                                    <div class="mobile-lg:grid-col-auto">
-                                        <img class="usa-footer__logo-img"
-                                             src="{{ footer_agency_logo }}"
-                                             alt="{{ 'Agency logo'|t }}">
-                                    </div>
-                                {% endif %}
-
-                                {% if footer_agency_name %}
-                                    <div class="mobile-lg:grid-col-auto">
-                                        <h3
-                                                class="usa-footer__logo-heading">{{ footer_agency_name }}</h3>
-                                    </div>
-                                {% endif %}
-
-                                {% if footer_agency_url %}
-                            </a>
-                            {% endif %}
-
-                        </div>
-
-                        {% if not footer_slim %}
-                            <div class="usa-footer__contact-links desktop:grid-col-6">
-                                {% if facebook or twitter or youtube or rss %}
-                                    <div class="usa-footer__social-links grid-row grid-gap-1">
-                                        {% if facebook %}
-                                            <div class="grid-col-auto">
-                                                <a class="usa-social-link usa-social-link--facebook" href="{{ facebook }}">
-                                                    <span>Facebook</span>
-                                                </a>
-                                            </div>
-                                        {% endif %}
-
-                                        {% if twitter %}
-                                            <div class="grid-col-auto">
-                                                <a class="usa-social-link usa-social-link--twitter" href="{{ twitter }}">
-                                                    <span>Twitter</span>
-                                                </a>
-                                            </div>
-                                        {% endif %}
-
-                                        {% if youtube %}
-                                            <div class="grid-col-auto">
-                                                <a class="usa-social-link usa-social-link--youtube" href="{{ youtube }}">
-                                                    <span>YouTube</span>
-                                                </a>
-                                            </div>
-                                        {% endif %}
-
-                                        {% if instagram %}
-                                            <div class="grid-col-auto">
-                                                <a class="usa-social-link usa-social-link--instagram" href="{{ instagram }}">
-                                                    <span>Instagram</span>
-                                                </a>
-                                            </div>
-                                        {% endif %}
-
-                                        {% if rss %}
-                                            <div class="grid-col-auto">
-                                                <a class="usa-social-link usa-social-link--rss" href="{{ rss }}">
-                                                    <span>RSS</span>
-                                                </a>
-                                            </div>
-                                        {% endif %}
-                                    </div>
-                                {% endif %}
-                                {% if contact_center %}
-                                    <h3
-                                            class="usa-footer__contact-heading">{{ contact_center }}</h3>
-                                {% endif %}
-                                <address class="usa-footer__address">
-                                    <div class="usa-footer__contact-info grid-row grid-gap">
-                                        {% if phone %}
-                                            <div class="grid-col-auto">
-                                                <a href="tel:{{ phone }}">{{ phone }}</a>
-                                            </div>
-                                        {% endif %}
-
-                                        {% if email %}
-                                            <div class="grid-col-auto">
-                                                <a href="mailto:{{ email }}">{{ email }}</a>
-                                            </div>
-                                        {% endif %}
-                                    </div>
-                                </address>
-                            </div>
-                        {% endif %}
-
-                    </div>
-                    {% endif %}
-
-                    {% if page.footer_secondary %}
-                        <div class="grid-container">
-                            <div class="blocks-wrapper">
-                                {{ page.footer_secondary }}
-                            </div>
-                        </div>
-                    {% endif %}
+                    {% if footer_style != 'medium' %}
                 </div>
             </div>
-        {% endif %}
+            {% endif %}
 
-        <div class="grid-container position-relative">
-            <div class="return-to-top">
-                <a href="#"><svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
-                        <use xlink:href="/assets/img/sprite.svg#expand_less"></use>
-                    </svg>{{ 'Top'|t }}</a>
+            {% if page.footer %}
+            <div class="grid-container">
+                <div class="blocks-wrapper">
+                    {{ page.footer }}
+                </div>
             </div>
+            {% endif %}
         </div>
 
-    </footer>
+    </div>
+    {% endif %}
+
+    {% if display_footer_secondary %}
+    <div class="usa-footer__secondary-section">
+
+        {% if page.footer_secondary %}
+        <div class="grid-container">
+            <div class="blocks-wrapper">
+                {{ page.footer_secondary }}
+            </div>
+        </div>
+        {% endif %}
+
+    </div>
+    {% endif %}
+    
+    <div class="return-to-top">
+        <div class="grid-container position-relative">
+            <a href="#">
+                <img src="{{ base_path ~ directory }}/images/doj-icon-back-top-arrow-up.png" alt="up arrow" width="136" height="76" />
+                {{ 'Top'|t }}</a>
+        </div>
+    </div>
+
+</footer>
 {% endblock %}

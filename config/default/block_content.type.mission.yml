@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: mission
-label: mission
+label: Mission
 revision: 0
 description: 'This component will feature the mission and statistics.  This component could be used on the USAO or Component home pages as well and updated by the CMS admin.  This component includes text, link, image and statistic information.'

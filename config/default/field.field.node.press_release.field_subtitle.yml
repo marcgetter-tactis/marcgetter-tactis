@@ -1,18 +1,18 @@
-uuid: 4cc6e1e3-681a-4404-98a8-0067db5a5d2d
+uuid: 3a818349-cc5e-473e-acb4-404b55dc6d2c
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_pr_number
+    - field.storage.node.field_subtitle
     - node.type.press_release
-id: node.press_release.field_pr_number
-field_name: field_pr_number
+id: node.press_release.field_subtitle
+field_name: field_subtitle
 entity_type: node
 bundle: press_release
-label: 'Press Release Number'
+label: Subtitle
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

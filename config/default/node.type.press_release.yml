@@ -1,4 +1,4 @@
-uuid: d0c51f40-ed66-45dc-9c72-9e110687f8a5
+uuid: d8beb60c-ed91-45e3-926d-eaf4c126f4dc
 langcode: en
 status: true
 dependencies:
@@ -25,7 +25,7 @@ third_party_settings:
     unpublish_revision: false
 name: 'Press Release'
 type: press_release
-description: ''
+description: 'A structured content type used for creating various types of press releases.'
 help: ''
 new_revision: true
 preview_mode: 1

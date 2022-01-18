@@ -1,25 +1,25 @@
-uuid: b83370da-ef32-44e3-b17d-0f663226a318
+uuid: 322387b3-2219-46f9-b591-57ffb4231f07
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.press_release.field_archived
-    - field.field.node.press_release.field_file_private_force
-    - field.field.node.press_release.field_pr_contact
-    - field.field.node.press_release.field_pr_date
-    - field.field.node.press_release.field_pr_image
+    - field.field.node.press_release.body
+    - field.field.node.press_release.field_attachment
+    - field.field.node.press_release.field_component
+    - field.field.node.press_release.field_contact
+    - field.field.node.press_release.field_date
+    - field.field.node.press_release.field_image
+    - field.field.node.press_release.field_invisible
     - field.field.node.press_release.field_pr_number
-    - field.field.node.press_release.field_pr_subtitle
-    - field.field.node.press_release.field_pr_teaser
-    - field.field.node.press_release.field_pr_teaser_image
-    - field.field.node.press_release.field_pr_topic
-    - field.field.node.press_release.pr_component
-    - field.field.node.press_release.pr_invisible
+    - field.field.node.press_release.field_subtitle
+    - field.field.node.press_release.field_teaser
+    - field.field.node.press_release.field_teaser_image
+    - field.field.node.press_release.field_topic
     - node.type.press_release
   module:
     - datetime
+    - file
     - image
-    - options
     - text
     - user
 id: node.press_release.default
@@ -27,47 +27,61 @@ targetEntityType: node
 bundle: press_release
 mode: default
 content:
-  field_archived:
-    type: boolean
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    weight: 109
-    region: content
-  field_file_private_force:
-    type: list_default
-    label: above
+  body:
+    type: text_default
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 111
+    weight: 101
     region: content
-  field_pr_contact:
+  field_attachment:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  field_component:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 112
+    region: content
+  field_contact:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 107
+    weight: 108
     region: content
-  field_pr_date:
+  field_date:
     type: datetime_default
     label: above
     settings:
       timezone_override: ''
       format_type: medium
     third_party_settings: {  }
-    weight: 104
+    weight: 105
     region: content
-  field_pr_image:
+  field_image:
     type: image
     label: above
     settings:
       image_link: ''
       image_style: ''
     third_party_settings: {  }
-    weight: 110
+    weight: 109
+    region: content
+  field_invisible:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 113
     region: content
   field_pr_number:
     type: string
@@ -75,9 +89,9 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 103
+    weight: 104
     region: content
-  field_pr_subtitle:
+  field_subtitle:
     type: string
     label: above
     settings:
@@ -85,29 +99,29 @@ content:
     third_party_settings: {  }
     weight: 102
     region: content
-  field_pr_teaser:
+  field_teaser:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 105
+    weight: 106
     region: content
-  field_pr_teaser_image:
+  field_teaser_image:
     type: image
     label: above
     settings:
       image_link: ''
       image_style: ''
     third_party_settings: {  }
-    weight: 106
+    weight: 107
     region: content
-  field_pr_topic:
+  field_topic:
     type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    weight: 108
+    weight: 111
     region: content
   links:
     settings: {  }
@@ -116,6 +130,4 @@ content:
     region: content
 hidden:
   langcode: true
-  pr_component: true
-  pr_invisible: true
   search_api_excerpt: true

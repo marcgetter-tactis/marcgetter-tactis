@@ -1,25 +1,26 @@
-uuid: 5a3bb527-79c7-43f0-8620-3b1ce18f0722
+uuid: 6d36f056-f9ec-49f6-94b6-3813412178f5
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.press_release.field_archived
-    - field.field.node.press_release.field_file_private_force
-    - field.field.node.press_release.field_pr_contact
-    - field.field.node.press_release.field_pr_date
-    - field.field.node.press_release.field_pr_image
+    - field.field.node.press_release.body
+    - field.field.node.press_release.field_attachment
+    - field.field.node.press_release.field_component
+    - field.field.node.press_release.field_contact
+    - field.field.node.press_release.field_date
+    - field.field.node.press_release.field_image
+    - field.field.node.press_release.field_invisible
     - field.field.node.press_release.field_pr_number
-    - field.field.node.press_release.field_pr_subtitle
-    - field.field.node.press_release.field_pr_teaser
-    - field.field.node.press_release.field_pr_teaser_image
-    - field.field.node.press_release.field_pr_topic
-    - field.field.node.press_release.pr_component
-    - field.field.node.press_release.pr_invisible
+    - field.field.node.press_release.field_subtitle
+    - field.field.node.press_release.field_teaser
+    - field.field.node.press_release.field_teaser_image
+    - field.field.node.press_release.field_topic
     - image.style.thumbnail
     - node.type.press_release
   module:
     - content_moderation
     - datetime
+    - file
     - image
     - path
     - scheduler
@@ -30,82 +31,106 @@ targetEntityType: node
 bundle: press_release
 mode: default
 content:
-  created:
-    type: datetime_timestamp
-    weight: 10
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_archived:
-    type: boolean_checkbox
-    weight: 129
+  body:
+    type: text_textarea_with_summary
+    weight: 4
     region: content
     settings:
-      display_label: true
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
     third_party_settings: {  }
-  field_file_private_force:
-    type: options_select
-    weight: 131
+  created:
+    type: datetime_timestamp
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_pr_contact:
+  field_attachment:
+    type: file_generic
+    weight: 22
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_component:
+    type: entity_reference_autocomplete
+    weight: 24
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_contact:
     type: text_textarea
-    weight: 127
+    weight: 20
     region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-  field_pr_date:
+  field_date:
     type: datetime_default
-    weight: 124
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_pr_image:
+  field_image:
     type: image_image
-    weight: 130
+    weight: 21
     region: content
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_invisible:
+    type: entity_reference_autocomplete
+    weight: 25
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_pr_number:
     type: string_textfield
-    weight: 123
+    weight: 2
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_pr_subtitle:
+  field_subtitle:
     type: string_textfield
-    weight: 122
+    weight: 1
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_pr_teaser:
+  field_teaser:
     type: text_textarea
-    weight: 125
+    weight: 18
     region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-  field_pr_teaser_image:
+  field_teaser_image:
     type: image_image
-    weight: 126
+    weight: 19
     region: content
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-  field_pr_topic:
+  field_topic:
     type: entity_reference_autocomplete
-    weight: 128
+    weight: 23
     region: content
     settings:
       match_operator: CONTAINS
@@ -115,59 +140,59 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 2
+    weight: 5
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 100
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 15
+    weight: 8
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 30
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
   publish_state:
     type: scheduler_moderation
-    weight: 30
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 120
+    weight: 17
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 16
+    weight: 9
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: -5
+    weight: 0
     region: content
     settings:
       size: 60
@@ -175,7 +200,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 6
     region: content
     settings:
       match_operator: CONTAINS
@@ -185,21 +210,19 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 30
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
   unpublish_state:
     type: scheduler_moderation
-    weight: 30
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   url_redirects:
-    weight: 50
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden:
-  pr_component: true
-  pr_invisible: true
+hidden: {  }

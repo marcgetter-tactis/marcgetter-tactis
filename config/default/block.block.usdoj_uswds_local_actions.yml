@@ -9,11 +9,7 @@ _core:
 id: usdoj_uswds_local_actions
 theme: usdoj_uswds
 region: content
-<<<<<<< HEAD
-weight: -2
-=======
 weight: -8
->>>>>>> develop
 provider: null
 plugin: local_actions_block
 settings:

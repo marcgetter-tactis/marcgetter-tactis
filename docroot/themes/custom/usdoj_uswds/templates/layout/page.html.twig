@@ -59,82 +59,6 @@
 <div class="usa-overlay"></div>
 
 {% block header %}
-<<<<<<< HEAD
-  <header class="{{ header_classes }}" id="header" role="banner">
-
-  {% if page.header_top %}
-    <div class="usa-banner-inner">
-      {{ page.header_top }}
-    </div>
-  {% endif %}
-
-  {% if header_basic %}
-  <div class="usa-nav-container">
-    {% endif %}
-
-    {{ page.header }}
-    <input type="checkbox" class="display-none" id="mobile-btn" />
-    <label class="hamburger float-right desktop:float-none position-relative desktop:position-static margin-right-2" for="mobile-btn">
-      <nav class="usa-nav position-absolute desktop:position-static right-neg-2 padding-0" role="navigation">
-        {% if header_extended %}
-        <div class="usa-nav__inner">
-          {% endif %}
-
-          {% if page.mobile_menu %}
-            <div class="usa-nav-mobile">
-              {{ page.mobile_menu }}
-            </div>
-          {% endif %}
-
-          {% if page.mobile_menu %}
-          <div class="usa-nav-desktop">
-            {% endif %}
-
-            {% if page.primary_menu %}
-              {{ page.primary_menu }}
-            {% endif %}
-
-            {% if page.secondary_menu %}
-              {{ page.secondary_menu }}
-            {% endif %}
-
-            {% if page.mobile_menu %}
-          </div>
-          {% endif %}
-
-          {% if header_extended %}
-        </div>
-        {% endif %}
-      </nav>
-    </label>
-
-    <!-- mobile search -->
-    <div class="desktop:display-none">
-      <section aria-label="Small search component">
-          <form class="usa-search usa-search--mobile padding-bottom-3 width-full position-relative" role="search">
-            <div class="width-mobile border-top padding-top-2 border-gray-50">
-              <label class="usa-sr-only" for="search-field-en-small"> Search </label>
-              <input
-              class="usa-input"
-              id="search-field-en-small"
-              type="search"
-              name="search"
-              />
-              <button class="usa-button" type="submit">
-              <img
-                  src="/sites/default/files/icons/doj-icon-header-search.svg"
-                  alt="Search"
-              />
-              </button>
-            </div>
-          </form>
-      </section>
-    </div>
-
-    {% if header_basic %}
-  </div>
-  {% endif %}
-=======
     <header class="{{ header_classes }}" id="header" role="banner">
 
         {% if page.header_top %}
@@ -209,42 +133,11 @@
             {% if header_basic %}
         </div>
         {% endif %}
->>>>>>> develop
 
     </header>
 {% endblock %}
 
 {% if page.hero %}
-<<<<<<< HEAD
-  {% block hero %}
-    <section class="usa-hero">
-      <div class="grid-container">
-        {{ page.hero }}
-      </div>
-    </section>
-  {% endblock %}
-{% endif %}
-
-{% block main %}
-  <main class="main-content usa-layout-docs usa-section {{ main_classes }}" role="main"
-        id="main-content">
-    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-
-    <div class="grid-container">
-
-      {% if page.breadcrumb or page.highlighted or page.help %}
-        {% block breadcrumb %}
-          <div class="grid-row">
-            {{ page.breadcrumb }}
-          </div>
-        {% endblock %}
-
-        {% block highlighted %}
-          <div class="">
-            {{ page.highlighted }}
-          </div>
-        {% endblock %}
-=======
     {% block hero %}
         <section class="usa-hero">
             <div class="grid-container">
@@ -267,7 +160,6 @@
                         {{ page.breadcrumb }}
                     </div>
                 {% endblock %}
->>>>>>> develop
 
                 {% block highlighted %}
                     <div class="">

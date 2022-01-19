@@ -198,3 +198,6 @@ hooks:
 # post-import-db:
 #   - exec: drush cr
 #   - exec: drush updb
+hooks:
+  post-start:
+    - exec-host: "ddev exec ssh-add -l >/dev/null || ddev auth ssh"

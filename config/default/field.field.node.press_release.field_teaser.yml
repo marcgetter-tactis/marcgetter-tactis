@@ -1,0 +1,21 @@
+uuid: c186ab65-8c15-4f3f-89c4-9e8d576e337e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaser
+    - node.type.press_release
+  module:
+    - text
+id: node.press_release.field_teaser
+field_name: field_teaser
+entity_type: node
+bundle: press_release
+label: Teaser
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

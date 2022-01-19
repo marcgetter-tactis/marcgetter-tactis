@@ -3,11 +3,14 @@ langcode: en
 status: true
 dependencies:
   module:
+    - block_class
     - collapsiblock
     - system
   theme:
     - usdoj_uswds
 third_party_settings:
+  block_class:
+    classes: site-logo
   collapsiblock:
     collapse_action: 0
 id: sitebranding

@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: general
-label: General
+label: Basic
 revision: 0
 description: ''

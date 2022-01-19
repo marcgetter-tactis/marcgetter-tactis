@@ -57,7 +57,7 @@ header.usa-header--extended {
   //mobile main menu
   @media (max-width: 63.99em) {
     label.hamburger {
-      background-image: url('/sites/default/files/icons/doj-icon-hamburger-menu.svg');
+      background-image: url('/themes/custom/usdoj_uswds/images/doj-icon-hamburger-menu.svg');
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
@@ -68,7 +68,7 @@ header.usa-header--extended {
     }
     #mobile-btn:checked {
       &+ label.hamburger {
-        background-image: url('/sites/default/files/icons/doj-icon-hamburger-close.svg');
+        background-image: url('/themes/custom/usdoj_uswds/images/doj-icon-hamburger-close.svg');
         &> nav.usa-nav {
           display: block;
           width: 100vw;

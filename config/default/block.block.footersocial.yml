@@ -18,7 +18,7 @@ third_party_settings:
 id: footersocial
 theme: usdoj_uswds
 region: footer
-weight: -2
+weight: -5
 provider: null
 plugin: 'block_content:35a8ab6d-327a-42e3-988e-8f96349ca7d5'
 settings:

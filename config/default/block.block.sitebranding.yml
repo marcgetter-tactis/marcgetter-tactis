@@ -12,8 +12,8 @@ third_party_settings:
     collapse_action: 0
 id: sitebranding
 theme: usdoj_uswds
-region: header
-weight: -5
+region: footer
+weight: -8
 provider: null
 plugin: system_branding_block
 settings:

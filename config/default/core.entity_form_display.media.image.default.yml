@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.media.image.field_categories
-    - field.field.media.image.field_media_image
     - field.field.media.image.field_tags
     - field.field.media.image.image
     - image.style.medium
@@ -89,7 +88,6 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  field_media_image: true
   path: true
   status: true
   uid: true

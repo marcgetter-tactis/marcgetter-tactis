@@ -9,7 +9,7 @@ header.usa-header--extended {
     .usa-logo {
       margin: 1rem 0;
       line-height: 0;
-      max-width: inherit;
+      max-width: 275px;
     }
 
     //utilities menu
@@ -73,7 +73,7 @@ header.usa-header--extended {
           display: block;
           width: 100vw;
           height: 100vh;
-          top: 4rem;
+          top: 5rem;
           ul {
             li:first-of-type {
               border-top: 0;

@@ -1,0 +1,30 @@
+uuid: ada4ed09-44a8-48ef-bec5-54033bc99598
+langcode: en
+status: true
+dependencies:
+  module:
+    - collapsiblock
+    - system
+  theme:
+    - usdoj_uswds
+third_party_settings:
+  collapsiblock:
+    collapse_action: 0
+_core:
+  default_config_hash: gfXKmThltk6eewwrjAEaxVPxzPEVHV1UfNjjOUQ5A7g
+id: usdoj_uswds_page_title
+theme: usdoj_uswds
+region: content
+weight: -4
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

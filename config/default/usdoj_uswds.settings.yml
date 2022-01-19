@@ -5,7 +5,7 @@ features:
   comment_user_verification: true
   favicon: 1
 logo:
-  use_default: 0
+  use_default: 1
   path: 'public://doj-header-logo.png'
 favicon:
   use_default: 0
@@ -21,8 +21,8 @@ uswds_header_style: extended
 uswds_header_mega: 1
 uswds_header_mega_display_second: 1
 uswds_government_banner: 1
-uswds_footer_style: medium
-uswds_footer_agency: 0
+uswds_footer_style: big
+uswds_footer_agency: 1
 uswds_footer_agency_name: ''
 uswds_footer_agency_url: '#agency'
 uswds_footer_agency_logo: doj-header-logo.png

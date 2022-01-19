@@ -118,3 +118,4 @@ deployment_identifier
 *.tar.gz
 *.sql
 *.sql.gz
+*.db

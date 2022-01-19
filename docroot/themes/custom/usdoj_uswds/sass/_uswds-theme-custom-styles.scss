@@ -34,7 +34,6 @@ ul {
             margin-right: 1.5rem;
         }
     }
-
     &.tall {
         padding: 0;
         list-style: none;
@@ -49,7 +48,9 @@ ul {
                 }
             }
         }
-
+    img.usa-search__submit-icon {
+      width: auto;
+      height: auto;
     }
 }
 

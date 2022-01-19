@@ -100,13 +100,37 @@
                         {% if page.mobile_menu %}
                     </div>
                     {% endif %}
+                </nav>
+            </label>
+
+            <!-- mobile search -->
+            <div class="desktop:display-none">
+                <section aria-label="Small search component">
+                    <form class="usa-search usa-search--mobile padding-bottom-3 padding-top-2 width-full position-relative" role="search">
+                        <div class="width-mobile border-top padding-top-2 border-gray-50">
+                            <label class="usa-sr-only" for="search-field-en-small"> Search </label>
+                            <input
+                                    class="usa-input"
+                                    id="search-field-en-small"
+                                    type="search"
+                                    name="search"
+                            />
+                            <button class="usa-button" type="submit">
+                                <img
+                                        src="/sites/default/files/icons/doj-icon-header-search.svg"
+                                        alt="Search"
+                                />
+                            </button>
+                        </div>
+                    </form>
+                </section>
+            </div>
 
                     {% if header_extended %}
                 </div>
                 {% endif %}
             </nav>
         </label>
-
         <!-- mobile search -->
         <div class="desktop:display-none">
             <section aria-label="Small search component">

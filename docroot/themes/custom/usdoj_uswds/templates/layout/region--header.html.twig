@@ -17,34 +17,14 @@
   'region',
   'region-' ~ region|clean_class,
   'usa-navbar',
+  'height-15',
+  'desktop:height-full',
 ]
 %}
 {% if content %}
 <div{{ attributes.addClass(classes) }}>
     <div class="grid-container">
       {{ content }}
-      
-      <!-- mobile search -->
-      <div class="grid-row desktop:display-none">
-        <section class="grid-col" aria-label="Small search component">
-            <form class="usa-search usa-search--small flex-row flex-justify-center padding-top-2 padding-bottom-3 border-top border-base-light" role="search">
-                <label class="usa-sr-only" for="search-field-en-small"> Search </label>
-                <input
-                class="usa-input"
-                id="search-field-en-small"
-                type="search"
-                name="search"
-                />
-                <button class="usa-button" type="submit">
-                <img
-                    src="/sites/default/files/icons/doj-icon-header-search.svg"
-                    class="usa-search__submit-icon"
-                    alt="Search"
-                />
-                </button>
-            </form>
-        </section>
-      </div>
     </div>
 </div>
 {% endif %}

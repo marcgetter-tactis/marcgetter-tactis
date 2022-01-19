@@ -32,12 +32,9 @@ ul {
       list-style: none;
       margin-right: 2rem;
     }
-  }
-  &.tall {
-    padding: 0;
-    list-style: none;
-    li {
-      margin-bottom: 1.5rem;
+    img.usa-search__submit-icon {
+      width: auto;
+      height: auto;
     }
   }
 }

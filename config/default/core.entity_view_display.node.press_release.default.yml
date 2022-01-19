@@ -4,13 +4,16 @@ status: true
 dependencies:
   config:
     - field.field.node.press_release.body
+    - field.field.node.press_release.field_archived
     - field.field.node.press_release.field_attachment
     - field.field.node.press_release.field_component
     - field.field.node.press_release.field_contact
     - field.field.node.press_release.field_date
+    - field.field.node.press_release.field_file_private_force
     - field.field.node.press_release.field_image
     - field.field.node.press_release.field_invisible
-    - field.field.node.press_release.field_pr_number
+    - field.field.node.press_release.field_number
+    - field.field.node.press_release.field_pr_date
     - field.field.node.press_release.field_subtitle
     - field.field.node.press_release.field_teaser
     - field.field.node.press_release.field_teaser_image
@@ -83,13 +86,13 @@ content:
     third_party_settings: {  }
     weight: 113
     region: content
-  field_pr_number:
+  field_number:
     type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 104
+    weight: 114
     region: content
   field_subtitle:
     type: string
@@ -129,5 +132,16 @@ content:
     weight: 100
     region: content
 hidden:
+  field_archived: true
+  field_file_private_force: true
+  field_pr_contact: true
+  field_pr_date: true
+  field_pr_image: true
+  field_pr_subtitle: true
+  field_pr_teaser: true
+  field_pr_teaser_image: true
+  field_pr_topic: true
   langcode: true
+  pr_component: true
+  pr_invisible: true
   search_api_excerpt: true

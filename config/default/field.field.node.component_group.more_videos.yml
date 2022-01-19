@@ -1,0 +1,23 @@
+uuid: d5a794dc-3a94-46e3-b75e-325c8531f388
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_more_events
+    - node.type.component_group
+  module:
+    - link
+id: node.component_group.more_videos
+field_name: more_videos
+entity_type: node
+bundle: component_group
+label: 'More Videos'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 1
+field_type: link

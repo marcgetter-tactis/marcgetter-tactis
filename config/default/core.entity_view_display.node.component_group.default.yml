@@ -3,65 +3,161 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.component_group.field_org_abbreviation
-    - field.field.node.component_group.field_org_abbreviation_title
-    - field.field.node.component_group.field_org_body
-    - field.field.node.component_group.field_org_logo
-    - field.field.node.component_group.field_org_type
+    - field.field.node.component_group.field_abbreviation
+    - field.field.node.component_group.field_abbreviation_title
+    - field.field.node.component_group.field_body
+    - field.field.node.component_group.field_contact_info
+    - field.field.node.component_group.field_logo
+    - field.field.node.component_group.field_more_events
+    - field.field.node.component_group.field_type
+    - field.field.node.component_group.layout_builder__layout
+    - field.field.node.component_group.more_blogs
+    - field.field.node.component_group.more_galleries
+    - field.field.node.component_group.more_news
+    - field.field.node.component_group.more_videos
+    - field.field.node.component_group.og_audience
     - node.type.component_group
   module:
+    - layout_builder
+    - link
     - og
     - options
     - text
     - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_builder_blank
+        layout_settings:
+          label: ''
+        components: {  }
+        third_party_settings: {  }
 id: node.component_group.default
 targetEntityType: node
 bundle: component_group
 mode: default
 content:
-  field_org_abbreviation:
+  field_abbreviation:
     type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 103
+    weight: 3
     region: content
-  field_org_abbreviation_title:
+  field_abbreviation_title:
     type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 104
+    weight: 4
     region: content
-  field_org_body:
+  field_body:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 106
+    weight: 5
     region: content
-  field_org_logo:
+  field_contact_info:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_logo:
     type: entity_reference_entity_view
     label: hidden
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
-    weight: 105
+    weight: 6
     region: content
-  field_org_type:
+  field_more_events:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_type:
     type: list_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 102
+    weight: 2
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 1
+    region: content
+  more_blogs:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  more_galleries:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  more_news:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  more_videos:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  og_audience:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 13
     region: content
   og_group:
     type: og_group_subscribe
@@ -72,4 +168,5 @@ content:
     region: content
 hidden:
   langcode: true
+  layout_builder__layout: true
   search_api_excerpt: true

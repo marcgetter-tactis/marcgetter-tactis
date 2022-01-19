@@ -1,0 +1,42 @@
+uuid: 5b9c1d0e-c3ac-4cf2-be3f-32e5e4909d95
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_type
+field_name: field_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: agency
+      label: Agency
+    -
+      value: district
+      label: 'District Office'
+    -
+      value: section
+      label: Section
+    -
+      value: staff
+      label: Staff
+    -
+      value: bureau
+      label: Bureau
+    -
+      value: branch
+      label: Branch
+    -
+      value: office
+      label: Office
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

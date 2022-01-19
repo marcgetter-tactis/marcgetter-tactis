@@ -1,0 +1,23 @@
+uuid: 651b7e9a-7cf9-4ad0-a294-7a65585263d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.more_videos
+    - node.type.component_group
+  module:
+    - link
+id: node.component_group.more_galleries
+field_name: more_galleries
+entity_type: node
+bundle: component_group
+label: 'More Galleries'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 1
+field_type: link

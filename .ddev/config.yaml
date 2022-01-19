@@ -201,3 +201,5 @@ hooks:
 hooks:
   post-start:
     - exec-host: "ddev exec ssh-add -l >/dev/null || ddev auth ssh"
+  post-import-db:
+    - exec: "drush uli"

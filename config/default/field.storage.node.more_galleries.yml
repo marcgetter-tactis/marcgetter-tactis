@@ -1,0 +1,19 @@
+uuid: 91af7e19-acef-4c66-a3b6-06e730568d0f
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.more_galleries
+field_name: more_galleries
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

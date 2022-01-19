@@ -1,0 +1,23 @@
+uuid: 4124b298-6dec-4cc6-8596-857dd23f742e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.more_videos
+    - node.type.component_group
+  module:
+    - link
+id: node.component_group.more_blogs
+field_name: more_blogs
+entity_type: node
+bundle: component_group
+label: 'More Blogs'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 1
+field_type: link

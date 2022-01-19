@@ -172,7 +172,7 @@
                     {% block help %}
                         <div class="grid-row ">
                             {{ page.help }}
-                        </div>
+d                        </div>
                     {% endblock %}
                 {% endif %}
             {% endif %}
@@ -382,11 +382,11 @@
             </div>
         {% endif %}
 
-        <div class="grid-container position-relative">
-            <div class="return-to-top">
-                <a href="#"><svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
-                        <use xlink:href="/assets/img/sprite.svg#expand_less"></use>
-                    </svg>{{ 'Top'|t }}</a>
+        <div class="return-to-top">
+            <div class="grid-container position-relative">
+                <a href="#">
+                    <img src="{{ base_path ~ directory }}/images/doj-icon-back-top-arrow-up.png" alt="up arrow" width="136" height="76" />
+                    {{ 'Top'|t }}</a>
             </div>
         </div>
 

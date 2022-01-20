@@ -5,10 +5,13 @@ dependencies:
   config:
     - block_content.type.tabbed
     - field.field.block_content.tabbed.field_background_color
+    - field.field.block_content.tabbed.field_cta
+    - field.field.block_content.tabbed.field_cta_style
     - field.field.block_content.tabbed.field_header
     - field.field.block_content.tabbed.field_tabs
     - field.field.block_content.tabbed.og_audience
   module:
+    - link
     - og
     - paragraphs
 id: block_content.tabbed.default
@@ -19,6 +22,20 @@ content:
   field_background_color:
     type: options_select
     weight: 29
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_cta:
+    type: link_default
+    weight: 31
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_cta_style:
+    type: options_select
+    weight: 32
     region: content
     settings: {  }
     third_party_settings: {  }

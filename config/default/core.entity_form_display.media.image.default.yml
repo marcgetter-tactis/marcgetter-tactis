@@ -4,14 +4,15 @@ status: true
 dependencies:
   config:
     - field.field.media.image.field_categories
+    - field.field.media.image.field_media_image
     - field.field.media.image.field_tags
     - field.field.media.image.image
     - image.style.medium
     - media.type.image
   module:
     - field_group
-    - focal_point
     - imce
+    - svg_image
   enforced:
     module:
       - acquia_cms_image
@@ -55,14 +56,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
   image:
-    type: image_focal_point
+    type: image_image
     weight: 1
     region: content
     settings:
       progress_indicator: throbber
       preview_image_style: medium
-      preview_link: true
-      offsets: '50,50'
     third_party_settings:
       imce:
         enabled: false

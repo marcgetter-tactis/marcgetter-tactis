@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.body
     - search_api.server.database
     - core.entity_view_mode.node.search_index
   module:
@@ -18,6 +19,14 @@ name: Content
 description: 'An index of all content in your site.'
 read_only: false
 field_settings:
+  body:
+    label: Body
+    datasource_id: 'entity:node'
+    property_path: body
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.body
   created:
     label: 'Created time'
     datasource_id: 'entity:node'
@@ -131,6 +140,7 @@ processor_settings:
       preprocess_query: -8
     all_fields: true
     fields:
+      - body
       - langcode
       - rendered_item
       - title

@@ -40,6 +40,7 @@
         "drupal/samlauth": "^3.3",
         "drupal/scheduled_publish": "^3.9",
         "drupal/sitewide_alert": "^1.6",
+        "drupal/slick": "^2.4",
         "drupal/structure_sync": "^2.0",
         "drupal/svg_image": "^1.15",
         "drupal/term_merge_manager": "^1.0@beta",

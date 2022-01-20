@@ -1,0 +1,108 @@
+uuid: ee0e4f35-baca-4eb9-a4a2-dc01289d6ba6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.landing_page.field_left_navigation_menu
+    - field.field.node.landing_page.layout_builder__layout
+    - field.field.node.landing_page.og_audience
+    - node.type.landing_page
+  module:
+    - layout_builder
+    - layout_discovery
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Full-Width Above 2-Column'
+          context_mapping: {  }
+        components: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: 2-Column
+          context_mapping: {  }
+          column_widths: 33-67
+        components:
+          af5fcab5-4eea-406e-ba9b-6f0a29359a86:
+            uuid: af5fcab5-4eea-406e-ba9b-6f0a29359a86
+            region: first
+            configuration:
+              id: 'field_block:node:landing_page:field_left_navigation_menu'
+              label: 'Left Navigation Menu'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          5516970b-6861-46a7-9475-22aff29d6a79:
+            uuid: 5516970b-6861-46a7-9475-22aff29d6a79
+            region: second
+            configuration:
+              id: 'field_block:node:landing_page:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Full-Width Below 2-Column'
+          context_mapping: {  }
+        components: {  }
+        third_party_settings: {  }
+id: node.landing_page.default
+targetEntityType: node
+bundle: landing_page
+mode: default
+content:
+  field_left_navigation_menu:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  og_audience:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+hidden:
+  langcode: true
+  layout_builder__layout: true
+  search_api_excerpt: true

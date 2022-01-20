@@ -16,6 +16,7 @@ module:
   address: 0
   admin_toolbar: 0
   admin_toolbar_tools: 0
+  blazy: 0
   block: 0
   block_class: 0
   block_content: 0
@@ -122,6 +123,7 @@ module:
   settings_tray: 0
   simple_sitemap: 0
   sitewide_alert: 0
+  slick: 0
   smart_trim: 0
   social_media_links: 0
   structure_sync: 0

@@ -32,36 +32,61 @@ third_party_settings:
           context_mapping: {  }
           column_widths: 33-67
         components:
-          60d5ab96-1277-467a-ac62-36306ead4de7:
-            uuid: 60d5ab96-1277-467a-ac62-36306ead4de7
-            region: second
-            configuration:
-              id: 'field_block:node:page:field_body'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: text_default
-                label: above
-                settings: {  }
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
           0ecc3d8c-3f51-49e0-9a14-7dc9aa280f6e:
             uuid: 0ecc3d8c-3f51-49e0-9a14-7dc9aa280f6e
             region: first
             configuration:
               id: 'field_block:node:page:field_left_navigation_menu'
-              label_display: '0'
+              label: 'Left Navigation Menu'
+              label_display: visible
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
                 type: entity_reference_label
-                label: above
+                label: hidden
                 settings:
                   link: true
                 third_party_settings: {  }
             weight: 0
+            additional: {  }
+          68111353-eb56-4378-bbfa-486dec8c747d:
+            uuid: 68111353-eb56-4378-bbfa-486dec8c747d
+            region: second
+            configuration:
+              id: 'field_block:node:page:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          60d5ab96-1277-467a-ac62-36306ead4de7:
+            uuid: 60d5ab96-1277-467a-ac62-36306ead4de7
+            region: second
+            configuration:
+              id: 'field_block:node:page:field_body'
+              label: Body
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 2
             additional: {  }
         third_party_settings: {  }
       -

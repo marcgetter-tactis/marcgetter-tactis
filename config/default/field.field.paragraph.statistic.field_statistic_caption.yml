@@ -1,0 +1,19 @@
+uuid: 4942dfc9-08ac-486e-a3c3-1f343d8adbd7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_statistic_caption
+    - paragraphs.paragraphs_type.statistic
+id: paragraph.statistic.field_statistic_caption
+field_name: field_statistic_caption
+entity_type: paragraph
+bundle: statistic
+label: 'Statistic Caption'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

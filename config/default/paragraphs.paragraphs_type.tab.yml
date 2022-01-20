@@ -1,0 +1,10 @@
+uuid: 4e684d71-8de5-4e21-a4fb-2ed2b69c15c8
+langcode: en
+status: true
+dependencies: {  }
+id: tab
+label: Tab
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -5,4 +5,4 @@ dependencies: {  }
 id: hero
 label: Hero
 revision: 1
-description: ''
+description: 'The hero component can contain 1-6 slides.  It must contain at least one slide.  The carousel will auto-play but if the user clicks on the slide, it will stop the auto play.  The admin can turn offthe auto-play feature.  The user can click on the indicators to be taken to that slide.  Each slide consists of an image, type of content - press release, video, live stream etc, headline and date (if applicable) and a link.  The user can click on the headline to be taken to the detail page or if the slide is a video or live stream, an inline pop up will appear and play the video on this page.  The user can click the X at the top right of the inline pop up to close the video.  like this page - https://www.cbsnews.com/'

@@ -5,4 +5,4 @@ dependencies: {  }
 id: action_center
 label: 'Action Center'
 revision: 1
-description: ''
+description: 'The action center component can have a max of 8 items.  The admin can add, edit or delete the items and the items contain a title, link and an optional icon.  Layout options for differing number of items will be shown in the design phase.  The items listed should be based on current usage, search queries, etc.'

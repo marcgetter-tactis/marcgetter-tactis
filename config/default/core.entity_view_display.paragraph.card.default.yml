@@ -19,10 +19,10 @@ mode: default
 content:
   field_body:
     type: text_default
-    label: hidden
+    label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 4
     region: content
   field_cta:
     type: link

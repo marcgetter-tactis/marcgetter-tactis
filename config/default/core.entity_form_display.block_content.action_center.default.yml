@@ -9,8 +9,10 @@ dependencies:
     - field.field.block_content.action_center.field_cta
     - field.field.block_content.action_center.field_display_items
     - field.field.block_content.action_center.field_heading
+    - field.field.block_content.action_center.og_audience
   module:
     - link
+    - og
     - paragraphs
 id: block_content.action_center.default
 targetEntityType: block_content
@@ -72,5 +74,15 @@ content:
     region: content
     settings:
       include_locked: true
+    third_party_settings: {  }
+  og_audience:
+    type: og_complex
+    weight: 32
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
 hidden: {  }

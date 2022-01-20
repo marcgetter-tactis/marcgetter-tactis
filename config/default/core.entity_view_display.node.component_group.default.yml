@@ -19,6 +19,7 @@ dependencies:
     - node.type.component_group
   module:
     - layout_builder
+    - layout_discovery
     - link
     - og
     - options
@@ -30,9 +31,10 @@ third_party_settings:
     allow_custom: true
     sections:
       -
-        layout_id: layout_builder_blank
+        layout_id: layout_onecol
         layout_settings:
-          label: ''
+          label: 'Single Column'
+          context_mapping: {  }
         components: {  }
         third_party_settings: {  }
 id: node.component_group.default

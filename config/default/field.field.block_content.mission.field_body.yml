@@ -1,16 +1,16 @@
-uuid: a196c952-ea8f-4303-905a-da59500314e9
+uuid: c8ec5982-9a67-40b4-90f5-16f8ee8a4cc4
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_body
-    - paragraphs.paragraphs_type.card
+    - block_content.type.mission
+    - field.storage.block_content.field_body
   module:
     - text
-id: paragraph.card.field_body
+id: block_content.mission.field_body
 field_name: field_body
-entity_type: paragraph
-bundle: card
+entity_type: block_content
+bundle: mission
 label: Body
 description: ''
 required: false

@@ -1,20 +1,20 @@
-uuid: a196c952-ea8f-4303-905a-da59500314e9
+uuid: 079a8d3a-42c9-4216-823f-16ea85ae468d
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_body
-    - paragraphs.paragraphs_type.card
+    - paragraphs.paragraphs_type.tab
   module:
     - text
-id: paragraph.card.field_body
+id: paragraph.tab.field_body
 field_name: field_body
 entity_type: paragraph
-bundle: card
+bundle: tab
 label: Body
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

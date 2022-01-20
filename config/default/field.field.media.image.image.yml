@@ -6,10 +6,17 @@ dependencies:
     - field.storage.media.image
     - media.type.image
   module:
+    - content_translation
     - image
   enforced:
     module:
       - acquia_cms_image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
 _core:
   default_config_hash: ECtNK74jpST9OWYEQisJ7OXyweZeT1fDO4RBMy4aVgU
 id: media.image.image
@@ -26,16 +33,16 @@ settings:
   handler: 'default:file'
   handler_settings: {  }
   file_directory: '[date:custom:Y]-[date:custom:m]'
-  file_extensions: 'png gif jpg jpeg'
+  file_extensions: 'png gif jpg jpeg svg'
   max_filesize: ''
   max_resolution: ''
   min_resolution: ''
   alt_field: true
-  alt_field_required: false
+  alt_field_required: true
   title_field: false
   title_field_required: false
   default_image:
-    uuid: null
+    uuid: ''
     alt: ''
     title: ''
     width: null

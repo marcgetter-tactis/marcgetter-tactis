@@ -5,11 +5,14 @@ dependencies:
   config:
     - block_content.type.tabbed
     - field.field.block_content.tabbed.field_background_color
+    - field.field.block_content.tabbed.field_cta
+    - field.field.block_content.tabbed.field_cta_style
     - field.field.block_content.tabbed.field_header
     - field.field.block_content.tabbed.field_tabs
     - field.field.block_content.tabbed.og_audience
   module:
     - entity_reference_revisions
+    - link
     - options
 id: block_content.tabbed.default
 targetEntityType: block_content
@@ -22,6 +25,25 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 3
+    region: content
+  field_cta:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_cta_style:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
     region: content
   field_header:
     type: string

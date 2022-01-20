@@ -11,9 +11,11 @@ dependencies:
     - field.field.block_content.blank.field_cta_style
     - field.field.block_content.blank.field_header
     - field.field.block_content.blank.field_media
+    - field.field.block_content.blank.og_audience
   module:
     - link
     - media_library
+    - og
     - paragraphs
     - text
 id: block_content.blank.default
@@ -92,5 +94,15 @@ content:
     region: content
     settings:
       include_locked: true
+    third_party_settings: {  }
+  og_audience:
+    type: og_complex
+    weight: 33
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
 hidden: {  }

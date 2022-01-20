@@ -5,6 +5,7 @@ dependencies:
   config:
     - block_content.type.hero
     - field.field.block_content.hero.field_hero_slide
+    - field.field.block_content.hero.og_audience
   module:
     - entity_reference_revisions
 id: block_content.hero.default
@@ -20,6 +21,14 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 1
+    region: content
+  og_audience:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
     region: content
 hidden:
   langcode: true

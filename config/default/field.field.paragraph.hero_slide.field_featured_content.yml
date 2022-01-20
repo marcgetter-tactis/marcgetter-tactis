@@ -1,0 +1,29 @@
+uuid: 061f4eed-94db-4846-b8db-ac06c40dc7bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_featured_content
+    - node.type.press_release
+    - paragraphs.paragraphs_type.hero_slide
+id: paragraph.hero_slide.field_featured_content
+field_name: field_featured_content
+entity_type: paragraph
+bundle: hero_slide
+label: 'Featured Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      press_release: press_release
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -5,6 +5,7 @@ dependencies:
   config:
     - block_content.type.tabbed
     - field.storage.block_content.field_tabs
+    - paragraphs.paragraphs_type.tab
   module:
     - entity_reference_revisions
 id: block_content.tabbed.field_tabs
@@ -20,12 +21,22 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    target_bundles: null
-    negate: 1
+    target_bundles:
+      tab: tab
+    negate: 0
     target_bundles_drag_drop:
+      action_center_item:
+        weight: 24
+        enabled: false
+      card:
+        weight: 25
+        enabled: false
       hero_slide:
         weight: 21
         enabled: false
+      tab:
+        weight: 27
+        enabled: true
       text_field:
         weight: 22
         enabled: false

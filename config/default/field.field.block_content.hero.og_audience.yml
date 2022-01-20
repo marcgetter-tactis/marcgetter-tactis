@@ -1,0 +1,26 @@
+uuid: 7e7bfe1c-6387-44fb-bf72-37f8aa3250b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero
+    - field.storage.block_content.og_audience
+    - node.type.component_group
+  module:
+    - og
+id: block_content.hero.og_audience
+field_name: og_audience
+entity_type: block_content
+bundle: hero
+label: 'Groups audience'
+description: 'OG group audience reference field.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'og:default'
+  handler_settings:
+    target_bundles:
+      component_group: component_group
+field_type: og_standard_reference

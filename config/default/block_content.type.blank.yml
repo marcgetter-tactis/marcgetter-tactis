@@ -5,4 +5,4 @@ dependencies: {  }
 id: blank
 label: Blank
 revision: 0
-description: ''
+description: 'This is an example of a blank component. A blank component can contain headers, text, images, links, CTAs, cards, videos selected by the CMS admin.'

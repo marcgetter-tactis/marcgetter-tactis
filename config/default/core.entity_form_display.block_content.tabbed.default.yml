@@ -7,7 +7,9 @@ dependencies:
     - field.field.block_content.tabbed.field_background_color
     - field.field.block_content.tabbed.field_header
     - field.field.block_content.tabbed.field_tabs
+    - field.field.block_content.tabbed.og_audience
   module:
+    - og
     - paragraphs
 id: block_content.tabbed.default
 targetEntityType: block_content
@@ -54,5 +56,15 @@ content:
     region: content
     settings:
       include_locked: true
+    third_party_settings: {  }
+  og_audience:
+    type: og_complex
+    weight: 30
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
 hidden: {  }

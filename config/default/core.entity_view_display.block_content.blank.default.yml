@@ -11,6 +11,7 @@ dependencies:
     - field.field.block_content.blank.field_cta_style
     - field.field.block_content.blank.field_header
     - field.field.block_content.blank.field_media
+    - field.field.block_content.blank.og_audience
   module:
     - entity_reference_revisions
     - link
@@ -79,6 +80,14 @@ content:
       link: false
     third_party_settings: {  }
     weight: 2
+    region: content
+  og_audience:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
     region: content
 hidden:
   langcode: true

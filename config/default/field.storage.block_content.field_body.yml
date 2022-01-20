@@ -1,13 +1,13 @@
-uuid: 3c8a4ca6-fe97-42e1-ab53-cd1c8812d014
+uuid: cb8cd2f8-944c-4bc9-b653-47866903d044
 langcode: en
 status: true
 dependencies:
   module:
-    - paragraphs
+    - block_content
     - text
-id: paragraph.field_body
+id: block_content.field_body
 field_name: field_body
-entity_type: paragraph
+entity_type: block_content
 type: text_long
 settings: {  }
 module: text

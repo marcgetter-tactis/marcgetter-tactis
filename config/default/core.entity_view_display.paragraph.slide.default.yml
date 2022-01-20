@@ -1,35 +1,35 @@
-uuid: fcf4c52c-848c-4800-951b-865f78859262
+uuid: 73a3a22f-746b-4c52-96aa-d8be0c3adf25
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.slides.field_body
-    - field.field.paragraph.slides.field_cards
-    - field.field.paragraph.slides.field_cta
-    - field.field.paragraph.slides.field_cta_style
-    - field.field.paragraph.slides.field_headline
-    - field.field.paragraph.slides.field_image
-    - paragraphs.paragraphs_type.slides
+    - field.field.paragraph.slide.field_body
+    - field.field.paragraph.slide.field_cards
+    - field.field.paragraph.slide.field_cta
+    - field.field.paragraph.slide.field_cta_style
+    - field.field.paragraph.slide.field_headline
+    - field.field.paragraph.slide.field_image
+    - paragraphs.paragraphs_type.slide
   module:
     - entity_reference_revisions
     - link
     - options
     - text
-id: paragraph.slides.default
+id: paragraph.slide.default
 targetEntityType: paragraph
-bundle: slides
+bundle: slide
 mode: default
 content:
   field_body:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 2
     region: content
   field_cards:
     type: entity_reference_revisions_entity_view
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: ''
@@ -38,7 +38,7 @@ content:
     region: content
   field_cta:
     type: link
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -50,14 +50,14 @@ content:
     region: content
   field_cta_style:
     type: list_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 5
     region: content
   field_headline:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -65,7 +65,7 @@ content:
     region: content
   field_image:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }

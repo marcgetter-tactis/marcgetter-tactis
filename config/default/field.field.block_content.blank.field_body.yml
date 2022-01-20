@@ -1,23 +1,21 @@
-uuid: e981f84f-9cc1-492d-b2ac-930cb1959901
+uuid: 9fcf1309-1e18-44f6-8db7-464e0ea508c3
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.blank
-    - field.storage.block_content.body
+    - field.storage.block_content.field_body
   module:
     - text
-id: block_content.blank.body
-field_name: body
+id: block_content.blank.field_body
+field_name: field_body
 entity_type: block_content
 bundle: blank
 label: Body
 description: ''
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
-settings:
-  display_summary: false
-  required_summary: false
-field_type: text_with_summary
+settings: {  }
+field_type: text_long

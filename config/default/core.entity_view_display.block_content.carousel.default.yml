@@ -7,6 +7,7 @@ dependencies:
     - field.field.block_content.carousel.field_background_color
     - field.field.block_content.carousel.field_header
     - field.field.block_content.carousel.field_slides
+    - field.field.block_content.carousel.og_audience
   module:
     - entity_reference_revisions
     - options
@@ -38,6 +39,14 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 3
+    region: content
+  og_audience:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
     region: content
 hidden:
   langcode: true

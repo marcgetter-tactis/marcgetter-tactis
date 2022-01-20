@@ -1,0 +1,26 @@
+uuid: f2cc282c-b946-4352-99af-c63edb0980b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.carousel
+    - field.storage.block_content.og_audience
+    - node.type.component_group
+  module:
+    - og
+id: block_content.carousel.og_audience
+field_name: og_audience
+entity_type: block_content
+bundle: carousel
+label: 'Groups audience'
+description: 'OG group audience reference field.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'og:default'
+  handler_settings:
+    target_bundles:
+      component_group: component_group
+field_type: og_standard_reference

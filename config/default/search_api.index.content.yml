@@ -15,7 +15,7 @@ _core:
   default_config_hash: ExfVmspVtVpuJ6R3Kb_YzHcs47K5mzHLKT7krY5Sy7Y
 id: content
 name: Content
-description: 'An index of all content in your site.'
+description: 'An index of certain content to be used in the News search.'
 read_only: false
 field_settings:
   created:
@@ -97,11 +97,8 @@ datasource_settings:
     bundles:
       default: false
       selected:
-        - article
-        - event
-        - page
-        - person
-        - place
+        - component_group
+        - press_release
     languages:
       default: true
       selected: {  }

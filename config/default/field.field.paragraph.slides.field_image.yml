@@ -1,0 +1,31 @@
+uuid: b9f3cae1-480c-4c00-ba06-5e1db06af662
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image
+    - media.type.image
+    - media.type.video
+    - paragraphs.paragraphs_type.slides
+id: paragraph.slides.field_image
+field_name: field_image
+entity_type: paragraph
+bundle: slides
+label: Image
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      video: video
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

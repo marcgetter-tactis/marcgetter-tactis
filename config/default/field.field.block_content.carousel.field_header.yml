@@ -1,0 +1,19 @@
+uuid: bf9080f7-d096-43f3-8ae8-15fe7ce51635
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.carousel
+    - field.storage.block_content.field_header
+id: block_content.carousel.field_header
+field_name: field_header
+entity_type: block_content
+bundle: carousel
+label: Header
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

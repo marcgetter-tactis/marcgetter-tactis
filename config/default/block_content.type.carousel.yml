@@ -1,0 +1,8 @@
+uuid: 6bbb4483-d566-4b6d-bbd9-6463a0659f47
+langcode: en
+status: true
+dependencies: {  }
+id: carousel
+label: Carousel
+revision: 0
+description: 'This component can feature a headline, cards, images, text, links, and CTAs.  The user can click on the indicators at the bottom of this component to move the carousel.  The carousel can display a max of 6 slides.'

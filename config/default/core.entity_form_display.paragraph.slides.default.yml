@@ -1,0 +1,74 @@
+uuid: 224ffd0a-2d2d-44f1-91ed-ee0e3f7decf3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slides.field_body
+    - field.field.paragraph.slides.field_cards
+    - field.field.paragraph.slides.field_cta
+    - field.field.paragraph.slides.field_cta_style
+    - field.field.paragraph.slides.field_headline
+    - field.field.paragraph.slides.field_image
+    - paragraphs.paragraphs_type.slides
+  module:
+    - entity_reference_revisions
+    - link
+    - text
+id: paragraph.slides.default
+targetEntityType: paragraph
+bundle: slides
+mode: default
+content:
+  field_body:
+    type: text_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_cards:
+    type: entity_reference_revisions_autocomplete
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_cta:
+    type: link_default
+    weight: 4
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_cta_style:
+    type: options_select
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_headline:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_image:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,21 +1,21 @@
-uuid: 9d8f2d28-206b-474d-978d-398a7deb8c30
+uuid: 9b1ec16c-b737-485b-990c-188671b16544
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.blank
-    - field.storage.block_content.field_cards
+    - field.storage.paragraph.field_cards
     - paragraphs.paragraphs_type.card
+    - paragraphs.paragraphs_type.slide
   module:
     - entity_reference_revisions
-id: block_content.blank.field_cards
+id: paragraph.slide.field_cards
 field_name: field_cards
-entity_type: block_content
-bundle: blank
-label: Card
+entity_type: paragraph
+bundle: slide
+label: Cards
 description: ''
-required: true
-translatable: false
+required: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
@@ -26,13 +26,13 @@ settings:
     negate: 0
     target_bundles_drag_drop:
       action_center_item:
-        weight: 23
+        weight: 7
         enabled: false
       card:
-        weight: 24
+        weight: 8
         enabled: true
       hero_slide:
-        weight: 25
+        weight: 9
         enabled: false
       slide:
         weight: 10

@@ -1,9 +1,9 @@
-uuid: bf80c477-43de-48d6-aeb5-5f165cfe65b2
+uuid: 9fce0846-f558-406e-9c66-4f5d6bc72a9e
 langcode: en
 status: true
 dependencies: {  }
-id: slides
-label: Slides
+id: slide
+label: Slide
 icon_uuid: null
 icon_default: null
 description: ''

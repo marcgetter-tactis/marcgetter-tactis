@@ -1,17 +1,17 @@
-uuid: 24ba57ca-994c-4c01-b124-79699f94ae67
+uuid: 09688c18-3a7a-4c3c-b980-0537fb8b2ea3
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_headline
-    - paragraphs.paragraphs_type.slides
-id: paragraph.slides.field_headline
+    - paragraphs.paragraphs_type.slide
+id: paragraph.slide.field_headline
 field_name: field_headline
 entity_type: paragraph
-bundle: slides
+bundle: slide
 label: Headline
 description: ''
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''

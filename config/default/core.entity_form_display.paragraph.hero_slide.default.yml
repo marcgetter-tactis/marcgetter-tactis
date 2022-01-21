@@ -4,10 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.hero_slide.field_featured_content
-    - field.field.paragraph.hero_slide.field_hero_image
     - paragraphs.paragraphs_type.hero_slide
-  module:
-    - media_library
 id: paragraph.hero_slide.default
 targetEntityType: paragraph
 bundle: hero_slide
@@ -22,13 +19,6 @@ content:
       match_limit: 10
       size: 60
       placeholder: ''
-    third_party_settings: {  }
-  field_hero_image:
-    type: media_library_widget
-    weight: 3
-    region: content
-    settings:
-      media_types: {  }
     third_party_settings: {  }
 hidden:
   created: true

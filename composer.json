@@ -50,6 +50,7 @@
         "drupal/uswds_ckeditor_integration": "^1.0@beta",
         "drupal/uswds_paragraph_components": "^2.1",
         "drupal/viewfield": "^3.0@beta",
+        "drupal/views_slideshow": "^4.8",
         "drupal/viewsreference": "^1.7",
         "drupal/webform": "^6.1",
         "drupal/workbench": "^1.3",

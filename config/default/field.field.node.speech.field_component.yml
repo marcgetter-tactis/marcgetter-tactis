@@ -1,0 +1,29 @@
+uuid: 14e42c67-92dd-47ba-81bc-21fc56a6aefa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_component
+    - node.type.speech
+    - taxonomy.vocabulary.tags
+id: node.speech.field_component
+field_name: field_component
+entity_type: node
+bundle: speech
+label: Component(s)
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

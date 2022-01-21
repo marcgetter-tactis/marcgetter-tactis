@@ -1,17 +1,18 @@
-uuid: 6528db74-1fdb-4bc2-8c91-3cc083608c3a
+uuid: de385571-ed65-4a91-8869-df15467f7b18
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_hero_image
+    - field.storage.node.field_feature_image
     - media.type.image
+    - media.type.remote_video
     - media.type.video
-    - paragraphs.paragraphs_type.hero_slide
-id: paragraph.hero_slide.field_hero_image
-field_name: field_hero_image
-entity_type: paragraph
-bundle: hero_slide
-label: 'Hero Image'
+    - node.type.press_release
+id: node.press_release.field_feature_image
+field_name: field_feature_image
+entity_type: node
+bundle: press_release
+label: 'Feature Image'
 description: ''
 required: false
 translatable: false
@@ -22,6 +23,7 @@ settings:
   handler_settings:
     target_bundles:
       image: image
+      remote_video: remote_video
       video: video
     sort:
       field: _none

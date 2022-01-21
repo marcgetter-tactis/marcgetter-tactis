@@ -1,0 +1,23 @@
+uuid: 1eae2f75-e54a-4e36-b777-e427cac5803e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_left_navigation_menu
+    - node.type.landing_page
+id: node.landing_page.field_left_navigation_menu
+field_name: field_left_navigation_menu
+entity_type: node
+bundle: landing_page
+label: 'Left Navigation Menu'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:menu'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

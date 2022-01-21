@@ -1,0 +1,25 @@
+uuid: 800646ce-98e6-4712-93e9-3fd6d104865e
+langcode: en
+status: true
+dependencies:
+  module:
+    - collapsiblock
+  theme:
+    - usdoj_uswds
+third_party_settings:
+  collapsiblock:
+    collapse_action: 0
+id: tabs
+theme: usdoj_uswds
+region: content
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

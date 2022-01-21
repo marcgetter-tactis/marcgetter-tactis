@@ -1,17 +1,15 @@
-uuid: 09cb20ca-0fa2-436a-b031-8b58e7a9e470
+uuid: ee0e4f35-baca-4eb9-a4a2-dc01289d6ba6
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.page.field_body
-    - field.field.node.page.field_left_navigation_menu
-    - field.field.node.page.layout_builder__layout
-    - field.field.node.page.og_audience
-    - node.type.page
+    - field.field.node.landing_page.field_left_navigation_menu
+    - field.field.node.landing_page.layout_builder__layout
+    - field.field.node.landing_page.og_audience
+    - node.type.landing_page
   module:
     - layout_builder
     - layout_discovery
-    - text
     - user
 third_party_settings:
   layout_builder:
@@ -32,11 +30,11 @@ third_party_settings:
           context_mapping: {  }
           column_widths: 33-67
         components:
-          0ecc3d8c-3f51-49e0-9a14-7dc9aa280f6e:
-            uuid: 0ecc3d8c-3f51-49e0-9a14-7dc9aa280f6e
+          af5fcab5-4eea-406e-ba9b-6f0a29359a86:
+            uuid: af5fcab5-4eea-406e-ba9b-6f0a29359a86
             region: first
             configuration:
-              id: 'field_block:node:page:field_left_navigation_menu'
+              id: 'field_block:node:landing_page:field_left_navigation_menu'
               label: 'Left Navigation Menu'
               label_display: visible
               provider: layout_builder
@@ -51,11 +49,11 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 0
             additional: {  }
-          68111353-eb56-4378-bbfa-486dec8c747d:
-            uuid: 68111353-eb56-4378-bbfa-486dec8c747d
+          5516970b-6861-46a7-9475-22aff29d6a79:
+            uuid: 5516970b-6861-46a7-9475-22aff29d6a79
             region: second
             configuration:
-              id: 'field_block:node:page:title'
+              id: 'field_block:node:landing_page:title'
               label: Title
               label_display: '0'
               provider: layout_builder
@@ -70,24 +68,6 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 1
             additional: {  }
-          60d5ab96-1277-467a-ac62-36306ead4de7:
-            uuid: 60d5ab96-1277-467a-ac62-36306ead4de7
-            region: second
-            configuration:
-              id: 'field_block:node:page:field_body'
-              label: Body
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: text_default
-                label: hidden
-                settings: {  }
-                third_party_settings: {  }
-            weight: 2
-            additional: {  }
         third_party_settings: {  }
       -
         layout_id: layout_onecol
@@ -96,18 +76,11 @@ third_party_settings:
           context_mapping: {  }
         components: {  }
         third_party_settings: {  }
-id: node.page.default
+id: node.landing_page.default
 targetEntityType: node
-bundle: page
+bundle: landing_page
 mode: default
 content:
-  field_body:
-    type: text_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 104
-    region: content
   field_left_navigation_menu:
     type: entity_reference_label
     label: above

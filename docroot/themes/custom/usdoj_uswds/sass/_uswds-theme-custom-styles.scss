@@ -141,3 +141,35 @@ strong {
     }
   }
 }
+
+.slick-dots {
+  position: relative;
+  padding: 0;
+  list-style: none;
+  bottom: 4rem;
+  margin-left: 2rem;
+
+  li {
+    display: inline-block;
+    margin: 0 .25rem;
+    
+    &.slick-active {
+      button {
+        background-color: $theme-color-accent-warm;
+      }
+    }
+
+    button {
+      color: transparent;
+      background-color: white;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      border: none;
+      
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

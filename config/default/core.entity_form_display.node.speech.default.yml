@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.speech.field_attachment
     - field.field.node.speech.field_component
     - field.field.node.speech.field_date
+    - field.field.node.speech.field_feature_image
     - field.field.node.speech.field_image
     - field.field.node.speech.field_invisible
     - field.field.node.speech.field_location
@@ -67,6 +68,16 @@ content:
     weight: 1
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_feature_image:
+    type: entity_reference_autocomplete
+    weight: 26
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_image:
     type: image_image

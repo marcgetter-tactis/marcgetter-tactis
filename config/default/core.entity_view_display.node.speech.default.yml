@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.speech.field_attachment
     - field.field.node.speech.field_component
     - field.field.node.speech.field_date
+    - field.field.node.speech.field_feature_image
     - field.field.node.speech.field_image
     - field.field.node.speech.field_invisible
     - field.field.node.speech.field_location
@@ -57,6 +58,14 @@ content:
       format_type: medium
     third_party_settings: {  }
     weight: 102
+    region: content
+  field_feature_image:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 111
     region: content
   field_image:
     type: image

@@ -1,0 +1,29 @@
+uuid: f2fe3d7a-060e-4572-b1d8-557f2d315ffc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_topic
+    - node.type.speech
+    - taxonomy.vocabulary.tags
+id: node.speech.field_topic
+field_name: field_topic
+entity_type: node
+bundle: speech
+label: Topic(s)
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

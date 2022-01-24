@@ -1,0 +1,15 @@
+diff --git docroot/.htaccess docroot/.htaccess
+index 2ea71002..fbb4e8c4 100644
+--- docroot/.htaccess
++++ docroot/.htaccess
+@@ -111,6 +111,10 @@ AddEncoding gzip svgz
+   # RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+   # RewriteRule ^ http%{ENV:protossl}://%1%{REQUEST_URI} [L,R=301]
+
++  RewriteCond %{HTTPS} off
++  RewriteCond %{HTTP:X-Forwarded-Proto} !https
++  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
++
+   # Modify the RewriteBase if you are using Drupal in a subdirectory or in a
+   # VirtualDocumentRoot and the rewrite rules are not working properly.
+   # For example if your site is at http://example.com/drupal uncomment and

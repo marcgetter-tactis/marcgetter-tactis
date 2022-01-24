@@ -5,3 +5,7 @@ assets:
       css/styles.css: {}
   js:
     assets/js/uswds.min.js: {}
+    js/script.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once

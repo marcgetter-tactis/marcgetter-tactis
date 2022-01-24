@@ -1,0 +1,29 @@
+uuid: 55f040eb-31d9-48ba-9b45-0cb3c8aa298d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_invisible
+    - node.type.speech
+    - taxonomy.vocabulary.tags
+id: node.speech.field_invisible
+field_name: field_invisible
+entity_type: node
+bundle: speech
+label: 'Invisible Tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

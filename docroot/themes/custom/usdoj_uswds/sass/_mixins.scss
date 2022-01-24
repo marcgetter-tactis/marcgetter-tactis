@@ -23,13 +23,16 @@
         border-top-left-radius: .25rem;
         border-bottom-left-radius: .25rem;
     }
+    
     button.usa-button {
         background-color: color(warning);
         min-width: 2rem;
         padding: 0 0.75rem;
+        
         &:hover {
             background-color: color(warning-dark);
         }
+        
         img.usa-search__submit-icon {
             width: auto;
             height: auto;

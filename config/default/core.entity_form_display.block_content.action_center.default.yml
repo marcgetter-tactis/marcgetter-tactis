@@ -24,12 +24,12 @@ content:
     weight: 31
     region: content
     settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
+      title: 'Action Center Item'
+      title_plural: 'Action Center Items'
+      edit_mode: closed
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: ''
+      default_paragraph_type: action_center_item
     third_party_settings: {  }
   field_background_color:
     type: options_select

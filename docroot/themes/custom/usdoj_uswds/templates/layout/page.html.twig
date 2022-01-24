@@ -73,7 +73,7 @@
 
             {{ page.header }}
             <input type="checkbox" class="display-none" id="mobile-btn" />
-            <label class="hamburger float-right desktop:float-none position-relative desktop:position-static margin-right-2" for="mobile-btn">
+            <label class="hamburger float-right desktop:float-none position-relative desktop:position-static desktop:display-block margin-right-2 desktop:margin-x-auto" for="mobile-btn">            
                 <nav class="usa-nav position-absolute desktop:position-static right-neg-2 padding-0" role="navigation">
                     {% if header_extended %}
                     <div class="usa-nav__inner">
@@ -171,9 +171,9 @@
                 {# Help #}
                 {% if page.help %}
                     {% block help %}
-                        <div class="grid-row ">
+                        <div class="grid-row">
                             {{ page.help }}
-d                        </div>
+                         </div>
                     {% endblock %}
                 {% endif %}
             {% endif %}

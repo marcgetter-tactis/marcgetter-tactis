@@ -1,16 +1,17 @@
-uuid: 09e31d90-e833-4ca9-a866-99d0c510d4c9
+uuid: 58546e76-ab81-4830-ad77-bc02980106e0
 langcode: en
 status: true
 dependencies:
   module:
     - media
-    - paragraphs
-id: paragraph.field_hero_image
-field_name: field_hero_image
-entity_type: paragraph
-type: entity_reference
+id: media.field_source
+field_name: field_source
+entity_type: media
+type: string
 settings:
-  target_type: media
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
 module: core
 locked: false
 cardinality: 1

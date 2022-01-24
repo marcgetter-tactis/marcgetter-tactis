@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - filter.format.cohesion
     - filter.format.full_html
   module:
     - filter
@@ -17,6 +16,5 @@ weight: -9
 is_admin: null
 permissions:
   - 'access toolbar'
-  - 'use text format cohesion'
   - 'use text format full_html'
   - 'view the administration theme'

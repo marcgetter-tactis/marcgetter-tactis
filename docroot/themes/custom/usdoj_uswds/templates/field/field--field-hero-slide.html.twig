@@ -37,34 +37,34 @@
  */
 #}
 {%
-    set title_classes = [
-    label_display == 'visually_hidden' ? 'usa-sr-only',
+  set title_classes = [
+  label_display == 'visually_hidden' ? 'usa-sr-only',
 ]
 %}
-{{ attach_library('slick/slick') }}
+
 {% if label_hidden %}
-    {% if multiple %}
-        <div{{ attributes.addClass('field__items') }}>
-            {% for item in items %}
-                <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
-            {% endfor %}
-        </div>
-    {% else %}
-        {% for item in items %}
-            <div{{ attributes.addClass('field__item') }}>{{ item.content }}</div>
-        {% endfor %}
-    {% endif %}
-{% else %}
-    <div{{ attributes }}>
-        <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
-        {% if multiple %}
-        <div>
-            {% endif %}
-            {% for item in items %}
-                <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
-            {% endfor %}
-            {% if multiple %}
-        </div>
-        {% endif %}
+  {% if multiple %}
+    <div class="field__items {{ (items|length>1) ? 'hero-slideshow' }}">
+      {% for item in items %}
+        <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
+      {% endfor %}
     </div>
+  {% else %}
+    {% for item in items %}
+      <div{{ attributes.addClass('field__item') }}>{{ item.content }}</div>
+    {% endfor %}
+  {% endif %}
+{% else %}
+  <div{{ attributes }}>
+    <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
+    {% if multiple %}
+    <div>
+      {% endif %}
+      {% for item in items %}
+        <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
+      {% endfor %}
+      {% if multiple %}
+    </div>
+    {% endif %}
+  </div>
 {% endif %}

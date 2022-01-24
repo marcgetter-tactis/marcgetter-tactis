@@ -1,0 +1,188 @@
+uuid: 949303c4-ffce-40d2-9b85-90f1a579d471
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.bio.body
+    - field.field.node.bio.field_dates_service
+    - field.field.node.bio.field_link
+    - field.field.node.bio.field_name
+    - field.field.node.bio.field_nth_attorney_general
+    - field.field.node.bio.field_portrait
+    - field.field.node.bio.field_portrait_artist
+    - field.field.node.bio.field_portrait_download
+    - field.field.node.bio.field_teaser
+    - image.style.thumbnail
+    - node.type.bio
+  module:
+    - datetime_range
+    - link
+    - path
+    - scheduler
+    - scheduler_content_moderation_integration
+    - svg_image
+    - text
+id: node.bio.default
+targetEntityType: node
+bundle: bio
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 121
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_dates_service:
+    type: daterange_default
+    weight: 124
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_link:
+    type: link_default
+    weight: 125
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_name:
+    type: string_textfield
+    weight: 122
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_nth_attorney_general:
+    type: number
+    weight: 123
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_portrait:
+    type: image_image
+    weight: 127
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_portrait_artist:
+    type: string_textfield
+    weight: 129
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_portrait_download:
+    type: image_image
+    weight: 128
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_teaser:
+    type: text_textarea
+    weight: 126
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 15
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  publish_state:
+    type: scheduler_moderation
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  unpublish_state:
+    type: scheduler_moderation
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

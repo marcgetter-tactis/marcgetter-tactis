@@ -1,0 +1,48 @@
+uuid: d845e26c-a974-4bcc-a467-19bc478b2ef7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.bio.body
+    - field.field.node.bio.field_dates_service
+    - field.field.node.bio.field_link
+    - field.field.node.bio.field_name
+    - field.field.node.bio.field_nth_attorney_general
+    - field.field.node.bio.field_portrait
+    - field.field.node.bio.field_portrait_artist
+    - field.field.node.bio.field_portrait_download
+    - field.field.node.bio.field_teaser
+    - node.type.bio
+  module:
+    - text
+    - user
+id: node.bio.teaser
+targetEntityType: node
+bundle: bio
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_dates_service: true
+  field_link: true
+  field_name: true
+  field_nth_attorney_general: true
+  field_portrait: true
+  field_portrait_artist: true
+  field_portrait_download: true
+  field_teaser: true
+  langcode: true
+  search_api_excerpt: true

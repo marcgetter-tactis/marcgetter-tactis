@@ -23,6 +23,18 @@ Mission Block on Homepage
   margin: 0 calc(-50vw + 50%);
   background-color: color(primary-darker);
   padding: 3rem 0;
+
+  &:after {
+    content: "";
+    position: absolute;
+    opacity: 0.05;
+    background-image: url('/themes/custom/usdoj_uswds/images/doj-seal-white-outline.png');
+    background-position: right;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    top: -8rem;
+  }
   
   .field_image {
     float: left;
@@ -56,7 +68,7 @@ Mission Block on Homepage
     ul {
       padding-left: 1.25rem;
       li {
-        list-style-image: url('/themes/custom/usdoj_uswds/images/doj-icon-bullet-star-silver.svg');
+        list-style-image: url('/themes/custom/usdoj_uswds/images/doj-icon-bullet-star-silver.png');
         line-height: 2.25rem;
       }
     }

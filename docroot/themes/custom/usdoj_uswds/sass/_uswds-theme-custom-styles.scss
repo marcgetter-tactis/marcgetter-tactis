@@ -14,7 +14,6 @@ sass root. Don't edit the version
 in node_modules.
 ----------------------------------------
 Custom project SASS goes here.
-
 i.e.
 @include u-padding-right('05');
 ----------------------------------------
@@ -116,18 +115,13 @@ strong {
   }
 }
 
-
-
-.paragraph--type--hero-slide {
+.hero-wrapper {
   position: relative;
 
-  .hero-text {
-    position: absolute;
-    background-color: white;
-    max-width: 300px;
-    top: 2rem;
-    left: 2rem;
+  .hero-text-wrapper {
+    background-color: rgba(white,.95);
     border-left: 4px solid $theme-color-accent-warm;
+    z-index: 1;
 
     a {
       font-family: $headings-font-family;
@@ -137,22 +131,49 @@ strong {
       font-size: $theme-h3-font-size;
       line-height: 1.3;
       font-weight: 600;
-      padding: 1.5rem;
+    }
+
+    .hero-type,
+    h2 {
+      margin: 1rem;
+    }
+
+    .hero-type {
+      text-transform: uppercase;
+      color: $doj-coolblue;
+      font-weight: 700;
+      font-size: $theme-h6-font-size;
+    }
+
+    .hero-date {
+      background-color: $doj-lightblue;
+      padding: 1rem;
+      border-top: 1px solid $gray-cool-20;
+      border-bottom: 1px solid $gray-cool-20;
+      font-size: $theme-h6-font-size;
+    }
+  }
+
+  .hero-image {
+    position: relative;
+
+    img {
+      width: 100%;
+      height: auto;
     }
   }
 }
 
 .slick-dots {
-  position: relative;
+  @include center-hor();
   padding: 0;
   list-style: none;
-  bottom: 4rem;
-  margin-left: 2rem;
-
+  top: 30%;
+  
   li {
     display: inline-block;
     margin: 0 .25rem;
-    
+
     &.slick-active {
       button {
         background-color: $theme-color-accent-warm;
@@ -162,14 +183,44 @@ strong {
     button {
       color: transparent;
       background-color: white;
-      width: 15px;
-      height: 15px;
+      width: 12px;
+      height: 12px;
       border-radius: 50%;
       border: none;
-      
+
       &:hover {
         cursor: pointer;
       }
+    }
+  }
+
+  @include at-media(mobile-lg) {
+    top: 40%;
+  }
+  
+  @include at-media(tablet) {
+    top: 56%;
+  }
+  
+  @include at-media(desktop) {
+    bottom: 4rem;
+    margin-left: 2rem;
+    position: relative;
+    transform: none;
+    left: 0;
+
+  }
+}
+
+@include at-media(desktop) {
+
+
+  .hero-wrapper {
+    .hero-text-wrapper {
+      position: absolute;
+      max-width: 300px;
+      top: 2rem;
+      left: 2rem;
     }
   }
 }

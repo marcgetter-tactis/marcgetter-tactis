@@ -1,0 +1,21 @@
+uuid: 8f1b7e19-2543-4e3f-8c1a-9ae5e500ed14
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaser
+    - node.type.blog_post
+  module:
+    - text
+id: node.blog_post.field_teaser
+field_name: field_teaser
+entity_type: node
+bundle: blog_post
+label: Teaser
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

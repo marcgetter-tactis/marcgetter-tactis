@@ -1,0 +1,11 @@
+uuid: c7601f5e-ec90-4764-b7f1-53f640086788
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.youtube_video_categories
+id: taxonomy_term.youtube_video_categories
+target_entity_type_id: taxonomy_term
+target_bundle: youtube_video_categories
+default_langcode: site_default
+language_alterable: false

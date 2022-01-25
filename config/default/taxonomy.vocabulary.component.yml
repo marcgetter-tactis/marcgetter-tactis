@@ -1,0 +1,8 @@
+uuid: 5fb29b12-a5a1-4e5b-abcf-1b5d504717d3
+langcode: en
+status: true
+dependencies: {  }
+name: Component
+vid: component
+description: ''
+weight: 0

@@ -4,6 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.node.bio.body
+    - field.field.node.bio.field_bio_type
+    - field.field.node.bio.field_byline
+    - field.field.node.bio.field_component
     - field.field.node.bio.field_dates_service
     - field.field.node.bio.field_link
     - field.field.node.bio.field_name
@@ -11,11 +14,14 @@ dependencies:
     - field.field.node.bio.field_portrait
     - field.field.node.bio.field_portrait_artist
     - field.field.node.bio.field_portrait_download
+    - field.field.node.bio.field_position
     - field.field.node.bio.field_teaser
+    - field.field.node.bio.og_audience
     - node.type.bio
   module:
     - datetime_range
     - link
+    - options
     - svg_image
     - text
     - user
@@ -31,9 +37,32 @@ content:
     third_party_settings: {  }
     weight: 101
     region: content
+  field_bio_type:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 111
+    region: content
+  field_byline:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 112
+    region: content
+  field_component:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 114
+    region: content
   field_dates_service:
     type: daterange_default
-    label: above
+    label: hidden
     settings:
       timezone_override: ''
       format_type: medium
@@ -43,7 +72,7 @@ content:
     region: content
   field_link:
     type: link
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -55,7 +84,7 @@ content:
     region: content
   field_name:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -63,7 +92,7 @@ content:
     region: content
   field_nth_attorney_general:
     type: number_integer
-    label: above
+    label: hidden
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -72,7 +101,7 @@ content:
     region: content
   field_portrait:
     type: image
-    label: above
+    label: hidden
     settings:
       image_link: ''
       image_style: ''
@@ -85,7 +114,7 @@ content:
     region: content
   field_portrait_artist:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -93,7 +122,7 @@ content:
     region: content
   field_portrait_download:
     type: image
-    label: above
+    label: hidden
     settings:
       image_link: ''
       image_style: ''
@@ -104,9 +133,17 @@ content:
     third_party_settings: {  }
     weight: 108
     region: content
+  field_position:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 113
+    region: content
   field_teaser:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 106
@@ -115,6 +152,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 100
+    region: content
+  og_audience:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 110
     region: content
 hidden:
   langcode: true

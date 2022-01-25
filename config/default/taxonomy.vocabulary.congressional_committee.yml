@@ -1,0 +1,8 @@
+uuid: 23569931-e5ec-4f97-a19f-06ae5fc9b9e5
+langcode: en
+status: true
+dependencies: {  }
+name: 'Congressional Committee'
+vid: congressional_committee
+description: ''
+weight: 0

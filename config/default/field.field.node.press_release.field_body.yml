@@ -1,14 +1,14 @@
-uuid: d41c2615-f83a-4899-9f23-1675dfb678ba
+uuid: 574ac54c-7725-4b33-aad4-28b629b8cf17
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.body
+    - field.storage.node.field_body
     - node.type.press_release
   module:
     - text
-id: node.press_release.body
-field_name: body
+id: node.press_release.field_body
+field_name: field_body
 entity_type: node
 bundle: press_release
 label: Body
@@ -17,7 +17,5 @@ required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
-settings:
-  display_summary: true
-  required_summary: false
-field_type: text_with_summary
+settings: {  }
+field_type: text_long

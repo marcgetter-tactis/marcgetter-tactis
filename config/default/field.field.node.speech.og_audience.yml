@@ -1,17 +1,17 @@
-uuid: 45985667-15d8-4fdb-bf5c-1b5519151633
+uuid: 3ea8ceb6-7fca-40ad-ae2e-148a87bd1832
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.og_audience
-    - node.type.blog_post
     - node.type.component_group
+    - node.type.speech
   module:
     - og
-id: node.blog_post.og_audience
+id: node.speech.og_audience
 field_name: og_audience
 entity_type: node
-bundle: blog_post
+bundle: speech
 label: 'Groups audience'
 description: 'OG group audience reference field.'
 required: false

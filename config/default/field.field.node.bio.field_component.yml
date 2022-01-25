@@ -1,15 +1,15 @@
-uuid: 74c77d95-7cd6-4c8e-a844-0cd3d433ef60
+uuid: 5cbf9c9d-cbe2-4760-ba7b-ba868ab50968
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_component
-    - node.type.blog_post
+    - node.type.bio
     - taxonomy.vocabulary.component
-id: node.blog_post.field_component
+id: node.bio.field_component
 field_name: field_component
 entity_type: node
-bundle: blog_post
+bundle: bio
 label: Component(s)
 description: ''
 required: false

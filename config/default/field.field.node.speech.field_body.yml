@@ -1,14 +1,14 @@
-uuid: a6b5425a-9c0b-42ba-978a-d61c5400be86
+uuid: cdb97187-c22d-410c-9eb9-ef29f5ad7cf1
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.body
+    - field.storage.node.field_body
     - node.type.speech
   module:
     - text
-id: node.speech.body
-field_name: body
+id: node.speech.field_body
+field_name: field_body
 entity_type: node
 bundle: speech
 label: Body
@@ -17,7 +17,5 @@ required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
-settings:
-  display_summary: true
-  required_summary: false
-field_type: text_with_summary
+settings: {  }
+field_type: text_long

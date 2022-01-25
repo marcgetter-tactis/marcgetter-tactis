@@ -1,0 +1,8 @@
+uuid: 620d4dc0-08b6-4653-922e-b9eda83d6d36
+langcode: en
+status: true
+dependencies: {  }
+name: 'Brief Topic'
+vid: brief_topic
+description: ''
+weight: 0

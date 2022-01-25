@@ -1,17 +1,17 @@
-uuid: 45985667-15d8-4fdb-bf5c-1b5519151633
+uuid: 238952c3-57d7-4c65-be8f-6d20d90f013f
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.og_audience
-    - node.type.blog_post
     - node.type.component_group
+    - node.type.press_release
   module:
     - og
-id: node.blog_post.og_audience
+id: node.press_release.og_audience
 field_name: og_audience
 entity_type: node
-bundle: blog_post
+bundle: press_release
 label: 'Groups audience'
 description: 'OG group audience reference field.'
 required: false

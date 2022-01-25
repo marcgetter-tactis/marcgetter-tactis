@@ -1,0 +1,11 @@
+uuid: 9d1ee2f7-26de-400e-a066-99e165a6e7e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.brief_topic
+id: taxonomy_term.brief_topic
+target_entity_type_id: taxonomy_term
+target_bundle: brief_topic
+default_langcode: site_default
+language_alterable: false

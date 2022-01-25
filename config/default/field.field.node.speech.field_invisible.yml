@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_invisible
     - node.type.speech
-    - taxonomy.vocabulary.tags
+    - taxonomy.vocabulary.invisible
 id: node.speech.field_invisible
 field_name: field_invisible
 entity_type: node
@@ -20,7 +20,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      tags: tags
+      invisible: invisible
     sort:
       field: name
       direction: asc

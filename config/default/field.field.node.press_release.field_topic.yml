@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_topic
     - node.type.press_release
-    - taxonomy.vocabulary.tags
+    - taxonomy.vocabulary.topic
 id: node.press_release.field_topic
 field_name: field_topic
 entity_type: node
@@ -20,7 +20,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      tags: tags
+      topic: topic
     sort:
       field: name
       direction: asc

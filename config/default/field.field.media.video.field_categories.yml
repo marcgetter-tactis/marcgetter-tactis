@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.media.field_categories
     - media.type.video
-    - taxonomy.vocabulary.categories
   enforced:
     module:
       - acquia_cms_video
@@ -24,8 +23,7 @@ default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'
   handler_settings:
-    target_bundles:
-      categories: categories
+    target_bundles: {  }
     sort:
       field: name
       direction: asc

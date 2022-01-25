@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_topic
     - node.type.blog_post
-    - taxonomy.vocabulary.tags
+    - taxonomy.vocabulary.topic
 id: node.blog_post.field_topic
 field_name: field_topic
 entity_type: node
@@ -20,10 +20,10 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      tags: tags
+      topic: topic
     sort:
       field: name
       direction: asc
     auto_create: false
-    auto_create_bundle: ''
+    auto_create_bundle: tags
 field_type: entity_reference

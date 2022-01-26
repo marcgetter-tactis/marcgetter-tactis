@@ -1,16 +1,17 @@
-uuid: f85d115c-fd9f-4e30-a3ca-fa7b3da0d05a
+uuid: 07c0a43a-5a4d-43f8-9b1e-8fbf8fc24e4b
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.og_audience
     - node.type.component_group
+    - node.type.event
   module:
     - og
-id: node.component_group.og_audience
+id: node.event.og_audience
 field_name: og_audience
 entity_type: node
-bundle: component_group
+bundle: event
 label: 'Your Groups'
 description: 'Associate this content with groups you belong to.'
 required: false

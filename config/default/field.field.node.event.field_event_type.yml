@@ -1,17 +1,17 @@
-uuid: c33670e7-f29c-4686-bad8-f5485952694f
+uuid: 87c892f7-e413-45fd-b1db-25f1298859bd
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_type
-    - node.type.component_group
+    - field.storage.node.field_event_type
+    - node.type.event
   module:
     - options
-id: node.component_group.field_type
-field_name: field_type
+id: node.event.field_event_type
+field_name: field_event_type
 entity_type: node
-bundle: component_group
-label: 'Organization Type'
+bundle: event
+label: 'Event Type'
 description: ''
 required: false
 translatable: false

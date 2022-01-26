@@ -1,12 +1,12 @@
-uuid: 5b9c1d0e-c3ac-4cf2-be3f-32e5e4909d95
+uuid: 04f3aaf1-66d4-4b34-be91-f431dec85b27
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - options
-id: node.field_type
-field_name: field_type
+id: node.field_organization_type
+field_name: field_organization_type
 entity_type: node
 type: list_string
 settings:

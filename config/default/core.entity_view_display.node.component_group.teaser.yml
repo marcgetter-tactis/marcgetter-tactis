@@ -10,7 +10,7 @@ dependencies:
     - field.field.node.component_group.field_contact_info
     - field.field.node.component_group.field_logo
     - field.field.node.component_group.field_more_events
-    - field.field.node.component_group.field_type
+    - field.field.node.component_group.field_organization_type
     - field.field.node.component_group.layout_builder__layout
     - field.field.node.component_group.more_blogs
     - field.field.node.component_group.more_galleries
@@ -33,7 +33,7 @@ content:
     region: content
   og_group:
     type: og_group_subscribe
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 0
@@ -45,7 +45,7 @@ hidden:
   field_contact_info: true
   field_logo: true
   field_more_events: true
-  field_type: true
+  field_organization_type: true
   langcode: true
   layout_builder__layout: true
   more_blogs: true

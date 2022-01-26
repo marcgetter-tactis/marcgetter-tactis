@@ -1,0 +1,30 @@
+uuid: dbae76dd-bff3-4d78-a428-f89d3f1f04ba
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_episode_type
+field_name: field_episode_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Full
+      label: Full
+    -
+      value: Trailer
+      label: Trailer
+    -
+      value: Bonus
+      label: Bonus
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

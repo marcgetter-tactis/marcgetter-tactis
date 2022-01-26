@@ -71,14 +71,10 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_component:
-    type: entity_reference_autocomplete
+    type: options_select
     weight: 11
     region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   field_date:
     type: datetime_default
@@ -105,14 +101,10 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
   field_invisible:
-    type: entity_reference_autocomplete
+    type: options_select
     weight: 12
     region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   field_location:
     type: address_default
@@ -139,14 +131,10 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_topic:
-    type: entity_reference_autocomplete
+    type: options_select
     weight: 10
     region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   langcode:
     type: language_select

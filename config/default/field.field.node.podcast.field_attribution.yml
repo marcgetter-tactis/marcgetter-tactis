@@ -1,0 +1,21 @@
+uuid: c0a606f9-8623-4213-91ae-5623552c4030
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_attribution
+    - node.type.podcast
+  module:
+    - text
+id: node.podcast.field_attribution
+field_name: field_attribution
+entity_type: node
+bundle: podcast
+label: Credits
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

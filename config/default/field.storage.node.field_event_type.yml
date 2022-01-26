@@ -1,0 +1,48 @@
+uuid: a1d5adce-c80b-43e6-844e-e8f93d05a834
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_event_type
+field_name: field_event_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: conference
+      label: Conference
+    -
+      value: upcoming_court_case
+      label: 'Upcoming Court Case'
+    -
+      value: workshop
+      label: Workshop
+    -
+      value: speech
+      label: Speech
+    -
+      value: training
+      label: Training
+    -
+      value: seminar
+      label: Seminar
+    -
+      value: webinar
+      label: Webinar
+    -
+      value: external_event
+      label: 'External event'
+    -
+      value: internal_event
+      label: 'Internal event'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

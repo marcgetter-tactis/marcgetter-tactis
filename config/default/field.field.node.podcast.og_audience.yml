@@ -1,16 +1,17 @@
-uuid: f85d115c-fd9f-4e30-a3ca-fa7b3da0d05a
+uuid: 56064e3d-f890-4d8f-b08c-94be8474a3de
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.og_audience
     - node.type.component_group
+    - node.type.podcast
   module:
     - og
-id: node.component_group.og_audience
+id: node.podcast.og_audience
 field_name: og_audience
 entity_type: node
-bundle: component_group
+bundle: podcast
 label: 'Your Groups'
 description: 'Associate this content with groups you belong to.'
 required: false

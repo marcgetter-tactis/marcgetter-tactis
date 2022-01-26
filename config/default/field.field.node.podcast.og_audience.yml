@@ -1,0 +1,26 @@
+uuid: 56064e3d-f890-4d8f-b08c-94be8474a3de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.og_audience
+    - node.type.component_group
+    - node.type.podcast
+  module:
+    - og
+id: node.podcast.og_audience
+field_name: og_audience
+entity_type: node
+bundle: podcast
+label: 'Groups audience'
+description: 'OG group audience reference field.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'og:default'
+  handler_settings:
+    target_bundles:
+      component_group: component_group
+field_type: og_standard_reference

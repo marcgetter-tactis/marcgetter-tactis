@@ -1,0 +1,20 @@
+_core:
+  default_config_hash: sssLNRxRTk1CrIHzMgMCGq0WNBNn9k6p1L3_N-cp0Zg
+promote_disable_node_types:
+  page: page
+  bio: bio
+  blog_post: blog_post
+  component_group: component_group
+  image_gallery: image_gallery
+  landing_page: landing_page
+  press_release: press_release
+  speech: speech
+promote_disable_sticky_node_types:
+  page: page
+  bio: bio
+  blog_post: blog_post
+  component_group: component_group
+  image_gallery: image_gallery
+  landing_page: landing_page
+  press_release: press_release
+  speech: speech

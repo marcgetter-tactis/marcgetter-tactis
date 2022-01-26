@@ -1,0 +1,301 @@
+_core:
+  default_config_hash: K_LddvA0aVOWbF6aw7aoX1n_BmWah6y3HWE1Ya7QmUc
+entity_type_cancel_destination:
+  default:
+    path: /
+    enabled: true
+  comment:
+    path: /
+    enabled: false
+  block:
+    path: /admin/structure/block
+    enabled: true
+  block_content_type:
+    path: /admin/structure/block/block-content/types
+    enabled: true
+  comment_type:
+    path: /admin/structure/comment
+    enabled: true
+  contact_form:
+    path: /admin/structure/contact
+    enabled: true
+  editor:
+    path: /
+    enabled: false
+  field_storage_config:
+    path: /
+    enabled: false
+  field_config:
+    path: /
+    enabled: true
+  file:
+    path: /
+    enabled: false
+  filter_format:
+    path: /admin/config/content/formats
+    enabled: true
+  image_style:
+    path: /admin/config/media/image-styles
+    enabled: true
+  node_type:
+    path: /admin/structure/types
+    enabled: true
+  node:
+    path: /
+    enabled: true
+  shortcut_set:
+    path: /
+    enabled: false
+  shortcut:
+    path: /
+    enabled: false
+  action:
+    path: /
+    enabled: false
+  menu:
+    path: /
+    enabled: false
+  taxonomy_term:
+    path: /
+    enabled: false
+  taxonomy_vocabulary:
+    path: /admin/structure/taxonomy
+    enabled: true
+  tour:
+    path: /
+    enabled: false
+  user_role:
+    path: /admin/people/roles
+    enabled: true
+  user:
+    path: /
+    enabled: true
+  menu_link_content:
+    path: /
+    enabled: false
+  view:
+    path: /
+    enabled: false
+  base_field_override:
+    path: /
+    enabled: false
+  date_format:
+    path: /
+    enabled: false
+  entity_view_mode:
+    path: /admin/structure/display-modes/view
+    enabled: true
+  entity_form_display:
+    path: /
+    enabled: false
+  entity_view_display:
+    path: /
+    enabled: false
+  entity_form_mode:
+    path: /admin/structure/display-modes/form
+    enabled: true
+  block_content_action_center:
+    path: /
+  block_content_blank:
+    path: /
+  block_content_carousel:
+    path: /
+  block_content_general:
+    path: /
+  block_content_hero:
+    path: /
+  block_content_mission:
+    path: /
+  block_content_tabbed:
+    path: /
+  block_content:
+    enabled: true
+  captcha_point:
+    path: /
+    enabled: true
+  content_moderation_state:
+    path: /
+    enabled: true
+  crop_focal_point:
+    path: /
+  crop_freeform:
+    path: /
+  crop:
+    enabled: true
+  crop_type:
+    path: /
+    enabled: true
+  embed_button:
+    path: /
+    enabled: true
+  entity_embed_fake_entity:
+    path: /
+    enabled: true
+  facets_facet:
+    path: /
+    enabled: true
+  facets_facet_source:
+    path: /
+    enabled: true
+  geocoder_provider:
+    path: /
+    enabled: true
+  google_tag_container:
+    path: /
+    enabled: true
+  imce_profile:
+    path: /
+    enabled: true
+  jsonapi_resource_config:
+    path: /
+    enabled: true
+  configurable_language:
+    path: /
+    enabled: true
+  language_content_settings:
+    path: /
+    enabled: true
+  media_document:
+    path: /
+  media_image:
+    path: /
+  media_remote_video:
+    path: /
+  media_video:
+    path: /
+  media:
+    enabled: true
+  media_type:
+    path: /
+    enabled: true
+  metatag_defaults:
+    path: /
+    enabled: true
+  node_bio:
+    path: /
+  node_blog_post:
+    path: /
+  node_component_group:
+    path: /
+  node_image_gallery:
+    path: /
+  node_landing_page:
+    path: /
+  node_page:
+    path: /
+  node_press_release:
+    path: /
+  node_speech:
+    path: /
+  og_membership_default:
+    path: /
+  og_membership:
+    enabled: true
+  og_membership_type:
+    path: /
+    enabled: true
+  og_role:
+    path: /
+    enabled: true
+  page:
+    path: /
+    enabled: true
+  page_variant:
+    path: /
+    enabled: true
+  paragraph_action_center_item:
+    path: /
+  paragraph_card:
+    path: /
+  paragraph_hero_slide:
+    path: /
+  paragraph_slide:
+    path: /
+  paragraph_statistic:
+    path: /
+  paragraph_tab:
+    path: /
+  paragraph:
+    enabled: true
+  paragraphs_type:
+    path: /
+    enabled: true
+  embedded_paragraphs:
+    path: /
+    enabled: true
+  path_alias:
+    path: /
+    enabled: true
+  redirect:
+    path: /
+    enabled: true
+  responsive_preview_device:
+    path: /
+    enabled: true
+  rest_resource_config:
+    path: /
+    enabled: true
+  search_api_index:
+    path: /
+    enabled: true
+  search_api_server:
+    path: /
+    enabled: true
+  search_api_task:
+    path: /
+    enabled: true
+  search_api_autocomplete_search:
+    path: /
+    enabled: true
+  sitewide_alert:
+    path: /
+    enabled: true
+  slick:
+    path: /
+    enabled: true
+  taxonomy_term_brief_topic:
+    path: /
+  taxonomy_term_component:
+    path: /
+  taxonomy_term_congressional_committee:
+    path: /
+  taxonomy_term_congressional_session:
+    path: /
+  taxonomy_term_image_categories:
+    path: /
+  taxonomy_term_invisible:
+    path: /
+  taxonomy_term_tags:
+    path: /
+  taxonomy_term_topic:
+    path: /
+  taxonomy_term_uswds_breakpoints:
+    path: /
+  taxonomy_term_uswds_classes:
+    path: /
+  taxonomy_term_youtube_video_categories:
+    path: /
+  tmgmt_job:
+    path: /
+    enabled: true
+  tmgmt_job_item:
+    path: /
+    enabled: true
+  tmgmt_message:
+    path: /
+    enabled: true
+  tmgmt_remote:
+    path: /
+    enabled: true
+  tmgmt_translator:
+    path: /
+    enabled: true
+  workbench_email_template:
+    path: /
+    enabled: true
+  workflow:
+    path: /
+    enabled: true
+  pathauto_pattern:
+    path: /
+    enabled: true

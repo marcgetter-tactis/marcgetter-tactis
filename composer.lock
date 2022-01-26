@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e52405971d3cc8c6d84d10b93baa6b32",
+    "content-hash": "2c35c608b45a77470c6477581b57af83",
     "packages": [
         {
             "name": "acquia/acquia_cms",
@@ -4048,20 +4048,20 @@
         },
         {
             "name": "drupal/admin_toolbar",
-            "version": "3.0.3",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/admin_toolbar.git",
-                "reference": "3.0.3"
+                "reference": "3.1.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/admin_toolbar-3.0.3.zip",
-                "reference": "3.0.3",
-                "shasum": "ce735c931c0bd6da79bd8e45ca459d61015bbe44"
+                "url": "https://ftp.drupal.org/files/projects/admin_toolbar-3.1.0.zip",
+                "reference": "3.1.0",
+                "shasum": "7b596d7de04faca747ba3e5216c2e819aae71f40"
             },
             "require": {
-                "drupal/core": "^8.8.0 || ^9.0"
+                "drupal/core": "^8.8.0 || ^9.0 || ^10.0"
             },
             "require-dev": {
                 "drupal/admin_toolbar_tools": "*"
@@ -4069,8 +4069,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.0.3",
-                    "datestamp": "1632322497",
+                    "version": "3.1.0",
+                    "datestamp": "1643097060",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4377,6 +4377,58 @@
                 "source": "https://git.drupalcode.org/project/block_class",
                 "issues": "https://www.drupal.org/project/issues/block_class",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
+            }
+        },
+        {
+            "name": "drupal/cancel_button",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/cancel_button.git",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/cancel_button-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "5e8649381ac3b436ecb3d1146f9220250eafe845"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1613083529",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "danmuzyka",
+                    "homepage": "https://www.drupal.org/user/48685"
+                },
+                {
+                    "name": "kevin.dutra",
+                    "homepage": "https://www.drupal.org/user/1312744"
+                },
+                {
+                    "name": "sukanya.ramakrishnan",
+                    "homepage": "https://www.drupal.org/user/3320069"
+                }
+            ],
+            "description": "This small module adds a Cancel button to Entity forms.",
+            "homepage": "https://www.drupal.org/project/cancel_button",
+            "support": {
+                "source": "https://git.drupalcode.org/project/cancel_button"
             }
         },
         {
@@ -8812,6 +8864,54 @@
             }
         },
         {
+            "name": "drupal/promote_disable",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/promote_disable.git",
+                "reference": "2.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/promote_disable-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "a11b569897302eb15d37b99b4c188d28b49206e0"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0",
+                    "datestamp": "1622502514",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "jamiehollern",
+                    "homepage": "https://www.drupal.org/user/884154"
+                },
+                {
+                    "name": "nehajyoti",
+                    "homepage": "https://www.drupal.org/user/2804915"
+                }
+            ],
+            "description": "Allows a user to disable the 'Promote to front page' option when creating nodes.",
+            "homepage": "https://www.drupal.org/project/promote_disable",
+            "support": {
+                "source": "https://git.drupalcode.org/project/promote_disable"
+            }
+        },
+        {
             "name": "drupal/purge",
             "version": "3.2.0",
             "source": {
@@ -12175,16 +12275,16 @@
         },
         {
             "name": "ergebnis/json-normalizer",
-            "version": "2.1.0",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ergebnis/json-normalizer.git",
-                "reference": "2039eb11131a243b9204bf51219baa08935e6b1d"
+                "reference": "b4c8de936ff453d1b2e45599b995db724e405e97"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ergebnis/json-normalizer/zipball/2039eb11131a243b9204bf51219baa08935e6b1d",
-                "reference": "2039eb11131a243b9204bf51219baa08935e6b1d",
+                "url": "https://api.github.com/repos/ergebnis/json-normalizer/zipball/b4c8de936ff453d1b2e45599b995db724e405e97",
+                "reference": "b4c8de936ff453d1b2e45599b995db724e405e97",
                 "shasum": ""
             },
             "require": {
@@ -12197,12 +12297,12 @@
             "require-dev": {
                 "ergebnis/data-provider": "^1.0.0",
                 "ergebnis/license": "^1.2.0",
-                "ergebnis/php-cs-fixer-config": "^3.4.0",
+                "ergebnis/php-cs-fixer-config": "^4.0.0",
                 "fakerphp/faker": "^1.17.0",
-                "infection/infection": "~0.25.5",
-                "phpunit/phpunit": "^9.5.11",
+                "infection/infection": "~0.26.2",
+                "phpunit/phpunit": "^9.5.12",
                 "psalm/plugin-phpunit": "~0.16.1",
-                "vimeo/psalm": "^4.17.0"
+                "vimeo/psalm": "^4.18"
             },
             "type": "library",
             "autoload": {
@@ -12236,7 +12336,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-01-04T11:19:55+00:00"
+            "time": "2022-01-21T18:55:05+00:00"
         },
         {
             "name": "ergebnis/json-printer",
@@ -14230,16 +14330,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.55.2",
+            "version": "2.56.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "8c2a18ce3e67c34efc1b29f64fe61304368259a2"
+                "reference": "626ec8cbb724cd3c3400c3ed8f730545b744e3f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/8c2a18ce3e67c34efc1b29f64fe61304368259a2",
-                "reference": "8c2a18ce3e67c34efc1b29f64fe61304368259a2",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/626ec8cbb724cd3c3400c3ed8f730545b744e3f4",
+                "reference": "626ec8cbb724cd3c3400c3ed8f730545b744e3f4",
                 "shasum": ""
             },
             "require": {
@@ -14256,7 +14356,7 @@
                 "kylekatarnls/multi-tester": "^2.0",
                 "phpmd/phpmd": "^2.9",
                 "phpstan/extension-installer": "^1.0",
-                "phpstan/phpstan": "^0.12.54",
+                "phpstan/phpstan": "^0.12.54 || ^1.0",
                 "phpunit/phpunit": "^7.5.20 || ^8.5.14",
                 "squizlabs/php_codesniffer": "^3.4"
             },
@@ -14322,7 +14422,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-12-03T14:59:52+00:00"
+            "time": "2022-01-21T17:08:38+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -17783,16 +17883,16 @@
         },
         {
             "name": "simplesamlphp/saml2",
-            "version": "v4.4.0",
+            "version": "v4.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simplesamlphp/saml2.git",
-                "reference": "f3b13417deb45f882f676108c250143f994eb2a4"
+                "reference": "267584be957d5797a6b3e17f5dca9123911b0000"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simplesamlphp/saml2/zipball/f3b13417deb45f882f676108c250143f994eb2a4",
-                "reference": "f3b13417deb45f882f676108c250143f994eb2a4",
+                "url": "https://api.github.com/repos/simplesamlphp/saml2/zipball/267584be957d5797a6b3e17f5dca9123911b0000",
+                "reference": "267584be957d5797a6b3e17f5dca9123911b0000",
                 "shasum": ""
             },
             "require": {
@@ -17835,9 +17935,9 @@
             "description": "SAML2 PHP library from SimpleSAMLphp",
             "support": {
                 "issues": "https://github.com/simplesamlphp/saml2/issues",
-                "source": "https://github.com/simplesamlphp/saml2/tree/v4.4.0"
+                "source": "https://github.com/simplesamlphp/saml2/tree/v4.4.1"
             },
-            "time": "2022-01-20T17:38:13+00:00"
+            "time": "2022-01-26T09:12:55+00:00"
         },
         {
             "name": "simplesamlphp/simplesamlphp",

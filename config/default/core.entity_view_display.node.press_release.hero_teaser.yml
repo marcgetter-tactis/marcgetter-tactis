@@ -4,9 +4,9 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.hero_teaser
-    - field.field.node.press_release.body
     - field.field.node.press_release.field_archived
     - field.field.node.press_release.field_attachment
+    - field.field.node.press_release.field_body
     - field.field.node.press_release.field_component
     - field.field.node.press_release.field_contact
     - field.field.node.press_release.field_date
@@ -19,6 +19,7 @@ dependencies:
     - field.field.node.press_release.field_teaser
     - field.field.node.press_release.field_teaser_image
     - field.field.node.press_release.field_topic
+    - field.field.node.press_release.og_audience
     - node.type.press_release
   module:
     - datetime
@@ -52,9 +53,9 @@ content:
     weight: 0
     region: content
 hidden:
-  body: true
   field_archived: true
   field_attachment: true
+  field_body: true
   field_component: true
   field_contact: true
   field_file_private_force: true
@@ -73,6 +74,7 @@ hidden:
   field_topic: true
   langcode: true
   links: true
+  og_audience: true
   pr_component: true
   pr_invisible: true
   search_api_excerpt: true

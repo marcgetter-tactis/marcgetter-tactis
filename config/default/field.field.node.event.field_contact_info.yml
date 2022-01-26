@@ -1,0 +1,21 @@
+uuid: f1f4eaa7-10a0-4a3a-92ff-7892ba88bb73
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact_info
+    - node.type.event
+  module:
+    - text
+id: node.event.field_contact_info
+field_name: field_contact_info
+entity_type: node
+bundle: event
+label: 'Event Contact Info'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

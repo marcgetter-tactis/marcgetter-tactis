@@ -1,0 +1,27 @@
+uuid: aad69b66-cdb8-4977-a163-ebec1a6b3a39
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_audio
+    - node.type.podcast
+  module:
+    - file
+id: node.podcast.field_audio
+field_name: field_audio
+entity_type: node
+bundle: podcast
+label: 'Audio File'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'wav mp3 aiff aac ogg wma alac flac'
+  max_filesize: '500 MB'
+  description_field: true
+field_type: file

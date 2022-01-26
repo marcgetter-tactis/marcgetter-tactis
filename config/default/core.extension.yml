@@ -21,7 +21,10 @@ module:
   block_class: 0
   block_content: 0
   breakpoint: 0
+  cancel_button: 0
   captcha: 0
+  chosen: 0
+  chosen_lib: 0
   ckeditor: 0
   collapsiblock: 0
   config: 0
@@ -98,6 +101,7 @@ module:
   password_policy_username: 0
   path: 0
   path_alias: 0
+  promote_disable: 0
   purge: 0
   purge_processor_cron: 0
   purge_processor_lateruntime: 0
@@ -130,6 +134,7 @@ module:
   svg_image: 0
   system: 0
   taxonomy: 0
+  taxonomy_import: 0
   telephone: 0
   text: 0
   tmgmt: 0

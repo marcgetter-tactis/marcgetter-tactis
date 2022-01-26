@@ -1,0 +1,19 @@
+uuid: 342a1b8c-bbe3-4bc3-bf41-0025406e4023
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_transcript
+field_name: field_transcript
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

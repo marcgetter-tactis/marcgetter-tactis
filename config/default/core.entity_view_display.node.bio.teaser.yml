@@ -5,6 +5,9 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.bio.body
+    - field.field.node.bio.field_bio_type
+    - field.field.node.bio.field_byline
+    - field.field.node.bio.field_component
     - field.field.node.bio.field_dates_service
     - field.field.node.bio.field_link
     - field.field.node.bio.field_name
@@ -12,7 +15,9 @@ dependencies:
     - field.field.node.bio.field_portrait
     - field.field.node.bio.field_portrait_artist
     - field.field.node.bio.field_portrait_download
+    - field.field.node.bio.field_position
     - field.field.node.bio.field_teaser
+    - field.field.node.bio.og_audience
     - node.type.bio
   module:
     - text
@@ -36,6 +41,9 @@ content:
     weight: 100
     region: content
 hidden:
+  field_bio_type: true
+  field_byline: true
+  field_component: true
   field_dates_service: true
   field_link: true
   field_name: true
@@ -43,6 +51,8 @@ hidden:
   field_portrait: true
   field_portrait_artist: true
   field_portrait_download: true
+  field_position: true
   field_teaser: true
   langcode: true
+  og_audience: true
   search_api_excerpt: true

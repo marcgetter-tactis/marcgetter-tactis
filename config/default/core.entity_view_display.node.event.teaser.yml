@@ -1,0 +1,58 @@
+uuid: c788aca4-102b-4b89-8bbb-0a2b602e2727
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.event.body
+    - field.field.node.event.field_attachment
+    - field.field.node.event.field_audience
+    - field.field.node.event.field_component
+    - field.field.node.event.field_contact_info
+    - field.field.node.event.field_datetime
+    - field.field.node.event.field_event_type
+    - field.field.node.event.field_link
+    - field.field.node.event.field_location
+    - field.field.node.event.field_notes
+    - field.field.node.event.field_press
+    - field.field.node.event.field_registration
+    - field.field.node.event.field_timezone
+    - field.field.node.event.og_audience
+    - node.type.event
+  module:
+    - text
+    - user
+id: node.event.teaser
+targetEntityType: node
+bundle: event
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_attachment: true
+  field_audience: true
+  field_component: true
+  field_contact_info: true
+  field_datetime: true
+  field_event_type: true
+  field_link: true
+  field_location: true
+  field_notes: true
+  field_press: true
+  field_registration: true
+  field_timezone: true
+  langcode: true
+  og_audience: true
+  search_api_excerpt: true

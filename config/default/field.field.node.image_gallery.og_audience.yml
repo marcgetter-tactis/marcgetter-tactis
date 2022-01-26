@@ -1,0 +1,31 @@
+uuid: d867b3c2-5ea0-4993-b649-a3b14e6b5199
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.og_audience
+    - node.type.component_group
+    - node.type.image_gallery
+  module:
+    - og
+id: node.image_gallery.og_audience
+field_name: og_audience
+entity_type: node
+bundle: image_gallery
+label: 'Your Groups'
+description: 'Associate this content with groups you belong to.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      component_group: component_group
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: og_standard_reference

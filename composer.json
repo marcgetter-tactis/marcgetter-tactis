@@ -75,7 +75,8 @@
             "acquia/blt": true,
             "oomphinc/composer-installers-extender": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
-            "acquia/blt-phpcs": true
+            "acquia/blt-phpcs": true,
+            "simplesamlphp/composer-module-installer": true
         }
     },
     "extra": {

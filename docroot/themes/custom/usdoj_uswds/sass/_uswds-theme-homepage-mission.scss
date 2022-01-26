@@ -21,25 +21,8 @@ Mission Block on Homepage
 
 .block-homepage-mission {
   margin: 0 calc(-50vw + 50%);
-  background-color: color(primary-darker);
   padding: 3rem 0;
-
-  &:after {
-    content: "";
-    position: absolute;
-    opacity: 0.05;
-    background-image: url('/themes/custom/usdoj_uswds/images/doj-seal-white-outline.png');
-    background-position: right;
-    background-repeat: no-repeat;
-    width: 100vw;
-    height: 100vh;
-    top: -8rem;
-
-    @media (max-width: 63.99em) {
-      top: 0;
-      background-position: 50vw;
-    }
-  }
+  overflow: hidden;
   
   .field_image {
     float: left;
@@ -90,7 +73,7 @@ Mission Block on Homepage
     a {
       background-color: color(warning);
       color: color(primary-darker);
-      padding: 1rem 1.75rem;
+      padding: 0.5rem 1.25rem;
       border-radius: 2px;
       text-decoration: none;
       font-weight: bold;
@@ -137,5 +120,12 @@ Mission Block on Homepage
         letter-spacing: 1px;
       }
     }
+  }
+
+  .field_background_image {
+    position: absolute;
+    top: -8rem;
+    right: 0;
+    opacity: 0.05;
   }
 }

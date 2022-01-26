@@ -14,6 +14,30 @@ settings:
     -
       value: conference
       label: Conference
+    -
+      value: upcoming_court_case
+      label: 'Upcoming Court Case'
+    -
+      value: workshop
+      label: Workshop
+    -
+      value: speech
+      label: Speech
+    -
+      value: training
+      label: Training
+    -
+      value: seminar
+      label: Seminar
+    -
+      value: webinar
+      label: Webinar
+    -
+      value: external_event
+      label: 'External event'
+    -
+      value: internal_event
+      label: 'Internal event'
   allowed_values_function: ''
 module: options
 locked: false

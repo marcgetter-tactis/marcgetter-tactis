@@ -14,7 +14,7 @@ entity_type: node
 bundle: blog_post
 label: 'Your Groups'
 description: 'Associate this content with groups you belong to.'
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''

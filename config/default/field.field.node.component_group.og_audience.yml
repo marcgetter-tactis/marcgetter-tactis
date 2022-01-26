@@ -11,9 +11,9 @@ id: node.component_group.og_audience
 field_name: og_audience
 entity_type: node
 bundle: component_group
-label: 'Component Group'
-description: 'OG group audience reference field.'
-required: true
+label: 'Your Groups'
+description: 'Associate this content with groups you belong to.'
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''

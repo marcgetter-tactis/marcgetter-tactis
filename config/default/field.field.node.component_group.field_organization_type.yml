@@ -1,14 +1,14 @@
-uuid: c33670e7-f29c-4686-bad8-f5485952694f
+uuid: 3a715a4f-aec0-4015-9a80-fddae2398014
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_type
+    - field.storage.node.field_organization_type
     - node.type.component_group
   module:
     - options
-id: node.component_group.field_type
-field_name: field_type
+id: node.component_group.field_organization_type
+field_name: field_organization_type
 entity_type: node
 bundle: component_group
 label: 'Organization Type'

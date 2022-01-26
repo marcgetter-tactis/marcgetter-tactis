@@ -12,11 +12,14 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: type1
-      label: Type1
+      value: Full
+      label: Full
     -
-      value: type2
-      label: Type2
+      value: Trailer
+      label: Trailer
+    -
+      value: Bonus
+      label: Bonus
   allowed_values_function: ''
 module: options
 locked: false

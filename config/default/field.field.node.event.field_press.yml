@@ -1,0 +1,21 @@
+uuid: 46bad1e0-9bae-403e-aa31-14b704559633
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_press
+    - node.type.event
+  module:
+    - text
+id: node.event.field_press
+field_name: field_press
+entity_type: node
+bundle: event
+label: 'Press Information'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

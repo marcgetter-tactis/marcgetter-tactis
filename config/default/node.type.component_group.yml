@@ -23,7 +23,7 @@ third_party_settings:
     unpublish_enable: false
     unpublish_required: false
     unpublish_revision: false
-name: 'Component Group'
+name: Organization
 type: component_group
 description: 'Components, topics, and other site sections currently use the Organization content type for it’s home page content. These pages have associated Organic Groups assigned to control user permission.'
 help: ''

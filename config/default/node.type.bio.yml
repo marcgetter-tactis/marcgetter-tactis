@@ -25,7 +25,7 @@ third_party_settings:
     unpublish_revision: false
 name: Bio
 type: bio
-description: ''
+description: "This content type replaces both the Staff Profile and the Historical Biography content types.<br />\r\n<br />\r\n<b>Staff Profile:</b><br />\r\nStaff profiles are used to highlight organization staff in key roles. This content type includes a field that can be used to populate the Organization page with brief information about the staff. Other fields include byline, which will appear on blogs and name, which will appear on speeches. If these fields are used the Staff Profile will be associated with the individual’s speeches and blogs.<br />\r\n<br />\r\n<b>Legacy (Historical) Biography:</b><br />\r\nThis content type was created specifically to display the biographies and portraits of the Attorneys General and Solicitor Generals: https://www.justice.gov/ag/historical-bios and https://www.justice.gov/osg/historical-bios."
 help: ''
 new_revision: true
 preview_mode: 1

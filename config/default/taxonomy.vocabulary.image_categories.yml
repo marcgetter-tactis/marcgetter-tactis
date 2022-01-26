@@ -1,0 +1,8 @@
+uuid: ddacb562-a8e2-460c-a035-13027d97622b
+langcode: en
+status: true
+dependencies: {  }
+name: 'Image Categories'
+vid: image_categories
+description: ''
+weight: 0

@@ -778,6 +778,13 @@ if (file_exists(__DIR__ . '/settings.ddev.php') && getenv('IS_DDEV_PROJECT') == 
 }
 
 /**
+ * Load local development override configuration, if available.
+ */
+if (file_exists(__DIR__ . '/settings/local.settings.php')) {
+  include __DIR__ . '/settings/local.settings.php';
+}
+
+/**
  * IMPORTANT.
  *
  * Do not include additional settings here. Instead, add them to settings

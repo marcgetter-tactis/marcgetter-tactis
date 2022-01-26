@@ -3,9 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.press_release.body
     - field.field.node.press_release.field_archived
     - field.field.node.press_release.field_attachment
+    - field.field.node.press_release.field_body
     - field.field.node.press_release.field_component
     - field.field.node.press_release.field_contact
     - field.field.node.press_release.field_date
@@ -18,6 +18,7 @@ dependencies:
     - field.field.node.press_release.field_teaser
     - field.field.node.press_release.field_teaser_image
     - field.field.node.press_release.field_topic
+    - field.field.node.press_release.og_audience
     - node.type.press_release
   module:
     - datetime
@@ -30,57 +31,57 @@ targetEntityType: node
 bundle: press_release
 mode: default
 content:
-  body:
+  field_attachment:
+    type: file_default
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_body:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 101
-    region: content
-  field_attachment:
-    type: file_default
-    label: above
-    settings:
-      use_description_as_link_text: true
-    third_party_settings: {  }
-    weight: 110
+    weight: 3
     region: content
   field_component:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
-    weight: 112
+    weight: 10
     region: content
   field_contact:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 108
+    weight: 6
     region: content
   field_date:
     type: datetime_default
-    label: above
+    label: hidden
     settings:
       timezone_override: ''
       format_type: medium
     third_party_settings: {  }
-    weight: 105
+    weight: 2
     region: content
   field_feature_image:
     type: entity_reference_entity_view
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
-    weight: 115
+    weight: 13
     region: content
   field_image:
     type: image
-    label: above
+    label: hidden
     settings:
       image_link: ''
       image_style: ''
@@ -89,42 +90,42 @@ content:
         height: null
       svg_render_as_image: true
     third_party_settings: {  }
-    weight: 109
+    weight: 7
     region: content
   field_invisible:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
-    weight: 113
+    weight: 11
     region: content
   field_number:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 114
+    weight: 12
     region: content
   field_subtitle:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 102
+    weight: 1
     region: content
   field_teaser:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 106
+    weight: 4
     region: content
   field_teaser_image:
     type: image
-    label: above
+    label: hidden
     settings:
       image_link: ''
       image_style: ''
@@ -133,20 +134,28 @@ content:
         height: null
       svg_render_as_image: true
     third_party_settings: {  }
-    weight: 107
+    weight: 5
     region: content
   field_topic:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
-    weight: 111
+    weight: 9
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 0
+    region: content
+  og_audience:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 14
     region: content
 hidden:
   field_archived: true

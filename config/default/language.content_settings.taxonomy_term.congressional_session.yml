@@ -1,0 +1,11 @@
+uuid: 0570f5bb-81ab-46d2-a9fb-74167be2d78b
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.congressional_session
+id: taxonomy_term.congressional_session
+target_entity_type_id: taxonomy_term
+target_bundle: congressional_session
+default_langcode: site_default
+language_alterable: false

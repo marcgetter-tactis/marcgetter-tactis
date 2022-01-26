@@ -1,0 +1,19 @@
+uuid: 4fc59ba3-5f96-476d-b4e9-2e63a29eb156
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_position
+    - node.type.bio
+id: node.bio.field_position
+field_name: field_position
+entity_type: node
+bundle: bio
+label: Position
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

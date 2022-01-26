@@ -149,7 +149,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 101
+    weight: 115
     region: content
 hidden:
   langcode: true

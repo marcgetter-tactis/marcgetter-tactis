@@ -138,7 +138,7 @@ content:
     third_party_settings: {  }
   og_audience:
     type: og_complex
-    weight: 1
+    weight: 27
     region: content
     settings:
       match_operator: CONTAINS

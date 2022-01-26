@@ -1,0 +1,27 @@
+uuid: 4f3e60c7-3c7e-4d5f-9a17-38168d53be5b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_bio_type
+field_name: field_bio_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: staff
+      label: Staff
+    -
+      value: legacy
+      label: Legacy
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

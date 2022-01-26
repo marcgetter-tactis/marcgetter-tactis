@@ -1,0 +1,78 @@
+uuid: d385454b-bace-4ce4-9d23-f4658e88c6a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.image_gallery.field_body
+    - field.field.node.image_gallery.field_component
+    - field.field.node.image_gallery.field_date
+    - field.field.node.image_gallery.field_photo
+    - field.field.node.image_gallery.field_related
+    - field.field.node.image_gallery.og_audience
+    - node.type.image_gallery
+  module:
+    - datetime
+    - svg_image
+    - text
+    - user
+id: node.image_gallery.default
+targetEntityType: node
+bundle: image_gallery
+mode: default
+content:
+  field_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_component:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_date:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_photo:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_related:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  og_audience:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+hidden:
+  langcode: true
+  links: true
+  search_api_excerpt: true

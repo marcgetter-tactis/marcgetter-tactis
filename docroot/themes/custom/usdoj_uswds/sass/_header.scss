@@ -3,11 +3,11 @@ header.usa-header--extended {
   .usa-navbar {
     background-color: color(primary-darker);
     max-width: 100%;
-    display: block;
+    min-height: 7.75rem;
 
     //logo
     .usa-logo {
-      margin: 1rem 0;
+      margin: 1.25rem 0;
       line-height: 0;
       max-width: 275px;
     }
@@ -16,17 +16,18 @@ header.usa-header--extended {
     nav ul {
       list-style: none;
       padding: 0;
-      margin: 2rem 0 .5rem;
+      margin: 1.5rem 0 .5rem;
       float: right;
       
       li {
-        display: inline;
+        display: inline-block;
+        line-height: .75rem;
         
         &:nth-child(2) {
-          border-left: .5px solid white;
-          border-right: .5px solid white;
+          border-left: .5px solid $gray-cool-50;
+          border-right: .5px solid $gray-cool-50;
           margin: 0 .5rem;
-          padding: 0 .5rem;
+          padding: 0 .75rem;
         }
         
         a {
@@ -34,6 +35,11 @@ header.usa-header--extended {
           text-decoration: none;
           font-size: .8rem;
           letter-spacing: ls(1);
+
+          &:hover {
+            color: color(warning);
+            text-decoration: underline;
+          }
         }
       }
     }
@@ -50,7 +56,7 @@ header.usa-header--extended {
   //desktop main menu
   nav.usa-nav {
     background-color: color(base-darkest);
-    border-top: 2px solid color(warning);
+    border-top: 3px solid color(warning);
     
     ul li {
       &:hover {
@@ -60,6 +66,7 @@ header.usa-header--extended {
       a.usa-nav__link {
         color: white;
         padding: 1.5rem;
+        font-size: .94rem;
         &:hover {
           color: color(base-darkest);
           &:after {

@@ -18,7 +18,7 @@ third_party_settings:
 id: footeraddress
 theme: usdoj_uswds
 region: footer
-weight: -7
+weight: -4
 provider: null
 plugin: 'block_content:1b39c993-9567-4158-9ff7-2a5c79235e51'
 settings:

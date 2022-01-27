@@ -62,9 +62,12 @@ ul {
       list-style: none;
       margin-right: 1.5rem;
     }
-    img.usa-search__submit-icon {
-      width: auto;
-      height: auto;
+
+    img {
+      &.usa-search__submit-icon {
+        width: auto;
+        height: auto;
+      }
     }
   }
 
@@ -75,6 +78,7 @@ ul {
 
     li {
       margin-bottom: 1.5rem;
+      line-height: 1;
 
       @include at-media(desktop) {
         &:last-of-type {
@@ -123,8 +127,12 @@ strong {
     text-decoration: none;
     color: white;
     margin: 0 auto;
-    bottom: 1rem;
+    bottom: 0;
     position: relative;
+
+    &:hover {
+      color: white !important;
+    }
   }
 
   img {

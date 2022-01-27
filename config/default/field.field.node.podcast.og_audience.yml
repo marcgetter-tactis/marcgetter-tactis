@@ -23,6 +23,7 @@ settings:
   handler_settings:
     target_bundles:
       component_group: component_group
+      podcast: podcast
     sort:
       field: _none
       direction: ASC

@@ -23,6 +23,7 @@ settings:
   handler_settings:
     target_bundles:
       component_group: component_group
+      blog_post: blog_post
     sort:
       field: _none
       direction: ASC

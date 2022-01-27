@@ -115,7 +115,14 @@ datasource_settings:
     bundles:
       default: false
       selected:
+        - bio
+        - blog_post
         - component_group
+        - event
+        - image_gallery
+        - landing_page
+        - page
+        - podcast
         - press_release
         - speech
     languages:

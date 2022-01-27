@@ -41,7 +41,7 @@ third_party_settings:
         show_empty_fields: false
         id: ''
         description: ''
-        required_fields: true
+        required_fields: false
 id: node.blog_post.default
 targetEntityType: node
 bundle: blog_post
@@ -87,7 +87,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_component:
-    type: options_select
+    type: options_buttons
     weight: 3
     region: content
     settings: {  }

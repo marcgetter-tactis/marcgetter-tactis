@@ -19,7 +19,6 @@ dependencies:
     - field.field.node.press_release.field_teaser_image
     - field.field.node.press_release.field_topic
     - field.field.node.press_release.og_audience
-    - image.style.thumbnail
     - node.type.press_release
   module:
     - datetime
@@ -30,7 +29,6 @@ dependencies:
     - path
     - scheduler
     - scheduler_content_moderation_integration
-    - svg_image
     - text
 third_party_settings:
   field_group:
@@ -102,12 +100,14 @@ content:
       media_types: {  }
     third_party_settings: {  }
   field_image:
-    type: image_image
-    weight: 21
+    type: entity_reference_autocomplete
+    weight: 28
     region: content
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_invisible:
     type: options_select
@@ -140,12 +140,11 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_teaser_image:
-    type: image_image
-    weight: 19
+    type: media_library_widget
+    weight: 29
     region: content
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      media_types: {  }
     third_party_settings: {  }
   field_topic:
     type: options_select

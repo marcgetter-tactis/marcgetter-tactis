@@ -23,7 +23,6 @@ dependencies:
   module:
     - datetime
     - file
-    - svg_image
     - text
     - user
 id: node.press_release.default
@@ -80,17 +79,12 @@ content:
     weight: 13
     region: content
   field_image:
-    type: image
+    type: entity_reference_label
     label: hidden
     settings:
-      image_link: ''
-      image_style: ''
-      svg_attributes:
-        width: null
-        height: null
-      svg_render_as_image: true
+      link: true
     third_party_settings: {  }
-    weight: 7
+    weight: 15
     region: content
   field_invisible:
     type: entity_reference_label
@@ -124,17 +118,13 @@ content:
     weight: 4
     region: content
   field_teaser_image:
-    type: image
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      image_link: ''
-      image_style: ''
-      svg_attributes:
-        width: null
-        height: null
-      svg_render_as_image: true
+      view_mode: default
+      link: false
     third_party_settings: {  }
-    weight: 5
+    weight: 16
     region: content
   field_topic:
     type: entity_reference_label

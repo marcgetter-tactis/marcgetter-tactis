@@ -16,12 +16,10 @@ dependencies:
     - field.field.node.blog_post.field_teaser_image
     - field.field.node.blog_post.field_topic
     - field.field.node.blog_post.og_audience
-    - image.style.medium
     - node.type.blog_post
   module:
     - datetime
     - file
-    - svg_image
     - text
     - user
 id: node.blog_post.default
@@ -35,14 +33,14 @@ content:
     settings:
       use_description_as_link_text: true
     third_party_settings: {  }
-    weight: 114
+    weight: 13
     region: content
   field_author:
     type: author
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 105
+    weight: 4
     region: content
   field_author_free:
     type: string
@@ -50,14 +48,14 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 106
+    weight: 5
     region: content
   field_body:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 110
+    weight: 9
     region: content
   field_component:
     type: entity_reference_label
@@ -65,7 +63,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 104
+    weight: 3
     region: content
   field_date:
     type: datetime_default
@@ -74,20 +72,16 @@ content:
       timezone_override: ''
       format_type: standard_date_format
     third_party_settings: {  }
-    weight: 103
+    weight: 2
     region: content
   field_image:
-    type: image
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      image_link: ''
-      image_style: ''
-      svg_attributes:
-        width: null
-        height: null
-      svg_render_as_image: true
+      view_mode: default
+      link: true
     third_party_settings: {  }
-    weight: 113
+    weight: 12
     region: content
   field_invisible:
     type: entity_reference_label
@@ -95,40 +89,32 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 112
+    weight: 11
     region: content
   field_social_image:
-    type: image
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      image_link: ''
-      image_style: ''
-      svg_attributes:
-        width: null
-        height: null
-      svg_render_as_image: true
+      view_mode: default
+      link: false
     third_party_settings: {  }
-    weight: 109
+    weight: 8
     region: content
   field_teaser:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 107
+    weight: 6
     region: content
   field_teaser_image:
-    type: image
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      image_link: content
-      image_style: medium
-      svg_attributes:
-        width: null
-        height: null
-      svg_render_as_image: true
+      view_mode: default
+      link: true
     third_party_settings: {  }
-    weight: 108
+    weight: 7
     region: content
   field_topic:
     type: entity_reference_label
@@ -136,20 +122,19 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 111
+    weight: 10
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 0
     region: content
   og_audience:
-    type: entity_reference_label
+    type: entity_reference_entity_id
     label: hidden
-    settings:
-      link: true
+    settings: {  }
     third_party_settings: {  }
-    weight: 115
+    weight: 14
     region: content
 hidden:
   langcode: true

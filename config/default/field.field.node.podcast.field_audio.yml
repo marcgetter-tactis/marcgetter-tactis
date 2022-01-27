@@ -1,12 +1,12 @@
-uuid: aad69b66-cdb8-4977-a163-ebec1a6b3a39
+uuid: a5dcab80-e425-468f-935d-935a819e2f1b
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_audio
+    - media.type.document
+    - media.type.video
     - node.type.podcast
-  module:
-    - file
 id: node.podcast.field_audio
 field_name: field_audio
 entity_type: node
@@ -18,10 +18,14 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:file'
-  handler_settings: {  }
-  file_directory: '[date:custom:Y]-[date:custom:m]'
-  file_extensions: 'wav mp3 aiff aac ogg wma alac flac'
-  max_filesize: '500 MB'
-  description_field: true
-field_type: file
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      document: document
+      video: video
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: document
+field_type: entity_reference

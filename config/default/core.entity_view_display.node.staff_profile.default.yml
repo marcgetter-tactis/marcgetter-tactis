@@ -1,0 +1,117 @@
+uuid: 2ba56fa6-7757-4f4c-a61a-58b87c2aa490
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.staff_profile.field_archived
+    - field.field.node.staff_profile.field_body
+    - field.field.node.staff_profile.field_byline
+    - field.field.node.staff_profile.field_component
+    - field.field.node.staff_profile.field_dates_service
+    - field.field.node.staff_profile.field_name
+    - field.field.node.staff_profile.field_portrait
+    - field.field.node.staff_profile.field_portrait_download
+    - field.field.node.staff_profile.field_position
+    - field.field.node.staff_profile.field_teaser
+    - field.field.node.staff_profile.og_audience
+    - node.type.staff_profile
+  module:
+    - datetime_range
+    - text
+    - user
+id: node.staff_profile.default
+targetEntityType: node
+bundle: staff_profile
+mode: default
+content:
+  field_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_byline:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_component:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_dates_service:
+    type: daterange_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: medium
+      separator: '-'
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_portrait:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_portrait_download:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_position:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_teaser:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  og_audience:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 9
+    region: content
+hidden:
+  field_archived: true
+  langcode: true
+  search_api_excerpt: true

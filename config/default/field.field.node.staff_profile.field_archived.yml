@@ -1,0 +1,23 @@
+uuid: 5a9506d2-d47e-4695-b7b5-4b9e8cbb4d3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_archived
+    - node.type.staff_profile
+id: node.staff_profile.field_archived
+field_name: field_archived
+entity_type: node
+bundle: staff_profile
+label: Archived
+description: 'When content is archived, it will still be publicly accessible. However, it will be removed from all views and its path will be prepended with "/archives".'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,14 +1,14 @@
-uuid: 96729dd5-ec27-496f-a195-10778c1314b9
+uuid: 8192bfff-2b23-49f7-a182-d5bbfdf7b4fa
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_byline
-    - node.type.bio
-id: node.bio.field_byline
+    - node.type.staff_profile
+id: node.staff_profile.field_byline
 field_name: field_byline
 entity_type: node
-bundle: bio
+bundle: staff_profile
 label: Byline
 description: ''
 required: false

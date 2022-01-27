@@ -1,24 +1,26 @@
-uuid: 3258bdcf-4d05-43fe-948f-ab5137aaceda
+uuid: 4c3a45a9-c04c-4f63-8366-497b3f46ad94
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_speaker
-    - node.type.speech
-id: node.speech.field_speaker
-field_name: field_speaker
+    - field.storage.node.field_portrait
+    - media.type.image
+    - node.type.staff_profile
+id: node.staff_profile.field_portrait
+field_name: field_portrait
 entity_type: node
-bundle: speech
-label: Speaker
+bundle: staff_profile
+label: Portrait
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:node'
+  handler: 'default:media'
   handler_settings:
-    target_bundles: {  }
+    target_bundles:
+      image: image
     sort:
       field: _none
       direction: ASC

@@ -1,27 +1,17 @@
-uuid: a523881e-52b2-4e28-b0a5-ab5b5edde6b9
+uuid: 294dac2c-0a5d-4505-8b45-615a379b4218
 langcode: en
 status: true
 dependencies:
   module:
-    - file
-    - image
+    - media
     - node
 id: node.field_portrait_download
 field_name: field_portrait_download
 entity_type: node
-type: image
+type: entity_reference
 settings:
-  target_type: file
-  display_field: false
-  display_default: false
-  uri_scheme: public
-  default_image:
-    uuid: ''
-    alt: ''
-    title: ''
-    width: null
-    height: null
-module: image
+  target_type: media
+module: core
 locked: false
 cardinality: 1
 translatable: true

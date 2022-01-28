@@ -147,6 +147,13 @@ content:
     third_party_settings: {  }
     weight: 101
     region: content
+  og_group:
+    type: og_group_subscribe
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   field_attachment: true
   langcode: true

@@ -3,30 +3,37 @@ header.usa-header--extended {
   .usa-navbar {
     background-color: color(primary-darker);
     max-width: 100%;
-    display: block;
+    min-height: 5rem;
+    @media (min-width: 64em) {
+      height: 7.75rem;
+    }
 
     //logo
     .usa-logo {
-      margin: 1rem 0;
+      margin: .75rem 0 0 0;
       line-height: 0;
       max-width: 275px;
+      @media (min-width: 64em) {
+        margin: 0;
+      }
     }
 
     //utilities menu
     nav ul {
       list-style: none;
       padding: 0;
-      margin: 2rem 0 .5rem;
+      margin: 1.5rem 0 .5rem;
       float: right;
       
       li {
-        display: inline;
-        
-        &:nth-child(2) {
-          border-left: .5px solid white;
-          border-right: .5px solid white;
-          margin: 0 .5rem;
-          padding: 0 .5rem;
+        display: inline-block;
+        line-height: .75rem;
+        border-right: .5px solid $gray-cool-50;
+        padding-right: .75rem;
+        margin-right: .5rem;
+
+        &.last {
+          border-right: none;
         }
         
         a {
@@ -34,6 +41,11 @@ header.usa-header--extended {
           text-decoration: none;
           font-size: .8rem;
           letter-spacing: ls(1);
+
+          &:hover {
+            color: color(warning);
+            text-decoration: underline;
+          }
         }
       }
     }
@@ -50,7 +62,7 @@ header.usa-header--extended {
   //desktop main menu
   nav.usa-nav {
     background-color: color(base-darkest);
-    border-top: 2px solid color(warning);
+    border-top: 3px solid color(warning);
     
     ul li {
       &:hover {
@@ -60,6 +72,7 @@ header.usa-header--extended {
       a.usa-nav__link {
         color: white;
         padding: 1.5rem;
+        font-size: .94rem;
         &:hover {
           color: color(base-darkest);
           &:after {
@@ -80,7 +93,7 @@ header.usa-header--extended {
       display: block;
       width: 2rem;
       height: 1.5rem;
-      bottom: 4.5rem;
+      bottom: 3.25rem;
     }
 
     #mobile-btn:checked {
@@ -91,16 +104,33 @@ header.usa-header--extended {
           display: block;
           width: 100vw;
           height: 100vh;
-          top: 5rem;
+          top: 3rem;
           
           ul {
-            li:first-of-type {
-              border-top: 0;
+            li {
+              border-color: color(gray-50);
+              &:first-of-type {
+                border-top: 0;
+              }
             }
-            
             a {
               color: white;
               padding: 1rem;
+              font-weight: bold;
+            }
+          }
+        }
+
+        //mobile utilities menu
+        .mobile-util {
+          ul.nav {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            li a {
+              display: block;
+              text-decoration: none;
+              font-weight: normal;
             }
           }
         }
@@ -110,7 +140,7 @@ header.usa-header--extended {
     //mobile search
     form.usa-search--mobile {
       background-color: color(primary-darker);
-      bottom: 1.75rem;
+      bottom: 1.6rem;
       justify-content: center;
       @include search-field;
     }

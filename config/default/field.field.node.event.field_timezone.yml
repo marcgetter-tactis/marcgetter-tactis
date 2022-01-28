@@ -10,8 +10,8 @@ field_name: field_timezone
 entity_type: node
 bundle: event
 label: Timezone
-description: ''
-required: false
+description: 'The text entered here should inform the public of the timezone of the event.'
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

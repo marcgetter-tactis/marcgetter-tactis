@@ -115,7 +115,6 @@ datasource_settings:
     bundles:
       default: false
       selected:
-        - bio
         - blog_post
         - component_group
         - event
@@ -125,6 +124,7 @@ datasource_settings:
         - podcast
         - press_release
         - speech
+        - staff_profile
     languages:
       default: true
       selected: {  }

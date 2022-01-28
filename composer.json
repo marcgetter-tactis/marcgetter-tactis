@@ -48,6 +48,7 @@
         "drupal/reroute_email": "^2",
         "drupal/samlauth": "^3.3",
         "drupal/scheduled_publish": "^3.9",
+        "drupal/search_api_attachments": "^9.0",
         "drupal/simplesamlphp_auth": "^3.2",
         "drupal/sitewide_alert": "^1.6",
         "drupal/slick": "^2.4",

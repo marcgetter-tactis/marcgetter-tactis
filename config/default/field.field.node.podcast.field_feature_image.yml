@@ -1,21 +1,19 @@
-uuid: de385571-ed65-4a91-8869-df15467f7b18
+uuid: 192108c4-7423-4f46-8b88-8ea76c4dffff
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_feature_image
     - media.type.image
-    - media.type.remote_video
-    - media.type.video
-    - node.type.press_release
-id: node.press_release.field_feature_image
+    - node.type.podcast
+id: node.podcast.field_feature_image
 field_name: field_feature_image
 entity_type: node
-bundle: press_release
+bundle: podcast
 label: Banner
 description: 'This image will be displayed in the Hero block on the homepage.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
@@ -23,11 +21,9 @@ settings:
   handler_settings:
     target_bundles:
       image: image
-      remote_video: remote_video
-      video: video
     sort:
       field: _none
       direction: ASC
     auto_create: false
-    auto_create_bundle: image
+    auto_create_bundle: ''
 field_type: entity_reference

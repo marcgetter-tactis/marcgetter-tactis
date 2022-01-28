@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.image_gallery.field_archived
     - field.field.node.image_gallery.field_body
     - field.field.node.image_gallery.field_component
     - field.field.node.image_gallery.field_date
@@ -12,6 +13,7 @@ dependencies:
     - field.field.node.image_gallery.og_audience
     - node.type.image_gallery
   module:
+    - og
     - user
 id: node.image_gallery.teaser
 targetEntityType: node
@@ -23,7 +25,15 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
+  og_group:
+    type: og_group_subscribe
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
+  field_archived: true
   field_body: true
   field_component: true
   field_date: true

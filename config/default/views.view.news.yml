@@ -328,7 +328,7 @@ display:
             offset: false
             offset_label: Offset
       exposed_form:
-        type: input_required
+        type: basic
         options:
           submit_button: 'Apply Filters'
           reset_button: true
@@ -337,8 +337,6 @@ display:
           expose_sort_order: false
           sort_asc_label: Asc
           sort_desc_label: Desc
-          text_input_required: 'Select any filter and click on Apply to see results'
-          text_input_required_format: filtered_html
       access:
         type: none
         options: {  }
@@ -585,8 +583,8 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: search_api_fulltext
-          operator: or
-          value: ''
+          operator: and
+          value: ' '
           group: 1
           exposed: true
           expose:
@@ -627,7 +625,7 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           parse_mode: terms
-          min_length: null
+          min_length: 2
           fields:
             - field_body
             - rendered_item

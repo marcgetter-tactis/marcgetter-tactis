@@ -1,18 +1,18 @@
-uuid: 5cbf9c9d-cbe2-4760-ba7b-ba868ab50968
+uuid: 9293a3d1-6ee8-40da-b966-5dd4526d45dc
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_component
-    - node.type.bio
+    - node.type.staff_profile
     - taxonomy.vocabulary.component
-id: node.bio.field_component
+id: node.staff_profile.field_component
 field_name: field_component
 entity_type: node
-bundle: bio
+bundle: staff_profile
 label: Component(s)
 description: ''
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''

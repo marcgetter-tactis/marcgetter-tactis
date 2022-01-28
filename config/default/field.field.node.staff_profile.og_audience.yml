@@ -1,31 +1,26 @@
-uuid: 1994d2d3-d75f-4651-a625-19cf09ea7f37
+uuid: 045c9777-b892-4546-8773-cc0223c91552
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.og_audience
-    - node.type.bio
     - node.type.component_group
+    - node.type.staff_profile
   module:
     - og
-id: node.bio.og_audience
+id: node.staff_profile.og_audience
 field_name: og_audience
 entity_type: node
-bundle: bio
-label: 'Your Groups'
-description: 'Associate this content with groups you belong to.'
+bundle: staff_profile
+label: 'Groups audience'
+description: 'OG group audience reference field.'
 required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:node'
+  handler: 'og:default'
   handler_settings:
     target_bundles:
       component_group: component_group
-    sort:
-      field: _none
-      direction: ASC
-    auto_create: false
-    auto_create_bundle: ''
 field_type: og_standard_reference

@@ -17,12 +17,10 @@ dependencies:
     - field.field.node.blog_post.field_teaser_image
     - field.field.node.blog_post.field_topic
     - field.field.node.blog_post.og_audience
-    - image.style.coh_large_landscape
     - node.type.blog_post
   module:
     - datetime
     - layout_builder
-    - svg_image
     - text
     - user
 third_party_settings:
@@ -43,19 +41,6 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
-  field_image:
-    type: image
-    label: hidden
-    settings:
-      image_link: ''
-      image_style: coh_large_landscape
-      svg_attributes:
-        width: null
-        height: null
-      svg_render_as_image: true
-    third_party_settings: {  }
-    weight: 0
-    region: content
   field_teaser:
     type: text_default
     label: hidden
@@ -69,6 +54,7 @@ hidden:
   field_author_free: true
   field_body: true
   field_component: true
+  field_image: true
   field_invisible: true
   field_social_image: true
   field_teaser_image: true

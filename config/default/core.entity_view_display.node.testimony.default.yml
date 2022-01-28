@@ -1,0 +1,87 @@
+uuid: 0003a392-b17f-4b31-8811-331a057a8996
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.testimony.field_committee
+    - field.field.node.testimony.field_date
+    - field.field.node.testimony.field_session
+    - field.field.node.testimony.field_subject
+    - field.field.node.testimony.field_witness
+    - field.field.node.testimony.og_audience
+    - node.type.testimony
+  module:
+    - datetime
+    - entity_reference_revisions
+    - og
+    - user
+id: node.testimony.default
+targetEntityType: node
+bundle: testimony
+mode: default
+content:
+  field_committee:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_date:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: standard_date_format
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_session:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_subject:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_witness:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  og_audience:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  og_group:
+    type: og_group_subscribe
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

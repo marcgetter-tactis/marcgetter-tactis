@@ -1,0 +1,11 @@
+uuid: 2087823b-983d-4816-b15e-c5ea1114ce2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.testimony
+id: node.testimony
+target_entity_type_id: node
+target_bundle: testimony
+default_langcode: site_default
+language_alterable: false

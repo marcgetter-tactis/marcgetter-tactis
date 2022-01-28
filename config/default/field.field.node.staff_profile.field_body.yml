@@ -20,6 +20,5 @@ default_value:
     value: ''
     format: filtered_html
 default_value_callback: ''
-settings:
-  allowed_formats: {  }
+settings: {  }
 field_type: text_long

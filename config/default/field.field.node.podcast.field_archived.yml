@@ -1,0 +1,23 @@
+uuid: 4ad9249b-396b-4e88-9bd7-9c95110e6cc0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_archived
+    - node.type.podcast
+id: node.podcast.field_archived
+field_name: field_archived
+entity_type: node
+bundle: podcast
+label: Archived
+description: 'When content is archived, it will still be publicly accessible. However, it will be removed from all views and its path will be prepended with "/archives".'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

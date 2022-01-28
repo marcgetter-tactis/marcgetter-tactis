@@ -3,12 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.blog_post.field_archived
     - field.field.node.blog_post.field_attachment
     - field.field.node.blog_post.field_author
     - field.field.node.blog_post.field_author_free
     - field.field.node.blog_post.field_body
     - field.field.node.blog_post.field_component
     - field.field.node.blog_post.field_date
+    - field.field.node.blog_post.field_file_private_force
     - field.field.node.blog_post.field_image
     - field.field.node.blog_post.field_invisible
     - field.field.node.blog_post.field_social_image
@@ -19,6 +21,8 @@ dependencies:
     - node.type.blog_post
   module:
     - datetime
+    - og
+    - options
     - text
     - user
 id: node.blog_post.default
@@ -26,6 +30,16 @@ targetEntityType: node
 bundle: blog_post
 mode: default
 content:
+  field_archived:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 15
+    region: content
   field_attachment:
     type: entity_reference_entity_view
     label: hidden
@@ -36,11 +50,12 @@ content:
     weight: 12
     region: content
   field_author:
-    type: author
+    type: entity_reference_label
     label: hidden
-    settings: {  }
+    settings:
+      link: true
     third_party_settings: {  }
-    weight: 3
+    weight: 14
     region: content
   field_author_free:
     type: string
@@ -73,6 +88,13 @@ content:
       format_type: standard_date_format
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_file_private_force:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 16
     region: content
   field_image:
     type: entity_reference_entity_view

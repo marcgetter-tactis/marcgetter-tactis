@@ -12,7 +12,7 @@ entity_type: node
 bundle: image_gallery
 label: Component
 description: ''
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
@@ -20,7 +20,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      categories: component
+      component: component
     sort:
       field: name
       direction: asc

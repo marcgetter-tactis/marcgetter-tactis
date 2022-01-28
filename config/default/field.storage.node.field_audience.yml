@@ -12,11 +12,17 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: audience1
-      label: Audience1
+      value: press
+      label: Press
     -
-      value: audience2
-      label: Audience2
+      value: public
+      label: Public
+    -
+      value: private
+      label: Private
+    -
+      value: government_agency_personnel
+      label: 'Government Agency Personnel'
   allowed_values_function: ''
 module: options
 locked: false

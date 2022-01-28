@@ -11,7 +11,7 @@ field_name: field_feature_image
 entity_type: node
 bundle: speech
 label: Banner
-description: ''
+description: 'This image will be displayed in the Hero block on the homepage.'
 required: false
 translatable: true
 default_value: {  }

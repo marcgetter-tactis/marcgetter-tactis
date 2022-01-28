@@ -4,12 +4,14 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.blog_post.field_archived
     - field.field.node.blog_post.field_attachment
     - field.field.node.blog_post.field_author
     - field.field.node.blog_post.field_author_free
     - field.field.node.blog_post.field_body
     - field.field.node.blog_post.field_component
     - field.field.node.blog_post.field_date
+    - field.field.node.blog_post.field_file_private_force
     - field.field.node.blog_post.field_image
     - field.field.node.blog_post.field_invisible
     - field.field.node.blog_post.field_social_image
@@ -19,6 +21,7 @@ dependencies:
     - field.field.node.blog_post.og_audience
     - node.type.blog_post
   module:
+    - og
     - text
     - user
 id: node.blog_post.teaser
@@ -46,12 +49,14 @@ content:
     weight: 0
     region: content
 hidden:
+  field_archived: true
   field_attachment: true
   field_author: true
   field_author_free: true
   field_body: true
   field_component: true
   field_date: true
+  field_file_private_force: true
   field_image: true
   field_invisible: true
   field_social_image: true

@@ -3,12 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.blog_post.field_archived
     - field.field.node.blog_post.field_attachment
     - field.field.node.blog_post.field_author
     - field.field.node.blog_post.field_author_free
     - field.field.node.blog_post.field_body
     - field.field.node.blog_post.field_component
     - field.field.node.blog_post.field_date
+    - field.field.node.blog_post.field_file_private_force
     - field.field.node.blog_post.field_image
     - field.field.node.blog_post.field_invisible
     - field.field.node.blog_post.field_social_image
@@ -52,6 +54,13 @@ content:
     weight: 16
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_archived:
+    type: boolean_checkbox
+    weight: 27
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   field_attachment:
     type: media_library_widget
@@ -98,6 +107,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_file_private_force:
+    type: options_select
+    weight: 26
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_image:
     type: media_library_widget
     weight: 12
@@ -113,7 +128,7 @@ content:
     third_party_settings: {  }
   field_social_image:
     type: media_library_widget
-    weight: 7
+    weight: 8
     region: content
     settings:
       media_types: {  }
@@ -128,7 +143,7 @@ content:
     third_party_settings: {  }
   field_teaser_image:
     type: media_library_widget
-    weight: 8
+    weight: 7
     region: content
     settings:
       media_types: {  }

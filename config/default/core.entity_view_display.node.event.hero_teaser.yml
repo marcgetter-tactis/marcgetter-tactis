@@ -5,12 +5,14 @@ dependencies:
   config:
     - core.entity_view_mode.node.hero_teaser
     - field.field.node.event.body
+    - field.field.node.event.field_archived
     - field.field.node.event.field_attachment
     - field.field.node.event.field_audience
     - field.field.node.event.field_component
     - field.field.node.event.field_contact_info
     - field.field.node.event.field_datetime
     - field.field.node.event.field_event_type
+    - field.field.node.event.field_file_private_force
     - field.field.node.event.field_link
     - field.field.node.event.field_location
     - field.field.node.event.field_notes
@@ -21,9 +23,9 @@ dependencies:
     - node.type.event
   module:
     - address
-    - datetime
     - layout_builder
     - link
+    - og
     - options
     - text
     - user
@@ -64,15 +66,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 114
-    region: content
-  field_datetime:
-    type: datetime_default
-    label: above
-    settings:
-      timezone_override: ''
-      format_type: medium
-    third_party_settings: {  }
-    weight: 104
     region: content
   field_event_type:
     type: list_default
@@ -155,6 +148,9 @@ content:
     weight: 0
     region: content
 hidden:
+  field_archived: true
   field_attachment: true
+  field_datetime: true
+  field_file_private_force: true
   langcode: true
   search_api_excerpt: true

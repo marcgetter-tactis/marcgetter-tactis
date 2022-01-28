@@ -4,11 +4,13 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.speech.field_archived
     - field.field.node.speech.field_attachment
     - field.field.node.speech.field_body
     - field.field.node.speech.field_component
     - field.field.node.speech.field_date
     - field.field.node.speech.field_feature_image
+    - field.field.node.speech.field_file_private_force
     - field.field.node.speech.field_image
     - field.field.node.speech.field_invisible
     - field.field.node.speech.field_location
@@ -18,6 +20,7 @@ dependencies:
     - field.field.node.speech.og_audience
     - node.type.speech
   module:
+    - og
     - user
 id: node.speech.teaser
 targetEntityType: node
@@ -29,12 +32,21 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
+  og_group:
+    type: og_group_subscribe
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
+  field_archived: true
   field_attachment: true
   field_body: true
   field_component: true
   field_date: true
   field_feature_image: true
+  field_file_private_force: true
   field_image: true
   field_invisible: true
   field_location: true

@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.body
+    - field.storage.node.field_body
     - field.storage.node.field_date
     - search_api.server.database
     - core.entity_view_mode.node.search_index
@@ -20,14 +20,6 @@ name: Content
 description: 'An index of certain content to be used in the News search.'
 read_only: false
 field_settings:
-  body:
-    label: Body
-    datasource_id: 'entity:node'
-    property_path: body
-    type: text
-    dependencies:
-      config:
-        - field.storage.node.body
   created:
     label: 'Created time'
     datasource_id: 'entity:node'
@@ -36,6 +28,14 @@ field_settings:
     dependencies:
       module:
         - node
+  field_body:
+    label: Body
+    datasource_id: 'entity:node'
+    property_path: field_body
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_body
   field_date:
     label: Date
     datasource_id: 'entity:node'
@@ -115,9 +115,16 @@ datasource_settings:
     bundles:
       default: false
       selected:
+        - blog_post
         - component_group
+        - event
+        - image_gallery
+        - landing_page
+        - page
+        - podcast
         - press_release
         - speech
+        - staff_profile
     languages:
       default: true
       selected: {  }
@@ -147,7 +154,7 @@ processor_settings:
       preprocess_query: -8
     all_fields: true
     fields:
-      - body
+      - field_body
       - langcode
       - rendered_item
       - title

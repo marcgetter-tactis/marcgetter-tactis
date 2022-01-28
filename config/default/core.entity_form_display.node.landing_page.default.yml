@@ -8,10 +8,27 @@ dependencies:
     - field.field.node.landing_page.og_audience
     - node.type.landing_page
   module:
+    - field_group
     - og
     - path
     - scheduler
     - scheduler_content_moderation_integration
+third_party_settings:
+  field_group:
+    group_organization:
+      children:
+        - og_audience
+      label: Organization
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page
@@ -25,7 +42,7 @@ content:
     third_party_settings: {  }
   field_left_navigation_menu:
     type: entity_reference_autocomplete
-    weight: 2
+    weight: 3
     region: content
     settings:
       match_operator: CONTAINS
@@ -33,16 +50,9 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  langcode:
-    type: language_select
-    weight: 3
-    region: content
-    settings:
-      include_locked: true
-    third_party_settings: {  }
   og_audience:
     type: og_complex
-    weight: 15
+    weight: 26
     region: content
     settings:
       match_operator: CONTAINS
@@ -125,4 +135,5 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  langcode: true
   layout_builder__layout: true

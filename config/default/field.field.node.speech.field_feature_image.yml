@@ -5,15 +5,13 @@ dependencies:
   config:
     - field.storage.node.field_feature_image
     - media.type.image
-    - media.type.remote_video
-    - media.type.video
     - node.type.speech
 id: node.speech.field_feature_image
 field_name: field_feature_image
 entity_type: node
 bundle: speech
-label: 'Feature Image'
-description: ''
+label: Banner
+description: 'This image will be displayed in the Hero block on the homepage.'
 required: false
 translatable: true
 default_value: {  }
@@ -23,8 +21,6 @@ settings:
   handler_settings:
     target_bundles:
       image: image
-      remote_video: remote_video
-      video: video
     sort:
       field: _none
       direction: ASC

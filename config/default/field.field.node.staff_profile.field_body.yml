@@ -1,0 +1,24 @@
+uuid: aee294cf-dd28-4a13-aebc-d0a3df9fdab4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_body
+    - node.type.staff_profile
+  module:
+    - text
+id: node.staff_profile.field_body
+field_name: field_body
+entity_type: node
+bundle: staff_profile
+label: Body
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: ''
+    format: filtered_html
+default_value_callback: ''
+settings: {  }
+field_type: text_long

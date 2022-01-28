@@ -10,7 +10,13 @@ field_name: field_file_private_force
 entity_type: node
 type: list_integer
 settings:
-  allowed_values: {  }
+  allowed_values:
+    -
+      value: 1
+      label: 'Include all attached files in search indexes'
+    -
+      value: 2
+      label: 'Exclude all attached files from search indexes'
   allowed_values_function: ''
 module: options
 locked: false

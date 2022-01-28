@@ -1,0 +1,31 @@
+uuid: a5dcab80-e425-468f-935d-935a819e2f1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_audio
+    - media.type.document
+    - media.type.video
+    - node.type.podcast
+id: node.podcast.field_audio
+field_name: field_audio
+entity_type: node
+bundle: podcast
+label: 'Audio File'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      document: document
+      video: video
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: document
+field_type: entity_reference

@@ -12,8 +12,8 @@ id: node.press_release.field_feature_image
 field_name: field_feature_image
 entity_type: node
 bundle: press_release
-label: 'Feature Image'
-description: ''
+label: Banner
+description: 'This image will be displayed in the Hero block on the homepage.'
 required: false
 translatable: false
 default_value: {  }

@@ -3,12 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.blog_post.field_archived
     - field.field.node.blog_post.field_attachment
     - field.field.node.blog_post.field_author
     - field.field.node.blog_post.field_author_free
     - field.field.node.blog_post.field_body
     - field.field.node.blog_post.field_component
     - field.field.node.blog_post.field_date
+    - field.field.node.blog_post.field_file_private_force
     - field.field.node.blog_post.field_image
     - field.field.node.blog_post.field_invisible
     - field.field.node.blog_post.field_social_image
@@ -16,17 +18,32 @@ dependencies:
     - field.field.node.blog_post.field_teaser_image
     - field.field.node.blog_post.field_topic
     - field.field.node.blog_post.og_audience
-    - image.style.thumbnail
     - node.type.blog_post
   module:
     - datetime
-    - file
+    - field_group
+    - media_library
     - og
     - path
     - scheduler
     - scheduler_content_moderation_integration
-    - svg_image
     - text
+third_party_settings:
+  field_group:
+    group_organization:
+      children:
+        - og_audience
+      label: Organization
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: false
 id: node.blog_post.default
 targetEntityType: node
 bundle: blog_post
@@ -34,16 +51,23 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 17
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_attachment:
-    type: file_generic
-    weight: 14
+  field_archived:
+    type: boolean_checkbox
+    weight: 27
     region: content
     settings:
-      progress_indicator: throbber
+      display_label: true
+    third_party_settings: {  }
+  field_attachment:
+    type: media_library_widget
+    weight: 13
+    region: content
+    settings:
+      media_types: {  }
     third_party_settings: {  }
   field_author:
     type: entity_reference_autocomplete
@@ -72,7 +96,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_component:
-    type: options_select
+    type: options_buttons
     weight: 3
     region: content
     settings: {  }
@@ -83,29 +107,31 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_file_private_force:
+    type: options_select
+    weight: 26
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_image:
-    type: image_image
-    weight: 13
+    type: media_library_widget
+    weight: 12
     region: content
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings:
-      imce:
-        enabled: false
+      media_types: {  }
+    third_party_settings: {  }
   field_invisible:
     type: options_select
-    weight: 12
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   field_social_image:
-    type: image_image
+    type: media_library_widget
     weight: 8
     region: content
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      media_types: {  }
     third_party_settings: {  }
   field_teaser:
     type: text_textarea
@@ -116,29 +142,28 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_teaser_image:
-    type: image_image
+    type: media_library_widget
     weight: 7
     region: content
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      media_types: {  }
     third_party_settings: {  }
   field_topic:
     type: options_select
-    weight: 11
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 15
+    weight: 14
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   og_audience:
     type: og_complex
-    weight: 27
+    weight: 26
     region: content
     settings:
       match_operator: CONTAINS
@@ -148,39 +173,39 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 21
+    weight: 20
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 18
+    weight: 17
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 22
+    weight: 21
     region: content
     settings: {  }
     third_party_settings: {  }
   publish_state:
     type: scheduler_moderation
-    weight: 24
+    weight: 23
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 26
+    weight: 25
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 19
+    weight: 18
     region: content
     settings:
       display_label: true
@@ -195,7 +220,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 16
+    weight: 15
     region: content
     settings:
       match_operator: CONTAINS
@@ -205,18 +230,18 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 23
+    weight: 22
     region: content
     settings: {  }
     third_party_settings: {  }
   unpublish_state:
     type: scheduler_moderation
-    weight: 20
+    weight: 19
     region: content
     settings: {  }
     third_party_settings: {  }
   url_redirects:
-    weight: 25
+    weight: 24
     region: content
     settings: {  }
     third_party_settings: {  }

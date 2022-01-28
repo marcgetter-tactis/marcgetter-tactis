@@ -1,0 +1,21 @@
+uuid: d3b7a84d-3909-4fa9-82c5-c94337238404
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dates_service
+    - node.type.staff_profile
+  module:
+    - datetime_range
+id: node.staff_profile.field_dates_service
+field_name: field_dates_service
+entity_type: node
+bundle: staff_profile
+label: 'Dates of Service'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

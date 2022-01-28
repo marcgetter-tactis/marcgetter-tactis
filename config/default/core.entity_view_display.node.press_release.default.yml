@@ -22,8 +22,6 @@ dependencies:
     - node.type.press_release
   module:
     - datetime
-    - file
-    - svg_image
     - text
     - user
 id: node.press_release.default
@@ -32,12 +30,12 @@ bundle: press_release
 mode: default
 content:
   field_attachment:
-    type: file_default
+    type: entity_reference_label
     label: hidden
     settings:
-      use_description_as_link_text: true
+      link: true
     third_party_settings: {  }
-    weight: 8
+    weight: 13
     region: content
   field_body:
     type: text_default
@@ -52,14 +50,14 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 10
+    weight: 7
     region: content
   field_contact:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 6
+    weight: 5
     region: content
   field_date:
     type: datetime_default
@@ -77,20 +75,16 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
-    weight: 13
+    weight: 10
     region: content
   field_image:
-    type: image
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      image_link: ''
-      image_style: ''
-      svg_attributes:
-        width: null
-        height: null
-      svg_render_as_image: true
+      view_mode: default
+      link: true
     third_party_settings: {  }
-    weight: 7
+    weight: 12
     region: content
   field_invisible:
     type: entity_reference_label
@@ -98,7 +92,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 11
+    weight: 8
     region: content
   field_number:
     type: string
@@ -106,7 +100,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 12
+    weight: 9
     region: content
   field_subtitle:
     type: string
@@ -124,17 +118,13 @@ content:
     weight: 4
     region: content
   field_teaser_image:
-    type: image
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      image_link: ''
-      image_style: ''
-      svg_attributes:
-        width: null
-        height: null
-      svg_render_as_image: true
+      view_mode: default
+      link: false
     third_party_settings: {  }
-    weight: 5
+    weight: 14
     region: content
   field_topic:
     type: entity_reference_label
@@ -142,7 +132,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 9
+    weight: 6
     region: content
   links:
     settings: {  }
@@ -155,7 +145,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 14
+    weight: 11
     region: content
 hidden:
   field_archived: true

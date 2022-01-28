@@ -1,0 +1,16 @@
+uuid: cc65e33b-c5c1-46ea-bbd1-3e2e7a445ebf
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.podcast
+id: node-podcast-non-member
+label: Non-member
+weight: 6
+group_id: null
+group_type: node
+group_bundle: podcast
+is_admin: null
+permissions:
+  - subscribe
+role_type: required

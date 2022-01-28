@@ -130,6 +130,9 @@
                 </div>
             {% else %}
                 </ul>
+                <div class="mobile-util display-block desktop:display-none">
+                    {{ drupal_menu('utilities') }}
+                </div>
             {% endif %}
 
         {% endif %}

@@ -4,8 +4,8 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_speaker
-    - node.type.bio
     - node.type.speech
+    - node.type.staff_profile
 id: node.speech.field_speaker
 field_name: field_speaker
 entity_type: node
@@ -20,7 +20,7 @@ settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
-      bio: bio
+      staff_profile: staff_profile
     sort:
       field: _none
       direction: ASC

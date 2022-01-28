@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - block_content.type.mission
-    - field.field.block_content.mission.field_background_color
+    - field.field.block_content.mission.field_background_class
     - field.field.block_content.mission.field_background_image
     - field.field.block_content.mission.field_body
     - field.field.block_content.mission.field_cta
@@ -25,7 +25,7 @@ targetEntityType: block_content
 bundle: mission
 mode: default
 content:
-  field_background_color:
+  field_background_class:
     type: options_select
     weight: 10
     region: content
@@ -118,7 +118,7 @@ content:
     third_party_settings: {  }
   og_audience:
     type: og_complex
-    weight: 11
+    weight: 12
     region: content
     settings:
       match_operator: CONTAINS

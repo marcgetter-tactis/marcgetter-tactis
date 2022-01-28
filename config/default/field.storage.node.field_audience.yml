@@ -1,0 +1,33 @@
+uuid: 80a41c6d-0fa5-44d4-84dc-f30b32082834
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_audience
+field_name: field_audience
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: press
+      label: Press
+    -
+      value: public
+      label: Public
+    -
+      value: private
+      label: Private
+    -
+      value: government_agency_personnel
+      label: 'Government Agency Personnel'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

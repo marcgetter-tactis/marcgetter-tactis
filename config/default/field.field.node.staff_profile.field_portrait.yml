@@ -1,0 +1,29 @@
+uuid: 4c3a45a9-c04c-4f63-8366-497b3f46ad94
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_portrait
+    - media.type.image
+    - node.type.staff_profile
+id: node.staff_profile.field_portrait
+field_name: field_portrait
+entity_type: node
+bundle: staff_profile
+label: Portrait
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

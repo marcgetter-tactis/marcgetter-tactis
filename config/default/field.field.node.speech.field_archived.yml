@@ -1,0 +1,23 @@
+uuid: 57351573-5c4a-489e-bede-5b2052a4e118
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_archived
+    - node.type.speech
+id: node.speech.field_archived
+field_name: field_archived
+entity_type: node
+bundle: speech
+label: Archived
+description: 'When content is archived, it will still be publicly accessible. However, it will be removed from all views and its path will be prepended with "/archives".'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

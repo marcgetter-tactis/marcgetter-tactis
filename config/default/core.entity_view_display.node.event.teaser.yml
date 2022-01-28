@@ -5,12 +5,14 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.event.body
+    - field.field.node.event.field_archived
     - field.field.node.event.field_attachment
     - field.field.node.event.field_audience
     - field.field.node.event.field_component
     - field.field.node.event.field_contact_info
     - field.field.node.event.field_datetime
     - field.field.node.event.field_event_type
+    - field.field.node.event.field_file_private_force
     - field.field.node.event.field_link
     - field.field.node.event.field_location
     - field.field.node.event.field_notes
@@ -20,6 +22,7 @@ dependencies:
     - field.field.node.event.og_audience
     - node.type.event
   module:
+    - og
     - text
     - user
 id: node.event.teaser
@@ -40,13 +43,22 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
+  og_group:
+    type: og_group_subscribe
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
+  field_archived: true
   field_attachment: true
   field_audience: true
   field_component: true
   field_contact_info: true
   field_datetime: true
   field_event_type: true
+  field_file_private_force: true
   field_link: true
   field_location: true
   field_notes: true

@@ -11,7 +11,7 @@ field_name: field_attachment
 entity_type: node
 bundle: podcast
 label: Attachment(s)
-description: ''
+description: "<p>Before attaching a PDF or other file, evaluate metadata included with the file. Metadata should not include a personal name or location.<br/>\r\n<p>These four metadata fields are required for accessibility:</p>\r\n<ol>\r\n<li>Title: Descriptive name of the document</li>\r\n<li>Author: Name of Component (use full name instead of acronym, optionally add acronym in parentheses)</li>\r\n<li>Subject/Description: Useful for providing more detail than the title but can be the same as the title.</li>\r\n<li>Keywords: Consider things like important words from the Title, Subject/Description and some of the headings in the document (at least the main chapter/section headings)\r\n<ul>\r\n<li>Use a semicolon to separate keywords instead of a comma (ex: justice; doj;)</li>\r\n<li>Do not use parentheses around keywords, just type out the keyword (ex: justice)</li>\r\n</ul></li>\r\n</ol>\r\n<p>More about <a href=\"https://dojnet.doj.gov/webdevelopment/file-names.php#pdf\" target=_\"blank\">PDF Metadata</a></p>"
 required: false
 translatable: true
 default_value: {  }

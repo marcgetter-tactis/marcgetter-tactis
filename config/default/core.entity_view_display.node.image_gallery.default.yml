@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.image_gallery.field_archived
     - field.field.node.image_gallery.field_body
     - field.field.node.image_gallery.field_component
     - field.field.node.image_gallery.field_date
@@ -12,6 +13,7 @@ dependencies:
     - node.type.image_gallery
   module:
     - datetime
+    - og
     - text
     - user
 id: node.image_gallery.default
@@ -19,6 +21,16 @@ targetEntityType: node
 bundle: image_gallery
 mode: default
 content:
+  field_archived:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 6
+    region: content
   field_body:
     type: text_default
     label: hidden

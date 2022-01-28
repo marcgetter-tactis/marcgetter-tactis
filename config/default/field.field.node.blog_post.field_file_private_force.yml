@@ -1,20 +1,20 @@
-uuid: 998ffc0f-76d5-458c-ba3b-4c1481ac2229
+uuid: b5ed15b4-183e-466d-9119-890acbb4650b
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_file_private_force
-    - node.type.press_release
+    - node.type.blog_post
   module:
     - options
-id: node.press_release.field_file_private_force
+id: node.blog_post.field_file_private_force
 field_name: field_file_private_force
 entity_type: node
-bundle: press_release
+bundle: blog_post
 label: 'Override search index settings for all attached files'
 description: "Use this field to override the \"Include this file in search indexes?\" setting for all attached files.\r\nA common use-case for this field is to ensure that all attached documents are hidden from the public until you are ready to finally release them."
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

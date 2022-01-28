@@ -1,16 +1,15 @@
-uuid: e13b4760-d93c-4d6a-8bfa-e114958b1e1b
+uuid: 209c1872-9aaa-4f4f-9b0b-ab80d5ea06b7
 langcode: en
 status: true
 dependencies:
   module:
     - node
-    - user
 id: node.field_author
 field_name: field_author
 entity_type: node
 type: entity_reference
 settings:
-  target_type: user
+  target_type: node
 module: core
 locked: false
 cardinality: 1

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.podcast.body
+    - field.field.node.podcast.field_archived
     - field.field.node.podcast.field_attachment
     - field.field.node.podcast.field_attribution
     - field.field.node.podcast.field_audio
@@ -12,6 +13,7 @@ dependencies:
     - field.field.node.podcast.field_cover_art
     - field.field.node.podcast.field_date
     - field.field.node.podcast.field_episode_type
+    - field.field.node.podcast.field_feature_image
     - field.field.node.podcast.field_image
     - field.field.node.podcast.field_summary
     - field.field.node.podcast.field_transcript
@@ -19,6 +21,7 @@ dependencies:
     - node.type.podcast
   module:
     - datetime
+    - og
     - options
     - text
     - user
@@ -33,6 +36,16 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 8
+    region: content
+  field_archived:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 14
     region: content
   field_attachment:
     type: entity_reference_label
@@ -96,6 +109,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 2
+    region: content
+  field_feature_image:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 15
     region: content
   field_image:
     type: entity_reference_entity_view

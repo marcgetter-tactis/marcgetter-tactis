@@ -1,20 +1,20 @@
-uuid: d9b8d674-90b0-4038-b0a1-7ff405400db2
+uuid: 30d259b7-9245-43e0-809b-a0347eb9b15a
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.mission
+    - block_content.type.blank
     - field.storage.block_content.field_background_class
   module:
     - options
-id: block_content.mission.field_background_class
+id: block_content.blank.field_background_class
 field_name: field_background_class
 entity_type: block_content
-bundle: mission
+bundle: blank
 label: 'Background Color'
 description: 'Choose the background color you would like for this block.'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

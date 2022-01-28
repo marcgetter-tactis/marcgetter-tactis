@@ -1,9 +1,9 @@
-uuid: ce08e644-9f79-486c-b911-d1ea17d2a202
+uuid: 8ee3f971-cc3f-4e24-ada5-2be6943e72ca
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:general:35a8ab6d-327a-42e3-988e-8f96349ca7d5'
+    - 'block_content:general:a3fc4c0a-3bc8-4dcc-916b-b846ed3640b0'
   module:
     - block_class
     - block_content
@@ -12,18 +12,18 @@ dependencies:
     - usdoj_uswds
 third_party_settings:
   block_class:
-    classes: footer-social-block
+    classes: site-logo
   collapsiblock:
     collapse_action: 0
-id: footersocial
+id: logo
 theme: usdoj_uswds
 region: footer
-weight: -2
+weight: -6
 provider: null
-plugin: 'block_content:35a8ab6d-327a-42e3-988e-8f96349ca7d5'
+plugin: 'block_content:a3fc4c0a-3bc8-4dcc-916b-b846ed3640b0'
 settings:
-  id: 'block_content:35a8ab6d-327a-42e3-988e-8f96349ca7d5'
-  label: 'Footer social'
+  id: 'block_content:a3fc4c0a-3bc8-4dcc-916b-b846ed3640b0'
+  label: 'Logo - Dept. of Justice'
   label_display: '0'
   provider: block_content
   status: true

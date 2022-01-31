@@ -400,3 +400,17 @@ strong {
   }
 }
 
+.bg-full-width {
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 100%;
+    z-index: -1;
+    background-color: inherit;
+  }
+}
+

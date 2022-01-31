@@ -19,7 +19,7 @@ third_party_settings:
 id: findyourlocaldojresources
 theme: usdoj_uswds
 region: content
-weight: -5
+weight: -6
 provider: null
 plugin: 'block_content:2d6cf0e0-2ea7-48f4-87b7-97f92549a8e3'
 settings:

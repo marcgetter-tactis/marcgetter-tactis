@@ -1,9 +1,9 @@
-uuid: c258b699-9688-469f-b5f7-76b4f0457233
+uuid: d955bfb1-1a10-4572-ae08-8048c036f9b6
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:mission:5048c1c8-d5c5-48ad-85d3-ec45dcd25ab7'
+    - 'block_content:tabbed:944f8870-bc99-4bc1-9d27-b738d6688e86'
   module:
     - block_class
     - block_content
@@ -13,18 +13,18 @@ dependencies:
     - usdoj_uswds
 third_party_settings:
   block_class:
-    classes: block-homepage-mission
+    classes: block-homepage-priorities
   collapsiblock:
     collapse_action: 0
-id: ourmission
+id: dojfeaturedpriorities
 theme: usdoj_uswds
 region: content
-weight: -7
+weight: -5
 provider: null
-plugin: 'block_content:5048c1c8-d5c5-48ad-85d3-ec45dcd25ab7'
+plugin: 'block_content:944f8870-bc99-4bc1-9d27-b738d6688e86'
 settings:
-  id: 'block_content:5048c1c8-d5c5-48ad-85d3-ec45dcd25ab7'
-  label: 'Our Mission'
+  id: 'block_content:944f8870-bc99-4bc1-9d27-b738d6688e86'
+  label: 'DOJ Featured Priorities'
   label_display: visible
   provider: block_content
   status: true

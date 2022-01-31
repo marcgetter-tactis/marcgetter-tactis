@@ -4,8 +4,9 @@ header.usa-header--extended {
     background-color: color(primary-darker);
     max-width: 100%;
     min-height: 5rem;
-    @media (min-width: 64em) {
+    @include at-media(desktop) {
       height: 7.75rem;
+      overflow: hidden;
     }
 
     //logo
@@ -84,7 +85,7 @@ header.usa-header--extended {
   }
 
   //mobile main menu
-  @media (max-width: 63.99em) {
+  @include at-media(tablet) {
     label.hamburger {
       background-image: url('/themes/custom/usdoj_uswds/images/doj-icon-hamburger-menu.svg');
       background-size: contain;

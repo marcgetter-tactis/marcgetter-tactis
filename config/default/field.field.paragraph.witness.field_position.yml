@@ -1,15 +1,15 @@
-uuid: 3c60a6f9-0f7b-49a0-a41c-4e0dbfa74767
+uuid: d206afde-444e-4aac-b716-834203cb52cf
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_first_name
+    - field.storage.paragraph.field_position
     - paragraphs.paragraphs_type.witness
-id: paragraph.witness.field_first_name
-field_name: field_first_name
+id: paragraph.witness.field_position
+field_name: field_position
 entity_type: paragraph
 bundle: witness
-label: 'First Name'
+label: Position
 description: ''
 required: false
 translatable: false

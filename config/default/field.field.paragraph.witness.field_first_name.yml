@@ -1,0 +1,19 @@
+uuid: 3c60a6f9-0f7b-49a0-a41c-4e0dbfa74767
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_first_name
+    - paragraphs.paragraphs_type.witness
+id: paragraph.witness.field_first_name
+field_name: field_first_name
+entity_type: paragraph
+bundle: witness
+label: 'First Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,42 @@
+uuid: 4632658f-d6e8-4074-bf00-47a969f4077d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.testimony.field_committee
+    - field.field.node.testimony.field_date
+    - field.field.node.testimony.field_session
+    - field.field.node.testimony.field_subject
+    - field.field.node.testimony.field_witness
+    - field.field.node.testimony.og_audience
+    - node.type.testimony
+  module:
+    - og
+    - user
+id: node.testimony.teaser
+targetEntityType: node
+bundle: testimony
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  og_group:
+    type: og_group_subscribe
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_committee: true
+  field_date: true
+  field_session: true
+  field_subject: true
+  field_witness: true
+  langcode: true
+  og_audience: true
+  search_api_excerpt: true

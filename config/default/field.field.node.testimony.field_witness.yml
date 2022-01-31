@@ -1,0 +1,49 @@
+uuid: 790c80f0-50d7-4846-82e6-1bcb6760860f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_witness
+    - node.type.testimony
+    - paragraphs.paragraphs_type.witness
+  module:
+    - entity_reference_revisions
+id: node.testimony.field_witness
+field_name: field_witness
+entity_type: node
+bundle: testimony
+label: Witness
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      witness: witness
+    negate: 0
+    target_bundles_drag_drop:
+      action_center_item:
+        weight: 7
+        enabled: false
+      card:
+        weight: 8
+        enabled: false
+      hero_slide:
+        weight: 9
+        enabled: false
+      slide:
+        weight: 10
+        enabled: false
+      statistic:
+        weight: 11
+        enabled: false
+      tab:
+        weight: 12
+        enabled: false
+      witness:
+        weight: 14
+        enabled: true
+field_type: entity_reference_revisions

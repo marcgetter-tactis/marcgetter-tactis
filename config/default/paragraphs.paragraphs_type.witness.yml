@@ -1,0 +1,10 @@
+uuid: 0d9db4bd-df3a-4a74-8460-f8aabde47d6d
+langcode: en
+status: true
+dependencies: {  }
+id: witness
+label: Witness
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

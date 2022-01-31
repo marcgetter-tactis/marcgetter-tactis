@@ -1,0 +1,15 @@
+uuid: 22bc736f-54ab-4029-9f54-12a503e687c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.testimony
+id: node-testimony-member
+label: Member
+weight: 19
+group_id: null
+group_type: node
+group_bundle: testimony
+is_admin: null
+permissions: {  }
+role_type: required

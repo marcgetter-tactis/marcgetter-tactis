@@ -1,0 +1,21 @@
+uuid: e2d42579-43b1-4adc-a65b-97e9590a3961
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - node.type.testimony
+  module:
+    - datetime
+id: node.testimony.field_date
+field_name: field_date
+entity_type: node
+bundle: testimony
+label: Date
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

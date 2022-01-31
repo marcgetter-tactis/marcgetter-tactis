@@ -1,0 +1,27 @@
+uuid: 78057cb3-6494-42ed-9ec7-cbe1c526e04b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.og_audience
+    - node.type.component_group
+    - node.type.consent_decree
+  module:
+    - og
+id: node.consent_decree.og_audience
+field_name: og_audience
+entity_type: node
+bundle: consent_decree
+label: 'Groups audience'
+description: 'OG group audience reference field.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'og:default'
+  handler_settings:
+    target_bundles:
+      component_group: component_group
+      consent_decree: consent_decree
+field_type: og_standard_reference

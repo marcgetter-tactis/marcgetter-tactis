@@ -1,0 +1,16 @@
+uuid: 12bf468f-85fb-4cf7-b49f-6c50d28bea88
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.opinion
+id: node-opinion-non-member
+label: Non-member
+weight: 21
+group_id: null
+group_type: node
+group_bundle: opinion
+is_admin: null
+permissions:
+  - subscribe
+role_type: required

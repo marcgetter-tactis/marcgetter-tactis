@@ -1,0 +1,22 @@
+uuid: 1b833780-84ce-42a0-9023-2479fb2121b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.opinion
+id: node.opinion.promote
+field_name: promote
+entity_type: node
+bundle: opinion
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

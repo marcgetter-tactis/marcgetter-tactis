@@ -59,19 +59,26 @@ not paragraph.isPublished() ? 'paragraph--unpublished'
       </div>
 
       <div class="usa-card__body">
-        <h3>{{ content.field_headline }}</h3>
-        {{ content.field_body }}
+        <h3 class="card-title">{{ content.field_headline }}</h3>
 
+        {# Card body = rendered HTML with tags #}
+        {% set cardBody = content.field_body|render|striptags('<strong><p><a>') %}
+
+        {# Slice words after 325 characters and render with ellipsis #}
+        {% autoescape false %}        
+        {{ cardBody|length > 325 ? cardBody|slice(0, 326)|split(' ')|slice(0, -1)|join(' ') ~ '…' : cardBody }}
+        {% endautoescape %}
+
+        </div>
+
+        <div class="usa-card__footer">
+          {{ content.field_cta }}
+        </div>
+
+        </div>
       </div>
 
-      <div class="usa-card__footer">
-        {{ content.field_cta }}
-      </div>
-
+      {# {{ content }} #}
+      {% endblock %}
     </div>
-  </div>
-
-  {# {{ content }} #}
-  {% endblock %}
-  </div>
-{% endblock paragraph %}
+    {% endblock paragraph %}

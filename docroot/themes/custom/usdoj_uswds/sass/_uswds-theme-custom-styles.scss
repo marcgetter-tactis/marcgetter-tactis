@@ -235,7 +235,7 @@ strong {
     @include center-hor();
     padding: 0;
     list-style: none;
-    top: 52%;
+    top: 47%;
 
     li {
       display: inline-block;
@@ -281,10 +281,10 @@ strong {
 
 .slides-slideshow {
   .slick-dots {
-    @include center-hor();
     padding: 0;
     list-style: none;
     bottom: 2rem;
+    text-align: center;
 
     li {
       display: inline-block;
@@ -314,6 +314,10 @@ strong {
       bottom: 0;
     }
   }
+  
+  .usa-card {
+    margin-bottom: 0;
+  }
 }
 
 .taupe-wide {
@@ -336,7 +340,7 @@ strong {
   box-shadow: 0 0 7px 0 rgba(0,0,0,0.17);
 
   .usa-card__body {
-    h3 {
+    .card-title {
       @include u-font-family('sans');
       color: $doj-coolblue;
       font-size: $theme-h4-font-size;
@@ -344,6 +348,10 @@ strong {
 
     strong {
       color: $doj-darkblue;
+    }
+
+    @include at-media(desktop) {
+      min-height: 360px;
     }
   }
 

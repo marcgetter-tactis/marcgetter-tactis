@@ -37,8 +37,6 @@ settings:
           items:
             - Blockquote
             - DrupalMediaLibrary
-            - ImceImage
-            - ImceLink
         -
           name: Tools
           items:

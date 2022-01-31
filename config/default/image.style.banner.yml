@@ -1,0 +1,7 @@
+uuid: 975171c6-9a8c-46d0-880e-44699080a202
+langcode: en
+status: true
+dependencies: {  }
+name: banner
+label: 'Default (no Effects)'
+effects: {  }

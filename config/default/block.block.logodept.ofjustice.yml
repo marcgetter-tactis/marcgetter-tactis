@@ -1,9 +1,12 @@
-uuid: 8ee3f971-cc3f-4e24-ada5-2be6943e72ca
+uuid: 428fa882-bbf7-4a7f-b64d-e02a306a0be2
 langcode: en
 status: true
 dependencies:
+  content:
+    - 'block_content:general:03466ce1-6b9a-4db1-8e8b-3a702d323aa3'
   module:
     - block_class
+    - block_content
     - collapsiblock
   theme:
     - usdoj_uswds
@@ -12,14 +15,14 @@ third_party_settings:
     classes: site-logo
   collapsiblock:
     collapse_action: 0
-id: logo
+id: logodept.ofjustice
 theme: usdoj_uswds
 region: footer
 weight: -6
 provider: null
-plugin: 'block_content:a3fc4c0a-3bc8-4dcc-916b-b846ed3640b0'
+plugin: 'block_content:03466ce1-6b9a-4db1-8e8b-3a702d323aa3'
 settings:
-  id: 'block_content:a3fc4c0a-3bc8-4dcc-916b-b846ed3640b0'
+  id: 'block_content:03466ce1-6b9a-4db1-8e8b-3a702d323aa3'
   label: 'Logo - Dept. of Justice'
   label_display: '0'
   provider: block_content

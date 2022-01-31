@@ -18,7 +18,7 @@ third_party_settings:
 id: footercontact
 theme: usdoj_uswds
 region: footer
-weight: -3
+weight: -4
 provider: null
 plugin: 'block_content:0381b3b4-293c-4902-8fe0-edb6d3daa77b'
 settings:

@@ -20,46 +20,56 @@ Blank Block on Homepage
 */
 
 .block-homepage-resources {
-  margin: 0 calc(-50vw + 50%);
-  padding: 3rem 0;
-  overflow: hidden;
-  
-  img {
-    float: right;
-    @include grid-col(5);
-  }
-  
-  .field_header {
-    color: white;
-    font-family: 'Source Serif Pro';
-    font-weight: bold;
-    font-size: 2rem;
+    margin: 0 calc(-50vw + 50%);
+    padding: 3rem 0;
+    overflow: hidden;
+    @include grid-row;
     
-    &:after {
-      content: "";
-      width: 3rem;
-      display: flex;
-      border-top: 1px solid color(warning);
-      border-bottom: 1px solid color(warning);
-      height: .3rem;
-      margin: 1.5rem 0;
+    .field_header, .field_body, .field_cta, img {
+      @include grid-col(6);
+      
+      @media (max-width: 39.99em) {
+        @include grid-col(12);
+      }
     }
-  }
   
-  .field_body {
-    color: white;
-  }
-
-  .field_cta {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    a {
-      background-color: color(warning);
-      color: color(primary-darker);
-      padding: 0.5rem 1.25rem;
-      border-radius: 2px;
-      text-decoration: none;
+    img {
+      float: right;
+      object-fit: contain;
+    }
+  
+    .field_header {
+      color: white;
+      font-family: 'Source Serif Pro';
       font-weight: bold;
+      font-size: 2rem;
+      float: left;
+      
+      &:after {
+        content: "";
+        width: 3rem;
+        display: flex;
+        border-top: 1px solid color(warning);
+        border-bottom: 1px solid color(warning);
+        height: .3rem;
+        margin: 1.5rem 0;
+      }
+    }
+    
+    .field_body {
+      color: white;
+    }
+  
+    .field_cta {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      a {
+        background-color: color(warning);
+        color: color(primary-darker);
+        padding: 0.5rem 1.25rem;
+        border-radius: 2px;
+        text-decoration: none;
+        font-weight: bold;
+      }
     }
   }
-}

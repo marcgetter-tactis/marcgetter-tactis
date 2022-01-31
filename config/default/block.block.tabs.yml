@@ -12,7 +12,7 @@ third_party_settings:
 id: tabs
 theme: usdoj_uswds
 region: content
-weight: 0
+weight: -4
 provider: null
 plugin: local_tasks_block
 settings:

@@ -1,0 +1,33 @@
+uuid: 2c4048d2-0ef7-4a2e-9831-89399ec19bc2
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+id: block_content.field_background_class
+field_name: field_background_class
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: bg-white
+      label: White
+    -
+      value: bg-base-lighter
+      label: Taupe
+    -
+      value: bg-primary-darker
+      label: 'Dark Blue'
+    -
+      value: bg-primary-lightest
+      label: 'Light Blue'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

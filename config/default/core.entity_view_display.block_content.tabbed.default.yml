@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - block_content.type.tabbed
-    - field.field.block_content.tabbed.field_background_color
+    - field.field.block_content.tabbed.field_background_class
     - field.field.block_content.tabbed.field_cta
     - field.field.block_content.tabbed.field_cta_style
     - field.field.block_content.tabbed.field_header
@@ -19,12 +19,12 @@ targetEntityType: block_content
 bundle: tabbed
 mode: default
 content:
-  field_background_color:
+  field_background_class:
     type: list_default
-    label: hidden
+    label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 3
+    weight: 7
     region: content
   field_cta:
     type: link

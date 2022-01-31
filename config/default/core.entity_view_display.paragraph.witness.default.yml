@@ -1,0 +1,31 @@
+uuid: 8f851f65-93d7-4f0c-bf43-6bc08fb1accc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.witness.field_first_name
+    - field.field.paragraph.witness.field_last_name
+    - paragraphs.paragraphs_type.witness
+id: paragraph.witness.default
+targetEntityType: paragraph
+bundle: witness
+mode: default
+content:
+  field_first_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_last_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true

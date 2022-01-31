@@ -1,97 +1,80 @@
-uuid: 859970f5-c086-4e8d-8d7e-ce6285cbb3b1
+uuid: 81737c4e-2e3d-4619-b3f3-95f3444ae70d
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.staff_profile.field_archived
-    - field.field.node.staff_profile.field_body
-    - field.field.node.staff_profile.field_byline
-    - field.field.node.staff_profile.field_component
-    - field.field.node.staff_profile.field_dates_service
-    - field.field.node.staff_profile.field_name
-    - field.field.node.staff_profile.field_portrait
-    - field.field.node.staff_profile.field_portrait_download
-    - field.field.node.staff_profile.field_position
-    - field.field.node.staff_profile.field_teaser
-    - field.field.node.staff_profile.og_audience
-    - node.type.staff_profile
+    - field.field.node.testimony.field_committee
+    - field.field.node.testimony.field_date
+    - field.field.node.testimony.field_session
+    - field.field.node.testimony.field_subject
+    - field.field.node.testimony.field_witness
+    - field.field.node.testimony.og_audience
+    - node.type.testimony
   module:
-    - datetime_range
-    - media_library
+    - datetime
+    - field_group
     - og
+    - paragraphs
     - path
     - scheduler
     - scheduler_content_moderation_integration
-    - text
-id: node.staff_profile.default
+third_party_settings:
+  field_group:
+    group_organization:
+      children:
+        - og_audience
+      label: Organization
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+id: node.testimony.default
 targetEntityType: node
-bundle: staff_profile
+bundle: testimony
 mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 14
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_archived:
-    type: boolean_checkbox
-    weight: 11
+  field_committee:
+    type: entity_reference_autocomplete
+    weight: 4
     region: content
     settings:
-      display_label: true
-    third_party_settings: {  }
-  field_body:
-    type: text_textarea
-    weight: 7
-    region: content
-    settings:
-      rows: 5
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_byline:
-    type: string_textfield
+  field_date:
+    type: datetime_datelist
     weight: 2
     region: content
     settings:
-      size: 60
-      placeholder: ''
+      increment: 15
+      date_order: MDY
+      time_type: none
     third_party_settings: {  }
-  field_component:
-    type: options_select
-    weight: 10
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_dates_service:
-    type: daterange_default
-    weight: 8
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_name:
-    type: string_textfield
-    weight: 1
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_portrait:
-    type: media_library_widget
+  field_session:
+    type: entity_reference_autocomplete
     weight: 5
     region: content
     settings:
-      media_types: {  }
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-  field_portrait_download:
-    type: media_library_widget
-    weight: 6
-    region: content
-    settings:
-      media_types: {  }
-    third_party_settings: {  }
-  field_position:
+  field_subject:
     type: string_textfield
     weight: 3
     region: content
@@ -99,24 +82,28 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_teaser:
-    type: text_textarea
-    weight: 4
+  field_witness:
+    type: entity_reference_paragraphs
+    weight: 6
     region: content
     settings:
-      rows: 5
-      placeholder: ''
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: witness
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 12
+    weight: 7
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   og_audience:
     type: og_complex
-    weight: 9
+    weight: 14
     region: content
     settings:
       match_operator: CONTAINS
@@ -126,39 +113,39 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 22
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 15
+    weight: 10
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 19
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
   publish_state:
     type: scheduler_moderation
-    weight: 17
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 21
+    weight: 18
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 16
+    weight: 11
     region: content
     settings:
       display_label: true
@@ -173,7 +160,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 13
+    weight: 8
     region: content
     settings:
       match_operator: CONTAINS
@@ -183,18 +170,18 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 20
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
   unpublish_state:
     type: scheduler_moderation
-    weight: 18
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }
   url_redirects:
-    weight: 23
+    weight: 17
     region: content
     settings: {  }
     third_party_settings: {  }

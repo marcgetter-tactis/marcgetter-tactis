@@ -2,11 +2,8 @@ uuid: 8ee3f971-cc3f-4e24-ada5-2be6943e72ca
 langcode: en
 status: true
 dependencies:
-  content:
-    - 'block_content:general:a3fc4c0a-3bc8-4dcc-916b-b846ed3640b0'
   module:
     - block_class
-    - block_content
     - collapsiblock
   theme:
     - usdoj_uswds

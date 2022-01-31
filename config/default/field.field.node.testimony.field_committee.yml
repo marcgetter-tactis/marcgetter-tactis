@@ -1,0 +1,29 @@
+uuid: 0133f863-a2ea-4f14-ab70-d6b40eaea163
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_committee
+    - node.type.testimony
+    - taxonomy.vocabulary.congressional_committee
+id: node.testimony.field_committee
+field_name: field_committee
+entity_type: node
+bundle: testimony
+label: 'Congressional Committee'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      congressional_committee: congressional_committee
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: congressional_committee
+field_type: entity_reference

@@ -1,0 +1,15 @@
+uuid: e53b84bd-f383-4120-b83d-d85afc8ccac3
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.testimony
+id: node-testimony-administrator
+label: Administrator
+weight: 20
+group_id: null
+group_type: node
+group_bundle: testimony
+is_admin: true
+permissions: {  }
+role_type: null

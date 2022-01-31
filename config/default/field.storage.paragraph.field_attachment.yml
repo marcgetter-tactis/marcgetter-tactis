@@ -1,17 +1,16 @@
-uuid: 002dcdf4-fbda-4efc-a282-4be0729400d4
+uuid: ae7882a8-71aa-4eb3-9a3b-389226909aa0
 langcode: en
 status: true
 dependencies:
   module:
+    - media
     - paragraphs
-id: paragraph.field_first_name
-field_name: field_first_name
+id: paragraph.field_attachment
+field_name: field_attachment
 entity_type: paragraph
-type: string
+type: entity_reference
 settings:
-  max_length: 64
-  case_sensitive: false
-  is_ascii: false
+  target_type: media
 module: core
 locked: false
 cardinality: 1

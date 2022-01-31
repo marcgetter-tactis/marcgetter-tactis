@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.testimony.field_archived
     - field.field.node.testimony.field_committee
     - field.field.node.testimony.field_date
     - field.field.node.testimony.field_session
@@ -45,34 +46,30 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_archived:
+    type: boolean_checkbox
+    weight: 26
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   field_committee:
-    type: entity_reference_autocomplete
+    type: options_select
     weight: 4
     region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   field_date:
-    type: datetime_datelist
+    type: datetime_default
     weight: 2
     region: content
-    settings:
-      increment: 15
-      date_order: MDY
-      time_type: none
+    settings: {  }
     third_party_settings: {  }
   field_session:
-    type: entity_reference_autocomplete
+    type: options_select
     weight: 5
     region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   field_subject:
     type: string_textfield

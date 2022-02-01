@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.historical_biography.field_archived
     - field.field.node.historical_biography.field_body
     - field.field.node.historical_biography.field_dates_service
     - field.field.node.historical_biography.field_link
@@ -25,26 +24,16 @@ targetEntityType: node
 bundle: historical_biography
 mode: default
 content:
-  field_archived:
-    type: boolean
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    weight: 112
-    region: content
   field_body:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 108
     region: content
   field_dates_service:
     type: daterange_default
-    label: above
+    label: hidden
     settings:
       timezone_override: ''
       format_type: medium
@@ -54,7 +43,7 @@ content:
     region: content
   field_link:
     type: link
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -66,7 +55,7 @@ content:
     region: content
   field_name:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -74,7 +63,7 @@ content:
     region: content
   field_nth_attorney_general:
     type: number_integer
-    label: above
+    label: hidden
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -83,24 +72,23 @@ content:
     region: content
   field_portrait:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
     weight: 109
     region: content
   field_portrait_artist:
-    type: entity_reference_entity_view
-    label: above
+    type: string
+    label: hidden
     settings:
-      view_mode: default
-      link: false
+      link_to_entity: false
     third_party_settings: {  }
     weight: 111
     region: content
   field_portrait_download:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
@@ -108,7 +96,7 @@ content:
     region: content
   field_teaser:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 107
@@ -120,7 +108,7 @@ content:
     region: content
   og_audience:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }

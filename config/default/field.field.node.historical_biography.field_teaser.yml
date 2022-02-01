@@ -10,8 +10,7 @@ dependencies:
     - text
 third_party_settings:
   allowed_formats:
-    allowed_formats:
-      - wysiwyg
+    allowed_formats: {  }
 id: node.historical_biography.field_teaser
 field_name: field_teaser
 entity_type: node

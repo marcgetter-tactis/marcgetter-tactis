@@ -38,28 +38,6 @@ filters:
     weight: 0
     settings:
       filter_url_length: 72
-  blazy_filter:
-    id: blazy_filter
-    provider: blazy
-    status: false
-    weight: 3
-    settings:
-      media_switch: ''
-      hybrid_style: ''
-      box_style: ''
-      box_caption: ''
-      filter_tags:
-        img: img
-        iframe: iframe
-      use_data_uri: '0'
-  filter_collapse_text:
-    id: filter_collapse_text
-    provider: collapse_text
-    status: true
-    weight: 0
-    settings:
-      default_title: 'Click here to expand or collapse this section'
-      form: '1'
   slick_filter:
     id: slick_filter
     provider: slick
@@ -89,3 +67,25 @@ filters:
       thumbnail_effect: ''
       thumbnail_position: ''
       override: false
+  blazy_filter:
+    id: blazy_filter
+    provider: blazy
+    status: false
+    weight: 3
+    settings:
+      media_switch: ''
+      hybrid_style: ''
+      box_style: ''
+      box_caption: ''
+      filter_tags:
+        img: img
+        iframe: iframe
+      use_data_uri: '0'
+  filter_collapse_text:
+    id: filter_collapse_text
+    provider: collapse_text
+    status: true
+    weight: 0
+    settings:
+      default_title: 'Click here to expand or collapse this section'
+      form: '1'

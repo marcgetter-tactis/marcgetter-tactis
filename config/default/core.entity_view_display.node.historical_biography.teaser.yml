@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.historical_biography.field_archived
     - field.field.node.historical_biography.field_body
     - field.field.node.historical_biography.field_dates_service
     - field.field.node.historical_biography.field_link
@@ -29,7 +28,6 @@ content:
     weight: 100
     region: content
 hidden:
-  field_archived: true
   field_body: true
   field_dates_service: true
   field_link: true

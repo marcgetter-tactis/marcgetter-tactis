@@ -1,0 +1,32 @@
+uuid: 6f93f3cd-84dd-4649-ba51-3f574eebb688
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.og_audience
+    - node.type.case_document
+    - node.type.component_group
+  module:
+    - og
+id: node.case_document.og_audience
+field_name: og_audience
+entity_type: node
+bundle: case_document
+label: 'Groups audience'
+description: 'OG group audience reference field.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      case_document: case_document
+      component_group: component_group
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: case_document
+field_type: og_standard_reference

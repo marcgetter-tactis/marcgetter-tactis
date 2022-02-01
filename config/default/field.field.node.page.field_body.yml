@@ -6,7 +6,13 @@ dependencies:
     - field.storage.node.field_body
     - node.type.page
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - full_html
+      - filtered_html
 id: node.page.field_body
 field_name: field_body
 entity_type: node

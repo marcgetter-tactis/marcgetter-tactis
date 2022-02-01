@@ -1,0 +1,21 @@
+uuid: 04ab751b-3c9e-4a58-bfdf-61d23ef81e70
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dates_service
+    - node.type.historical_biography
+  module:
+    - datetime_range
+id: node.historical_biography.field_dates_service
+field_name: field_dates_service
+entity_type: node
+bundle: historical_biography
+label: 'Dates of Service'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

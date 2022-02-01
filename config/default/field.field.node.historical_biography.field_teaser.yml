@@ -1,0 +1,26 @@
+uuid: 5351b103-7f70-48a6-a182-feb823539881
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaser
+    - node.type.historical_biography
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - wysiwyg
+id: node.historical_biography.field_teaser
+field_name: field_teaser
+entity_type: node
+bundle: historical_biography
+label: Teaser
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

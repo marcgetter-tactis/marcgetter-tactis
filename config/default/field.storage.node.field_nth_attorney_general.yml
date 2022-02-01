@@ -1,0 +1,20 @@
+uuid: 252bd7ba-7c92-40df-a0e8-cbca5685b5a7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_nth_attorney_general
+field_name: field_nth_attorney_general
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

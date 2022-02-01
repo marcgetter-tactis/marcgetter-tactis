@@ -1,0 +1,11 @@
+uuid: 97991ce2-01e7-45ca-a427-dd3128c301b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.historical_biography
+id: node.historical_biography
+target_entity_type_id: node
+target_bundle: historical_biography
+default_langcode: site_default
+language_alterable: false

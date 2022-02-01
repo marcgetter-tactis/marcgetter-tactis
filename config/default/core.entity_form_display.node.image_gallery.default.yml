@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.image_gallery.field_archived
     - field.field.node.image_gallery.field_body
     - field.field.node.image_gallery.field_component
     - field.field.node.image_gallery.field_date
@@ -46,13 +45,6 @@ content:
     weight: 9
     region: content
     settings: {  }
-    third_party_settings: {  }
-  field_archived:
-    type: boolean_checkbox
-    weight: 26
-    region: content
-    settings:
-      display_label: true
     third_party_settings: {  }
   field_body:
     type: text_textarea

@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.blog_post.field_archived
     - field.field.node.blog_post.field_attachment
     - field.field.node.blog_post.field_author
     - field.field.node.blog_post.field_author_free
@@ -49,7 +48,6 @@ content:
     weight: 0
     region: content
 hidden:
-  field_archived: true
   field_attachment: true
   field_author: true
   field_author_free: true

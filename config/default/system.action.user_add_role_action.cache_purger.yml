@@ -1,0 +1,14 @@
+uuid: d952bd59-73fb-4e27-8c7d-9c4530239d7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.cache_purger
+  module:
+    - user
+id: user_add_role_action.cache_purger
+label: 'Add the Cache Purger role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: cache_purger

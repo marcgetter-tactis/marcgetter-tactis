@@ -1,0 +1,9 @@
+uuid: a1ac9baf-b4e9-4481-8d4e-07ffebbafc4c
+langcode: en
+status: true
+dependencies: {  }
+id: cache_purger
+label: 'Cache Purger'
+weight: -5
+is_admin: null
+permissions: {  }

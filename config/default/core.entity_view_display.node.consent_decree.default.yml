@@ -3,14 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.consent_decree.body
     - field.field.node.consent_decree.field_attachment
+    - field.field.node.consent_decree.field_body
     - field.field.node.consent_decree.field_comment_period
     - field.field.node.consent_decree.field_component
     - field.field.node.consent_decree.og_audience
     - node.type.consent_decree
   module:
-    - og
     - text
     - user
 id: node.consent_decree.default
@@ -18,13 +17,6 @@ targetEntityType: node
 bundle: consent_decree
 mode: default
 content:
-  body:
-    type: text_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 4
-    region: content
   field_attachment:
     type: entity_reference_label
     label: hidden
@@ -32,6 +24,13 @@ content:
       link: true
     third_party_settings: {  }
     weight: 6
+    region: content
+  field_body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
     region: content
   field_comment_period:
     type: string

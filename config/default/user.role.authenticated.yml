@@ -2,15 +2,21 @@ uuid: dca9d3cf-cecb-4730-8b59-82dac565575d
 langcode: en
 status: true
 dependencies:
+  config:
+    - filter.format.filtered_html
+    - filter.format.wysiwyg
   module:
+    - filter
     - media
     - system
 _core:
   default_config_hash: IGO9vh2-ZTZARmflR-ZTHl28-O7sosGboFfFoOZmrt8
 id: authenticated
 label: 'Authenticated user'
-weight: -3
+weight: -9
 is_admin: false
 permissions:
   - 'access content'
+  - 'use text format filtered_html'
+  - 'use text format wysiwyg'
   - 'view media'

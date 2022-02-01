@@ -1,0 +1,18 @@
+uuid: 5a4d9034-ce47-44e9-9254-9cac3b681a66
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.filtered_html
+    - filter.format.full_html
+    - filter.format.wysiwyg
+  module:
+    - filter
+id: site_architect
+label: 'Site Architect'
+weight: -6
+is_admin: null
+permissions:
+  - 'use text format filtered_html'
+  - 'use text format full_html'
+  - 'use text format wysiwyg'

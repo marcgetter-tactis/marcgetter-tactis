@@ -1,0 +1,14 @@
+uuid: c563bca1-89f3-44f6-bfb5-632d073254ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.wysiwyg
+  module:
+    - filter
+id: global_administrator
+label: 'Global Administrator'
+weight: -7
+is_admin: null
+permissions:
+  - 'use text format wysiwyg'

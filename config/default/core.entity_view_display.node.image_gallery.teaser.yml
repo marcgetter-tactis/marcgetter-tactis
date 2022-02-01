@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.image_gallery.field_archived
     - field.field.node.image_gallery.field_body
     - field.field.node.image_gallery.field_component
     - field.field.node.image_gallery.field_date
@@ -33,7 +32,6 @@ content:
     weight: 0
     region: content
 hidden:
-  field_archived: true
   field_body: true
   field_component: true
   field_date: true

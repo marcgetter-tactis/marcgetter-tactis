@@ -22,11 +22,11 @@ settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
-      component_group: component_group
       event: event
+      component_group: component_group
     sort:
       field: _none
       direction: ASC
     auto_create: false
-    auto_create_bundle: ''
+    auto_create_bundle: event
 field_type: og_standard_reference

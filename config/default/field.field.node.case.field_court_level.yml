@@ -1,0 +1,21 @@
+uuid: 13fc2100-db12-4869-bd2b-6ed85abbd06c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_court_level
+    - node.type.case
+  module:
+    - options
+id: node.case.field_court_level
+field_name: field_court_level
+entity_type: node
+bundle: case
+label: 'Court Level'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

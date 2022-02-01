@@ -1,0 +1,27 @@
+uuid: ea540cb3-64b8-4778-ae41-f7eefa48e4b0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_federal_court
+field_name: field_federal_court
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: court1
+      label: Court1
+    -
+      value: court2
+      label: Court2
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

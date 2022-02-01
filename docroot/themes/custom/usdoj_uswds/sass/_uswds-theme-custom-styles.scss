@@ -63,7 +63,16 @@ h1,h2 {
     height: .3rem;
     margin: 1.5rem 0;
   }
+
+  &.block-title {
+    text-align: center;
+    
+    &::after {
+      margin: 1.5rem auto;
+    }
+  }
 }
+
 
 ul {
   &.inline-list {
@@ -119,6 +128,12 @@ strong {
   img {
     vertical-align: bottom;
   }
+}
+
+.usa-button--outline {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  min-width: 175px;
 }
 
 .return-to-top {
@@ -314,7 +329,7 @@ strong {
       bottom: 0;
     }
   }
-  
+
   .usa-card {
     margin-bottom: 0;
   }
@@ -399,7 +414,7 @@ strong {
 }
 
 .action-center-cta {
-  margin: 4rem 0;
+  margin: 2rem 0;
   text-align: center;
 
   a {
@@ -407,4 +422,3 @@ strong {
     @extend .usa-button--outline;
   }
 }
-

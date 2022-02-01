@@ -1,0 +1,14 @@
+uuid: 28128108-5e3e-45e9-885e-76e12298b433
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.special_content_creator
+  module:
+    - user
+id: user_add_role_action.special_content_creator
+label: 'Add the Special Content Creator role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: special_content_creator

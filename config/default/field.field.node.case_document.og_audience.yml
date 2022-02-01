@@ -12,8 +12,8 @@ id: node.case_document.og_audience
 field_name: og_audience
 entity_type: node
 bundle: case_document
-label: 'Groups audience'
-description: 'OG group audience reference field.'
+label: 'Your Groups'
+description: 'Associate this content with groups you belong to.'
 required: false
 translatable: true
 default_value: {  }
@@ -22,7 +22,6 @@ settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
-      case_document: case_document
       component_group: component_group
     sort:
       field: _none

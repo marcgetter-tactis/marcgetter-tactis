@@ -2,15 +2,14 @@ _core:
   default_config_hash: 3r2emFI83HVYv-o5sOIr3nycGMAXflzJR_3-8myD--k
 groups:
   node:
-    - component_group
-    - speech
-    - podcast
-    - blog_post
-    - event
-    - image_gallery
-    - testimony
-    - opinion
-    - case_document
+    0: component_group
+    1: speech
+    2: podcast
+    3: blog_post
+    4: event
+    5: image_gallery
+    6: testimony
+    8: case_document
 group_manager_full_access: true
 node_access_strict: true
 delete_orphans: false

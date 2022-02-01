@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.testimony.field_archived
     - field.field.node.testimony.field_committee
     - field.field.node.testimony.field_date
     - field.field.node.testimony.field_session
@@ -45,13 +44,6 @@ content:
     weight: 9
     region: content
     settings: {  }
-    third_party_settings: {  }
-  field_archived:
-    type: boolean_checkbox
-    weight: 26
-    region: content
-    settings:
-      display_label: true
     third_party_settings: {  }
   field_committee:
     type: options_select

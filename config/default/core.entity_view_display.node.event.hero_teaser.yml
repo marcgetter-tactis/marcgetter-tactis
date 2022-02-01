@@ -4,10 +4,9 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.hero_teaser
-    - field.field.node.event.body
-    - field.field.node.event.field_archived
     - field.field.node.event.field_attachment
     - field.field.node.event.field_audience
+    - field.field.node.event.field_body
     - field.field.node.event.field_component
     - field.field.node.event.field_contact_info
     - field.field.node.event.field_datetime
@@ -38,13 +37,6 @@ targetEntityType: node
 bundle: event
 mode: hero_teaser
 content:
-  body:
-    type: text_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 102
-    region: content
   field_audience:
     type: list_default
     label: above
@@ -148,8 +140,8 @@ content:
     weight: 0
     region: content
 hidden:
-  field_archived: true
   field_attachment: true
+  field_body: true
   field_datetime: true
   field_file_private_force: true
   langcode: true

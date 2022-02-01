@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.staff_profile.field_archived
     - field.field.node.staff_profile.field_body
     - field.field.node.staff_profile.field_byline
     - field.field.node.staff_profile.field_component
@@ -45,7 +44,6 @@ content:
     weight: 0
     region: content
 hidden:
-  field_archived: true
   field_body: true
   field_byline: true
   field_component: true

@@ -10,7 +10,7 @@ _core:
   default_config_hash: KYARbYeGRZ-INq-rg4NeHiuEYecKAgslhGiPztbR-fY
 id: anonymous
 label: 'Anonymous user'
-weight: -2
+weight: -10
 is_admin: false
 permissions:
   - 'access content'

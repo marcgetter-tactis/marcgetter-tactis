@@ -1,0 +1,25 @@
+uuid: ec9bf633-d6ac-44cd-9945-398ffbf16e35
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_body
+    - node.type.case_document
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+id: node.case_document.field_body
+field_name: field_body
+entity_type: node
+bundle: case_document
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

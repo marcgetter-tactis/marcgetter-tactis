@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.press_release.field_archived
     - field.field.node.press_release.field_attachment
     - field.field.node.press_release.field_body
     - field.field.node.press_release.field_component
@@ -148,7 +147,6 @@ content:
     weight: 11
     region: content
 hidden:
-  field_archived: true
   field_file_private_force: true
   field_pr_contact: true
   field_pr_image: true

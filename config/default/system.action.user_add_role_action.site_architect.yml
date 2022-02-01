@@ -1,0 +1,14 @@
+uuid: c6dd9caf-32ba-4020-b8d0-def654a42089
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.site_architect
+  module:
+    - user
+id: user_add_role_action.site_architect
+label: 'Add the Site Architect role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: site_architect

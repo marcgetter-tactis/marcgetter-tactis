@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.testimony.field_archived
     - field.field.node.testimony.field_committee
     - field.field.node.testimony.field_date
     - field.field.node.testimony.field_session
@@ -21,16 +20,6 @@ targetEntityType: node
 bundle: testimony
 mode: default
 content:
-  field_archived:
-    type: boolean
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    weight: 108
-    region: content
   field_committee:
     type: entity_reference_label
     label: hidden

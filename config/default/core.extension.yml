@@ -27,6 +27,7 @@ module:
   chosen: 0
   chosen_lib: 0
   ckeditor: 0
+  collapse_text: 0
   collapsiblock: 0
   config: 0
   config_filter: 0
@@ -103,6 +104,7 @@ module:
   password_policy_username: 0
   path: 0
   path_alias: 0
+  pathologic: 0
   promote_disable: 0
   purge: 0
   purge_processor_cron: 0
@@ -128,6 +130,7 @@ module:
   seckit: 0
   serialization: 0
   settings_tray: 0
+  shortcode: 0
   simple_sitemap: 0
   sitewide_alert: 0
   slick: 0

@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.testimony.field_archived
     - field.field.node.testimony.field_committee
     - field.field.node.testimony.field_date
     - field.field.node.testimony.field_session
@@ -33,7 +32,6 @@ content:
     weight: 0
     region: content
 hidden:
-  field_archived: true
   field_committee: true
   field_date: true
   field_session: true

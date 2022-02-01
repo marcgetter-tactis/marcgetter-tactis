@@ -4,29 +4,19 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.consent_decree.body
     - field.field.node.consent_decree.field_attachment
+    - field.field.node.consent_decree.field_body
     - field.field.node.consent_decree.field_comment_period
     - field.field.node.consent_decree.field_component
     - field.field.node.consent_decree.og_audience
     - node.type.consent_decree
   module:
-    - og
-    - text
     - user
 id: node.consent_decree.teaser
 targetEntityType: node
 bundle: consent_decree
 mode: teaser
 content:
-  body:
-    type: text_summary_or_trimmed
-    label: hidden
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
-    weight: 101
-    region: content
   links:
     settings: {  }
     third_party_settings: {  }
@@ -41,6 +31,7 @@ content:
     region: content
 hidden:
   field_attachment: true
+  field_body: true
   field_comment_period: true
   field_component: true
   langcode: true

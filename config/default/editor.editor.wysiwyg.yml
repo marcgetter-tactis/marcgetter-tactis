@@ -1,14 +1,12 @@
-uuid: c7f33e1c-67c6-46a8-9314-b81d3b758206
+uuid: fce33d90-bce2-4d85-bab9-6fa0b62f9e52
 langcode: en
 status: true
 dependencies:
   config:
-    - filter.format.full_html
+    - filter.format.wysiwyg
   module:
     - ckeditor
-_core:
-  default_config_hash: HcZh9unU84onFUDblCtMkhHQVIS5CkvpB1-R2PgNnxQ
-format: full_html
+format: wysiwyg
 editor: ckeditor
 settings:
   toolbar:
@@ -21,7 +19,6 @@ settings:
             - Underline
             - Italic
             - RemoveFormat
-            - Format
         -
           name: Links
           items:
@@ -36,7 +33,7 @@ settings:
           name: Media
           items:
             - Blockquote
-            - DrupalMediaLibrary
+            - DrupalImage
         -
           name: Tools
           items:

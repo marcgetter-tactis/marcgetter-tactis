@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.staff_profile.field_archived
     - field.field.node.staff_profile.field_body
     - field.field.node.staff_profile.field_byline
     - field.field.node.staff_profile.field_component
@@ -24,16 +23,6 @@ targetEntityType: node
 bundle: staff_profile
 mode: default
 content:
-  field_archived:
-    type: boolean
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    weight: 11
-    region: content
   field_body:
     type: text_default
     label: hidden

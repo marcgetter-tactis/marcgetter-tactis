@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.staff_profile.field_archived
     - field.field.node.staff_profile.field_body
     - field.field.node.staff_profile.field_byline
     - field.field.node.staff_profile.field_component
@@ -33,13 +32,6 @@ content:
     weight: 14
     region: content
     settings: {  }
-    third_party_settings: {  }
-  field_archived:
-    type: boolean_checkbox
-    weight: 11
-    region: content
-    settings:
-      display_label: true
     third_party_settings: {  }
   field_body:
     type: text_textarea

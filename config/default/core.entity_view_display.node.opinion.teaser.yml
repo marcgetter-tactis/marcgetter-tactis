@@ -4,8 +4,8 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.opinion.body
     - field.field.node.opinion.field_attachment
+    - field.field.node.opinion.field_body
     - field.field.node.opinion.field_date
     - field.field.node.opinion.field_overview
     - field.field.node.opinion.og_audience
@@ -31,8 +31,8 @@ content:
     weight: 0
     region: content
 hidden:
-  body: true
   field_attachment: true
+  field_body: true
   field_date: true
   field_overview: true
   langcode: true

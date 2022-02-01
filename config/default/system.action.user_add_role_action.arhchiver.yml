@@ -1,0 +1,14 @@
+uuid: ea840b50-14cf-4496-86f9-37965f1b3fdd
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.arhchiver
+  module:
+    - user
+id: user_add_role_action.arhchiver
+label: 'Add the Arhchiver role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: arhchiver

@@ -3,8 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.opinion.body
     - field.field.node.opinion.field_attachment
+    - field.field.node.opinion.field_body
     - field.field.node.opinion.field_date
     - field.field.node.opinion.field_overview
     - field.field.node.opinion.og_audience
@@ -19,18 +19,18 @@ targetEntityType: node
 bundle: opinion
 mode: default
 content:
-  body:
-    type: text_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 4
-    region: content
   field_attachment:
     type: entity_reference_label
     label: hidden
     settings:
       link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_body:
+    type: text_default
+    label: hidden
+    settings: {  }
     third_party_settings: {  }
     weight: 5
     region: content
@@ -50,14 +50,9 @@ content:
     third_party_settings: {  }
     weight: 3
     region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 6
-    region: content
   og_audience:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
@@ -72,4 +67,5 @@ content:
     region: content
 hidden:
   langcode: true
+  links: true
   search_api_excerpt: true

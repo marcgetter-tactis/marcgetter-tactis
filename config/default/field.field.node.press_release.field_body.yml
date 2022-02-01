@@ -6,7 +6,11 @@ dependencies:
     - field.storage.node.field_body
     - node.type.press_release
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
 id: node.press_release.field_body
 field_name: field_body
 entity_type: node

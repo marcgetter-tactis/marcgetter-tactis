@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.blog_post.field_archived
     - field.field.node.blog_post.field_attachment
     - field.field.node.blog_post.field_author
     - field.field.node.blog_post.field_author_free
@@ -54,13 +53,6 @@ content:
     weight: 16
     region: content
     settings: {  }
-    third_party_settings: {  }
-  field_archived:
-    type: boolean_checkbox
-    weight: 27
-    region: content
-    settings:
-      display_label: true
     third_party_settings: {  }
   field_attachment:
     type: media_library_widget

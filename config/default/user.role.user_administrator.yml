@@ -2,8 +2,11 @@ uuid: 013f0678-f683-4087-ba36-7599f6e076ee
 langcode: en
 status: true
 dependencies:
+  config:
+    - filter.format.wysiwyg
   module:
     - captcha
+    - filter
     - honeypot
     - password_policy
     - recaptcha
@@ -14,7 +17,7 @@ _core:
   default_config_hash: 7XCroQYx4N0bodXE6m81U08WCuUT9XwRJ1Xg-MYxuag
 id: user_administrator
 label: 'User Administrator'
-weight: -4
+weight: -8
 is_admin: null
 permissions:
   - 'access toolbar'
@@ -25,4 +28,5 @@ permissions:
   - 'administer site configuration'
   - 'administer users'
   - 'manage password reset'
+  - 'use text format wysiwyg'
   - 'view the administration theme'

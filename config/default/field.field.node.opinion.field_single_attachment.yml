@@ -1,19 +1,19 @@
-uuid: 2c37abc7-f6dc-48e7-a8ab-b096bb0a1907
+uuid: 092e39bc-984e-483d-96be-731de7c9cd98
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_attachment
+    - field.storage.node.field_single_attachment
     - media.type.document
     - node.type.opinion
-id: node.opinion.field_attachment
-field_name: field_attachment
+id: node.opinion.field_single_attachment
+field_name: field_single_attachment
 entity_type: node
 bundle: opinion
-label: Attachment(s)
+label: Attachment
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

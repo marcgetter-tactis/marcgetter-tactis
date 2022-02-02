@@ -12,7 +12,7 @@ field_name: field_dates_service
 entity_type: node
 bundle: staff_profile
 label: 'Dates of Service'
-description: ''
+description: 'Only the year will be displayed.'
 required: true
 translatable: false
 default_value: {  }

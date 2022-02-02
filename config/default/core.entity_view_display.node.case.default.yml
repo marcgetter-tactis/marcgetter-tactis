@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.case.field_component
     - field.field.node.case.field_court_level
     - field.field.node.case.field_date
+    - field.field.node.case.field_docket_number
     - field.field.node.case.field_documents
     - field.field.node.case.field_federal_court
     - field.field.node.case.field_image
@@ -27,7 +28,6 @@ dependencies:
   module:
     - datetime
     - link
-    - og
     - options
     - text
     - user
@@ -91,6 +91,14 @@ content:
     third_party_settings: {  }
     weight: 3
     region: content
+  field_docket_number:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 22
+    region: content
   field_documents:
     type: entity_reference_label
     label: hidden
@@ -117,11 +125,11 @@ content:
     region: content
   field_industry:
     type: entity_reference_label
-    label: hidden
+    label: above
     settings:
       link: true
     third_party_settings: {  }
-    weight: 18
+    weight: 23
     region: content
   field_invisible:
     type: entity_reference_label

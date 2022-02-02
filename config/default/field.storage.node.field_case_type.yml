@@ -1,0 +1,33 @@
+uuid: 54b05b2c-2dc3-4509-ad3d-39b1a4c2b480
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_case_type
+field_name: field_case_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: civil_merger
+      label: 'Civil Merger'
+    -
+      value: civil_non_merger
+      label: 'Civil Non Merger'
+    -
+      value: criminal
+      label: Criminal
+    -
+      value: other
+      label: Other
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

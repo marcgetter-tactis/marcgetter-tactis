@@ -1,0 +1,11 @@
+uuid: e5327b17-bfbd-457f-8f09-331029690cdc
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.violation
+id: taxonomy_term.violation
+target_entity_type_id: taxonomy_term
+target_bundle: violation
+default_langcode: site_default
+language_alterable: false

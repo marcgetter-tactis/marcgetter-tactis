@@ -1,0 +1,19 @@
+uuid: 4929d60c-08cd-439e-b302-0038cb58d856
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_name
+    - node.type.case
+id: node.case.field_name
+field_name: field_name
+entity_type: node
+bundle: case
+label: 'Case Name'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

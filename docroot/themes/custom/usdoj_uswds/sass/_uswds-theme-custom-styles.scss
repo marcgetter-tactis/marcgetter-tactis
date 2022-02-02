@@ -355,6 +355,9 @@ strong {
   box-shadow: 0 0 7px 0 rgba(0,0,0,0.17);
 
   .usa-card__body {
+    color: $gray-80;
+    font-weight: 600;
+    
     .card-title {
       @include u-font-family('sans');
       color: $doj-coolblue;
@@ -363,6 +366,13 @@ strong {
 
     strong {
       color: $doj-darkblue;
+    }
+    
+    em {
+      color: $gray-60;
+      font-style: normal;
+      font-size: 15px;
+      font-weight: 500;
     }
 
     @include at-media(desktop) {

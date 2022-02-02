@@ -422,3 +422,26 @@ strong {
     @extend .usa-button--outline;
   }
 }
+
+.bg-full-width {
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50vw;
+    height: 100%;
+    z-index: -1;
+    background-color: inherit;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: inherit;
+  }
+}

@@ -6,6 +6,7 @@ header.usa-header--extended {
     min-height: 5rem;
     @media (min-width: 64em) {
       height: 7.75rem;
+      overflow: hidden;
     }
 
     //logo

@@ -1,8 +1,8 @@
-uuid: dee1d08a-ab36-4d03-b7a2-62f23f22d16d
+uuid: 47df0581-8d0d-46ce-8409-7cfa67122395
 langcode: en
 status: true
 dependencies: {  }
 name: 'Case Violation'
-vid: violation
+vid: case_violation
 description: ''
 weight: 0

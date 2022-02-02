@@ -1,10 +1,11 @@
-uuid: 471f3976-1b19-4026-a26f-eb97053b2ef7
+uuid: c62ab9ea-08ab-4e1a-903c-44cf8e78dd52
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_industry
     - node.type.case
+    - taxonomy.vocabulary.industry
 id: node.case.field_industry
 field_name: field_industry
 entity_type: node
@@ -16,13 +17,13 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:node'
+  handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      case: case
+      industry: industry
     sort:
-      field: _none
-      direction: ASC
+      field: name
+      direction: asc
     auto_create: false
     auto_create_bundle: ''
 field_type: entity_reference

@@ -11,7 +11,7 @@ field_name: field_tags
 entity_type: node
 bundle: case
 label: Tag(s)
-description: ''
+description: 'Up to 20 tags can be added. To add multiple tags simply select from the list multiple times.'
 required: false
 translatable: false
 default_value: {  }

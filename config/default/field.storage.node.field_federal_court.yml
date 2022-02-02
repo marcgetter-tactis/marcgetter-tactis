@@ -12,11 +12,350 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: court1
-      label: Court1
+      value: supreme_court
+      label: 'Supreme Court'
     -
-      value: court2
-      label: Court2
+      value: district_of_columbia_circuit
+      label: 'District of Columbia Circuit'
+    -
+      value: first_circuit
+      label: 'First Circuit'
+    -
+      value: second_circuit
+      label: 'Second Circuit'
+    -
+      value: third_circuit
+      label: 'Third Circuit'
+    -
+      value: fourth_circuit
+      label: 'Fourth Circuit'
+    -
+      value: fifth_circuit
+      label: 'Fifth Circuit'
+    -
+      value: sixth_circuit
+      label: 'Sixth Circuit'
+    -
+      value: seventh_circuit
+      label: 'Seventh Circuit'
+    -
+      value: eighth_circuit
+      label: 'Eighth Circuit'
+    -
+      value: ninth_circuit
+      label: 'Ninth Circuit'
+    -
+      value: tenth_circuit
+      label: 'Tenth Circuit'
+    -
+      value: eleventh_circuit
+      label: 'Eleventh Circuit'
+    -
+      value: federal_circuit
+      label: 'Federal Circuit'
+    -
+      value: court_of_federal_claims
+      label: 'Court of Federal Claims'
+    -
+      value: court_of_international_trade
+      label: 'Court of International Trade'
+    -
+      value: tax_court
+      label: 'Tax Court'
+    -
+      value: bankruptcy_courts
+      label: 'Bankruptcy Courts'
+    -
+      value: state_and_local_courts
+      label: 'State and Local Courts'
+    -
+      value: middle_district_of_alabama
+      label: 'Alabama, Middle District'
+    -
+      value: northern_district_of_alabama
+      label: 'Alabama, Northern District'
+    -
+      value: southern_district_of_alabama
+      label: 'Alabama, Southern District'
+    -
+      value: district_of_alaska
+      label: 'Alaska, District of'
+    -
+      value: district_of_arizona
+      label: 'Arizona, District of'
+    -
+      value: eastern_district_of_arkansas
+      label: 'Arkansas, Eastern District'
+    -
+      value: western_district_of_arkansas
+      label: 'Arkansas, Western District'
+    -
+      value: central_district_of_california
+      label: 'California, Central District'
+    -
+      value: eastern_district_of_california
+      label: 'California, Eastern District'
+    -
+      value: northern_district_of_california
+      label: 'California, Northern District'
+    -
+      value: southern_district_of_california
+      label: 'California, Southern District'
+    -
+      value: district_of_colorado
+      label: 'Colorado, District of'
+    -
+      value: district_of_connecticut
+      label: 'Connecticut, District of'
+    -
+      value: district_of_delaware
+      label: 'Delaware, District of'
+    -
+      value: district_of_district_of_columbia
+      label: 'District of Columbia, District of'
+    -
+      value: middle_district_of_florida
+      label: 'Florida, Middle District'
+    -
+      value: northern_district_of_florida
+      label: 'Florida, Northern District'
+    -
+      value: southern_district_of_florida
+      label: 'Florida, Southern District'
+    -
+      value: middle_district_of_georgia
+      label: 'Georgia, Middle District'
+    -
+      value: northern_district_of_georgia
+      label: 'Georgia, Northern District'
+    -
+      value: southern_district_of_georgia
+      label: 'Georgia, Southern District'
+    -
+      value: district_of_guam
+      label: 'Guam, District of'
+    -
+      value: district_of_hawaii
+      label: 'Hawaii, District of'
+    -
+      value: district_of_idaho
+      label: 'Idaho, District of'
+    -
+      value: central_district_of_illinois
+      label: 'Illinois, Central District'
+    -
+      value: northern_district_of_illinois
+      label: 'Illinois, Northern District'
+    -
+      value: southern_district_of_illinois
+      label: 'Illinois, Southern District'
+    -
+      value: eastern_district_of_illinois
+      label: 'Illinois, Eastern District'
+    -
+      value: northern_district_of_indiana
+      label: 'Indiana, Northern District'
+    -
+      value: southern_district_of_indiana
+      label: 'Indiana, Southern District'
+    -
+      value: northern_district_of_iowa
+      label: 'Iowa, Northern District'
+    -
+      value: southern_district_of_iowa
+      label: 'Iowa, Southern District'
+    -
+      value: district_of_kansas
+      label: 'Kansas, District of'
+    -
+      value: eastern_district_of_kentucky
+      label: 'Kentucky, Eastern District'
+    -
+      value: western_district_of_kentucky
+      label: 'Kentucky, Western District'
+    -
+      value: eastern_district_of_louisiana
+      label: 'Louisiana, Eastern District'
+    -
+      value: middle_district_of_louisiana
+      label: 'Louisiana, Middle District'
+    -
+      value: western_district_of_louisiana
+      label: 'Louisiana, Western District'
+    -
+      value: district_of_maine
+      label: 'Maine, District of'
+    -
+      value: district_of_maryland
+      label: 'Maryland, District of'
+    -
+      value: district_of_massachusetts
+      label: 'Massachusetts, District of'
+    -
+      value: eastern_district_of_michigan
+      label: 'Michigan, Eastern District'
+    -
+      value: western_district_of_michigan
+      label: 'Michigan, Western District'
+    -
+      value: district_of_minnesota
+      label: 'Minnesota, District of'
+    -
+      value: northern_district_of_mississippi
+      label: 'Mississippi, Northern District'
+    -
+      value: southern_district_of_mississippi
+      label: 'Mississippi, Southern District'
+    -
+      value: eastern_district_of_missouri
+      label: 'Missouri, Eastern District'
+    -
+      value: western_district_of_missouri
+      label: 'Missouri, Western District'
+    -
+      value: district_of_montana
+      label: 'Montana, District of'
+    -
+      value: district_of_nebraska
+      label: 'Nebraska, District of'
+    -
+      value: district_of_nevada
+      label: 'Nevada, District of'
+    -
+      value: district_of_new_hampshire
+      label: 'New Hampshire, District of'
+    -
+      value: district_of_new_jersey
+      label: 'New Jersey, District of'
+    -
+      value: district_of_new_mexico
+      label: 'New Mexico, District of'
+    -
+      value: eastern_district_of_new_york
+      label: 'New York, Eastern District'
+    -
+      value: northern_district_of_new_york
+      label: 'New York, Northern District'
+    -
+      value: southern_district_of_new_york
+      label: 'New York, Southern District'
+    -
+      value: western_district_of_new_york
+      label: 'New York, Western District'
+    -
+      value: eastern_district_of_north_carolina
+      label: 'North Carolina, Eastern District'
+    -
+      value: middle_district_of_north_carolina
+      label: 'North Carolina, Middle District'
+    -
+      value: western_district_of_north_carolina
+      label: 'North Carolina, Western District'
+    -
+      value: district_of_north_dakota
+      label: 'North Dakota, District of'
+    -
+      value: district_of_the_northern_mariana_islands
+      label: 'Northern Mariana Islands, District of the'
+    -
+      value: northern_district_of_ohio
+      label: 'Ohio, Northern District'
+    -
+      value: southern_district_of_ohio
+      label: 'Ohio, Southern District'
+    -
+      value: eastern_district_of_oklahoma
+      label: 'Oklahoma, Eastern District'
+    -
+      value: northern_district_of_oklahoma
+      label: 'Oklahoma, Northern District'
+    -
+      value: western_district_of_oklahoma
+      label: 'Oklahoma, Western District'
+    -
+      value: district_of_oregon
+      label: 'Oregon, District of'
+    -
+      value: eastern_district_of_pennsylvania
+      label: 'Pennsylvania, Eastern District'
+    -
+      value: middle_district_of_pennsylvania
+      label: 'Pennsylvania, Middle District'
+    -
+      value: western_district_of_pennsylvania
+      label: 'Pennsylvania, Western District'
+    -
+      value: district_of_puerto_rico
+      label: 'Puerto Rico, District of'
+    -
+      value: district_of_rhode_island
+      label: 'Rhode Island, District of'
+    -
+      value: district_of_south_carolina
+      label: 'South Carolina, District of'
+    -
+      value: district_of_south_dakota
+      label: 'South Dakota, District of'
+    -
+      value: eastern_district_of_tennessee
+      label: 'Tennessee, Eastern District'
+    -
+      value: middle_district_of_tennessee
+      label: 'Tennessee, Middle District'
+    -
+      value: western_district_of_tennessee
+      label: 'Tennessee, Western District'
+    -
+      value: eastern_district_of_texas
+      label: 'Texas, Eastern District'
+    -
+      value: northern_district_of_texas
+      label: 'Texas, Northern District'
+    -
+      value: southern_district_of_texas
+      label: 'Texas, Southern District'
+    -
+      value: western_district_of_texas
+      label: 'Texas, Western District'
+    -
+      value: district_of_utah
+      label: 'Utah, District of'
+    -
+      value: district_of_vermont
+      label: 'Vermont, District of'
+    -
+      value: district_of_the_virgin_islands
+      label: 'Virgin Islands, District of'
+    -
+      value: eastern_district_of_virginia
+      label: 'Virginia, Eastern District'
+    -
+      value: western_district_of_virginia
+      label: 'Virginia, Western District'
+    -
+      value: eastern_district_of_washington
+      label: 'Washington, Eastern District'
+    -
+      value: western_district_of_washington
+      label: 'Washington, Western District'
+    -
+      value: northern_district_of_west_virginia
+      label: 'West Virginia, Northern District'
+    -
+      value: southern_district_of_west_virginia
+      label: 'West Virginia, Southern District'
+    -
+      value: eastern_district_of_wisconsin
+      label: 'Wisconsin, Eastern District'
+    -
+      value: western_district_of_wisconsin
+      label: 'Wisconsin, Western District'
+    -
+      value: district_of_wyoming
+      label: 'Wyoming, District of'
+    -
+      value: other
+      label: Other
   allowed_values_function: ''
 module: options
 locked: false

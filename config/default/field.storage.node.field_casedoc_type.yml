@@ -12,14 +12,209 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: type1
-      label: Type1
+      value: administrative_regulatory_filings
+      label: 'Administrative / Regulatory Filings'
     -
-      value: type2
-      label: Type2
+      value: affidavits_declarations_of_division_personnel
+      label: 'Affidavits / Declarations of Division Personnel'
     -
-      value: type3
-      label: Type3
+      value: amicus_curiae_briefs
+      label: 'Amicus Curiae Briefs'
+    -
+      value: appellate_briefs
+      label: 'Appellate Briefs - DOJ / ATR'
+    -
+      value: briefs_miscellaneous
+      label: 'Briefs - Miscellaneous'
+    -
+      value: case_status_memoranda_and_presentations
+      label: 'Case Status Memoranda and Presentations'
+    -
+      value: certificates_of_Compliance_with_appa
+      label: 'Certificates of Compliance with APPA'
+    -
+      value: cid_enforcement
+      label: 'CID Enforcement'
+    -
+      value: civil_case
+      label: 'Civil Case'
+    -
+      value: competitive_impact_statement
+      label: 'Competitive Impact Statement'
+    -
+      value: complaints
+      label: Complaint
+    -
+      value: compliance_report
+      label: 'Compliance Report'
+    -
+      value: court_opinions
+      label: 'Court Opinions'
+    -
+      value: court_orders
+      label: 'Court Orders'
+    -
+      value: criminal_information
+      label: 'Criminal Information'
+    -
+      value: cross_claim
+      label: Cross-Claim
+    -
+      value: deferred_prosecution_agreement
+      label: 'Deferred Prosecution Agreement'
+    -
+      value: 'deposition_motions, Memoranda, and Orders'
+      label: 'Deposition Motions, Memoranda, and Orders'
+    -
+      value: deposition_notices
+      label: 'Deposition Notices'
+    -
+      value: disclosure_pleadings
+      label: 'Disclosure Pleadings'
+    -
+      value: discovery_motions_memoranda_and_orders
+      label: 'Discovery Motions, Memoranda, and Orders'
+    -
+      value: discovery_requests_responses
+      label: 'Discovery Requests / Responses'
+    -
+      value: dismissal_motions_memoranda_and_orders
+      label: 'Dismissal Motions, Memoranda, and Orders'
+    -
+      value: evidentiary_motions_memoranda_and_orders
+      label: 'Evidentiary Motions, Memoranda, and Orders'
+    -
+      value: expert_reports
+      label: 'Expert Reports'
+    -
+      value: expert_vitae
+      label: 'Expert Vitae'
+    -
+      value: explanation_of_consent_decree_procedures
+      label: 'Explanation of Consent Decree Procedures'
+    -
+      value: final_judgments_proposed_final_judgments
+      label: 'Final Judgments + Proposed Final Judgments'
+    -
+      value: findings_of_fact_and_conclusions_of_law
+      label: 'Findings of Fact and Conclusions of Law'
+    -
+      value: fines_sentencing_probation_resentencing
+      label: 'Fines / Sentencing / Probation / Re-Sentencing'
+    -
+      value: grand_jury_matters
+      label: 'Grand Jury Matters'
+    -
+      value: hold_separate_stipulations_and_orders
+      label: 'Hold Separate Stipulations and Orders'
+    -
+      value: indictments
+      label: Indictment(s)
+    -
+      value: informations
+      label: Informations
+    -
+      value: injunction_motions_memoranda_orders
+      label: 'Injunction Motions, Memoranda, and Orders'
+    -
+      value: international
+      label: 'International - Submissions to International Organizations'
+    -
+      value: interrogatory_motions_memoranda_orders
+      label: 'Interrogatory Motions, Memoranda, and Orders'
+    -
+      value: juries
+      label: Juries
+    -
+      value: jury_instructions
+      label: 'Jury Instructions'
+    -
+      value: miscellaneous_motions
+      label: 'Miscellaneous Motions'
+    -
+      value: modification_termination_papers
+      label: 'Modification/Termination Papers'
+    -
+      value: motions_and_memoranda_miscellaneous
+      label: 'Motions and Memoranda - Miscellaneous'
+    -
+      value: notification_motions_and_orders
+      label: 'Notification Motions and Orders'
+    -
+      value: orders_miscellaneous
+      label: 'Orders - Miscellaneous'
+    -
+      value: plea_agreement
+      label: 'Plea Agreement'
+    -
+      value: plea_agreements_rule_11_memoranda
+      label: 'Plea Agreements / Rule 11 Memoranda'
+    -
+      value: post_trial_papers_miscellaneous
+      label: 'Post-Trial Papers - Miscellaneous'
+    -
+      value: pre_trial_papers_miscellaneous
+      label: 'Pre-Trial Papers - Miscellaneous'
+    -
+      value: press_releases
+      label: 'Press Releases'
+    -
+      value: privilege_motions_memoranda_orders
+      label: 'Privilege Motions, Memoranda, and Orders'
+    -
+      value: protective_motions_memoranda_and_orders
+      label: 'Protective Motions, Memoranda, and Orders'
+    -
+      value: reports_guidelines_policy_statements_public
+      label: 'Reports/Guidelines/Policy Statements-Public'
+    -
+      value: requests_for_admissions_stipulations
+      label: 'Requests for Admissions / Stipulations'
+    -
+      value: responses_to_public_comments
+      label: 'Responses to Public Comments'
+    -
+      value: scheduling_motions_memoranda_orders
+      label: 'Scheduling Motions, Memoranda, and Orders'
+    -
+      value: search_warrants
+      label: 'Search Warrants (Actual)'
+    -
+      value: settlement_consent_decree
+      label: 'Settlement/Consent Decree'
+    -
+      value: statement_of_interest
+      label: 'Statement of Interest'
+    -
+      value: statement_of_offense
+      label: 'Statement of Offense'
+    -
+      value: stay_requests_orders
+      label: 'Stay Requests and Orders'
+    -
+      value: stipulations_miscellaneous
+      label: 'Stipulations - Miscellaneous'
+    -
+      value: summary_judgment_opposition
+      label: 'Summary Judgment / Opposition'
+    -
+      value: 'temporary_restraining_orders / Preliminary Injunctions'
+      label: 'Temporary Restraining Orders / Preliminary Injunctions'
+    -
+      value: timing_agreement
+      label: 'Timing Agreement'
+    -
+      value: trial_exhibits
+      label: 'Trial Exhibits'
+    -
+      value: trustee_reports
+      label: 'Trustee Reports'
+    -
+      value: voir_dire_questions
+      label: 'Voir Dire / Questions'
+    -
+      value: witness_matters
+      label: 'Witness Matters'
   allowed_values_function: ''
 module: options
 locked: false

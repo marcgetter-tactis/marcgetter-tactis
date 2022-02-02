@@ -3,10 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.opinion.field_attachment
     - field.field.node.opinion.field_body
     - field.field.node.opinion.field_date
     - field.field.node.opinion.field_overview
+    - field.field.node.opinion.field_single_attachment
     - field.field.node.opinion.og_audience
     - node.type.opinion
   module:
@@ -45,13 +45,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_attachment:
-    type: media_library_widget
-    weight: 5
-    region: content
-    settings:
-      media_types: {  }
-    third_party_settings: {  }
   field_body:
     type: text_textarea
     weight: 4
@@ -73,6 +66,13 @@ content:
     settings:
       rows: 6
       placeholder: ''
+    third_party_settings: {  }
+  field_single_attachment:
+    type: media_library_widget
+    weight: 5
+    region: content
+    settings:
+      media_types: {  }
     third_party_settings: {  }
   langcode:
     type: language_select

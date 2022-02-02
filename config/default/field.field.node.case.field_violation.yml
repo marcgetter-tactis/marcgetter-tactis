@@ -1,0 +1,29 @@
+uuid: 40940e69-c1e9-462d-aebd-50485e3e7b01
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_violation
+    - node.type.case
+    - taxonomy.vocabulary.case_violation
+id: node.case.field_violation
+field_name: field_violation
+entity_type: node
+bundle: case
+label: 'Case Violation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      case_violation: case_violation
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,15 +1,15 @@
-uuid: 2c37abc7-f6dc-48e7-a8ab-b096bb0a1907
+uuid: 096c7232-21ad-41dc-b6ab-74d0a110a3dd
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_attachment
     - media.type.document
-    - node.type.opinion
-id: node.opinion.field_attachment
+    - node.type.case
+id: node.case.field_attachment
 field_name: field_attachment
 entity_type: node
-bundle: opinion
+bundle: case
 label: Attachment(s)
 description: ''
 required: false

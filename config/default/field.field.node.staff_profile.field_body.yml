@@ -6,19 +6,20 @@ dependencies:
     - field.storage.node.field_body
     - node.type.staff_profile
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
 id: node.staff_profile.field_body
 field_name: field_body
 entity_type: node
 bundle: staff_profile
 label: Body
 description: ''
-required: true
+required: false
 translatable: true
-default_value:
-  -
-    value: ''
-    format: filtered_html
+default_value: {  }
 default_value_callback: ''
 settings: {  }
 field_type: text_long

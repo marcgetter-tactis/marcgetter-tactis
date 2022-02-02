@@ -6,6 +6,7 @@ header.usa-header--extended {
     min-height: 5rem;
     @media (min-width: 64em) {
       height: 7.75rem;
+      overflow: hidden;
     }
 
     //logo
@@ -34,6 +35,8 @@ header.usa-header--extended {
 
         &.last {
           border-right: none;
+          padding-right: 0;
+          margin-right: 0;
         }
         
         a {
@@ -61,7 +64,7 @@ header.usa-header--extended {
 
   //desktop main menu
   nav.usa-nav {
-    background-color: color(base-darkest);
+    background-color: $doj-darkgray;
     border-top: 3px solid color(warning);
     
     ul li {
@@ -112,6 +115,10 @@ header.usa-header--extended {
               &:first-of-type {
                 border-top: 0;
               }
+              &:last-of-type {
+                border-bottom-width: 1px;
+                border-bottom-style: solid;
+              }
             }
             a {
               color: white;
@@ -143,6 +150,9 @@ header.usa-header--extended {
       bottom: 1.6rem;
       justify-content: center;
       @include search-field;
+      .width-mobile {
+        border-top: 1px solid $gray-cool-50;
+      }
     }
   }
 }

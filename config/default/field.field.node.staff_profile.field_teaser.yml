@@ -6,19 +6,20 @@ dependencies:
     - field.storage.node.field_teaser
     - node.type.staff_profile
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
 id: node.staff_profile.field_teaser
 field_name: field_teaser
 entity_type: node
 bundle: staff_profile
 label: Teaser
 description: ''
-required: false
+required: true
 translatable: true
-default_value:
-  -
-    value: ''
-    format: filtered_html
+default_value: {  }
 default_value_callback: ''
 settings: {  }
 field_type: text_long

@@ -1,0 +1,29 @@
+uuid: 9d5e0b1b-a136-4587-9529-c260b40ce921
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_invisible
+    - node.type.case
+    - taxonomy.vocabulary.invisible
+id: node.case.field_invisible
+field_name: field_invisible
+entity_type: node
+bundle: case
+label: 'Invisible Tags'
+description: 'These tags will not be visible to the public in any way whatsoever. They are only useful if you need to group cases in some way other than what is possible with the other fields (topic, component, etc.) If you need to add a tag to this list, contact your site administrators.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      invisible: invisible
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: invisible
+field_type: entity_reference

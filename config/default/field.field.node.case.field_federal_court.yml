@@ -1,0 +1,21 @@
+uuid: cd5b9a60-a84e-4b02-891f-55e77fde36d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_federal_court
+    - node.type.case
+  module:
+    - options
+id: node.case.field_federal_court
+field_name: field_federal_court
+entity_type: node
+bundle: case
+label: 'Federal Court'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

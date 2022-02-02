@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.node.field_body
     - field.storage.node.field_date
-    - field.storage.node.body
     - search_api.server.database
     - core.entity_view_mode.node.search_index
   module:
@@ -21,14 +20,6 @@ name: Content
 description: 'An index of certain content to be used in the News search.'
 read_only: false
 field_settings:
-  body:
-    label: Body
-    datasource_id: 'entity:node'
-    property_path: body
-    type: text
-    dependencies:
-      config:
-        - field.storage.node.body
   created:
     label: 'Created time'
     datasource_id: 'entity:node'
@@ -163,7 +154,6 @@ processor_settings:
       preprocess_query: -8
     all_fields: true
     fields:
-      - body
       - field_body
       - langcode
       - rendered_item

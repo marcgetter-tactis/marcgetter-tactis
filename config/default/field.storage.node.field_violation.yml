@@ -1,0 +1,20 @@
+uuid: 8f3d5339-1e65-4388-ac2f-df6f3bbba241
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_violation
+field_name: field_violation
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

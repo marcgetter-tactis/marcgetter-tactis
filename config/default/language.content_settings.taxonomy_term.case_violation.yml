@@ -1,0 +1,11 @@
+uuid: 1f2c97b1-e186-411a-acdb-2748c82c14cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.case_violation
+id: taxonomy_term.case_violation
+target_entity_type_id: taxonomy_term
+target_bundle: case_violation
+default_langcode: site_default
+language_alterable: false

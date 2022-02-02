@@ -1,0 +1,8 @@
+uuid: 47df0581-8d0d-46ce-8409-7cfa67122395
+langcode: en
+status: true
+dependencies: {  }
+name: 'Case Violation'
+vid: case_violation
+description: ''
+weight: 0

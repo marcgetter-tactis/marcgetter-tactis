@@ -1,19 +1,19 @@
-uuid: a12b13dc-86f6-4230-9d82-09386d1ae83a
+uuid: 7776dfd4-e6c7-416d-b7d3-84f31a9a7caa
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_date
-    - node.type.opinion
+    - node.type.case
   module:
     - datetime
-id: node.opinion.field_date
+id: node.case.field_date
 field_name: field_date
 entity_type: node
-bundle: opinion
-label: Date
+bundle: case
+label: 'Case Open Date'
 description: ''
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''

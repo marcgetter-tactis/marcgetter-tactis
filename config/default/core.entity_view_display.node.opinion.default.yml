@@ -3,15 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.opinion.field_attachment
     - field.field.node.opinion.field_body
     - field.field.node.opinion.field_date
     - field.field.node.opinion.field_overview
+    - field.field.node.opinion.field_single_attachment
     - field.field.node.opinion.og_audience
     - node.type.opinion
   module:
     - datetime
-    - og
     - text
     - user
 id: node.opinion.default
@@ -19,14 +18,6 @@ targetEntityType: node
 bundle: opinion
 mode: default
 content:
-  field_attachment:
-    type: entity_reference_label
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 4
-    region: content
   field_body:
     type: text_default
     label: hidden
@@ -49,6 +40,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 3
+    region: content
+  field_single_attachment:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 6
     region: content
   og_audience:
     type: entity_reference_label

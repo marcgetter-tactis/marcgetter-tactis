@@ -12,16 +12,16 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: bg-white
+      value: 'bg-full-width bg-white'
       label: White
     -
-      value: bg-base-lighter
+      value: 'bg-full-width bg-base-lighter'
       label: Taupe
     -
-      value: bg-primary-darker
+      value: 'bg-full-width bg-primary-darker'
       label: 'Dark Blue'
     -
-      value: bg-primary-lightest
+      value: 'bg-full-width bg-primary-lightest'
       label: 'Light Blue'
   allowed_values_function: ''
 module: options

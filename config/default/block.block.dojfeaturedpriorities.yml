@@ -1,0 +1,29 @@
+uuid: b5d5aa4d-50be-44d5-a449-cf3fad0cb004
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:tabbed:c00a7c24-e765-444b-9867-8186316fcf7c'
+  module:
+    - block_content
+    - collapsiblock
+  theme:
+    - usdoj_uswds
+third_party_settings:
+  collapsiblock:
+    collapse_action: 0
+id: dojfeaturedpriorities
+theme: usdoj_uswds
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:c00a7c24-e765-444b-9867-8186316fcf7c'
+settings:
+  id: 'block_content:c00a7c24-e765-444b-9867-8186316fcf7c'
+  label: 'DOJ Featured Priorities'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

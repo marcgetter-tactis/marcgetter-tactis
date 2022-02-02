@@ -66,7 +66,7 @@ h1,h2 {
 
   &.block-title {
     text-align: center;
-    
+
     &::after {
       margin: 1.5rem auto;
     }
@@ -383,21 +383,34 @@ strong {
     color: $doj-darkgray;
     text-decoration: none;
     font-weight: 600;
+    display: inline-block;
+    padding: 1rem 0;
   }
 
   >.field__item {
     border-bottom: 3px dotted $action-border-gray;
-    padding: .75rem 0;
     line-height: 1.3;
-  }
 
-  .paragraph--type--action-center-item {
-    display: flex;
-    align-items: center;  
+    &:hover {
+      .paragraph--type--action-center-item {
+        background-color: $doj-darkblue;
+        color: white;
 
-    .action-center-icon {
-      flex-shrink: 0;
-      margin-right: 1rem;
+        a {
+          color: white;
+        }
+      }
+    }
+    
+    .paragraph--type--action-center-item {
+      display: flex;
+      align-items: center;  
+      min-height: 80px;
+
+      .action-center-icon {
+        flex-shrink: 0;
+        margin-right: 1rem;
+      }
     }
   }
 

@@ -13,14 +13,23 @@
         "php": ">=7.4",
         "acquia/acquia_cms": "^1.3.2",
         "acquia/blt": "^12.0",
+        "acquia/blt-simplesamlphp": "^1.0",
         "acquia/drupal-environment-detector": "^1",
         "acquia/http-hmac-php": "3.4.0",
         "acquia/memcache-settings": "^1",
+        "bower-asset/blazy": "^1.8",
+        "bower-asset/chosen": "^1.8",
+        "bower-asset/hammerjs": "^2.0",
+        "bower-asset/slick-carousel": "^1.8",
         "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.6",
+        "drupal/allowed_formats": "^1.4",
         "drupal/block_class": "^1.3",
+        "drupal/cancel_button": "^1.2",
+        "drupal/chosen": "^3.0",
         "drupal/ckeditor_accordion": "^1.3",
         "drupal/ckeditor_bs_grid": "^2.0",
+        "drupal/collapse_text": "^2.0",
         "drupal/config_ignore": "^2.3",
         "drupal/config_split": "^2",
         "drupal/core-composer-scaffold": "^9",
@@ -32,17 +41,25 @@
         "drupal/google_tag": "^1.4",
         "drupal/group": "^1.4",
         "drupal/image_widget_crop": "^2.3",
+        "drupal/linkit": "^6",
         "drupal/mysql56": "^1.0",
         "drupal/og": "^1.0@alpha",
         "drupal/og_sm": "^2.0",
         "drupal/openstreetmap": "^1.0@beta",
+        "drupal/optional_end_date": "^1.2",
+        "drupal/pathologic": "^1.0@alpha",
+        "drupal/promote_disable": "^2.0",
         "drupal/reroute_email": "^2",
         "drupal/samlauth": "^3.3",
         "drupal/scheduled_publish": "^3.9",
+        "drupal/search_api_attachments": "^9.0",
+        "drupal/shortcode": "^2.0",
+        "drupal/simplesamlphp_auth": "^3.2",
         "drupal/sitewide_alert": "^1.6",
         "drupal/slick": "^2.4",
         "drupal/structure_sync": "^2.0",
         "drupal/svg_image": "^1.15",
+        "drupal/taxonomy_import": "^2.0",
         "drupal/term_merge_manager": "^1.0@beta",
         "drupal/tmgmt": "^1.12",
         "drupal/usfedgov_google_analytics": "^1.2",
@@ -50,6 +67,7 @@
         "drupal/uswds_ckeditor_integration": "^1.0@beta",
         "drupal/uswds_paragraph_components": "^2.1",
         "drupal/viewfield": "^3.0@beta",
+        "drupal/views_slideshow": "^4.8",
         "drupal/viewsreference": "^1.7",
         "drupal/webform": "^6.1",
         "drupal/workbench": "^1.3",
@@ -70,7 +88,8 @@
             "acquia/blt": true,
             "oomphinc/composer-installers-extender": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
-            "acquia/blt-phpcs": true
+            "acquia/blt-phpcs": true,
+            "simplesamlphp/composer-module-installer": true
         }
     },
     "extra": {
@@ -105,6 +124,10 @@
         "installer-paths": {
             "docroot/core": [
                 "type:drupal-core"
+            ],
+            "docroot/libraries/slick": [
+                "bower-asset/slick-carousel",
+                "npm-asset/slick-carousel"
             ],
             "docroot/libraries/{$name}": [
                 "type:drupal-library",
@@ -168,6 +191,10 @@
         ],
         "nuke": [
             "rm -rf docroot vendor composer.lock"
+        ],
+        "post-drupal-scaffold-cmd": [
+            "cd docroot && patch -p1 <../patches/htaccess-https.patch",
+            "cd docroot && patch -p1 <../patches/htaccess-saml.patch"
         ]
     },
     "require-dev": {

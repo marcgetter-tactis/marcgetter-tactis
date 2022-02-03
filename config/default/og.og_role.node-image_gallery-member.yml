@@ -1,0 +1,15 @@
+uuid: 47d97772-109b-45a2-98d2-efe946444e53
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.image_gallery
+id: node-image_gallery-member
+label: Member
+weight: 16
+group_id: null
+group_type: node
+group_bundle: image_gallery
+is_admin: null
+permissions: {  }
+role_type: required

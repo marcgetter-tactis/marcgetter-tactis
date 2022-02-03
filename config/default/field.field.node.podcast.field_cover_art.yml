@@ -1,0 +1,29 @@
+uuid: 0d17aff0-ab90-45f9-924f-e77cf8ccc62d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cover_art
+    - media.type.image
+    - node.type.podcast
+id: node.podcast.field_cover_art
+field_name: field_cover_art
+entity_type: node
+bundle: podcast
+label: 'Cover Art'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

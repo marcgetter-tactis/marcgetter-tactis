@@ -1,0 +1,25 @@
+uuid: 574ac54c-7725-4b33-aad4-28b629b8cf17
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_body
+    - node.type.press_release
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+id: node.press_release.field_body
+field_name: field_body
+entity_type: node
+bundle: press_release
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

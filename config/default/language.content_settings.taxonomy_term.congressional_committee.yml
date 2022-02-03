@@ -1,0 +1,11 @@
+uuid: 774dd390-4aa0-4b95-979b-bd66c290749e
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.congressional_committee
+id: taxonomy_term.congressional_committee
+target_entity_type_id: taxonomy_term
+target_bundle: congressional_committee
+default_langcode: site_default
+language_alterable: false

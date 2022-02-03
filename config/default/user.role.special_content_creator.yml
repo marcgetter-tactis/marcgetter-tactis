@@ -1,0 +1,9 @@
+uuid: 676c2ca3-a957-4e38-bff2-cc2bcf11a4fa
+langcode: en
+status: true
+dependencies: {  }
+id: special_content_creator
+label: 'Special Content Creator'
+weight: -2
+is_admin: null
+permissions: {  }

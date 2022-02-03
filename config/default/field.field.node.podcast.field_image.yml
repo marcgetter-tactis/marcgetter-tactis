@@ -1,0 +1,29 @@
+uuid: 58a06675-0639-474f-ba21-1a72573c270a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image
+    - media.type.image
+    - node.type.podcast
+id: node.podcast.field_image
+field_name: field_image
+entity_type: node
+bundle: podcast
+label: Images
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

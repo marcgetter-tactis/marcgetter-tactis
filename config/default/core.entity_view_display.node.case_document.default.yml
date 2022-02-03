@@ -1,0 +1,76 @@
+uuid: ba9d8a47-71aa-41f9-96a8-9ff3fb6ab0fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.case_document.field_attachment
+    - field.field.node.case_document.field_body
+    - field.field.node.case_document.field_casedoc_type
+    - field.field.node.case_document.field_date
+    - field.field.node.case_document.og_audience
+    - node.type.case_document
+  module:
+    - datetime
+    - og
+    - options
+    - text
+    - user
+id: node.case_document.default
+targetEntityType: node
+bundle: case_document
+mode: default
+content:
+  field_attachment:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_casedoc_type:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_date:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  og_audience:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  og_group:
+    type: og_group_subscribe
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

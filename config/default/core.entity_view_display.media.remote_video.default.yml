@@ -1,0 +1,50 @@
+uuid: f934c207-465d-4c25-8571-cb86359356a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.remote_video.field_media_in_library
+    - field.field.media.remote_video.field_media_oembed_video
+    - field.field.media.remote_video.field_source
+    - media.type.remote_video
+  module:
+    - media
+id: media.remote_video.default
+targetEntityType: media
+bundle: remote_video
+mode: default
+content:
+  field_media_in_library:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_media_oembed_video:
+    type: oembed
+    label: hidden
+    settings:
+      max_width: 0
+      max_height: 0
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_source:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

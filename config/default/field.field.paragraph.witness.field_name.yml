@@ -1,0 +1,19 @@
+uuid: 1c66636d-548f-4c5f-bcbf-cdcfae0418cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_name
+    - paragraphs.paragraphs_type.witness
+id: paragraph.witness.field_name
+field_name: field_name
+entity_type: paragraph
+bundle: witness
+label: Name
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

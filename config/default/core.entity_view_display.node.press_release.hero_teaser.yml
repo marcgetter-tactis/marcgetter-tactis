@@ -1,0 +1,78 @@
+uuid: 7142be9d-87fb-425d-a219-1073b512470a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.hero_teaser
+    - field.field.node.press_release.field_attachment
+    - field.field.node.press_release.field_body
+    - field.field.node.press_release.field_component
+    - field.field.node.press_release.field_contact
+    - field.field.node.press_release.field_date
+    - field.field.node.press_release.field_feature_image
+    - field.field.node.press_release.field_file_private_force
+    - field.field.node.press_release.field_image
+    - field.field.node.press_release.field_invisible
+    - field.field.node.press_release.field_number
+    - field.field.node.press_release.field_subtitle
+    - field.field.node.press_release.field_teaser
+    - field.field.node.press_release.field_teaser_image
+    - field.field.node.press_release.field_topic
+    - field.field.node.press_release.og_audience
+    - node.type.press_release
+  module:
+    - datetime
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.press_release.hero_teaser
+targetEntityType: node
+bundle: press_release
+mode: hero_teaser
+content:
+  field_date:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: standard_date_format
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_feature_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: large_landscape
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_attachment: true
+  field_body: true
+  field_component: true
+  field_contact: true
+  field_file_private_force: true
+  field_image: true
+  field_invisible: true
+  field_number: true
+  field_pr_contact: true
+  field_pr_image: true
+  field_pr_subtitle: true
+  field_pr_teaser: true
+  field_pr_teaser_image: true
+  field_pr_topic: true
+  field_subtitle: true
+  field_teaser: true
+  field_teaser_image: true
+  field_topic: true
+  langcode: true
+  links: true
+  og_audience: true
+  pr_component: true
+  pr_invisible: true
+  search_api_excerpt: true

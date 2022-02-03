@@ -1,0 +1,29 @@
+uuid: 3258bdcf-4d05-43fe-948f-ab5137aaceda
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_speaker
+    - node.type.speech
+    - node.type.staff_profile
+id: node.speech.field_speaker
+field_name: field_speaker
+entity_type: node
+bundle: speech
+label: Speaker
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      staff_profile: staff_profile
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -21,7 +21,23 @@ third_party_settings:
         layout_settings:
           label: 'Full-Width Above 2-Column'
           context_mapping: {  }
-        components: {  }
+        components:
+          0257312e-7d5e-42f2-93ce-227b6a239cc7:
+            uuid: 0257312e-7d5e-42f2-93ce-227b6a239cc7
+            region: content
+            configuration:
+              id: 'field_block:node:landing_page:og_audience'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
         third_party_settings: {  }
       -
         layout_id: layout_twocol_section
@@ -100,7 +116,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 101
+    weight: 104
     region: content
 hidden:
   langcode: true

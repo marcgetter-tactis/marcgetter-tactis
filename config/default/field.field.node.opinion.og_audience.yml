@@ -1,0 +1,31 @@
+uuid: 0653577a-f2a3-4914-9b36-a0db0f2891f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.og_audience
+    - node.type.component_group
+    - node.type.opinion
+  module:
+    - og
+id: node.opinion.og_audience
+field_name: og_audience
+entity_type: node
+bundle: opinion
+label: 'Your Groups'
+description: 'Associate this content with groups you belong to.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      component_group: component_group
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: og_standard_reference

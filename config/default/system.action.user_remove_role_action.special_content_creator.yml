@@ -1,0 +1,14 @@
+uuid: 1349b577-8202-4f2d-853c-4b67c686ef5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.special_content_creator
+  module:
+    - user
+id: user_remove_role_action.special_content_creator
+label: 'Remove the Special Content Creator role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: special_content_creator

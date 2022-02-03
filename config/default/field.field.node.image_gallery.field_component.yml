@@ -1,0 +1,29 @@
+uuid: da9c4468-8467-4565-bd3e-6176c18b3706
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_component
+    - node.type.image_gallery
+    - taxonomy.vocabulary.component
+id: node.image_gallery.field_component
+field_name: field_component
+entity_type: node
+bundle: image_gallery
+label: Component
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      component: component
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

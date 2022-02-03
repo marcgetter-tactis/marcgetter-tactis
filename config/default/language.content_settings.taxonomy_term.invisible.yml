@@ -1,0 +1,11 @@
+uuid: 350dbeb8-e9aa-47ac-bc97-6aa0675aae20
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.invisible
+id: taxonomy_term.invisible
+target_entity_type_id: taxonomy_term
+target_bundle: invisible
+default_langcode: site_default
+language_alterable: false

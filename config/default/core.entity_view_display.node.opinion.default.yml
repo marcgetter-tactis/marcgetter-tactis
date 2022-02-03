@@ -1,0 +1,71 @@
+uuid: 905acad6-f798-4316-90f5-92fa2910dd2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.opinion.field_body
+    - field.field.node.opinion.field_date
+    - field.field.node.opinion.field_overview
+    - field.field.node.opinion.field_single_attachment
+    - field.field.node.opinion.og_audience
+    - node.type.opinion
+  module:
+    - datetime
+    - text
+    - user
+id: node.opinion.default
+targetEntityType: node
+bundle: opinion
+mode: default
+content:
+  field_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_date:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: html_date
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_overview:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_single_attachment:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  og_audience:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  og_group:
+    type: og_group_subscribe
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  links: true
+  search_api_excerpt: true

@@ -1,0 +1,21 @@
+uuid: 79ae08af-96f5-4908-9b8e-29c24d3fe7ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_casedoc_type
+    - node.type.case_document
+  module:
+    - options
+id: node.case_document.field_casedoc_type
+field_name: field_casedoc_type
+entity_type: node
+bundle: case_document
+label: 'Document Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

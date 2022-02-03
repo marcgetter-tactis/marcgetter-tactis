@@ -1,0 +1,19 @@
+uuid: 3c737396-8794-4165-8bfe-6b90a84b547a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_name
+    - node.type.historical_biography
+id: node.historical_biography.field_name
+field_name: field_name
+entity_type: node
+bundle: historical_biography
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

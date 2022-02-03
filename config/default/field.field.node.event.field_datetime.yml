@@ -1,0 +1,21 @@
+uuid: a63389c2-1d5a-4fb9-bc1e-1c2e2749b475
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_datetime
+    - node.type.event
+  module:
+    - datetime_range
+id: node.event.field_datetime
+field_name: field_datetime
+entity_type: node
+bundle: event
+label: 'Date & Time'
+description: 'TBD will be displayed if no date is entered.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

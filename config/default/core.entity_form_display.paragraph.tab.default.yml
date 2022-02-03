@@ -1,4 +1,4 @@
-uuid: 50cbbf02-202b-442a-99e1-eadcb09f1e6c
+uuid: b23b54c6-2a05-445c-a505-305e6ae9eca7
 langcode: en
 status: true
 dependencies:
@@ -11,8 +11,9 @@ dependencies:
     - field.field.paragraph.tab.field_image
     - paragraphs.paragraphs_type.tab
   module:
-    - entity_reference_revisions
     - link
+    - media_library
+    - paragraphs
     - text
 id: paragraph.tab.default
 targetEntityType: paragraph
@@ -28,14 +29,16 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_cards:
-    type: entity_reference_revisions_autocomplete
+    type: entity_reference_paragraphs
     weight: 5
     region: content
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: card
     third_party_settings: {  }
   field_cta:
     type: link_default
@@ -60,14 +63,11 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_image:
-    type: entity_reference_autocomplete
+    type: media_library_widget
     weight: 1
     region: content
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      media_types: {  }
     third_party_settings: {  }
 hidden:
   created: true

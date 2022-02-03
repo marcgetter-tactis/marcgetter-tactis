@@ -1,0 +1,16 @@
+uuid: 03813626-2ee4-4ae8-9654-6602954a9627
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.image_gallery
+id: node-image_gallery-non-member
+label: Non-member
+weight: 15
+group_id: null
+group_type: node
+group_bundle: image_gallery
+is_admin: null
+permissions:
+  - subscribe
+role_type: required

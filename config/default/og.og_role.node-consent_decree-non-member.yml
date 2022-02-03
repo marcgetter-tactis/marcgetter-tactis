@@ -1,0 +1,16 @@
+uuid: 22c07121-3625-490e-99b2-bb0776f132c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.consent_decree
+id: node-consent_decree-non-member
+label: Non-member
+weight: 24
+group_id: null
+group_type: node
+group_bundle: consent_decree
+is_admin: null
+permissions:
+  - subscribe
+role_type: required

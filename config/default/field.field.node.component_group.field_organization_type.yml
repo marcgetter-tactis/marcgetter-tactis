@@ -1,0 +1,21 @@
+uuid: 3a715a4f-aec0-4015-9a80-fddae2398014
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_organization_type
+    - node.type.component_group
+  module:
+    - options
+id: node.component_group.field_organization_type
+field_name: field_organization_type
+entity_type: node
+bundle: component_group
+label: 'Organization Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

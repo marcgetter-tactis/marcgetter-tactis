@@ -1,0 +1,23 @@
+uuid: 936343fc-f474-4c89-8886-c1645774979b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link
+    - node.type.historical_biography
+  module:
+    - link
+id: node.historical_biography.field_link
+field_name: field_link
+entity_type: node
+bundle: historical_biography
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 17
+field_type: link

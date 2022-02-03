@@ -1,0 +1,15 @@
+uuid: d8c55a39-b982-4132-9682-41460e97eaa1
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.consent_decree
+id: node-consent_decree-member
+label: Member
+weight: 25
+group_id: null
+group_type: node
+group_bundle: consent_decree
+is_admin: null
+permissions: {  }
+role_type: required

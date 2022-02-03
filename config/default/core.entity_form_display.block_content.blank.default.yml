@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - block_content.type.blank
-    - field.field.block_content.blank.field_background_color
+    - field.field.block_content.blank.field_background_class
     - field.field.block_content.blank.field_body
     - field.field.block_content.blank.field_cards
     - field.field.block_content.blank.field_cta
@@ -23,9 +23,9 @@ targetEntityType: block_content
 bundle: blank
 mode: default
 content:
-  field_background_color:
+  field_background_class:
     type: options_select
-    weight: 8
+    weight: 26
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -44,10 +44,10 @@ content:
     settings:
       title: Paragraph
       title_plural: Paragraphs
-      edit_mode: open
+      edit_mode: closed
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: ''
+      default_paragraph_type: card
     third_party_settings: {  }
   field_cta:
     type: link_default

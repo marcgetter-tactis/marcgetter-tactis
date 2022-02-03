@@ -25,7 +25,7 @@ third_party_settings:
     unpublish_revision: false
 name: 'Press Release'
 type: press_release
-description: 'A structured content type used for creating various types of press releases.'
+description: 'This content type is used for creating press releases. Press releases can be tagged with component names and topics to automatically populate news pages and justice.gov home.'
 help: ''
 new_revision: true
 preview_mode: 1

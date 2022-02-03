@@ -1,0 +1,32 @@
+uuid: 09a35b10-5dbf-42ad-9b02-d90802f597a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.remote_video.field_media_in_library
+    - field.field.media.remote_video.field_media_oembed_video
+    - field.field.media.remote_video.field_source
+    - media.type.remote_video
+id: media.remote_video.media_library
+targetEntityType: media
+bundle: remote_video
+mode: media_library
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_media_in_library: true
+  field_media_oembed_video: true
+  field_source: true
+  langcode: true
+  path: true
+  status: true
+  uid: true

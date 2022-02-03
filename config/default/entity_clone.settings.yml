@@ -21,10 +21,6 @@ form_settings:
     default_value: false
     disable: false
     hidden: false
-  cohesion_layout:
-    default_value: true
-    hidden: true
-    disable: false
   component_content:
     default_value: false
     disable: false

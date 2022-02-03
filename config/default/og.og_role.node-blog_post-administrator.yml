@@ -1,0 +1,15 @@
+uuid: 2c06703f-ad14-4ad1-ae48-77e8ca7b63d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.blog_post
+id: node-blog_post-administrator
+label: Administrator
+weight: 11
+group_id: null
+group_type: node
+group_bundle: blog_post
+is_admin: true
+permissions: {  }
+role_type: null

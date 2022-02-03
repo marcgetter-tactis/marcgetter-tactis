@@ -1,0 +1,11 @@
+uuid: 620a6cef-2a2d-4e1f-91c5-0944321e2167
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.consent_decree
+id: node.consent_decree
+target_entity_type_id: node
+target_bundle: consent_decree
+default_langcode: site_default
+language_alterable: false

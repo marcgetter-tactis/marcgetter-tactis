@@ -1,0 +1,26 @@
+uuid: 9fafe9b3-5a63-4c75-9c68-c4944f35dac1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_overview
+    - node.type.case
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - wysiwyg
+id: node.case.field_overview
+field_name: field_overview
+entity_type: node
+bundle: case
+label: Overview
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

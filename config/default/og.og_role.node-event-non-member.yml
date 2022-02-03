@@ -1,0 +1,16 @@
+uuid: 6dd45876-b1bf-41f7-a980-8ff453373491
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.event
+id: node-event-non-member
+label: Non-member
+weight: 12
+group_id: null
+group_type: node
+group_bundle: event
+is_admin: null
+permissions:
+  - subscribe
+role_type: required

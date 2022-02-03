@@ -1,0 +1,33 @@
+uuid: 2ecf8884-404a-457e-b607-d138b21af8a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_attachment
+    - media.type.document
+    - media.type.remote_video
+    - media.type.video
+    - node.type.speech
+id: node.speech.field_attachment
+field_name: field_attachment
+entity_type: node
+bundle: speech
+label: Attachment(s)
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      document: document
+      remote_video: remote_video
+      video: video
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: document
+field_type: entity_reference

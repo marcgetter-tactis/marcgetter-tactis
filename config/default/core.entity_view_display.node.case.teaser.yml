@@ -1,0 +1,71 @@
+uuid: b43d9c7a-36f1-4f17-98a1-d3584d4c28c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.case.field_attachment
+    - field.field.node.case.field_body
+    - field.field.node.case.field_case_type
+    - field.field.node.case.field_closed_date
+    - field.field.node.case.field_component
+    - field.field.node.case.field_court_level
+    - field.field.node.case.field_date
+    - field.field.node.case.field_docket_number
+    - field.field.node.case.field_documents
+    - field.field.node.case.field_federal_court
+    - field.field.node.case.field_image
+    - field.field.node.case.field_industry
+    - field.field.node.case.field_invisible
+    - field.field.node.case.field_link
+    - field.field.node.case.field_market
+    - field.field.node.case.field_name
+    - field.field.node.case.field_overview
+    - field.field.node.case.field_tags
+    - field.field.node.case.field_topic
+    - field.field.node.case.field_violation
+    - field.field.node.case.og_audience
+    - node.type.case
+  module:
+    - user
+id: node.case.teaser
+targetEntityType: node
+bundle: case
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  og_group:
+    type: og_group_subscribe
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_attachment: true
+  field_body: true
+  field_case_type: true
+  field_closed_date: true
+  field_component: true
+  field_court_level: true
+  field_date: true
+  field_docket_number: true
+  field_documents: true
+  field_federal_court: true
+  field_image: true
+  field_industry: true
+  field_invisible: true
+  field_link: true
+  field_market: true
+  field_name: true
+  field_overview: true
+  field_tags: true
+  field_topic: true
+  field_violation: true
+  langcode: true
+  og_audience: true
+  search_api_excerpt: true

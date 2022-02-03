@@ -1,0 +1,56 @@
+uuid: 6dc14d62-24e5-4d30-8b8a-367ba31a2cba
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.staff_profile.field_body
+    - field.field.node.staff_profile.field_byline
+    - field.field.node.staff_profile.field_component
+    - field.field.node.staff_profile.field_dates_service
+    - field.field.node.staff_profile.field_name
+    - field.field.node.staff_profile.field_portrait
+    - field.field.node.staff_profile.field_portrait_download
+    - field.field.node.staff_profile.field_position
+    - field.field.node.staff_profile.field_teaser
+    - field.field.node.staff_profile.og_audience
+    - node.type.staff_profile
+  module:
+    - text
+    - user
+id: node.staff_profile.teaser
+targetEntityType: node
+bundle: staff_profile
+mode: teaser
+content:
+  field_name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_teaser:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_body: true
+  field_byline: true
+  field_component: true
+  field_dates_service: true
+  field_portrait: true
+  field_portrait_download: true
+  field_position: true
+  langcode: true
+  og_audience: true
+  search_api_excerpt: true

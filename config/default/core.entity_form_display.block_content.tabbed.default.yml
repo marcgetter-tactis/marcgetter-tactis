@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - block_content.type.tabbed
-    - field.field.block_content.tabbed.field_background_color
+    - field.field.block_content.tabbed.field_background_class
     - field.field.block_content.tabbed.field_cta
     - field.field.block_content.tabbed.field_cta_style
     - field.field.block_content.tabbed.field_header
@@ -19,9 +19,9 @@ targetEntityType: block_content
 bundle: tabbed
 mode: default
 content:
-  field_background_color:
+  field_background_class:
     type: options_select
-    weight: 29
+    weight: 33
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -54,10 +54,10 @@ content:
     settings:
       title: Paragraph
       title_plural: Paragraphs
-      edit_mode: open
+      edit_mode: closed
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: ''
+      default_paragraph_type: tab
     third_party_settings: {  }
   info:
     type: string_textfield

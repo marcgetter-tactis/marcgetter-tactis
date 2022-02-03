@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - block_content.type.mission
-    - field.field.block_content.mission.field_background_color
+    - field.field.block_content.mission.field_background_class
     - field.field.block_content.mission.field_background_image
     - field.field.block_content.mission.field_body
     - field.field.block_content.mission.field_cta
@@ -24,13 +24,6 @@ targetEntityType: block_content
 bundle: mission
 mode: default
 content:
-  field_background_color:
-    type: list_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 8
-    region: content
   field_background_image:
     type: entity_reference_entity_view
     label: hidden
@@ -45,7 +38,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 2
     region: content
   field_cta:
     type: link
@@ -72,7 +65,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
   field_image:
     type: entity_reference_entity_view
@@ -81,7 +74,7 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
-    weight: 1
+    weight: 0
     region: content
   field_statistics:
     type: entity_reference_revisions_entity_view
@@ -106,8 +99,9 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 9
+    weight: 8
     region: content
 hidden:
+  field_background_class: true
   langcode: true
   search_api_excerpt: true

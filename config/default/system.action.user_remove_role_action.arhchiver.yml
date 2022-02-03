@@ -1,0 +1,14 @@
+uuid: 734699ce-a743-410a-9639-c8487d73dab2
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.arhchiver
+  module:
+    - user
+id: user_remove_role_action.arhchiver
+label: 'Remove the Arhchiver role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: arhchiver

@@ -1,0 +1,29 @@
+uuid: 169f16e2-1dfd-47e5-8289-3c85dad923a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_component
+    - node.type.podcast
+    - taxonomy.vocabulary.component
+id: node.podcast.field_component
+field_name: field_component
+entity_type: node
+bundle: podcast
+label: Component
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      component: component
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

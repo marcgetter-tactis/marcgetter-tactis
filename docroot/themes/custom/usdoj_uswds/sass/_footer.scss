@@ -1,110 +1,143 @@
 // Footer
 .usa-footer__primary-section {
-    @include u-padding-y(4);
-    background-color: $doj-darkgray;
+  background-color: $doj-darkgray;
+  color: white;
+  border-top: 3px solid $theme-color-accent-warm;
+  font-weight: 600;
+  @include u-padding-y(1);
+
+  p,a {
+    line-height: 1.8;
     color: white;
-    border-top: 3px solid $theme-color-accent-warm;
-    font-weight: 600;
+    @include u-font('body', 3);
+  }
+
+  strong {
+    font-size: 18px;
+  }
+
+  a {
+    &:hover {
+      color: $theme-color-accent-warm;
+    }
+  }
+
+  .blocks-wrapper {
+    >div {
+      @include grid-row;
+      @include grid-gap;
+    }
+  }
+
+  .site-logo {
+    @include grid-col;
+    @include grid-col(12);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    @include u-margin-top(3);
+    @include u-margin-bottom(4);
+
+    img {
+      max-width: 275px;
+    }
+  }
+
+  .usa-menu-btn {
+    display: none;
+  }
+
+  .usa-footer__primary-content {
+    border: none;
+  }
+
+  .footer-address-block,
+  .footer-contact-block,
+  .footer-social-block {
+    @include grid-col;
+    @include grid-col(12);
+    @include u-margin-bottom(3);
+  }
+
+  .footer-social-block {
+    a {
+      fill: $theme-color-accent-warm;
+    
+      &:hover {
+        fill: white;
+      }
+    }
+    
+    svg {
+      width: 20px;
+    }
+  }
+
+  @include at-media(tablet) {
+    .footer-address-block,
+    .footer-contact-block,
+    .footer-social-block {
+      @include grid-col(6);
+      @include grid-offset(3);
+    }
+  }
+
+  @include at-media(desktop) {
+    @include u-padding-y(1);
 
     p,a {
-        line-height: 1.8;
-        color: white;
-        @include u-font('body', 3);
-    }
-
-    .blocks-wrapper {
-        >div {
-            @include grid-row;
-            @include grid-gap;
-        }
-    }
-
-    .site-logo {
-        @include grid-col;
-        @include grid-col(12);
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        @include u-margin-bottom(4);
-
-        img {
-            max-width: 275px;
-        }
-    }
-
-    .usa-menu-btn {
-        display: none;
-    }
-
-    .usa-footer__primary-content {
-        border: none;
+      @include u-font('body', $theme-body-font-size);
     }
 
     .footer-address-block,
     .footer-contact-block,
     .footer-social-block {
-        @include grid-col;
-        @include grid-col(12);
-        @include u-margin-bottom(3);
+      @include grid-col(4);
+      margin-left: 0;
     }
-
-    @include at-media(tablet) {
-        .footer-address-block,
-        .footer-contact-block,
-        .footer-social-block {
-            @include grid-col(6);
-            @include grid-offset(3);
-        }
-    }
-
-    @include at-media(desktop) {
-        p,a {
-            @include u-font('body', $theme-body-font-size);
-        }
-
-        .footer-address-block,
-        .footer-contact-block,
-        .footer-social-block {
-            @include grid-col(4);
-            margin-left: 0;
-        }
-    }
+  }
 }
 
 .usa-footer__secondary-section {
-    @include u-padding-y(5);
-    @include u-font('body', 3);
-    background-color: $footer-darkgray;
+  @include u-padding-y(5);
+  @include u-font('body', 3);
+  background-color: $footer-darkgray;
+  color: white;
+  border-top: 1px solid $gray-warm-70;
+  text-align: center;
+
+  p,a {
     color: white;
-    border-top: 1px solid $gray-warm-70;
-    text-align: center;
+  }
 
-    p,a {
-        color: white;
+  a {
+    &:hover {
+      color: $theme-color-accent-warm;
     }
+  }
 
-    p {
-        margin-top: 0;
-    }
+  p {
+    margin-top: 0;
+  }
 
-    .blocks-wrapper {
-        >div {
-            @include grid-row;
-            @include grid-gap;
-        }
+  .blocks-wrapper {
+    >div {
+      @include grid-row;
+      @include grid-gap;
     }
+  }
+
+  .block {
+    @include grid-col;
+    @include grid-col(12);
+  }
+
+  @include at-media(desktop) {
+    @include u-padding-y(5);
+    text-align: left;
 
     .block {
-        @include grid-col;
-        @include grid-col(12);
+      @include grid-col(3);
     }
-
-    @include at-media(desktop) {
-        @include u-padding-y(9);
-        text-align: left;
-
-        .block {
-            @include grid-col(3);
-        }
-    }
+  }
 }

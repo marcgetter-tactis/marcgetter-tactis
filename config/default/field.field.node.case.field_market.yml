@@ -1,0 +1,19 @@
+uuid: 37cee20a-d161-441b-acc4-99050bd763b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_market
+    - node.type.case
+id: node.case.field_market
+field_name: field_market
+entity_type: node
+bundle: case
+label: Market
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,15 @@
+uuid: 278a11e0-5bde-4a1f-aea4-b18cd546c1b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.blog_post
+id: node-blog_post-member
+label: Member
+weight: 10
+group_id: null
+group_type: node
+group_bundle: blog_post
+is_admin: null
+permissions: {  }
+role_type: required

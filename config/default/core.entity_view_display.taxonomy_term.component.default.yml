@@ -1,0 +1,47 @@
+uuid: 538cad94-2d30-44d9-be22-70ef1ffc26ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.component.field_component_image
+    - field.field.taxonomy_term.component.field_component_url
+    - taxonomy.vocabulary.component
+  module:
+    - link
+    - text
+id: taxonomy_term.component.default
+targetEntityType: taxonomy_term
+bundle: component
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_component_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_component_url:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

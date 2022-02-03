@@ -1,0 +1,82 @@
+uuid: 2f008bfd-8c91-4398-a561-f5ec32ce9ef4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.consent_decree.field_attachment
+    - field.field.node.consent_decree.field_body
+    - field.field.node.consent_decree.field_comment_period
+    - field.field.node.consent_decree.field_component
+    - field.field.node.consent_decree.field_weight
+    - field.field.node.consent_decree.og_audience
+    - node.type.consent_decree
+  module:
+    - options
+    - text
+    - user
+id: node.consent_decree.default
+targetEntityType: node
+bundle: consent_decree
+mode: default
+content:
+  field_attachment:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_comment_period:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_component:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_weight:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  og_audience:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  og_group:
+    type: og_group_subscribe
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

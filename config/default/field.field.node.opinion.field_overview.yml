@@ -1,0 +1,21 @@
+uuid: fca9f764-8cd8-4714-a6a5-9aeda6a49950
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_overview
+    - node.type.opinion
+  module:
+    - text
+id: node.opinion.field_overview
+field_name: field_overview
+entity_type: node
+bundle: opinion
+label: Headnotes
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

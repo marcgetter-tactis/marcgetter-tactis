@@ -1,0 +1,100 @@
+/*
+* * * * * ==============================
+* * * * * ==============================
+* * * * * ==============================
+* * * * * ==============================
+========================================
+========================================
+========================================
+----------------------------------------
+USWDS THEME CUSTOM STYLES
+----------------------------------------
+!! Copy this file to your project's
+   sass root. Don't edit the version
+   in node_modules.
+----------------------------------------
+Tabbed Block on Homepage
+
+----------------------------------------
+*/
+
+.block-homepage-priorities {
+  padding: 3rem 0;
+
+  .panels { 
+    position: relative; 
+    min-height: 48rem;
+    
+    .panel { 
+      display: inline;
+      
+      .block-tab { 
+        position: relative; 
+        float: left; 
+        display: block; 
+        text-decoration: none;
+        &.active ~ .panel-content {
+          display: block;
+        }
+      }
+
+      .panel-content { 
+        display: none;
+        position: absolute;
+        left: 0; 
+        top: 1rem; 
+        bottom: 0; 
+        right: 0;
+        
+
+        .paragraph--type--card {
+          .usa-card__container {
+            border: none;
+            box-shadow: none;
+            .usa-card__media--inset {
+              padding: 0;
+            }
+            .usa-card__body {
+              padding: 0;
+              text-align: center;
+              min-height: 16rem;
+            }
+            .usa-card__footer {
+              text-align: center;
+              a {
+                color: white;
+                background: color(primary-darker);
+                padding: 0.75rem 1.25rem;
+                border-radius: 0.25rem;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: .9rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+
+  .paragraph--type--tab {
+    padding: 3rem;
+    background: white;
+    border: 1px solid #eaeaea;
+    box-shadow: 0 0 0.5rem rgb(0 0 0 / 17%);
+
+    .field__items {
+      @include grid-row;
+      .field__item {
+        @include grid-col(12);
+        @include at-media(tablet) {
+          @include grid-col(4);
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+

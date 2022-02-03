@@ -28,7 +28,7 @@ Blank Block on Homepage
     .field_header, .field_body, .field_cta, img {
       @include grid-col(6);
       
-      @include at-media(tablet-md) {
+      @media (max-width: 39.99em) {
         @include grid-col(12);
       }
     }

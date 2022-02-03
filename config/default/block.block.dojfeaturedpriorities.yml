@@ -1,29 +1,37 @@
-uuid: b5d5aa4d-50be-44d5-a449-cf3fad0cb004
+uuid: 7f912ee6-a557-4f62-8b75-e0e71fc9cd2b
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:tabbed:c00a7c24-e765-444b-9867-8186316fcf7c'
+    - 'block_content:tabbed:7e1b1801-2d9f-4101-afc2-331e188d0b8a'
   module:
+    - block_class
     - block_content
     - collapsiblock
+    - system
   theme:
     - usdoj_uswds
 third_party_settings:
+  block_class:
+    classes: block-homepage-priorities
   collapsiblock:
     collapse_action: 0
 id: dojfeaturedpriorities
 theme: usdoj_uswds
 region: content
-weight: 0
+weight: -7
 provider: null
-plugin: 'block_content:c00a7c24-e765-444b-9867-8186316fcf7c'
+plugin: 'block_content:7e1b1801-2d9f-4101-afc2-331e188d0b8a'
 settings:
-  id: 'block_content:c00a7c24-e765-444b-9867-8186316fcf7c'
+  id: 'block_content:7e1b1801-2d9f-4101-afc2-331e188d0b8a'
   label: 'DOJ Featured Priorities'
-  label_display: '0'
+  label_display: visible
   provider: block_content
   status: true
   info: ''
   view_mode: full
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

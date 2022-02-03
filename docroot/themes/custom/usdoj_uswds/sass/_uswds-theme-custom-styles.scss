@@ -374,9 +374,17 @@ strong {
       font-size: $theme-h4-font-size;
       margin-bottom: 10px;
     }
+    
+    p {
+      &:first-of-type {
+        margin-top: 0;
+      }  
+    }
 
     strong {
       color: $doj-darkblue;
+      display: block;
+      margin-bottom: -10px;
     }
     
     em {

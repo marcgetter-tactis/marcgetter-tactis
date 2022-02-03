@@ -1,14 +1,14 @@
-uuid: c6324c59-77f7-4574-a4b0-7ebf9fe7c3f7
+uuid: e763719b-3c8b-4ab3-9392-82e10997153c
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.carousel
-    - field.storage.block_content.field_background_color
+    - field.storage.block_content.field_background_class
   module:
     - options
-id: block_content.carousel.field_background_color
-field_name: field_background_color
+id: block_content.carousel.field_background_class
+field_name: field_background_class
 entity_type: block_content
 bundle: carousel
 label: 'Background Color'

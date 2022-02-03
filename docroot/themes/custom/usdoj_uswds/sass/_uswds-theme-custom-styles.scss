@@ -136,6 +136,14 @@ strong {
   min-width: 175px;
 }
 
+.usa-button--outline {
+  &:hover {
+    background-color: $blue-60v;
+    color: white;
+    box-shadow: inset 0 0 0 2px $blue-60v;
+  }
+}
+
 .return-to-top {
   background-color: $footer-darkgray;
 
@@ -403,6 +411,7 @@ strong {
   >.field__item {
     border-bottom: 3px dotted $action-border-gray;
     line-height: 1.3;
+    padding: 2px 0;
 
     &:hover {
       .paragraph--type--action-center-item {

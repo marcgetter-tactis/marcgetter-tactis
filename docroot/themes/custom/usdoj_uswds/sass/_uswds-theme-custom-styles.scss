@@ -353,15 +353,18 @@ strong {
 .usa-card__container {
   border-color: $theme-card-border-color;
   box-shadow: 0 0 7px 0 rgba(0,0,0,0.17);
+  margin-bottom: .5rem;
 
   .usa-card__body {
     color: $gray-80;
     font-weight: 600;
+    line-height: 1.4;
     
     .card-title {
       @include u-font-family('sans');
       color: $doj-coolblue;
       font-size: $theme-h4-font-size;
+      margin-bottom: 10px;
     }
 
     strong {
@@ -376,7 +379,7 @@ strong {
     }
 
     @include at-media(desktop) {
-      min-height: 360px;
+      min-height: 350px;
     }
   }
 

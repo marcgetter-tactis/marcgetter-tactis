@@ -35,7 +35,22 @@ third_party_settings:
         layout_settings:
           label: 'Single Column'
           context_mapping: {  }
-        components: {  }
+        components:
+          26bbdab1-6603-4c58-88d5-3ead339801dc:
+            uuid: 26bbdab1-6603-4c58-88d5-3ead339801dc
+            region: content
+            configuration:
+              id: 'field_block:node:component_group:field_organization_type'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: list_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
         third_party_settings: {  }
 id: node.component_group.default
 targetEntityType: node

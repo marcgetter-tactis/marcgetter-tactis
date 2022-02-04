@@ -1,14 +1,14 @@
-uuid: e355da4d-1732-488b-adb1-afa03e25914a
+uuid: e35bcb9f-7b9f-4146-8555-8dd5731dd61e
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.action_center
-    - field.storage.block_content.field_background_class
+    - field.storage.block_content.field_background_color
   module:
     - options
-id: block_content.action_center.field_background_class
-field_name: field_background_class
+id: block_content.action_center.field_background_color
+field_name: field_background_color
 entity_type: block_content
 bundle: action_center
 label: 'Background Color'

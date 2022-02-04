@@ -1,27 +1,27 @@
-uuid: 2c4048d2-0ef7-4a2e-9831-89399ec19bc2
+uuid: 172b098a-f1ca-482e-88fb-cdae6b460529
 langcode: en
 status: true
 dependencies:
   module:
     - block_content
     - options
-id: block_content.field_background_class
-field_name: field_background_class
+id: block_content.field_background_color
+field_name: field_background_color
 entity_type: block_content
 type: list_string
 settings:
   allowed_values:
     -
-      value: 'bg-full-width bg-white'
+      value: '#FFFFFF'
       label: White
     -
-      value: 'bg-full-width bg-base-lighter'
+      value: '#F6F6F2'
       label: Taupe
     -
-      value: 'bg-full-width bg-primary-darker'
+      value: '#162E51'
       label: 'Dark Blue'
     -
-      value: 'bg-full-width bg-primary-lightest'
+      value: '#E9EEF5'
       label: 'Light Blue'
   allowed_values_function: ''
 module: options

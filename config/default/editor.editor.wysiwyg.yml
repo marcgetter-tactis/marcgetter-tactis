@@ -19,15 +19,6 @@ settings:
             - Underline
             - Italic
             - RemoveFormat
-            - Blockquote
-            - Format
-        -
-          name: Alignment
-          items:
-            - JustifyLeft
-            - JustifyCenter
-            - JustifyBlock
-            - JustifyRight
         -
           name: Links
           items:
@@ -41,19 +32,23 @@ settings:
         -
           name: Media
           items:
-            - DrupalMediaLibrary
+            - Blockquote
+            - DrupalImage
         -
           name: Tools
           items:
-            - Accordion
             - ShowBlocks
             - Maximize
             - Table
             - Source
+        -
+          name: Alignment
+          items:
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyBlock
+            - JustifyRight
   plugins:
-    drupallink:
-      linkit_enabled: true
-      linkit_profile: default
     language:
       language_list: un
     stylescombo:

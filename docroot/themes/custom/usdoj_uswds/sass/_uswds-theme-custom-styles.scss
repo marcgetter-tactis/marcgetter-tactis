@@ -252,17 +252,18 @@ strong {
     }
 
     .hero-image {
-
       img {
-        aspect-ratio: 1/1;
+        aspect-ratio: 1.5/1;
         height: 100%;
         object-fit: cover;
+        max-height: 250px;
       }
 
-      @include at-media(desktop) {
+      @include at-media(tablet) {
         img {
           aspect-ratio: auto;
           width: 100%;
+          max-height: none;
         }
       }
     }
@@ -272,7 +273,7 @@ strong {
     @include center-hor();
     padding: 0;
     list-style: none;
-    top: 55%;
+    top: 44%;
 
     li {
       display: inline-block;
@@ -298,12 +299,8 @@ strong {
       }
     }
 
-    @include at-media(mobile-lg) {
-      top: 65%;
-    }
-
     @include at-media(tablet) {
-      top: 76%;
+      top: 58%;
     }
 
     @include at-media(desktop) {

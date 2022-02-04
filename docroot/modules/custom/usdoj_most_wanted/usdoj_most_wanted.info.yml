@@ -1,0 +1,5 @@
+name: USDOJ Most Wanted
+type: module
+description: 'Various function to facilitate the importing of most wanted entities..'
+package: USDOJ
+core_version_requirement: ^8.9 || ^9

@@ -168,7 +168,11 @@
         "patchLevel": {
             "drupal/core": "-p2"
         },
-        "patches": {},
+        "patches": {
+            "drupal/og": {
+                "Allow default profile delete ": "patches/mg_og.patch"
+            }
+        },
         "violinist": {
             "allow_updates_beyond_constraint": 0,
             "blocklist": [

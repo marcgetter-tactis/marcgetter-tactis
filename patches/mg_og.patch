@@ -1,0 +1,17 @@
+diff --git a/src/Entity/OgMembershipType.php b/src/Entity/OgMembershipType.php
+index c067bebe..17947df0 100644
+--- a/src/Entity/OgMembershipType.php
++++ b/src/Entity/OgMembershipType.php
+@@ -101,9 +101,9 @@ class OgMembershipType extends ConfigEntityBase implements OgMembershipTypeInter
+    * {@inheritdoc}
+    */
+   public function delete() {
+-    if ($this->id() === OgMembershipInterface::TYPE_DEFAULT) {
+-      throw new \Exception('The default OG membership type cannot be deleted.');
+-    }
++    //if ($this->id() === OgMembershipInterface::TYPE_DEFAULT) {
++    //  throw new \Exception('The default OG membership type cannot be deleted.');
++    //}
+     parent::delete();
+   }
+ 

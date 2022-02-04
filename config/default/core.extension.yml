@@ -17,6 +17,7 @@ module:
   admin_toolbar: 0
   admin_toolbar_tools: 0
   allowed_formats: 0
+  better_exposed_filters: 0
   blazy: 0
   block: 0
   block_class: 0
@@ -74,6 +75,10 @@ module:
   image: 0
   image_widget_crop: 0
   imce: 0
+  jquery_ui: 0
+  jquery_ui_datepicker: 0
+  jquery_ui_slider: 0
+  jquery_ui_touch_punch: 0
   jsonapi: 0
   jsonapi_extras: 0
   language: 0

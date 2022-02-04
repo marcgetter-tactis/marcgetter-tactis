@@ -38,4 +38,17 @@
 
     }
   };
+
+  $('.panel .block-tab').click(function() {
+    var i = $(this).attr('id');
+
+    if ($('.panel .block-tab').hasClass('active')) {
+      $('.panel .block-tab').removeClass('active');
+      $('.panel-content').hide();
+    }
+    
+    $(this).addClass('active');
+    $('#' + i + '-body').fadeIn('slow');
+  })
+
 })(jQuery);

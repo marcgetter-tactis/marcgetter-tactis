@@ -31,7 +31,7 @@ Mission Block
       height: 18rem;
       margin-right: 2rem;
     }
-    @media (max-width: 49.99em) {
+    @media (max-width: 47.99em) {
       display: none;
     }
   }
@@ -70,7 +70,7 @@ Mission Block
     @include grid-offset(4);
     margin-top: 2rem;
     margin-bottom: 2rem;
-    @media (max-width: 49.99em) {
+    @media (max-width: 47.99em) {
       @include u-width(full);
       margin: 2rem 0 3rem;
     }
@@ -98,7 +98,7 @@ Mission Block
       height: 1rem;
     }
 
-    @media (max-width: 49.99em) {
+    @media (max-width: 47.99em) {
       font-size: 1rem;
       &:after {
         height: .5rem;
@@ -123,7 +123,7 @@ Mission Block
         font-size: 3.5rem;
         margin-bottom: .5rem;
         font-weight: 500;
-        @media (max-width: 49.99em) {
+        @media (max-width: 47.99em) {
           font-size: 2rem;
         }
       }
@@ -140,5 +140,6 @@ Mission Block
     top: -8rem;
     right: 0;
     opacity: 0.05;
+    pointer-events: none;
   }
 }

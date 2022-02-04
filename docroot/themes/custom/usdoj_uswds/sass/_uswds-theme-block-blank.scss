@@ -13,13 +13,11 @@ USWDS THEME CUSTOM STYLES
    sass root. Don't edit the version
    in node_modules.
 ----------------------------------------
-Blank Block on Homepage
-
-
+Blank Block
 ----------------------------------------
 */
 
-.block-homepage-resources {
+.block-blank {
     padding: 3rem 0;
 
     h2.block-title {
@@ -28,7 +26,7 @@ Blank Block on Homepage
     .field_header, .field_body, .field_cta, img {
       @include grid-col(6);
       
-      @media (max-width: 49.99em) {
+      @media (max-width: 47.99em) {
         @include grid-col(12);
       }
     }

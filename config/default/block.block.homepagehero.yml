@@ -1,31 +1,28 @@
-uuid: c258b699-9688-469f-b5f7-76b4f0457233
+uuid: cc2ae097-7ba4-4bb4-bc05-5e40ca0af287
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:mission:5048c1c8-d5c5-48ad-85d3-ec45dcd25ab7'
+    - 'block_content:hero:3d51199e-7b0c-4737-be2a-8ae1fd528e02'
   module:
-    - block_class
     - block_content
     - collapsiblock
     - system
   theme:
     - usdoj_uswds
 third_party_settings:
-  block_class:
-    classes: block-homepage-mission
   collapsiblock:
     collapse_action: 0
-id: ourmission
+id: homepagehero
 theme: usdoj_uswds
-region: content
-weight: -6
+region: hero
+weight: 0
 provider: null
-plugin: 'block_content:5048c1c8-d5c5-48ad-85d3-ec45dcd25ab7'
+plugin: 'block_content:3d51199e-7b0c-4737-be2a-8ae1fd528e02'
 settings:
-  id: 'block_content:5048c1c8-d5c5-48ad-85d3-ec45dcd25ab7'
-  label: 'Our Mission'
-  label_display: visible
+  id: 'block_content:3d51199e-7b0c-4737-be2a-8ae1fd528e02'
+  label: 'Homepage Hero'
+  label_display: '0'
   provider: block_content
   status: true
   info: ''

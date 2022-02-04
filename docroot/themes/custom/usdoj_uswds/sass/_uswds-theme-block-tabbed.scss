@@ -1,0 +1,127 @@
+/*
+* * * * * ==============================
+* * * * * ==============================
+* * * * * ==============================
+* * * * * ==============================
+========================================
+========================================
+========================================
+----------------------------------------
+USWDS THEME CUSTOM STYLES
+----------------------------------------
+!! Copy this file to your project's
+   sass root. Don't edit the version
+   in node_modules.
+----------------------------------------
+Tabbed Block on Homepage
+
+----------------------------------------
+*/
+
+.block-tabbed {
+  padding: 3rem 0;
+
+  .field_header {
+    display: none;
+  }
+
+  .panels { 
+    position: relative; 
+    min-height: 48rem;
+    background: white;
+    border: 1px solid #eaeaea;
+    box-shadow: 0 0 0.5rem rgb(0 0 0 / 17%);
+    
+    .panel { 
+      display: inline;
+      
+      .block-tab { 
+        position: relative; 
+        float: left; 
+        display: block; 
+        text-decoration: none;
+        text-align: center;
+        width: auto;
+        padding: 1.85rem 0;
+        margin: 0 10%;
+        &.active {
+          color: color(primary-darker);
+          font-weight: bold;
+          border-bottom: 3px solid color(warning);
+          ~ .panel-content {
+            display: block;
+          }
+        }
+      }
+
+      .panel-content { 
+        display: none;
+        position: absolute;
+        left: 0; 
+        top: 5rem; 
+        bottom: 0; 
+        right: 0;
+        padding: 3rem;
+        border-top: 1px solid $gray-10;
+
+        .paragraph--type--card {
+          .usa-card__container {
+            border: none;
+            box-shadow: none;
+            .usa-card__media--inset {
+              padding: 0;
+            }
+            .usa-card__body {
+              padding: 0;
+              text-align: center;
+              min-height: 16rem;
+            }
+            .usa-card__footer {
+              text-align: center;
+              padding: 0;
+              .field_cta a {
+                color: white;
+                background: color(primary-darker);
+                padding: 0.75rem 1rem;
+                border-radius: 0.25rem;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: .9rem;
+                margin: 0 auto;
+
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .field_cta a {
+    width: 12rem;
+    display: block;
+    text-align: center;
+    margin: 2rem auto 1rem;
+    padding: 0.75rem 1.25rem;
+    border: 2px solid color(primary-darker);
+    border-radius: 0.25rem;
+    font-weight: bold;
+    color: color(primary-darker);
+    text-decoration: none;
+  }
+
+
+  .paragraph--type--tab {
+    .field__items {
+      @include grid-row;
+      .field__item {
+        @include grid-col(12);
+        @media (min-width: 48em) {
+          @include grid-col(4);
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+

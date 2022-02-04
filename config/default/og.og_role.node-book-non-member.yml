@@ -1,0 +1,16 @@
+uuid: 1005d650-d9e6-44ee-88b5-1682fd9a51f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.book
+id: node-book-non-member
+label: Non-member
+weight: 30
+group_id: null
+group_type: node
+group_bundle: book
+is_admin: null
+permissions:
+  - subscribe
+role_type: required

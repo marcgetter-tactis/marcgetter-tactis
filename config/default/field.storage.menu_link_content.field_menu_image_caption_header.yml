@@ -1,0 +1,21 @@
+uuid: 8900df95-5731-4cd0-b845-b475164ca534
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_link_content
+id: menu_link_content.field_menu_image_caption_header
+field_name: field_menu_image_caption_header
+entity_type: menu_link_content
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

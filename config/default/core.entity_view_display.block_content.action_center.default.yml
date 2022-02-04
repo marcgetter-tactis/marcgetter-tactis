@@ -5,7 +5,7 @@ dependencies:
   config:
     - block_content.type.action_center
     - field.field.block_content.action_center.field_action_center_items
-    - field.field.block_content.action_center.field_background_color
+    - field.field.block_content.action_center.field_background_class
     - field.field.block_content.action_center.field_cta
     - field.field.block_content.action_center.field_display_items
     - field.field.block_content.action_center.field_heading
@@ -48,7 +48,7 @@ content:
     weight: 0
     region: content
 hidden:
-  field_background_color: true
+  field_background_class: true
   field_display_items: true
   langcode: true
   og_audience: true

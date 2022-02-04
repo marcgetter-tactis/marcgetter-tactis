@@ -18,10 +18,8 @@ dependencies:
     - field.field.node.event.field_press
     - field.field.node.event.field_registration
     - field.field.node.event.field_timezone
-    - field.field.node.event.og_audience
     - node.type.event
   module:
-    - og
     - user
 id: node.event.teaser
 targetEntityType: node
@@ -32,13 +30,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 100
-    region: content
-  og_group:
-    type: og_group_subscribe
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 0
     region: content
 hidden:
   field_attachment: true
@@ -56,5 +47,4 @@ hidden:
   field_registration: true
   field_timezone: true
   langcode: true
-  og_audience: true
   search_api_excerpt: true

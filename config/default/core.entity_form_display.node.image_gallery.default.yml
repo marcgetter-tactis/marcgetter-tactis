@@ -8,33 +8,15 @@ dependencies:
     - field.field.node.image_gallery.field_date
     - field.field.node.image_gallery.field_photo
     - field.field.node.image_gallery.field_related
-    - field.field.node.image_gallery.og_audience
     - node.type.image_gallery
   module:
     - datetime
     - field_group
     - media_library
-    - og
     - path
     - scheduler
     - scheduler_content_moderation_integration
     - text
-third_party_settings:
-  field_group:
-    group_organization:
-      children:
-        - og_audience
-      label: Organization
-      region: content
-      parent_name: ''
-      weight: 1
-      format_type: fieldset
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        description: ''
-        required_fields: true
 id: node.image_gallery.default
 targetEntityType: node
 bundle: image_gallery
@@ -87,16 +69,6 @@ content:
     region: content
     settings:
       include_locked: true
-    third_party_settings: {  }
-  og_audience:
-    type: og_complex
-    weight: 7
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
   path:
     type: path

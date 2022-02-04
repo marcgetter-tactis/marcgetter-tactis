@@ -9,10 +9,8 @@ dependencies:
     - field.field.node.multi_defendant_case.field_location
     - field.field.node.multi_defendant_case.field_number
     - field.field.node.multi_defendant_case.field_status
-    - field.field.node.multi_defendant_case.og_audience
     - node.type.multi_defendant_case
   module:
-    - og
     - user
 id: node.multi_defendant_case.teaser
 targetEntityType: node
@@ -24,13 +22,6 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
-  og_group:
-    type: og_group_subscribe
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 0
-    region: content
 hidden:
   field_attachment: true
   field_charges: true
@@ -38,5 +29,4 @@ hidden:
   field_number: true
   field_status: true
   langcode: true
-  og_audience: true
   search_api_excerpt: true

@@ -8,11 +8,9 @@ dependencies:
     - field.field.node.court_decision.field_date
     - field.field.node.court_decision.field_image
     - field.field.node.court_decision.field_topic
-    - field.field.node.court_decision.og_audience
     - node.type.court_decision
   module:
     - datetime
-    - og
     - path
     - scheduler
     - scheduler_content_moderation_integration
@@ -78,16 +76,6 @@ content:
     region: content
     settings:
       include_locked: true
-    third_party_settings: {  }
-  og_audience:
-    type: og_complex
-    weight: 123
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
   path:
     type: path

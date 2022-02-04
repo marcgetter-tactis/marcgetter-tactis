@@ -18,13 +18,11 @@ dependencies:
     - field.field.node.event.field_press
     - field.field.node.event.field_registration
     - field.field.node.event.field_timezone
-    - field.field.node.event.og_audience
     - node.type.event
   module:
     - address
     - layout_builder
     - link
-    - og
     - options
     - text
     - user
@@ -123,21 +121,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 100
-    region: content
-  og_audience:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 101
-    region: content
-  og_group:
-    type: og_group_subscribe
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 0
     region: content
 hidden:
   field_attachment: true

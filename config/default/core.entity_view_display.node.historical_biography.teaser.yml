@@ -13,7 +13,6 @@ dependencies:
     - field.field.node.historical_biography.field_portrait_artist
     - field.field.node.historical_biography.field_portrait_download
     - field.field.node.historical_biography.field_teaser
-    - field.field.node.historical_biography.og_audience
     - node.type.historical_biography
   module:
     - user
@@ -38,5 +37,4 @@ hidden:
   field_portrait_download: true
   field_teaser: true
   langcode: true
-  og_audience: true
   search_api_excerpt: true

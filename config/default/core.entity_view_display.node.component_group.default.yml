@@ -15,13 +15,11 @@ dependencies:
     - field.field.node.component_group.more_galleries
     - field.field.node.component_group.more_news
     - field.field.node.component_group.more_videos
-    - field.field.node.component_group.og_audience
     - node.type.component_group
   module:
     - layout_builder
     - layout_discovery
     - link
-    - og
     - options
     - text
     - user
@@ -152,21 +150,6 @@ content:
       target: ''
     third_party_settings: {  }
     weight: 12
-    region: content
-  og_audience:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 13
-    region: content
-  og_group:
-    type: og_group_subscribe
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 0
     region: content
 hidden:
   langcode: true

@@ -8,10 +8,8 @@ dependencies:
     - field.field.node.case_document.field_body
     - field.field.node.case_document.field_casedoc_type
     - field.field.node.case_document.field_date
-    - field.field.node.case_document.og_audience
     - node.type.case_document
   module:
-    - og
     - user
 id: node.case_document.teaser
 targetEntityType: node
@@ -23,18 +21,10 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
-  og_group:
-    type: og_group_subscribe
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 0
-    region: content
 hidden:
   field_attachment: true
   field_body: true
   field_casedoc_type: true
   field_date: true
   langcode: true
-  og_audience: true
   search_api_excerpt: true

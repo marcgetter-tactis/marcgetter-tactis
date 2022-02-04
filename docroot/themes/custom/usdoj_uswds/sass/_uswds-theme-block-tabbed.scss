@@ -36,18 +36,24 @@ Tabbed Block on Homepage
       display: inline;
       
       .block-tab { 
-        position: relative; 
-        float: left; 
-        display: block; 
+        display: inline-block;
         text-decoration: none;
         text-align: center;
-        width: auto;
-        padding: 1.85rem 0;
-        margin: 0 10%;
+        width: 24.5%;
+        
         &.active {
-          color: color(primary-darker);
-          font-weight: bold;
-          border-bottom: 3px solid color(warning);
+          display: inline-block;
+          padding: 1.85rem 0;
+
+          span {
+            color: color(primary-darker);
+            width: fit-content;
+            margin: 0 auto;
+            font-weight: bold;
+            border-bottom: 3px solid color(warning);
+            padding: inherit;
+          }
+
           ~ .panel-content {
             display: block;
           }
@@ -64,21 +70,29 @@ Tabbed Block on Homepage
         padding: 3rem;
         border-top: 1px solid $gray-10;
 
+        .field_headline {
+          display: none;
+        }
+
         .paragraph--type--card {
           .usa-card__container {
             border: none;
             box-shadow: none;
+            
             .usa-card__media--inset {
               padding: 0;
             }
+            
             .usa-card__body {
               padding: 0;
               text-align: center;
               min-height: 16rem;
             }
+            
             .usa-card__footer {
               text-align: center;
               padding: 0;
+              
               .field_cta a {
                 color: white;
                 background: color(primary-darker);
@@ -112,8 +126,10 @@ Tabbed Block on Homepage
 
 
   .paragraph--type--tab {
+    
     .field__items {
       @include grid-row;
+      
       .field__item {
         @include grid-col(12);
         @media (min-width: 48em) {

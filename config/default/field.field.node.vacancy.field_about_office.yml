@@ -1,0 +1,26 @@
+uuid: 518f9098-32b2-4329-a809-e315b04f1b18
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_about_office
+    - node.type.vacancy
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - wysiwyg
+id: node.vacancy.field_about_office
+field_name: field_about_office
+entity_type: node
+bundle: vacancy
+label: 'About the Office'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

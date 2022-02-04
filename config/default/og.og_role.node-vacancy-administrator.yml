@@ -1,0 +1,15 @@
+uuid: 6009dc50-809f-4f5c-850e-e2178008aab7
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.vacancy
+id: node-vacancy-administrator
+label: Administrator
+weight: 34
+group_id: null
+group_type: node
+group_bundle: vacancy
+is_admin: true
+permissions: {  }
+role_type: null

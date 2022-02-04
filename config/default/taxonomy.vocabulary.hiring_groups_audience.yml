@@ -1,0 +1,8 @@
+uuid: 8656e2cb-dfcf-4281-99b7-f40128319cdd
+langcode: en
+status: true
+dependencies: {  }
+name: 'Hiring Groups Audience'
+vid: hiring_groups_audience
+description: ''
+weight: 0

@@ -1,0 +1,15 @@
+uuid: 8be8f739-b74c-4e70-825e-3f3599cc9dd8
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.vacancy
+id: node-vacancy-member
+label: Member
+weight: 33
+group_id: null
+group_type: node
+group_bundle: vacancy
+is_admin: null
+permissions: {  }
+role_type: required

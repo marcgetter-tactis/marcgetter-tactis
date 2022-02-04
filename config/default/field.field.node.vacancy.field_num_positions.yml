@@ -1,0 +1,19 @@
+uuid: 83ffef2e-8a73-4ed6-acdc-f7844bd84423
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_num_positions
+    - node.type.vacancy
+id: node.vacancy.field_num_positions
+field_name: field_num_positions
+entity_type: node
+bundle: vacancy
+label: 'Number of Positions'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

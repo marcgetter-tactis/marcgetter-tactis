@@ -4,7 +4,9 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_body
+    - field.storage.node.field_component
     - field.storage.node.field_date
+    - field.storage.node.field_topic
     - search_api.server.database
     - core.entity_view_mode.node.search_index
   module:
@@ -36,6 +38,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_body
+  field_component:
+    label: Component(s)
+    datasource_id: 'entity:node'
+    property_path: field_component
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_component
   field_date:
     label: Date
     datasource_id: 'entity:node'
@@ -44,6 +54,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_date
+  field_topic:
+    label: Topic(s)
+    datasource_id: 'entity:node'
+    property_path: field_topic
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_topic
   langcode:
     label: Language
     datasource_id: 'entity:node'

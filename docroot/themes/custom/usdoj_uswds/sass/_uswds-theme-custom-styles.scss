@@ -511,10 +511,12 @@ strong {
     content: "";
     position: absolute;
     top: 0;
-    left: -50vw;
-    width: 200vw;
     height: 100%;
     z-index: -1;
-    background-color: inherit;  
+    background-color: inherit;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin: 0 -50vw;
   }
 }

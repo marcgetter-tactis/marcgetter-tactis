@@ -43,7 +43,7 @@
     var i = $(this).attr('id');
 
     if ($('.panel .block-tab').hasClass('active')) {
-      $(this).removeClass('active');
+      $('.panel .block-tab').removeClass('active');
       $('.panel-content').hide();
     }
     

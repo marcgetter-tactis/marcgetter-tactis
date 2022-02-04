@@ -6,6 +6,7 @@ assets:
   js:
     assets/js/uswds.min.js: {}
     js/script.js: {}
+    js/menu.js: {}
   dependencies:
     - core/jquery
     - core/jquery.once

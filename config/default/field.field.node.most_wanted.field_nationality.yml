@@ -1,0 +1,19 @@
+uuid: 34e2e6a0-6676-436d-822e-6c479f121646
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nationality
+    - node.type.most_wanted
+id: node.most_wanted.field_nationality
+field_name: field_nationality
+entity_type: node
+bundle: most_wanted
+label: Nationality
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

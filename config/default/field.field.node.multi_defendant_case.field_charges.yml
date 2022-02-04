@@ -1,0 +1,26 @@
+uuid: 5ef980fa-cb1f-4ee9-a377-d9735e6275fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_charges
+    - node.type.multi_defendant_case
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - wysiwyg
+id: node.multi_defendant_case.field_charges
+field_name: field_charges
+entity_type: node
+bundle: multi_defendant_case
+label: Charge(s)
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

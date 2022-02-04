@@ -1,0 +1,19 @@
+uuid: 6cd48c0a-3a98-4eb4-a3b9-d1d7972724fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hair
+    - node.type.most_wanted
+id: node.most_wanted.field_hair
+field_name: field_hair
+entity_type: node
+bundle: most_wanted
+label: Hair
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

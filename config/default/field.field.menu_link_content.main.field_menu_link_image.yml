@@ -1,0 +1,29 @@
+uuid: 0e7234db-c5ec-4d1e-a7b6-1255d9898f73
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.menu_link_content.field_menu_link_image
+    - media.type.image
+    - system.menu.main
+id: menu_link_content.main.field_menu_link_image
+field_name: field_menu_link_image
+entity_type: menu_link_content
+bundle: main
+label: 'Link Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

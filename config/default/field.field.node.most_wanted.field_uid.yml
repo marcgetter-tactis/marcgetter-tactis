@@ -1,0 +1,19 @@
+uuid: 395c9297-5ee5-4fee-9aec-07e6c46e330e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_uid
+    - node.type.most_wanted
+id: node.most_wanted.field_uid
+field_name: field_uid
+entity_type: node
+bundle: most_wanted
+label: uid
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

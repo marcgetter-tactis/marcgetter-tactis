@@ -1,0 +1,21 @@
+uuid: a4f80b77-8e0e-4026-895b-8938d36f34f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_list_style_type
+    - node.type.book
+  module:
+    - options
+id: node.book.field_list_style_type
+field_name: field_list_style_type
+entity_type: node
+bundle: book
+label: 'List Style Types'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

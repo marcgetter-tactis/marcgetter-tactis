@@ -1,0 +1,15 @@
+uuid: 69cc3191-7025-4a5e-858a-7924705616ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.multi_defendant_case
+id: node-multi_defendant_case-member
+label: Member
+weight: 28
+group_id: null
+group_type: node
+group_bundle: multi_defendant_case
+is_admin: null
+permissions: {  }
+role_type: required

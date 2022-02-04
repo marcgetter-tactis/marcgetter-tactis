@@ -10,7 +10,8 @@ groups:
     5: image_gallery
     6: testimony
     8: case_document
-    9: book
+    9: multi_defendant_case
+    10: book
 group_manager_full_access: true
 node_access_strict: true
 delete_orphans: false

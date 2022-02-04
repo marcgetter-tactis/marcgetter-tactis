@@ -1,0 +1,26 @@
+uuid: 212fcd87-9f36-4083-8d22-34a1e3784f01
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_qualifications
+    - node.type.vacancy
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - wysiwyg
+id: node.vacancy.field_qualifications
+field_name: field_qualifications
+entity_type: node
+bundle: vacancy
+label: Qualifications
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

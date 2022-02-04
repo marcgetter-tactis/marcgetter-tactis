@@ -1,0 +1,66 @@
+uuid: 4388a8f2-ce14-4132-8235-dda77b6bd654
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.vacancy.field_about_office
+    - field.field.node.vacancy.field_application_process
+    - field.field.node.vacancy.field_body
+    - field.field.node.vacancy.field_date
+    - field.field.node.vacancy.field_diversity
+    - field.field.node.vacancy.field_hiring_office
+    - field.field.node.vacancy.field_hiring_org
+    - field.field.node.vacancy.field_job_id
+    - field.field.node.vacancy.field_location
+    - field.field.node.vacancy.field_num_positions
+    - field.field.node.vacancy.field_practice_area
+    - field.field.node.vacancy.field_qualifications
+    - field.field.node.vacancy.field_relocation_expenses
+    - field.field.node.vacancy.field_salary
+    - field.field.node.vacancy.field_show_diversity_statement
+    - field.field.node.vacancy.field_travel
+    - field.field.node.vacancy.field_va_position
+    - field.field.node.vacancy.og_audience
+    - node.type.vacancy
+  module:
+    - og
+    - user
+id: node.vacancy.teaser
+targetEntityType: node
+bundle: vacancy
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  og_group:
+    type: og_group_subscribe
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_about_office: true
+  field_application_process: true
+  field_body: true
+  field_date: true
+  field_diversity: true
+  field_hiring_office: true
+  field_hiring_org: true
+  field_job_id: true
+  field_location: true
+  field_num_positions: true
+  field_practice_area: true
+  field_qualifications: true
+  field_relocation_expenses: true
+  field_salary: true
+  field_show_diversity_statement: true
+  field_travel: true
+  field_va_position: true
+  langcode: true
+  og_audience: true
+  search_api_excerpt: true

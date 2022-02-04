@@ -1,0 +1,11 @@
+uuid: 92f3581a-9906-4f8f-b533-e443bea41bf1
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.hiring_groups_audience
+id: taxonomy_term.hiring_groups_audience
+target_entity_type_id: taxonomy_term
+target_bundle: hiring_groups_audience
+default_langcode: site_default
+language_alterable: false

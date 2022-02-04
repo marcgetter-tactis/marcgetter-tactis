@@ -28,6 +28,6 @@ matchers:
       metadata: ''
       bundles: {  }
       group_by_bundle: false
-      substitution_type: canonical
+      substitution_type: media
       limit: 100
     weight: 0

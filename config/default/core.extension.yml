@@ -57,6 +57,9 @@ module:
   entity_reference_revisions: 0
   facets: 0
   facets_pretty_paths: 0
+  feeds: 0
+  feeds_ex: 0
+  feeds_tamper: 0
   field: 0
   field_group: 0
   field_ui: 0
@@ -149,6 +152,7 @@ module:
   structure_sync: 0
   svg_image: 0
   system: 0
+  tamper: 0
   taxonomy: 0
   taxonomy_import: 0
   telephone: 0
@@ -158,10 +162,12 @@ module:
   toolbar: 0
   twig_tweak: 0
   update: 0
+  usdoj_most_wanted: 0
   user: 0
   username_enumeration_prevention: 0
   variationcache: 0
   viewfield: 0
+  views_autocomplete_filters: 0
   views_ui: 0
   viewsreference: 0
   workbench_email: 0

@@ -1,0 +1,28 @@
+uuid: cea8ec26-1f48-42e4-b997-a730943bc381
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_anonymous_tip
+    - node.type.most_wanted
+  module:
+    - link
+id: node.most_wanted.field_anonymous_tip
+field_name: field_anonymous_tip
+entity_type: node
+bundle: most_wanted
+label: 'Anonymous Tip'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    attributes: {  }
+    uri: 'https://tips.fbi.gov/'
+    title: 'Submit an anonymous Tip online'
+    options: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

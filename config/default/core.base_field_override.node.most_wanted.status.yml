@@ -1,0 +1,22 @@
+uuid: e226776e-026a-41ea-8797-823471c09ac8
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.most_wanted
+id: node.most_wanted.status
+field_name: status
+entity_type: node
+bundle: most_wanted
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

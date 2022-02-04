@@ -1,0 +1,21 @@
+uuid: d38c3342-6f5b-4d08-bedb-089706ad2bc0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_reward
+    - node.type.most_wanted
+  module:
+    - text
+id: node.most_wanted.field_reward
+field_name: field_reward
+entity_type: node
+bundle: most_wanted
+label: Reward
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -26,3 +26,21 @@ command-hooks:
   frontend-assets:
     dir: '${repo.root}'
     command: ./blt/scripts/frontend-build.sh
+validate:
+  twig:
+    functions:
+      - drupal_block
+      - drupal_breadcrumb
+      - drupal_config
+      - drupal_entity
+      - drupal_field
+      - drupal_form
+      - drupal_image
+      - drupal_link
+      - drupal_menu
+      - drupal_messages
+      - drupal_region
+      - drupal_title
+      - drupal_token
+      - drupal_url
+      - drupal_view

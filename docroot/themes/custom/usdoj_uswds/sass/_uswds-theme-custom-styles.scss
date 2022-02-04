@@ -520,3 +520,237 @@ strong {
     z-index: -1;  
   }
 }
+
+/************************************************
+Primary Menu (with Images) - START
+************************************************/
+header.usa-header--extended {
+  @include at-media-max(desktop) {
+    #mobile-btn:checked {
+      & + label.hamburger {
+        & > nav.usa-nav {
+          ul {
+            .usa-nav__submenu-item {
+              a {
+                color: $blue-60v;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @include at-media(desktop) {
+    .usa-nav__primary-item {
+      &:hover {
+        position: static;
+        color: $doj-darkblue;
+
+        &:after {
+          content: '';
+          width: 100%;
+          height: 15px;
+          //background-color: blue;
+          position: absolute;
+          top: calc(100% - 1px);
+          left: 0;
+        }
+
+        button {
+          color: inherit;
+          @include add-background-svg("usa-icons-bg/expand_more--blue-warm-70v");
+
+          + .menu_level__1,
+          + #basic-nav-section-1 {
+            display: block;
+          }
+        }
+      }
+
+      > .usa-nav__link {
+        &:hover {
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+    nav.usa-nav ul li:hover {
+      //background-color: transparent;
+    }
+
+  }
+
+}
+
+.usa-nav__primary {
+  button {
+    @include at-media-max(desktop) {
+
+      color: white;
+      font-weight: bold;
+
+      &[aria-expanded="false"] {
+        @include add-background-svg("usa-icons-bg/add--white")
+      }
+      &[aria-expanded="true"] {
+        @include add-background-svg("usa-icons-bg/remove--white")
+      }
+      &:hover {
+        background-color: $doj-darkgray;
+        color: $theme-color-accent-warm;
+      }
+
+    }
+    @include at-media(desktop) {
+      color: white;
+      font-size: .94rem;
+      height: 100%;
+
+      &:hover {
+        color: $doj-darkblue;
+      }
+      &[aria-expanded=false] {
+        @include add-background-svg("usa-icons-bg/expand_more--white");
+      }
+      &[aria-expanded=true] {
+        @include add-background-svg("usa-icons/expand_less");
+        background-color: $theme-color-accent-warm;
+        color: $doj-darkblue;
+      }
+
+    }
+  }
+}
+
+.usa-megamenu {
+  &.usa-nav__submenu {
+    top: 100%;
+    background-color: white;
+
+    &::before,
+    &::after {
+      background-color: inherit;
+    }
+
+    @include at-media(desktop) {
+      a {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.usa-nav__submenu {
+  background-color: white;
+
+  .usa-nav__submenu-item {
+    font-size: .9375rem;
+
+    a {
+      color: $blue-60v;
+      font-weight: bold;
+      display: block;
+
+      span {
+        display: inherit;
+      }
+
+      &:hover {
+        color: $doj-darkblue;
+      }
+
+    }
+    @include at-media(desktop) {
+      &:hover{background-color:transparent}
+    }
+  }
+}
+
+.menu_link_imaged {
+  @include at-media-max(desktop) {
+    display: none;
+  }
+  display: inline-block;
+
+  &__content {
+    position: relative;
+    overflow: hidden;
+    display: block;
+  }
+
+  &__link_title {
+    text-align: center;
+    width: 100%;
+    //display: inline-block;
+    font-size: 1rem;
+    min-height: 50px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+  }
+
+  &__media {
+    .field_menu_link {
+      &_image {
+        line-height: 0;
+      }
+    }
+  }
+
+  &__captions {
+    position: absolute;
+    opacity: .75;
+    background-color: #000;
+    width: 100%;
+    bottom: -100%;
+    padding: 1em;
+    font-size: .875rem;
+    transition: bottom .25s ease-out
+  }
+
+  &__caption_header {
+    color: $theme-color-accent-warm;
+  }
+
+  &__caption_subHeader {
+    color: white;
+    font-weight: normal;
+  }
+
+  a {
+    &:hover {
+      .menu_link_imaged {
+        &__link_title {
+          text-decoration: underline;
+        }
+
+        &__captions {
+          bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.no_menu_link_image__link_title {
+  margin-bottom: 1rem;
+}
+
+.non_imaged_links__container {
+  @include at-media(desktop) {
+    .individual_menu_level__1 {
+      margin-top: .875em;
+    }
+
+    > .individual_menu_level__1 {
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+/************************************************
+MegaMenu (with Images) - END
+************************************************/

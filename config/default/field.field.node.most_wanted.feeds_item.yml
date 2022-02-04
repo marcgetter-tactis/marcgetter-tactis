@@ -1,0 +1,23 @@
+uuid: 46e005c3-398e-464c-88cf-30077244e030
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.feeds_item
+    - node.type.most_wanted
+  module:
+    - feeds
+id: node.most_wanted.feeds_item
+field_name: feeds_item
+entity_type: node
+bundle: most_wanted
+label: 'Feeds item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:feeds_feed'
+  handler_settings: {  }
+field_type: feeds_item

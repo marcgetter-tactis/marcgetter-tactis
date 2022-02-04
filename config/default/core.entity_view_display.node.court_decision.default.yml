@@ -1,0 +1,77 @@
+uuid: 1c731448-63e4-4b54-b5a2-5981b2165234
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.court_decision.field_attachment
+    - field.field.node.court_decision.field_body
+    - field.field.node.court_decision.field_date
+    - field.field.node.court_decision.field_image
+    - field.field.node.court_decision.field_topic
+    - field.field.node.court_decision.og_audience
+    - node.type.court_decision
+  module:
+    - datetime
+    - text
+    - user
+id: node.court_decision.default
+targetEntityType: node
+bundle: court_decision
+mode: default
+content:
+  field_attachment:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_image:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_topic:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  og_audience:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

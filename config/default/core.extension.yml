@@ -27,6 +27,7 @@ module:
   chosen: 0
   chosen_lib: 0
   ckeditor: 0
+  ckeditor_accordion: 0
   collapse_text: 0
   collapsiblock: 0
   config: 0
@@ -79,6 +80,7 @@ module:
   layout_builder: 0
   layout_discovery: 0
   link: 0
+  linkit: 0
   locale: 0
   media: 0
   media_library: 0

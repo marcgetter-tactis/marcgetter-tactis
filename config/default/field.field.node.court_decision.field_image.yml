@@ -1,0 +1,29 @@
+uuid: 98bda3d5-2b9b-4c29-96b9-e59a6ee4a53d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image
+    - media.type.image
+    - node.type.court_decision
+id: node.court_decision.field_image
+field_name: field_image
+entity_type: node
+bundle: court_decision
+label: Images
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

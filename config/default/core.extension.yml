@@ -17,6 +17,7 @@ module:
   admin_toolbar: 0
   admin_toolbar_tools: 0
   allowed_formats: 0
+  better_exposed_filters: 0
   blazy: 0
   block: 0
   block_class: 0
@@ -27,6 +28,7 @@ module:
   chosen: 0
   chosen_lib: 0
   ckeditor: 0
+  ckeditor_accordion: 0
   collapse_text: 0
   collapsiblock: 0
   config: 0
@@ -47,6 +49,7 @@ module:
   diff: 0
   easy_breadcrumb: 0
   editor: 0
+  editor_advanced_link: 0
   embed: 0
   entity: 0
   entity_clone: 0
@@ -73,15 +76,22 @@ module:
   image: 0
   image_widget_crop: 0
   imce: 0
+  jquery_ui: 0
+  jquery_ui_datepicker: 0
+  jquery_ui_slider: 0
+  jquery_ui_touch_punch: 0
   jsonapi: 0
   jsonapi_extras: 0
   language: 0
   layout_builder: 0
   layout_discovery: 0
   link: 0
+  link_attributes: 0
+  linkit: 0
   locale: 0
   media: 0
   media_library: 0
+  menu_item_extras: 0
   menu_link_content: 0
   menu_ui: 0
   metatag: 0

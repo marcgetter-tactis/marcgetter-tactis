@@ -1,0 +1,27 @@
+uuid: 925da751-5a1f-4e7f-be10-1b2e617cd8a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.og_audience
+    - node.type.component_group
+    - node.type.multi_defendant_case
+  module:
+    - og
+id: node.multi_defendant_case.og_audience
+field_name: og_audience
+entity_type: node
+bundle: multi_defendant_case
+label: 'Groups audience'
+description: 'OG group audience reference field.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'og:default'
+  handler_settings:
+    target_bundles:
+      component_group: component_group
+      multi_defendant_case: multi_defendant_case
+field_type: og_standard_reference

@@ -1,0 +1,19 @@
+uuid: 64915231-4611-4224-bb00-357f00553e39
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_charges
+field_name: field_charges
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

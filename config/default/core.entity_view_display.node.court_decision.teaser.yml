@@ -9,7 +9,6 @@ dependencies:
     - field.field.node.court_decision.field_date
     - field.field.node.court_decision.field_image
     - field.field.node.court_decision.field_topic
-    - field.field.node.court_decision.og_audience
     - node.type.court_decision
   module:
     - user
@@ -30,5 +29,4 @@ hidden:
   field_image: true
   field_topic: true
   langcode: true
-  og_audience: true
   search_api_excerpt: true

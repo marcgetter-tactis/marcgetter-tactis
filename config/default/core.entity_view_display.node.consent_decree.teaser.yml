@@ -9,7 +9,6 @@ dependencies:
     - field.field.node.consent_decree.field_comment_period
     - field.field.node.consent_decree.field_component
     - field.field.node.consent_decree.field_weight
-    - field.field.node.consent_decree.og_audience
     - node.type.consent_decree
   module:
     - user
@@ -23,13 +22,6 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
-  og_group:
-    type: og_group_subscribe
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 0
-    region: content
 hidden:
   field_attachment: true
   field_body: true
@@ -37,5 +29,4 @@ hidden:
   field_component: true
   field_weight: true
   langcode: true
-  og_audience: true
   search_api_excerpt: true

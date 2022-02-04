@@ -8,32 +8,14 @@ dependencies:
     - field.field.node.consent_decree.field_comment_period
     - field.field.node.consent_decree.field_component
     - field.field.node.consent_decree.field_weight
-    - field.field.node.consent_decree.og_audience
     - node.type.consent_decree
   module:
     - field_group
     - media_library
-    - og
     - path
     - scheduler
     - scheduler_content_moderation_integration
     - text
-third_party_settings:
-  field_group:
-    group_organization:
-      children:
-        - og_audience
-      label: Organization
-      region: content
-      parent_name: ''
-      weight: 1
-      format_type: fieldset
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        description: ''
-        required_fields: true
 id: node.consent_decree.default
 targetEntityType: node
 bundle: consent_decree
@@ -86,16 +68,6 @@ content:
     region: content
     settings:
       include_locked: true
-    third_party_settings: {  }
-  og_audience:
-    type: og_complex
-    weight: 14
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
   path:
     type: path

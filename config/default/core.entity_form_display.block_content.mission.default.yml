@@ -13,11 +13,9 @@ dependencies:
     - field.field.block_content.mission.field_image
     - field.field.block_content.mission.field_statistics
     - field.field.block_content.mission.field_statistics_header
-    - field.field.block_content.mission.og_audience
   module:
     - link
     - media_library
-    - og
     - paragraphs_entity_embed
     - text
 id: block_content.mission.default
@@ -115,15 +113,5 @@ content:
     region: content
     settings:
       include_locked: true
-    third_party_settings: {  }
-  og_audience:
-    type: og_complex
-    weight: 12
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
 hidden: {  }

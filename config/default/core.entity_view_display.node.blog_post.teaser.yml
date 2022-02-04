@@ -17,10 +17,8 @@ dependencies:
     - field.field.node.blog_post.field_teaser
     - field.field.node.blog_post.field_teaser_image
     - field.field.node.blog_post.field_topic
-    - field.field.node.blog_post.og_audience
     - node.type.blog_post
   module:
-    - og
     - text
     - user
 id: node.blog_post.teaser
@@ -40,13 +38,6 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-  og_group:
-    type: og_group_subscribe
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 0
-    region: content
 hidden:
   field_attachment: true
   field_author: true
@@ -61,5 +52,4 @@ hidden:
   field_teaser_image: true
   field_topic: true
   langcode: true
-  og_audience: true
   search_api_excerpt: true

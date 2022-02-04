@@ -8,7 +8,6 @@ dependencies:
     - field.field.node.consent_decree.field_comment_period
     - field.field.node.consent_decree.field_component
     - field.field.node.consent_decree.field_weight
-    - field.field.node.consent_decree.og_audience
     - node.type.consent_decree
   module:
     - options
@@ -61,21 +60,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 0
-    region: content
-  og_audience:
-    type: entity_reference_label
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 1
-    region: content
-  og_group:
-    type: og_group_subscribe
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 2
     region: content
 hidden:
   langcode: true

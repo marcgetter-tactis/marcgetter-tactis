@@ -16,10 +16,8 @@ dependencies:
     - field.field.node.component_group.more_galleries
     - field.field.node.component_group.more_news
     - field.field.node.component_group.more_videos
-    - field.field.node.component_group.og_audience
     - node.type.component_group
   module:
-    - og
     - user
 id: node.component_group.teaser
 targetEntityType: node
@@ -30,13 +28,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 100
-    region: content
-  og_group:
-    type: og_group_subscribe
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 0
     region: content
 hidden:
   field_abbreviation: true
@@ -52,5 +43,4 @@ hidden:
   more_galleries: true
   more_news: true
   more_videos: true
-  og_audience: true
   search_api_excerpt: true

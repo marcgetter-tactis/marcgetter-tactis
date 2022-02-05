@@ -42,43 +42,42 @@
   ]
   %}
 
- {% if label_hidden %}
-      {% if multiple %}
-          <div{{ attributes.addClass('field__items', 'panels') }}>
-              {% for item in items %}
-                    <div  {{ item.attributes.addClass('field__item', 'panel') }}> 
-                    
-                        {% if loop.index == 1 %}
-                          <div id="panel-{{loop.index}}" class="block-tab active"><span>{{ item.content['#paragraph'].field_headline.value }}</span></div>
-                        {% else %}
-                          <div id="panel-{{loop.index}}" class="block-tab"><span>{{ item.content['#paragraph'].field_headline.value }}</span></div>
-                        {% endif %}
-            
-                      <div id="panel-{{loop.index}}-body"class="panel-content">{{ item.content }}</div>
-                      
-                      
-                    </div>
-                
-              {% endfor %}
-          </div>
-      {% else %}
-          {% for item in items %}
-              <div>
-                  <div{{ attributes.addClass(field_name) }}>{{ item.content }}</div>
-              </div>
-          {% endfor %}
-      {% endif %}
-  {% else %}
-      <div{{ attributes }}>
-          <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
-          {% if multiple %}
-          <div>
-              {% endif %}
-              {% for item in items %}
-                  <div{{ item.attributes.addClass(field_name) }}>{{ item.content }}</div>
-              {% endfor %}
-              {% if multiple %}
-          </div>
+{% if label_hidden %}
+  {% if multiple %}
+    <div{{ attributes.addClass('field__items', 'panels') }}>
+      {% for item in items %}
+        <div  {{ item.attributes.addClass('field__item', 'panel') }}> 
+          {% if loop.index == 1 %}
+            <div id="panel-{{loop.index}}" class="block-tab active">
+              <span>{{ item.content['#paragraph'].field_headline.value }}</span>
+            </div>
+          {% else %}
+            <div id="panel-{{loop.index}}" class="block-tab">
+              <span>{{ item.content['#paragraph'].field_headline.value }}</span>
+            </div>
           {% endif %}
+          <div id="panel-{{loop.index}}-body"class="panel-content">{{ item.content }}</div>
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    {% for item in items %}
+      <div>
+        <div{{ attributes.addClass(field_name) }}>{{ item.content }}</div>
       </div>
+    {% endfor %}
   {% endif %}
+{% else %}
+  <div{{ attributes }}>
+    <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
+    {% if multiple %}
+      <div>
+    {% endif %}
+    {% for item in items %}
+      <div{{ item.attributes.addClass(field_name) }}>{{ item.content }}</div>
+    {% endfor %}
+    {% if multiple %}
+      </div>
+    {% endif %}
+  </div>
+{% endif %}

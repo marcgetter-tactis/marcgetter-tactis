@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * @file
+ * Contains usdoj_most_wanted.module.
+ */
+
+/**
+ * Runs most wanted feeds on cron.
+ */
+function usdoj_most_wanted_cron() {
+
+  if (date('G') == 02) {
+    $i = 1;
+    // Determine total number of items and pages in Most Wanted JSON.
+    $response = \Drupal::httpClient()->get('https://api.fbi.gov/@wanted?pageSize=50&page=1');
+    $response_body = $response->getBody();
+    $items = json_decode($response_body->getContents());
+    $total_items = ceil($items->total / 100) * 100;
+    $pages = $total_items / 50;
+
+    do {
+      // Programmatically create a feed to import items.
+      $feed = \Drupal::entityTypeManager()->getStorage('feeds_feed')->create([
+        'type' => 'most_wanted',
+        'uuid' => \Drupal::service('uuid')->generate(),
+        'title' => 'Most wanted feed',
+        'uid' => 1,
+        'status' => 1,
+        'created' => time(),
+        'source' => "https://api.fbi.gov/@wanted?pageSize=50&page=" . $i,
+      ]);
+      $feed->save();
+      $feed->import();
+      $feed->delete();
+      $i++;
+    } while ($i <= $pages);
+  }
+}

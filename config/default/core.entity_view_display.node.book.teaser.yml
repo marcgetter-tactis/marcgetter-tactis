@@ -9,10 +9,8 @@ dependencies:
     - field.field.node.book.field_hide_children
     - field.field.node.book.field_image
     - field.field.node.book.field_list_style_type
-    - field.field.node.book.og_audience
     - node.type.book
   module:
-    - og
     - user
 id: node.book.teaser
 targetEntityType: node
@@ -24,13 +22,6 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
-  og_group:
-    type: og_group_subscribe
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 0
-    region: content
 hidden:
   field_attachment: true
   field_body: true
@@ -38,5 +29,4 @@ hidden:
   field_image: true
   field_list_style_type: true
   langcode: true
-  og_audience: true
   search_api_excerpt: true

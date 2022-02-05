@@ -1,0 +1,21 @@
+uuid: 537f1f8d-8a37-4064-91ab-989ee34ad833
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_occupations
+field_name: field_occupations
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

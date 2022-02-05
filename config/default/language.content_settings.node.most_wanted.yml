@@ -1,0 +1,11 @@
+uuid: 458cb95b-1111-4157-b76e-0f0be84685f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.most_wanted
+id: node.most_wanted
+target_entity_type_id: node
+target_bundle: most_wanted
+default_langcode: site_default
+language_alterable: false

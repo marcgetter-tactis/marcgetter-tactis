@@ -8,11 +8,9 @@ dependencies:
     - field.field.node.multi_defendant_case.field_location
     - field.field.node.multi_defendant_case.field_number
     - field.field.node.multi_defendant_case.field_status
-    - field.field.node.multi_defendant_case.og_audience
     - node.type.multi_defendant_case
   module:
     - address
-    - og
     - text
     - user
 id: node.multi_defendant_case.default
@@ -61,21 +59,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 0
-    region: content
-  og_audience:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 2
-    region: content
-  og_group:
-    type: og_group_subscribe
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 1
     region: content
 hidden:
   langcode: true

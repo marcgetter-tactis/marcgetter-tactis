@@ -24,7 +24,6 @@ dependencies:
     - field.field.node.case.field_tags
     - field.field.node.case.field_topic
     - field.field.node.case.field_violation
-    - field.field.node.case.og_audience
     - node.type.case
   module:
     - user
@@ -37,13 +36,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 100
-    region: content
-  og_group:
-    type: og_group_subscribe
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 0
     region: content
 hidden:
   field_attachment: true
@@ -67,5 +59,4 @@ hidden:
   field_topic: true
   field_violation: true
   langcode: true
-  og_audience: true
   search_api_excerpt: true

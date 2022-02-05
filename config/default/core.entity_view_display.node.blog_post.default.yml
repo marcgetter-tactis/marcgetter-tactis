@@ -16,11 +16,9 @@ dependencies:
     - field.field.node.blog_post.field_teaser
     - field.field.node.blog_post.field_teaser_image
     - field.field.node.blog_post.field_topic
-    - field.field.node.blog_post.og_audience
     - node.type.blog_post
   module:
     - datetime
-    - og
     - options
     - text
     - user
@@ -136,20 +134,6 @@ content:
     weight: 9
     region: content
   links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 0
-    region: content
-  og_audience:
-    type: entity_reference_entity_id
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 13
-    region: content
-  og_group:
-    type: og_group_subscribe
-    label: above
     settings: {  }
     third_party_settings: {  }
     weight: 0

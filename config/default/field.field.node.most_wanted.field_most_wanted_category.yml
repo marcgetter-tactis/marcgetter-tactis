@@ -1,0 +1,29 @@
+uuid: fd7b5c5b-9aae-40c9-a301-84ae861e0d60
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_most_wanted_category
+    - node.type.most_wanted
+    - taxonomy.vocabulary.most_wanted_categories
+id: node.most_wanted.field_most_wanted_category
+field_name: field_most_wanted_category
+entity_type: node
+bundle: most_wanted
+label: 'Most Wanted Category'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      most_wanted_categories: most_wanted_categories
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

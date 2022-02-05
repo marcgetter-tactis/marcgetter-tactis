@@ -1,0 +1,24 @@
+uuid: 9b160267-5088-4be1-b110-f2eb61aa90e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - node.type.vacancy
+  module:
+    - datetime
+id: node.vacancy.field_date
+field_name: field_date
+entity_type: node
+bundle: vacancy
+label: Deadline
+description: 'Select a Deadline Date. Default is 2022-01-01. If no date is specified, deselect default.'
+required: false
+translatable: true
+default_value:
+  -
+    default_date_type: relative
+    default_date: 22-01-01
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,26 @@
+uuid: a5a14809-5cd7-4fcf-87f4-ceea0ab4ad0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_diversity
+    - node.type.vacancy
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - wysiwyg
+id: node.vacancy.field_diversity
+field_name: field_diversity
+entity_type: node
+bundle: vacancy
+label: 'Diversity Statement'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

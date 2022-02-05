@@ -7,9 +7,7 @@ dependencies:
     - field.field.block_content.carousel.field_background_class
     - field.field.block_content.carousel.field_header
     - field.field.block_content.carousel.field_slides
-    - field.field.block_content.carousel.og_audience
   module:
-    - og
     - paragraphs
 id: block_content.carousel.default
 targetEntityType: block_content
@@ -56,15 +54,5 @@ content:
     region: content
     settings:
       include_locked: true
-    third_party_settings: {  }
-  og_audience:
-    type: og_complex
-    weight: 26
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
 hidden: {  }

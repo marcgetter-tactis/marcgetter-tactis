@@ -8,10 +8,8 @@ dependencies:
     - field.field.node.book.field_hide_children
     - field.field.node.book.field_image
     - field.field.node.book.field_list_style_type
-    - field.field.node.book.og_audience
     - node.type.book
   module:
-    - og
     - options
     - text
     - user
@@ -64,21 +62,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 0
-    region: content
-  og_audience:
-    type: entity_reference_label
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 2
-    region: content
-  og_group:
-    type: og_group_subscribe
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 1
     region: content
 hidden:
   langcode: true

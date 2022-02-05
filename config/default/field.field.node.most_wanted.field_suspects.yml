@@ -1,0 +1,21 @@
+uuid: f83df6ea-542e-43fa-a7f1-81e3b5942547
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_suspects
+    - node.type.most_wanted
+  module:
+    - text
+id: node.most_wanted.field_suspects
+field_name: field_suspects
+entity_type: node
+bundle: most_wanted
+label: Suspects
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

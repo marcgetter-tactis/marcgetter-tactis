@@ -23,7 +23,6 @@ dependencies:
     - field.field.node.case.field_tags
     - field.field.node.case.field_topic
     - field.field.node.case.field_violation
-    - field.field.node.case.og_audience
     - node.type.case
   module:
     - datetime
@@ -202,21 +201,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 0
-    region: content
-  og_audience:
-    type: entity_reference_label
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 2
-    region: content
-  og_group:
-    type: og_group_subscribe
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 1
     region: content
 hidden:
   langcode: true

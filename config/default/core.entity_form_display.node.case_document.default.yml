@@ -7,33 +7,15 @@ dependencies:
     - field.field.node.case_document.field_body
     - field.field.node.case_document.field_casedoc_type
     - field.field.node.case_document.field_date
-    - field.field.node.case_document.og_audience
     - node.type.case_document
   module:
     - datetime
     - field_group
     - media_library
-    - og
     - path
     - scheduler
     - scheduler_content_moderation_integration
     - text
-third_party_settings:
-  field_group:
-    group_organization:
-      children:
-        - og_audience
-      label: Organization
-      region: content
-      parent_name: ''
-      weight: 1
-      format_type: fieldset
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        description: ''
-        required_fields: true
 id: node.case_document.default
 targetEntityType: node
 bundle: case_document
@@ -78,16 +60,6 @@ content:
     region: content
     settings:
       include_locked: true
-    third_party_settings: {  }
-  og_audience:
-    type: og_complex
-    weight: 2
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
   path:
     type: path

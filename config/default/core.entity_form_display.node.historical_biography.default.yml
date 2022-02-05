@@ -12,34 +12,16 @@ dependencies:
     - field.field.node.historical_biography.field_portrait_artist
     - field.field.node.historical_biography.field_portrait_download
     - field.field.node.historical_biography.field_teaser
-    - field.field.node.historical_biography.og_audience
     - node.type.historical_biography
   module:
     - datetime_range
     - field_group
     - link
     - media_library
-    - og
     - path
     - scheduler
     - scheduler_content_moderation_integration
     - text
-third_party_settings:
-  field_group:
-    group_organization:
-      children:
-        - og_audience
-      label: Organization
-      region: content
-      parent_name: ''
-      weight: 2
-      format_type: fieldset
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        description: ''
-        required_fields: true
 id: node.historical_biography.default
 targetEntityType: node
 bundle: historical_biography
@@ -124,16 +106,6 @@ content:
     region: content
     settings:
       include_locked: true
-    third_party_settings: {  }
-  og_audience:
-    type: og_complex
-    weight: 7
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
   path:
     type: path

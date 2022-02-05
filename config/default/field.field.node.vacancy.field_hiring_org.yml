@@ -1,0 +1,29 @@
+uuid: ed9ed862-79b8-4b92-be7e-8b865d20df7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hiring_org
+    - node.type.vacancy
+    - taxonomy.vocabulary.hiring_groups_audience
+id: node.vacancy.field_hiring_org
+field_name: field_hiring_org
+entity_type: node
+bundle: vacancy
+label: 'Hiring Groups Audience'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      hiring_groups_audience: hiring_groups_audience
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

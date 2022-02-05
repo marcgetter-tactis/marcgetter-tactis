@@ -7,7 +7,6 @@ dependencies:
     - field.field.block_content.carousel.field_background_class
     - field.field.block_content.carousel.field_header
     - field.field.block_content.carousel.field_slides
-    - field.field.block_content.carousel.og_audience
   module:
     - entity_reference_revisions
 id: block_content.carousel.default
@@ -35,5 +34,4 @@ content:
 hidden:
   field_background_class: true
   langcode: true
-  og_audience: true
   search_api_excerpt: true

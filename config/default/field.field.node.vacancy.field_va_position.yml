@@ -1,0 +1,21 @@
+uuid: ae3808c5-528d-4bfe-a087-a2bbd4be2a9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_va_position
+    - node.type.vacancy
+  module:
+    - options
+id: node.vacancy.field_va_position
+field_name: field_va_position
+entity_type: node
+bundle: vacancy
+label: Position
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

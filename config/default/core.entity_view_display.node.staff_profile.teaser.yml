@@ -13,7 +13,6 @@ dependencies:
     - field.field.node.staff_profile.field_portrait_download
     - field.field.node.staff_profile.field_position
     - field.field.node.staff_profile.field_teaser
-    - field.field.node.staff_profile.og_audience
     - node.type.staff_profile
   module:
     - text
@@ -52,5 +51,4 @@ hidden:
   field_portrait_download: true
   field_position: true
   langcode: true
-  og_audience: true
   search_api_excerpt: true

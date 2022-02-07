@@ -575,9 +575,9 @@ header.usa-header--extended {
         }
       }
     }
-    nav.usa-nav ul li:hover {
-      //background-color: transparent;
-    }
+    // nav.usa-nav ul li:hover {
+    //   background-color: transparent;
+    // }
 
   }
 
@@ -751,23 +751,6 @@ header.usa-header--extended {
   }
 }
 
-<<<<<<< HEAD
-.bg-full-width {
-  &:after {
-    content: "";
-    position: absolute;
-    display: block;
-    top: 0;
-    left: -50%;
-    width: 200%;
-    height: 100%;
-    z-index: -1;
-    background-color: inherit;
-  }
-}
-
-=======
 /************************************************
 MegaMenu (with Images) - END
 ************************************************/
->>>>>>> develop

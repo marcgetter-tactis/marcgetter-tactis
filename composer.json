@@ -46,6 +46,7 @@
         "drupal/feeds_tamper": "^2.0@beta",
         "drupal/google_tag": "^1.4",
         "drupal/group": "^1.4",
+        "drupal/group_content_menu": "^1.1",
         "drupal/group_taxonomy": "^1.0@beta",
         "drupal/group_term": "^2.0@alpha",
         "drupal/groupmedia": "^2.0@alpha",

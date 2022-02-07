@@ -17,37 +17,18 @@ Mission Block
 ----------------------------------------
 */
 
-<<<<<<< HEAD:docroot/themes/custom/usdoj_uswds/sass/_uswds-theme-homepage-mission.scss
-.block-homepage-mission {
-  padding: 3rem 0;
-  //overflow: hidden;
-=======
 .block-mission {
   padding: 3rem 0;
 
   h2.block-title {
     display: none;
   }
->>>>>>> develop:docroot/themes/custom/usdoj_uswds/sass/_uswds-theme-block-mission.scss
   
   h2.block-title {
     display: none;
   }
 
   .field_image {
-<<<<<<< HEAD:docroot/themes/custom/usdoj_uswds/sass/_uswds-theme-homepage-mission.scss
-    display: none;
-    
-    @include at-media(tablet) {
-      display: block;
-      float: left;
-      
-      img {
-        width: 18rem;
-        height: 18rem;
-        margin-right: 2rem;
-      }
-=======
     float: left;
     img {
       width: 18rem;
@@ -56,7 +37,6 @@ Mission Block
     }
     @media (max-width: 47.99em) {
       display: none;
->>>>>>> develop:docroot/themes/custom/usdoj_uswds/sass/_uswds-theme-block-mission.scss
     }
   }
   
@@ -96,12 +76,7 @@ Mission Block
     @include grid-offset(4);
     margin-top: 2rem;
     margin-bottom: 2rem;
-<<<<<<< HEAD:docroot/themes/custom/usdoj_uswds/sass/_uswds-theme-homepage-mission.scss
-    
-    @include at-media(tablet) {
-=======
     @media (max-width: 47.99em) {
->>>>>>> develop:docroot/themes/custom/usdoj_uswds/sass/_uswds-theme-block-mission.scss
       @include u-width(full);
       margin: 2rem 0 3rem;
     }
@@ -130,11 +105,7 @@ Mission Block
       height: 1rem;
     }
 
-<<<<<<< HEAD:docroot/themes/custom/usdoj_uswds/sass/_uswds-theme-homepage-mission.scss
-    @include at-media(tablet) {
-=======
     @media (max-width: 47.99em) {
->>>>>>> develop:docroot/themes/custom/usdoj_uswds/sass/_uswds-theme-block-mission.scss
       font-size: 1rem;
       &:after {
         height: .5rem;
@@ -159,14 +130,8 @@ Mission Block
         font-size: 2rem;
         margin-bottom: .5rem;
         font-weight: 500;
-<<<<<<< HEAD:docroot/themes/custom/usdoj_uswds/sass/_uswds-theme-homepage-mission.scss
-        @include at-media(tablet) {
-          font-size: 3.5rem;
-          font-weight: 900;
-=======
         @media (max-width: 47.99em) {
           font-size: 2rem;
->>>>>>> develop:docroot/themes/custom/usdoj_uswds/sass/_uswds-theme-block-mission.scss
         }
       }
       

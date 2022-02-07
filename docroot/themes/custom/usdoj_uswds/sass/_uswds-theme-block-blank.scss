@@ -17,32 +17,17 @@ Blank Block
 ----------------------------------------
 */
 
-<<<<<<< HEAD:docroot/themes/custom/usdoj_uswds/sass/_uswds-theme-homepage-blank.scss
-.block-homepage-resources {
-    padding: 3rem 0;
-    //overflow: hidden;
-    h2.block-title {
-      display: none;
-    }
-    
-=======
 .block-blank {
     padding: 3rem 0;
 
     h2.block-title {
       display: none;
     }
->>>>>>> develop:docroot/themes/custom/usdoj_uswds/sass/_uswds-theme-block-blank.scss
     .field_header, .field_body, .field_cta, img {
       @include grid-col(12);
       
-<<<<<<< HEAD:docroot/themes/custom/usdoj_uswds/sass/_uswds-theme-homepage-blank.scss
-      @include at-media(mobile-lg) {
-        @include grid-col(6);
-=======
       @media (max-width: 47.99em) {
         @include grid-col(12);
->>>>>>> develop:docroot/themes/custom/usdoj_uswds/sass/_uswds-theme-block-blank.scss
       }
     }
   

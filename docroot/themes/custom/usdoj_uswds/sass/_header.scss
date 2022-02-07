@@ -149,7 +149,7 @@ header.usa-header--extended {
       background-color: color(primary-darker);
       bottom: 1.6rem;
       justify-content: center;
-      margin-bottom: 1.6rem;
+      margin-bottom: -1.6rem;
       @include search-field;
       .width-mobile {
         border-top: 1px solid $gray-cool-50;

@@ -67,6 +67,10 @@ Mission Block
       li {
         list-style-image: url('/themes/custom/usdoj_uswds/images/doj-icon-bullet-star-silver.png');
         line-height: 2.25rem;
+        @media (max-width: 47.99em) {
+          line-height: 1.5;
+          padding-bottom: .6rem;
+        }
       }
     }
   }
@@ -88,6 +92,10 @@ Mission Block
       border-radius: 2px;
       text-decoration: none;
       font-weight: bold;
+      &:hover {
+        color: color(primary-darker);
+        background: white;
+      }
     }
   }
 
@@ -116,7 +124,7 @@ Mission Block
 
   .field__items {
     display: flex;
-    justify-content: space-evenly       ;
+    justify-content: space-evenly;
     text-align: center;
     margin-top: 2rem;
     flex-wrap: wrap;
@@ -124,6 +132,10 @@ Mission Block
     .field__item {
       min-width: 15rem;
       padding-bottom: 1rem;
+      @media (max-width: 47.99em) {
+        min-width: 10rem;
+      }
+      
       
       .field_statistic {
         color: color(warning);
@@ -138,6 +150,9 @@ Mission Block
       .field_statistic_caption {
         color: white;
         letter-spacing: 1px;
+        @media (max-width: 47.99em) {
+          font-size: .9rem;
+        }
       }
     }
   }

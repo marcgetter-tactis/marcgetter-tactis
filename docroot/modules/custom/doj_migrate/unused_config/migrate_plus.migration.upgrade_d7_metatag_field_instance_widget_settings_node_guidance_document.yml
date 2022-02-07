@@ -1,0 +1,46 @@
+uuid: be561a5c-99cd-4892-8468-c99af2d3b453
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_metatag_field_instance_widget_settings_node_guidance_document
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Configuration
+migration_group: migrate_drupal_7
+label: 'Metatag field instance widget settings of Guidance Document content items'
+source:
+  plugin: d7_metatag_field_instance
+  source_module: metatag
+  ignore_map: true
+  constants:
+    field_name: field_metatag
+    form_mode: default
+  entity_type_id: node
+  entity_type: node
+  bundle: guidance_document
+process:
+  bundle:
+    -
+      plugin: get
+      source: bundle
+  entity_type:
+    -
+      plugin: get
+      source: entity_type
+  field_name:
+    -
+      plugin: get
+      source: constants/field_name
+  form_mode:
+    -
+      plugin: get
+      source: constants/form_mode
+destination:
+  plugin: component_entity_form_display
+migration_dependencies:
+  required:
+    - upgrade_d7_metatag_field_instance_node_guidance_document
+  optional: {  }

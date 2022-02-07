@@ -1,0 +1,8 @@
+uuid: aee0de80-a061-4566-8824-63eb66ff8fb6
+langcode: en
+status: true
+dependencies: {  }
+name: 'Court Decision Topic'
+vid: court_decision_topic
+description: 'Topics for Court Decision nodes'
+weight: 0

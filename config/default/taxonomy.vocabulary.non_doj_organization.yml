@@ -1,0 +1,8 @@
+uuid: 53317384-669c-4053-8110-b37418bdd90c
+langcode: en
+status: true
+dependencies: {  }
+name: 'Non-DOJ Organization'
+vid: non_doj_organization
+description: 'These are organizations that are not a part of DOJ.'
+weight: 0

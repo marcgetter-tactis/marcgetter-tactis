@@ -1,0 +1,29 @@
+uuid: ab8267b0-aa78-4774-bc49-a990c085478a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_group
+    - group.type.organization
+    - node.type.component_group
+id: node.component_group.field_group
+field_name: field_group
+entity_type: node
+bundle: component_group
+label: 'Your Groups'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:group'
+  handler_settings:
+    target_bundles:
+      organization: organization
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

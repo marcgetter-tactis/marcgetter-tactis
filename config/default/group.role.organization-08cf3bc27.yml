@@ -1,0 +1,17 @@
+uuid: 53c7e31b-3f7f-45ae-996f-ff4d8152d074
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.organization
+  enforced:
+    config:
+      - user.role.arhchiver
+id: organization-08cf3bc27
+label: Arhchiver
+weight: -3
+internal: true
+audience: outsider
+group_type: organization
+permissions_ui: false
+permissions: {  }

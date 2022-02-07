@@ -1,0 +1,30 @@
+uuid: 49a5a731-27d7-44e1-adba-50f384e6e2a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.organization
+id: organization-admin
+label: Admin
+weight: 100
+internal: false
+audience: member
+group_type: organization
+permissions_ui: true
+permissions:
+  - 'access content overview'
+  - 'access group_menu overview'
+  - 'administer group'
+  - 'administer members'
+  - 'delete group'
+  - 'delete group revisions'
+  - 'edit group'
+  - 'leave group'
+  - 'revert group revisions'
+  - 'update own group_membership content'
+  - 'view any unpublished group'
+  - 'view group'
+  - 'view group revisions'
+  - 'view group_membership content'
+  - 'view latest group version'
+  - 'view own unpublished group'

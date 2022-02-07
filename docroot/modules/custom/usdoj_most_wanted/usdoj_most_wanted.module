@@ -10,7 +10,7 @@
  */
 function usdoj_most_wanted_cron() {
 
-  if (date('G') == 02) {
+  if (date('G') == 2) {
     $i = 1;
     // Determine total number of items and pages in Most Wanted JSON.
     $response = \Drupal::httpClient()->get('https://api.fbi.gov/@wanted?pageSize=50&page=1');

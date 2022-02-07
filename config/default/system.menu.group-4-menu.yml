@@ -1,8 +1,0 @@
-uuid: d0746b16-d70b-4f56-a385-b3c60818ba82
-langcode: en
-status: true
-dependencies: {  }
-id: group-4-menu
-label: 'Main menu'
-description: 'Menu for Main'
-locked: false

@@ -1,0 +1,178 @@
+uuid: c8598155-e9e2-427d-9445-0a6a83bb3e0c
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_url_alias
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'URL aliases'
+source:
+  plugin: d7_url_alias
+  constants:
+    slash: /
+process:
+  id:
+    -
+      plugin: get
+      source: pid
+  _path:
+    -
+      plugin: concat
+      source:
+        - constants/slash
+        - source
+  alias:
+    -
+      plugin: concat
+      source:
+        - constants/slash
+        - alias
+  node_translation:
+    -
+      plugin: explode
+      source: source
+      delimiter: /
+    -
+      plugin: extract
+      default: INVALID_NID
+      index:
+        - 1
+    -
+      plugin: migration_lookup
+      migration:
+        - upgrade_d7_node_complete_blog_entry
+        - upgrade_d7_node_complete_book
+        - upgrade_d7_node_complete_brief
+        - upgrade_d7_node_complete_case
+        - upgrade_d7_node_complete_case_document
+        - upgrade_d7_node_complete_case_multi_defendant
+        - upgrade_d7_node_complete_consent_decree
+        - upgrade_d7_node_complete_court_decision
+        - upgrade_d7_node_complete_doj_banner
+        - upgrade_d7_node_complete_eoir_court
+        - upgrade_d7_node_complete_event
+        - upgrade_d7_node_complete_gallery
+        - upgrade_d7_node_complete_grant
+        - upgrade_d7_node_complete_guidance_document
+        - upgrade_d7_node_complete_historical_bio
+        - upgrade_d7_node_complete_image_map
+        - upgrade_d7_node_complete_landing_page
+        - upgrade_d7_node_complete_location
+        - upgrade_d7_node_complete_opinion
+        - upgrade_d7_node_complete_organization
+        - upgrade_d7_node_complete_org_chart
+        - upgrade_d7_node_complete_page
+        - upgrade_d7_node_complete_panel
+        - upgrade_d7_node_complete_podcast
+        - upgrade_d7_node_complete_press_release
+        - upgrade_d7_node_complete_publication
+        - upgrade_d7_node_complete_resource
+        - upgrade_d7_node_complete_sidebar
+        - upgrade_d7_node_complete_speech
+        - upgrade_d7_node_complete_staff_profile
+        - upgrade_d7_node_complete_testimony
+        - upgrade_d7_node_complete_timeline
+        - upgrade_d7_node_complete_timeline_event
+        - upgrade_d7_node_complete_vacancy_announcement
+        - upgrade_d7_node_complete_webform
+        - upgrade_d7_node_complete_youtube_video
+    -
+      plugin: node_complete_node_translation_lookup
+  langcode:
+    -
+      plugin: null_coalesce
+      source:
+        - '@node_translation/1'
+        - language
+  path:
+    -
+      plugin: path_set_translated
+      source:
+        - '@_path'
+        - '@node_translation'
+  field_metatag:
+    -
+      plugin: d7_metatag_entities
+      source: pseudo_metatag_entities
+destination:
+  plugin: 'entity:path_alias'
+migration_dependencies:
+  required: {  }
+  optional:
+    - upgrade_d7_node_complete_blog_entry
+    - upgrade_d7_node_complete_book
+    - upgrade_d7_node_complete_brief
+    - upgrade_d7_node_complete_case
+    - upgrade_d7_node_complete_case_document
+    - upgrade_d7_node_complete_case_multi_defendant
+    - upgrade_d7_node_complete_consent_decree
+    - upgrade_d7_node_complete_court_decision
+    - upgrade_d7_node_complete_doj_banner
+    - upgrade_d7_node_complete_eoir_court
+    - upgrade_d7_node_complete_event
+    - upgrade_d7_node_complete_gallery
+    - upgrade_d7_node_complete_grant
+    - upgrade_d7_node_complete_guidance_document
+    - upgrade_d7_node_complete_historical_bio
+    - upgrade_d7_node_complete_image_map
+    - upgrade_d7_node_complete_landing_page
+    - upgrade_d7_node_complete_location
+    - upgrade_d7_node_complete_opinion
+    - upgrade_d7_node_complete_organization
+    - upgrade_d7_node_complete_org_chart
+    - upgrade_d7_node_complete_page
+    - upgrade_d7_node_complete_panel
+    - upgrade_d7_node_complete_podcast
+    - upgrade_d7_node_complete_press_release
+    - upgrade_d7_node_complete_publication
+    - upgrade_d7_node_complete_resource
+    - upgrade_d7_node_complete_sidebar
+    - upgrade_d7_node_complete_speech
+    - upgrade_d7_node_complete_staff_profile
+    - upgrade_d7_node_complete_testimony
+    - upgrade_d7_node_complete_timeline
+    - upgrade_d7_node_complete_timeline_event
+    - upgrade_d7_node_complete_vacancy_announcement
+    - upgrade_d7_node_complete_webform
+    - upgrade_d7_node_complete_youtube_video
+    - upgrade_d7_node_complete_blog_entry
+    - upgrade_d7_node_complete_book
+    - upgrade_d7_node_complete_brief
+    - upgrade_d7_node_complete_case
+    - upgrade_d7_node_complete_case_document
+    - upgrade_d7_node_complete_case_multi_defendant
+    - upgrade_d7_node_complete_consent_decree
+    - upgrade_d7_node_complete_court_decision
+    - upgrade_d7_node_complete_doj_banner
+    - upgrade_d7_node_complete_eoir_court
+    - upgrade_d7_node_complete_event
+    - upgrade_d7_node_complete_gallery
+    - upgrade_d7_node_complete_grant
+    - upgrade_d7_node_complete_guidance_document
+    - upgrade_d7_node_complete_historical_bio
+    - upgrade_d7_node_complete_image_map
+    - upgrade_d7_node_complete_landing_page
+    - upgrade_d7_node_complete_location
+    - upgrade_d7_node_complete_opinion
+    - upgrade_d7_node_complete_organization
+    - upgrade_d7_node_complete_org_chart
+    - upgrade_d7_node_complete_page
+    - upgrade_d7_node_complete_panel
+    - upgrade_d7_node_complete_podcast
+    - upgrade_d7_node_complete_press_release
+    - upgrade_d7_node_complete_publication
+    - upgrade_d7_node_complete_resource
+    - upgrade_d7_node_complete_sidebar
+    - upgrade_d7_node_complete_speech
+    - upgrade_d7_node_complete_staff_profile
+    - upgrade_d7_node_complete_testimony
+    - upgrade_d7_node_complete_timeline
+    - upgrade_d7_node_complete_timeline_event
+    - upgrade_d7_node_complete_vacancy_announcement
+    - upgrade_d7_node_complete_webform
+    - upgrade_d7_node_complete_youtube_video

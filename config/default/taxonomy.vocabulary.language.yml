@@ -1,0 +1,8 @@
+uuid: e4b8048e-0a2c-42f4-8d51-0adb0ab72e7a
+langcode: en
+status: true
+dependencies: {  }
+name: Language
+vid: language
+description: 'A way to categorize content by language, without any of the Drupal localization functionality.'
+weight: 0

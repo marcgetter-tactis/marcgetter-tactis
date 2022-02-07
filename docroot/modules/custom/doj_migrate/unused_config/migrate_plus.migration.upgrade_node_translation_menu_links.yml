@@ -1,0 +1,256 @@
+uuid: 14d0c597-c8b5-41f8-958a-5d0d598b4bf9
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_node_translation_menu_links
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 6'
+  - 'Drupal 7'
+  - Content
+  - Multilingual
+migration_group: migrate_drupal_7
+label: 'Node Translations Menu links'
+source:
+  plugin: menu_link
+  constants:
+    entity_prefix: 'entity:'
+    node_prefix: node/
+process:
+  id:
+    -
+      plugin: get
+      source: mlid
+  title:
+    -
+      plugin: get
+      source: link_title
+  description:
+    -
+      plugin: get
+      source: description
+  menu_name:
+    -
+      plugin: migration_lookup
+      migration: upgrade_d7_menu
+      source: menu_name
+    -
+      plugin: skip_on_empty
+      method: row
+    -
+      plugin: static_map
+      map:
+        management: admin
+      bypass: true
+  new_nid:
+    -
+      plugin: link_uri
+      source: link_path
+      validate_route: false
+    -
+      plugin: explode
+      delimiter: 'base:node/'
+    -
+      plugin: extract
+      default: false
+      index:
+        - 1
+    -
+      plugin: skip_on_empty
+      method: row
+    -
+      plugin: migration_lookup
+      migration:
+        - upgrade_d7_node_complete_blog_entry
+        - upgrade_d7_node_complete_book
+        - upgrade_d7_node_complete_brief
+        - upgrade_d7_node_complete_case
+        - upgrade_d7_node_complete_case_document
+        - upgrade_d7_node_complete_case_multi_defendant
+        - upgrade_d7_node_complete_consent_decree
+        - upgrade_d7_node_complete_court_decision
+        - upgrade_d7_node_complete_doj_banner
+        - upgrade_d7_node_complete_eoir_court
+        - upgrade_d7_node_complete_event
+        - upgrade_d7_node_complete_gallery
+        - upgrade_d7_node_complete_grant
+        - upgrade_d7_node_complete_guidance_document
+        - upgrade_d7_node_complete_historical_bio
+        - upgrade_d7_node_complete_image_map
+        - upgrade_d7_node_complete_landing_page
+        - upgrade_d7_node_complete_location
+        - upgrade_d7_node_complete_opinion
+        - upgrade_d7_node_complete_organization
+        - upgrade_d7_node_complete_org_chart
+        - upgrade_d7_node_complete_page
+        - upgrade_d7_node_complete_panel
+        - upgrade_d7_node_complete_podcast
+        - upgrade_d7_node_complete_press_release
+        - upgrade_d7_node_complete_publication
+        - upgrade_d7_node_complete_resource
+        - upgrade_d7_node_complete_sidebar
+        - upgrade_d7_node_complete_speech
+        - upgrade_d7_node_complete_staff_profile
+        - upgrade_d7_node_complete_testimony
+        - upgrade_d7_node_complete_timeline
+        - upgrade_d7_node_complete_timeline_event
+        - upgrade_d7_node_complete_vacancy_announcement
+        - upgrade_d7_node_complete_webform
+        - upgrade_d7_node_complete_youtube_video
+      no_stub: true
+    -
+      plugin: skip_on_empty
+      method: row
+    -
+      plugin: extract
+      index:
+        - 0
+  link_path:
+    -
+      plugin: concat
+      source:
+        - constants/node_prefix
+        - '@new_nid'
+  link/uri:
+    -
+      plugin: concat
+      source:
+        - constants/entity_prefix
+        - '@link_path'
+  link/options:
+    -
+      plugin: get
+      source: options
+  route:
+    -
+      plugin: route
+      source:
+        - '@link_path'
+        - options
+  route_name:
+    -
+      plugin: get
+      source: '@route/route_name'
+  route_parameters:
+    -
+      plugin: get
+      source: '@route/route_parameters'
+  url:
+    -
+      plugin: get
+      source: '@route/url'
+  options:
+    -
+      plugin: get
+      source: '@route/options'
+  external:
+    -
+      plugin: get
+      source: external
+  weight:
+    -
+      plugin: get
+      source: weight
+  expanded:
+    -
+      plugin: get
+      source: expanded
+  enabled:
+    -
+      plugin: get
+      source: enabled
+  parent:
+    -
+      plugin: menu_link_parent
+      source:
+        - plid
+        - '@menu_name'
+        - parent_link_path
+  changed:
+    -
+      plugin: get
+      source: updated
+destination:
+  plugin: 'entity:menu_link_content'
+  default_bundle: menu_link_content
+  no_stub: true
+migration_dependencies:
+  required:
+    - upgrade_language
+  optional:
+    - upgrade_d7_menu
+    - upgrade_d7_menu_links
+    - upgrade_d7_node_complete_blog_entry
+    - upgrade_d7_node_complete_book
+    - upgrade_d7_node_complete_brief
+    - upgrade_d7_node_complete_case
+    - upgrade_d7_node_complete_case_document
+    - upgrade_d7_node_complete_case_multi_defendant
+    - upgrade_d7_node_complete_consent_decree
+    - upgrade_d7_node_complete_court_decision
+    - upgrade_d7_node_complete_doj_banner
+    - upgrade_d7_node_complete_eoir_court
+    - upgrade_d7_node_complete_event
+    - upgrade_d7_node_complete_gallery
+    - upgrade_d7_node_complete_grant
+    - upgrade_d7_node_complete_guidance_document
+    - upgrade_d7_node_complete_historical_bio
+    - upgrade_d7_node_complete_image_map
+    - upgrade_d7_node_complete_landing_page
+    - upgrade_d7_node_complete_location
+    - upgrade_d7_node_complete_opinion
+    - upgrade_d7_node_complete_organization
+    - upgrade_d7_node_complete_org_chart
+    - upgrade_d7_node_complete_page
+    - upgrade_d7_node_complete_panel
+    - upgrade_d7_node_complete_podcast
+    - upgrade_d7_node_complete_press_release
+    - upgrade_d7_node_complete_publication
+    - upgrade_d7_node_complete_resource
+    - upgrade_d7_node_complete_sidebar
+    - upgrade_d7_node_complete_speech
+    - upgrade_d7_node_complete_staff_profile
+    - upgrade_d7_node_complete_testimony
+    - upgrade_d7_node_complete_timeline
+    - upgrade_d7_node_complete_timeline_event
+    - upgrade_d7_node_complete_vacancy_announcement
+    - upgrade_d7_node_complete_webform
+    - upgrade_d7_node_complete_youtube_video
+    - upgrade_d7_node_complete_blog_entry
+    - upgrade_d7_node_complete_book
+    - upgrade_d7_node_complete_brief
+    - upgrade_d7_node_complete_case
+    - upgrade_d7_node_complete_case_document
+    - upgrade_d7_node_complete_case_multi_defendant
+    - upgrade_d7_node_complete_consent_decree
+    - upgrade_d7_node_complete_court_decision
+    - upgrade_d7_node_complete_doj_banner
+    - upgrade_d7_node_complete_eoir_court
+    - upgrade_d7_node_complete_event
+    - upgrade_d7_node_complete_gallery
+    - upgrade_d7_node_complete_grant
+    - upgrade_d7_node_complete_guidance_document
+    - upgrade_d7_node_complete_historical_bio
+    - upgrade_d7_node_complete_image_map
+    - upgrade_d7_node_complete_landing_page
+    - upgrade_d7_node_complete_location
+    - upgrade_d7_node_complete_opinion
+    - upgrade_d7_node_complete_organization
+    - upgrade_d7_node_complete_org_chart
+    - upgrade_d7_node_complete_page
+    - upgrade_d7_node_complete_panel
+    - upgrade_d7_node_complete_podcast
+    - upgrade_d7_node_complete_press_release
+    - upgrade_d7_node_complete_publication
+    - upgrade_d7_node_complete_resource
+    - upgrade_d7_node_complete_sidebar
+    - upgrade_d7_node_complete_speech
+    - upgrade_d7_node_complete_staff_profile
+    - upgrade_d7_node_complete_testimony
+    - upgrade_d7_node_complete_timeline
+    - upgrade_d7_node_complete_timeline_event
+    - upgrade_d7_node_complete_vacancy_announcement
+    - upgrade_d7_node_complete_webform
+    - upgrade_d7_node_complete_youtube_video

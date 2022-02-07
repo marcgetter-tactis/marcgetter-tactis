@@ -47,6 +47,7 @@ module:
   devel: 0
   devel_entity_updates: 0
   diff: 0
+  doj_migrate: 0
   easy_breadcrumb: 0
   editor: 0
   editor_advanced_link: 0
@@ -103,6 +104,11 @@ module:
   metatag: 0
   metatag_open_graph: 0
   metatag_twitter_cards: 0
+  migrate: 0
+  migrate_drupal: 0
+  migrate_plus: 0
+  migrate_tools: 0
+  migrate_upgrade: 0
   moderation_dashboard: 0
   moderation_sidebar: 0
   node: 0

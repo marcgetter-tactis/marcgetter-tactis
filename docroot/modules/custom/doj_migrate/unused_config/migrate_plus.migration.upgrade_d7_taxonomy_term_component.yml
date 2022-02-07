@@ -1,0 +1,120 @@
+uuid: 9468a350-55f9-46fc-b9fa-5c24b452405f
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_taxonomy_term_component
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Taxonomy terms (Component)'
+source:
+  plugin: d7_taxonomy_term
+  bundle: component
+process:
+  tid:
+    -
+      plugin: get
+      source: tid
+  vid:
+    -
+      plugin: migration_lookup
+      migration: upgrade_d7_taxonomy_vocabulary
+      source: vid
+  name:
+    -
+      plugin: get
+      source: name
+  description/value:
+    -
+      plugin: get
+      source: description
+  description/format:
+    -
+      plugin: get
+      source: format
+  weight:
+    -
+      plugin: get
+      source: weight
+  parent_id:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: parent
+    -
+      plugin: migration_lookup
+      migration:
+        - upgrade_d7_taxonomy_term_hiring_organizations
+        - upgrade_d7_taxonomy_term_component
+        - upgrade_d7_taxonomy_term_topic
+        - upgrade_d7_taxonomy_term_court_decision_topic
+        - upgrade_d7_taxonomy_term_tags
+        - upgrade_d7_taxonomy_term_youtube_video_categories
+        - upgrade_d7_taxonomy_term_non_doj_organization
+        - upgrade_d7_taxonomy_term_congressional_committee
+        - upgrade_d7_taxonomy_term_congressional_session
+        - upgrade_d7_taxonomy_term_case_violation
+        - upgrade_d7_taxonomy_term_industry
+        - upgrade_d7_taxonomy_term_elder_svf_org
+        - upgrade_d7_taxonomy_term_state_counties
+        - upgrade_d7_taxonomy_term_brief_topic
+        - upgrade_d7_taxonomy_term_invisible
+        - upgrade_d7_taxonomy_term_image_categories
+        - upgrade_d7_taxonomy_term_guidance_topic
+        - upgrade_d7_taxonomy_term_guidance_notice
+        - upgrade_d7_taxonomy_term_language
+        - upgrade_d7_taxonomy_term_views_rss_itunes_category
+        - upgrade_d7_taxonomy_term_us_state
+        - upgrade_d7_taxonomy_term_us_judicial_district
+  parent:
+    -
+      plugin: default_value
+      default_value: 0
+      source: '@parent_id'
+  forum_container:
+    -
+      plugin: get
+      source: is_container
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  langcode:
+    -
+      plugin: get
+      source: language
+  field_component_url:
+    -
+      plugin: field_link
+      source: field_component_url
+  field_component_image:
+    -
+      plugin: sub_process
+      source: field_component_image
+      process:
+        target_id: fid
+        alt: alt
+        title: title
+        width: width
+        height: height
+  field_facet_name:
+    -
+      plugin: get
+      source: field_facet_name
+  field_metatag:
+    -
+      plugin: d7_metatag_entities
+      source: pseudo_metatag_entities
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: component
+migration_dependencies:
+  required:
+    - upgrade_d7_taxonomy_vocabulary
+  optional:
+    - upgrade_d7_field_instance
+    - upgrade_d7_taxonomy_vocabulary

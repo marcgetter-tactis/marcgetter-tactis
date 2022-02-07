@@ -2,7 +2,7 @@ uuid: cea660a6-527e-4204-9342-88e99db74e6f
 langcode: en
 status: true
 dependencies: {  }
-name: Industry
+name: 'Industry Code'
 vid: industry
 description: ''
 weight: 0

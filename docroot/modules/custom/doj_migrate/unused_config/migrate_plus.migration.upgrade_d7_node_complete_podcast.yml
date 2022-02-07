@@ -1,0 +1,180 @@
+uuid: 7d026c3c-2574-43b4-a730-afbbb0bf0c9c
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_complete_podcast
+class: Drupal\node\Plugin\migrate\D7NodeTranslation
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Node complete (Podcast)'
+source:
+  plugin: d7_node_complete
+  node_type: podcast
+process:
+  nid:
+    -
+      plugin: get
+      source: tnid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  content_translation_source:
+    -
+      plugin: get
+      source: source_langcode
+  comment_node_podcast/0/status:
+    -
+      plugin: get
+      source: comment
+  field_podcast_attachment:
+    -
+      plugin: sub_process
+      source: field_podcast_attachment
+      process:
+        target_id: fid
+        display: display
+        description: description
+  field_podcast_attribution:
+    -
+      plugin: get
+      source: field_podcast_attribution
+  field_podcast_audio:
+    -
+      plugin: sub_process
+      source: field_podcast_audio
+      process:
+        target_id: fid
+        display: display
+        description: description
+  field_podcast_body:
+    -
+      plugin: get
+      source: field_podcast_body
+  field_podcast_cover_art:
+    -
+      plugin: sub_process
+      source: field_podcast_cover_art
+      process:
+        target_id: fid
+        alt: alt
+        title: title
+        width: width
+        height: height
+  field_podcast_date:
+    -
+      plugin: sub_process
+      source: field_podcast_date
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d\TH:i:s'
+          to_format: Y-m-d
+          source: value
+  field_podcast_image:
+    -
+      plugin: sub_process
+      source: field_podcast_image
+      process:
+        target_id: fid
+        alt: alt
+        title: title
+        width: width
+        height: height
+  field_podcast_summary:
+    -
+      plugin: get
+      source: field_podcast_summary
+  field_podcast_transcript:
+    -
+      plugin: get
+      source: field_podcast_transcript
+  og_group_ref:
+    -
+      plugin: get
+      source: og_group_ref
+  field_podcast_buzzprout:
+    -
+      plugin: get
+      source: field_podcast_buzzprout
+  field_podcast_component:
+    -
+      plugin: sub_process
+      source: field_podcast_component
+      process:
+        target_id: tid
+  field_episode_type:
+    -
+      plugin: get
+      source: field_episode_type
+  field_archived:
+    -
+      plugin: get
+      source: field_archived
+  field_metatag:
+    -
+      plugin: d7_metatag_entities
+      source: pseudo_metatag_entities
+destination:
+  plugin: 'entity_complete:node'
+  translations: true
+  default_bundle: podcast
+migration_dependencies:
+  required:
+    - upgrade_d7_user
+    - upgrade_d7_node_type
+    - upgrade_language
+  optional:
+    - upgrade_d7_field_instance
+    - upgrade_d7_metatag_field_node
+    - upgrade_d7_metatag_field_instance_node_podcast
+    - upgrade_d7_metatag_field_instance_widget_settings_node_podcast

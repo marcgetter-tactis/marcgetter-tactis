@@ -1,0 +1,8 @@
+uuid: f4a3feb7-afeb-4999-8274-53d573a1535a
+langcode: en
+status: true
+dependencies: {  }
+name: 'U.S. Judicial District'
+vid: us_judicial_district
+description: 'The 94 federal judicial districts in the United States.'
+weight: 0

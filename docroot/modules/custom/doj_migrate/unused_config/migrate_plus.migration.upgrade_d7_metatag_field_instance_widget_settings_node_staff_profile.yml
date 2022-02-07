@@ -1,0 +1,46 @@
+uuid: 7cc8f709-bd13-449a-8172-51dad1029351
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_metatag_field_instance_widget_settings_node_staff_profile
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Configuration
+migration_group: migrate_drupal_7
+label: 'Metatag field instance widget settings of Staff Profile content items'
+source:
+  plugin: d7_metatag_field_instance
+  source_module: metatag
+  ignore_map: true
+  constants:
+    field_name: field_metatag
+    form_mode: default
+  entity_type_id: node
+  entity_type: node
+  bundle: staff_profile
+process:
+  bundle:
+    -
+      plugin: get
+      source: bundle
+  entity_type:
+    -
+      plugin: get
+      source: entity_type
+  field_name:
+    -
+      plugin: get
+      source: constants/field_name
+  form_mode:
+    -
+      plugin: get
+      source: constants/form_mode
+destination:
+  plugin: component_entity_form_display
+migration_dependencies:
+  required:
+    - upgrade_d7_metatag_field_instance_node_staff_profile
+  optional: {  }

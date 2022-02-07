@@ -1,0 +1,207 @@
+uuid: d787e680-06f3-4464-ba79-78efccf4a466
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_complete_grant
+class: Drupal\node\Plugin\migrate\D7NodeTranslation
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Node complete (Grant)'
+source:
+  plugin: d7_node_complete
+  node_type: grant
+process:
+  nid:
+    -
+      plugin: get
+      source: tnid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  content_translation_source:
+    -
+      plugin: get
+      source: source_langcode
+  comment_node_grant/0/status:
+    -
+      plugin: get
+      source: comment
+  field_grant_fsaactcats:
+    -
+      plugin: get
+      source: field_grant_fsaactcats
+  field_grant_fsaactsubcats:
+    -
+      plugin: get
+      source: field_grant_fsaactsubcats
+  field_grant_fsaactualrelease:
+    -
+      plugin: sub_process
+      source: field_grant_fsaactualrelease
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: Y-m-d
+          source: value
+  field_grant_fsaannouncement_url:
+    -
+      plugin: field_link
+      source: field_grant_fsaannouncement_url
+  field_grant_fsaawardqtr:
+    -
+      plugin: get
+      source: field_grant_fsaawardqtr
+  field_grant_fsaceilingamount:
+    -
+      plugin: get
+      source: field_grant_fsaceilingamount
+  field_grant_fsadeadline:
+    -
+      plugin: sub_process
+      source: field_grant_fsadeadline
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: Y-m-d
+          source: value
+  field_grant_fsadescription:
+    -
+      plugin: get
+      source: field_grant_fsadescription
+  field_grant_fsadisclaimer:
+    -
+      plugin: get
+      source: field_grant_fsadisclaimer
+  field_grant_fsaeligcats:
+    -
+      plugin: get
+      source: field_grant_fsaeligcats
+  field_grant_fsaeligsubcats:
+    -
+      plugin: get
+      source: field_grant_fsaeligsubcats
+  field_grant_fsaestimatedaward:
+    -
+      plugin: get
+      source: field_grant_fsaestimatedaward
+  field_grant_fsaestimatedfunding:
+    -
+      plugin: get
+      source: field_grant_fsaestimatedfunding
+  field_grant_fsaexpectedrelease:
+    -
+      plugin: get
+      source: field_grant_fsaexpectedrelease
+  field_grant_fsafy:
+    -
+      plugin: get
+      source: field_grant_fsafy
+  field_grant_fsanumawards:
+    -
+      plugin: get
+      source: field_grant_fsanumawards
+  field_grant_fsaoffice:
+    -
+      plugin: get
+      source: field_grant_fsaoffice
+  field_grant_fsaopportunityid:
+    -
+      plugin: get
+      source: field_grant_fsaopportunityid
+  field_grant_fsaprogramplaninit:
+    -
+      plugin: get
+      source: field_grant_fsaprogramplaninit
+  field_grant_fsaregdeadline:
+    -
+      plugin: sub_process
+      source: field_grant_fsaregdeadline
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: Y-m-d
+          source: value
+  field_grant_fsasolicitationtype:
+    -
+      plugin: get
+      source: field_grant_fsasolicitationtype
+  field_grant_fsasubjcats:
+    -
+      plugin: get
+      source: field_grant_fsasubjcats
+  field_grant_fsasubjsubcats:
+    -
+      plugin: get
+      source: field_grant_fsasubjsubcats
+  field_grant_fsasystem:
+    -
+      plugin: get
+      source: field_grant_fsasystem
+  field_metatag:
+    -
+      plugin: d7_metatag_entities
+      source: pseudo_metatag_entities
+destination:
+  plugin: 'entity_complete:node'
+  translations: true
+  default_bundle: grant
+migration_dependencies:
+  required:
+    - upgrade_d7_user
+    - upgrade_d7_node_type
+    - upgrade_language
+  optional:
+    - upgrade_d7_field_instance

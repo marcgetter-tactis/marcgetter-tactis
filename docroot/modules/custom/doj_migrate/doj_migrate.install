@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * Install/uninstall functions for doj_migrate module.
+ */
+
+/**
+ * Implements hook_uninstall().
+ */
+function doj_migrate_uninstall() {
+  $configs = [
+    'migrate_plus.migration.doj_migrate_taxonomy_vocabulary',
+    'migrate_plus.migration.doj_migrate_taxonomy_terms',
+    'migrate_plus.migration_group.taxonomy',
+  ];
+  foreach ($configs as $config) {
+    \Drupal::configFactory()->getEditable($config)->delete();
+  }
+}

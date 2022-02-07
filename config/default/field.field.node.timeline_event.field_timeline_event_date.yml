@@ -1,0 +1,21 @@
+uuid: 8d0ec131-8d64-458d-bc63-cbdcde9dcddd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_timeline_event_date
+    - node.type.timeline_event
+  module:
+    - datetime
+id: node.timeline_event.field_timeline_event_date
+field_name: field_timeline_event_date
+entity_type: node
+bundle: timeline_event
+label: Date
+description: 'Only the year will be displayed.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

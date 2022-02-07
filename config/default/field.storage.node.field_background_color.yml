@@ -1,0 +1,33 @@
+uuid: 2ec1f46f-4cd3-4784-b600-79e55e24c0d9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_background_color
+field_name: field_background_color
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: bg-white
+      label: White
+    -
+      value: bg-base-lighter
+      label: Taupe
+    -
+      value: bg-primary-darker
+      label: 'Dark Blue'
+    -
+      value: bg-primary-lightest
+      label: 'Light Blue'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

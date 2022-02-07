@@ -1,0 +1,25 @@
+uuid: 3d4dad7d-1bc7-4748-a28e-9476af2e4a36
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_body
+    - node.type.timeline_event
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+id: node.timeline_event.field_body
+field_name: field_body
+entity_type: node
+bundle: timeline_event
+label: Body
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

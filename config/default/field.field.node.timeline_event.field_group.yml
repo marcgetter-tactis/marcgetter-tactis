@@ -1,0 +1,29 @@
+uuid: d604c969-363f-4532-9503-8db4f04211b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_group
+    - group.type.organization
+    - node.type.timeline_event
+id: node.timeline_event.field_group
+field_name: field_group
+entity_type: node
+bundle: timeline_event
+label: 'Your Groups'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:group'
+  handler_settings:
+    target_bundles:
+      organization: organization
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

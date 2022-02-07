@@ -87,7 +87,7 @@ header.usa-header--extended {
   }
 
   //mobile main menu
-  @include at-media(tablet) {
+  @media (max-width: 63.99em) {
     label.hamburger {
       background-image: url('/themes/custom/usdoj_uswds/images/doj-icon-hamburger-menu.svg');
       background-size: contain;

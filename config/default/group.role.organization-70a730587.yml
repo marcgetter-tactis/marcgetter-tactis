@@ -1,0 +1,17 @@
+uuid: 89aece61-4994-444b-b750-107829f5f9db
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.organization
+  enforced:
+    config:
+      - user.role.global_administrator
+id: organization-70a730587
+label: 'Global Administrator'
+weight: -7
+internal: true
+audience: outsider
+group_type: organization
+permissions_ui: false
+permissions: {  }

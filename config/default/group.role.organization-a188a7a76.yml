@@ -1,0 +1,17 @@
+uuid: 963f66e9-c0f7-4223-930f-f2eec77953f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.organization
+  enforced:
+    config:
+      - user.role.special_content_creator
+id: organization-a188a7a76
+label: 'Special Content Creator'
+weight: -2
+internal: true
+audience: outsider
+group_type: organization
+permissions_ui: false
+permissions: {  }

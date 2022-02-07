@@ -1,0 +1,14 @@
+uuid: 5891ccc1-b5ac-40fc-9e61-76ef879fb050
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.organization
+id: organization-member
+label: Member
+weight: -100
+internal: true
+audience: member
+group_type: organization
+permissions_ui: true
+permissions: {  }

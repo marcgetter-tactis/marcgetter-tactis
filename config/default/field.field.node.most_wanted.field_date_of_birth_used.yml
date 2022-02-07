@@ -1,0 +1,19 @@
+uuid: ad835728-9b5d-4b22-9351-4c36811b265a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_of_birth_used
+    - node.type.most_wanted
+id: node.most_wanted.field_date_of_birth_used
+field_name: field_date_of_birth_used
+entity_type: node
+bundle: most_wanted
+label: 'Date(s) of Birth Used'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

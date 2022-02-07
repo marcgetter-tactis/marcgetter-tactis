@@ -1,0 +1,15 @@
+uuid: 584079e0-188d-43e0-be68-fc69aa1a6df2
+langcode: en
+status: true
+dependencies: {  }
+name: action_center_icon
+label: 'Action center icon'
+effects:
+  738aa776-3c7f-404d-bb91-11f25e7cb7fa:
+    uuid: 738aa776-3c7f-404d-bb91-11f25e7cb7fa
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 40
+      height: 40
+      anchor: center-center

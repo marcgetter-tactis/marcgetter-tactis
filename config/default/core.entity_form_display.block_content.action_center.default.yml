@@ -5,14 +5,12 @@ dependencies:
   config:
     - block_content.type.action_center
     - field.field.block_content.action_center.field_action_center_items
-    - field.field.block_content.action_center.field_background_color
+    - field.field.block_content.action_center.field_background_class
     - field.field.block_content.action_center.field_cta
     - field.field.block_content.action_center.field_display_items
     - field.field.block_content.action_center.field_heading
-    - field.field.block_content.action_center.og_audience
   module:
     - link
-    - og
     - paragraphs
 id: block_content.action_center.default
 targetEntityType: block_content
@@ -31,9 +29,9 @@ content:
       form_display_mode: default
       default_paragraph_type: action_center_item
     third_party_settings: {  }
-  field_background_color:
+  field_background_class:
     type: options_select
-    weight: 27
+    weight: 33
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -74,15 +72,5 @@ content:
     region: content
     settings:
       include_locked: true
-    third_party_settings: {  }
-  og_audience:
-    type: og_complex
-    weight: 32
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
 hidden: {  }

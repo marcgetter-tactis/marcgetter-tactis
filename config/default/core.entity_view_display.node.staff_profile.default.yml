@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.staff_profile.field_archived
     - field.field.node.staff_profile.field_body
     - field.field.node.staff_profile.field_byline
     - field.field.node.staff_profile.field_component
@@ -13,7 +12,6 @@ dependencies:
     - field.field.node.staff_profile.field_portrait_download
     - field.field.node.staff_profile.field_position
     - field.field.node.staff_profile.field_teaser
-    - field.field.node.staff_profile.og_audience
     - node.type.staff_profile
   module:
     - datetime_range
@@ -24,16 +22,6 @@ targetEntityType: node
 bundle: staff_profile
 mode: default
 content:
-  field_archived:
-    type: boolean
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    weight: 11
-    region: content
   field_body:
     type: text_default
     label: hidden
@@ -112,14 +100,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 0
-    region: content
-  og_audience:
-    type: entity_reference_label
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 9
     region: content
 hidden:
   langcode: true

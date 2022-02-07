@@ -1,0 +1,30 @@
+uuid: d5f6b80c-45f4-4a49-91d3-e1b1755cde13
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.case_document.field_attachment
+    - field.field.node.case_document.field_body
+    - field.field.node.case_document.field_casedoc_type
+    - field.field.node.case_document.field_date
+    - node.type.case_document
+  module:
+    - user
+id: node.case_document.teaser
+targetEntityType: node
+bundle: case_document
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_attachment: true
+  field_body: true
+  field_casedoc_type: true
+  field_date: true
+  langcode: true
+  search_api_excerpt: true

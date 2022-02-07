@@ -1,0 +1,88 @@
+/*
+* * * * * ==============================
+* * * * * ==============================
+* * * * * ==============================
+* * * * * ==============================
+========================================
+========================================
+========================================
+----------------------------------------
+USWDS THEME CUSTOM STYLES
+----------------------------------------
+!! Copy this file to your project's
+   sass root. Don't edit the version
+   in node_modules.
+----------------------------------------
+Blank Block
+----------------------------------------
+*/
+
+<<<<<<< HEAD:docroot/themes/custom/usdoj_uswds/sass/_uswds-theme-homepage-blank.scss
+.block-homepage-resources {
+    padding: 3rem 0;
+    //overflow: hidden;
+    h2.block-title {
+      display: none;
+    }
+    
+=======
+.block-blank {
+    padding: 3rem 0;
+
+    h2.block-title {
+      display: none;
+    }
+>>>>>>> develop:docroot/themes/custom/usdoj_uswds/sass/_uswds-theme-block-blank.scss
+    .field_header, .field_body, .field_cta, img {
+      @include grid-col(12);
+      
+<<<<<<< HEAD:docroot/themes/custom/usdoj_uswds/sass/_uswds-theme-homepage-blank.scss
+      @include at-media(mobile-lg) {
+        @include grid-col(6);
+=======
+      @media (max-width: 47.99em) {
+        @include grid-col(12);
+>>>>>>> develop:docroot/themes/custom/usdoj_uswds/sass/_uswds-theme-block-blank.scss
+      }
+    }
+  
+    img {
+      float: right;
+      object-fit: contain;
+    }
+  
+    .field_header {
+      color: white;
+      font-family: 'Source Serif Pro';
+      font-weight: bold;
+      font-size: 2rem;
+      float: left;
+      
+      &:after {
+        content: "";
+        width: 3rem;
+        display: flex;
+        border-top: 1px solid color(warning);
+        border-bottom: 1px solid color(warning);
+        height: .3rem;
+        margin: 1.5rem 0;
+      }
+    }
+    
+    .field_body {
+      color: white;
+    }
+  
+    .field_cta {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      a {
+        background-color: color(warning);
+        color: color(primary-darker);
+        padding: 0.5rem 1.25rem;
+        border-radius: 2px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+    }
+  }

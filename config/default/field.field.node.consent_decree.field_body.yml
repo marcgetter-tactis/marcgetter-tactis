@@ -1,0 +1,25 @@
+uuid: 6d7e49dd-7bfe-46ce-9edd-4eedb05bf580
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_body
+    - node.type.consent_decree
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+id: node.consent_decree.field_body
+field_name: field_body
+entity_type: node
+bundle: consent_decree
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

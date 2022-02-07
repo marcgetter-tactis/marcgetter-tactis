@@ -1,0 +1,33 @@
+uuid: 18003eeb-0269-4ad5-a145-39566799c8b5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_court_level
+field_name: field_court_level
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: circuit_court
+      label: 'Circuit Court'
+    -
+      value: district_court
+      label: 'District Court'
+    -
+      value: supreme_court
+      label: 'Supreme Court'
+    -
+      value: other
+      label: Other
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

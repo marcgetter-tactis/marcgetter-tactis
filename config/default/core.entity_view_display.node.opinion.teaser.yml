@@ -1,0 +1,32 @@
+uuid: d040bc4c-5b00-45b5-936b-304334d0e91f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.opinion.field_attachment
+    - field.field.node.opinion.field_body
+    - field.field.node.opinion.field_date
+    - field.field.node.opinion.field_overview
+    - field.field.node.opinion.field_single_attachment
+    - node.type.opinion
+  module:
+    - user
+id: node.opinion.teaser
+targetEntityType: node
+bundle: opinion
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_attachment: true
+  field_body: true
+  field_date: true
+  field_overview: true
+  field_single_attachment: true
+  langcode: true
+  search_api_excerpt: true

@@ -31,8 +31,10 @@
 {%
 set classes = [
 'block',
+'block-' ~ content['#block_content'].type[0].target_id,
 'block-' ~ configuration.provider|clean_class,
 'block-' ~ plugin_id|clean_class,
+'bg-full-width',
 content['#block_content'].field_background_class.value,
 bundle ? 'block--type-' ~ bundle|clean_class,
 view_mode ? 'block--view-mode-' ~ view_mode|clean_class,
@@ -44,7 +46,10 @@ view_mode ? 'block--view-mode-' ~ view_mode|clean_class,
   <h2{{ title_attributes }} class="block-title">{{ label }}</h2>
   {% endif %}
   {{ title_suffix }}
+<<<<<<< HEAD
 
+=======
+>>>>>>> develop
   {% block content %}
   {{ content }}      
   {% endblock %}

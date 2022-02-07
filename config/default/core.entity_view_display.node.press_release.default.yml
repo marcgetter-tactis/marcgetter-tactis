@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.press_release.field_archived
     - field.field.node.press_release.field_attachment
     - field.field.node.press_release.field_body
     - field.field.node.press_release.field_component
@@ -18,7 +17,6 @@ dependencies:
     - field.field.node.press_release.field_teaser
     - field.field.node.press_release.field_teaser_image
     - field.field.node.press_release.field_topic
-    - field.field.node.press_release.og_audience
     - node.type.press_release
   module:
     - datetime
@@ -139,16 +137,7 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-  og_audience:
-    type: entity_reference_label
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 11
-    region: content
 hidden:
-  field_archived: true
   field_file_private_force: true
   field_pr_contact: true
   field_pr_image: true

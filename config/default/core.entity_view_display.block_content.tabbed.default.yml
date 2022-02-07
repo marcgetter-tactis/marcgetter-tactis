@@ -9,7 +9,6 @@ dependencies:
     - field.field.block_content.tabbed.field_cta_style
     - field.field.block_content.tabbed.field_header
     - field.field.block_content.tabbed.field_tabs
-    - field.field.block_content.tabbed.og_audience
   module:
     - entity_reference_revisions
     - link
@@ -53,14 +52,6 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 0
-    region: content
-  og_audience:
-    type: entity_reference_label
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 1
     region: content
 hidden:
   field_header: true

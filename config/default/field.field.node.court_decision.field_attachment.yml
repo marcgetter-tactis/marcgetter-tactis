@@ -1,0 +1,31 @@
+uuid: 857f97bd-1f6b-4edd-8506-fd8f8cc16718
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_attachment
+    - media.type.document
+    - media.type.image
+    - node.type.court_decision
+id: node.court_decision.field_attachment
+field_name: field_attachment
+entity_type: node
+bundle: court_decision
+label: Attachment(s)
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      document: document
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: document
+field_type: entity_reference

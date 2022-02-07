@@ -1,0 +1,14 @@
+uuid: b2f2befe-a58b-4c0a-a894-6000e75846cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.cache_purger
+  module:
+    - user
+id: user_remove_role_action.cache_purger
+label: 'Remove the Cache Purger role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: cache_purger

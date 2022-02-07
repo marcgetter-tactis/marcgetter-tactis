@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.speech.field_archived
     - field.field.node.speech.field_attachment
     - field.field.node.speech.field_body
     - field.field.node.speech.field_component
@@ -16,34 +15,16 @@ dependencies:
     - field.field.node.speech.field_speaker
     - field.field.node.speech.field_teaser
     - field.field.node.speech.field_topic
-    - field.field.node.speech.og_audience
     - node.type.speech
   module:
     - address
     - datetime
     - field_group
     - media_library
-    - og
     - path
     - scheduler
     - scheduler_content_moderation_integration
     - text
-third_party_settings:
-  field_group:
-    group_organization:
-      children:
-        - og_audience
-      label: Organization
-      region: content
-      parent_name: ''
-      weight: 1
-      format_type: fieldset
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        description: ''
-        required_fields: true
 id: node.speech.default
 targetEntityType: node
 bundle: speech
@@ -54,13 +35,6 @@ content:
     weight: 16
     region: content
     settings: {  }
-    third_party_settings: {  }
-  field_archived:
-    type: boolean_checkbox
-    weight: 26
-    region: content
-    settings:
-      display_label: true
     third_party_settings: {  }
   field_attachment:
     type: media_library_widget
@@ -151,16 +125,6 @@ content:
     region: content
     settings:
       include_locked: true
-    third_party_settings: {  }
-  og_audience:
-    type: og_complex
-    weight: 2
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
   path:
     type: path

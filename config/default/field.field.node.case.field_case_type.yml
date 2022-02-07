@@ -1,0 +1,21 @@
+uuid: b60d3719-2ab6-429f-8d8b-0e7213f0eef8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_case_type
+    - node.type.case
+  module:
+    - options
+id: node.case.field_case_type
+field_name: field_case_type
+entity_type: node
+bundle: case
+label: 'Case Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

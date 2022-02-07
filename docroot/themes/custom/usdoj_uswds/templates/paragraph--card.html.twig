@@ -59,19 +59,20 @@ not paragraph.isPublished() ? 'paragraph--unpublished'
       </div>
 
       <div class="usa-card__body">
-        <h3>{{ content.field_headline }}</h3>
+        <h3 class="card-title">{{ content.field_headline }}</h3>
+        
         {{ content.field_body }}
 
+        </div>
+
+        <div class="usa-card__footer">
+          {{ content.field_cta }}
+        </div>
+
+        </div>
       </div>
 
-      <div class="usa-card__footer">
-        {{ content.field_cta }}
-      </div>
-
+      {# {{ content }} #}
+      {% endblock %}
     </div>
-  </div>
-
-  {# {{ content }} #}
-  {% endblock %}
-  </div>
-{% endblock paragraph %}
+    {% endblock paragraph %}

@@ -1,4 +1,4 @@
-uuid: 079a8d3a-42c9-4216-823f-16ea85ae468d
+uuid: 7d903164-d480-4d07-9ff7-2cfe36a66142
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,11 @@ dependencies:
     - field.storage.paragraph.field_body
     - paragraphs.paragraphs_type.tab
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
 id: paragraph.tab.field_body
 field_name: field_body
 entity_type: paragraph

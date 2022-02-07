@@ -1,0 +1,11 @@
+uuid: 263ec2c0-966a-4594-bab0-caa15c8ca6f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.court_decision
+id: node.court_decision
+target_entity_type_id: node
+target_bundle: court_decision
+default_langcode: site_default
+language_alterable: false

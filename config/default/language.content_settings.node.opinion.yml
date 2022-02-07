@@ -1,0 +1,11 @@
+uuid: 5c18dc28-9be7-4d31-ae67-28068bd7a754
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.opinion
+id: node.opinion
+target_entity_type_id: node
+target_bundle: opinion
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,110 @@
+uuid: 9fa5263c-2512-4589-bc2e-b79319e4d401
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.historical_biography.field_body
+    - field.field.node.historical_biography.field_dates_service
+    - field.field.node.historical_biography.field_link
+    - field.field.node.historical_biography.field_name
+    - field.field.node.historical_biography.field_nth_attorney_general
+    - field.field.node.historical_biography.field_portrait
+    - field.field.node.historical_biography.field_portrait_artist
+    - field.field.node.historical_biography.field_portrait_download
+    - field.field.node.historical_biography.field_teaser
+    - node.type.historical_biography
+  module:
+    - datetime_range
+    - link
+    - text
+    - user
+id: node.historical_biography.default
+targetEntityType: node
+bundle: historical_biography
+mode: default
+content:
+  field_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_dates_service:
+    type: daterange_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: medium
+      separator: '-'
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_nth_attorney_general:
+    type: number_integer
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_portrait:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_portrait_artist:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 111
+    region: content
+  field_portrait_download:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  field_teaser:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

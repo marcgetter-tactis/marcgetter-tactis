@@ -1,0 +1,36 @@
+{#
+/**
+ * @file
+ * Collection of twig macros for USDOJ_USWDS theme
+ *
+ * Define your custom macro below.
+ */
+#}
+
+{% macro renderImagedHeaderMenu(item) %}
+    {% set linkTitle = item.title %}
+    {% set linkImage =  item.content.field_menu_link_image %}
+    {% set linkCaptionHeader =  item.content.field_menu_image_caption_header %}
+    {% set linkCaptionSubHeader =  item.content.field_menu_image_caption_subhead %}
+
+    <div class="menu_link_imaged__wrapper">
+        <span class="menu_link_imaged__link_title">{{ linkTitle }}</span>
+        <div class="menu_link_imaged__content" aria-hidden="true">
+            <div class="menu_link_imaged__media">{{ linkImage }}</div>
+            {% if linkCaptionHeader or linkCaptionSubHeader %}
+
+                <div class="menu_link_imaged__captions">
+                    {% if linkCaptionHeader %}
+                        <div class="menu_link_imaged__caption_header">{{ linkCaptionHeader }} </div>
+                    {% endif %}
+
+                    {% if linkCaptionSubHeader %}
+                        <div class="menu_link_imaged__caption_subHeader">{{ linkCaptionSubHeader }} </div>
+                    {% endif %}
+
+                </div>
+
+            {% endif %}
+        </div>
+    </div>
+{% endmacro %}

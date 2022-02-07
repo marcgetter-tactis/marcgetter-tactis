@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.hero_teaser
-    - field.field.node.blog_post.field_archived
     - field.field.node.blog_post.field_attachment
     - field.field.node.blog_post.field_author
     - field.field.node.blog_post.field_author_free
@@ -18,12 +17,10 @@ dependencies:
     - field.field.node.blog_post.field_teaser
     - field.field.node.blog_post.field_teaser_image
     - field.field.node.blog_post.field_topic
-    - field.field.node.blog_post.og_audience
     - node.type.blog_post
   module:
     - datetime
     - layout_builder
-    - og
     - text
     - user
 third_party_settings:
@@ -51,15 +48,7 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
-  og_group:
-    type: og_group_subscribe
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 0
-    region: content
 hidden:
-  field_archived: true
   field_attachment: true
   field_author: true
   field_author_free: true
@@ -73,5 +62,4 @@ hidden:
   field_topic: true
   langcode: true
   links: true
-  og_audience: true
   search_api_excerpt: true

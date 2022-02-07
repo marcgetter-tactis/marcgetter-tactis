@@ -1,0 +1,29 @@
+uuid: b12ed0e1-895e-4885-ac6c-1ff4b9f9c82b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_portrait
+    - media.type.image
+    - node.type.historical_biography
+id: node.historical_biography.field_portrait
+field_name: field_portrait
+entity_type: node
+bundle: historical_biography
+label: Portrait
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

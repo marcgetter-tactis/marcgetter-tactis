@@ -1,0 +1,23 @@
+uuid: 2e0dc30a-e7a9-4166-88b4-892995d0f0b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nth_attorney_general
+    - node.type.historical_biography
+id: node.historical_biography.field_nth_attorney_general
+field_name: field_nth_attorney_general
+entity_type: node
+bundle: historical_biography
+label: 'Nth Attorney General'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,32 @@
+uuid: 3176ed26-8ac4-4267-b714-b8696f39d290
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.consent_decree.field_attachment
+    - field.field.node.consent_decree.field_body
+    - field.field.node.consent_decree.field_comment_period
+    - field.field.node.consent_decree.field_component
+    - field.field.node.consent_decree.field_weight
+    - node.type.consent_decree
+  module:
+    - user
+id: node.consent_decree.teaser
+targetEntityType: node
+bundle: consent_decree
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_attachment: true
+  field_body: true
+  field_comment_period: true
+  field_component: true
+  field_weight: true
+  langcode: true
+  search_api_excerpt: true

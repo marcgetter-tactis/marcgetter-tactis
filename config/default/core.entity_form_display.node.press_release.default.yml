@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.press_release.field_archived
     - field.field.node.press_release.field_attachment
     - field.field.node.press_release.field_body
     - field.field.node.press_release.field_component
@@ -18,33 +17,15 @@ dependencies:
     - field.field.node.press_release.field_teaser
     - field.field.node.press_release.field_teaser_image
     - field.field.node.press_release.field_topic
-    - field.field.node.press_release.og_audience
     - node.type.press_release
   module:
     - datetime
     - field_group
     - media_library
-    - og
     - path
     - scheduler
     - scheduler_content_moderation_integration
     - text
-third_party_settings:
-  field_group:
-    group_organization:
-      children:
-        - og_audience
-      label: Organization
-      region: content
-      parent_name: ''
-      weight: 2
-      format_type: fieldset
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        description: ''
-        required_fields: true
 id: node.press_release.default
 targetEntityType: node
 bundle: press_release
@@ -161,16 +142,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  og_audience:
-    type: og_complex
-    weight: 3
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   path:
     type: path
     weight: 22
@@ -246,7 +217,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_archived: true
   field_file_private_force: true
   field_pr_contact: true
   field_pr_image: true

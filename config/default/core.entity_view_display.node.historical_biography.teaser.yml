@@ -1,0 +1,40 @@
+uuid: c39aad1e-d369-40e0-96f3-ed5696a5babe
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.historical_biography.field_body
+    - field.field.node.historical_biography.field_dates_service
+    - field.field.node.historical_biography.field_link
+    - field.field.node.historical_biography.field_name
+    - field.field.node.historical_biography.field_nth_attorney_general
+    - field.field.node.historical_biography.field_portrait
+    - field.field.node.historical_biography.field_portrait_artist
+    - field.field.node.historical_biography.field_portrait_download
+    - field.field.node.historical_biography.field_teaser
+    - node.type.historical_biography
+  module:
+    - user
+id: node.historical_biography.teaser
+targetEntityType: node
+bundle: historical_biography
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_body: true
+  field_dates_service: true
+  field_link: true
+  field_name: true
+  field_nth_attorney_general: true
+  field_portrait: true
+  field_portrait_artist: true
+  field_portrait_download: true
+  field_teaser: true
+  langcode: true
+  search_api_excerpt: true

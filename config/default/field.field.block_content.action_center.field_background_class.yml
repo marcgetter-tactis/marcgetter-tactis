@@ -1,0 +1,21 @@
+uuid: e355da4d-1732-488b-adb1-afa03e25914a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.action_center
+    - field.storage.block_content.field_background_class
+  module:
+    - options
+id: block_content.action_center.field_background_class
+field_name: field_background_class
+entity_type: block_content
+bundle: action_center
+label: 'Background Color'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

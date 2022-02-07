@@ -5,9 +5,7 @@ dependencies:
   config:
     - block_content.type.hero
     - field.field.block_content.hero.field_hero_slide
-    - field.field.block_content.hero.og_audience
   module:
-    - og
     - paragraphs
 id: block_content.hero.default
 targetEntityType: block_content
@@ -40,15 +38,5 @@ content:
     region: content
     settings:
       include_locked: true
-    third_party_settings: {  }
-  og_audience:
-    type: og_complex
-    weight: 28
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
 hidden: {  }

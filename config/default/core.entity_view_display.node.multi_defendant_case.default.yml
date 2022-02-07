@@ -1,0 +1,65 @@
+uuid: 279f5dd1-65f2-4322-a878-11a8ae65362f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.multi_defendant_case.field_attachment
+    - field.field.node.multi_defendant_case.field_charges
+    - field.field.node.multi_defendant_case.field_location
+    - field.field.node.multi_defendant_case.field_number
+    - field.field.node.multi_defendant_case.field_status
+    - node.type.multi_defendant_case
+  module:
+    - address
+    - text
+    - user
+id: node.multi_defendant_case.default
+targetEntityType: node
+bundle: multi_defendant_case
+mode: default
+content:
+  field_attachment:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_charges:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_location:
+    type: address_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_number:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_status:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

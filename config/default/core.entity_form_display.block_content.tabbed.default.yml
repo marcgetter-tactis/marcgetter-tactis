@@ -9,10 +9,8 @@ dependencies:
     - field.field.block_content.tabbed.field_cta_style
     - field.field.block_content.tabbed.field_header
     - field.field.block_content.tabbed.field_tabs
-    - field.field.block_content.tabbed.og_audience
   module:
     - link
-    - og
     - paragraphs
 id: block_content.tabbed.default
 targetEntityType: block_content
@@ -54,10 +52,10 @@ content:
     settings:
       title: Paragraph
       title_plural: Paragraphs
-      edit_mode: open
+      edit_mode: closed
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: ''
+      default_paragraph_type: tab
     third_party_settings: {  }
   info:
     type: string_textfield
@@ -73,15 +71,5 @@ content:
     region: content
     settings:
       include_locked: true
-    third_party_settings: {  }
-  og_audience:
-    type: og_complex
-    weight: 30
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
 hidden: {  }

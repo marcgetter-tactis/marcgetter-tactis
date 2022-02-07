@@ -1,0 +1,21 @@
+uuid: 6889c87a-82a8-4eff-bdb3-71f024768409
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_hiring_office
+field_name: field_hiring_office
+entity_type: node
+type: string
+settings:
+  max_length: 64
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

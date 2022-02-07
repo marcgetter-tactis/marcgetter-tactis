@@ -3,10 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.event.body
-    - field.field.node.event.field_archived
     - field.field.node.event.field_attachment
     - field.field.node.event.field_audience
+    - field.field.node.event.field_body
     - field.field.node.event.field_component
     - field.field.node.event.field_contact_info
     - field.field.node.event.field_datetime
@@ -18,7 +17,6 @@ dependencies:
     - field.field.node.event.field_press
     - field.field.node.event.field_registration
     - field.field.node.event.field_timezone
-    - field.field.node.event.og_audience
     - node.type.event
   module:
     - address
@@ -26,54 +24,20 @@ dependencies:
     - field_group
     - link
     - media_library
-    - og
     - path
     - scheduler
     - scheduler_content_moderation_integration
     - text
-third_party_settings:
-  field_group:
-    group_organization:
-      children:
-        - og_audience
-      label: Organization
-      region: content
-      parent_name: ''
-      weight: 1
-      format_type: fieldset
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        description: ''
-        required_fields: true
 id: node.event.default
 targetEntityType: node
 bundle: event
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 6
-    region: content
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-      show_summary: false
-    third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 19
+    weight: 18
     region: content
     settings: {  }
-    third_party_settings: {  }
-  field_archived:
-    type: boolean_checkbox
-    weight: 16
-    region: content
-    settings:
-      display_label: true
     third_party_settings: {  }
   field_attachment:
     type: media_library_widget
@@ -87,6 +51,14 @@ content:
     weight: 12
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_body:
+    type: text_textarea
+    weight: 6
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
     third_party_settings: {  }
   field_component:
     type: options_select
@@ -168,61 +140,51 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 17
+    weight: 16
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
-  og_audience:
-    type: og_complex
-    weight: 2
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   path:
     type: path
-    weight: 23
+    weight: 22
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 20
+    weight: 19
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 24
+    weight: 23
     region: content
     settings: {  }
     third_party_settings: {  }
   publish_state:
     type: scheduler_moderation
-    weight: 26
+    weight: 25
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 22
+    weight: 21
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 29
+    weight: 28
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 21
+    weight: 20
     region: content
     settings:
       display_label: true
@@ -237,7 +199,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 18
+    weight: 17
     region: content
     settings:
       match_operator: CONTAINS
@@ -247,18 +209,18 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 25
+    weight: 24
     region: content
     settings: {  }
     third_party_settings: {  }
   unpublish_state:
     type: scheduler_moderation
-    weight: 27
+    weight: 26
     region: content
     settings: {  }
     third_party_settings: {  }
   url_redirects:
-    weight: 28
+    weight: 27
     region: content
     settings: {  }
     third_party_settings: {  }

@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.media.embedded
   module:
     - blazy
+    - collapse_text
     - editor
     - media
     - slick
@@ -18,7 +19,7 @@ filters:
   filter_autop:
     id: filter_autop
     provider: filter
-    status: true
+    status: false
     weight: -48
     settings: {  }
   filter_url:
@@ -34,7 +35,7 @@ filters:
     status: false
     weight: -45
     settings:
-      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <img src alt data-entity-type data-entity-uuid data-align data-caption> <sup> <sub> <s> <u> <drupal-media data-entity-type data-entity-uuid data-view-mode data-align data-caption alt title> <p class="text-align-left text-align-center text-align-right text-align-justify"> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr> <h1> <pre>'
+      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol type start> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <img src alt data-entity-type data-entity-uuid data-align data-caption> <sup> <sub> <s> <u> <drupal-media data-entity-type data-entity-uuid data-view-mode data-align data-caption alt title> <p class="text-align-left text-align-center text-align-right text-align-justify"> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr> <h1> <pre>'
       filter_html_help: true
       filter_html_nofollow: false
   media_embed:
@@ -55,7 +56,7 @@ filters:
   filter_htmlcorrector:
     id: filter_htmlcorrector
     provider: filter
-    status: false
+    status: true
     weight: -44
     settings: {  }
   filter_align:
@@ -125,3 +126,11 @@ filters:
       thumbnail_effect: ''
       thumbnail_position: ''
       override: false
+  filter_collapse_text:
+    id: filter_collapse_text
+    provider: collapse_text
+    status: true
+    weight: 0
+    settings:
+      default_title: 'Click here to expand or collapse this section'
+      form: '1'

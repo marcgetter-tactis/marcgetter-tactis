@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.staff_profile.field_archived
     - field.field.node.staff_profile.field_body
     - field.field.node.staff_profile.field_byline
     - field.field.node.staff_profile.field_component
@@ -13,12 +12,10 @@ dependencies:
     - field.field.node.staff_profile.field_portrait_download
     - field.field.node.staff_profile.field_position
     - field.field.node.staff_profile.field_teaser
-    - field.field.node.staff_profile.og_audience
     - node.type.staff_profile
   module:
     - datetime_range
     - media_library
-    - og
     - path
     - scheduler
     - scheduler_content_moderation_integration
@@ -33,13 +30,6 @@ content:
     weight: 14
     region: content
     settings: {  }
-    third_party_settings: {  }
-  field_archived:
-    type: boolean_checkbox
-    weight: 11
-    region: content
-    settings:
-      display_label: true
     third_party_settings: {  }
   field_body:
     type: text_textarea
@@ -113,16 +103,6 @@ content:
     region: content
     settings:
       include_locked: true
-    third_party_settings: {  }
-  og_audience:
-    type: og_complex
-    weight: 9
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
   path:
     type: path

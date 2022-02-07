@@ -1,4 +1,4 @@
-uuid: b1039d87-1156-41cb-9b66-2486329bbd32
+uuid: 77ddedeb-7f16-47a9-9231-7275a043c470
 langcode: en
 status: true
 dependencies:
@@ -22,14 +22,14 @@ mode: default
 content:
   field_body:
     type: text_default
-    label: hidden
+    label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 2
+    weight: 1
     region: content
   field_cards:
     type: entity_reference_revisions_entity_view
-    label: hidden
+    label: above
     settings:
       view_mode: default
       link: ''
@@ -38,7 +38,7 @@ content:
     region: content
   field_cta:
     type: link
-    label: hidden
+    label: above
     settings:
       trim_length: 80
       url_only: false
@@ -46,18 +46,18 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 3
+    weight: 2
     region: content
   field_cta_style:
     type: list_default
-    label: hidden
+    label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 4
+    weight: 3
     region: content
   field_headline:
     type: string
-    label: hidden
+    label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -65,11 +65,11 @@ content:
     region: content
   field_image:
     type: entity_reference_label
-    label: hidden
+    label: above
     settings:
       link: true
     third_party_settings: {  }
-    weight: 1
+    weight: 4
     region: content
 hidden:
   search_api_excerpt: true

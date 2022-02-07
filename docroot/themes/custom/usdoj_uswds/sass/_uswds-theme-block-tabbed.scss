@@ -20,65 +20,158 @@ Tabbed Block on Homepage
 
 .block-tabbed {
   padding: 3rem 0;
+  
 
   .field_header {
     display: none;
   }
 
   .panels { 
-    position: relative; 
-    min-height: 48rem;
+    position: relative;
     background: white;
     border: 1px solid #eaeaea;
-    box-shadow: 0 0 0.5rem rgb(0 0 0 / 17%);
-    
+    box-shadow: 0 0 0.5rem rgb(0 0 0 / 17%); 
+    height: 45rem;
+    @media (min-width: 25rem) {
+      height: 57rem;
+    }
+    @media (min-width: 35rem) {
+      height: 60rem;
+    }
+    @media (min-width: 45rem) {
+      height: 70rem;
+    }
+  
     .panel { 
       display: inline;
       
       .block-tab { 
-        position: relative; 
-        float: left; 
-        display: block; 
+        display: inline-block;
         text-decoration: none;
         text-align: center;
-        width: auto;
-        padding: 1.85rem 0;
-        margin: 0 10%;
+        width: 22.5%;
+        @media (min-width: 48em) {
+          width: 24.5%;
+        }
+
         &.active {
-          color: color(primary-darker);
-          font-weight: bold;
-          border-bottom: 3px solid color(warning);
+          display: inline-block;
+          padding: 1.4rem 0;
+          @media (min-width: 48em) {
+            padding: 1.85rem 0;
+          }
+
+          //active tab
+          span {
+            color: color(primary-darker);
+            font-weight: bold;
+            border-bottom: 3px solid color(warning);
+            }
+
           ~ .panel-content {
-            display: block;
+            visibility: visible;
+          }
+        }
+
+        //inactive tab
+        span {
+          display: block;
+          padding: 0 0 1rem 0;
+          font-size: .8rem;
+          line-height: 1.2rem;
+          word-break: break-word;
+          max-width: 4rem;
+          margin: 0 auto;
+          @media (min-width: 48rem) {
+            display: inline;
+            padding: 0 0 1.85rem 0;
+            font-size: 1rem;
+            max-width: max-content;
           }
         }
       }
 
       .panel-content { 
-        display: none;
+        visibility: hidden;
         position: absolute;
         left: 0; 
         top: 5rem; 
         bottom: 0; 
         right: 0;
-        padding: 3rem;
+        padding: 0;
         border-top: 1px solid $gray-10;
+        @media (min-width: 48em) {
+          padding: 3rem;
+        }
+
+        .paragraph--type--tab .slick-dots {
+          padding: 0;
+          list-style: none;
+          bottom: 2rem;
+          text-align: center;
+          margin: 0 auto;
+      
+          li {
+            display: inline-block;
+            margin: 0 .25rem;
+      
+            &.slick-active {
+              button {
+                background-color: $theme-color-accent-warm;
+              }
+            }
+      
+            button {
+              color: transparent;
+              background-color: $doj-darkblue;
+              width: 12px;
+              height: 12px;
+              border-radius: 50%;
+              border: none;
+      
+              &:hover {
+                cursor: pointer;
+              }
+            }
+          }
+      
+          @include at-media(desktop) {
+            bottom: 0;
+          }
+        }
+
+        .field_headline {
+          display: none;
+        }
 
         .paragraph--type--card {
+          height: 100%;
           .usa-card__container {
             border: none;
             box-shadow: none;
+            
             .usa-card__media--inset {
               padding: 0;
             }
+            
             .usa-card__body {
               padding: 0;
               text-align: center;
-              min-height: 16rem;
+              min-height: 10rem;
+              @media (min-width: 48em) {
+                min-height: 16rem;
+              }
+              
+              .field_body {
+                max-width: 23rem;
+                margin: 0 auto;
+              }
             }
+            
             .usa-card__footer {
               text-align: center;
               padding: 0;
+              
               .field_cta a {
                 color: white;
                 background: color(primary-darker);
@@ -95,8 +188,22 @@ Tabbed Block on Homepage
         }
       }
     }
-  }
 
+    .paragraph--type--tab {
+      
+      .field__items {
+        @include grid-row;
+        
+        .field__item {
+          @include grid-col(12);
+          @media (min-width: 48em) {
+            @include grid-col(4);
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
   .field_cta a {
     width: 12rem;
     display: block;
@@ -108,20 +215,6 @@ Tabbed Block on Homepage
     font-weight: bold;
     color: color(primary-darker);
     text-decoration: none;
-  }
-
-
-  .paragraph--type--tab {
-    .field__items {
-      @include grid-row;
-      .field__item {
-        @include grid-col(12);
-        @media (min-width: 48em) {
-          @include grid-col(4);
-          margin: 0 auto;
-        }
-      }
-    }
   }
 }
 

@@ -34,8 +34,9 @@
             }
           ]
         });
-      })
 
+
+      })
     }
   };
 
@@ -50,5 +51,20 @@
     $(this).addClass('active');
     $('#' + i + '-body').fadeIn('slow');
   })
+
+  $(window).on('load resize', function()  {
+    if($(window).width() < 768){
+      $('.paragraph--type--tab .field__items').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        infinite: false,
+        prevArrow: false,
+        nextArrow: false,
+      });
+    }else{
+      $(".paragraph--type--tab .field__items").slick("unslick");
+    }
+  });
 
 })(jQuery);

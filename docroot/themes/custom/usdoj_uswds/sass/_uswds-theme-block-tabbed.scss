@@ -33,14 +33,14 @@ Tabbed Block on Homepage
     box-shadow: 0 0 0.5rem rgb(0 0 0 / 17%); 
     height: 45rem;
     @media (min-width: 25rem) {
-      height: 57rem;
+      height: 50rem;
     }
-    @media (min-width: 35rem) {
-      height: 60rem;
+    @media (min-width: 35rem) and (max-width: 48rem) {
+      height: 64rem;
     }
-    @media (min-width: 45rem) {
-      height: 70rem;
-    }
+    // @media (min-width: 45rem) {
+    //   height: 70rem;
+    // }
   
     .panel { 
       display: inline;
@@ -152,15 +152,18 @@ Tabbed Block on Homepage
             
             .usa-card__media--inset {
               padding: 0;
+              //max-height: 40rem;
             }
             
             .usa-card__body {
               padding: 0;
               text-align: center;
-              min-height: 10rem;
-              @media (min-width: 48em) {
-                min-height: 16rem;
-              }
+              padding-bottom: 1rem;
+              min-height: auto;
+              // min-height: 10rem;
+              // @media (min-width: 48em) {
+              //   min-height: 16rem;
+              // }
               
               .field_body {
                 max-width: 23rem;

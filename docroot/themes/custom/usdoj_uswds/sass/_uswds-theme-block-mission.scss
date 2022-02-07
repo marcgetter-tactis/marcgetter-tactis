@@ -23,10 +23,6 @@ Mission Block
   h2.block-title {
     display: none;
   }
-  
-  h2.block-title {
-    display: none;
-  }
 
   .field_image {
     float: left;
@@ -53,7 +49,7 @@ Mission Block
       border-top: 1px solid color(warning);
       border-bottom: 1px solid color(warning);
       height: .3rem;
-      margin: 1.5rem 0;
+      margin: 1.25rem 0;
     }
   }
   
@@ -133,7 +129,7 @@ Mission Block
       min-width: 15rem;
       padding-bottom: 1rem;
       @media (max-width: 47.99em) {
-        min-width: 10rem;
+        width: 10rem;
       }
       
       

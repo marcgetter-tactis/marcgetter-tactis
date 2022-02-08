@@ -1,4 +1,4 @@
-uuid: 382a78eb-188d-49cd-aa68-576cad1c5f6b
+uuid: abf605a1-f1d9-4da9-ba70-f1ee06dc7362
 langcode: en
 status: true
 dependencies:
@@ -7,16 +7,15 @@ dependencies:
 third_party_settings:
   crop:
     image_field: null
-id: remote_video
-label: 'Remote Video'
-description: 'Remotely hosted videos from external sources, e.g. YouTube, Vimeo.'
+id: youtube_video
+label: 'Youtube Video'
+description: 'A <em>Youtube Video</em> is a remotely hosted visual recording.'
 source: 'oembed:video'
 queue_thumbnail_downloads: false
 new_revision: true
 source_configuration:
   source_field: field_media_oembed_video
-  thumbnails_directory: 'public://oembed_thumbnails/'
+  thumbnails_directory: 'public://oembed_thumbnails/[date:custom:Y-m]'
   providers:
     - YouTube
-    - Vimeo
 field_map: {  }

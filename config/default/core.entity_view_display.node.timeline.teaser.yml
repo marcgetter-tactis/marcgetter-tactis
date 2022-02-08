@@ -20,6 +20,7 @@ content:
     weight: 100
     region: content
 hidden:
+  entitygroupfield: true
   field_group: true
   field_timeline_events: true
   langcode: true

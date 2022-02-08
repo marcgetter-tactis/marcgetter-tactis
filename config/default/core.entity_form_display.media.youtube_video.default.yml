@@ -1,16 +1,16 @@
-uuid: 99a1f8ae-f557-4ede-88cc-679ef72c3045
+uuid: 2ba953a5-ddfd-49e2-b44c-df963bde37d2
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.video.field_media_video_file
-    - media.type.video
+    - field.field.media.youtube_video.field_media_oembed_video
+    - media.type.youtube_video
   module:
-    - file
+    - media
     - path
-id: media.video.default
+id: media.youtube_video.default
 targetEntityType: media
-bundle: video
+bundle: youtube_video
 mode: default
 content:
   created:
@@ -19,12 +19,13 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_media_video_file:
-    type: file_generic
+  field_media_oembed_video:
+    type: oembed_textfield
     weight: 0
     region: content
     settings:
-      progress_indicator: throbber
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   langcode:
     type: language_select
@@ -32,14 +33,6 @@ content:
     region: content
     settings:
       include_locked: true
-    third_party_settings: {  }
-  name:
-    type: string_textfield
-    weight: -5
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
   path:
     type: path
@@ -66,3 +59,4 @@ content:
     third_party_settings: {  }
 hidden:
   entitygroupfield: true
+  name: true

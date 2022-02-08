@@ -1,11 +1,11 @@
-uuid: 787462b1-fb21-4581-ad50-578b79510bd4
+uuid: 04a187e5-2dc6-475a-ab5f-36571d8140fc
 langcode: en
 status: true
 dependencies:
   config:
-    - media.type.remote_video
-id: media.remote_video
+    - media.type.youtube_video
+id: media.youtube_video
 target_entity_type_id: media
-target_bundle: remote_video
+target_bundle: youtube_video
 default_langcode: site_default
 language_alterable: false

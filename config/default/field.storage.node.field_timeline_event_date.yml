@@ -1,0 +1,20 @@
+uuid: 1aaa130d-b37a-459f-98fd-5f90dc4136d5
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - node
+id: node.field_timeline_event_date
+field_name: field_timeline_event_date
+entity_type: node
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

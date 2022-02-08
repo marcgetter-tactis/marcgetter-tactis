@@ -1,0 +1,21 @@
+uuid: 4d70ae0f-ab94-4a34-931f-f1beb6f1d6f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_timeline_event_type
+    - node.type.timeline_event
+  module:
+    - options
+id: node.timeline_event.field_timeline_event_type
+field_name: field_timeline_event_type
+entity_type: node
+bundle: timeline_event
+label: Type
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

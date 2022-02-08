@@ -52,6 +52,7 @@
         "drupal/groupmedia": "^2.0@alpha",
         "drupal/groupmenu": "^1.0@beta",
         "drupal/image_widget_crop": "^2.3",
+        "drupal/layout_builder_modal": "^1.1",
         "drupal/link_attributes": "^1.11",
         "drupal/linkit": "^6",
         "drupal/menu_item_extras": "^2.16",

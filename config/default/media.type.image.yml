@@ -2,14 +2,19 @@ uuid: 8cb1d9d7-2180-4b1b-ac57-d4cb37ecf20d
 langcode: und
 status: true
 dependencies:
+  module:
+    - crop
   enforced:
     module:
       - acquia_cms_image
+third_party_settings:
+  crop:
+    image_field: _none
 _core:
   default_config_hash: DviFd3u5EMWBUFqR4DJLcAg_Qfi-3vkLoIiS_fShSJY
 id: image
 label: Image
-description: 'Locally hosted images.'
+description: 'An <em>Image</em> file is a still visual.'
 source: image
 queue_thumbnail_downloads: false
 new_revision: true

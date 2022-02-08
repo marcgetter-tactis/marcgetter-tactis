@@ -1,0 +1,11 @@
+uuid: cf920013-d39e-4a6d-b30f-0d7800c5b7fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_sitemap.type.main_sitemap
+id: main-sitemap
+label: 'Main Sitemap'
+description: ''
+type: main_sitemap
+weight: 0

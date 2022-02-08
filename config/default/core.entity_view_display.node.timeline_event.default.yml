@@ -91,5 +91,6 @@ content:
     weight: 100
     region: content
 hidden:
+  entitygroupfield: true
   langcode: true
   search_api_excerpt: true

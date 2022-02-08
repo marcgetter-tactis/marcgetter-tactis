@@ -1,19 +1,17 @@
-uuid: 5e76aaba-4786-4ed5-adbe-5cefbd05f3e2
+uuid: caa77d27-ab17-46c8-8efc-064712866f04
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.media.media_library
-    - field.field.media.remote_video.field_media_in_library
-    - field.field.media.remote_video.field_media_oembed_video
-    - field.field.media.remote_video.field_source
+    - field.field.media.audio.field_media_audio_file
     - image.style.medium
-    - media.type.remote_video
+    - media.type.audio
   module:
-    - image
-id: media.remote_video.media_library
+    - svg_image
+id: media.audio.media_library
 targetEntityType: media
-bundle: remote_video
+bundle: audio
 mode: media_library
 content:
   thumbnail:
@@ -22,14 +20,17 @@ content:
     settings:
       image_link: ''
       image_style: medium
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
     third_party_settings: {  }
     weight: 0
     region: content
 hidden:
   created: true
-  field_media_in_library: true
-  field_media_oembed_video: true
-  field_source: true
+  entitygroupfield: true
+  field_media_audio_file: true
   langcode: true
   name: true
   search_api_excerpt: true

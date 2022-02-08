@@ -1,19 +1,14 @@
-uuid: fb79f2dc-c252-4b94-a483-0fa3c352f023
+uuid: 9d1ed806-bce4-4c03-a51e-a53fa6ce5097
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.media.field_media_oembed_video
-    - media.type.video
-  enforced:
-    module:
-      - acquia_cms_video
-_core:
-  default_config_hash: MIuFcpM9e1rvD3Zi9EAfTUqaphNzSgzTtUeYGYHLi9E
-id: media.video.field_media_oembed_video
+    - media.type.youtube_video
+id: media.youtube_video.field_media_oembed_video
 field_name: field_media_oembed_video
 entity_type: media
-bundle: video
+bundle: youtube_video
 label: 'Remote video URL'
 description: ''
 required: true

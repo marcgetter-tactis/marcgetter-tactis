@@ -26,6 +26,7 @@ content:
     weight: 100
     region: content
 hidden:
+  entitygroupfield: true
   field_background_color: true
   field_background_image: true
   field_body: true

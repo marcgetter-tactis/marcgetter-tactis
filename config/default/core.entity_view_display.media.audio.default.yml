@@ -1,28 +1,25 @@
-uuid: f79ce92e-fb22-4a0f-9299-3116c8c58131
+uuid: 0c93c01a-32fa-4dec-be8e-76adc7a9baa7
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.video.field_media_video_file
-    - media.type.video
+    - field.field.media.audio.field_media_audio_file
+    - media.type.audio
   module:
     - file
-id: media.video.default
+id: media.audio.default
 targetEntityType: media
-bundle: video
+bundle: audio
 mode: default
 content:
-  field_media_video_file:
-    type: file_video
+  field_media_audio_file:
+    type: file_audio
     label: visually_hidden
     settings:
       controls: true
       autoplay: false
       loop: false
       multiple_file_display_type: tags
-      muted: false
-      width: 640
-      height: 480
     third_party_settings: {  }
     weight: 0
     region: content

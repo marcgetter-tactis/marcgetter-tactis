@@ -1,17 +1,17 @@
-uuid: 4bf442d6-c020-48ef-8f99-f952582b9116
+uuid: 5cefbd38-522b-489c-894b-48a7e1959a18
 langcode: en
 status: true
 dependencies:
   config:
     - group.type.organization
-    - group_content_menu.group_content_menu_type.organization
+    - group_content_menu.group_content_menu_type.left
   module:
     - group_content_menu
-id: group_content_type_92025d722c390
-label: 'Organization: Group menu (Organization)'
-description: 'Adds <em class="placeholder">Organization</em> menu items to groups.'
+id: group_content_type_299cc167e5a87
+label: 'Organization: Group menu (Left Navigation)'
+description: 'Adds <em class="placeholder">Left Navigation</em> menu items to groups.'
 group_type: organization
-content_plugin: 'group_content_menu:organization'
+content_plugin: 'group_content_menu:left'
 plugin_config:
   group_cardinality: 1
   entity_cardinality: 1

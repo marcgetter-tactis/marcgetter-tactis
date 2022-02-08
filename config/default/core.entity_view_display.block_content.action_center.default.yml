@@ -6,12 +6,11 @@ dependencies:
     - block_content.type.action_center
     - field.field.block_content.action_center.field_action_center_items
     - field.field.block_content.action_center.field_background_class
-    - field.field.block_content.action_center.field_cta
     - field.field.block_content.action_center.field_display_items
     - field.field.block_content.action_center.field_heading
+    - field.field.block_content.action_center.field_more_links
   module:
     - entity_reference_revisions
-    - link
 id: block_content.action_center.default
 targetEntityType: block_content
 bundle: action_center
@@ -26,18 +25,6 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
-  field_cta:
-    type: link
-    label: hidden
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    weight: 2
-    region: content
   field_heading:
     type: string
     label: hidden
@@ -45,6 +32,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_more_links:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
     region: content
 hidden:
   field_background_class: true

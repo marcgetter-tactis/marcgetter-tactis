@@ -47,12 +47,12 @@
   {% if multiple %}
     <div{{ attributes.addClass('field__items') }}>
       {% for item in items %}
-        <div{{ item.attributes.addClass('field__item action-center-cta') }}>{{ item.content }}</div>
+        <div{{ item.attributes.addClass('field__item action-center-cta') }}><button type="button" class="usa-button usa-button--outline">{{ item.content }}</button></div>
       {% endfor %}
     </div>
   {% else %}
     {% for item in items %}
-      <div{{ attributes.addClass('field__item action-center-cta') }}>{{ item.content }}</div>
+      <div{{ attributes.addClass('field__item action-center-cta') }}><button type="button" class="usa-button usa-button--outline">{{ item.content }}</button></div>
     {% endfor %}
   {% endif %}
 {% else %}
@@ -62,7 +62,7 @@
     <div>
       {% endif %}
       {% for item in items %}
-        <div{{ item.attributes.addClass('field__item action-center-cta') }}>{{ item.content }}</div>
+        <div{{ item.attributes.addClass('field__item action-center-cta') }}><button type="button" class="usa-button usa-button--outline">{{ item.content }}</button></div>
       {% endfor %}
       {% if multiple %}
     </div>

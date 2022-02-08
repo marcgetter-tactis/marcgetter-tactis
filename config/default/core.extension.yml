@@ -119,7 +119,6 @@ module:
   node: 0
   optional_end_date: 0
   options: 0
-  page_cache: 0
   page_manager: 0
   panels: 0
   paragraphs: 0

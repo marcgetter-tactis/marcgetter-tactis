@@ -1,0 +1,21 @@
+uuid: 5cefbd38-522b-489c-894b-48a7e1959a18
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.organization
+    - group_content_menu.group_content_menu_type.left
+  module:
+    - group_content_menu
+id: group_content_type_299cc167e5a87
+label: 'Organization: Group menu (Left Navigation)'
+description: 'Adds <em class="placeholder">Left Navigation</em> menu items to groups.'
+group_type: organization
+content_plugin: 'group_content_menu:left'
+plugin_config:
+  group_cardinality: 1
+  entity_cardinality: 1
+  use_creation_wizard: false
+  auto_create_group_menu: true
+  auto_create_home_link: false
+  auto_create_home_link_title: Home

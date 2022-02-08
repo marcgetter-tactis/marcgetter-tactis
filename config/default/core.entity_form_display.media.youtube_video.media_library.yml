@@ -1,0 +1,29 @@
+uuid: 24409765-5223-4415-a2b2-bcd36ea2dee8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.youtube_video.field_media_oembed_video
+    - media.type.youtube_video
+id: media.youtube_video.media_library
+targetEntityType: media
+bundle: youtube_video
+mode: media_library
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  entitygroupfield: true
+  field_media_oembed_video: true
+  langcode: true
+  path: true
+  status: true
+  uid: true

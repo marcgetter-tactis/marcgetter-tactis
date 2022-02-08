@@ -1,0 +1,13 @@
+uuid: 4ff31692-a872-41d6-8076-031bf18be6de
+langcode: en
+status: true
+dependencies: {  }
+id: main_sitemap
+label: 'Main Sitemap'
+description: ''
+sitemap_generator: default
+url_generators:
+  arbitrary: arbitrary
+  custom: custom
+  entity_menu_link_content: entity_menu_link_content
+  entity: entity

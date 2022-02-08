@@ -152,6 +152,7 @@ processor_settings:
   content_access:
     weights:
       preprocess_query: -10
+  entity_type: {  }
   html_filter:
     weights:
       preprocess_index: -10
@@ -246,4 +247,5 @@ tracker_settings:
 options:
   cron_limit: 50
   index_directly: true
+  track_changes_in_references: true
 server: database

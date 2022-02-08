@@ -1,0 +1,39 @@
+uuid: 29d047d1-06c3-4a2a-9fe7-181940180931
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.timeline_event.field_background_color
+    - field.field.node.timeline_event.field_background_image
+    - field.field.node.timeline_event.field_body
+    - field.field.node.timeline_event.field_group
+    - field.field.node.timeline_event.field_image
+    - field.field.node.timeline_event.field_timeline_event_date
+    - field.field.node.timeline_event.field_timeline_event_date_alt
+    - field.field.node.timeline_event.field_timeline_event_type
+    - node.type.timeline_event
+  module:
+    - user
+id: node.timeline_event.teaser
+targetEntityType: node
+bundle: timeline_event
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  entitygroupfield: true
+  field_background_color: true
+  field_background_image: true
+  field_body: true
+  field_group: true
+  field_image: true
+  field_timeline_event_date: true
+  field_timeline_event_date_alt: true
+  field_timeline_event_type: true
+  langcode: true
+  search_api_excerpt: true

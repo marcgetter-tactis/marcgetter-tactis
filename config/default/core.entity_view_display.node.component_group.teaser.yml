@@ -8,7 +8,6 @@ dependencies:
     - field.field.node.component_group.field_abbreviation_title
     - field.field.node.component_group.field_body
     - field.field.node.component_group.field_contact_info
-    - field.field.node.component_group.field_group
     - field.field.node.component_group.field_logo
     - field.field.node.component_group.field_more_events
     - field.field.node.component_group.field_organization_type
@@ -31,11 +30,11 @@ content:
     weight: 100
     region: content
 hidden:
+  entitygroupfield: true
   field_abbreviation: true
   field_abbreviation_title: true
   field_body: true
   field_contact_info: true
-  field_group: true
   field_logo: true
   field_more_events: true
   field_organization_type: true

@@ -1,0 +1,27 @@
+uuid: 667dbb37-b4c7-4a13-9dc5-943a841e1693
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.timeline.field_group
+    - field.field.node.timeline.field_timeline_events
+    - node.type.timeline
+  module:
+    - user
+id: node.timeline.teaser
+targetEntityType: node
+bundle: timeline
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  entitygroupfield: true
+  field_group: true
+  field_timeline_events: true
+  langcode: true
+  search_api_excerpt: true

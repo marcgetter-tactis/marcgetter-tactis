@@ -17,18 +17,29 @@ Press Release
 ----------------------------------------
 */
 
-.usa-layout-docs {
-  .usa-form {
+.press-release-search {
+  form.usa-form {
     max-width: 100%;
     
+    
+    label {
+      color: color(primary-darker);
+      font-weight: bold;
+      margin: 0;
+    }
+
+    input {
+      border: 1px solid $gray-warm-20;
+      border-radius: 3px;
+      max-width: 30rem;
+    }
+
     .form-item-search-api-fulltext {
       background: $blue-cool-5;
-      
-      label {
-        color: color(primary-darker);
-        font-weight: bold;
-      }
-
+      border-left: 3px solid color(primary-darker);
+      padding: 1rem 2rem 1.5rem;
+      margin-top: 0;
+      max-width: 100%;
     }
 
   }

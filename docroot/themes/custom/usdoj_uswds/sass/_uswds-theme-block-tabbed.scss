@@ -160,6 +160,10 @@ Tabbed Block on Homepage
               text-align: center;
               padding-bottom: 1rem;
               min-height: auto;
+
+              .card-title .field_headline {
+                display: block;
+              }
               
               .field_body {
                 max-width: 23rem;

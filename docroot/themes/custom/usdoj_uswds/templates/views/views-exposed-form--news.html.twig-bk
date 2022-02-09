@@ -1,0 +1,53 @@
+{#
+/**
+ * @file
+ * Default theme implementation of a views exposed form.
+ *
+ * Available variables:
+ * - form: A render element representing the form.
+ *
+ * @see template_preprocess_views_exposed_form()
+ *
+ * @ingroup themeable
+ */
+#}
+{% if q is not empty %}
+  {#
+    This ensures that, if clean URLs are off, the 'q' is added first,
+    as a hidden form element, so that it shows up first in the POST URL.
+  #}
+{{ q }}
+{% endif %}
+<h2>Press Releases</h2>
+<div class="press-release-search-fields">
+  <div class="keyword-search">
+    {{ form.search_api_fulltext }}
+  </div>
+  <div class="grid-row filters">
+    <div class="mobile-lg:grid-col-6">
+      {{ form.field_component}}
+    </div>
+    <div class="mobile-lg:grid-col-6">
+      {{ form.langcode}}
+    </div>
+    <div class="mobile-lg:grid-col-6">
+      {{ form.field_topic}}
+    </div>
+    <div class="mobile-lg:grid-col-6">
+      <div class="grid-row">
+        <div class="mobile-lg:grid-col-6 date">
+          {{ form.start_date}}
+        </div>
+        <div class="mobile-lg:grid-col-6 date">
+          {{ form.end_date}}
+        </div>
+      </div>
+    </div>
+    <div class="apply">
+      {{ form.actions.submit }}
+    </div>
+    <div class="reset">
+      {{ form.actions.reset }}
+    </div>
+  </div>
+</div>

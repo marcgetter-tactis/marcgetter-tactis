@@ -1,0 +1,10 @@
+uuid: b898f980-5482-4323-897b-5b757b7baa0b
+langcode: en
+status: 1
+dependencies: {  }
+_core:
+  default_config_hash: CvTJOo8jK9DQ6cwH8Ly-WYToAOQKEyT0RserYRBuiAQ
+id: breakpoint_md
+label: 'Medium devices (Tablets)'
+base_class: col-md
+weight: '-8'

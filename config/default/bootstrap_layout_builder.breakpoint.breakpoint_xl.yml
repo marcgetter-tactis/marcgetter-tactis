@@ -1,0 +1,10 @@
+uuid: a3d72fe7-82dd-40a5-bdbb-dc589c9f58bb
+langcode: en
+status: 0
+dependencies: {  }
+_core:
+  default_config_hash: F3_axK_sDJzKFc0HtHdaG1ZwuDXN0gZAMzMWLOlif30
+id: breakpoint_xl
+label: 'Extra large devices (Large desktops)'
+base_class: col-xl
+weight: '-10'

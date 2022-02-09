@@ -1,4 +1,3 @@
-uuid: dce48293-5eba-4659-a646-c88130d428db
 langcode: en
 status: true
 dependencies:
@@ -10,8 +9,8 @@ entity_type: media
 type: string
 settings:
   max_length: 255
-  case_sensitive: false
   is_ascii: false
+  case_sensitive: false
 module: core
 locked: false
 cardinality: 1

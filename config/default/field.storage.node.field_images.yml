@@ -1,16 +1,16 @@
-uuid: c08a64a8-7559-4778-952f-df7b50438be8
 langcode: en
 status: true
 dependencies:
   module:
-    - link
+    - media
     - node
 id: node.field_images
 field_name: field_images
 entity_type: node
-type: link
-settings: {  }
-module: link
+type: entity_reference
+settings:
+  target_type: media
+module: core
 locked: false
 cardinality: -1
 translatable: true

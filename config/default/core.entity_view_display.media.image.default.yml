@@ -4,11 +4,14 @@ status: true
 dependencies:
   config:
     - field.field.media.image.field_categories
+    - field.field.media.image.field_media_image
+    - field.field.media.image.field_media_in_library
     - field.field.media.image.field_tags
     - field.field.media.image.image
+    - image.style.coh_small_square
     - media.type.image
   module:
-    - image
+    - svg_image
   enforced:
     module:
       - acquia_cms_image
@@ -30,8 +33,10 @@ content:
     region: content
 hidden:
   created: true
+  entitygroupfield: true
   field_categories: true
   field_media_image: true
+  field_media_in_library: true
   field_tags: true
   image: true
   langcode: true

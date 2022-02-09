@@ -42,12 +42,23 @@
 ]
 %}
 
+{# Get the number of items to display from the node object. #}
+{% set displayItems = element['#object'].field_display_items.value %}
+
 {% if label_hidden %}
   {% if multiple %}
     <div{{ attributes.addClass('field__items action-center-items') }}>
-      {% for item in items %}
-        <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
-      {% endfor %}
+      <div class="action-icons action-icons-shown">
+        {% for item in items|slice(0, displayItems) %}
+          <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
+        {% endfor %}
+      </div>
+        <div class="action-icons action-icons-hidden">
+        {% for item in items|slice(displayItems, length) %}
+          <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
+        {% endfor %}
+      </div>
+      
     </div>
   {% else %}
     {% for item in items %}

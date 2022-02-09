@@ -16,7 +16,6 @@
             if(!nonImagedLinks) return;
             nonImagedLinks.forEach(link => {
               const linkParent = link.closest('.individual_menu_level__1');
-              link.toggle
               nonImagedLinksContainer.appendChild(linkParent);
             });
           });

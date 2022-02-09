@@ -6,31 +6,36 @@
  * Define your custom macro below.
  */
 #}
-
 {% macro renderImagedHeaderMenu(item) %}
+
+    {# Array Index Cutoff- Set a limit to how many children with images get rendered for a dropdown.#}
+    {% set MAX_COUNT = 2 %}
+
     {% set linkTitle = item.title %}
     {% set linkImage =  item.content.field_menu_link_image %}
     {% set linkCaptionHeader =  item.content.field_menu_image_caption_header %}
     {% set linkCaptionSubHeader =  item.content.field_menu_image_caption_subhead %}
+    {% set linksWithImageCount = item.content.linksWithImagesCount %}
 
-    <div class="menu_link_imaged__wrapper">
-        <span class="menu_link_imaged__link_title">{{ linkTitle }}</span>
-        <div class="menu_link_imaged__content" aria-hidden="true">
-            <div class="menu_link_imaged__media">{{ linkImage }}</div>
-            {% if linkCaptionHeader or linkCaptionSubHeader %}
+    {% if linksWithImageCount <= MAX_COUNT %}
+        <div class="menu_link_imaged__wrapper">
+            <span class="menu_link_imaged__link_title">{{ linkTitle }}</span>
+            <div class="menu_link_imaged__content" aria-hidden="true">
+                <div class="menu_link_imaged__media">{{ linkImage }}</div>
+                {% if linkCaptionHeader or linkCaptionSubHeader %}
 
-                <div class="menu_link_imaged__captions">
-                    {% if linkCaptionHeader %}
-                        <div class="menu_link_imaged__caption_header">{{ linkCaptionHeader }} </div>
-                    {% endif %}
+                    <div class="menu_link_imaged__captions">
+                        {% if linkCaptionHeader %}
+                            <div class="menu_link_imaged__caption_header">{{ linkCaptionHeader }} </div>
+                        {% endif %}
 
-                    {% if linkCaptionSubHeader %}
-                        <div class="menu_link_imaged__caption_subHeader">{{ linkCaptionSubHeader }} </div>
-                    {% endif %}
+                        {% if linkCaptionSubHeader %}
+                            <div class="menu_link_imaged__caption_subHeader">{{ linkCaptionSubHeader }} </div>
+                        {% endif %}
+                    </div>
 
-                </div>
-
-            {% endif %}
+                {% endif %}
+            </div>
         </div>
-    </div>
+    {% endif %}
 {% endmacro %}

@@ -192,13 +192,17 @@ strong {
 }
 
 .hero-region-wrapper {
-  max-width: units($theme-grid-container-max-width);
-  margin: 0 auto;
   position: relative;
   top: -1px;
+  max-width: units($theme-grid-container-max-width);
+  margin: 0 auto;
 }
 
 .hero-slideshow {
+  position: relative;
+  top: -1px;
+  margin: 0 -1rem;
+
   .hero-wrapper {
     position: relative;
 
@@ -207,7 +211,7 @@ strong {
       border-left: 4px solid $theme-color-accent-warm;
       z-index: 1;
 
-      @include at-media(desktop) {
+      @include at-media(tablet-lg) {
         position: absolute;
         max-width: 300px;
         top: 2rem;
@@ -257,7 +261,7 @@ strong {
         max-height: 250px;
       }
 
-      @include at-media(tablet) {
+      @include at-media(tablet-lg) {
         img {
           aspect-ratio: auto;
           width: 100%;
@@ -297,8 +301,8 @@ strong {
       }
     }
 
-    @include at-media(tablet) {
-      top: 58%;
+    @include at-media(tablet-lg) {
+      top: 86%;
     }
 
     @include at-media(desktop) {

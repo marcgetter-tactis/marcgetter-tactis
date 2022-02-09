@@ -10,7 +10,7 @@ field_name: field_display_items
 entity_type: block_content
 bundle: action_center
 label: 'Display Items'
-description: ''
+description: 'This is the number of items that will initially show when the Action Center is displayed.  If there are more than this number to display then a button will be displayed to allow you to display the remaining Action Items. '
 required: true
 translatable: false
 default_value:

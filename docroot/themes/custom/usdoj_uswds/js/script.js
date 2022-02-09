@@ -53,6 +53,7 @@
 
         $button.click(function() {
           $hiddenItems.addClass('show-icons');
+          $button.attr("disabled",true);
         });
       });
     }

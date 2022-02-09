@@ -17,7 +17,6 @@
         "acquia/drupal-environment-detector": "^1",
         "acquia/http-hmac-php": "3.4.0",
         "acquia/memcache-settings": "^1",
-        "backstrap/jquery-ui-touch-punch": "dev-master",
         "bower-asset/blazy": "^1.8",
         "bower-asset/chosen": "^1.8",
         "bower-asset/dropzone": "^5.9",

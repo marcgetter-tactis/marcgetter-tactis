@@ -1,4 +1,4 @@
-uuid: 4d5d33dc-e2e4-4eab-9f9f-831955d2b09d
+uuid: 40e40b8f-351e-4142-a48b-be916b315112
 langcode: en
 status: true
 dependencies:
@@ -6,15 +6,15 @@ dependencies:
     - subgroup
 third_party_settings:
   subgroup:
-    depth: 0
-    left: 1
-    right: 4
+    depth: 1
+    left: 2
+    right: 3
     tree: organization
-id: organization
-label: Organization
+id: organization_subgroup
+label: 'Organization Subgroup'
 description: ''
 new_revision: true
 creator_membership: true
 creator_wizard: false
 creator_roles:
-  - organization-admin
+  - organization_subgroup-admin

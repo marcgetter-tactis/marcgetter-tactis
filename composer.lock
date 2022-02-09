@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "faa438d2c3d2e35d8b42152a36958a0e",
+    "content-hash": "0e633558d2e10e6b32f1b56c568a5d07",
     "packages": [
         {
             "name": "acquia/acquia_cms",
@@ -970,16 +970,16 @@
         },
         {
             "name": "bower-asset/dropzone",
-            "version": "v5.9.3",
+            "version": "v5.7.2",
             "source": {
                 "type": "git",
                 "url": "git@github.com:enyo/dropzone.git",
-                "reference": "9f97ace16d9b6c85216c15f2b0349362ee1a4002"
+                "reference": "78424e9c97b569e698cc9175e9bc424168219162"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/enyo/dropzone/zipball/9f97ace16d9b6c85216c15f2b0349362ee1a4002",
-                "reference": "9f97ace16d9b6c85216c15f2b0349362ee1a4002"
+                "url": "https://api.github.com/repos/enyo/dropzone/zipball/78424e9c97b569e698cc9175e9bc424168219162",
+                "reference": "78424e9c97b569e698cc9175e9bc424168219162"
             },
             "type": "bower-asset"
         },
@@ -29610,5 +29610,5 @@
     "platform-overrides": {
         "php": "7.4"
     },
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.1.0"
 }

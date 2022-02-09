@@ -1,0 +1,18 @@
+uuid: 696803ab-b5fb-4e24-90c5-9b81614179df
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: R6Xx5AKo4mq5MZyrZavEDbjyEwOip0Qp7XkteYy8RnQ
+id: media_bulk_upload
+label: 'Media bulk upload'
+media_types:
+  audio: audio
+  file: file
+  image: image
+  video: video
+  gallery: 0
+  remote_video: 0
+show_alt: null
+show_title: null
+form_mode: bulk_upload

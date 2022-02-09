@@ -73,6 +73,7 @@ module:
   entity_embed: 0
   entity_reference_revisions: 0
   entitygroupfield: 0
+  eva: 0
   facets: 0
   facets_pretty_paths: 0
   feeds: 0
@@ -219,6 +220,7 @@ module:
   views_bulk_edit: 0
   views_bulk_operations: 0
   views_infinite_scroll: 0
+  views_timelinejs: 0
   views_ui: 0
   viewsreference: 0
   webp: 0

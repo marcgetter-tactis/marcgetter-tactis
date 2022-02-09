@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2783c04f33096afa755954b1ab5d6510",
+    "content-hash": "39fb23889ece6ea7404718fd6c729926",
     "packages": [
         {
             "name": "acquia/acquia_cms",
@@ -931,60 +931,6 @@
                 "source": "https://github.com/asm89/stack-cors/tree/1.3.0"
             },
             "time": "2019-12-24T22:41:47+00:00"
-        },
-        {
-            "name": "backstrap/jquery-ui-touch-punch",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/backstrap/jquery-ui-touch-punch.git",
-                "reference": "db7f31ee8e430ccf029d6af965483314b772b03f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/backstrap/jquery-ui-touch-punch/zipball/db7f31ee8e430ccf029d6af965483314b772b03f",
-                "reference": "db7f31ee8e430ccf029d6af965483314b772b03f",
-                "shasum": ""
-            },
-            "require": {
-                "robloach/component-installer": "*"
-            },
-            "default-branch": true,
-            "type": "component",
-            "extra": {
-                "component": {
-                    "scripts": [
-                        "jquery.ui.touch-punch.js"
-                    ],
-                    "shim": {
-                        "deps": [
-                            "jquery-ui"
-                        ]
-                    }
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Dave Furfero",
-                    "email": "furf@furf.com"
-                }
-            ],
-            "description": "Extension to jQuery UI for mobile touch event support",
-            "homepage": "http://touchpunch.furf.com/",
-            "keywords": [
-                "gestures",
-                "mobile",
-                "touch"
-            ],
-            "support": {
-                "issues": "https://github.com/furf/jquery-ui-touch-punch/issues",
-                "source": "https://github.com/furf/jquery-ui-touch-punch"
-            },
-            "time": "2016-02-04T14:30:40+00:00"
         },
         {
             "name": "bower-asset/blazy",
@@ -18705,53 +18651,6 @@
             "time": "2021-07-22T09:24:00+00:00"
         },
         {
-            "name": "kriswallsmith/assetic",
-            "version": "v1.0.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/kriswallsmith/assetic.git",
-                "reference": "8ab3638325af9cd144242765494a9dc9b53ab430"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/kriswallsmith/assetic/zipball/8ab3638325af9cd144242765494a9dc9b53ab430",
-                "reference": "8ab3638325af9cd144242765494a9dc9b53ab430",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.1"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Assetic": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Kris Wallsmith",
-                    "email": "kris.wallsmith@gmail.com",
-                    "homepage": "http://kriswallsmith.net/"
-                }
-            ],
-            "description": "Asset Management for PHP",
-            "homepage": "https://github.com/kriswallsmith/assetic",
-            "keywords": [
-                "assets",
-                "compression",
-                "minification"
-            ],
-            "support": {
-                "issues": "https://github.com/kriswallsmith/assetic/issues",
-                "source": "https://github.com/kriswallsmith/assetic/tree/1.0.x"
-            },
-            "time": "2014-12-12T05:07:58+00:00"
-        },
-        {
             "name": "laminas/laminas-diactoros",
             "version": "2.8.0",
             "source": {
@@ -22379,55 +22278,6 @@
                 "source": "https://github.com/ralouphie/getallheaders/tree/develop"
             },
             "time": "2019-03-08T08:55:37+00:00"
-        },
-        {
-            "name": "robloach/component-installer",
-            "version": "0.0.12",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/RobLoach/component-installer.git",
-                "reference": "1864f25db21fc173e02a359f646acd596c1b0460"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/RobLoach/component-installer/zipball/1864f25db21fc173e02a359f646acd596c1b0460",
-                "reference": "1864f25db21fc173e02a359f646acd596c1b0460",
-                "shasum": ""
-            },
-            "require": {
-                "kriswallsmith/assetic": "1.*",
-                "php": ">=5.3.2"
-            },
-            "require-dev": {
-                "composer/composer": "1.*"
-            },
-            "type": "composer-installer",
-            "extra": {
-                "class": "ComponentInstaller\\Installer"
-            },
-            "autoload": {
-                "psr-0": {
-                    "ComponentInstaller": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Rob Loach",
-                    "email": "robloach@gmail.com",
-                    "homepage": "http://robloach.net"
-                }
-            ],
-            "description": "Allows installation of Components via Composer.",
-            "support": {
-                "issues": "https://github.com/RobLoach/component-installer/issues",
-                "source": "https://github.com/RobLoach/component-installer/tree/master"
-            },
-            "abandoned": "oomphinc/composer-installers-extender",
-            "time": "2013-08-31T23:46:48+00:00"
         },
         {
             "name": "robrichards/xmlseclibs",
@@ -29609,7 +29459,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "backstrap/jquery-ui-touch-punch": 20,
         "drupal/entitygroupfield": 15,
         "drupal/fast_404": 15,
         "drupal/feeds": 15,

@@ -32,12 +32,10 @@ mode: browser_teaser
 content:
   field_media_gallery:
     type: media_thumbnail
-    weight: 0
-    region: content
     label: hidden
     settings:
-      image_style: d01_square
       image_link: ''
+      image_style: d01_square
     third_party_settings:
       ds:
         ds_limit: '4'
@@ -45,33 +43,33 @@ content:
           id: expert
           settings:
             lb: ''
-            prefix: ''
+            lbw: false
             lbw-el: ''
             lbw-cl: ''
             lbw-at: ''
+            lb-col: false
             ow: true
             ow-el: ''
             ow-cl: gallery-thumbnail
             ow-at: ''
+            ow-def-at: false
+            ow-def-cl: false
             fis: true
             fis-el: ''
             fis-cl: field--name-thumbnail
             fis-at: ''
+            fis-def-at: false
+            fi: false
             fi-el: ''
             fi-cl: ''
             fi-at: ''
-            suffix: ''
-            lbw: false
-            lb-col: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis-def-at: false
-            fi: false
             fi-def-at: false
+            prefix: ''
+            suffix: ''
+    weight: 0
+    region: content
   name:
     type: string
-    weight: 1
-    region: content
     label: hidden
     settings:
       link_to_entity: false
@@ -83,6 +81,8 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
+    weight: 1
+    region: content
 hidden:
   created: true
   entitygroupfield: true

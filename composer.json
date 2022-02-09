@@ -190,6 +190,9 @@
             },
             "drupal/group": {
                 "2797793-279.patch": "https://www.drupal.org/files/issues/2021-08-24/2797793-279.patch"
+            },
+            "drupal/paragraphs": {
+                "Integrity constraint violation: 1048 Column 'langcode' cannot be null": "https://www.drupal.org/files/issues/2021-03-01/2901390-76-integrity-constraint-violation-paragraph.patch"
             }
         },
         "violinist": {

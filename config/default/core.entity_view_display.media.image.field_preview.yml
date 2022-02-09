@@ -22,11 +22,11 @@ bundle: image
 mode: field_preview
 content:
   field_media_image:
-    weight: 0
+    type: image
     label: hidden
     settings:
-      image_style: field_preview
       image_link: ''
+      image_style: field_preview
     third_party_settings:
       ds:
         ft:
@@ -35,12 +35,10 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
-    type: image
+    weight: 0
     region: content
   name:
     type: string
-    weight: 1
-    region: content
     label: hidden
     settings:
       link_to_entity: false
@@ -52,6 +50,8 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
+    weight: 1
+    region: content
 hidden:
   created: true
   entitygroupfield: true

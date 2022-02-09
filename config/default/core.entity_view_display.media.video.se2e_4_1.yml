@@ -21,15 +21,15 @@ third_party_settings:
       disable_css: false
       entity_classes: all_classes
       settings:
-        label: ''
+        classes:
+          layout_class: {  }
         wrappers:
           ds_content: div
         outer_wrapper: div
         attributes: ''
         link_attribute: ''
         link_custom: ''
-        classes:
-          layout_class: {  }
+        label: ''
     regions:
       ds_content:
         - field_media_video_file
@@ -43,17 +43,8 @@ mode: se2e_4_1
 content:
   field_media_cover_image:
     type: blazy
-    weight: 1
-    region: ds_content
     label: hidden
     settings:
-      image_style: ''
-      responsive_image_style: de2e_4_1
-      media_switch: ''
-      thumbnail_style: ''
-      ratio: ''
-      current_view_mode: se2e_4_1
-      background: false
       caption:
         title: '0'
         alt: '0'
@@ -61,62 +52,69 @@ content:
       layout: ''
       view_mode: ''
       cache: 0
+      current_view_mode: se2e_4_1
       skin: ''
       fx: ''
       style: ''
+      background: false
       box_caption: ''
       box_caption_custom: ''
       box_media_style: ''
+      responsive_image_style: de2e_4_1
       box_style: ''
+      image_style: ''
+      media_switch: ''
+      ratio: ''
+      thumbnail_style: ''
       _uri: ''
       breakpoints: {  }
       sizes: ''
       grid_header: ''
-      grid: 0
-      grid_medium: 0
-      grid_small: 0
+      grid: '0'
+      grid_medium: '0'
+      grid_small: '0'
     third_party_settings:
       ds:
         ft:
           id: expert
           settings:
             lb: ''
-            prefix: ''
+            lbw: false
             lbw-el: ''
             lbw-cl: ''
             lbw-at: ''
+            lb-col: false
             ow: true
             ow-el: ''
             ow-cl: 'media-cover-image video-player-icon js-video-player-icon'
             ow-at: ''
-            fis-el: ''
-            fis-cl: ''
-            fis-at: ''
-            fi-el: ''
-            fi-cl: ''
-            fi-at: ''
-            suffix: ''
-            lbw: false
-            lb-col: false
             ow-def-at: false
             ow-def-cl: false
             fis: false
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
             fis-def-at: false
             fi: false
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
             fi-def-at: false
+            prefix: ''
+            suffix: ''
+    weight: 1
+    region: ds_content
   field_media_video_file:
     type: file_video
-    weight: 0
-    region: ds_content
     label: hidden
     settings:
       controls: true
-      multiple_file_display_type: tags
-      width: 1600
-      height: 400
       autoplay: false
       loop: false
+      multiple_file_display_type: tags
       muted: false
+      width: 1600
+      height: 400
     third_party_settings:
       ds:
         ft:
@@ -125,6 +123,8 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
+    weight: 0
+    region: ds_content
 hidden:
   created: true
   entitygroupfield: true

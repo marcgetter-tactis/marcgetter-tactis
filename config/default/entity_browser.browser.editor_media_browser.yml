@@ -27,27 +27,30 @@ widget_selector: tabs
 widget_selector_configuration: {  }
 widgets:
   0ce5dbdc-76cf-4c4e-a020-03328ef20f1c:
+    id: view
+    uuid: 0ce5dbdc-76cf-4c4e-a020-03328ef20f1c
+    label: Library
+    weight: -10
     settings:
-      view: media_browsers
-      view_display: media_browser
       submit_text: 'Select media'
       auto_select: false
-    uuid: 0ce5dbdc-76cf-4c4e-a020-03328ef20f1c
-    weight: -10
-    label: Library
-    id: view
+      view: media_browsers
+      view_display: media_browser
   0f828fb5-d820-46c1-9260-d706fe92b367:
+    id: embed_code
+    uuid: 0f828fb5-d820-46c1-9260-d706fe92b367
+    label: Embed
+    weight: -7
     settings:
       submit_text: 'Embed media'
       form_mode: entity_browser
-    uuid: 0f828fb5-d820-46c1-9260-d706fe92b367
-    weight: -7
-    label: Embed
-    id: embed_code
   422803d7-21aa-471b-8d65-335f345c4e30:
+    id: dropzonejs_media_entity_inline_entity_form
+    uuid: 422803d7-21aa-471b-8d65-335f345c4e30
+    label: 'Upload image'
+    weight: -9
     settings:
-      form_mode: entity_browser
-      media_type: image
+      submit_text: 'Select image(s)'
       upload_location: 'public://images/[date:custom:Y]-[date:custom:m]'
       dropzone_description: 'Drop image files here to upload them'
       max_filesize: 32M
@@ -58,15 +61,15 @@ widgets:
       resize_quality: !!float 1
       resize_method: contain
       thumbnail_method: contain
-      submit_text: 'Select image(s)'
-    uuid: 422803d7-21aa-471b-8d65-335f345c4e30
-    weight: -9
-    label: 'Upload image'
-    id: dropzonejs_media_entity_inline_entity_form
-  c05a5c40-6a5e-4a45-a841-7ba471656952:
-    settings:
+      media_type: image
       form_mode: entity_browser
-      media_type: video
+  c05a5c40-6a5e-4a45-a841-7ba471656952:
+    id: dropzonejs_media_entity_inline_entity_form
+    uuid: c05a5c40-6a5e-4a45-a841-7ba471656952
+    label: 'Upload video'
+    weight: -8
+    settings:
+      submit_text: 'Select video(s)'
       upload_location: 'public://videos/[date:custom:Y]-[date:custom:m]'
       dropzone_description: 'Drop video files here to upload them'
       max_filesize: 128M
@@ -77,8 +80,5 @@ widgets:
       resize_quality: !!float 1
       resize_method: contain
       thumbnail_method: contain
-      submit_text: 'Select video(s)'
-    uuid: c05a5c40-6a5e-4a45-a841-7ba471656952
-    weight: -8
-    label: 'Upload video'
-    id: dropzonejs_media_entity_inline_entity_form
+      media_type: video
+      form_mode: entity_browser

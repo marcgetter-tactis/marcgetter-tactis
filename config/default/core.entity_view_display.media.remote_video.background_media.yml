@@ -15,8 +15,8 @@ dependencies:
     - varbase_media
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
 _core:
   default_config_hash: cRRqn96nsmZbrg4EHfMedq6z24ki1rqXPV0PnRBbxYw
 id: media.remote_video.background_media
@@ -26,7 +26,6 @@ mode: background_media
 content:
   field_media_oembed_video:
     type: varbase_oembed
-    weight: 0
     label: hidden
     settings:
       max_width: 1600
@@ -37,6 +36,7 @@ content:
           id: reset
           settings:
             lb: ''
+    weight: 0
     region: content
 hidden:
   created: true

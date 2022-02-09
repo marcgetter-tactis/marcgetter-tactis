@@ -17,12 +17,12 @@ bundle: audio
 mode: editor
 content:
   field_media_audio_file:
+    type: file_generic
     weight: 0
+    region: content
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
-    type: file_generic
-    region: content
 hidden:
   created: true
   entitygroupfield: true

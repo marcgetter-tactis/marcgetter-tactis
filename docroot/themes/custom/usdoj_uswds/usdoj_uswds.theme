@@ -7,13 +7,12 @@
  * Place your custom PHP code in this file.
  */
 
-
 /**
- * You may also provide your pre-process code in a separate .inc file (under 'includes' directory),
- * which will be import in this file
- *
  * Include all files from the includes directory.
- **/
+ *
+ * You may also provide your pre-process code in a separate .inc file (under
+ * 'includes' directory), which will be import in this file.
+ */
 $includes_path = dirname(__FILE__) . '/includes/*.inc';
 foreach (glob($includes_path) as $filename) {
   require_once dirname(__FILE__) . '/includes/' . basename($filename);

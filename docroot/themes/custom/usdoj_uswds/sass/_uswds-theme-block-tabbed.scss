@@ -32,15 +32,15 @@ Tabbed Block on Homepage
     border: 1px solid #eaeaea;
     box-shadow: 0 0 0.5rem rgb(0 0 0 / 17%); 
     height: 45rem;
-    @media (min-width: 25rem) {
+    @media (min-width: 25em) and (max-width: 34.99em) {
       height: 50rem;
     }
-    @media (min-width: 35rem) and (max-width: 48rem) {
+    @media (min-width: 35em) and (max-width: 47.99em) {
       height: 64rem;
     }
-    // @media (min-width: 45rem) {
-    //   height: 70rem;
-    // }
+    @media (min-width: 48em) {
+      height: 40rem;
+    }
   
     .panel { 
       display: inline;
@@ -160,14 +160,12 @@ Tabbed Block on Homepage
               text-align: center;
               padding-bottom: 1rem;
               min-height: auto;
-              // min-height: 10rem;
-              // @media (min-width: 48em) {
-              //   min-height: 16rem;
-              // }
               
               .field_body {
                 max-width: 23rem;
                 margin: 0 auto;
+                font-weight: normal;
+                font-size: .9rem;
               }
             }
             
@@ -178,13 +176,22 @@ Tabbed Block on Homepage
               .field_cta a {
                 color: white;
                 background: color(primary-darker);
-                padding: 0.75rem 1rem;
+                padding: 0.75rem;
                 border-radius: 0.25rem;
                 text-decoration: none;
                 font-weight: bold;
-                font-size: .9rem;
                 margin: 0 auto;
-
+                &:hover {
+                  background: $blue-60v;
+                  border-color: $blue-60v;
+                }
+                &:active {
+                  background: $doj-coolblue;
+                  border-color: $doj-coolblue;
+                }
+                &:focus {
+                  outline: none;
+                }
               }
             }
           }
@@ -208,7 +215,7 @@ Tabbed Block on Homepage
     }
   }
   .field_cta a {
-    width: 12rem;
+    width: 12.5rem;
     display: block;
     text-align: center;
     margin: 2rem auto 1rem;
@@ -218,6 +225,18 @@ Tabbed Block on Homepage
     font-weight: bold;
     color: color(primary-darker);
     text-decoration: none;
+    &:hover {
+      background: $blue-60v;
+      border-color: $blue-60v;
+      color: white;
+    }
+    &:active {
+      background: $doj-coolblue;
+      border-color: $doj-coolblue;
+    }
+    &:focus {
+      outline: none;
+    }
   }
 }
 

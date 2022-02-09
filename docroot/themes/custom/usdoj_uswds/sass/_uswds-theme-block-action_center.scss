@@ -68,10 +68,6 @@
         &.show-icons {
           max-height: 1000px;
         }
-
-        >.field__item {
-          //border-top: 3px dotted $action-border-gray;
-        }
       }
 
       @include at-media(desktop) {
@@ -95,10 +91,6 @@
           >.field__item {
             border-bottom: none;
             border-top: 3px dotted $action-border-gray;
-
-            &:nth-child(-n+3) {
-              //border-top: none;
-            }
           }
         }
       }

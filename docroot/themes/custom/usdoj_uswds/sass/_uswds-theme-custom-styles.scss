@@ -355,21 +355,6 @@ strong {
   }
 }
 
-.taupe-wide {
-  position: relative;
-  padding-top: 1px;
-
-  &::before {
-    content: "";
-    background-color: $taupe-bg;
-    width: 200vw;
-    height: 100%;
-    position: absolute;
-    left: -100vw;
-    z-index: -1;
-  }
-}
-
 .usa-card__container {
   border-color: $theme-card-border-color;
   box-shadow: 0 0 7px 0 rgba(0,0,0,0.17);

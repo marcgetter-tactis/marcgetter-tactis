@@ -1,0 +1,21 @@
+uuid: fd27cdba-7d17-4e80-8b1d-f1c98cbd4c4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sc_term
+    - node.type.brief
+  module:
+    - options
+id: node.brief.field_sc_term
+field_name: field_sc_term
+entity_type: node
+bundle: brief
+label: 'Supreme Court Term'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

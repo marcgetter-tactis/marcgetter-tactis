@@ -428,6 +428,7 @@ strong {
 /************************************************
 Primary Menu (with Images) - START
 ************************************************/
+
 header.usa-header--extended {
   @include at-media-max(desktop) {
     #mobile-btn:checked {
@@ -445,6 +446,23 @@ header.usa-header--extended {
     }
   }
   @include at-media(desktop) {
+    .usa-nav__primary-item {
+      > .usa-nav__link {
+        &:hover {
+          @include remove-bar
+
+        }
+      }
+    }
+  }
+}
+
+
+
+/** Handles Hover Functionality.
+  * If this is used, please ensure proper aria attributes
+**/
+/*@include at-media(desktop) {
     .usa-nav__primary-item {
       &:hover {
         position: static;
@@ -479,13 +497,15 @@ header.usa-header--extended {
         }
       }
     }
-    // nav.usa-nav ul li:hover {
-    //   background-color: transparent;
-    // }
+    nav.usa-nav ul li:hover {
+      //background-color: transparent;
+    }
 
   }
 
 }
+
+ */
 
 .usa-nav__primary {
   button {
@@ -496,10 +516,10 @@ header.usa-header--extended {
 
       &[aria-expanded="false"] {
         @include add-background-svg("usa-icons-bg/add--white")
-          }
+      }
       &[aria-expanded="true"] {
         @include add-background-svg("usa-icons-bg/remove--white")
-          }
+      }
       &:hover {
         background-color: $doj-darkgray;
         color: $theme-color-accent-warm;
@@ -556,10 +576,6 @@ header.usa-header--extended {
       font-weight: bold;
       display: block;
 
-      span {
-        display: inherit;
-      }
-
       &:hover {
         color: $doj-darkblue;
       }
@@ -604,10 +620,9 @@ header.usa-header--extended {
 
   &__captions {
     position: absolute;
-    opacity: .75;
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.75);
     width: 100%;
-    bottom: -100%;
+    bottom: calc(-100% - 100px);
     padding: 1em;
     font-size: .875rem;
     transition: bottom .25s ease-out
@@ -654,7 +669,7 @@ header.usa-header--extended {
     }
   }
 }
-
 /************************************************
 MegaMenu (with Images) - END
 ************************************************/
+

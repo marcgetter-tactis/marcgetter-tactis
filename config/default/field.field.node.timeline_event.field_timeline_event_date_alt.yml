@@ -9,7 +9,7 @@ id: node.timeline_event.field_timeline_event_date_alt
 field_name: field_timeline_event_date_alt
 entity_type: node
 bundle: timeline_event
-label: 'Date to Disply'
+label: 'Date to Display'
 description: 'Use this optional field if you want the displayed date to be something other than the year set above.'
 required: false
 translatable: false

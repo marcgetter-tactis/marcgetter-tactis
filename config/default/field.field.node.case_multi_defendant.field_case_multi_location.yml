@@ -1,0 +1,19 @@
+uuid: 2ec51673-3cc0-43e9-99ff-418025622090
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_case_multi_location
+    - node.type.case_multi_defendant
+id: node.case_multi_defendant.field_case_multi_location
+field_name: field_case_multi_location
+entity_type: node
+bundle: case_multi_defendant
+label: 'Location of Arrest'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

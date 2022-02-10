@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.media.s09_standard
     - field.field.media.image.field_categories
+    - field.field.media.image.field_image_alignment
     - field.field.media.image.field_media_image
     - field.field.media.image.field_media_in_library
     - field.field.media.image.field_tags
@@ -67,6 +68,7 @@ hidden:
   created: true
   entitygroupfield: true
   field_categories: true
+  field_image_alignment: true
   field_media_in_library: true
   field_tags: true
   image: true

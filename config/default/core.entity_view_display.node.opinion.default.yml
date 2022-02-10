@@ -18,6 +18,11 @@ targetEntityType: node
 bundle: opinion
 mode: default
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   field_body:
     type: text_default
     label: hidden
@@ -51,6 +56,7 @@ content:
     weight: 6
     region: content
 hidden:
+  entitygroupfield: true
   field_attachment: true
   langcode: true
   links: true

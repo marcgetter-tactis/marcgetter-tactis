@@ -1,0 +1,41 @@
+uuid: 563a3c66-2a86-408a-98a4-3b8bff6d5cfb
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.brief.field_attachment
+    - field.field.node.brief.field_body
+    - field.field.node.brief.field_brief_type
+    - field.field.node.brief.field_court_level
+    - field.field.node.brief.field_date
+    - field.field.node.brief.field_federal_court
+    - field.field.node.brief.field_number
+    - field.field.node.brief.field_sc_term
+    - field.field.node.brief.field_topic
+    - node.type.brief
+  module:
+    - user
+id: node.brief.teaser
+targetEntityType: node
+bundle: brief
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  entitygroupfield: true
+  field_attachment: true
+  field_body: true
+  field_brief_type: true
+  field_court_level: true
+  field_date: true
+  field_federal_court: true
+  field_number: true
+  field_sc_term: true
+  field_topic: true
+  langcode: true
+  search_api_excerpt: true

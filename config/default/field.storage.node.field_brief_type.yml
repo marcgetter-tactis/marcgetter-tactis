@@ -1,0 +1,30 @@
+uuid: dca6fd7a-599f-41fa-a10b-aafab7b6fd0c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_brief_type
+field_name: field_brief_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: 'Brief Type 1'
+    -
+      value: '2'
+      label: 'Brief Type 2'
+    -
+      value: '3'
+      label: 'Brief Type 3'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

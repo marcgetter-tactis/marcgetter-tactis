@@ -1,0 +1,11 @@
+uuid: 319b3e75-c117-4a30-88f2-58afe2986a84
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.brief
+id: node.brief
+target_entity_type_id: node
+target_bundle: brief
+default_langcode: site_default
+language_alterable: false

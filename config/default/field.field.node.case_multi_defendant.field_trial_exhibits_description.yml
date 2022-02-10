@@ -1,0 +1,25 @@
+uuid: 9ed148e2-3030-4fa2-a4ff-01402c7d201c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_trial_exhibits_description
+    - node.type.case_multi_defendant
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+id: node.case_multi_defendant.field_trial_exhibits_description
+field_name: field_trial_exhibits_description
+entity_type: node
+bundle: case_multi_defendant
+label: 'Trial Exhibits'
+description: 'This field can be used to post any trial exhibits and corresponding descriptions. Use the "Insert" buttons under "Trial Exhibit Files" to intersperse the files themselves into this field.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

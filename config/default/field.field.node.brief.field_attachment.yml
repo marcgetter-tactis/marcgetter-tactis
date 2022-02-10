@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_attachment
-    - media.type.file
     - node.type.brief
 id: node.brief.field_attachment
 field_name: field_attachment
@@ -19,8 +18,7 @@ default_value_callback: ''
 settings:
   handler: 'default:media'
   handler_settings:
-    target_bundles:
-      file: file
+    target_bundles: {  }
     sort:
       field: _none
       direction: ASC

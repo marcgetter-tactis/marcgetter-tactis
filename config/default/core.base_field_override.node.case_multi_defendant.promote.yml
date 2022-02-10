@@ -1,0 +1,22 @@
+uuid: 0d1ec441-40d6-47bf-bc64-1fea74fb10ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.case_multi_defendant
+id: node.case_multi_defendant.promote
+field_name: promote
+entity_type: node
+bundle: case_multi_defendant
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

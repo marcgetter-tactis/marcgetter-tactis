@@ -1,0 +1,21 @@
+uuid: 16f97519-716a-4d0c-ad67-9662e0006562
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_image_alignment
+    - media.type.image
+  module:
+    - options
+id: media.image.field_image_alignment
+field_name: field_image_alignment
+entity_type: media
+bundle: image
+label: 'Image Alignment'
+description: 'This controls how the image aligns with the text around it.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

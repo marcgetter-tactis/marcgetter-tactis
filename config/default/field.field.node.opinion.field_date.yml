@@ -11,7 +11,7 @@ id: node.opinion.field_date
 field_name: field_date
 entity_type: node
 bundle: opinion
-label: Date
+label: 'Date of Issuance'
 description: ''
 required: true
 translatable: true

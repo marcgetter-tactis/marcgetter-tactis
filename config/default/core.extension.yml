@@ -189,6 +189,7 @@ module:
   settings_tray: 0
   shortcode: 0
   simple_sitemap: 0
+  simplesamlphp_auth: 0
   sitewide_alert: 0
   slick: 0
   smart_trim: 0
@@ -231,6 +232,7 @@ module:
   pathauto: 1
   ds_extras: 2
   content_translation: 10
+  externalauth: 10
   password_policy: 10
   views: 10
   acquia_cms: 1000

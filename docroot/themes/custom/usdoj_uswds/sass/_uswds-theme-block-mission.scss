@@ -95,6 +95,7 @@ Mission Block
     }
   }
 
+  //by the nunbers
   .field_statistics_header {
     color: color(blue-10);
     font-size: 1.5rem;
@@ -118,6 +119,7 @@ Mission Block
     }
   }
 
+  //statistics
   .field__items {
     display: flex;
     justify-content: space-evenly;
@@ -126,12 +128,10 @@ Mission Block
     flex-wrap: wrap;
 
     .field__item {
-      min-width: 15rem;
       padding-bottom: 1rem;
       @media (max-width: 47.99em) {
-        width: 10rem;
+        @include grid-col(6);
       }
-      
       
       .field_statistic {
         color: color(warning);
@@ -154,10 +154,22 @@ Mission Block
   }
 
   .field_background_image {
+    width: 100vw;
     position: absolute;
-    top: -8rem;
-    right: -6rem;
-    opacity: 0.05;
+    top: -5rem;
+    height: 100%;
+    left: 50%;
+    right: 50%;
+    margin: 0 -50vw;
     pointer-events: none;
+    overflow: hidden;
+    img {
+      max-width: inherit;
+      opacity: 0.05;
+      float: right;
+      @media (max-width: 47.99em) {
+        float: none;
+      }
+    }
   }
 }

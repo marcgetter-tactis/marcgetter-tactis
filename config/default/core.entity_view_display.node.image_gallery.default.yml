@@ -18,6 +18,11 @@ targetEntityType: node
 bundle: image_gallery
 mode: default
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   field_body:
     type: text_default
     label: hidden
@@ -59,6 +64,7 @@ content:
     weight: 4
     region: content
 hidden:
+  entitygroupfield: true
   langcode: true
   links: true
   search_api_excerpt: true

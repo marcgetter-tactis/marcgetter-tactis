@@ -4,8 +4,8 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.brief.field_attachment
     - field.field.node.brief.field_body
+    - field.field.node.brief.field_brief_attachments
     - field.field.node.brief.field_brief_type
     - field.field.node.brief.field_court_level
     - field.field.node.brief.field_date
@@ -28,8 +28,8 @@ content:
     region: content
 hidden:
   entitygroupfield: true
-  field_attachment: true
   field_body: true
+  field_brief_attachments: true
   field_brief_type: true
   field_court_level: true
   field_date: true

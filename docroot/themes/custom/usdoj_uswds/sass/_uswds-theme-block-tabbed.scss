@@ -38,13 +38,11 @@ Tabbed Block on Homepage
     @media (min-width: 35em) and (max-width: 47.99em) {
       height: 64rem;
     }
-    @media (min-width: 48em) {
-      height: 40rem;
-    }
   
     .panel { 
       display: inline;
       
+      //header tabs
       .block-tab { 
         display: inline-block;
         text-decoration: none;
@@ -101,9 +99,10 @@ Tabbed Block on Homepage
         padding: 0;
         border-top: 1px solid $gray-10;
         @media (min-width: 48em) {
-          padding: 3rem;
+          padding: 1rem 3rem 3rem;
         }
 
+        //mobile display of paragraphs
         .paragraph--type--tab .slick-dots {
           padding: 0;
           list-style: none;
@@ -144,15 +143,33 @@ Tabbed Block on Homepage
           display: none;
         }
 
-        .paragraph--type--card {
-          height: 100%;
+        //paragraphs
+        .usa-card--header-first {
+          .usa-card__header {
+            border-radius: 0;
+            padding: 0;
+            
+            h3 {
+              color: $doj-coolblue;
+              text-align: center;
+              font-size: 1.25rem;
+              line-height: 1.5rem;
+              
+              .field_headline {
+                display: flex;
+                height: 4rem;
+                justify-content: center;
+                align-items: center;
+              }
+            } 
+          }
+          
           .usa-card__container {
             border: none;
             box-shadow: none;
             
             .usa-card__media--inset {
               padding: 0;
-              //max-height: 40rem;
             }
             
             .usa-card__body {
@@ -160,19 +177,16 @@ Tabbed Block on Homepage
               text-align: center;
               padding-bottom: 1rem;
               min-height: auto;
-
-              .card-title .field_headline {
-                display: block;
-              }
               
               .field_body {
                 max-width: 23rem;
-                margin: 0 auto;
+                margin: 1rem auto 0;
                 font-weight: normal;
                 font-size: .9rem;
               }
             }
             
+            //paragraph buttons
             .usa-card__footer {
               text-align: center;
               padding: 0;
@@ -218,6 +232,8 @@ Tabbed Block on Homepage
       }
     }
   }
+
+  //block button
   .field_cta a {
     width: 12.5rem;
     display: block;

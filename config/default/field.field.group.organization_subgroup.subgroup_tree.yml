@@ -1,0 +1,23 @@
+uuid: a94a1c0c-97a9-4e43-a981-07f3a02d9793
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.subgroup_tree
+    - group.type.organization_subgroup
+id: group.organization_subgroup.subgroup_tree
+field_name: subgroup_tree
+entity_type: group
+bundle: organization_subgroup
+label: Tree
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

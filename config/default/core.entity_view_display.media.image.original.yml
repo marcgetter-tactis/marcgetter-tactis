@@ -22,10 +22,10 @@ bundle: image
 mode: original
 content:
   field_media_image:
-    weight: 0
+    type: blazy
     label: hidden
     settings:
-      responsive_image_style: default
+      caption: {  }
       icon: ''
       layout: ''
       view_mode: ''
@@ -38,7 +38,7 @@ content:
       box_caption: ''
       box_caption_custom: ''
       box_media_style: ''
-      caption: {  }
+      responsive_image_style: default
       box_style: ''
       image_style: ''
       media_switch: ''
@@ -48,9 +48,9 @@ content:
       breakpoints: {  }
       sizes: ''
       grid_header: ''
-      grid: 0
-      grid_medium: 0
-      grid_small: 0
+      grid: '0'
+      grid_medium: '0'
+      grid_small: '0'
     third_party_settings:
       ds:
         ft:
@@ -59,7 +59,7 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
-    type: blazy
+    weight: 0
     region: content
 hidden:
   created: true

@@ -1,0 +1,110 @@
+uuid: ccf746c2-5458-4379-95c9-da4abe9d29ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.brief.field_attachment
+    - field.field.node.brief.field_body
+    - field.field.node.brief.field_brief_type
+    - field.field.node.brief.field_court_level
+    - field.field.node.brief.field_date
+    - field.field.node.brief.field_federal_court
+    - field.field.node.brief.field_number
+    - field.field.node.brief.field_sc_term
+    - field.field.node.brief.field_topic
+    - node.type.brief
+  module:
+    - datetime
+    - ds
+    - options
+    - text
+    - user
+id: node.brief.default
+targetEntityType: node
+bundle: brief
+mode: default
+content:
+  field_attachment:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_brief_type:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_court_level:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_date:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: html_date
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    weight: 3
+    region: content
+  field_federal_court:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_number:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_sc_term:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_topic:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  entitygroupfield: true
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,27 @@
+uuid: 26b8f760-4a20-4a71-895d-4ad533fb46a1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_sc_term
+field_name: field_sc_term
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: 'Term 1'
+    -
+      value: '2'
+      label: 'Term 2'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

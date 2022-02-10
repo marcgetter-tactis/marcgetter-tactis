@@ -1,0 +1,25 @@
+uuid: 539a64b3-9429-4edd-aa0b-4dd0388952fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_body
+    - node.type.brief
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+id: node.brief.field_body
+field_name: field_body
+entity_type: node
+bundle: brief
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

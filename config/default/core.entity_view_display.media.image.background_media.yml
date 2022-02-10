@@ -17,8 +17,8 @@ dependencies:
     - layout_builder
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
 _core:
   default_config_hash: Hqr-Bl9t5KTcyhxprfaNcTojsKsCwvaQhPjPHYCEHgU
 id: media.image.background_media
@@ -27,15 +27,9 @@ bundle: image
 mode: background_media
 content:
   field_media_image:
+    type: blazy
     label: hidden
     settings:
-      image_style: ''
-      responsive_image_style: de2e
-      media_switch: ''
-      thumbnail_style: ''
-      ratio: ''
-      current_view_mode: background_media
-      background: false
       caption:
         title: '0'
         alt: '0'
@@ -43,27 +37,33 @@ content:
       layout: ''
       view_mode: ''
       cache: 0
+      current_view_mode: background_media
       skin: ''
       fx: ''
       style: ''
+      background: false
       box_caption: ''
       box_caption_custom: ''
       box_media_style: ''
+      responsive_image_style: de2e
       box_style: ''
+      image_style: ''
+      media_switch: ''
+      ratio: ''
+      thumbnail_style: ''
       _uri: ''
       breakpoints: {  }
       sizes: ''
       grid_header: ''
-      grid: 0
-      grid_medium: 0
-      grid_small: 0
+      grid: '0'
+      grid_medium: '0'
+      grid_small: '0'
     third_party_settings:
       ds:
         ft:
           id: reset
           settings:
             lb: ''
-    type: blazy
     weight: 0
     region: content
 hidden:

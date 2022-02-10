@@ -14,8 +14,8 @@ dependencies:
     - slick
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
 _core:
   default_config_hash: b8ocCz0f9haRJ4Unz0UonJPwQxf-ACVdfFQ-XQ7zMJg
 id: media.gallery.original
@@ -25,31 +25,61 @@ mode: original
 content:
   field_media_gallery:
     type: slick_media
-    weight: 0
-    region: content
     label: hidden
     settings:
-      vanilla: true
+      caption:
+        field_media_image: '0'
+        field_media_cover_image: '0'
+        field_media_oembed_video: '0'
+        field_media_video_file: '0'
       optionset: varbase_gallery
-      optionset_thumbnail: ''
-      skin: classic
-      skin_thumbnail: ''
-      image_style: ''
-      responsive_image_style: de2e_standard
-      thumbnail_effect: ''
-      thumbnail_position: ''
-      media_switch: ''
-      thumbnail_style: ''
-      ratio: ''
-      view_mode: se2e_standard
-      image: ''
-      title: ''
-      link: ''
-      layout: ''
-      thumbnail_caption: ''
       class: ''
+      id: ''
+      image: ''
+      link: ''
+      overlay: ''
+      title: ''
+      vanilla: true
+      icon: ''
+      layout: ''
+      view_mode: se2e_standard
       cache: 0
-      override: true
+      current_view_mode: default
+      skin: classic
+      fx: ''
+      style: ''
+      background: false
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      responsive_image_style: de2e_standard
+      box_style: ''
+      image_style: ''
+      media_switch: ''
+      ratio: ''
+      thumbnail_style: ''
+      _uri: ''
+      breakpoints:
+        xs:
+          width: ''
+          image_style: ''
+        sm:
+          width: ''
+          image_style: ''
+        md:
+          width: ''
+          image_style: ''
+        lg:
+          width: ''
+          image_style: ''
+        xl:
+          width: ''
+          image_style: ''
+      sizes: ''
+      grid_header: ''
+      grid: '0'
+      grid_medium: '0'
+      grid_small: '0'
       overridables:
         arrows: arrows
         autoplay: autoplay
@@ -59,49 +89,17 @@ content:
         mouseWheel: '0'
         randomize: '0'
         variableWidth: '0'
-      sizes: ''
-      current_view_mode: default
-      background: false
-      caption:
-        field_media_image: '0'
-        field_media_cover_image: '0'
-        field_media_oembed_video: '0'
-        field_media_video_file: '0'
-      breakpoints:
-        xs:
-          image_style: ''
-          width: ''
-        sm:
-          image_style: ''
-          width: ''
-        md:
-          image_style: ''
-          width: ''
-        lg:
-          image_style: ''
-          width: ''
-        xl:
-          image_style: ''
-          width: ''
       thumbnail: ''
+      optionset_thumbnail: ''
+      skin_thumbnail: ''
+      thumbnail_caption: ''
+      thumbnail_effect: ''
+      thumbnail_position: ''
+      override: true
       skin_arrows: ''
       skin_dots: ''
-      style: ''
-      icon: ''
-      box_caption: ''
-      box_caption_custom: ''
-      box_style: ''
-      box_media_style: ''
       preserve_keys: false
       visible_items: 0
-      grid: 0
-      grid_header: ''
-      grid_medium: 0
-      grid_small: 0
-      id: ''
-      overlay: ''
-      fx: ''
-      _uri: ''
     third_party_settings:
       ds:
         ds_limit: ''
@@ -111,6 +109,8 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
+    weight: 0
+    region: content
 hidden:
   created: true
   entitygroupfield: true

@@ -192,13 +192,17 @@ strong {
 }
 
 .hero-region-wrapper {
-  max-width: units($theme-grid-container-max-width);
-  margin: 0 auto;
   position: relative;
   top: -1px;
+  max-width: units($theme-grid-container-max-width);
+  margin: 0 auto;
 }
 
 .hero-slideshow {
+  position: relative;
+  top: -1px;
+  margin: 0 -1rem;
+
   .hero-wrapper {
     position: relative;
 
@@ -207,7 +211,7 @@ strong {
       border-left: 4px solid $theme-color-accent-warm;
       z-index: 1;
 
-      @include at-media(desktop) {
+      @include at-media(tablet-lg) {
         position: absolute;
         max-width: 300px;
         top: 2rem;
@@ -257,7 +261,7 @@ strong {
         max-height: 250px;
       }
 
-      @include at-media(tablet) {
+      @include at-media(tablet-lg) {
         img {
           aspect-ratio: auto;
           width: 100%;
@@ -297,8 +301,8 @@ strong {
       }
     }
 
-    @include at-media(tablet) {
-      top: 58%;
+    @include at-media(tablet-lg) {
+      top: 86%;
     }
 
     @include at-media(desktop) {
@@ -399,7 +403,13 @@ strong {
       color: $blue-60v;
       font-weight: 600;
     }
+
+    @include at-media(desktop) {
+      min-height: 60px;
+    }
   }
+
+
 }
 
 .block-carousel {
@@ -449,7 +459,7 @@ header.usa-header--extended {
         &:hover {
           @include remove-bar
 
-        }
+            }
       }
     }
   }
@@ -458,52 +468,52 @@ header.usa-header--extended {
 
 
 /** Handles Hover Functionality.
-  * If this is used, please ensure proper aria attributes
+* If this is used, please ensure proper aria attributes
 **/
 /*@include at-media(desktop) {
-    .usa-nav__primary-item {
-      &:hover {
-        position: static;
-        color: $doj-darkblue;
+.usa-nav__primary-item {
+&:hover {
+position: static;
+color: $doj-darkblue;
 
-        &:after {
-          content: '';
-          width: 100%;
-          height: 15px;
-          //background-color: blue;
-          position: absolute;
-          top: calc(100% - 1px);
-          left: 0;
-        }
+&:after {
+content: '';
+width: 100%;
+height: 15px;
+//background-color: blue;
+position: absolute;
+top: calc(100% - 1px);
+left: 0;
+}
 
-        button {
-          color: inherit;
-          @include add-background-svg("usa-icons-bg/expand_more--blue-warm-70v");
+button {
+color: inherit;
+@include add-background-svg("usa-icons-bg/expand_more--blue-warm-70v");
 
-          + .menu_level__1,
-          + #basic-nav-section-1 {
-            display: block;
-          }
-        }
-      }
++ .menu_level__1,
++ #basic-nav-section-1 {
+display: block;
+}
+}
+}
 
-      > .usa-nav__link {
-        &:hover {
-          &::after {
-            display: none;
-          }
-        }
-      }
-    }
-    nav.usa-nav ul li:hover {
-      //background-color: transparent;
-    }
-
-  }
+> .usa-nav__link {
+&:hover {
+&::after {
+display: none;
+}
+}
+}
+}
+nav.usa-nav ul li:hover {
+//background-color: transparent;
+}
 
 }
 
- */
+}
+
+*/
 
 .usa-nav__primary {
   button {
@@ -514,10 +524,10 @@ header.usa-header--extended {
 
       &[aria-expanded="false"] {
         @include add-background-svg("usa-icons-bg/add--white")
-      }
+          }
       &[aria-expanded="true"] {
         @include add-background-svg("usa-icons-bg/remove--white")
-      }
+          }
       &:hover {
         background-color: $doj-darkgray;
         color: $theme-color-accent-warm;

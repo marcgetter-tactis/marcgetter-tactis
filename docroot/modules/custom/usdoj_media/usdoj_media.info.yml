@@ -1,0 +1,5 @@
+name: USDOJ Media
+type: module
+description: 'A place for media related functions'
+package: USDOJ
+core_version_requirement: ^8.9 || ^9

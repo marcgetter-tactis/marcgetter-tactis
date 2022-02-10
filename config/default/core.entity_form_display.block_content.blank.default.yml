@@ -6,7 +6,6 @@ dependencies:
     - block_content.type.blank
     - field.field.block_content.blank.field_background_class
     - field.field.block_content.blank.field_body
-    - field.field.block_content.blank.field_cards
     - field.field.block_content.blank.field_cta
     - field.field.block_content.blank.field_cta_style
     - field.field.block_content.blank.field_header
@@ -14,7 +13,6 @@ dependencies:
   module:
     - link
     - media_library
-    - paragraphs
     - text
 id: block_content.blank.default
 targetEntityType: block_content
@@ -34,18 +32,6 @@ content:
     settings:
       rows: 5
       placeholder: ''
-    third_party_settings: {  }
-  field_cards:
-    type: entity_reference_paragraphs
-    weight: 5
-    region: content
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: closed
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: card
     third_party_settings: {  }
   field_cta:
     type: link_default

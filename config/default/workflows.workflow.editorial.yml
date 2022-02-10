@@ -15,7 +15,6 @@ dependencies:
     - node.type.image_gallery
     - node.type.landing_page
     - node.type.most_wanted
-    - node.type.multi_defendant_case
     - node.type.opinion
     - node.type.page
     - node.type.podcast
@@ -138,7 +137,6 @@ type_settings:
       - image_gallery
       - landing_page
       - most_wanted
-      - multi_defendant_case
       - opinion
       - page
       - podcast

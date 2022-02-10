@@ -20,6 +20,7 @@ settings:
             - Italic
             - RemoveFormat
             - Blockquote
+            - HorizontalRule
             - Format
         -
           name: Alignment
@@ -45,6 +46,8 @@ settings:
         -
           name: Tools
           items:
+            - Undo
+            - Redo
             - Accordion
             - ShowBlocks
             - Maximize
@@ -58,6 +61,8 @@ settings:
       language_list: un
     stylescombo:
       styles: ''
+    tokenbrowser:
+      token_types: {  }
 image_upload:
   status: false
   scheme: public

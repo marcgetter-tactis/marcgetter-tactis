@@ -1,0 +1,38 @@
+_core:
+  default_config_hash: RMy8ch2MOT68bCD63OGZQRdMk2pD6UXPEZMuCIisbfs
+langcode: en
+activate: false
+auth_source: default-sp
+login_link_display_name: 'Federated login'
+login_link_show: true
+user_name: 'urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress'
+unique_id: 'urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress'
+mail_attr: 'urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress'
+header_no_cache: false
+role:
+  population: ''
+  eval_every_time: false
+register_users: true
+allow:
+  set_drupal_pwd: true
+  default_login: true
+  default_login_roles:
+    authenticated: authenticated
+    user_administrator: user_administrator
+    global_administrator: global_administrator
+    site_architect: site_architect
+    cache_purger: cache_purger
+    translator: translator
+    arhchiver: arhchiver
+    special_content_creator: special_content_creator
+    administrator: administrator
+  default_login_users: ''
+logout_goto_url: ''
+user_register_original: admin_only
+sync:
+  mail: true
+  user_name: true
+autoenablesaml: false
+debug: false
+secure: true
+httponly: true

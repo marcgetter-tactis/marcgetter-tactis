@@ -1,0 +1,66 @@
+<?php
+
+/**
+ * @file
+ * Support functions for media.
+ */
+
+/**
+ * Get a standard warning to put above each upload field for PDFs.
+ */
+function _doj_media_get_pdf_metadata_warning() {
+  // This is intended only for authenticated users (DOJ staff).
+  $logged_in = \Drupal::currentUser()->isAuthenticated();
+  if (!$logged_in) {
+    return '';
+  }
+  return <<<TEXT
+<div class="messages warning">
+  <p>Before attaching a PDF or other file, evaluate metadata included with the file. Metadata should not include a personal name or location.</p>
+  <p>These four metadata fields are required for accessibility:</p>
+  <ul>
+    <li>Title: Descriptive name of the document</li>
+    <li>Author: Name of Component (use full name instead of acronym, optionally add acronym in parentheses)</li>
+    <li>Subject/Description: Useful for providing more detail than the title but can be the same as the title.</li>
+    <li>Keywords: Consider things like important words from the Title, Subject/Description and some of the headings in the document (at least the main chapter/section headings)
+      <ul>
+        <li>Use a semicolon to separate keywords instead of a comma (ex: justice; doj;)</li>
+        <li>Do not use parentheses around keywords, just type out the keyword (ex: justice)</li>
+      </ul>
+    </li>
+  </ul>
+  <p><a href="https://dojnet.doj.gov/webdevelopment/file-names.php#pdf">More about PDF Metadata</a></p>
+</div>
+TEXT;
+}
+
+/**
+ * Implements hook_field_widget_WIDGET_TYPE_form_alter().
+ */
+function usdoj_media_field_widget_file_generic_form_alter(&$element, &$form_state, $context) {
+  if (!empty($element[0]['#upload_validators']['file_validate_extensions'])) {
+    if (strpos($element[0]['#upload_validators']['file_validate_extensions'], 'pdf') !== FALSE) {
+      $metadata_warning = _doj_media_get_pdf_metadata_warning();
+      if (!empty($element['#file_upload_description'])) {
+        $metadata_warning = $element['#file_upload_description'] . '<br /><br />' . $metadata_warning;
+      }
+      $element['#file_upload_description'] = $metadata_warning;
+    }
+  }
+}
+
+/**
+ * Implements hook_field_widget_WIDGET_TYPE_form_alter().
+ */
+function usdoj_media_field_widget_media_generic_form_alter(&$element, &$form_state, $context) {
+  if (!empty($element[0]['#media_options']['global']['types']['document'])) {
+    $metadata_warning = _doj_media_get_pdf_metadata_warning();
+    if (!empty($element['#file_upload_description'])) {
+      $metadata_warning = $element['#file_upload_description'] . '<br /><br />' . $metadata_warning;
+    }
+    else {
+      $metadata_warning = '<br />' . $metadata_warning;
+    }
+    $element['#file_upload_description'] = $metadata_warning;
+  }
+}

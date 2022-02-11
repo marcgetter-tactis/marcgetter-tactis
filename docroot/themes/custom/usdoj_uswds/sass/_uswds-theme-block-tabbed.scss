@@ -35,9 +35,6 @@ Tabbed Block on Homepage
     @media (min-width: 24em) {
       height: 40rem;
     }
-    // @media (min-width: 35em) and (max-width: 47.99em) {
-    //   height: 64rem;
-    // }
   
     .panel { 
       display: inline;
@@ -234,6 +231,7 @@ Tabbed Block on Homepage
           }
         }
       }
+      #panel-3-body .slick-list {width: 100%}
     }
 
     .paragraph--type--tab {

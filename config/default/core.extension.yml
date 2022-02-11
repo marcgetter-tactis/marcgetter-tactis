@@ -148,6 +148,7 @@ module:
   moderation_dashboard: 0
   moderation_sidebar: 0
   node: 0
+  node_title_help_text: 0
   optional_end_date: 0
   options: 0
   page_manager: 0

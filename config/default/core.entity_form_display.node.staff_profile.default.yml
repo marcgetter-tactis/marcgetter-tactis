@@ -61,8 +61,8 @@ content:
     region: content
     settings:
       increment: 15
-      date_order: YMD
-      time_type: '24'
+      date_order: MDY
+      time_type: none
     third_party_settings: {  }
   field_name:
     type: string_textfield

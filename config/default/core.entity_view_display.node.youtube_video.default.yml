@@ -18,6 +18,7 @@ dependencies:
     - datetime
     - ds
     - link
+    - smart_trim
     - text
     - user
 id: node.youtube_video.default
@@ -30,7 +31,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 8
+    weight: 7
     region: content
   field_component:
     type: entity_reference_label
@@ -66,7 +67,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 7
+    weight: 6
     region: content
   field_image:
     type: entity_reference_entity_view
@@ -75,22 +76,33 @@ content:
       view_mode: default
       link: true
     third_party_settings: {  }
-    weight: 6
-    region: content
-  field_invisible:
-    type: entity_reference_label
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 4
+    weight: 5
     region: content
   field_transcript:
-    type: text_default
+    type: smart_trim
     label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 9
+    settings:
+      trim_length: 600
+      trim_type: chars
+      trim_suffix: ''
+      wrap_output: false
+      wrap_class: trimmed
+      more_link: false
+      more_class: more-link
+      more_text: More
+      summary_handler: full
+      trim_options:
+        text: true
+        trim_zero: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    weight: 8
     region: content
   field_video_category:
     type: entity_reference_label
@@ -107,7 +119,7 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
-    weight: 5
+    weight: 4
     region: content
   links:
     settings: {  }
@@ -117,5 +129,6 @@ content:
 hidden:
   entitygroupfield: true
   field_date_toggle: true
+  field_invisible: true
   langcode: true
   search_api_excerpt: true

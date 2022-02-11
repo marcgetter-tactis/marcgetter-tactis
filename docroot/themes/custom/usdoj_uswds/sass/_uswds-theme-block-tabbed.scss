@@ -31,13 +31,13 @@ Tabbed Block on Homepage
     background: white;
     border: 1px solid #eaeaea;
     box-shadow: 0 0 0.5rem rgb(0 0 0 / 17%); 
-    height: 45rem;
-    @media (min-width: 25em) and (max-width: 34.99em) {
-      height: 50rem;
+    height: 36rem;
+    @media (min-width: 24em) {
+      height: 40rem;
     }
-    @media (min-width: 35em) and (max-width: 47.99em) {
-      height: 64rem;
-    }
+    // @media (min-width: 35em) and (max-width: 47.99em) {
+    //   height: 64rem;
+    // }
   
     .panel { 
       display: inline;
@@ -103,39 +103,44 @@ Tabbed Block on Homepage
         }
 
         //mobile display of paragraphs
-        .paragraph--type--tab .slick-dots {
-          padding: 0;
-          list-style: none;
-          bottom: 2rem;
-          text-align: center;
-          margin: 0 auto;
-      
-          li {
-            display: inline-block;
-            margin: 0 .25rem;
-      
-            &.slick-active {
-              button {
-                background-color: $theme-color-accent-warm;
-              }
-            }
-      
-            button {
-              color: transparent;
-              background-color: $doj-darkblue;
-              width: 12px;
-              height: 12px;
-              border-radius: 50%;
-              border: none;
-      
-              &:hover {
-                cursor: pointer;
-              }
-            }
+        .paragraph--type--tab {
+          .usa-card {
+            margin-bottom: 1.25rem;
           }
-      
-          @include at-media(desktop) {
-            bottom: 0;
+          .slick-dots {
+            padding: 0;
+            list-style: none;
+            bottom: 2rem;
+            text-align: center;
+            margin: 0 auto;
+            
+            li {
+              display: inline-block;
+              margin: 0 .25rem;
+        
+              &.slick-active {
+                button {
+                  background-color: $theme-color-accent-warm;
+                }
+              }
+        
+              button {
+                color: transparent;
+                background-color: $doj-darkblue;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                border: none;
+        
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+            }
+        
+            @include at-media(desktop) {
+              bottom: 0;
+            }
           }
         }
 
@@ -168,8 +173,22 @@ Tabbed Block on Homepage
             border: none;
             box-shadow: none;
             
+            //slider images
             .usa-card__media--inset {
               padding: 0;
+              height: 12rem;
+              line-height: 12rem;
+              @media (min-width: 24em) {
+                height: 15rem;
+                line-height: 15rem;
+              }
+              img {
+                max-height: 12rem;
+                vertical-align: middle;
+                @media (min-width: 24em) {
+                  max-height: 15rem;
+                }
+              }
             }
             
             .usa-card__body {

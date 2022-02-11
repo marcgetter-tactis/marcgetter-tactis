@@ -65,6 +65,7 @@
         "drupal/migrate_tools": "^5.1",
         "drupal/migrate_upgrade": "^3.2",
         "drupal/mysql56": "^1.0",
+        "drupal/node_title_help_text": "^1.2",
         "drupal/og": "^1.0@alpha",
         "drupal/og_sm": "^2.0",
         "drupal/openstreetmap": "^1.0@beta",

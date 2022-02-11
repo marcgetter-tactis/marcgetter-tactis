@@ -1,0 +1,23 @@
+uuid: 990b3534-1792-4a41-bb5b-09472cae6838
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_toggle
+    - node.type.youtube_video
+id: node.youtube_video.field_date_toggle
+field_name: field_date_toggle
+entity_type: node
+bundle: youtube_video
+label: 'Hide Date'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

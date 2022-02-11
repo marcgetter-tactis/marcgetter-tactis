@@ -1,0 +1,26 @@
+uuid: 106936df-99bf-4dfe-85dd-6fec57bd2eb1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_body
+    - node.type.youtube_video
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - wysiwyg
+id: node.youtube_video.field_body
+field_name: field_body
+entity_type: node
+bundle: youtube_video
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

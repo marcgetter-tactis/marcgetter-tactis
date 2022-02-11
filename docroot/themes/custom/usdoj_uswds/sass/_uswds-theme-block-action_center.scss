@@ -2,21 +2,13 @@
   padding: 5rem 0;
 
   .field_heading {
-    color: $doj-darkblue;
-    font-size: $theme-h2-font-size;
-    font-family: $headings-font-family;
-    font-weight: 700;
+    @extend h2;
     text-align: center;
-    margin-top: 0;
-
-    &:after {
-      content: "";
-      width: 3rem;
-      display: flex;
-      border-top: 2px solid color(warning);
-      border-bottom: 2px solid color(warning);
-      height: .5rem;
-      margin: 1.5rem auto;
+    font-weight: 700;
+    
+    &::after {
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 

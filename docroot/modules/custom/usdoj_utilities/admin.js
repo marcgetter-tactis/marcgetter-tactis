@@ -39,7 +39,7 @@
       // set values for day field
       $(day_selector).val(reset_day).trigger("chosen:updated");
 
-      if $(month_selector).is(':hidden') {
+      if ($(month_selector).is(':hidden')) {
         if (selected_year == '') {
           reset_month = '';
         } else {

@@ -1,0 +1,95 @@
+<?php
+
+/**
+ * @file
+ * Contains implementations of hooks.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
+use Drupal\Component\Utility\UrlHelper;
+use Drupal\Core\Entity\EntityFormInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\field_ui\FieldUI;
+use Drupal\core\Entity\EntityInterface;
+use Drupal\core\DateTime\DrupalDateTime;
+
+/**
+ * Implements hook_form_alter().
+ *
+ */
+function usdoj_utilities_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  switch ($form_id) {
+    case 'node_historical_biography_form':
+    case 'node_historical_biography_edit_form': {
+
+      $form['#attached']['library'][] = 'usdoj_utilities/usdoj_admin';
+
+      $form['field_dates_service']['#attributes']['class'][] = 'chosen-hide-day';
+
+      // select date widget begins in 1900, so expand its reach
+      $default_start_year = "1776";
+      $default_end_year = date("Y");
+      $default_year_range ="{$default_start_year}:{$default_end_year}";
+
+      $form['field_dates_service']['widget'][0]['value']['#date_year_range'] = $default_year_range;
+      $form['field_dates_service']['widget'][0]['end_value']['#date_year_range'] = $default_year_range;
+
+      // add ability to clear end date values
+      $form['field_dates_service']['widget'][0]['end_value']['#suffix'] = '
+        <div>
+          <a class="button chosen-clear" data-target="field_dates_service[0][end_value]">Clear End Date</a>
+        </div>
+      ';      
+
+      // set default dates only when adding new entities
+      if ($form_id == 'node_historical_biography_form') {
+        $current_year = date("Y");
+        $default_date = strtotime("{$current_year}-01-01");
+        $default_datetime_obj = DrupalDateTime::createFromTimeStamp($default_date);
+
+        $form['field_dates_service']['widget'][0]['value']['#default_value'] = $default_datetime_obj;
+        $form['field_dates_service']['widget'][0]['end_value']['#default_value'] = $default_datetime_obj;
+      }
+
+      break;
+    }
+
+    case 'node_staff_profile_form':
+    case 'node_staff_profile_edit_form': {
+
+      $form['#attached']['library'][] = 'usdoj_utilities/usdoj_admin';
+
+      $form['field_dates_service']['#attributes']['class'][] = 'chosen-hide-monthday';
+
+      // select date widget begins in 1900, so expand its reach
+      $default_start_year = "1776";
+      $default_end_year = date("Y");
+      $default_year_range ="{$default_start_year}:{$default_end_year}";
+
+      $form['field_dates_service']['widget'][0]['value']['#date_year_range'] = $default_year_range;
+      $form['field_dates_service']['widget'][0]['end_value']['#date_year_range'] = $default_year_range;
+
+      // add ability to clear end date values
+      $form['field_dates_service']['widget'][0]['end_value']['#suffix'] = '
+        <div>
+          <a class="button chosen-clear" data-target="field_dates_service[0][end_value]">Clear End Date</a>
+        </div>
+      ';      
+
+      // set default dates only when adding new entities
+      if ($form_id == 'node_staff_profile_form') {
+        $current_year = date("Y");
+        $default_date = strtotime("{$current_year}-01-01");
+        $default_datetime_obj = DrupalDateTime::createFromTimeStamp($default_date);
+
+        $form['field_dates_service']['widget'][0]['value']['#default_value'] = $default_datetime_obj;
+        $form['field_dates_service']['widget'][0]['end_value']['#default_value'] = $default_datetime_obj;
+      }
+
+      break;
+    }
+  }
+  
+  return $form;
+}

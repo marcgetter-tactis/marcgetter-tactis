@@ -1,0 +1,9 @@
+# Admin components.
+usdoj_admin:
+  css:
+    component:
+      admin.css: {}
+  js:
+    admin.js: {}
+  dependencies:
+    - core/jquery

@@ -211,6 +211,7 @@ module:
   update: 0
   usdoj_media: 0
   usdoj_most_wanted: 0
+  usdoj_utilities: 0
   user: 0
   username_enumeration_prevention: 0
   varbase_editor: 0

@@ -24,6 +24,35 @@ Mission Block
     display: none;
   }
 
+  //background image
+  .field_background_image {
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    left: 50%;
+    right: 50%;
+    margin: 0 -50vw;
+    pointer-events: none;
+    overflow: hidden;
+    .image {
+      position: relative;
+      top: -10rem;
+      @media (max-width: 47.99em) {
+        right: -20%;
+      }
+      img {
+        max-width: inherit;
+        opacity: 0.05;
+        float: right;
+        @media (max-width: 47.99em) {
+          float: none;
+        }
+      }
+    }
+  }
+
+  //DOJ seal
   .field_image {
     float: left;
     img {
@@ -149,26 +178,6 @@ Mission Block
         @media (max-width: 47.99em) {
           font-size: .9rem;
         }
-      }
-    }
-  }
-
-  .field_background_image {
-    width: 100vw;
-    position: absolute;
-    top: -5rem;
-    height: 100%;
-    left: 50%;
-    right: 50%;
-    margin: 0 -50vw;
-    pointer-events: none;
-    overflow: hidden;
-    img {
-      max-width: inherit;
-      opacity: 0.05;
-      float: right;
-      @media (max-width: 47.99em) {
-        float: none;
       }
     }
   }

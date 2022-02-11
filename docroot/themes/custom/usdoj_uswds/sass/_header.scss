@@ -151,8 +151,8 @@ header.usa-header--extended {
       justify-content: center;
       margin-bottom: -1.6rem;
       @include search-field;
-      .width-mobile {
-        border-top: 1px solid $gray-cool-50;
+      input.usa-input {
+        max-width: calc(100% - 2rem);
       }
     }
   }

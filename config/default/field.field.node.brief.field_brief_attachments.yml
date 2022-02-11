@@ -1,24 +1,26 @@
-uuid: 391df427-6008-4d5b-a162-fcf974f276bf
+uuid: 83422b00-40e2-43f4-ab4e-c868e0a3d267
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_attachment
+    - field.storage.node.field_brief_attachments
+    - media.type.document
     - node.type.brief
-id: node.brief.field_attachment
-field_name: field_attachment
+id: node.brief.field_brief_attachments
+field_name: field_brief_attachments
 entity_type: node
 bundle: brief
 label: Briefs
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:media'
   handler_settings:
-    target_bundles: {  }
+    target_bundles:
+      document: document
     sort:
       field: _none
       direction: ASC

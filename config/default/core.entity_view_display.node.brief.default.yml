@@ -3,8 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.brief.field_attachment
     - field.field.node.brief.field_body
+    - field.field.node.brief.field_brief_attachments
     - field.field.node.brief.field_brief_type
     - field.field.node.brief.field_court_level
     - field.field.node.brief.field_date
@@ -24,20 +24,21 @@ targetEntityType: node
 bundle: brief
 mode: default
 content:
-  field_attachment:
-    type: entity_reference_label
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 9
-    region: content
   field_body:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 8
+    region: content
+  field_brief_attachments:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 9
     region: content
   field_brief_type:
     type: list_default

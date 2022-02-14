@@ -1,0 +1,19 @@
+uuid: 3115195a-fe3f-4787-be51-f47ef6f48fb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_uid
+    - node.type.location
+id: node.location.field_uid
+field_name: field_uid
+entity_type: node
+bundle: location
+label: 'Unique ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,9 @@
+uuid: 8bb9ebb2-89df-4796-b013-a460ab5dc3c5
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: KUrzDix_Et8K6Ba49Og6iafmgq0-2V5id3jDDXINqa0
+id: blb_col_8
+label: 'Bootstrap 8 Cols'
+number_of_columns: '8'

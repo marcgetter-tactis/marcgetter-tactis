@@ -1,0 +1,22 @@
+uuid: b5e1ce8b-ddb1-4b9d-be9d-b2e9eb6ce4e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.brief
+id: node.brief.promote
+field_name: promote
+entity_type: node
+bundle: brief
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

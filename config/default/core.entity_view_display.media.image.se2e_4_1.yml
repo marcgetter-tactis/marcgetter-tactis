@@ -1,0 +1,79 @@
+uuid: debb91f5-96b6-4692-8124-a49b6f9aa20d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.se2e_4_1
+    - field.field.media.image.field_categories
+    - field.field.media.image.field_image_alignment
+    - field.field.media.image.field_media_image
+    - field.field.media.image.field_media_in_library
+    - field.field.media.image.field_tags
+    - field.field.media.image.image
+    - media.type.image
+    - responsive_image.styles.de2e_4_1
+  module:
+    - blazy
+    - ds
+_core:
+  default_config_hash: SWCcapo6CdhgwodZ8giwG_tbLw5k_IPg16s93vQS4gw
+id: media.image.se2e_4_1
+targetEntityType: media
+bundle: image
+mode: se2e_4_1
+content:
+  field_media_image:
+    type: blazy
+    label: hidden
+    settings:
+      caption:
+        title: '0'
+        alt: '0'
+      icon: ''
+      layout: ''
+      view_mode: ''
+      cache: 0
+      current_view_mode: se2e_4_1
+      skin: ''
+      fx: ''
+      style: ''
+      background: false
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      responsive_image_style: de2e_4_1
+      box_style: ''
+      image_style: ''
+      media_switch: ''
+      ratio: ''
+      thumbnail_style: ''
+      _uri: ''
+      breakpoints: {  }
+      sizes: ''
+      grid_header: ''
+      grid: '0'
+      grid_medium: '0'
+      grid_small: '0'
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  entitygroupfield: true
+  field_categories: true
+  field_image_alignment: true
+  field_media_in_library: true
+  field_tags: true
+  image: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

@@ -4,11 +4,16 @@ status: true
 dependencies:
   config:
     - field.field.media.image.field_categories
+    - field.field.media.image.field_image_alignment
+    - field.field.media.image.field_media_image
+    - field.field.media.image.field_media_in_library
     - field.field.media.image.field_tags
     - field.field.media.image.image
+    - image.style.coh_small_square
     - media.type.image
   module:
-    - image
+    - options
+    - svg_image
   enforced:
     module:
       - acquia_cms_image
@@ -19,6 +24,13 @@ targetEntityType: media
 bundle: image
 mode: default
 content:
+  field_image_alignment:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
   thumbnail:
     type: image
     label: visually_hidden
@@ -30,8 +42,10 @@ content:
     region: content
 hidden:
   created: true
+  entitygroupfield: true
   field_categories: true
   field_media_image: true
+  field_media_in_library: true
   field_tags: true
   image: true
   langcode: true

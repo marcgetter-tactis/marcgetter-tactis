@@ -1,0 +1,71 @@
+Certificate:
+    Data:
+        Version: 1 (0x0)
+        Serial Number: 17417656941402001225 (0xf1b7f2b49be20f49)
+    Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=US, ST=Florida, L=Port Orange, O=Acquia, OU=PS, CN=DOJ/emailAddress=john.cunningham@acquia.com
+        Validity
+            Not Before: Feb 10 05:44:54 2022 GMT
+            Not After : Feb 10 05:44:54 2032 GMT
+        Subject: C=US, ST=Florida, L=Port Orange, O=Acquia, OU=PS, CN=DOJ/emailAddress=john.cunningham@acquia.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:d5:89:ad:51:93:a5:55:c4:f8:ec:c0:59:cf:30:
+                    f7:73:10:2d:40:90:c8:79:57:9b:6c:64:63:a8:c3:
+                    98:ab:0b:08:ee:f3:0d:b8:0e:6d:b0:4b:05:d9:8e:
+                    f1:82:ab:24:35:b3:29:27:9c:3d:64:76:de:42:de:
+                    16:ee:0c:37:36:1c:4a:93:1b:a7:c6:0f:b2:a7:ab:
+                    4b:28:16:c8:9b:81:7d:d9:c6:7a:33:86:e7:42:9a:
+                    02:22:43:9d:82:8d:2a:f1:bc:4a:1f:8e:06:1e:8d:
+                    c4:cd:7b:27:c8:a7:44:31:3b:c5:4d:5c:50:56:6f:
+                    86:ac:5e:cf:30:34:77:75:a6:80:0a:1d:53:fd:9b:
+                    7f:2b:b2:ea:62:75:75:3a:7f:b5:35:b9:f6:12:f6:
+                    e4:47:a8:df:d7:95:8a:77:5d:3f:95:c2:5b:13:b3:
+                    2f:c5:cd:11:d6:76:61:13:fd:19:fa:d2:58:1d:f1:
+                    b4:b2:14:fc:da:78:71:c4:d8:f5:e3:29:73:09:7f:
+                    bd:56:4f:92:d7:5f:cf:c3:d3:6d:be:0b:db:3d:35:
+                    4d:d5:12:27:02:43:23:05:50:9f:6c:38:1e:b6:08:
+                    3f:65:1e:7d:e3:d0:af:eb:01:b9:5e:79:d9:24:1e:
+                    54:ed:f3:48:2d:71:ac:d9:50:51:9f:8f:a0:bf:52:
+                    4b:d9
+                Exponent: 65537 (0x10001)
+    Signature Algorithm: sha256WithRSAEncryption
+         03:47:96:7f:77:5b:88:a7:73:1e:f2:57:8f:c7:4a:b2:0b:9e:
+         47:c6:7e:64:d2:01:35:05:2e:59:be:af:45:c9:58:72:4a:21:
+         d4:71:f1:95:cb:b8:e3:da:04:0c:ca:e5:6e:22:a2:3d:ee:6e:
+         37:e9:c1:7a:6c:d9:bd:eb:3b:cd:d8:c5:6a:8d:e3:69:51:19:
+         7e:b5:e5:e9:cd:b8:0b:bf:36:6b:65:99:8c:b1:34:6d:b9:33:
+         4d:d5:b2:0a:e5:52:cd:0a:d1:24:8c:f5:3e:20:7a:a5:95:a7:
+         38:c6:52:4f:42:7b:1b:af:d3:96:06:b0:56:ea:92:da:8a:67:
+         c3:f9:07:03:f4:79:38:de:a4:c3:2d:b0:6f:44:92:91:d5:d6:
+         b4:0b:99:c4:3d:4d:fc:5a:54:85:17:4d:fb:79:81:e7:8e:35:
+         04:ff:7f:04:04:21:b3:55:2d:52:9b:35:ba:d9:cc:db:4c:ec:
+         99:ab:d4:6c:b5:b3:30:b7:71:d0:28:b2:48:2b:77:5c:e4:48:
+         86:30:ff:aa:60:e5:3b:29:d6:28:43:f0:9f:2b:09:d5:07:25:
+         64:29:ea:33:1a:29:20:69:d7:1d:a6:b3:33:16:d6:8a:79:bc:
+         f3:b5:6f:9e:91:5e:28:e2:b2:a2:5a:e3:27:e1:ca:9c:7a:1c:
+         4b:c5:d4:38
+-----BEGIN CERTIFICATE-----
+MIIDljCCAn4CCQDxt/K0m+IPSTANBgkqhkiG9w0BAQsFADCBjDELMAkGA1UEBhMC
+VVMxEDAOBgNVBAgMB0Zsb3JpZGExFDASBgNVBAcMC1BvcnQgT3JhbmdlMQ8wDQYD
+VQQKDAZBY3F1aWExCzAJBgNVBAsMAlBTMQwwCgYDVQQDDANET0oxKTAnBgkqhkiG
+9w0BCQEWGmpvaG4uY3VubmluZ2hhbUBhY3F1aWEuY29tMB4XDTIyMDIxMDA1NDQ1
+NFoXDTMyMDIxMDA1NDQ1NFowgYwxCzAJBgNVBAYTAlVTMRAwDgYDVQQIDAdGbG9y
+aWRhMRQwEgYDVQQHDAtQb3J0IE9yYW5nZTEPMA0GA1UECgwGQWNxdWlhMQswCQYD
+VQQLDAJQUzEMMAoGA1UEAwwDRE9KMSkwJwYJKoZIhvcNAQkBFhpqb2huLmN1bm5p
+bmdoYW1AYWNxdWlhLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB
+ANWJrVGTpVXE+OzAWc8w93MQLUCQyHlXm2xkY6jDmKsLCO7zDbgObbBLBdmO8YKr
+JDWzKSecPWR23kLeFu4MNzYcSpMbp8YPsqerSygWyJuBfdnGejOG50KaAiJDnYKN
+KvG8Sh+OBh6NxM17J8inRDE7xU1cUFZvhqxezzA0d3WmgAodU/2bfyuy6mJ1dTp/
+tTW59hL25Eeo39eVinddP5XCWxOzL8XNEdZ2YRP9GfrSWB3xtLIU/Np4ccTY9eMp
+cwl/vVZPktdfz8PTbb4L2z01TdUSJwJDIwVQn2w4HrYIP2UefePQr+sBuV552SQe
+VO3zSC1xrNlQUZ+PoL9SS9kCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAA0eWf3db
+iKdzHvJXj8dKsgueR8Z+ZNIBNQUuWb6vRclYckoh1HHxlcu449oEDMrlbiKiPe5u
+N+nBemzZves7zdjFao3jaVEZfrXl6c24C782a2WZjLE0bbkzTdWyCuVSzQrRJIz1
+PiB6pZWnOMZST0J7G6/TlgawVuqS2opnw/kHA/R5ON6kwy2wb0SSkdXWtAuZxD1N
+/FpUhRdN+3mB5441BP9/BAQhs1UtUps1utnM20zsmavUbLWzMLdx0CiySCt3XORI
+hjD/qmDlOynWKEPwnysJ1QclZCnqMxopIGnXHaazMxbWinm887VvnpFeKOKyolrj
+J+HKnHocS8XUOA==
+-----END CERTIFICATE-----

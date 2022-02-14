@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.media.audio.field_media_audio_file
+    - field.field.media.audio.field_media_in_library
     - media.type.audio
   module:
     - file
@@ -66,3 +67,4 @@ content:
     third_party_settings: {  }
 hidden:
   entitygroupfield: true
+  field_media_in_library: true

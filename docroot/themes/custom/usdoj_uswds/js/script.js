@@ -49,10 +49,15 @@
 
       once('loadMoreItems', 'html', context ).forEach( function (element) {
         $button = $('.action-center-cta button');
-        $hiddenItems = $('.action-center-items .action-icons-hidden')
+        $hiddenItems = $('.action-center-items .action-icons-hidden');
+
+        if ($(".hide-more-button")[0]){
+          $button.hide();
+        }
 
         $button.click(function() {
           $hiddenItems.addClass('show-icons');
+          $button.attr("disabled",true);
         });
       });
     }

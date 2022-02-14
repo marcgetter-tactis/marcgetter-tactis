@@ -21,6 +21,9 @@ Tabbed Block on Homepage
 .block-tabbed {
   padding: 3rem 0;
   
+  .block-title {
+    font-weight: 700;
+  }
 
   .field_header {
     display: none;
@@ -31,20 +34,15 @@ Tabbed Block on Homepage
     background: white;
     border: 1px solid #eaeaea;
     box-shadow: 0 0 0.5rem rgb(0 0 0 / 17%); 
-    height: 45rem;
-    @media (min-width: 25rem) {
-      height: 50rem;
+    height: 36rem;
+    @media (min-width: 24em) {
+      height: 40rem;
     }
-    @media (min-width: 35rem) and (max-width: 48rem) {
-      height: 64rem;
-    }
-    // @media (min-width: 45rem) {
-    //   height: 70rem;
-    // }
   
     .panel { 
       display: inline;
       
+      //header tabs
       .block-tab { 
         display: inline-block;
         text-decoration: none;
@@ -101,42 +99,48 @@ Tabbed Block on Homepage
         padding: 0;
         border-top: 1px solid $gray-10;
         @media (min-width: 48em) {
-          padding: 3rem;
+          padding: 1rem 3rem 3rem;
         }
 
-        .paragraph--type--tab .slick-dots {
-          padding: 0;
-          list-style: none;
-          bottom: 2rem;
-          text-align: center;
-          margin: 0 auto;
-      
-          li {
-            display: inline-block;
-            margin: 0 .25rem;
-      
-            &.slick-active {
-              button {
-                background-color: $theme-color-accent-warm;
-              }
-            }
-      
-            button {
-              color: transparent;
-              background-color: $doj-darkblue;
-              width: 12px;
-              height: 12px;
-              border-radius: 50%;
-              border: none;
-      
-              &:hover {
-                cursor: pointer;
-              }
-            }
+        //mobile display of paragraphs
+        .paragraph--type--tab {
+          .usa-card {
+            margin-bottom: 1.25rem;
           }
-      
-          @include at-media(desktop) {
-            bottom: 0;
+          .slick-dots {
+            padding: 0;
+            list-style: none;
+            bottom: 2rem;
+            text-align: center;
+            margin: 0 auto;
+            
+            li {
+              display: inline-block;
+              margin: 0 .25rem;
+        
+              &.slick-active {
+                button {
+                  background-color: $theme-color-accent-warm;
+                }
+              }
+        
+              button {
+                color: transparent;
+                background-color: $doj-darkblue;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                border: none;
+        
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+            }
+        
+            @include at-media(desktop) {
+              bottom: 0;
+            }
           }
         }
 
@@ -144,15 +148,47 @@ Tabbed Block on Homepage
           display: none;
         }
 
-        .paragraph--type--card {
-          height: 100%;
+        //paragraphs
+        .usa-card--header-first {
+          .usa-card__header {
+            border-radius: 0;
+            padding: 0;
+            
+            h3 {
+              color: $doj-coolblue;
+              text-align: center;
+              font-size: 1.25rem;
+              line-height: 1.5rem;
+              
+              .field_headline {
+                display: flex;
+                height: 4rem;
+                justify-content: center;
+                align-items: center;
+              }
+            } 
+          }
+          
           .usa-card__container {
             border: none;
             box-shadow: none;
             
+            //slider images
             .usa-card__media--inset {
               padding: 0;
-              //max-height: 40rem;
+              height: 12rem;
+              line-height: 12rem;
+              @media (min-width: 24em) {
+                height: 15rem;
+                line-height: 15rem;
+              }
+              img {
+                max-height: 12rem;
+                vertical-align: middle;
+                @media (min-width: 24em) {
+                  max-height: 15rem;
+                }
+              }
             }
             
             .usa-card__body {
@@ -160,17 +196,16 @@ Tabbed Block on Homepage
               text-align: center;
               padding-bottom: 1rem;
               min-height: auto;
-              // min-height: 10rem;
-              // @media (min-width: 48em) {
-              //   min-height: 16rem;
-              // }
               
               .field_body {
                 max-width: 23rem;
-                margin: 0 auto;
+                margin: 1rem auto 0;
+                font-weight: normal;
+                font-size: .9rem;
               }
             }
             
+            //paragraph buttons
             .usa-card__footer {
               text-align: center;
               padding: 0;
@@ -178,18 +213,28 @@ Tabbed Block on Homepage
               .field_cta a {
                 color: white;
                 background: color(primary-darker);
-                padding: 0.75rem 1rem;
+                padding: 0.75rem;
                 border-radius: 0.25rem;
                 text-decoration: none;
                 font-weight: bold;
-                font-size: .9rem;
                 margin: 0 auto;
-
+                &:hover {
+                  background: $blue-60v;
+                  border-color: $blue-60v;
+                }
+                &:active {
+                  background: $doj-coolblue;
+                  border-color: $doj-coolblue;
+                }
+                &:focus {
+                  outline: none;
+                }
               }
             }
           }
         }
       }
+      #panel-3-body .slick-list {width: 100%}
     }
 
     .paragraph--type--tab {
@@ -207,8 +252,10 @@ Tabbed Block on Homepage
       }
     }
   }
+
+  //block button
   .field_cta a {
-    width: 12rem;
+    width: 12.5rem;
     display: block;
     text-align: center;
     margin: 2rem auto 1rem;
@@ -218,6 +265,18 @@ Tabbed Block on Homepage
     font-weight: bold;
     color: color(primary-darker);
     text-decoration: none;
+    &:hover {
+      background: $blue-60v;
+      border-color: $blue-60v;
+      color: white;
+    }
+    &:active {
+      background: $doj-coolblue;
+      border-color: $doj-coolblue;
+    }
+    &:focus {
+      outline: none;
+    }
   }
 }
 

@@ -5,12 +5,15 @@ dependencies:
   config:
     - core.entity_view_mode.media.embedded
   module:
+    - ace_editor
     - blazy
     - collapse_text
     - editor
+    - image_resize_filter
     - linkit
     - media
     - slick
+    - token_filter
 _core:
   default_config_hash: e_HeihWO2k4BChy_xqPFwNbn6al-3fB_NtGQCX4xjkw
 name: WYSIWYG
@@ -63,7 +66,7 @@ filters:
   filter_align:
     id: filter_align
     provider: filter
-    status: false
+    status: true
     weight: -49
     settings: {  }
   filter_caption:
@@ -107,7 +110,10 @@ filters:
       optionset: default
       layout: ''
       skin: ''
+      loading: ''
+      preload: false
       background: false
+      responsive_image_style: ''
       image_style: ''
       media_switch: ''
       ratio: ''
@@ -130,7 +136,7 @@ filters:
   filter_collapse_text:
     id: filter_collapse_text
     provider: collapse_text
-    status: false
+    status: true
     weight: 0
     settings:
       default_title: 'Click here to expand or collapse this section'
@@ -142,3 +148,34 @@ filters:
     weight: 0
     settings:
       title: true
+  ace_filter:
+    id: ace_filter
+    provider: ace_editor
+    status: false
+    weight: 0
+    settings:
+      theme: cobalt
+      syntax: html
+      height: 500px
+      width: 700px
+      font_size: 12pt
+      line_numbers: '1'
+      print_margins: '1'
+      show_invisibles: '0'
+      use_wrap_mode: '1'
+  filter_image_resize:
+    id: filter_image_resize
+    provider: image_resize_filter
+    status: false
+    weight: 0
+    settings:
+      image_locations:
+        local: true
+        remote: false
+  token_filter:
+    id: token_filter
+    provider: token_filter
+    status: false
+    weight: 0
+    settings:
+      replace_empty: '0'

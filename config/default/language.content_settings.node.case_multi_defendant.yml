@@ -1,0 +1,11 @@
+uuid: d9542bd0-1b3d-46d7-aea4-1a1278dd3f37
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.case_multi_defendant
+id: node.case_multi_defendant
+target_entity_type_id: node
+target_bundle: case_multi_defendant
+default_langcode: site_default
+language_alterable: false

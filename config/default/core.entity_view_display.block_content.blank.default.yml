@@ -6,13 +6,11 @@ dependencies:
     - block_content.type.blank
     - field.field.block_content.blank.field_background_class
     - field.field.block_content.blank.field_body
-    - field.field.block_content.blank.field_cards
     - field.field.block_content.blank.field_cta
     - field.field.block_content.blank.field_cta_style
     - field.field.block_content.blank.field_header
     - field.field.block_content.blank.field_media
   module:
-    - entity_reference_revisions
     - link
     - options
     - text
@@ -27,15 +25,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 2
-    region: content
-  field_cards:
-    type: entity_reference_revisions_entity_view
-    label: hidden
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    weight: 5
     region: content
   field_cta:
     type: link

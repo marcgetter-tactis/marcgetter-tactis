@@ -1,0 +1,29 @@
+uuid: fe485c92-4395-46f1-bc82-781e5aa95921
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_exhibits
+    - media.type.document
+    - node.type.case_multi_defendant
+id: node.case_multi_defendant.field_exhibits
+field_name: field_exhibits
+entity_type: node
+bundle: case_multi_defendant
+label: 'Trial Exhibit Files'
+description: 'The files attached here will not automatically appear to the general public. In order to expose these to the general public, click inside the "Trial Exhibits" field and then press an "Insert" button here to push the file into the text area. Any corresponding description should typed directly into the same text area.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      document: document
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: document
+field_type: entity_reference

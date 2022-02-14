@@ -9,8 +9,8 @@ id: block_content.action_center.field_more_links
 field_name: field_more_links
 entity_type: block_content
 bundle: action_center
-label: 'More Links'
-description: 'Enter the button text to display more links.'
+label: 'More Links Button Text'
+description: 'Enter the text that will display on the button to expand the section to show the remaining action items.'
 required: false
 translatable: false
 default_value:

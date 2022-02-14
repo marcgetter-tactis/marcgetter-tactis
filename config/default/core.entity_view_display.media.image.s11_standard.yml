@@ -1,0 +1,79 @@
+uuid: 312b3a23-89cf-4a78-8fb4-d0ffbc1ab96c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.s11_standard
+    - field.field.media.image.field_categories
+    - field.field.media.image.field_image_alignment
+    - field.field.media.image.field_media_image
+    - field.field.media.image.field_media_in_library
+    - field.field.media.image.field_tags
+    - field.field.media.image.image
+    - media.type.image
+    - responsive_image.styles.d11_standard
+  module:
+    - blazy
+    - ds
+_core:
+  default_config_hash: RCSDbLic79K7i_0G0rt3I6UT257psV5TauZEfLmj26I
+id: media.image.s11_standard
+targetEntityType: media
+bundle: image
+mode: s11_standard
+content:
+  field_media_image:
+    type: blazy
+    label: hidden
+    settings:
+      caption:
+        title: '0'
+        alt: '0'
+      icon: ''
+      layout: ''
+      view_mode: ''
+      cache: 0
+      current_view_mode: s11_standard
+      skin: ''
+      fx: ''
+      style: ''
+      background: false
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      responsive_image_style: d11_standard
+      box_style: ''
+      image_style: ''
+      media_switch: ''
+      ratio: ''
+      thumbnail_style: ''
+      _uri: ''
+      breakpoints: {  }
+      sizes: ''
+      grid_header: ''
+      grid: '0'
+      grid_medium: '0'
+      grid_small: '0'
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  entitygroupfield: true
+  field_categories: true
+  field_image_alignment: true
+  field_media_in_library: true
+  field_tags: true
+  image: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

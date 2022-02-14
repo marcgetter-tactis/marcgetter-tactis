@@ -2,21 +2,13 @@
   padding: 5rem 0;
 
   .field_heading {
-    color: $doj-darkblue;
-    font-size: $theme-h2-font-size;
-    font-family: $headings-font-family;
-    font-weight: 700;
+    @extend h2;
     text-align: center;
-    margin-top: 0;
-
-    &:after {
-      content: "";
-      width: 3rem;
-      display: flex;
-      border-top: 2px solid color(warning);
-      border-bottom: 2px solid color(warning);
-      height: .5rem;
-      margin: 1.5rem auto;
+    font-weight: 700;
+    
+    &::after {
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 
@@ -33,6 +25,7 @@
       >.field__item {
         line-height: 1.3;
         padding: 2px 0;
+        border-bottom: 3px dotted $action-border-gray;
 
         &:hover {
           .paragraph--type--action-center-item {
@@ -57,27 +50,15 @@
         }
       }
 
-      &.action-icons-shown {
-        >.field__item {
-          border-bottom: 3px dotted $action-border-gray;
-        }
-      }
-
       &.action-icons-hidden {
         background-color: white;
         position: relative;
-        max-height: 3px;
-        top: -3px;
-        padding-top: 3px;
+        max-height: 0;
         overflow: hidden;
         transition: max-height 2s;
 
         &.show-icons {
           max-height: 1000px;
-        }
-
-        >.field__item {
-          border-top: 3px dotted $action-border-gray;
         }
       }
 
@@ -86,16 +67,22 @@
         grid-template-columns: 1fr 1fr 1fr;
         grid-column-gap: 2rem;
 
+        &.action-icons-shown {
+          :nth-child(3n+1):nth-last-child(-n+3),
+            :nth-child(3n+1):nth-last-child(-n+3) ~ .field__item {
+              border-bottom: none;
+          }
+        }
+
         &.action-icons-hidden {
           &.show-icons {
             padding-top: 0;
             top: 0;
           }
-          
+
           >.field__item {
-            &:nth-child(-n+3) {
-              border-top: none;
-            }
+            border-bottom: none;
+            border-top: 3px dotted $action-border-gray;
           }
         }
       }

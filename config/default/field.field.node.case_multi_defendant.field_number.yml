@@ -1,0 +1,19 @@
+uuid: 0f41791d-3dac-4647-94ec-0ef5d10b039c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_number
+    - node.type.case_multi_defendant
+id: node.case_multi_defendant.field_number
+field_name: field_number
+entity_type: node
+bundle: case_multi_defendant
+label: 'Case Number'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

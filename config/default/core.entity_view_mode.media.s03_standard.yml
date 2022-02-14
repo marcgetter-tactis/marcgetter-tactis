@@ -1,0 +1,12 @@
+uuid: e33ea1c1-0a61-4172-b4a8-b3e5fd1dbb3c
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: euVSW3oB78GRcCeMlZ-2N1o2AGqEcp9V5ZIsdKkphZc
+id: media.s03_standard
+label: 'Size 03 standard 16:9'
+targetEntityType: media
+cache: true

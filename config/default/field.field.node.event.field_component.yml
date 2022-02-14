@@ -10,7 +10,7 @@ id: node.event.field_component
 field_name: field_component
 entity_type: node
 bundle: event
-label: Component
+label: 'DOJ Component'
 description: ''
 required: true
 translatable: true

@@ -13,24 +13,24 @@
 
     {% set linkTitle = item.title %}
     {% set linkImage =  item.content.field_menu_link_image %}
-    {% set linkCaptionHeader =  item.content.field_menu_image_caption_header %}
-    {% set linkCaptionSubHeader =  item.content.field_menu_image_caption_subhead %}
+    {% set linkCaptionHeader =  item.content.field_menu_image_caption_header|render|trim is not empty ? item.content.field_menu_image_caption_header : null %}
+    {% set linkCaptionSubHeader =  item.content.field_menu_image_caption_subhead|render|trim is not empty ? item.content.field_menu_image_caption_subhead : null %}
     {% set linksWithImageCount = item.content.linksWithImagesCount %}
 
     {% if linksWithImageCount <= MAX_COUNT %}
         <div class="menu_link_imaged__wrapper">
-            <span class="menu_link_imaged__link_title">{{ linkTitle }}</span>
+            <div class="menu_link_imaged__link_title"><span>{{ linkTitle }}</span></div>
             <div class="menu_link_imaged__content" aria-hidden="true">
                 <div class="menu_link_imaged__media">{{ linkImage }}</div>
                 {% if linkCaptionHeader or linkCaptionSubHeader %}
 
                     <div class="menu_link_imaged__captions">
                         {% if linkCaptionHeader %}
-                            <div class="menu_link_imaged__caption_header">{{ linkCaptionHeader }} </div>
+                            <div class="menu_link_imaged__caption_header">{{ linkCaptionHeader }}</div>
                         {% endif %}
 
                         {% if linkCaptionSubHeader %}
-                            <div class="menu_link_imaged__caption_subHeader">{{ linkCaptionSubHeader }} </div>
+                            <div class="menu_link_imaged__caption_subHeader">{{ linkCaptionSubHeader }}</div>
                         {% endif %}
                     </div>
 

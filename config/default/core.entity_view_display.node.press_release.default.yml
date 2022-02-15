@@ -27,6 +27,11 @@ targetEntityType: node
 bundle: press_release
 mode: default
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   field_attachment:
     type: entity_reference_label
     label: hidden
@@ -138,6 +143,7 @@ content:
     weight: 0
     region: content
 hidden:
+  entitygroupfield: true
   field_file_private_force: true
   field_pr_contact: true
   field_pr_image: true

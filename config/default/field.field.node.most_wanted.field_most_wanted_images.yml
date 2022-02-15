@@ -1,23 +1,23 @@
-uuid: 722af7b4-f27c-4aef-9fa9-62d471541db0
+uuid: ffece880-b285-42e3-ace4-c84adfcda155
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_images
+    - field.storage.node.field_most_wanted_images
     - node.type.most_wanted
   module:
     - link
-id: node.most_wanted.field_images
-field_name: field_images
+id: node.most_wanted.field_most_wanted_images
+field_name: field_most_wanted_images
 entity_type: node
 bundle: most_wanted
-label: Images
+label: 'Most Wanted Images'
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  title: 0
+  title: 1
   link_type: 16
 field_type: link

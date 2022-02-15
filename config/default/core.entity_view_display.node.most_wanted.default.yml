@@ -17,8 +17,8 @@ dependencies:
     - field.field.node.most_wanted.field_field_office
     - field.field.node.most_wanted.field_hair
     - field.field.node.most_wanted.field_height
-    - field.field.node.most_wanted.field_images
     - field.field.node.most_wanted.field_most_wanted_category
+    - field.field.node.most_wanted.field_most_wanted_images
     - field.field.node.most_wanted.field_nationality
     - field.field.node.most_wanted.field_occupations
     - field.field.node.most_wanted.field_place_of_birth
@@ -40,6 +40,11 @@ targetEntityType: node
 bundle: most_wanted
 mode: default
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   field_additional_information:
     type: text_default
     label: above
@@ -152,7 +157,15 @@ content:
     third_party_settings: {  }
     weight: 9
     region: content
-  field_images:
+  field_most_wanted_category:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 25
+    region: content
+  field_most_wanted_images:
     type: link
     label: above
     settings:
@@ -162,15 +175,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 1
-    region: content
-  field_most_wanted_category:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 25
+    weight: 27
     region: content
   field_nationality:
     type: string
@@ -254,6 +259,7 @@ content:
     weight: 3
     region: content
 hidden:
+  entitygroupfield: true
   feeds_item: true
   field_uid: true
   langcode: true

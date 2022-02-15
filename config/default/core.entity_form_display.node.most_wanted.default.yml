@@ -17,8 +17,8 @@ dependencies:
     - field.field.node.most_wanted.field_field_office
     - field.field.node.most_wanted.field_hair
     - field.field.node.most_wanted.field_height
-    - field.field.node.most_wanted.field_images
     - field.field.node.most_wanted.field_most_wanted_category
+    - field.field.node.most_wanted.field_most_wanted_images
     - field.field.node.most_wanted.field_nationality
     - field.field.node.most_wanted.field_occupations
     - field.field.node.most_wanted.field_place_of_birth
@@ -32,6 +32,7 @@ dependencies:
     - field.field.node.most_wanted.field_weight
     - node.type.most_wanted
   module:
+    - content_moderation
     - link
     - path
     - scheduler
@@ -152,14 +153,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_images:
-    type: link_default
-    weight: 126
-    region: content
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
   field_most_wanted_category:
     type: entity_reference_autocomplete
     weight: 148
@@ -169,6 +162,14 @@ content:
       match_limit: 10
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_most_wanted_images:
+    type: link_default
+    weight: 150
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
     third_party_settings: {  }
   field_nationality:
     type: string_textfield
@@ -265,6 +266,12 @@ content:
     settings:
       include_locked: true
     third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   path:
     type: path
     weight: 30
@@ -340,4 +347,5 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  entitygroupfield: true
   feeds_item: true

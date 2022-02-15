@@ -237,7 +237,10 @@ hr {
 }
 
 .node-attachments,
-.node-component {
+.node-component,
+.node-location,
+.node-speaker,
+.node-topics {
   margin-bottom: 2rem;
 
   strong {
@@ -248,14 +251,13 @@ hr {
 .node-attachments {
   .field__item {
     display: block;
-    margin: 1rem 0;
+    margin: .75rem 0;
   }
 }
 
 .node-component {
   .field__item {
     margin: 1rem 0;
-
     @include at-media(tablet) {
       display: inline-block;
       margin-right: 1rem;
@@ -265,6 +267,39 @@ hr {
       &:last-of-type {
         border-right: none;
       }
+    }
+  }
+}
+
+.node-location {
+  color: $gray-70;
+  line-height: 1.6;
+  
+  .address {
+    margin: .75rem 0;
+  }
+}
+
+.node-speaker {
+  .field_speaker {
+    margin: .75rem 0;
+  }
+}
+
+.node-topics {
+  .field__item {
+    display: inline-block;
+      margin: .75rem 1rem .75rem 0;
+    
+    a {
+      display: block;
+      padding: .75rem 1.25rem;
+      background-color: $blue-cool-5;
+      border-left: 4px solid $doj-darkblue;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 800;
+      font-size: $theme-h6-font-size;
     }
   }
 }

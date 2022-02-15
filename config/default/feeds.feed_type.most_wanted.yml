@@ -97,9 +97,6 @@ parser_configuration:
     height:
       value: height
       label: height
-    _images_original:
-      value: '.images[*].original'
-      label: '.images[*].original'
     nationality:
       value: nationality
       label: nationality
@@ -133,6 +130,9 @@ parser_configuration:
     _subjects_:
       value: '.subjects[*]'
       label: '.subjects[*]'
+    _images_original:
+      value: '.images[*].original'
+      label: '.images[*].original'
   context:
     value: '$.items.*'
   source_encoding:
@@ -347,8 +347,8 @@ mappings:
     map:
       value: additional_information
     settings:
-      language: null
-      format: plain_text
+      language: ''
+      format: full_html
   -
     target: field_age_range
     map:
@@ -375,15 +375,15 @@ mappings:
     map:
       value: description
     settings:
-      language: null
-      format: plain_text
+      language: ''
+      format: full_html
   -
     target: field_details
     map:
       value: details
     settings:
-      language: null
-      format: plain_text
+      language: ''
+      format: full_html
   -
     target: field_download_poster
     map:
@@ -413,13 +413,6 @@ mappings:
       language: null
     unique: {  }
   -
-    target: field_images
-    map:
-      uri: _images_original
-      title: ''
-    settings:
-      language: null
-  -
     target: field_nationality
     map:
       value: nationality
@@ -445,15 +438,15 @@ mappings:
     map:
       value: reward_text
     settings:
-      language: null
-      format: plain_text
+      language: ''
+      format: full_html
   -
     target: field_scars_and_marks
     map:
       value: scars_and_marks
     settings:
-      language: null
-      format: plain_text
+      language: ''
+      format: full_html
   -
     target: field_sex
     map:
@@ -479,15 +472,15 @@ mappings:
     map:
       value: suspects
     settings:
-      language: null
-      format: plain_text
+      language: ''
+      format: full_html
   -
     target: field_caution
     map:
       value: caution
     settings:
-      language: null
-      format: plain_text
+      language: ''
+      format: full_html
   -
     target: field_most_wanted_category
     map:
@@ -496,3 +489,10 @@ mappings:
       language: ''
       reference_by: name
       autocreate: '1'
+  -
+    target: field_images
+    map:
+      uri: _images_original
+      title: ''
+    settings:
+      language: null

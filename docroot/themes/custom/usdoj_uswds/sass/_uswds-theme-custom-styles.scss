@@ -669,14 +669,23 @@ header.usa-header--extended {
       }
     }
   }
-  @include at-media(desktop) {
-    .usa-nav__primary-item {
+
+  .usa-nav__primary-item {
+    > .usa-current {
+      @include remove-bar;
+    }
+
+    @include at-media-max(desktop) {
+
+    }
+    @include at-media(desktop) {
       > .usa-nav__link {
         &:hover {
           @include remove-bar;
         }
       }
     }
+
   }
 }
 
@@ -859,3 +868,6 @@ header.usa-header--extended {
     }
   }
 }
+/************************************************
+Primary Menu (with Images) - END
+************************************************/

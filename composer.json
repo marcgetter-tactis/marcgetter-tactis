@@ -48,6 +48,7 @@
         "drupal/feeds": "^3.0@alpha",
         "drupal/feeds_ex": "^1.0@alpha",
         "drupal/feeds_tamper": "^2.0@beta",
+        "drupal/filehash": "^1.7",
         "drupal/google_tag": "^1.4",
         "drupal/group": "^1.4",
         "drupal/group_content_menu": "^1.1",

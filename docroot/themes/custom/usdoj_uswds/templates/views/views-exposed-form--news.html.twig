@@ -39,14 +39,25 @@
   </div>
 
   <div class="grid-col-12 mobile-lg:grid-col-6">
-    {{ form.field_langcode }}
+    {{ form.langcode }}
   </div>
 
   <div class="grid-col-12 mobile-lg:grid-col-6">
     {{ form.field_topic }}
   </div>
 
-  {% for item in form|children|slice(1)  %}
+  <div class="grid-col-12 mobile-lg:grid-col-6">
+    <div class="grid-row">
+      <div class="grid-col-6">
+        {{ form.start_date }}
+      </div>
+      <div class="grid-col-6">
+        {{ form.end_date }}
+      </div>
+    </div>
+  </div>
+
+  {% for item in form|children|slice(6)  %}
     {{ item }}
     {# {{drupal_dump(item)}} #}
   {% endfor %}

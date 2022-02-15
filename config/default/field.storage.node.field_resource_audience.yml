@@ -1,0 +1,42 @@
+uuid: bf2f5a77-ccff-4fab-b563-4e5f817e3294
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_resource_audience
+field_name: field_resource_audience
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: ']Law Enforcement'
+      label: 'Law Enforcement'
+    -
+      value: Media
+      label: Media
+    -
+      value: Prosecutors
+      label: Prosecutors
+    -
+      value: 'Public Officials'
+      label: 'Public Officials'
+    -
+      value: Researchers
+      label: Researchers
+    -
+      value: 'Victim Advocacy Groups/General Community'
+      label: 'Victim Advocacy Groups/General Community'
+    -
+      value: 'Universities/College Campuses'
+      label: 'Universities/College Campuses'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

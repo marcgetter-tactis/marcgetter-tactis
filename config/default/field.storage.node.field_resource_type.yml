@@ -1,0 +1,48 @@
+uuid: 761d86b9-6e05-4076-84e8-957bce9e7b05
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_resource_type
+field_name: field_resource_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Facts and Statistics'
+      label: 'Facts and Statistics'
+    -
+      value: Film/Documentary
+      label: Film/Documentary
+    -
+      value: Guide
+      label: Guide
+    -
+      value: 'Laws, Policies, and Case Law'
+      label: 'Laws, Policies, and Case Law'
+    -
+      value: Podcast
+      label: Podcast
+    -
+      value: Program
+      label: Program
+    -
+      value: Publication
+      label: Publication
+    -
+      value: 'Technical Assistance and Funding'
+      label: 'Technical Assistance and Funding'
+    -
+      value: Training
+      label: Training
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -18,43 +18,42 @@ Press Release Search
 */
 
 #views-exposed-form-news-page-1 {
+  max-width: 100%;
+  
+  label {
+    color: color(primary-darker);
+    font-weight: bold;
+    margin: 0;
+  }
+
+  input, .chosen-container-multi {
+    border: 1px solid $gray-warm-20;
+    border-radius: 3px;
+    max-width: 30rem;
+  }
+
+  .form-item-search-api-fulltext {
+    background: $blue-cool-5;
+    border-left: 3px solid color(primary-darker);
+    padding: 1rem 2rem 1.5rem;
+    margin-top: 0;
     max-width: 100%;
+  }
+
+  .filters {
+    background: $blue-cool-5;
+    border-left: 3px solid color(primary-darker);
+    padding: 1rem 2rem 1.5rem;
+    margin-top: 1.25rem;
     
-  .press-release-search-fields {
-    label {
-      color: color(primary-darker);
-      font-weight: bold;
-      margin: 0;
-    }
-
-    input, .chosen-container-multi {
-      border: 1px solid $gray-warm-20;
-      border-radius: 3px;
-      max-width: 30rem;
-    }
-
-    .form-item-search-api-fulltext {
-      background: $blue-cool-5;
-      border-left: 3px solid color(primary-darker);
-      padding: 1rem 2rem 1.5rem;
-      margin-top: 0;
-      max-width: 100%;
-    }
-
-    .filters {
-      background: $blue-cool-5;
-      border-left: 3px solid color(primary-darker);
-      padding: 1rem 2rem 1.5rem;
-      margin-top: 1.25rem;
-      
-      .chosen-container-multi, .chosen-container-active {
+    .chosen-container-multi, .chosen-container-active {
+      background-image: none;
+      .chosen-choices {
+        border: none;
+        box-shadow: none;
         background-image: none;
-        .chosen-choices {
-          border: none;
-          box-shadow: none;
-          background-image: none;
-        }
       }
     }
   }
 }
+

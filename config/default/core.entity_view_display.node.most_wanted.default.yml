@@ -40,11 +40,6 @@ targetEntityType: node
 bundle: most_wanted
 mode: default
 content:
-  content_moderation_control:
-    settings: {  }
-    third_party_settings: {  }
-    weight: -20
-    region: content
   field_additional_information:
     type: text_default
     label: above
@@ -167,7 +162,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 26
+    weight: 1
     region: content
   field_most_wanted_category:
     type: entity_reference_label
@@ -259,7 +254,6 @@ content:
     weight: 3
     region: content
 hidden:
-  entitygroupfield: true
   feeds_item: true
   field_uid: true
   langcode: true

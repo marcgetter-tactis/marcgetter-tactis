@@ -1,0 +1,34 @@
+uuid: e2a293d5-eebc-42fb-8f78-77571283a75f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:general:58af1775-f564-48cb-b65e-42dfe980dae0'
+  module:
+    - block_content
+    - collapsiblock
+    - system
+  theme:
+    - usdoj_uswds
+third_party_settings:
+  collapsiblock:
+    collapse_action: 0
+id: connectwithus
+theme: usdoj_uswds
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'block_content:58af1775-f564-48cb-b65e-42dfe980dae0'
+settings:
+  id: 'block_content:58af1775-f564-48cb-b65e-42dfe980dae0'
+  label: 'Connect with us'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /news

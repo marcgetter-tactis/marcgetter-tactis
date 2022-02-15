@@ -18,8 +18,16 @@
   #}
 {{ q }}
 {% endif %}
-  
-<h2>Press Releases</h2>  
+
+<div id="mobile-sidenav" class="desktop:display-none">
+  <input type="checkbox" class="display-none" id="sidenav-expand">
+  <label class="expand" for="sidenav-expand">
+    <div class="expand-title">News</div>
+    {{ drupal_menu('sidebar-menu') }}
+  </label>
+</div>
+
+<h2>All News</h2>  
 {% if form.search_api_fulltext %}
   <div class="keyword-search">
     {{ form.search_api_fulltext }} 
@@ -43,3 +51,9 @@
     {# {{drupal_dump(item)}} #}
   {% endfor %}
 </div>
+
+
+
+
+
+

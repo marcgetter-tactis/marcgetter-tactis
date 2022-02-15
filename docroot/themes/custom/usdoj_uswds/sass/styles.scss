@@ -80,14 +80,15 @@
 
 // -------------------------------------
 // Import theme custom styles
-@import "variables.scss";
-@import "mixins.scss";
+@import "variables";
+@import "mixins";
 @import "uswds-theme-custom-styles";
-@import "header.scss";
-@import "footer.scss";
+@import "header";
+@import "footer";
 @import "uswds-theme-block-mission";
 @import "uswds-theme-block-blank";
 @import "uswds-theme-block-tabbed";
 @import "uswds-theme-block-action_center";
 @import "uswds-theme-press-release-search";
+@import "sidenav";
 

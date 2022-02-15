@@ -15,7 +15,7 @@ third_party_settings:
 id: sidebarmenu
 theme: usdoj_uswds
 region: sidebar_first
-weight: -6
+weight: -7
 provider: null
 plugin: 'system_menu_block:sidebar-menu'
 settings:

@@ -16,7 +16,7 @@ third_party_settings:
 id: forthepress
 theme: usdoj_uswds
 region: sidebar_first
-weight: -5
+weight: -6
 provider: null
 plugin: 'block_content:173b0163-20d1-4e55-ab00-7fa96ac7a027'
 settings:

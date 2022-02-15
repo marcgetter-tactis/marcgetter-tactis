@@ -9,7 +9,6 @@ dependencies:
     - image.style.d03_traditional
     - media.type.audio
   module:
-    - ds
     - svg_image
 _core:
   default_config_hash: qWhkw3khQjWDlvra4CBbJbFa32JdA5dP-Q5eejf1aiY
@@ -32,14 +31,11 @@ content:
     settings:
       image_link: ''
       image_style: d03_traditional
-    third_party_settings:
-      ds:
-        ft:
-          id: default
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
     weight: 0
     region: content
 hidden:

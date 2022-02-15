@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   module:
-    - ace_editor
     - blazy
     - ckeditor_media_embed
     - editor
@@ -18,22 +17,6 @@ name: 'HTML code'
 format: code_html
 weight: -8
 filters:
-  ace_filter:
-    id: ace_filter
-    provider: ace_editor
-    status: false
-    weight: -40
-    settings:
-      theme: cobalt
-      syntax: html
-      height: 500px
-      width: 700px
-      font_size: 10pt
-      line_numbers: '1'
-      show_invisibles: '0'
-      print_margins: '1'
-      auto_complete: '1'
-      use_wrap_mode: '1'
   filter_url:
     id: filter_url
     provider: filter

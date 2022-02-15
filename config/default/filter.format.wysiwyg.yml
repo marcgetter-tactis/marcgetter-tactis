@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.media.embedded
   module:
-    - ace_editor
     - blazy
     - collapse_text
     - editor
@@ -39,7 +38,7 @@ filters:
     status: false
     weight: -45
     settings:
-      allowed_html: '<em> <strong> <cite> <blockquote cite> <code> <ul type> <ol type start> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <img src alt data-entity-type data-entity-uuid data-align data-caption> <sup> <sub> <s> <u> <drupal-media data-entity-type data-entity-uuid data-view-mode data-align data-caption alt title> <p class="text-align-left text-align-center text-align-right text-align-justify"> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr> <h1> <pre> <a href hreflang data-entity-substitution data-entity-type data-entity-uuid title> <title> <class> <id> <target>'
+      allowed_html: '<em> <strong> <cite> <blockquote cite> <code> <ul type> <ol type start> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <img src alt data-entity-type data-entity-uuid data-align data-caption> <sup> <sub> <s> <u> <drupal-media data-entity-type data-entity-uuid data-view-mode data-align data-caption alt title> <p class="text-align-left text-align-center text-align-right text-align-justify"> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr> <h1> <pre> <title> <class> <id> <target> <a href hreflang data-entity-substitution data-entity-type data-entity-uuid title name>'
       filter_html_help: true
       filter_html_nofollow: false
   media_embed:
@@ -148,21 +147,6 @@ filters:
     weight: 0
     settings:
       title: true
-  ace_filter:
-    id: ace_filter
-    provider: ace_editor
-    status: false
-    weight: 0
-    settings:
-      theme: cobalt
-      syntax: html
-      height: 500px
-      width: 700px
-      font_size: 12pt
-      line_numbers: '1'
-      print_margins: '1'
-      show_invisibles: '0'
-      use_wrap_mode: '1'
   filter_image_resize:
     id: filter_image_resize
     provider: image_resize_filter

@@ -13,7 +13,6 @@ dependencies:
     - image.style.field_preview
     - media.type.image
   module:
-    - ds
     - svg_image
 _core:
   default_config_hash: P3rNq6usAKsD42qIWGAFnI5bWY4bTPQnu5JuTb2u1Cg
@@ -28,14 +27,11 @@ content:
     settings:
       image_link: ''
       image_style: field_preview
-    third_party_settings:
-      ds:
-        ft:
-          id: default
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
     weight: 0
     region: content
   name:
@@ -43,14 +39,7 @@ content:
     label: hidden
     settings:
       link_to_entity: false
-    third_party_settings:
-      ds:
-        ft:
-          id: default
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
+    third_party_settings: {  }
     weight: 1
     region: content
 hidden:

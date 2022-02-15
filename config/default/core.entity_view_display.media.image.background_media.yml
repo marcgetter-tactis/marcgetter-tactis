@@ -14,7 +14,6 @@ dependencies:
     - responsive_image.styles.de2e
   module:
     - blazy
-    - ds
     - layout_builder
 third_party_settings:
   layout_builder:
@@ -41,6 +40,9 @@ content:
       current_view_mode: background_media
       skin: ''
       fx: ''
+      lazy: ''
+      loading: lazy
+      preload: false
       style: ''
       background: false
       box_caption: ''
@@ -59,12 +61,7 @@ content:
       grid: '0'
       grid_medium: '0'
       grid_small: '0'
-    third_party_settings:
-      ds:
-        ft:
-          id: reset
-          settings:
-            lb: ''
+    third_party_settings: {  }
     weight: 0
     region: content
 hidden:

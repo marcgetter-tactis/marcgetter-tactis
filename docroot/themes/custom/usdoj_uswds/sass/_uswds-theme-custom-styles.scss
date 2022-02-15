@@ -676,6 +676,9 @@ header.usa-header--extended {
           @include remove-bar;
         }
       }
+      > .usa-current {
+        @include remove-bar;
+      }
     }
   }
 }
@@ -859,3 +862,6 @@ header.usa-header--extended {
     }
   }
 }
+/************************************************
+Primary Menu (with Images) - END
+************************************************/

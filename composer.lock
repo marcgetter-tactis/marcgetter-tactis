@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "98d15db229c933b07fa96b3361b9415c",
+    "content-hash": "a860e1f5f4f63f4ae0c33d5f2bb9a0da",
     "packages": [
         {
             "name": "acquia/acquia_cms",
@@ -15011,6 +15011,54 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/tamper",
                 "issues": "http://drupal.org/project/issues/tamper"
+            }
+        },
+        {
+            "name": "drupal/taxonomy_delete",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/taxonomy_delete.git",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/taxonomy_delete-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "58ddc4ec8408de88f707430b7e5f8f6cde78c027"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1587197781",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "imalabya",
+                    "homepage": "https://www.drupal.org/user/2641255"
+                }
+            ],
+            "description": "A utility module which will delete all the taxonomy under a Vocabulary.",
+            "homepage": "https://www.drupal.org/project/taxonomy_delete",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/taxonomy_delete",
+                "issues": "http://drupal.org/project/issues/taxonomy_delete"
             }
         },
         {

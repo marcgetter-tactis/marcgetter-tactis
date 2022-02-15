@@ -84,6 +84,7 @@
         "drupal/structure_sync": "^2.0",
         "drupal/subgroup": "^1.0",
         "drupal/svg_image": "^1.15",
+        "drupal/taxonomy_delete": "^1.1",
         "drupal/taxonomy_import": "^2.0",
         "drupal/term_merge_manager": "^1.0@beta",
         "drupal/tmgmt": "^1.12",

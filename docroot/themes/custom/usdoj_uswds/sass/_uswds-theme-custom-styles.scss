@@ -23,7 +23,12 @@ body {
   color: $theme-color-base;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: $headings-font-family;
   font-weight: 600;
 }
@@ -52,7 +57,8 @@ h6 {
   font-size: $theme-h6-font-size;
 }
 
-h1,h2 {
+h1,
+h2 {
   color: $doj-darkblue;
 
   &:after {
@@ -61,7 +67,7 @@ h1,h2 {
     display: flex;
     border-top: 3px solid color(warning);
     border-bottom: 3px solid color(warning);
-    height: .6rem;
+    height: 0.6rem;
     margin: 1.5rem 0;
   }
 
@@ -81,7 +87,7 @@ h1 {
 
 a {
   color: $theme-link-color;
-  
+
   &:hover {
     color: $doj-darkblue;
   }
@@ -120,7 +126,6 @@ ul {
         }
       }
     }
-
   }
 }
 
@@ -145,7 +150,7 @@ hr {
 }
 
 .usa-icon-list__icon {
-  margin-right: .75rem;
+  margin-right: 0.75rem;
 
   img {
     vertical-align: bottom;
@@ -168,7 +173,7 @@ hr {
   background-color: $footer-darkgray;
 
   a {
-    @include u-font('body', 3);
+    @include u-font("body", 3);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -193,7 +198,7 @@ hr {
   img {
     max-width: 20px;
     height: auto;
-    margin-bottom: .25rem;
+    margin-bottom: 0.25rem;
   }
 
   @include at-media(desktop) {
@@ -211,7 +216,7 @@ hr {
   font-size: $theme-h6-font-size;
   color: $doj-coolblue;
 
-  +h1 {
+  + h1 {
     margin-top: 1rem;
   }
 }
@@ -224,7 +229,7 @@ hr {
 .node-body {
   color: $gray-70;
   line-height: 1.6;
-  
+
   img {
     width: 100%;
     height: auto;
@@ -232,7 +237,10 @@ hr {
 }
 
 .node-attachments,
-.node-component {
+.node-component,
+.node-location,
+.node-speaker,
+.node-topics {
   margin-bottom: 2rem;
 
   strong {
@@ -243,14 +251,13 @@ hr {
 .node-attachments {
   .field__item {
     display: block;
-    margin: 1rem 0;
+    margin: .75rem 0;
   }
 }
 
 .node-component {
   .field__item {
     margin: 1rem 0;
-    
     @include at-media(tablet) {
       display: inline-block;
       margin-right: 1rem;
@@ -260,6 +267,39 @@ hr {
       &:last-of-type {
         border-right: none;
       }
+    }
+  }
+}
+
+.node-location {
+  color: $gray-70;
+  line-height: 1.6;
+  
+  .address {
+    margin: .75rem 0;
+  }
+}
+
+.node-speaker {
+  .field_speaker {
+    margin: .75rem 0;
+  }
+}
+
+.node-topics {
+  .field__item {
+    display: inline-block;
+      margin: .75rem 1rem .75rem 0;
+    
+    a {
+      display: block;
+      padding: .75rem 1.25rem;
+      background-color: $blue-cool-5;
+      border-left: 4px solid $doj-darkblue;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 800;
+      font-size: $theme-h6-font-size;
     }
   }
 }
@@ -284,7 +324,7 @@ hr {
     position: relative;
 
     .hero-text-wrapper {
-      background-color: rgba(white,.95);
+      background-color: rgba(white, 0.95);
       border-left: 4px solid $theme-color-accent-warm;
       z-index: 1;
 
@@ -356,7 +396,7 @@ hr {
 
     li {
       display: inline-block;
-      margin: 0 .25rem;
+      margin: 0 0.25rem;
 
       &.slick-active {
         button {
@@ -402,7 +442,7 @@ hr {
 
     li {
       display: inline-block;
-      margin: 0 .25rem;
+      margin: 0 0.25rem;
 
       &.slick-active {
         button {
@@ -436,8 +476,8 @@ hr {
 
 .usa-card__container {
   border-color: $theme-card-border-color;
-  box-shadow: 0 0 7px 0 rgba(0,0,0,0.17);
-  margin-bottom: .5rem;
+  box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.17);
+  margin-bottom: 0.5rem;
 
   .usa-card__body {
     color: $gray-80;
@@ -445,7 +485,7 @@ hr {
     line-height: 1.4;
 
     .card-title {
-      @include u-font-family('sans');
+      @include u-font-family("sans");
       color: $doj-coolblue;
       font-size: $theme-h4-font-size;
       margin-bottom: 10px;
@@ -454,7 +494,7 @@ hr {
     p {
       &:first-of-type {
         margin-top: 0;
-      }  
+      }
     }
 
     strong {
@@ -506,9 +546,9 @@ hr {
     height: 100%;
     left: 50%;
     right: 50%;
-    margin: 0 -50vw; 
+    margin: 0 -50vw;
     background-color: inherit;
-    z-index: -1;  
+    z-index: -1;
   }
 }
 
@@ -524,7 +564,104 @@ header.usa-header--extended {
           ul {
             .usa-nav__submenu-item {
               a {
-                color: $blue-60v;
+                //This level of nesting is need to override original styling from _header.scss
+                color: $doj-darkblue;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.usdojMobileMenuSlider {
+      .usdojMobileMenuSlider__activeChild {
+        background-color: white;
+      }
+
+      .usa-nav__primary {
+        .usa-nav__primary-item {
+          background-color: transparent;
+
+          transition: margin-left, height;
+          @include transition(2s);
+          transition-timing-function: ease-out;
+
+          &.usdojMobileMenuSlider {
+            &__offCanvas {
+              margin-left: -100%;
+              height: 0;
+            }
+
+            &__hidden {
+              display: none;
+            }
+          }
+
+          A {
+            line-height: 1.375em;
+            padding-top: 0.675em;
+            padding-bottom: 0.675em;
+
+            &:hover,
+            &:focus,
+            &:active {
+              background-color: transparent;
+
+              span {
+                color: $theme-color-accent-warm;
+              }
+            }
+          }
+
+          button {
+            &[aria-expanded] {
+              position: relative;
+              background-image: none;
+              width: 100%;
+            }
+
+            &[aria-expanded="false"]::after,
+            &[aria-expanded="true"]::before {
+              content: "";
+              position: absolute;
+              width: 1.5rem;
+              height: 1.5rem;
+              top: 50%;
+              transform: translateY(-50%);
+              background-repeat: no-repeat;
+              background-size: 0.4rem;
+            }
+
+            &[aria-expanded="false"]::after {
+              background-image: url("../assets/img/chevron-right-white.svg");
+              right: 1.25rem;
+              background-position: right 0 center;
+            }
+
+            &[aria-expanded="true"] {
+              text-align: center;
+            }
+
+            &[aria-expanded="true"]::before {
+              background-image: url("../assets/img/chevron-right-white.svg");
+              left: 1.25rem;
+              background-position: center center;
+              border-radius: 50%;
+              border: 1px solid white;
+              transform: rotate(180deg) translate(0, 50%);
+            }
+          }
+
+          .usa-nav__submenu {
+            .non_imaged_links__container {
+              .individual_menu_level__1 {
+                &:first-child {
+                  padding-top: 1em;
+                }
+
+                .usa-nav__submenu-item {
+                  border-top-color: transparent;
+                }
               }
             }
           }
@@ -536,100 +673,50 @@ header.usa-header--extended {
     .usa-nav__primary-item {
       > .usa-nav__link {
         &:hover {
-          @include remove-bar
-
-            }
+          @include remove-bar;
+        }
       }
     }
   }
 }
 
-
-
-/** Handles Hover Functionality.
-* If this is used, please ensure proper aria attributes
-**/
-/*@include at-media(desktop) {
-.usa-nav__primary-item {
-&:hover {
-position: static;
-color: $doj-darkblue;
-
-&:after {
-content: '';
-width: 100%;
-height: 15px;
-//background-color: blue;
-position: absolute;
-top: calc(100% - 1px);
-left: 0;
-}
-
-button {
-color: inherit;
-@include add-background-svg("usa-icons-bg/expand_more--blue-warm-70v");
-
-+ .menu_level__1,
-+ #basic-nav-section-1 {
-display: block;
-}
-}
-}
-
-> .usa-nav__link {
-&:hover {
-&::after {
-display: none;
-}
-}
-}
-}
-nav.usa-nav ul li:hover {
-//background-color: transparent;
-}
-
-}
-
-}
-
-*/
-
 .usa-nav__primary {
   button {
     @include at-media-max(desktop) {
-
       color: white;
       font-weight: bold;
 
       &[aria-expanded="false"] {
-        @include add-background-svg("usa-icons-bg/add--white")
-          }
+        @include add-background-svg("usa-icons-bg/add--white");
+      }
       &[aria-expanded="true"] {
-        @include add-background-svg("usa-icons-bg/remove--white")
-          }
+        @include add-background-svg("usa-icons-bg/remove--white");
+      }
       &:hover {
         background-color: $doj-darkgray;
         color: $theme-color-accent-warm;
       }
-
     }
     @include at-media(desktop) {
       color: white;
-      font-size: .94rem;
+      font-size: 0.94rem;
       height: 100%;
 
       &:hover {
         color: $doj-darkblue;
       }
-      &[aria-expanded=false] {
+      &[aria-expanded="false"] {
         @include add-background-svg("usa-icons-bg/expand_more--white");
+
+        &:hover {
+          @include add-background-svg("usa-icons-bg/expand_more--doj-darkblue");
+        }
       }
-      &[aria-expanded=true] {
-        @include add-background-svg("usa-icons/expand_less");
+      &[aria-expanded="true"] {
+        @include add-background-svg("usa-icons/expand_less--doj-darkblue");
         background-color: $theme-color-accent-warm;
         color: $doj-darkblue;
       }
-
     }
   }
 }
@@ -637,14 +724,22 @@ nav.usa-nav ul li:hover {
 .usa-megamenu {
   &.usa-nav__submenu {
     top: 100%;
-    background-color: white;
 
     &::before,
     &::after {
       background-color: inherit;
+      border-bottom: inherit;
+
+      @include at-media(desktop) {
+        height: calc(
+          100% + 1px
+        ); //To compensate for 1px border bottom of source element (.usa-nav__submenu)
+      }
     }
 
     @include at-media(desktop) {
+      border-bottom: 1px solid $gray-warm-30;
+
       a {
         display: inline-block;
       }
@@ -655,8 +750,13 @@ nav.usa-nav ul li:hover {
 .usa-nav__submenu {
   background-color: white;
 
+  @include at-media(desktop) {
+    border: 1px solid $gray-warm-30;
+    border-top: 0;
+  }
+
   .usa-nav__submenu-item {
-    font-size: .9375rem;
+    font-size: 0.9375rem;
 
     a {
       color: $theme-link-color;
@@ -666,10 +766,12 @@ nav.usa-nav ul li:hover {
       &:hover {
         color: $doj-darkblue;
       }
-
     }
+
     @include at-media(desktop) {
-      &:hover{background-color:transparent}
+      &:hover {
+        background-color: transparent;
+      }
     }
   }
 }
@@ -679,6 +781,7 @@ nav.usa-nav ul li:hover {
     display: none;
   }
   display: inline-block;
+  max-width: 215px;
 
   &__content {
     position: relative;
@@ -695,6 +798,7 @@ nav.usa-nav ul li:hover {
     display: flex;
     flex-flow: column;
     justify-content: center;
+    padding: 0 12.5px;
   }
 
   &__media {
@@ -709,10 +813,9 @@ nav.usa-nav ul li:hover {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.75);
     width: 100%;
-    bottom: calc(-100% - 100px);
+    bottom: 0;
     padding: 1em;
-    font-size: .875rem;
-    transition: bottom .25s ease-out
+    font-size: 0.875rem;
   }
 
   &__caption_header {
@@ -730,10 +833,6 @@ nav.usa-nav ul li:hover {
         &__link_title {
           text-decoration: underline;
         }
-
-        &__captions {
-          bottom: 0;
-        }
       }
     }
   }
@@ -746,7 +845,11 @@ nav.usa-nav ul li:hover {
 .non_imaged_links__container {
   @include at-media(desktop) {
     .individual_menu_level__1 {
-      margin-top: .875em;
+      margin-top: 0.875em;
+
+      A {
+        line-height: 1.8;
+      }
     }
 
     > .individual_menu_level__1 {
@@ -756,7 +859,3 @@ nav.usa-nav ul li:hover {
     }
   }
 }
-/************************************************
-MegaMenu (with Images) - END
-************************************************/
-

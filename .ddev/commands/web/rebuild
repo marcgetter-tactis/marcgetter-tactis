@@ -1,0 +1,8 @@
+#!/bin/bash
+echo "Removing contrib and vendor directories..."
+cd /var/www/html/docroot
+rm -rf core/ libraries/ modules/contrib/ themes/contrib/ profiles/contrib/
+cd /var/www/html
+rm -rf vendor/
+echo "Running composer install..."
+composer install

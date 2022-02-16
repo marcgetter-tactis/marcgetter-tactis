@@ -13,7 +13,6 @@ dependencies:
     - image.style.d03_traditional
     - media.type.image
   module:
-    - ds
     - svg_image
 _core:
   default_config_hash: rP7MuaOrP_Fgo4ov0d9J_6mWj1YlPhHqCijPQfIH1iQ
@@ -28,14 +27,11 @@ content:
     settings:
       image_link: ''
       image_style: d03_traditional
-    third_party_settings:
-      ds:
-        ft:
-          id: default
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
     weight: 0
     region: content
   name:

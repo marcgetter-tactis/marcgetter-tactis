@@ -11,29 +11,7 @@ dependencies:
     - responsive_image.styles.de2e_square
   module:
     - blazy
-    - ds
     - file
-third_party_settings:
-  ds:
-    layout:
-      id: ds_1col
-      library: null
-      disable_css: false
-      entity_classes: all_classes
-      settings:
-        classes:
-          layout_class: {  }
-        wrappers:
-          ds_content: div
-        outer_wrapper: div
-        attributes: ''
-        link_attribute: ''
-        link_custom: ''
-        label: ''
-    regions:
-      ds_content:
-        - field_media_video_file
-        - field_media_cover_image
 _core:
   default_config_hash: 8w5ZsXDH2BFXKvPKHfGwtRhp0RrNURnYC4prGZmsFPc
 id: media.video.se2e_square
@@ -55,6 +33,9 @@ content:
       current_view_mode: se2e_square
       skin: ''
       fx: ''
+      lazy: ''
+      loading: lazy
+      preload: false
       style: ''
       background: false
       box_caption: ''
@@ -73,35 +54,7 @@ content:
       grid: '0'
       grid_medium: '0'
       grid_small: '0'
-    third_party_settings:
-      ds:
-        ft:
-          id: expert
-          settings:
-            lb: ''
-            lbw: false
-            lbw-el: ''
-            lbw-cl: ''
-            lbw-at: ''
-            lb-col: false
-            ow: true
-            ow-el: ''
-            ow-cl: 'media-cover-image video-player-icon js-video-player-icon'
-            ow-at: ''
-            ow-def-at: true
-            ow-def-cl: true
-            fis: false
-            fis-el: ''
-            fis-cl: ''
-            fis-at: ''
-            fis-def-at: false
-            fi: false
-            fi-el: ''
-            fi-cl: ''
-            fi-at: ''
-            fi-def-at: false
-            prefix: ''
-            suffix: ''
+    third_party_settings: {  }
     weight: 1
     region: ds_content
   field_media_video_file:
@@ -115,35 +68,7 @@ content:
       muted: false
       width: 1600
       height: 1600
-    third_party_settings:
-      ds:
-        ft:
-          id: expert
-          settings:
-            lb: ''
-            lbw: false
-            lbw-el: ''
-            lbw-cl: ''
-            lbw-at: ''
-            lb-col: false
-            ow: true
-            ow-el: ''
-            ow-cl: 'varbase-video-player embed-responsive embed-responsive-1by1'
-            ow-at: ''
-            ow-def-at: true
-            ow-def-cl: true
-            fis: false
-            fis-el: ''
-            fis-cl: ''
-            fis-at: ''
-            fis-def-at: false
-            fi: false
-            fi-el: ''
-            fi-cl: ''
-            fi-at: ''
-            fi-def-at: false
-            prefix: ''
-            suffix: ''
+    third_party_settings: {  }
     weight: 0
     region: ds_content
 hidden:

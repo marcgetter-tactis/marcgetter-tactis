@@ -176,6 +176,7 @@ content:
       target: ''
     third_party_settings: {  }
     weight: 27
+    region: content
   field_nationality:
     type: string
     label: above

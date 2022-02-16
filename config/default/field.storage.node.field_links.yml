@@ -1,18 +1,18 @@
-uuid: 7c3d8617-a611-4814-92b9-f113584ffd3f
+uuid: 0a729467-6b90-43f3-a772-f17d123e119d
 langcode: en
 status: true
 dependencies:
   module:
     - link
     - node
-id: node.field_link
-field_name: field_link
+id: node.field_links
+field_name: field_links
 entity_type: node
 type: link
 settings: {  }
 module: link
 locked: false
-cardinality: 1
+cardinality: -1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

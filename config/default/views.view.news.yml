@@ -13,6 +13,7 @@ dependencies:
     - datetime
     - search_api
     - text
+    - views_autocomplete_filters
 id: news
 label: News
 module: views
@@ -591,16 +592,34 @@ display:
               allow_secondary: false
               secondary_label: 'Advanced options'
               secondary_open: false
+            sort:
+              plugin_id: default
+              advanced:
+                combine: false
+                combine_rewrite: ''
+                reset: false
+                reset_label: ''
+                collapsible: false
+                collapsible_label: 'Sort options'
+                is_secondary: false
             filter:
               search_api_fulltext:
                 plugin_id: default
                 advanced:
-                  placeholder_text: ''
+                  placeholder_text: 'Enter keywords here'
                   rewrite:
                     filter_rewrite_values: ''
                   collapsible: false
                   is_secondary: false
               field_component:
+                plugin_id: default
+                advanced:
+                  sort_options: false
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: false
+                  is_secondary: false
+              field_topic:
                 plugin_id: default
                 advanced:
                   sort_options: false
@@ -792,6 +811,59 @@ display:
           hierarchy: true
           limit: true
           error_message: true
+        langcode:
+          id: langcode
+          table: search_api_index_content
+          field: langcode
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_string
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: langcode_op
+            label: Language
+            description: ''
+            use_operator: false
+            operator: langcode_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: langcode
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              user_administrator: '0'
+              global_administrator: '0'
+              site_architect: '0'
+              cache_purger: '0'
+              translator: '0'
+              arhchiver: '0'
+              special_content_creator: '0'
+              administrator: '0'
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
         field_topic:
           id: field_topic
           table: search_api_index_content

@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_audio
-    - media.type.document
+    - media.type.audio
     - node.type.podcast
 id: node.podcast.field_audio
 field_name: field_audio
@@ -20,7 +20,7 @@ settings:
   handler: 'default:media'
   handler_settings:
     target_bundles:
-      document: document
+      audio: audio
     sort:
       field: _none
       direction: ASC

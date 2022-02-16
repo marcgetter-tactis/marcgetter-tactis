@@ -11,7 +11,7 @@ dependencies:
 third_party_settings:
   allowed_formats:
     allowed_formats:
-      - full_html
+      - plain_text
 id: node.podcast.field_buzzprout
 field_name: field_buzzprout
 entity_type: node

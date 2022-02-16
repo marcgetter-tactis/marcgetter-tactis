@@ -12,7 +12,6 @@ dependencies:
     - field.field.node.podcast.field_cover_art
     - field.field.node.podcast.field_date
     - field.field.node.podcast.field_episode_type
-    - field.field.node.podcast.field_feature_image
     - field.field.node.podcast.field_image
     - field.field.node.podcast.field_other_groups
     - field.field.node.podcast.field_summary
@@ -122,13 +121,6 @@ content:
     weight: 2
     region: content
     settings: {  }
-    third_party_settings: {  }
-  field_feature_image:
-    type: media_library_widget
-    weight: 5
-    region: content
-    settings:
-      media_types: {  }
     third_party_settings: {  }
   field_image:
     type: media_library_widget

@@ -6,9 +6,36 @@
  * Define your custom macro below.
  */
 #}
-{% macro renderImagedHeaderMenu(item) %}
 
-    {# Array Index Cutoff- Set a limit to how many children with images get rendered for a dropdown.#}
+
+{#Renders a list of attachments showing <document mime type> and <file size>#}
+{% macro detailedAttachments(attachments,wrapperClasses) %}
+    {% for item in attachments %}
+        <div class="{{ wrapperClasses }}">
+            {% set filename = item|file_url|split('.') %}
+            {% set filextension = filename[1]|join('')|upper %}
+            <a href="{{ item|file_url(false) }}" hreflang="{{ item.langcode | default ('en') }}">
+                {{ item.entity.name.value }}
+            </a> <span class="font-body-2xs">[{{ filextension }}, {{ item.entity.field_media_file.entity.getSize()|format_size() }}]</span>
+        </div>
+    {% endfor %}
+{% endmacro %}
+
+
+{#Renders a styled menu initially collapsed.#}
+{% macro mobileSideNav(menuName,title) %}
+    <div id="mobile-sidenav" class="desktop:display-none">
+        <input type="checkbox" class="display-none" id="sidenav-expand">
+        <label class="expand" for="sidenav-expand">
+            <div class="expand-title text-bold">{{ title |t}}</div>
+            {{ drupal_menu(menuName)}}
+        </label>
+    </div>
+{% endmacro %}
+
+{#Renders menu links with images attached#}
+{% macro renderImagedHeaderMenu(item) %}
+    {# Array Index Cutoff- Set a limit to how many children with images get rendered for a dropdown. #}
     {% set MAX_COUNT = 2 %}
 
     {% set linkTitle = item.title %}

@@ -88,11 +88,14 @@
       height: 100%;
       padding: 0 1rem;
       border-left: 4px solid color(primary-darker);
+      color: $doj-darkblue;
+
       &:after {
         content: "+";
         font-size: 1.5rem;
         font-weight: bold;
-        color: $blue-60v;        
+        color: $blue-60v
+
       }
     }
   }

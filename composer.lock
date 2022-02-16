@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b1c4a3f293cf16c32e2f78072ca0f02a",
+    "content-hash": "b3f8743848c1b95dadb5d05fd1a7c9b4",
     "packages": [
         {
             "name": "acquia/acquia_cms",
@@ -4222,6 +4222,58 @@
             "homepage": "http://drupal.org/project/address",
             "support": {
                 "source": "https://git.drupalcode.org/project/address"
+            }
+        },
+        {
+            "name": "drupal/admin_theme",
+            "version": "1.0.0-beta2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/admin_theme.git",
+                "reference": "8.x-1.0-beta2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/admin_theme-8.x-1.0-beta2.zip",
+                "reference": "8.x-1.0-beta2",
+                "shasum": "228355bece5d430c0efec68c46cf18954bfcf3df"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9",
+                "php": ">=5.5.9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0-beta2",
+                    "datestamp": "1599620159",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "geek-merlin",
+                    "homepage": "https://www.drupal.org/user/229048"
+                },
+                {
+                    "name": "justy",
+                    "homepage": "https://www.drupal.org/user/115811"
+                }
+            ],
+            "description": "Enable the administration theme on more paths than possible with Drupal's default administration page.",
+            "homepage": "https://www.drupal.org/project/admin_theme",
+            "keywords": [
+                "drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/admin_theme"
             }
         },
         {
@@ -10431,6 +10483,50 @@
             "homepage": "https://www.drupal.org/project/layout_builder_admin_theme",
             "support": {
                 "source": "https://git.drupalcode.org/project/layout_builder_admin_theme"
+            }
+        },
+        {
+            "name": "drupal/layout_builder_browser",
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/layout_builder_browser.git",
+                "reference": "8.x-1.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/layout_builder_browser-8.x-1.4.zip",
+                "reference": "8.x-1.4",
+                "shasum": "54dbc64f56f104e2ec41cb272342fd9682f0165f"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.4",
+                    "datestamp": "1643033468",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "StryKaizer",
+                    "homepage": "https://www.drupal.org/user/462700"
+                }
+            ],
+            "description": "Layout builder browser improvements.",
+            "homepage": "https://www.drupal.org/project/layout_builder_browser",
+            "support": {
+                "source": "https://git.drupalcode.org/project/layout_builder_browser"
             }
         },
         {
@@ -28495,6 +28591,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "drupal/admin_theme": 10,
         "drupal/block_library": 15,
         "drupal/entitygroupfield": 15,
         "drupal/fast_404": 15,

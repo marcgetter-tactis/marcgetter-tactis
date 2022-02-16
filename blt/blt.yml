@@ -44,5 +44,6 @@ validate:
       - drupal_token
       - drupal_url
       - drupal_view
+      - glb_classes
     filters:
       - children

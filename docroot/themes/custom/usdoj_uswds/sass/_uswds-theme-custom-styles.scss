@@ -141,6 +141,15 @@ hr {
   margin-bottom: 2.5rem;
 }
 
+aside {
+  margin-top: $article-padding;
+  margin-bottom: $article-padding;
+}
+
+#mobile-sidenav {
+  margin-bottom: $article-padding;
+}
+
 .accent-warm {
   color: $theme-color-accent-warm;
 }
@@ -157,6 +166,19 @@ hr {
   }
 }
 
+.usa-layout-docs__main {
+  .usa-layout-docs__sidenav {
+    .usa-sidenav {
+      &::before {
+        @include at-media(desktop) {
+          margin: 0 0 .5rem;
+        }
+      }
+    }
+  }
+  
+}
+
 .usa-button--outline {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -166,6 +188,17 @@ hr {
     background-color: $blue-60v;
     color: white;
     box-shadow: inset 0 0 0 2px $blue-60v;
+  }
+}
+
+
+.icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    margin: 0 .5rem;
   }
 }
 
@@ -209,8 +242,62 @@ hr {
   }
 }
 
-.node-type {
+//*******************
+//* Node fields START
+//*******************
+
+.node-content {
+  color: $gray-70;
+  line-height: 1.6;
   margin-top: $article-padding;
+  margin-bottom: $article-padding;
+
+  strong {
+    color: $doj-darkblue;
+  }
+
+  .field-header {
+    font-size: $theme-h4-font-size;
+    margin: 0 0 .25rem 0;
+    color: $doj-darkblue;
+    font-family: font-family($theme-body-font-family);
+  }
+
+  img {
+    @extend .img-fluid;
+  }
+
+  p {
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+}
+
+.node-top {
+  margin-bottom: $node-field-spacing;
+
+  .node-top-left {
+    >div {
+      margin-bottom: 1rem;
+    }
+  }
+
+  @include at-media(tablet) {
+    display: flex;
+
+    .node-top-left {
+      margin-right: 2rem;
+      flex-basis: 50%;
+    }
+
+    .node-top-right {
+      flex-basis: 50%;
+    }
+  }
+}
+
+.node-type {
   text-transform: uppercase;
   font-weight: 800;
   font-size: $theme-h6-font-size;
@@ -222,44 +309,56 @@ hr {
 }
 
 .node-date {
+  margin-bottom: $node-field-spacing;
   font-size: $theme-h6-font-size;
   color: $gray-80;
 }
 
-.node-body {
-  color: $gray-70;
-  line-height: 1.6;
+.event-date {
+  margin-bottom: $node-field-spacing;
+}
 
-  img {
-    width: 100%;
-    height: auto;
+.event-location {
+  margin-bottom: $node-field-spacing;
+
+  .address {
+    margin: 0;
   }
 }
 
-.node-attachments,
-.node-component,
-.node-location,
-.node-speaker,
-.node-topics {
-  margin-bottom: 2rem;
+.node-contact-info {
+  margin-bottom: $node-field-spacing;
+}
 
-  strong {
-    color: $doj-darkblue;
+.node-notes {
+  margin-bottom: $node-field-spacing;
+}
+
+.node-body {
+  margin-bottom: $node-field-spacing;
+
+  img {
+    @extend .img-fluid;
   }
 }
 
 .node-attachments {
+  margin-bottom: $node-field-spacing;
+
   .field__item {
     display: block;
-    margin: .75rem 0;
+    margin: .25rem 0;
   }
 }
 
 .node-component {
+  margin-bottom: $node-field-spacing;
+
   .field__item {
-    margin: 1rem 0;
+    margin: .25rem 0;
+
     @include at-media(tablet) {
-      display: inline-block;
+      display: inline;
       margin-right: 1rem;
       padding-right: 1rem;
       border-right: 1px solid $gray-warm-20;
@@ -274,23 +373,61 @@ hr {
 .node-location {
   color: $gray-70;
   line-height: 1.6;
-  
+  margin-bottom: $node-field-spacing;
+
   .address {
     margin: .75rem 0;
   }
 }
 
+.node-press-info {
+  margin-bottom: $node-field-spacing;
+}
+
+.node-links {
+  .field__item {
+    margin: .5rem 0;  
+
+    a {
+      @extend .external-link;
+    }
+  }
+}
+
+.external-link {
+  &::after {
+    content: "";
+    background-image: url(../assets/img/external-link.svg);
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    margin-left: .5rem;
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
 .node-speaker {
+  margin-bottom: $node-field-spacing;
+
   .field_speaker {
-    margin: .75rem 0;
+    margin-bottom: .5rem;
   }
 }
 
 .node-topics {
+  margin-bottom: $node-field-spacing;
+
   .field__item {
     display: inline-block;
+    margin: .25rem 1rem .25rem 0;
+
+    @include at-media(tablet) {
       margin: .75rem 1rem .75rem 0;
-    
+
+    }
+
     a {
       display: block;
       padding: .75rem 1.25rem;
@@ -303,6 +440,20 @@ hr {
     }
   }
 }
+
+.node-info-box {
+  background-color: $taupe-bg;
+  padding: 1rem;
+  border-left: 4px solid $theme-color-accent-warm;
+
+  strong {
+    color: $gray-80;
+  }
+}
+
+//*******************
+//* Node fields END
+//*******************
 
 .slick-dots {
   margin-bottom: 0;

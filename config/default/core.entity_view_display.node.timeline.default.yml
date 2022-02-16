@@ -4,7 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.node.timeline.field_group
+    - field.field.node.timeline.field_other_groups
     - field.field.node.timeline.field_timeline_events
+    - field.field.node.timeline.field_your_groups
     - node.type.timeline
   module:
     - user
@@ -13,6 +15,11 @@ targetEntityType: node
 bundle: timeline
 mode: default
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   field_group:
     type: entity_reference_label
     label: above
@@ -20,6 +27,14 @@ content:
       link: true
     third_party_settings: {  }
     weight: 102
+    region: content
+  field_other_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 104
     region: content
   field_timeline_events:
     type: entity_reference_label
@@ -29,10 +44,23 @@ content:
     third_party_settings: {  }
     weight: 103
     region: content
+  field_your_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
     weight: 100
+    region: content
+  timeline_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
     region: content
 hidden:
   entitygroupfield: true

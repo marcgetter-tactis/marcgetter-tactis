@@ -1,0 +1,19 @@
+uuid: af6a51ce-5035-4eb5-89d0-4bd2901d90c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.organization
+    - node.type.consent_decree
+  module:
+    - gnode
+    - node
+id: group_content_type_682761160820a
+label: 'Organization: Group node (Consent Decree)'
+description: 'Adds <em class="placeholder">Consent Decree</em> content to groups both publicly and privately.'
+group_type: organization
+content_plugin: 'group_node:consent_decree'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

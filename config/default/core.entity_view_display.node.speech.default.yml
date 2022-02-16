@@ -12,9 +12,11 @@ dependencies:
     - field.field.node.speech.field_image
     - field.field.node.speech.field_invisible
     - field.field.node.speech.field_location
+    - field.field.node.speech.field_other_groups
     - field.field.node.speech.field_speaker
     - field.field.node.speech.field_teaser
     - field.field.node.speech.field_topic
+    - field.field.node.speech.field_your_groups
     - node.type.speech
   module:
     - address
@@ -70,6 +72,14 @@ content:
     third_party_settings: {  }
     weight: 5
     region: content
+  field_other_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 9
+    region: content
   field_speaker:
     type: entity_reference_label
     label: hidden
@@ -85,6 +95,14 @@ content:
       link: true
     third_party_settings: {  }
     weight: 8
+    region: content
+  field_your_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 10
     region: content
   links:
     settings: {  }

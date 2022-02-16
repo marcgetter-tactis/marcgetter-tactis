@@ -11,8 +11,10 @@ dependencies:
     - field.field.block_content.mission.field_cta_style
     - field.field.block_content.mission.field_heading
     - field.field.block_content.mission.field_image
+    - field.field.block_content.mission.field_other_groups
     - field.field.block_content.mission.field_statistics
     - field.field.block_content.mission.field_statistics_header
+    - field.field.block_content.mission.field_your_groups
   module:
     - entity_reference_revisions
     - link
@@ -82,6 +84,14 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
+  field_other_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
   field_statistics:
     type: entity_reference_revisions_entity_view
     label: hidden
@@ -98,6 +108,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 6
+    region: content
+  field_your_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 9
     region: content
 hidden:
   field_background_class: true

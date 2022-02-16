@@ -6,8 +6,10 @@ dependencies:
     - field.field.node.opinion.field_attachment
     - field.field.node.opinion.field_body
     - field.field.node.opinion.field_date
+    - field.field.node.opinion.field_other_groups
     - field.field.node.opinion.field_overview
     - field.field.node.opinion.field_single_attachment
+    - field.field.node.opinion.field_your_groups
     - node.type.opinion
   module:
     - datetime
@@ -39,6 +41,14 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
+  field_other_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
   field_overview:
     type: text_default
     label: hidden
@@ -54,6 +64,14 @@ content:
       link: false
     third_party_settings: {  }
     weight: 6
+    region: content
+  field_your_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 8
     region: content
 hidden:
   entitygroupfield: true

@@ -9,9 +9,11 @@ dependencies:
     - field.field.node.timeline_event.field_body
     - field.field.node.timeline_event.field_group
     - field.field.node.timeline_event.field_image
+    - field.field.node.timeline_event.field_other_groups
     - field.field.node.timeline_event.field_timeline_event_date
     - field.field.node.timeline_event.field_timeline_event_date_alt
     - field.field.node.timeline_event.field_timeline_event_type
+    - field.field.node.timeline_event.field_your_groups
     - node.type.timeline_event
   module:
     - user
@@ -20,6 +22,11 @@ targetEntityType: node
 bundle: timeline_event
 mode: teaser
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
@@ -32,8 +39,10 @@ hidden:
   field_body: true
   field_group: true
   field_image: true
+  field_other_groups: true
   field_timeline_event_date: true
   field_timeline_event_date_alt: true
   field_timeline_event_type: true
+  field_your_groups: true
   langcode: true
   search_api_excerpt: true

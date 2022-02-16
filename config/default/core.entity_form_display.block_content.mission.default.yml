@@ -11,13 +11,33 @@ dependencies:
     - field.field.block_content.mission.field_cta_style
     - field.field.block_content.mission.field_heading
     - field.field.block_content.mission.field_image
+    - field.field.block_content.mission.field_other_groups
     - field.field.block_content.mission.field_statistics
     - field.field.block_content.mission.field_statistics_header
+    - field.field.block_content.mission.field_your_groups
   module:
+    - field_group
     - link
     - media_library
     - paragraphs_entity_embed
     - text
+third_party_settings:
+  field_group:
+    group_organization:
+      children:
+        - field_your_groups
+        - field_other_groups
+      label: Organization
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
 id: block_content.mission.default
 targetEntityType: block_content
 bundle: mission
@@ -73,6 +93,12 @@ content:
     settings:
       media_types: {  }
     third_party_settings: {  }
+  field_other_groups:
+    type: options_select
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_statistics:
     type: entity_reference_embed_paragraphs
     weight: 8
@@ -98,6 +124,12 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_your_groups:
+    type: options_select
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
   info:
     type: string_textfield

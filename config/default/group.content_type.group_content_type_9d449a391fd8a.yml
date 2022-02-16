@@ -1,0 +1,19 @@
+uuid: b80bd7d9-db17-4f5c-a0e9-a67f03fdb45d
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.organization
+    - node.type.court_decision
+  module:
+    - gnode
+    - node
+id: group_content_type_9d449a391fd8a
+label: 'Organization: Group node (Court Decision)'
+description: 'Adds <em class="placeholder">Court Decision</em> content to groups both publicly and privately.'
+group_type: organization
+content_plugin: 'group_node:court_decision'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

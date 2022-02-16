@@ -4,12 +4,34 @@ status: true
 dependencies:
   config:
     - field.field.node.timeline.field_group
+    - field.field.node.timeline.field_other_groups
     - field.field.node.timeline.field_timeline_events
+    - field.field.node.timeline.field_your_groups
     - node.type.timeline
+    - workflows.workflow.editorial
   module:
+    - content_moderation
+    - field_group
     - path
     - scheduler
     - scheduler_content_moderation_integration
+third_party_settings:
+  field_group:
+    group_organization:
+      children:
+        - field_your_groups
+        - field_other_groups
+      label: Organization
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
 id: node.timeline.default
 targetEntityType: node
 bundle: timeline
@@ -31,6 +53,12 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_other_groups:
+    type: options_select
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_timeline_events:
     type: entity_reference_autocomplete
     weight: 123
@@ -41,12 +69,24 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_your_groups:
+    type: options_select
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   langcode:
     type: language_select
     weight: 2
     region: content
     settings:
       include_locked: true
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    region: content
+    settings: {  }
     third_party_settings: {  }
   path:
     type: path

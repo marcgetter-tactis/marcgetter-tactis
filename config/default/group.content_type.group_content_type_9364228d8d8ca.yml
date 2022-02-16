@@ -1,0 +1,19 @@
+uuid: db7ab8e2-66fb-4488-b723-fd5a5c2fe8cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.organization
+    - node.type.youtube_video
+  module:
+    - gnode
+    - node
+id: group_content_type_9364228d8d8ca
+label: 'Organization: Group node (YouTube Video)'
+description: 'Adds <em class="placeholder">YouTube Video</em> content to groups both publicly and privately.'
+group_type: organization
+content_plugin: 'group_node:youtube_video'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

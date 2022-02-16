@@ -10,6 +10,8 @@ dependencies:
     - field.field.node.component_group.field_logo
     - field.field.node.component_group.field_more_events
     - field.field.node.component_group.field_organization_type
+    - field.field.node.component_group.field_other_groups
+    - field.field.node.component_group.field_your_groups
     - field.field.node.component_group.layout_builder__layout
     - field.field.node.component_group.more_blogs
     - field.field.node.component_group.more_galleries
@@ -43,6 +45,38 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
             weight: 0
+            additional: {  }
+          603b8234-ec21-4e13-b240-1ce0401972ce:
+            uuid: 603b8234-ec21-4e13-b240-1ce0401972ce
+            region: content
+            configuration:
+              id: 'field_block:node:component_group:field_your_groups'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          397cacc6-c03c-431b-9b54-03e404f78342:
+            uuid: 397cacc6-c03c-431b-9b54-03e404f78342
+            region: content
+            configuration:
+              id: 'field_block:node:component_group:field_other_groups'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 2
             additional: {  }
         third_party_settings: {  }
 id: node.component_group.default
@@ -112,6 +146,22 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 14
+    region: content
+  field_other_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_your_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 15
     region: content
   links:
     settings: {  }

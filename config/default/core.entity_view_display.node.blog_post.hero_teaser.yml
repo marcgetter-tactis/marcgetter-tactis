@@ -13,10 +13,12 @@ dependencies:
     - field.field.node.blog_post.field_file_private_force
     - field.field.node.blog_post.field_image
     - field.field.node.blog_post.field_invisible
+    - field.field.node.blog_post.field_other_groups
     - field.field.node.blog_post.field_social_image
     - field.field.node.blog_post.field_teaser
     - field.field.node.blog_post.field_teaser_image
     - field.field.node.blog_post.field_topic
+    - field.field.node.blog_post.field_your_groups
     - node.type.blog_post
   module:
     - datetime
@@ -32,6 +34,11 @@ targetEntityType: node
 bundle: blog_post
 mode: hero_teaser
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   field_date:
     type: datetime_default
     label: hidden
@@ -49,6 +56,7 @@ content:
     weight: 2
     region: content
 hidden:
+  entitygroupfield: true
   field_attachment: true
   field_author: true
   field_author_free: true
@@ -57,9 +65,11 @@ hidden:
   field_file_private_force: true
   field_image: true
   field_invisible: true
+  field_other_groups: true
   field_social_image: true
   field_teaser_image: true
   field_topic: true
+  field_your_groups: true
   langcode: true
   links: true
   search_api_excerpt: true

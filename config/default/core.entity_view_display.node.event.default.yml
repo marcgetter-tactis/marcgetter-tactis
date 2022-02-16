@@ -14,9 +14,11 @@ dependencies:
     - field.field.node.event.field_link
     - field.field.node.event.field_location
     - field.field.node.event.field_notes
+    - field.field.node.event.field_other_groups
     - field.field.node.event.field_press
     - field.field.node.event.field_registration
     - field.field.node.event.field_timezone
+    - field.field.node.event.field_your_groups
     - node.type.event
   module:
     - address
@@ -30,6 +32,11 @@ targetEntityType: node
 bundle: event
 mode: default
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   field_attachment:
     type: entity_reference_label
     label: hidden
@@ -117,6 +124,14 @@ content:
     third_party_settings: {  }
     weight: 11
     region: content
+  field_other_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 18
+    region: content
   field_press:
     type: text_default
     label: hidden
@@ -144,11 +159,20 @@ content:
     third_party_settings: {  }
     weight: 5
     region: content
+  field_your_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 19
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
     weight: 0
     region: content
 hidden:
+  entitygroupfield: true
   langcode: true
   search_api_excerpt: true

@@ -1,0 +1,19 @@
+uuid: 769bbebb-3f96-4549-acaa-a94d8db08b8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.organization
+    - media.type.image
+  module:
+    - groupmedia
+    - media
+id: organization-group_media-image
+label: 'Organization: Group media (Image)'
+description: 'Adds <em class="placeholder">Image</em> content to groups both publicly and privately.'
+group_type: organization
+content_plugin: 'group_media:image'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

@@ -5,6 +5,8 @@ dependencies:
   config:
     - block_content.type.general
     - field.field.block_content.general.body
+    - field.field.block_content.general.field_other_groups
+    - field.field.block_content.general.field_your_groups
   module:
     - text
 id: block_content.general.default
@@ -18,6 +20,22 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_other_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_your_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
     region: content
 hidden:
   langcode: true

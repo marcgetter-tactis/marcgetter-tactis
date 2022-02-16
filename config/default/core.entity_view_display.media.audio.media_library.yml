@@ -6,6 +6,8 @@ dependencies:
     - core.entity_view_mode.media.media_library
     - field.field.media.audio.field_media_audio_file
     - field.field.media.audio.field_media_in_library
+    - field.field.media.audio.field_other_groups
+    - field.field.media.audio.field_your_groups
     - image.style.medium
     - media.type.audio
   module:
@@ -33,6 +35,8 @@ hidden:
   entitygroupfield: true
   field_media_audio_file: true
   field_media_in_library: true
+  field_other_groups: true
+  field_your_groups: true
   langcode: true
   name: true
   search_api_excerpt: true

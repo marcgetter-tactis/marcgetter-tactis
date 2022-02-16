@@ -1,0 +1,19 @@
+uuid: 358f66c3-4794-497a-bd1d-f6f2021c6dcb
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.organization
+    - node.type.testimony
+  module:
+    - gnode
+    - node
+id: group_content_type_4968fb3adcc62
+label: 'Organization: Group node (Testimony)'
+description: 'Adds <em class="placeholder">Testimony</em> content to groups both publicly and privately.'
+group_type: organization
+content_plugin: 'group_node:testimony'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

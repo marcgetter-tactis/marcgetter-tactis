@@ -6,6 +6,8 @@ dependencies:
     - field.field.media.video.field_media_cover_image
     - field.field.media.video.field_media_in_library
     - field.field.media.video.field_media_video_file
+    - field.field.media.video.field_other_groups
+    - field.field.media.video.field_your_groups
     - media.type.video
   module:
     - file
@@ -27,6 +29,22 @@ content:
       height: 480
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_other_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_your_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
     region: content
 hidden:
   created: true

@@ -10,14 +10,18 @@ dependencies:
     - field.field.node.youtube_video.field_download
     - field.field.node.youtube_video.field_image
     - field.field.node.youtube_video.field_invisible
+    - field.field.node.youtube_video.field_other_groups
     - field.field.node.youtube_video.field_transcript
     - field.field.node.youtube_video.field_video_category
+    - field.field.node.youtube_video.field_your_groups
     - field.field.node.youtube_video.field_youtube_video
     - node.type.youtube_video
+    - workflows.workflow.editorial
   module:
     - allowed_formats
     - content_moderation
     - datetime
+    - field_group
     - link
     - media_library
     - media_library_edit
@@ -25,6 +29,23 @@ dependencies:
     - scheduler
     - scheduler_content_moderation_integration
     - text
+third_party_settings:
+  field_group:
+    group_organization:
+      children:
+        - field_your_groups
+        - field_other_groups
+      label: Organization
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
 id: node.youtube_video.default
 targetEntityType: node
 bundle: youtube_video
@@ -90,6 +111,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_other_groups:
+    type: options_select
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_transcript:
     type: text_textarea
     weight: 10
@@ -104,6 +131,12 @@ content:
   field_video_category:
     type: options_select
     weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_your_groups:
+    type: options_select
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }

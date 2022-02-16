@@ -6,6 +6,8 @@ dependencies:
     - core.entity_form_mode.media.bulk_upload
     - field.field.media.audio.field_media_audio_file
     - field.field.media.audio.field_media_in_library
+    - field.field.media.audio.field_other_groups
+    - field.field.media.audio.field_your_groups
     - media.type.audio
   module:
     - file
@@ -47,6 +49,8 @@ content:
 hidden:
   created: true
   entitygroupfield: true
+  field_other_groups: true
+  field_your_groups: true
   name: true
   path: true
   uid: true

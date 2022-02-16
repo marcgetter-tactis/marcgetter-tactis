@@ -11,8 +11,10 @@ dependencies:
     - field.field.node.brief.field_date
     - field.field.node.brief.field_federal_court
     - field.field.node.brief.field_number
+    - field.field.node.brief.field_other_groups
     - field.field.node.brief.field_sc_term
     - field.field.node.brief.field_topic
+    - field.field.node.brief.field_your_groups
     - node.type.brief
   module:
     - user
@@ -35,7 +37,9 @@ hidden:
   field_date: true
   field_federal_court: true
   field_number: true
+  field_other_groups: true
   field_sc_term: true
   field_topic: true
+  field_your_groups: true
   langcode: true
   search_api_excerpt: true

@@ -1,0 +1,19 @@
+uuid: c5a8c23d-045c-4a9b-8a95-fa22ab2f76a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.organization
+    - media.type.video
+  module:
+    - groupmedia
+    - media
+id: organization-group_media-video
+label: 'Organization: Group media (Video)'
+description: 'Adds <em class="placeholder">Video</em> content to groups both publicly and privately.'
+group_type: organization
+content_plugin: 'group_media:video'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

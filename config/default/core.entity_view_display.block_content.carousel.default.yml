@@ -6,7 +6,9 @@ dependencies:
     - block_content.type.carousel
     - field.field.block_content.carousel.field_background_class
     - field.field.block_content.carousel.field_header
+    - field.field.block_content.carousel.field_other_groups
     - field.field.block_content.carousel.field_slides
+    - field.field.block_content.carousel.field_your_groups
   module:
     - entity_reference_revisions
 id: block_content.carousel.default
@@ -22,6 +24,14 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  field_other_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
   field_slides:
     type: entity_reference_revisions_entity_view
     label: hidden
@@ -30,6 +40,14 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_your_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
     region: content
 hidden:
   field_background_class: true

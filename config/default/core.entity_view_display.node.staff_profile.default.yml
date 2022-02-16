@@ -8,10 +8,12 @@ dependencies:
     - field.field.node.staff_profile.field_component
     - field.field.node.staff_profile.field_dates_service
     - field.field.node.staff_profile.field_name
+    - field.field.node.staff_profile.field_other_groups
     - field.field.node.staff_profile.field_portrait
     - field.field.node.staff_profile.field_portrait_download
     - field.field.node.staff_profile.field_position
     - field.field.node.staff_profile.field_teaser
+    - field.field.node.staff_profile.field_your_groups
     - node.type.staff_profile
   module:
     - datetime_range
@@ -22,6 +24,11 @@ targetEntityType: node
 bundle: staff_profile
 mode: default
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   field_body:
     type: text_default
     label: hidden
@@ -63,6 +70,14 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
+  field_other_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 11
+    region: content
   field_portrait:
     type: entity_reference_entity_view
     label: hidden
@@ -96,11 +111,20 @@ content:
     third_party_settings: {  }
     weight: 4
     region: content
+  field_your_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 12
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
     weight: 0
     region: content
 hidden:
+  entitygroupfield: true
   langcode: true
   search_api_excerpt: true

@@ -14,7 +14,6 @@ dependencies:
     - node.type.historical_biography
     - node.type.image_gallery
     - node.type.landing_page
-    - node.type.most_wanted
     - node.type.opinion
     - node.type.page
     - node.type.podcast
@@ -136,7 +135,6 @@ type_settings:
       - historical_biography
       - image_gallery
       - landing_page
-      - most_wanted
       - opinion
       - page
       - podcast

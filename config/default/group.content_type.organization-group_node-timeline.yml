@@ -1,0 +1,19 @@
+uuid: 3c6939f8-9bfb-4f5f-96c4-90bbbfc32fad
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.organization
+    - node.type.timeline
+  module:
+    - gnode
+    - node
+id: organization-group_node-timeline
+label: 'Organization: Group node (Timeline)'
+description: 'Adds <em class="placeholder">Timeline</em> content to groups both publicly and privately.'
+group_type: organization
+content_plugin: 'group_node:timeline'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

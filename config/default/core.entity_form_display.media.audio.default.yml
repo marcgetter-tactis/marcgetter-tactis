@@ -5,10 +5,30 @@ dependencies:
   config:
     - field.field.media.audio.field_media_audio_file
     - field.field.media.audio.field_media_in_library
+    - field.field.media.audio.field_other_groups
+    - field.field.media.audio.field_your_groups
     - media.type.audio
   module:
+    - field_group
     - file
     - path
+third_party_settings:
+  field_group:
+    group_organization:
+      children:
+        - field_your_groups
+        - field_other_groups
+      label: Organization
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
 id: media.audio.default
 targetEntityType: media
 bundle: audio
@@ -26,6 +46,18 @@ content:
     region: content
     settings:
       progress_indicator: throbber
+    third_party_settings: {  }
+  field_other_groups:
+    type: options_select
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_your_groups:
+    type: options_select
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
   langcode:
     type: language_select

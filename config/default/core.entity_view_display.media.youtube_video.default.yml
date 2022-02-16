@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.media.youtube_video.field_media_oembed_video
+    - field.field.media.youtube_video.field_other_groups
+    - field.field.media.youtube_video.field_your_groups
     - media.type.youtube_video
   module:
     - media
@@ -20,6 +22,22 @@ content:
       max_height: 0
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_other_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_your_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
     region: content
 hidden:
   created: true

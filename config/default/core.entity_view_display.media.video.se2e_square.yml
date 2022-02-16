@@ -7,6 +7,8 @@ dependencies:
     - field.field.media.video.field_media_cover_image
     - field.field.media.video.field_media_in_library
     - field.field.media.video.field_media_video_file
+    - field.field.media.video.field_other_groups
+    - field.field.media.video.field_your_groups
     - media.type.video
     - responsive_image.styles.de2e_square
   module:
@@ -75,6 +77,8 @@ hidden:
   created: true
   entitygroupfield: true
   field_media_in_library: true
+  field_other_groups: true
+  field_your_groups: true
   langcode: true
   name: true
   search_api_excerpt: true

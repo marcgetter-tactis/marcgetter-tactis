@@ -10,10 +10,30 @@ dependencies:
     - field.field.block_content.blank.field_cta_style
     - field.field.block_content.blank.field_header
     - field.field.block_content.blank.field_media
+    - field.field.block_content.blank.field_other_groups
+    - field.field.block_content.blank.field_your_groups
   module:
+    - field_group
     - link
     - media_library
     - text
+third_party_settings:
+  field_group:
+    group_organization:
+      children:
+        - field_your_groups
+        - field_other_groups
+      label: Organization
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
 id: block_content.blank.default
 targetEntityType: block_content
 bundle: blank
@@ -61,6 +81,18 @@ content:
     region: content
     settings:
       media_types: {  }
+    third_party_settings: {  }
+  field_other_groups:
+    type: options_select
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_your_groups:
+    type: options_select
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
   info:
     type: string_textfield

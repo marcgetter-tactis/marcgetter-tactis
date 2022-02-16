@@ -8,8 +8,10 @@ dependencies:
     - field.field.node.case_multi_defendant.field_charges
     - field.field.node.case_multi_defendant.field_exhibits
     - field.field.node.case_multi_defendant.field_number
+    - field.field.node.case_multi_defendant.field_other_groups
     - field.field.node.case_multi_defendant.field_status
     - field.field.node.case_multi_defendant.field_trial_exhibits_description
+    - field.field.node.case_multi_defendant.field_your_groups
     - node.type.case_multi_defendant
   module:
     - text
@@ -64,6 +66,14 @@ content:
     third_party_settings: {  }
     weight: 3
     region: content
+  field_other_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 11
+    region: content
   field_status:
     type: text_default
     label: hidden
@@ -77,6 +87,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 9
+    region: content
+  field_your_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 12
     region: content
   links:
     settings: {  }

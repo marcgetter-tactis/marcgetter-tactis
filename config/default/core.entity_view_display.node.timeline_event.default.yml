@@ -8,9 +8,11 @@ dependencies:
     - field.field.node.timeline_event.field_body
     - field.field.node.timeline_event.field_group
     - field.field.node.timeline_event.field_image
+    - field.field.node.timeline_event.field_other_groups
     - field.field.node.timeline_event.field_timeline_event_date
     - field.field.node.timeline_event.field_timeline_event_date_alt
     - field.field.node.timeline_event.field_timeline_event_type
+    - field.field.node.timeline_event.field_your_groups
     - node.type.timeline_event
   module:
     - datetime
@@ -22,6 +24,11 @@ targetEntityType: node
 bundle: timeline_event
 mode: default
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   field_background_color:
     type: list_default
     label: above
@@ -61,6 +68,14 @@ content:
     third_party_settings: {  }
     weight: 105
     region: content
+  field_other_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 110
+    region: content
   field_timeline_event_date:
     type: datetime_default
     label: above
@@ -84,6 +99,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 108
+    region: content
+  field_your_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 111
     region: content
   links:
     settings: {  }

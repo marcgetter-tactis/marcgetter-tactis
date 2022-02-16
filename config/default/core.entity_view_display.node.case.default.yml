@@ -19,10 +19,12 @@ dependencies:
     - field.field.node.case.field_link
     - field.field.node.case.field_market
     - field.field.node.case.field_name
+    - field.field.node.case.field_other_groups
     - field.field.node.case.field_overview
     - field.field.node.case.field_tags
     - field.field.node.case.field_topic
     - field.field.node.case.field_violation
+    - field.field.node.case.field_your_groups
     - node.type.case
   module:
     - datetime
@@ -35,6 +37,11 @@ targetEntityType: node
 bundle: case
 mode: default
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   field_attachment:
     type: entity_reference_label
     label: hidden
@@ -166,6 +173,14 @@ content:
     third_party_settings: {  }
     weight: 5
     region: content
+  field_other_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 24
+    region: content
   field_overview:
     type: text_default
     label: hidden
@@ -197,11 +212,20 @@ content:
     third_party_settings: {  }
     weight: 8
     region: content
+  field_your_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 25
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
     weight: 0
     region: content
 hidden:
+  entitygroupfield: true
   langcode: true
   search_api_excerpt: true

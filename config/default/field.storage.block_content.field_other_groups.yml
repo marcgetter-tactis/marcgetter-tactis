@@ -1,0 +1,20 @@
+uuid: 82d6b40c-e37f-460e-b46d-cf24e5252412
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - group
+id: block_content.field_other_groups
+field_name: field_other_groups
+entity_type: block_content
+type: entity_reference
+settings:
+  target_type: group
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

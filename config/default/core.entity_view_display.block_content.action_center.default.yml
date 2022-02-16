@@ -9,6 +9,8 @@ dependencies:
     - field.field.block_content.action_center.field_display_items
     - field.field.block_content.action_center.field_heading
     - field.field.block_content.action_center.field_more_links
+    - field.field.block_content.action_center.field_other_groups
+    - field.field.block_content.action_center.field_your_groups
   module:
     - entity_reference_revisions
 id: block_content.action_center.default
@@ -40,6 +42,22 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 3
+    region: content
+  field_other_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_your_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
     region: content
 hidden:
   field_background_class: true

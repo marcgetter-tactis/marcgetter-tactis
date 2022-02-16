@@ -1,15 +1,7 @@
 uuid: 4d5d33dc-e2e4-4eab-9f9f-831955d2b09d
 langcode: en
 status: true
-dependencies:
-  module:
-    - subgroup
-third_party_settings:
-  subgroup:
-    depth: 0
-    left: 1
-    right: 4
-    tree: organization
+dependencies: {  }
 id: organization
 label: Organization
 description: ''

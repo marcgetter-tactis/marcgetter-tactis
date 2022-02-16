@@ -5,7 +5,9 @@ dependencies:
   config:
     - field.field.media.document.field_categories
     - field.field.media.document.field_media_file
+    - field.field.media.document.field_other_groups
     - field.field.media.document.field_tags
+    - field.field.media.document.field_your_groups
     - media.type.document
   module:
     - field_group
@@ -29,6 +31,21 @@ third_party_settings:
         id: ''
         description: ''
         required_fields: true
+    group_organization:
+      children:
+        - field_your_groups
+        - field_other_groups
+      label: Organization
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
 _core:
   default_config_hash: '-fke6iL4zeqTRpMxXywu2hUiezSzvV7O7ZlHsJ-4IPo'
 id: media.document.default
@@ -49,6 +66,12 @@ content:
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
+  field_other_groups:
+    type: options_select
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_tags:
     type: entity_reference_autocomplete_tags
     weight: 4
@@ -58,6 +81,12 @@ content:
       match_limit: 10
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_your_groups:
+    type: options_select
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
   langcode:
     type: language_select
@@ -81,6 +110,7 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  entitygroupfield: true
   path: true
   status: true
   uid: true

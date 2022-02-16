@@ -10,6 +10,8 @@ dependencies:
     - field.field.block_content.blank.field_cta_style
     - field.field.block_content.blank.field_header
     - field.field.block_content.blank.field_media
+    - field.field.block_content.blank.field_other_groups
+    - field.field.block_content.blank.field_your_groups
   module:
     - link
     - options
@@ -61,6 +63,22 @@ content:
       link: false
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_other_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_your_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
     region: content
 hidden:
   field_background_class: true

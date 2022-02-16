@@ -9,8 +9,10 @@ dependencies:
     - field.field.node.case_multi_defendant.field_charges
     - field.field.node.case_multi_defendant.field_exhibits
     - field.field.node.case_multi_defendant.field_number
+    - field.field.node.case_multi_defendant.field_other_groups
     - field.field.node.case_multi_defendant.field_status
     - field.field.node.case_multi_defendant.field_trial_exhibits_description
+    - field.field.node.case_multi_defendant.field_your_groups
     - node.type.case_multi_defendant
   module:
     - user
@@ -36,7 +38,9 @@ hidden:
   field_charges: true
   field_exhibits: true
   field_number: true
+  field_other_groups: true
   field_status: true
   field_trial_exhibits_description: true
+  field_your_groups: true
   langcode: true
   search_api_excerpt: true

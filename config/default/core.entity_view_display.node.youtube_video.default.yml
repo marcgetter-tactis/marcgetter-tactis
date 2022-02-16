@@ -10,8 +10,10 @@ dependencies:
     - field.field.node.youtube_video.field_download
     - field.field.node.youtube_video.field_image
     - field.field.node.youtube_video.field_invisible
+    - field.field.node.youtube_video.field_other_groups
     - field.field.node.youtube_video.field_transcript
     - field.field.node.youtube_video.field_video_category
+    - field.field.node.youtube_video.field_your_groups
     - field.field.node.youtube_video.field_youtube_video
     - node.type.youtube_video
   module:
@@ -70,6 +72,14 @@ content:
     third_party_settings: {  }
     weight: 5
     region: content
+  field_other_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 9
+    region: content
   field_transcript:
     type: smart_trim
     label: hidden
@@ -96,6 +106,14 @@ content:
       link: true
     third_party_settings: {  }
     weight: 3
+    region: content
+  field_your_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 10
     region: content
   field_youtube_video:
     type: entity_reference_entity_view

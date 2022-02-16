@@ -21,6 +21,7 @@ dependencies:
     - field.field.node.most_wanted.field_most_wanted_images
     - field.field.node.most_wanted.field_nationality
     - field.field.node.most_wanted.field_occupations
+    - field.field.node.most_wanted.field_other_groups
     - field.field.node.most_wanted.field_place_of_birth
     - field.field.node.most_wanted.field_race
     - field.field.node.most_wanted.field_reward
@@ -30,14 +31,34 @@ dependencies:
     - field.field.node.most_wanted.field_suspects
     - field.field.node.most_wanted.field_uid
     - field.field.node.most_wanted.field_weight
+    - field.field.node.most_wanted.field_your_groups
     - node.type.most_wanted
+    - workflows.workflow.editorial
   module:
     - content_moderation
+    - field_group
     - link
     - path
     - scheduler
     - scheduler_content_moderation_integration
     - text
+third_party_settings:
+  field_group:
+    group_organization:
+      children:
+        - field_your_groups
+        - field_other_groups
+      label: Organization
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
 id: node.most_wanted.default
 targetEntityType: node
 bundle: most_wanted
@@ -187,6 +208,12 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_other_groups:
+    type: options_select
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_place_of_birth:
     type: string_textfield
     weight: 129
@@ -258,6 +285,12 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_your_groups:
+    type: options_select
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
   langcode:
     type: language_select

@@ -8,8 +8,10 @@ dependencies:
     - field.field.node.resource.field_date
     - field.field.node.resource.field_id
     - field.field.node.resource.field_link
+    - field.field.node.resource.field_other_groups
     - field.field.node.resource.field_resource_audience
     - field.field.node.resource.field_resource_type
+    - field.field.node.resource.field_your_groups
     - node.type.resource
   module:
     - datetime
@@ -74,6 +76,14 @@ content:
     third_party_settings: {  }
     weight: 103
     region: content
+  field_other_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 108
+    region: content
   field_resource_audience:
     type: list_default
     label: hidden
@@ -87,6 +97,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 106
+    region: content
+  field_your_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 109
     region: content
   links:
     settings: {  }

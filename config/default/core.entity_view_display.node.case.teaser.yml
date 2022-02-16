@@ -20,10 +20,12 @@ dependencies:
     - field.field.node.case.field_link
     - field.field.node.case.field_market
     - field.field.node.case.field_name
+    - field.field.node.case.field_other_groups
     - field.field.node.case.field_overview
     - field.field.node.case.field_tags
     - field.field.node.case.field_topic
     - field.field.node.case.field_violation
+    - field.field.node.case.field_your_groups
     - node.type.case
   module:
     - user
@@ -32,12 +34,18 @@ targetEntityType: node
 bundle: case
 mode: teaser
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
     weight: 100
     region: content
 hidden:
+  entitygroupfield: true
   field_attachment: true
   field_body: true
   field_case_type: true
@@ -54,9 +62,11 @@ hidden:
   field_link: true
   field_market: true
   field_name: true
+  field_other_groups: true
   field_overview: true
   field_tags: true
   field_topic: true
   field_violation: true
+  field_your_groups: true
   langcode: true
   search_api_excerpt: true

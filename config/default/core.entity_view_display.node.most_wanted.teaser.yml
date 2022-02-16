@@ -22,6 +22,7 @@ dependencies:
     - field.field.node.most_wanted.field_most_wanted_images
     - field.field.node.most_wanted.field_nationality
     - field.field.node.most_wanted.field_occupations
+    - field.field.node.most_wanted.field_other_groups
     - field.field.node.most_wanted.field_place_of_birth
     - field.field.node.most_wanted.field_race
     - field.field.node.most_wanted.field_reward
@@ -31,6 +32,7 @@ dependencies:
     - field.field.node.most_wanted.field_suspects
     - field.field.node.most_wanted.field_uid
     - field.field.node.most_wanted.field_weight
+    - field.field.node.most_wanted.field_your_groups
     - node.type.most_wanted
   module:
     - user
@@ -69,6 +71,7 @@ hidden:
   field_most_wanted_images: true
   field_nationality: true
   field_occupations: true
+  field_other_groups: true
   field_place_of_birth: true
   field_race: true
   field_reward: true
@@ -78,5 +81,6 @@ hidden:
   field_suspects: true
   field_uid: true
   field_weight: true
+  field_your_groups: true
   langcode: true
   search_api_excerpt: true

@@ -8,10 +8,12 @@ dependencies:
     - field.field.node.historical_biography.field_link
     - field.field.node.historical_biography.field_name
     - field.field.node.historical_biography.field_nth_attorney_general
+    - field.field.node.historical_biography.field_other_groups
     - field.field.node.historical_biography.field_portrait
     - field.field.node.historical_biography.field_portrait_artist
     - field.field.node.historical_biography.field_portrait_download
     - field.field.node.historical_biography.field_teaser
+    - field.field.node.historical_biography.field_your_groups
     - node.type.historical_biography
   module:
     - datetime_range
@@ -23,6 +25,11 @@ targetEntityType: node
 bundle: historical_biography
 mode: default
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   field_body:
     type: text_default
     label: hidden
@@ -69,6 +76,14 @@ content:
     third_party_settings: {  }
     weight: 104
     region: content
+  field_other_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 112
+    region: content
   field_portrait:
     type: entity_reference_label
     label: hidden
@@ -100,11 +115,20 @@ content:
     third_party_settings: {  }
     weight: 107
     region: content
+  field_your_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 113
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
     weight: 100
     region: content
 hidden:
+  entitygroupfield: true
   langcode: true
   search_api_excerpt: true

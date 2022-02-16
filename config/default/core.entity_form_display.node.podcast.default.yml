@@ -14,10 +14,14 @@ dependencies:
     - field.field.node.podcast.field_episode_type
     - field.field.node.podcast.field_feature_image
     - field.field.node.podcast.field_image
+    - field.field.node.podcast.field_other_groups
     - field.field.node.podcast.field_summary
     - field.field.node.podcast.field_transcript
+    - field.field.node.podcast.field_your_groups
     - node.type.podcast
+    - workflows.workflow.editorial
   module:
+    - content_moderation
     - datetime
     - field_group
     - media_library
@@ -25,6 +29,23 @@ dependencies:
     - scheduler
     - scheduler_content_moderation_integration
     - text
+third_party_settings:
+  field_group:
+    group_organization:
+      children:
+        - field_your_groups
+        - field_other_groups
+      label: Organization
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
 id: node.podcast.default
 targetEntityType: node
 bundle: podcast
@@ -116,6 +137,12 @@ content:
     settings:
       media_types: {  }
     third_party_settings: {  }
+  field_other_groups:
+    type: options_select
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_summary:
     type: text_textarea
     weight: 8
@@ -132,12 +159,24 @@ content:
       rows: 9
       placeholder: ''
     third_party_settings: {  }
+  field_your_groups:
+    type: options_select
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   langcode:
     type: language_select
     weight: 16
     region: content
     settings:
       include_locked: true
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    region: content
+    settings: {  }
     third_party_settings: {  }
   path:
     type: path
@@ -213,4 +252,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  entitygroupfield: true

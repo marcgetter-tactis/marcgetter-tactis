@@ -44,3 +44,5 @@ validate:
       - drupal_token
       - drupal_url
       - drupal_view
+    filters:
+      - children

@@ -1,9 +1,9 @@
-uuid: dd2feec7-a16b-404c-a4ce-e06c3deece41
+uuid: 18575656-b2d2-4036-99c8-b366a4ab6f4b
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: jo3uxzma9xzJ5CXCPjULKUmgyxL7MuSO_AfBNT-3pL8
+  default_config_hash: w67rZLja4n-ebY2_h2pOkz5WiJEzCDXWXg5S9--sxr8
 id: taxonomy
 label: Taxonomy
 description: 'Migrate Drupal 7 Taxonomy'

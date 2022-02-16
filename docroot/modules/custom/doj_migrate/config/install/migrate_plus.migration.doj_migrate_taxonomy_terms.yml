@@ -5,6 +5,7 @@ id: doj_migrate_taxonomy_terms
 migration_tags:
   - 'Drupal 7'
   - 'Taxonomy'
+  - doj
 migration_group: taxonomy
 label: 'Taxonomy terms'
 source:

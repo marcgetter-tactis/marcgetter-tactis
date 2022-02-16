@@ -1,9 +1,9 @@
-uuid: c68893f2-dc75-4f57-8d66-9677ed38b04c
+uuid: f46cd5e4-3739-41ef-b06b-0c1d24840f81
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: yxm4t0RZ48Tj8Jm_0FtqE7qUDAUYadnej9hpsMGLy-8
+  default_config_hash: 65UnuhmZDPh4NHNDVdpZYoRTS9ufsgCAzDzztmK_p28
 id: doj_migrate_taxonomy_vocabulary
 class: Drupal\migrate\Plugin\Migration
 field_plugin_method: null
@@ -11,6 +11,7 @@ cck_plugin_method: null
 migration_tags:
   - 'Drupal 7'
   - Configuration
+  - doj
 migration_group: taxonomy
 label: 'Taxonomy vocabularies'
 source:

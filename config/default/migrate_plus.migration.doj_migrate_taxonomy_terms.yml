@@ -1,9 +1,9 @@
-uuid: 6d988ffe-b1f7-4e36-85cd-b91d59a8476b
+uuid: 4efcfdae-3d88-4fcc-b747-102c74561f03
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: puWZSV9xGTXklTqM0RaACYPHlYJE6Pw3A_LaiiJOAFU
+  default_config_hash: cISl8eEPCDCJKYJNk6TE-XMcPSgslFrhzRwf0fq9zkw
 id: doj_migrate_taxonomy_terms
 class: null
 field_plugin_method: null
@@ -11,6 +11,7 @@ cck_plugin_method: null
 migration_tags:
   - 'Drupal 7'
   - Taxonomy
+  - doj
 migration_group: taxonomy
 label: 'Taxonomy terms'
 source:

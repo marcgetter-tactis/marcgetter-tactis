@@ -7,7 +7,7 @@ dependencies:
     - field.field.node.resource.field_component
     - field.field.node.resource.field_date
     - field.field.node.resource.field_id
-    - field.field.node.resource.field_link
+    - field.field.node.resource.field_links
     - field.field.node.resource.field_other_groups
     - field.field.node.resource.field_resource_audience
     - field.field.node.resource.field_resource_type
@@ -30,7 +30,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 101
+    weight: 1
     region: content
   field_component:
     type: entity_reference_label
@@ -38,7 +38,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 104
+    weight: 4
     region: content
   field_date:
     type: datetime_default
@@ -54,7 +54,7 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
-    weight: 107
+    weight: 7
     region: content
   field_id:
     type: string
@@ -62,9 +62,9 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 102
+    weight: 2
     region: content
-  field_link:
+  field_links:
     type: link
     label: hidden
     settings:
@@ -74,7 +74,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 103
+    weight: 3
     region: content
   field_other_groups:
     type: entity_reference_label
@@ -82,21 +82,21 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 108
+    weight: 8
     region: content
   field_resource_audience:
     type: list_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 105
+    weight: 5
     region: content
   field_resource_type:
     type: list_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 106
+    weight: 6
     region: content
   field_your_groups:
     type: entity_reference_label
@@ -104,12 +104,12 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 109
+    weight: 9
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 0
     region: content
 hidden:
   entitygroupfield: true

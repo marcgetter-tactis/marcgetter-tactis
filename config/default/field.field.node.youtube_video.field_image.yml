@@ -11,7 +11,7 @@ field_name: field_image
 entity_type: node
 bundle: youtube_video
 label: Image
-description: ''
+description: 'This will be used whenever this video is shown on a listing page. This is optional, and will default to whatever is set in Youtube.com. However this field is strongly recommended if there is any chance that the image might need to be changed later.'
 required: false
 translatable: true
 default_value: {  }

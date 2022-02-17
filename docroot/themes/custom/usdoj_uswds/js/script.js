@@ -63,6 +63,7 @@
     }
   };
 
+  //tab block functionality
   $('.panel .block-tab').click(function() {
     var i = $(this).attr('id');
 
@@ -75,6 +76,7 @@
     $('#' + i + '-body').fadeIn('slow');
   })
 
+  //tab block mobile slick slider
   $(window).on('load resize', function()  {
     if($(window).width() < 768){
       $('.paragraph--type--tab .field__items').slick({
@@ -88,6 +90,11 @@
     }else{
       $(".paragraph--type--tab .field__items").slick("unslick");
     }
+  });
+
+  //news keyword search submit
+  $('a.keyword-form').click(function() {
+    $('#views-exposed-form-news-page-1').submit();
   });
 
 })(jQuery);

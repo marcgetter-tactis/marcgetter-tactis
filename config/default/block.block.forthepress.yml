@@ -1,9 +1,9 @@
-uuid: 79a1f185-19bf-4bbf-a6b1-924a40b4b39b
+uuid: f53049f8-9062-4c9d-9b69-350b8250a4d8
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:general:173b0163-20d1-4e55-ab00-7fa96ac7a027'
+    - 'block_content:general:6bdfcc60-80aa-4338-9668-adad23f76d11'
   module:
     - block_content
     - collapsiblock
@@ -18,9 +18,9 @@ theme: usdoj_uswds
 region: sidebar_first
 weight: -6
 provider: null
-plugin: 'block_content:173b0163-20d1-4e55-ab00-7fa96ac7a027'
+plugin: 'block_content:6bdfcc60-80aa-4338-9668-adad23f76d11'
 settings:
-  id: 'block_content:173b0163-20d1-4e55-ab00-7fa96ac7a027'
+  id: 'block_content:6bdfcc60-80aa-4338-9668-adad23f76d11'
   label: 'For the Press'
   label_display: visible
   provider: block_content
@@ -31,4 +31,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: /news
+    pages: "/news\r\n/news/*"

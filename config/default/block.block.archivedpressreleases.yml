@@ -1,9 +1,9 @@
-uuid: 73c9878a-b703-46db-a206-ad60c9306f80
+uuid: 45f820ff-192b-4a23-9b7a-497d5ef40e3f
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:general:f251271c-89d6-4ef8-9953-cf035021956a'
+    - 'block_content:general:66eae10b-d5f5-4fdd-82ca-878d986bbd52'
   module:
     - block_content
     - collapsiblock
@@ -18,9 +18,9 @@ theme: usdoj_uswds
 region: sidebar_first
 weight: -4
 provider: null
-plugin: 'block_content:f251271c-89d6-4ef8-9953-cf035021956a'
+plugin: 'block_content:66eae10b-d5f5-4fdd-82ca-878d986bbd52'
 settings:
-  id: 'block_content:f251271c-89d6-4ef8-9953-cf035021956a'
+  id: 'block_content:66eae10b-d5f5-4fdd-82ca-878d986bbd52'
   label: 'Archived Press Releases'
   label_display: visible
   provider: block_content
@@ -31,4 +31,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: /news
+    pages: "/news\r\n/news/*"

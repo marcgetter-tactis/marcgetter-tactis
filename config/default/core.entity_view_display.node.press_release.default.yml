@@ -69,7 +69,7 @@ content:
     label: hidden
     settings:
       timezone_override: ''
-      format_type: medium
+      format_type: standard_date_format
     third_party_settings: {  }
     weight: 2
     region: content

@@ -83,6 +83,7 @@
         "drupal/media_bulk_upload": "^1.0@alpha",
         "drupal/media_library_edit": "^2.2",
         "drupal/media_library_theme_reset": "^1.1",
+        "drupal/media_migration": "^1.0@alpha",
         "drupal/media_revisions_ui": "^2.0",
         "drupal/menu_item_extras": "^2.16",
         "drupal/migrate_file_to_media": "^2.0",

@@ -8,3 +8,5 @@ dependencies:
   - migrate_plus:migrate_plus
   - migrate_tools:migrate_tools
   - migrate_upgrade:migrate_upgrade
+  - migrate_file_to_media:migrate_file_to_media
+  - media_migration:media_migration

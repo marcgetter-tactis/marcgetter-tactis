@@ -1,0 +1,29 @@
+uuid: 448da334-7280-4378-9e90-9c8876b8f24f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_other_groups
+    - group.type.organization
+    - node.type.timeline_event
+id: node.timeline_event.field_other_groups
+field_name: field_other_groups
+entity_type: node
+bundle: timeline_event
+label: 'Other Groups'
+description: 'As groups administrator, associate this content with groups you do not belong to.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:group'
+  handler_settings:
+    target_bundles:
+      organization: organization
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,146 @@
+uuid: f6a8488c-8d9d-483c-9ad8-4531060b513e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.location.field_body
+    - field.field.node.location.field_district
+    - field.field.node.location.field_email
+    - field.field.node.location.field_end_date
+    - field.field.node.location.field_invisible
+    - field.field.node.location.field_language
+    - field.field.node.location.field_latlong
+    - field.field.node.location.field_link
+    - field.field.node.location.field_location
+    - field.field.node.location.field_other_groups
+    - field.field.node.location.field_start_date
+    - field.field.node.location.field_text
+    - field.field.node.location.field_uid
+    - field.field.node.location.field_your_groups
+    - node.type.location
+  module:
+    - address
+    - datetime
+    - geocoder_geofield
+    - link
+    - text
+    - user
+id: node.location.default
+targetEntityType: node
+bundle: location
+mode: default
+content:
+  field_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_district:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_email:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_end_date:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: standard_date_format
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_language:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_latlong:
+    type: geocoder_geofield_reverse_geocode
+    label: hidden
+    settings:
+      providers:
+        googlemaps:
+          checked: '1'
+          weight: '0'
+      dumper: wkt
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_location:
+    type: address_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_other_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_start_date:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: standard_date_format
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_text:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_your_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  entitygroupfield: true
+  field_invisible: true
+  field_uid: true
+  langcode: true
+  search_api_excerpt: true

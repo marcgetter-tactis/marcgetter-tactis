@@ -1,0 +1,32 @@
+uuid: b91c6c3b-37c1-44de-a688-3a348f4dfd82
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.s04_square
+    - field.field.media.video.field_media_cover_image
+    - field.field.media.video.field_media_in_library
+    - field.field.media.video.field_media_video_file
+    - field.field.media.video.field_other_groups
+    - field.field.media.video.field_your_groups
+    - media.type.video
+_core:
+  default_config_hash: cbNH2LklFUV05ctMbX6zbKnkY4gfRgvP8qZX_Rvbl_I
+id: media.video.s04_square
+targetEntityType: media
+bundle: video
+mode: s04_square
+content: {  }
+hidden:
+  created: true
+  entitygroupfield: true
+  field_media_cover_image: true
+  field_media_in_library: true
+  field_media_video_file: true
+  field_other_groups: true
+  field_your_groups: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

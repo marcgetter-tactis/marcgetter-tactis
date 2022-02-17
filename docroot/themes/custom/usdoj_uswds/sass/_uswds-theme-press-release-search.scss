@@ -1,0 +1,130 @@
+/*
+* * * * * ==============================
+* * * * * ==============================
+* * * * * ==============================
+* * * * * ==============================
+========================================
+========================================
+========================================
+----------------------------------------
+USWDS THEME CUSTOM STYLES
+----------------------------------------
+!! Copy this file to your project's
+sass root. Don't edit the version
+in node_modules.
+----------------------------------------
+Press Release Search
+----------------------------------------
+*/
+
+#views-exposed-form-news-page-1 {
+  max-width: 100%;
+  
+  label {
+    color: color(primary-darker);
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .usa-input-group {
+    background-color: transparent;
+    border-width: 0;
+  }  
+
+  input, .chosen-container-multi {
+    border: 1px solid $gray-warm-20;
+    border-radius: 3px;
+    max-width: 100%;
+    height: inherit;
+    li.search-choice {
+      background: $doj-coolblue;
+      color: white;
+      border-radius: 2px;
+      border: 1px solid $doj-coolblue;
+      font-size: .8rem;
+      letter-spacing: ls(1);
+      box-shadow: none;
+      .search-choice-close {
+        background: url('/themes/custom/usdoj_uswds/assets/img/usa-icons/close.svg');
+        filter: invert(100%) sepia(96%) saturate(2%) hue-rotate(65deg) brightness(102%) contrast(100%);
+        background-size: contain;
+        top: 0;
+        right: 0;
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+  }
+
+  .form-item-search-api-fulltext {
+    background: $blue-cool-5;
+    border-left: 3px solid color(primary-darker);
+    padding: 1rem 2rem 1.5rem;
+    margin-top: 0;
+    max-width: 100%;
+    a.keyword-form {
+      padding: 0.7rem 1.5rem;
+      background: color(primary-darker);
+      position: relative;
+      left: -10px;
+      color: white;
+      text-decoration: none;
+      font-size: .9rem;
+    }
+  }
+
+  .filters {
+    background: $blue-cool-5;
+    border-left: 3px solid color(primary-darker);
+    padding: 1rem 2rem 1.5rem;
+    margin-top: 1.25rem;
+    
+    .chosen-container-multi, .chosen-container-active {
+      background-image: none;
+      .chosen-choices {
+        border: none;
+        box-shadow: none;
+        background-image: none;
+      }
+    }
+
+    img.filter-primary-darker {
+      filter: invert(15%) sepia(7%) saturate(7494%) hue-rotate(182deg) brightness(96%) contrast(95%);
+    }
+  }
+
+  .form-item-sort-by {
+    @include grid-col(3);
+    @include grid-offset(9);
+    .usa-select {
+      background-image: url('/themes/custom/usdoj_uswds/assets/img/angle-arrow-down.svg');
+      border: 1px solid $gray-warm-20;
+      border-radius: 3px;
+      background-size: .6rem;
+    }
+  }
+}
+
+.views-row {
+  .node-type {
+    font-size: .8rem;
+  }
+  h2.views-field-title {
+    margin-top: 0;
+    line-height: 1.5rem;
+    &:after {
+      border-top-width: 2px;
+      border-bottom: none;
+      margin: .25rem 0;
+    }
+    a {
+      color: color(primary-darker); 
+      font-size: 1.25rem;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }  
+}
+

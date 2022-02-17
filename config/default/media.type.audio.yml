@@ -1,0 +1,18 @@
+uuid: d7cce4a1-c646-4f2c-8b56-8394e7b404ae
+langcode: en
+status: true
+dependencies:
+  module:
+    - crop
+third_party_settings:
+  crop:
+    image_field: _none
+id: audio
+label: Audio
+description: 'An <em>Audio</em> file is a sound recording.'
+source: audio_file
+queue_thumbnail_downloads: false
+new_revision: true
+source_configuration:
+  source_field: field_media_audio_file
+field_map: {  }

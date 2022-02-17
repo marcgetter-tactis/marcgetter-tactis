@@ -20,6 +20,7 @@ settings:
             - Italic
             - RemoveFormat
             - Blockquote
+            - HorizontalRule
             - Format
         -
           name: Alignment
@@ -33,6 +34,7 @@ settings:
           items:
             - DrupalLink
             - DrupalUnlink
+            - Anchor
         -
           name: Lists
           items:
@@ -45,6 +47,8 @@ settings:
         -
           name: Tools
           items:
+            - Undo
+            - Redo
             - Accordion
             - ShowBlocks
             - Maximize
@@ -58,6 +62,10 @@ settings:
       language_list: un
     stylescombo:
       styles: ''
+    autoembed:
+      status: ''
+    tokenbrowser:
+      token_types: {  }
 image_upload:
   status: false
   scheme: public

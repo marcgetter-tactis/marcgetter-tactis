@@ -19,45 +19,80 @@
  * Define a custom macro that will render all menu trees.
  */
 #}
+{% import _self as menus %}
+{% import '@usdoj_uswds/macros/usdoj_uswds_macros.twig'as usdojMacros %}
+
+
+{#
+We call a macro which calls itself to render the full tree.
+@see http://twig.sensiolabs.org/doc/tags/macro.html
+#}
+{{ menus.menu_links(items, 0, megamenu, 0, NULL, duplicate_parent, NULL, mega_display_second, attributes) }}
+
+{% macro menu_links(items, menu_level, megamenu, button_id, parent, duplicate_parent, region, mega_display_second, attributes) %}
+
+    {% set childHasImage = null %}
+
     {% import _self as menus %}
-    {#
-    We call a macro which calls itself to render the full tree.
-    @see http://twig.sensiolabs.org/doc/tags/macro.html
-    #}
-    {{ menus.menu_links(items, 0, megamenu, 0, NULL, duplicate_parent, NULL, mega_display_second, attributes) }}
 
-    {% macro menu_links(items, menu_level, megamenu, button_id, parent, duplicate_parent, region, mega_display_second, attributes) %}
-        {% import _self as menus %}
 
-        {% if parent.url.getOption('attributes') %}
-            {% set link_attributes = create_attribute(parent.url.getOption('attributes')) %}
-        {% else %}
-            {% set link_attributes = create_attribute() %}
-        {% endif %}
+    {% if parent.url.getOption('attributes') %}
+        {% set link_attributes = create_attribute(parent.url.getOption('attributes')) %}
+    {% else %}
+        {% set link_attributes = create_attribute() %}
+    {% endif %}
 
-        {% if items %}
+    {% if items %}
+        {% for item in items %}
+            {% if item.content.menuLinkHasImage %}
+                {% set childHasImage = true %}
+            {% endif %}
+        {% endfor %}
 
-            {% if menu_level == 0 %}
-                <ul class="usa-nav__primary usa-accordion margin-0" role="navigation">
-            {% elseif megamenu and menu_level == 1 %}
-                <div id="extended-mega-nav-section-{{ button_id }}" class="usa-nav__submenu usa-megamenu" hidden="">
+        {% if menu_level == 0 %}
+            <ul class="usa-nav__primary usa-accordion margin-0 menu_level__0" role="navigation">
 
-                {% if duplicate_parent %}
-                    <div class="grid-row grid-gap-4">
-                        <div class="desktop:grid-col-3">
-                            <div class="usa-nav__submenu-item">
-                                <a {{ link_attributes }} href="{{ parent.url }}">
-                                    <span><h3>{{ parent.title }}</h3></span>
-                                </a>
-                            </div>
+        {% elseif megamenu and menu_level == 1 and childHasImage %}
+
+            <div id="extended-mega-nav-section-{{ button_id }}" class="usa-nav__submenu usa-megamenu menu_level__1" hidden="">
+            {% if duplicate_parent %}
+                <div class="grid-row grid-gap-4">
+                    <div class="desktop:grid-col-3">
+                        <div class="usa-nav__submenu-item">
+                            <a {{ link_attributes }} href="{{ parent.url }}">
+                                <span><h3>{{ parent.title }}</h3></span>
+                            </a>
                         </div>
                     </div>
-                {% endif %}
+                </div>
+            {% endif %}
 
+            <div class="grid-row grid-gap-4">
+            <div class="desktop:grid-col-3 non_imaged_links__container">
+                {# non-imaged links will later be ported in here when page loads via JS. See js/menu.js#}
+            </div>
+
+        {% elseif megamenu and menu_level == 1 and not childHasImage %}
+            <div id="basic-nav-section-{{ button_id }}" class="usa-nav__submenu menu_level__1" hidden="">
+            {% if duplicate_parent %}
                 <div class="grid-row grid-gap-4">
-            {% else %}
-                <ul id="basic-nav-section-{{ button_id }}" class="usa-nav__submenu{% if menu_level > 1 %}-list{% endif %}"{% if menu_level == 1  %} hidden=""{% endif %}>
+                    <div class="desktop:grid-col-fill">
+                        <div class="usa-nav__submenu-item">
+                            <a {{ link_attributes }} href="{{ parent.url }}">
+                                <span><h3>{{ parent.title }}</h3></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
 
+            <div class="grid-row grid-gap-4">
+            <div class="desktop:grid-col-fill non_imaged_links__container">
+                {# non-imaged links will later be ported in here when page loads via JS. See js/menu.js #}
+            </div>
+
+        {% else %}
+            <ul id="basic-nav-section-{{ button_id }}" class="usa-nav__submenu{% if menu_level > 1 %}-list{% endif %}"{% if menu_level == 1  %} hidden=""{% endif %}>
                 {% if duplicate_parent and megamenu == 0 %}
                     <li class="usa-nav__submenu-item">
                         {{ link_attributes }}
@@ -66,75 +101,94 @@
                         </a>
                     </li>
                 {% endif %}
+        {% endif %}
+
+        {% for item in items %}
+
+            {% set itemHasImage = item.content.menuLinkHasImage %}
+
+            {% if item.url.getOption('attributes') %}
+                {% set link_attributes = create_attribute(item.url.getOption('attributes')) %}
+            {% else %}
+                {% set link_attributes = create_attribute() %}
             {% endif %}
 
-            {% for item in items %}
-                {% if item.url.getOption('attributes') %}
-                    {% set link_attributes = create_attribute(item.url.getOption('attributes')) %}
-                {% else %}
-                    {% set link_attributes = create_attribute() %}
-                {% endif %}
+            {% if megamenu and menu_level == 1 and itemHasImage %}
+                <div class="desktop:grid-col-3 individual_menu_level__1">
+{#                 Commented out to disable menu_level => 2#}
+{#                {% if mega_display_second and item.below  %}#}
+{#                    <div class="usa-nav__submenu-item">#}
+{#                        <a {{ link_attributes.addClass('usa-nav__link') }} href="{{ item.url }}">#}
+{#                            <span><strong>{{ item.title }}</strong></span>#}
+{#                        </a>#}
+{#                    </div>#}
+{#                {% endif %}#}
+           {% elseif megamenu and menu_level == 1 %}
+                <div class="desktop:grid-col-fill individual_menu_level__1">
 
+{#                 Commented out to disable menu_level => 2#}
+{#                {% if mega_display_second and item.below  %}#}
+{#                    <div class="usa-nav__submenu-item">#}
+{#                        <a {{ link_attributes.addClass('usa-nav__link') }} href="{{ item.url }}">#}
+{#                            <span><strong>{{ item.title }}</strong></span>#}
+{#                        </a>#}
+{#                    </div>#}
+{#                {% endif %}#}
+            {% else %}
+                <li class="{% if menu_level == 0 %}usa-nav__primary-item{% else %}usa-nav__submenu-item{% endif %}">
+            {% endif %}
+
+            {% if menu_level == 0 and item.below %}
+                <button class="usa-accordion__button usa-nav__link {% if item.in_active_trail %}usa-current{% endif %}"
+                    aria-expanded="false"
+                    aria-controls="{% if megamenu and item.content.childMenuLinkHasImage  %}extended-mega-nav-section-{% else %}basic-nav-section-{% endif %}{{ loop.index }}">
+                    <span>{{ item.title }}</span>
+                </button>
+            {% endif %}
+
+            {# Original Line. Commented out to dispable menu_level => 2   #}
+            {# {% if item.below and ((megamenu and menu_level == 1) or menu_level == 0) %}#}
+            {% if item.below and menu_level == 0 %}
+                {{ menus.menu_links(item.below, menu_level + 1, megamenu, loop.index, item, duplicate_parent, NULL, mega_display_second, attributes) }}
+            {% else %}
                 {% if megamenu and menu_level == 1 %}
-                    <div class="desktop:grid-col-3">
-
-                    {% if mega_display_second and item.below  %}
-                        <div class="usa-nav__submenu-item">
-                            <a {{ link_attributes.addClass('usa-nav__link') }} href="{{ item.url }}">
-                                <span><strong>{{ item.title }}</strong></span>
-                            </a>
-                        </div>
-                    {% endif %}
-                {% else %}
-                    <li class="{% if menu_level == 0 %}usa-nav__primary-item{% else %}usa-nav__submenu-item{% endif %}">
+                    <div class="usa-nav__submenu-item {{ item.content.menuLinkHasImage ? "menu_link_imaged" :"no_menu_link_imaged" }}">
                 {% endif %}
 
-                {% if menu_level == 0 and item.below %}
-                    <button class="usa-accordion__button usa-nav__link {% if item.in_active_trail %}usa-current{% endif %}" aria-expanded="false" aria-controls="{% if megamenu  %}extended-mega-nav-section-{% else %}basic-nav-section-{% endif %}{{ loop.index }}">
-                        <span>{{ item.title }}</span>
-                    </button>
-                {% endif %}
+                {%
+                    set item_classes = [
+                    'usa-nav__link',
+                    item.in_active_trail ? 'usa-current'
+                ]
+                %}
+                <a href="{{ item.url }}"{% if menu_level == 0 %} {{ link_attributes.addClass(item_classes)}} {% else %} {{ link_attributes}} {% endif %}>
 
-                {% if item.below and ((megamenu and menu_level == 1) or menu_level == 0) %}
-                    {{ menus.menu_links(item.below, menu_level + 1, megamenu, loop.index, item, duplicate_parent, NULL, mega_display_second, attributes) }}
-                {% else %}
-                    {% if megamenu and menu_level == 1 %}
-                        <div class="usa-nav__submenu-item">
+                    {% if item.content.menuLinkHasImage %}
+                        {{ usdojMacros.renderImagedHeaderMenu(item) }}
+                    {% else %}
+                    <span class="no_menu_link_imaged__title">{{ item.title }}</span>
                     {% endif %}
-
-                    {%
-                        set item_classes = [
-                        'usa-nav__link',
-                        item.in_active_trail ? 'usa-current'
-                    ]
-                    %}
-
-                    <a href="{{ item.url }}"{% if menu_level == 0 %} {{ link_attributes.addClass(item_classes)}} {% else %} {{ link_attributes}} {% endif %}>
-                        <span>{{ item.title }}</span>
-                    </a>
-                    {% if megamenu and menu_level == 1 %}
-                        </div>
-                    {% endif %}
-                {% endif %}
-
+                </a>
                 {% if megamenu and menu_level == 1 %}
                     </div>
-                {% else %}
-                    </li>
                 {% endif %}
-
-            {% endfor %}
+            {% endif %}
 
             {% if megamenu and menu_level == 1 %}
                 </div>
-                </div>
             {% else %}
-                </ul>
-                <div class="mobile-util display-block desktop:display-none">
-                    {{ drupal_menu('utilities') }}
-                </div>
+                </li>
             {% endif %}
 
+        {% endfor %}
+
+        {% if megamenu and menu_level == 1 %}
+            </div>
+            </div>
+        {% else %}
+            </ul>
         {% endif %}
 
-    {% endmacro %}
+    {% endif %}
+
+{% endmacro %}

@@ -1,0 +1,29 @@
+uuid: c36b335d-b024-4005-bde4-bdb747276281
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_timeline_events
+    - node.type.timeline
+    - node.type.timeline_event
+id: node.timeline.field_timeline_events
+field_name: field_timeline_events
+entity_type: node
+bundle: timeline
+label: Events
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      timeline_event: timeline_event
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: timeline
+field_type: entity_reference

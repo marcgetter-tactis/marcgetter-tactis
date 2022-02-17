@@ -13,11 +13,12 @@ dependencies:
     - field.field.node.press_release.field_image
     - field.field.node.press_release.field_invisible
     - field.field.node.press_release.field_number
+    - field.field.node.press_release.field_other_groups
     - field.field.node.press_release.field_subtitle
     - field.field.node.press_release.field_teaser
     - field.field.node.press_release.field_teaser_image
     - field.field.node.press_release.field_topic
-    - field.field.node.press_release.og_audience
+    - field.field.node.press_release.field_your_groups
     - node.type.press_release
   module:
     - datetime
@@ -28,6 +29,11 @@ targetEntityType: node
 bundle: press_release
 mode: default
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   field_attachment:
     type: entity_reference_label
     label: hidden
@@ -101,6 +107,14 @@ content:
     third_party_settings: {  }
     weight: 9
     region: content
+  field_other_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 15
+    region: content
   field_subtitle:
     type: string
     label: hidden
@@ -133,20 +147,21 @@ content:
     third_party_settings: {  }
     weight: 6
     region: content
+  field_your_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 16
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
     weight: 0
     region: content
-  og_audience:
-    type: entity_reference_label
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 11
-    region: content
 hidden:
+  entitygroupfield: true
   field_file_private_force: true
   field_pr_contact: true
   field_pr_image: true

@@ -1,0 +1,11 @@
+uuid: ae542daf-7ade-4b74-bc24-8eeaf476ab15
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.most_wanted_categories
+id: taxonomy_term.most_wanted_categories
+target_entity_type_id: taxonomy_term
+target_bundle: most_wanted_categories
+default_langcode: site_default
+language_alterable: false

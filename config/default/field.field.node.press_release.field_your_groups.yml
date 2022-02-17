@@ -1,0 +1,29 @@
+uuid: af4ddd16-5db6-4cb6-b43e-266dc46f2e38
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_your_groups
+    - group.type.organization
+    - node.type.press_release
+id: node.press_release.field_your_groups
+field_name: field_your_groups
+entity_type: node
+bundle: press_release
+label: 'Your Groups'
+description: 'Associate this content with groups you belong to.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:group'
+  handler_settings:
+    target_bundles:
+      organization: organization
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

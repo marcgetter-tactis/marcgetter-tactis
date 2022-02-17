@@ -12,15 +12,15 @@ dependencies:
     - field.field.node.blog_post.field_file_private_force
     - field.field.node.blog_post.field_image
     - field.field.node.blog_post.field_invisible
+    - field.field.node.blog_post.field_other_groups
     - field.field.node.blog_post.field_social_image
     - field.field.node.blog_post.field_teaser
     - field.field.node.blog_post.field_teaser_image
     - field.field.node.blog_post.field_topic
-    - field.field.node.blog_post.og_audience
+    - field.field.node.blog_post.field_your_groups
     - node.type.blog_post
   module:
     - datetime
-    - og
     - options
     - text
     - user
@@ -29,6 +29,11 @@ targetEntityType: node
 bundle: blog_post
 mode: default
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   field_attachment:
     type: entity_reference_entity_view
     label: hidden
@@ -102,6 +107,14 @@ content:
     third_party_settings: {  }
     weight: 10
     region: content
+  field_other_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 17
+    region: content
   field_social_image:
     type: entity_reference_entity_view
     label: hidden
@@ -135,25 +148,20 @@ content:
     third_party_settings: {  }
     weight: 9
     region: content
+  field_your_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 18
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
     weight: 0
     region: content
-  og_audience:
-    type: entity_reference_entity_id
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 13
-    region: content
-  og_group:
-    type: og_group_subscribe
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 0
-    region: content
 hidden:
+  entitygroupfield: true
   langcode: true
   search_api_excerpt: true

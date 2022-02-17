@@ -6,11 +6,29 @@ dependencies:
     - block_content.type.carousel
     - field.field.block_content.carousel.field_background_class
     - field.field.block_content.carousel.field_header
+    - field.field.block_content.carousel.field_other_groups
     - field.field.block_content.carousel.field_slides
-    - field.field.block_content.carousel.og_audience
+    - field.field.block_content.carousel.field_your_groups
   module:
-    - og
+    - field_group
     - paragraphs
+third_party_settings:
+  field_group:
+    group_organization:
+      children:
+        - field_your_groups
+        - field_other_groups
+      label: Organization
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
 id: block_content.carousel.default
 targetEntityType: block_content
 bundle: carousel
@@ -30,6 +48,12 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_other_groups:
+    type: options_select
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_slides:
     type: entity_reference_paragraphs
     weight: 3
@@ -41,6 +65,12 @@ content:
       add_mode: dropdown
       form_display_mode: default
       default_paragraph_type: slide
+    third_party_settings: {  }
+  field_your_groups:
+    type: options_select
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
   info:
     type: string_textfield
@@ -56,15 +86,5 @@ content:
     region: content
     settings:
       include_locked: true
-    third_party_settings: {  }
-  og_audience:
-    type: og_complex
-    weight: 26
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
 hidden: {  }

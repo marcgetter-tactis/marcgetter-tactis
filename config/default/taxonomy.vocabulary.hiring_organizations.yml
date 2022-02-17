@@ -1,0 +1,8 @@
+uuid: 1827691c-a2b3-4cdf-9ab5-99794fffc5f7
+langcode: en
+status: true
+dependencies: {  }
+name: 'Hiring Organizations'
+vid: hiring_organizations
+description: 'Hiring organizations for vacancy announcements'
+weight: 0

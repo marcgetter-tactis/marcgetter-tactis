@@ -4,8 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.node.landing_page.field_left_navigation_menu
+    - field.field.node.landing_page.field_other_groups
+    - field.field.node.landing_page.field_your_groups
     - field.field.node.landing_page.layout_builder__layout
-    - field.field.node.landing_page.og_audience
     - node.type.landing_page
   module:
     - layout_builder
@@ -22,11 +23,21 @@ third_party_settings:
           label: 'Full-Width Above 2-Column'
           context_mapping: {  }
         components:
-          0257312e-7d5e-42f2-93ce-227b6a239cc7:
-            uuid: 0257312e-7d5e-42f2-93ce-227b6a239cc7
+          da91c5fd-1af9-4342-82ef-874cde0b9bea:
+            uuid: da91c5fd-1af9-4342-82ef-874cde0b9bea
             region: content
             configuration:
-              id: 'field_block:node:landing_page:og_audience'
+              id: 'extra_field_block:node:landing_page:content_moderation_control'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 0
+            additional: {  }
+          d3b6780e-a096-4ea2-b193-aed5af8195e1:
+            uuid: d3b6780e-a096-4ea2-b193-aed5af8195e1
+            region: content
+            configuration:
+              id: 'field_block:node:landing_page:field_other_groups'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
@@ -36,7 +47,23 @@ third_party_settings:
                 settings:
                   link: true
                 third_party_settings: {  }
-            weight: 0
+            weight: 1
+            additional: {  }
+          a0c5428e-0d1d-4389-8646-54615b1b525f:
+            uuid: a0c5428e-0d1d-4389-8646-54615b1b525f
+            region: content
+            configuration:
+              id: 'field_block:node:landing_page:field_your_groups'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 2
             additional: {  }
         third_party_settings: {  }
       -
@@ -97,6 +124,11 @@ targetEntityType: node
 bundle: landing_page
 mode: default
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   field_left_navigation_menu:
     type: entity_reference_label
     label: above
@@ -105,12 +137,7 @@ content:
     third_party_settings: {  }
     weight: 103
     region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 100
-    region: content
-  og_audience:
+  field_other_groups:
     type: entity_reference_label
     label: above
     settings:
@@ -118,7 +145,21 @@ content:
     third_party_settings: {  }
     weight: 104
     region: content
+  field_your_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
 hidden:
+  entitygroupfield: true
   langcode: true
   layout_builder__layout: true
   search_api_excerpt: true

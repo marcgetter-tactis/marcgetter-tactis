@@ -1,0 +1,19 @@
+uuid: a4a3e43e-9c7f-4eb0-99ff-9118f9e967b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.organization
+    - node.type.vacancy
+  module:
+    - gnode
+    - node
+id: organization-group_node-vacancy
+label: 'Organization: Group node (Vacancy)'
+description: 'Adds <em class="placeholder">Vacancy</em> content to groups both publicly and privately.'
+group_type: organization
+content_plugin: 'group_node:vacancy'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

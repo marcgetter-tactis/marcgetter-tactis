@@ -8,8 +8,9 @@ dependencies:
     - field.field.block_content.tabbed.field_cta
     - field.field.block_content.tabbed.field_cta_style
     - field.field.block_content.tabbed.field_header
+    - field.field.block_content.tabbed.field_other_groups
     - field.field.block_content.tabbed.field_tabs
-    - field.field.block_content.tabbed.og_audience
+    - field.field.block_content.tabbed.field_your_groups
   module:
     - entity_reference_revisions
     - link
@@ -19,13 +20,6 @@ targetEntityType: block_content
 bundle: tabbed
 mode: default
 content:
-  field_background_class:
-    type: list_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 7
-    region: content
   field_cta:
     type: link
     label: hidden
@@ -36,22 +30,14 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 5
+    weight: 1
     region: content
   field_cta_style:
     type: list_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 6
-    region: content
-  field_header:
-    type: string
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   field_tabs:
     type: entity_reference_revisions_entity_view
@@ -60,16 +46,12 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 2
-    region: content
-  og_audience:
-    type: entity_reference_label
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 4
+    weight: 0
     region: content
 hidden:
+  field_background_class: true
+  field_header: true
+  field_other_groups: true
+  field_your_groups: true
   langcode: true
   search_api_excerpt: true

@@ -3,17 +3,20 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.opinion.field_attachment
     - field.field.node.opinion.field_body
     - field.field.node.opinion.field_date
+    - field.field.node.opinion.field_other_groups
     - field.field.node.opinion.field_overview
     - field.field.node.opinion.field_single_attachment
-    - field.field.node.opinion.og_audience
+    - field.field.node.opinion.field_your_groups
     - node.type.opinion
+    - workflows.workflow.editorial
   module:
+    - content_moderation
     - datetime
     - field_group
     - media_library
-    - og
     - path
     - scheduler
     - scheduler_content_moderation_integration
@@ -22,7 +25,8 @@ third_party_settings:
   field_group:
     group_organization:
       children:
-        - og_audience
+        - field_your_groups
+        - field_other_groups
       label: Organization
       region: content
       parent_name: ''
@@ -59,6 +63,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_other_groups:
+    type: options_select
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_overview:
     type: text_textarea
     weight: 3
@@ -74,6 +84,12 @@ content:
     settings:
       media_types: {  }
     third_party_settings: {  }
+  field_your_groups:
+    type: options_select
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   langcode:
     type: language_select
     weight: 6
@@ -81,15 +97,11 @@ content:
     settings:
       include_locked: true
     third_party_settings: {  }
-  og_audience:
-    type: og_complex
-    weight: 18
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
     region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   path:
     type: path
@@ -165,4 +177,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  entitygroupfield: true
+  field_attachment: true

@@ -1,0 +1,21 @@
+uuid: 1536e50b-dd1c-4ec4-9c0f-bd3f1bc49820
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - node.type.court_decision
+  module:
+    - datetime
+id: node.court_decision.field_date
+field_name: field_date
+entity_type: node
+bundle: court_decision
+label: Date
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

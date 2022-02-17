@@ -1,36 +1,35 @@
-uuid: 28bba9e5-759f-4dbe-a1bb-69e2f6280247
+uuid: 99a1f8ae-f557-4ede-88cc-679ef72c3045
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.video.field_categories
-    - field.field.media.video.field_media_oembed_video
-    - field.field.media.video.field_tags
+    - field.field.media.video.field_media_cover_image
+    - field.field.media.video.field_media_in_library
+    - field.field.media.video.field_media_video_file
+    - field.field.media.video.field_other_groups
+    - field.field.media.video.field_your_groups
     - media.type.video
   module:
     - field_group
-    - media
-  enforced:
-    module:
-      - acquia_cms_video
+    - file
+    - path
 third_party_settings:
   field_group:
-    group_taxonomy:
+    group_organization:
       children:
-        - field_categories
-        - field_tags
-      label: Taxonomy
+        - field_your_groups
+        - field_other_groups
+      label: Organization
       region: content
       parent_name: ''
-      weight: 3
+      weight: 1
       format_type: fieldset
       format_settings:
         classes: ''
+        show_empty_fields: false
         id: ''
         description: ''
         required_fields: true
-_core:
-  default_config_hash: y5gA2KgxcHYnucgo-X0ipMZZzKP_AeCEnQv64HSj4Gc
 id: media.video.default
 targetEntityType: media
 bundle: video
@@ -38,33 +37,28 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 7
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_categories:
+  field_media_video_file:
+    type: file_generic
+    weight: 0
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_other_groups:
     type: options_select
-    weight: 4
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_media_oembed_video:
-    type: oembed_textfield
-    weight: 1
+  field_your_groups:
+    type: options_select
+    weight: 10
     region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_tags:
-    type: entity_reference_autocomplete_tags
-    weight: 5
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   langcode:
     type: language_select
@@ -75,20 +69,28 @@ content:
     third_party_settings: {  }
   name:
     type: string_textfield
-    weight: 0
+    weight: -5
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  translation:
-    weight: 8
+  path:
+    type: path
+    weight: 30
     region: content
     settings: {  }
     third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 100
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 6
+    weight: 5
     region: content
     settings:
       match_operator: CONTAINS
@@ -97,5 +99,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
 hidden:
-  path: true
-  status: true
+  entitygroupfield: true
+  field_media_cover_image: true
+  field_media_in_library: true

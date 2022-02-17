@@ -1,0 +1,19 @@
+uuid: c903ed23-5f99-4043-9001-8bb1d183a6d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.organization
+    - node.type.staff_profile
+  module:
+    - gnode
+    - node
+id: group_content_type_56b5cf8b4b309
+label: 'Organization: Group node (Staff Profile)'
+description: 'Adds <em class="placeholder">Staff Profile</em> content to groups both publicly and privately.'
+group_type: organization
+content_plugin: 'group_node:staff_profile'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

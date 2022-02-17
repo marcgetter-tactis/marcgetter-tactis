@@ -5,7 +5,8 @@ dependencies:
   config:
     - block_content.type.hero
     - field.field.block_content.hero.field_hero_slide
-    - field.field.block_content.hero.og_audience
+    - field.field.block_content.hero.field_other_groups
+    - field.field.block_content.hero.field_your_groups
   module:
     - entity_reference_revisions
 id: block_content.hero.default
@@ -23,6 +24,7 @@ content:
     weight: 0
     region: content
 hidden:
+  field_other_groups: true
+  field_your_groups: true
   langcode: true
-  og_audience: true
   search_api_excerpt: true

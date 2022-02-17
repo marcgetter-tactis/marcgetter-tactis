@@ -1,0 +1,80 @@
+uuid: c6a0d08c-ce77-4619-a06b-45ac90e40066
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.media.token
+    - field.field.media.image.field_categories
+    - field.field.media.image.field_image_alignment
+    - field.field.media.image.field_media_image
+    - field.field.media.image.field_media_in_library
+    - field.field.media.image.field_other_groups
+    - field.field.media.image.field_tags
+    - field.field.media.image.field_your_groups
+    - field.field.media.image.image
+    - media.type.image
+  module:
+    - responsive_image
+    - svg_image
+    - user
+_core:
+  default_config_hash: qdTvLSXNLW07g_pXAeUuLmRQDvglyY5Et41GDXxXI3I
+id: media.image.token
+targetEntityType: media
+bundle: image
+mode: token
+content:
+  created:
+    type: timestamp
+    label: hidden
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_media_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  thumbnail:
+    type: responsive_image
+    label: above
+    settings:
+      responsive_image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  uid:
+    type: author
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  entitygroupfield: true
+  field_categories: true
+  field_image_alignment: true
+  field_media_in_library: true
+  field_other_groups: true
+  field_tags: true
+  field_your_groups: true
+  image: true
+  langcode: true
+  search_api_excerpt: true

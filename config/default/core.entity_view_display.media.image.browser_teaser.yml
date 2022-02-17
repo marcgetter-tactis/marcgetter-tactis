@@ -1,0 +1,60 @@
+uuid: 19c7628c-a094-4c7c-8aa7-5203973b2d28
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.browser_teaser
+    - field.field.media.image.field_categories
+    - field.field.media.image.field_image_alignment
+    - field.field.media.image.field_media_image
+    - field.field.media.image.field_media_in_library
+    - field.field.media.image.field_other_groups
+    - field.field.media.image.field_tags
+    - field.field.media.image.field_your_groups
+    - field.field.media.image.image
+    - image.style.d03_traditional
+    - media.type.image
+  module:
+    - svg_image
+_core:
+  default_config_hash: rP7MuaOrP_Fgo4ov0d9J_6mWj1YlPhHqCijPQfIH1iQ
+id: media.image.browser_teaser
+targetEntityType: media
+bundle: image
+mode: browser_teaser
+content:
+  field_media_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: d03_traditional
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  created: true
+  entitygroupfield: true
+  field_categories: true
+  field_image_alignment: true
+  field_media_in_library: true
+  field_other_groups: true
+  field_tags: true
+  field_your_groups: true
+  image: true
+  langcode: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

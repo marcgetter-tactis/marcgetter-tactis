@@ -1,0 +1,21 @@
+uuid: 0bd89660-f047-4668-98d8-10c1d256efa2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - node.type.brief
+  module:
+    - datetime
+id: node.brief.field_date
+field_name: field_date
+entity_type: node
+bundle: brief
+label: 'Filing Date'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

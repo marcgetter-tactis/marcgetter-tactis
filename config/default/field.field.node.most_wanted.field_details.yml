@@ -1,0 +1,21 @@
+uuid: 13c2c273-c30a-493b-893c-08fdfceb3a35
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_details
+    - node.type.most_wanted
+  module:
+    - text
+id: node.most_wanted.field_details
+field_name: field_details
+entity_type: node
+bundle: most_wanted
+label: Details
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

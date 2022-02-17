@@ -1,0 +1,26 @@
+uuid: 13c1b6a9-e5eb-4058-a9f9-6ebf8d6e7129
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_application_process
+    - node.type.vacancy
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - wysiwyg
+id: node.vacancy.field_application_process
+field_name: field_application_process
+entity_type: node
+bundle: vacancy
+label: 'Application Process'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

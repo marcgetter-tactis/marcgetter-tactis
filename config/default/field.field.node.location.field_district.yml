@@ -1,0 +1,29 @@
+uuid: 76a112c2-5252-42d8-9711-cdb8a142b72b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_district
+    - node.type.location
+    - taxonomy.vocabulary.us_judicial_district
+id: node.location.field_district
+field_name: field_district
+entity_type: node
+bundle: location
+label: District
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      us_judicial_district: us_judicial_district
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

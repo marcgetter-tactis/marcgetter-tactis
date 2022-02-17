@@ -1,0 +1,20 @@
+uuid: 5a564476-4ff3-45be-8f09-8efafe8e3a6b
+langcode: en
+status: true
+dependencies:
+  module:
+    - geofield
+    - node
+id: node.field_latlong
+field_name: field_latlong
+entity_type: node
+type: geofield
+settings:
+  backend: geofield_backend_default
+module: geofield
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

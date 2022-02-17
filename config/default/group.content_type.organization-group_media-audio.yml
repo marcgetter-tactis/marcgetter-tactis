@@ -1,0 +1,19 @@
+uuid: e0147ba9-ad8a-4a92-ba31-79f40d62f0ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.organization
+    - media.type.audio
+  module:
+    - groupmedia
+    - media
+id: organization-group_media-audio
+label: 'Organization: Group media (Audio)'
+description: 'Adds <em class="placeholder">Audio</em> content to groups both publicly and privately.'
+group_type: organization
+content_plugin: 'group_media:audio'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

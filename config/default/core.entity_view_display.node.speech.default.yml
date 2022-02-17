@@ -1,4 +1,4 @@
-uuid: aa4751c2-433e-4e33-b007-6153c8de6706
+uuid: bf304de1-bb32-4212-b067-597d54f0e3b0
 langcode: en
 status: true
 dependencies:
@@ -12,16 +12,15 @@ dependencies:
     - field.field.node.speech.field_image
     - field.field.node.speech.field_invisible
     - field.field.node.speech.field_location
+    - field.field.node.speech.field_other_groups
     - field.field.node.speech.field_speaker
     - field.field.node.speech.field_teaser
     - field.field.node.speech.field_topic
-    - field.field.node.speech.og_audience
+    - field.field.node.speech.field_your_groups
     - node.type.speech
   module:
     - address
     - datetime
-    - og
-    - options
     - text
     - user
 id: node.speech.default
@@ -29,20 +28,25 @@ targetEntityType: node
 bundle: speech
 mode: default
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
   field_attachment:
     type: entity_reference_label
     label: hidden
     settings:
       link: true
     third_party_settings: {  }
-    weight: 8
+    weight: 3
     region: content
   field_body:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 6
+    weight: 2
     region: content
   field_component:
     type: entity_reference_label
@@ -50,56 +54,31 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 10
+    weight: 4
     region: content
   field_date:
     type: datetime_default
     label: hidden
     settings:
       timezone_override: ''
-      format_type: medium
+      format_type: standard_date_format
     third_party_settings: {  }
-    weight: 1
-    region: content
-  field_feature_image:
-    type: entity_reference_entity_view
-    label: hidden
-    settings:
-      view_mode: default
-      link: true
-    third_party_settings: {  }
-    weight: 2
-    region: content
-  field_file_private_force:
-    type: list_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 13
-    region: content
-  field_image:
-    type: entity_reference_entity_view
-    label: hidden
-    settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
-    weight: 7
-    region: content
-  field_invisible:
-    type: entity_reference_label
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 11
+    weight: 6
     region: content
   field_location:
     type: address_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 3
+    weight: 5
+    region: content
+  field_other_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 9
     region: content
   field_speaker:
     type: entity_reference_label
@@ -107,14 +86,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 4
-    region: content
-  field_teaser:
-    type: text_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 5
+    weight: 7
     region: content
   field_topic:
     type: entity_reference_label
@@ -122,24 +94,27 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 9
+    weight: 8
     region: content
-  og_audience:
+  field_your_groups:
     type: entity_reference_label
-    label: hidden
+    label: above
     settings:
       link: true
     third_party_settings: {  }
-    weight: 0
+    weight: 10
     region: content
-  og_group:
-    type: og_group_subscribe
-    label: above
+  links:
     settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
 hidden:
+  entitygroupfield: true
+  field_feature_image: true
+  field_file_private_force: true
+  field_image: true
+  field_invisible: true
+  field_teaser: true
   langcode: true
-  links: true
   search_api_excerpt: true

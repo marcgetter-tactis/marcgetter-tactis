@@ -1,0 +1,21 @@
+uuid: 8e96d271-bfee-4ab7-a04d-017183e41db0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_court_level
+    - node.type.brief
+  module:
+    - options
+id: node.brief.field_court_level
+field_name: field_court_level
+entity_type: node
+bundle: brief
+label: 'Court Level'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

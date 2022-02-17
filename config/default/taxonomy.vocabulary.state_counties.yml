@@ -1,0 +1,8 @@
+uuid: cb911886-15db-4e11-9f71-96500467f0be
+langcode: en
+status: true
+dependencies: {  }
+name: 'State Counties'
+vid: state_counties
+description: 'States and associated counties.'
+weight: 0

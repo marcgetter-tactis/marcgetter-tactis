@@ -5,6 +5,8 @@ dependencies:
   config:
     - block_content.type.general
     - field.field.block_content.general.body
+    - field.field.block_content.general.field_other_groups
+    - field.field.block_content.general.field_your_groups
   module:
     - text
 id: block_content.general.default
@@ -20,5 +22,7 @@ content:
     weight: 0
     region: content
 hidden:
+  field_other_groups: true
+  field_your_groups: true
   langcode: true
   search_api_excerpt: true

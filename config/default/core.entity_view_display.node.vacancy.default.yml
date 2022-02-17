@@ -1,0 +1,74 @@
+uuid: 03231716-6bf7-4ad2-8b1b-7e639f526840
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.vacancy.field_about_office
+    - field.field.node.vacancy.field_application_process
+    - field.field.node.vacancy.field_body
+    - field.field.node.vacancy.field_date
+    - field.field.node.vacancy.field_destination
+    - field.field.node.vacancy.field_diversity
+    - field.field.node.vacancy.field_hiring_office
+    - field.field.node.vacancy.field_hiring_org
+    - field.field.node.vacancy.field_job_id
+    - field.field.node.vacancy.field_location
+    - field.field.node.vacancy.field_num_positions
+    - field.field.node.vacancy.field_other_groups
+    - field.field.node.vacancy.field_practice_area
+    - field.field.node.vacancy.field_qualifications
+    - field.field.node.vacancy.field_relocation_expenses
+    - field.field.node.vacancy.field_salary
+    - field.field.node.vacancy.field_show_diversity_statement
+    - field.field.node.vacancy.field_travel
+    - field.field.node.vacancy.field_va_position
+    - field.field.node.vacancy.field_your_groups
+    - node.type.vacancy
+  module:
+    - options
+    - user
+id: node.vacancy.default
+targetEntityType: node
+bundle: vacancy
+mode: default
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  field_destination:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  entitygroupfield: true
+  field_about_office: true
+  field_application_process: true
+  field_body: true
+  field_date: true
+  field_diversity: true
+  field_hiring_office: true
+  field_hiring_org: true
+  field_job_id: true
+  field_location: true
+  field_num_positions: true
+  field_other_groups: true
+  field_practice_area: true
+  field_qualifications: true
+  field_relocation_expenses: true
+  field_salary: true
+  field_show_diversity_statement: true
+  field_travel: true
+  field_va_position: true
+  field_your_groups: true
+  langcode: true
+  search_api_excerpt: true

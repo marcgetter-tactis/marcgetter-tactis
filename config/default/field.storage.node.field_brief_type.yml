@@ -1,0 +1,57 @@
+uuid: dca6fd7a-599f-41fa-a10b-aafab7b6fd0c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_brief_type
+field_name: field_brief_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: petition_for_writ_of_certiorari
+      label: 'Petition for Writ of Certiorari'
+    -
+      value: appendix_to_petition
+      label: 'Appendix to Petition'
+    -
+      value: petition_stage_reply_brief
+      label: 'Petition Stage Reply Brief'
+    -
+      value: petition_stage_amicus_brief_invitation
+      label: 'Petition Stage Amicus Brief (Invitation)'
+    -
+      value: petition_stage_amicus_brief_uninvited
+      label: 'Petition Stage Amicus Brief (Uninvited)'
+    -
+      value: petition_stage_supplemental_brief
+      label: 'Petition Stage Supplemental Brief'
+    -
+      value: petition_stage_response
+      label: 'Petition Stage Response'
+    -
+      value: merits_stage_brief
+      label: 'Merits Stage Brief'
+    -
+      value: merits_stage_reply_brief
+      label: 'Merits Stage Reply Brief'
+    -
+      value: merits_stage_amicus_brief
+      label: 'Merits Stage Amicus Brief'
+    -
+      value: post_argument_brief
+      label: 'Post Argument Brief'
+    -
+      value: original_actions_all
+      label: 'Original Actions: All'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

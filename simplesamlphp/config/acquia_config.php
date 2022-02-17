@@ -1,3 +1,4 @@
+
 <?php
 
 /**
@@ -20,8 +21,8 @@
 
 // Set some security and other configs that are set above, however we
 // overwrite them here to keep all changes in one area.
-$config['technicalcontact_name'] = "Your Name";
-$config['technicalcontact_email'] = "your_email@yourdomain.com";
+$config['technicalcontact_name'] = "John Cunningham";
+$config['technicalcontact_email'] = "john.cunningham@acquia.com";
 
 // Change these for your installation.
 $config['secretsalt'] = 'mysecretsalt';
@@ -44,6 +45,18 @@ $config['auth.adminpassword'] = 'mysupersecret';
  * $port = ':' . $_SERVER['SERVER_PORT'];
  * @endcode
  */
+    $_SERVER['SERVER_PORT'] = 443;
+    $_SERVER['HTTPS'] = 'true';
+    $protocol = 'https://';
+    $port = ':' . $_SERVER['SERVER_PORT'];
+//$protocol = 'http://';
+//$port = ':80';
+//if (!empty($_ENV['AH_SITE_ENVIRONMENT'])) {
+//    $_SERVER['SERVER_PORT'] = 443;
+//    $_SERVER['HTTPS'] = 'true';
+//    $protocol = 'https://';
+//    $port = ':' . $_SERVER['SERVER_PORT'];
+//}
 
 /**
  * Cookies No Cache.
@@ -69,59 +82,59 @@ $config['auth.adminpassword'] = 'mysupersecret';
  */
 
 if (!getenv('AH_SITE_ENVIRONMENT')) {
-  // Add / modify your local configuration here.
-  $config['store.type'] = 'sql';
-  $config['store.sql.dsn'] = sprintf('mysql:host=%s;port=%s;dbname=%s', '127.0.0.1', '', 'drupal');
-  $config['store.sql.username'] = 'drupal';
-  $config['store.sql.password'] = 'drupal';
-  $config['store.sql.prefix'] = 'simplesaml';
-  $config['certdir'] = "/var/www/simplesamlphp/cert/";
-  $config['metadatadir'] = "/var/www/simplesamlphp/metadata";
-  $config['baseurlpath'] = 'simplesaml/';
-  $config['loggingdir'] = '/var/www/simplesamlphp/log/';
+    // Add / modify your local configuration here.
+    $config['store.type'] = 'sql';
+    $config['store.sql.dsn'] = sprintf('mysql:host=%s;port=%s;dbname=%s', 'database', '', 'drupal9');
+    $config['store.sql.username'] = 'drupal9';
+    $config['store.sql.password'] = 'drupal9';
+    $config['store.sql.prefix'] = 'simplesaml';
+    $config['certdir'] = "/app/simplesamlphp/cert/";
+    $config['metadatadir'] = "/app/vendor/simplesamlphp/simplesamlphp/metadata";
+    $config['baseurlpath'] = 'simplesaml/';
+    $config['loggingdir'] = '/app/simplesamlphp/log/';
 
 }
 elseif (getenv('AH_SITE_ENVIRONMENT')) {
-  // Support multi-site and single site installations at different base URLs.
-  // Overide $config['baseurlpath'] = "https://{yourdomain}/simplesaml/"
-  // to customize the default Acquia configuration.
-  // phpcs:ignore
-  $config['baseurlpath'] = $protocol . $_SERVER['HTTP_HOST'] . $port . '/simplesaml/';
-  // Set ACE and ACSF sites based on hosting database and site name.
-  $ah_site_dir = getenv('AH_SITE_GROUP') . '.' . getenv('AH_SITE_ENVIRONMENT');
-  $config['certdir'] = '/mnt/www/html/' . $ah_site_dir . '/simplesamlphp/cert/';
-  $config['metadatadir'] = '/mnt/www/html/' . $ah_site_dir . '/simplesamlphp/metadata';
-  $config['baseurlpath'] = 'simplesaml/';
-  // Setup basic logging.
-  $config['logging.handler'] = 'file';
-  // phpcs:ignore
-  $config['loggingdir'] = dirname(getenv('ACQUIA_HOSTING_DRUPAL_LOG'));
-  $config['logging.logfile'] = 'simplesamlphp-' . date('Ymd') . '.log';
-  $creds_json = file_get_contents('/var/www/site-php/' . $ah_site_dir . '/creds.json');
-  $databases = json_decode($creds_json, TRUE);
-  $creds = $databases['databases'][getenv('AH_SITE_GROUP')];
-  if (substr(getenv('AH_SITE_ENVIRONMENT'), 0, 3) === 'ode') {
-    $creds['host'] = key($creds['db_url_ha']);
-  }
-  else {
-    require_once "/usr/share/php/Net/DNS2_wrapper.php";
-    try {
-      $resolver = new Net_DNS2_Resolver([
-        'nameservers' => [
-          '127.0.0.1',
-          'dns-master',
-        ],
-      ]);
-      $response = $resolver->query("cluster-{$creds['db_cluster_id']}.mysql", 'CNAME');
-      $creds['host'] = $response->answer[0]->cname;
+    // Support multi-site and single site installations at different base URLs.
+    // Overide $config['baseurlpath'] = "https://{yourdomain}/simplesaml/"
+    // to customize the default Acquia configuration.
+    // phpcs:ignore
+    $config['baseurlpath'] = $protocol . $_SERVER['HTTP_HOST'] . $port . '/simplesaml/';
+    // Set ACE and ACSF sites based on hosting database and site name.
+    $ah_site_dir = getenv('AH_SITE_GROUP') . '.' . getenv('AH_SITE_ENVIRONMENT');
+    $config['certdir'] = '/mnt/www/html/' . $ah_site_dir . '/simplesamlphp/cert/';
+    $config['metadatadir'] = "/mnt/www/html/{$_ENV['AH_SITE_GROUP']}.{$_ENV['AH_SITE_ENVIRONMENT']}/simplesamlphp/metadata";
+    $config['baseurlpath'] = 'simplesaml/';
+    // Setup basic logging.
+    $config['logging.handler'] = 'file';
+    // phpcs:ignore
+    $config['loggingdir'] = dirname(getenv('ACQUIA_HOSTING_DRUPAL_LOG'));
+    $config['logging.logfile'] = 'simplesamlphp-' . date('Ymd') . '.log';
+    $creds_json = file_get_contents('/var/www/site-php/' . $ah_site_dir . '/creds.json');
+    $databases = json_decode($creds_json, TRUE);
+    $creds = $databases['databases'][getenv('AH_SITE_GROUP')];
+    if (substr(getenv('AH_SITE_ENVIRONMENT'), 0, 3) === 'ode') {
+        $creds['host'] = key($creds['db_url_ha']);
     }
-    catch (Net_DNS2_Exception $e) {
-      $creds['host'] = "";
+    else {
+        require_once "/usr/share/php/Net/DNS2_wrapper.php";
+        try {
+            $resolver = new Net_DNS2_Resolver([
+                'nameservers' => [
+                    '127.0.0.1',
+                    'dns-master',
+                ],
+            ]);
+            $response = $resolver->query("cluster-{$creds['db_cluster_id']}.mysql", 'CNAME');
+            $creds['host'] = $response->answer[0]->cname;
+        }
+        catch (Net_DNS2_Exception $e) {
+            $creds['host'] = "";
+        }
     }
-  }
-  $config['store.type'] = 'sql';
-  $config['store.sql.dsn'] = sprintf('mysql:host=%s;port=%s;dbname=%s', $creds['host'], $creds['port'], $creds['name']);
-  $config['store.sql.username'] = $creds['user'];
-  $config['store.sql.password'] = $creds['pass'];
-  $config['store.sql.prefix'] = 'simplesaml';
+    $config['store.type'] = 'sql';
+    $config['store.sql.dsn'] = sprintf('mysql:host=%s;port=%s;dbname=%s', $creds['host'], $creds['port'], $creds['name']);
+    $config['store.sql.username'] = $creds['user'];
+    $config['store.sql.password'] = $creds['pass'];
+    $config['store.sql.prefix'] = 'simplesaml';
 }

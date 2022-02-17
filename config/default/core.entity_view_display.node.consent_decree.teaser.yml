@@ -8,8 +8,9 @@ dependencies:
     - field.field.node.consent_decree.field_body
     - field.field.node.consent_decree.field_comment_period
     - field.field.node.consent_decree.field_component
+    - field.field.node.consent_decree.field_other_groups
     - field.field.node.consent_decree.field_weight
-    - field.field.node.consent_decree.og_audience
+    - field.field.node.consent_decree.field_your_groups
     - node.type.consent_decree
   module:
     - user
@@ -18,24 +19,24 @@ targetEntityType: node
 bundle: consent_decree
 mode: teaser
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
     weight: 100
     region: content
-  og_group:
-    type: og_group_subscribe
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 0
-    region: content
 hidden:
+  entitygroupfield: true
   field_attachment: true
   field_body: true
   field_comment_period: true
   field_component: true
+  field_other_groups: true
   field_weight: true
+  field_your_groups: true
   langcode: true
-  og_audience: true
   search_api_excerpt: true

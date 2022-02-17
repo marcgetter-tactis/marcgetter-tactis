@@ -5,14 +5,12 @@ dependencies:
   config:
     - block_content.type.blank
     - field.storage.block_content.field_media
-    - media.type.document
     - media.type.image
-    - media.type.video
 id: block_content.blank.field_media
 field_name: field_media
 entity_type: block_content
 bundle: blank
-label: Media
+label: Image
 description: ''
 required: true
 translatable: false
@@ -22,9 +20,7 @@ settings:
   handler: 'default:media'
   handler_settings:
     target_bundles:
-      document: document
       image: image
-      video: video
     sort:
       field: _none
       direction: ASC

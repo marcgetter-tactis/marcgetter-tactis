@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.node.field_audio
     - media.type.document
-    - media.type.video
     - node.type.podcast
 id: node.podcast.field_audio
 field_name: field_audio
@@ -22,7 +21,6 @@ settings:
   handler_settings:
     target_bundles:
       document: document
-      video: video
     sort:
       field: _none
       direction: ASC

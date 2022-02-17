@@ -1,0 +1,55 @@
+uuid: 997ea91e-2218-4912-af30-878b793c91e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.simplified
+    - field.field.media.image.field_categories
+    - field.field.media.image.field_image_alignment
+    - field.field.media.image.field_media_image
+    - field.field.media.image.field_media_in_library
+    - field.field.media.image.field_other_groups
+    - field.field.media.image.field_tags
+    - field.field.media.image.field_your_groups
+    - field.field.media.image.image
+    - image.style.field_preview
+    - media.type.image
+  module:
+    - focal_point
+_core:
+  default_config_hash: t_MEDcOpeSr3sYTIOsYojgOJfCqkNIJvQjXz2qYl5Fk
+id: media.image.simplified
+targetEntityType: media
+bundle: image
+mode: simplified
+content:
+  field_media_image:
+    type: image_focal_point
+    weight: 0
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: field_preview
+      preview_link: true
+      offsets: '50,50'
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  entitygroupfield: true
+  field_categories: true
+  field_image_alignment: true
+  field_media_in_library: true
+  field_other_groups: true
+  field_tags: true
+  field_your_groups: true
+  image: true
+  langcode: true
+  name: true
+  path: true
+  status: true
+  uid: true

@@ -1,0 +1,8 @@
+uuid: 7cba08cc-6e8d-472c-977e-8865b64e909f
+langcode: en
+status: true
+dependencies: {  }
+name: 'U.S. State'
+vid: us_state
+description: 'The 50 states, 5 territories, and 1 federal district of the United States.'
+weight: 0

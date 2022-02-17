@@ -6,14 +6,13 @@ dependencies:
     - block_content.type.blank
     - field.field.block_content.blank.field_background_class
     - field.field.block_content.blank.field_body
-    - field.field.block_content.blank.field_cards
     - field.field.block_content.blank.field_cta
     - field.field.block_content.blank.field_cta_style
     - field.field.block_content.blank.field_header
     - field.field.block_content.blank.field_media
-    - field.field.block_content.blank.og_audience
+    - field.field.block_content.blank.field_other_groups
+    - field.field.block_content.blank.field_your_groups
   module:
-    - entity_reference_revisions
     - link
     - options
     - text
@@ -28,15 +27,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 2
-    region: content
-  field_cards:
-    type: entity_reference_revisions_entity_view
-    label: hidden
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    weight: 5
     region: content
   field_cta:
     type: link
@@ -74,15 +64,9 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
-  og_audience:
-    type: entity_reference_label
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 6
-    region: content
 hidden:
   field_background_class: true
+  field_other_groups: true
+  field_your_groups: true
   langcode: true
   search_api_excerpt: true

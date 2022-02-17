@@ -1,0 +1,21 @@
+uuid: 9b160267-5088-4be1-b110-f2eb61aa90e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - node.type.vacancy
+  module:
+    - datetime
+id: node.vacancy.field_date
+field_name: field_date
+entity_type: node
+bundle: vacancy
+label: Deadline
+description: 'It is recommended that offices provide a specific application deadline date; however, ads can be open until filled. Please note that all attorney vacancies must be posted for a minimum of 5 calendar days.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

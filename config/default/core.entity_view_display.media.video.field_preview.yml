@@ -1,0 +1,66 @@
+uuid: 1971ba95-1f0a-475c-aef1-d33e9ea5ef6d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.field_preview
+    - field.field.media.video.field_media_cover_image
+    - field.field.media.video.field_media_in_library
+    - field.field.media.video.field_media_video_file
+    - field.field.media.video.field_other_groups
+    - field.field.media.video.field_your_groups
+    - image.style.field_preview
+    - media.type.video
+  module:
+    - svg_image
+_core:
+  default_config_hash: naV6pK0yw33I1JsRykzTuMpCRvIhe_wzoNXPal8ugTw
+id: media.video.field_preview
+targetEntityType: media
+bundle: video
+mode: field_preview
+content:
+  field_media_cover_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: field_preview
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: 1
+    region: ds_content
+  name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: ds_content
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: field_preview
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: 0
+    region: ds_content
+hidden:
+  created: true
+  entitygroupfield: true
+  field_media_in_library: true
+  field_media_video_file: true
+  field_other_groups: true
+  field_your_groups: true
+  langcode: true
+  search_api_excerpt: true
+  uid: true

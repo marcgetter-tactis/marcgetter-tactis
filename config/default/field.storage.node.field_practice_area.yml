@@ -1,0 +1,300 @@
+uuid: 31de7ca9-5d93-4a7f-a48f-2996ad241b69
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_practice_area
+field_name: field_practice_area
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: oarm-adminlaw
+      label: 'Administrative Law'
+    -
+      value: oarm-agri
+      label: Agriculture
+    -
+      value: oarm-avi
+      label: Aviation/Admiralty
+    -
+      value: oarm-arb
+      label: Adr/Arbitration
+    -
+      value: oarm-antitrade
+      label: 'Antitrust & Trade Regulation'
+    -
+      value: oarm-ap
+      label: 'Appellate Practice'
+    -
+      value: oarm-aplit
+      label: 'Appellate Litigation'
+    -
+      value: oarm-bank
+      label: Banking
+    -
+      value: oarm-bankrupt
+      label: Bankruptcy
+    -
+      value: oarm-bus
+      label: 'Business (Torts, Litigation)'
+    -
+      value: oarm-child
+      label: Children/Youth
+    -
+      value: oarm-civilen
+      label: 'Civil Enforcement'
+    -
+      value: oarm-civilliti
+      label: 'Civil Litigation'
+    -
+      value: oarm-civilrights
+      label: 'Civil Rights'
+    -
+      value: oarm-complib
+      label: 'Civil Liberties'
+    -
+      value: oarm-compli
+      label: 'Complex Litigation'
+    -
+      value: oarm-compliance
+      label: Compliance
+    -
+      value: oarm-compc
+      label: 'Computer Crime, Cyber Crime'
+    -
+      value: oarm-comptech
+      label: Computers/Technology
+    -
+      value: oarm-constilaw
+      label: 'Constitutional Law'
+    -
+      value: oarm-construction
+      label: Construction
+    -
+      value: oarm-consumep
+      label: 'Consumer Protection'
+    -
+      value: oarm-cptp
+      label: 'Copyrights & Trademark/Patent'
+    -
+      value: oarm-corpfraud
+      label: 'Corporate Fraud'
+    -
+      value: oarm-correctionallaw
+      label: 'Correctional Law'
+    -
+      value: oarm-counterterro
+      label: Counter-Terrorism
+    -
+      value: oarm-crimelaw
+      label: 'Criminal Law'
+    -
+      value: oarm-customs
+      label: Customs/Trade
+    -
+      value: oarm-cybercrime
+      label: Cybercrime
+    -
+      value: oarm-deathpen
+      label: 'Death Penalty'
+    -
+      value: oarm-disability
+      label: 'Disability/Mental Health'
+    -
+      value: oarm-domvio
+      label: 'Domestic Violence'
+    -
+      value: oarm-drugen
+      label: 'Drug Enforcement'
+    -
+      value: oarm-edu
+      label: Education
+    -
+      value: oarm-emin
+      label: 'Eminent Domain'
+    -
+      value: oarm-emdisc
+      label: 'Employment Discrimination'
+    -
+      value: oarm-emlaw
+      label: 'Employment Law'
+    -
+      value: oarm-energy
+      label: Energy
+    -
+      value: oarm-envi
+      label: Environment
+    -
+      value: oarm-emben
+      label: 'Employee Benefits'
+    -
+      value: oarm-fedemp
+      label: 'Federal Employees'
+    -
+      value: oarm-fislaw
+      label: 'Fiscal Law/Appropriations'
+    -
+      value: oarm-foreclosure
+      label: Foreclosure/Mortgage
+    -
+      value: oarm-fraud
+      label: Fraud
+    -
+      value: oarm-fipa
+      label: 'Freedom Of Information And Privacy Acts'
+    -
+      value: oarm-gaming
+      label: Gaming
+    -
+      value: oarm-governcon
+      label: 'Government Contracts'
+    -
+      value: oarm-grantlaw
+      label: 'Grant Law'
+    -
+      value: oarm-health
+      label: Health/Medical
+    -
+      value: oarm-healthcare
+      label: Healthcare
+    -
+      value: oarm-housing
+      label: Housing
+    -
+      value: oarm-humanrights
+      label: 'Human Rights'
+    -
+      value: oarm-immigration
+      label: Immigration
+    -
+      value: oarm-indianlaw
+      label: 'Indian Law'
+    -
+      value: oarm-insure
+      label: Insurance
+    -
+      value: oarm-intp
+      label: 'Intellectual Property'
+    -
+      value: oarm-intinv
+      label: 'Internal Investigations'
+    -
+      value: oarm-international
+      label: International
+    -
+      value: oarm-ic
+      label: 'Internet/Electronic Commerce'
+    -
+      value: oarm-juv
+      label: Juvenile
+    -
+      value: oarm-labor
+      label: Labor
+    -
+      value: oarm-leg
+      label: Legislation
+    -
+      value: oarm-malprac
+      label: Malpractice
+    -
+      value: oarm-mil
+      label: Military
+    -
+      value: oarm-misinv
+      label: 'Misconduct Investigations'
+    -
+      value: oarm-narcotics
+      label: Narcotics
+    -
+      value: oarm-nsi
+      label: 'National Security & Intelligence'
+    -
+      value: oarm-oversight
+      label: Oversight
+    -
+      value: oarm-pomiscon
+      label: 'Police Misconduct'
+    -
+      value: oarm-policy
+      label: Policy
+    -
+      value: oarm-prisonrights
+      label: 'Prisoners'' Rights'
+    -
+      value: oarm-privacy
+      label: Privacy
+    -
+      value: oarm-prodliability
+      label: 'Product Liability'
+    -
+      value: oarm-pri
+      label: 'Professional Responsibility Issues'
+    -
+      value: oarm-racialjust
+      label: 'Racial/Ethnic Justice'
+    -
+      value: oarm-realest
+      label: 'Real Estate'
+    -
+      value: oarm-relifree
+      label: 'Religious Freedom'
+    -
+      value: oarm-reg
+      label: Regulation
+    -
+      value: oarm-security
+      label: Securities
+    -
+      value: oarm-sepower
+      label: 'Separation of Power'
+    -
+      value: oarm-sspb
+      label: 'Social Security/Public Benefits'
+    -
+      value: oarm-slissues
+      label: 'State And Local Issues'
+    -
+      value: oarm-taxarea
+      label: Tax
+    -
+      value: oarm-telecomm
+      label: Telecommunications
+    -
+      value: oarm-tortlaw
+      label: 'Tort Law/Personal Injury'
+    -
+      value: oarm-tran
+      label: Transportation
+    -
+      value: oarm-trialp
+      label: 'Trial Practice'
+    -
+      value: oarm-vet
+      label: Veterans
+    -
+      value: oarm-vcrime
+      label: 'Violent Crime/Organized Crime/Gangs'
+    -
+      value: oarm-voting
+      label: 'Voting Rights'
+    -
+      value: oarm-wccrime
+      label: 'White Collar Crime'
+    -
+      value: oarm-wissues
+      label: 'Women''s Issues'
+    -
+      value: oarm-workcomp
+      label: 'Workers'' Compensation'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

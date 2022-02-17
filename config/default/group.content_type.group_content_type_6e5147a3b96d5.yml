@@ -1,0 +1,19 @@
+uuid: 7269625e-7e74-4582-82a9-4f7ac55abbfc
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.organization
+    - media.type.youtube_video
+  module:
+    - groupmedia
+    - media
+id: group_content_type_6e5147a3b96d5
+label: 'Organization: Group media (Youtube Video)'
+description: 'Adds <em class="placeholder">Youtube Video</em> content to groups both publicly and privately.'
+group_type: organization
+content_plugin: 'group_media:youtube_video'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

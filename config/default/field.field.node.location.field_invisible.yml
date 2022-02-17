@@ -1,0 +1,29 @@
+uuid: 511e72cb-65db-437c-a065-6ddd5ef87e54
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_invisible
+    - node.type.location
+    - taxonomy.vocabulary.invisible
+id: node.location.field_invisible
+field_name: field_invisible
+entity_type: node
+bundle: location
+label: 'Invisible Tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      invisible: invisible
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

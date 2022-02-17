@@ -1,0 +1,46 @@
+uuid: 06bbf960-6dd8-48e0-ba5c-aaff6b27f077
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.case_multi_defendant.field_attachment
+    - field.field.node.case_multi_defendant.field_case_multi_location
+    - field.field.node.case_multi_defendant.field_charges
+    - field.field.node.case_multi_defendant.field_exhibits
+    - field.field.node.case_multi_defendant.field_number
+    - field.field.node.case_multi_defendant.field_other_groups
+    - field.field.node.case_multi_defendant.field_status
+    - field.field.node.case_multi_defendant.field_trial_exhibits_description
+    - field.field.node.case_multi_defendant.field_your_groups
+    - node.type.case_multi_defendant
+  module:
+    - user
+id: node.case_multi_defendant.teaser
+targetEntityType: node
+bundle: case_multi_defendant
+mode: teaser
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  entitygroupfield: true
+  field_attachment: true
+  field_case_multi_location: true
+  field_charges: true
+  field_exhibits: true
+  field_number: true
+  field_other_groups: true
+  field_status: true
+  field_trial_exhibits_description: true
+  field_your_groups: true
+  langcode: true
+  search_api_excerpt: true

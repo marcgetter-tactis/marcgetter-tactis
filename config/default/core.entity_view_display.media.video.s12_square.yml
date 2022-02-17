@@ -1,0 +1,47 @@
+uuid: db72a832-9ca6-43a7-8479-7cfdeb54bf20
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.s12_square
+    - field.field.media.video.field_media_cover_image
+    - field.field.media.video.field_media_in_library
+    - field.field.media.video.field_media_video_file
+    - field.field.media.video.field_other_groups
+    - field.field.media.video.field_your_groups
+    - media.type.video
+  module:
+    - file
+_core:
+  default_config_hash: O8wqsoseZMqKL1cRCZJ9JABZ9Vr8db57HUX6KWbXlD4
+id: media.video.s12_square
+targetEntityType: media
+bundle: video
+mode: s12_square
+content:
+  field_media_video_file:
+    type: file_video
+    label: hidden
+    settings:
+      controls: true
+      autoplay: false
+      loop: false
+      multiple_file_display_type: tags
+      muted: false
+      width: 1200
+      height: 1200
+    third_party_settings: {  }
+    weight: 0
+    region: ds_content
+hidden:
+  created: true
+  entitygroupfield: true
+  field_media_cover_image: true
+  field_media_in_library: true
+  field_other_groups: true
+  field_your_groups: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

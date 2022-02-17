@@ -19,21 +19,35 @@ Blank Block
 
 .block-blank {
     padding: 3rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 6rem auto 5rem;
+    @media (max-width: 47.99em) {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto 5rem;
+    }
 
     h2.block-title {
       display: none;
     }
-    .field_header, .field_body, .field_cta, img {
-      @include grid-col(6);
-      
-      @media (max-width: 47.99em) {
-        @include grid-col(12);
+    
+    .field_media {
+      grid-column: 2;
+      grid-row: 1 / 4;
+      align-self: center;
+      @media (max-width: 47.99rem) {
+        grid-column: 1;
+        grid-row: 2;
       }
-    }
-  
-    img {
-      float: right;
-      object-fit: contain;
+      .image {
+        float: right;
+        @media (max-width: 47.99em) {
+          float: none;
+        }
+        img {
+          object-fit: contain;
+        }
+      }
     }
   
     .field_header {
@@ -41,7 +55,7 @@ Blank Block
       font-family: 'Source Serif Pro';
       font-weight: bold;
       font-size: 2rem;
-      float: left;
+      //float: left;
       
       &:after {
         content: "";
@@ -56,6 +70,7 @@ Blank Block
     
     .field_body {
       color: white;
+      line-height: 1.5;
     }
   
     .field_cta {
@@ -68,6 +83,10 @@ Blank Block
         border-radius: 2px;
         text-decoration: none;
         font-weight: bold;
+        &:hover {
+          color: color(primary-darker);
+          background: white;
+        }
       }
     }
   }

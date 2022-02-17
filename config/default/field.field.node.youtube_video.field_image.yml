@@ -1,0 +1,29 @@
+uuid: 2dadbb95-8140-4ce9-9546-ad878cc25d20
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image
+    - media.type.image
+    - node.type.youtube_video
+id: node.youtube_video.field_image
+field_name: field_image
+entity_type: node
+bundle: youtube_video
+label: Image
+description: 'This will be used whenever this video is shown on a listing page. This is optional, and will default to whatever is set in Youtube.com. However this field is strongly recommended if there is any chance that the image might need to be changed later.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

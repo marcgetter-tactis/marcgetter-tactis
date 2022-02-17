@@ -1,0 +1,21 @@
+uuid: 15ada0a0-f249-4743-8991-3d1c78ba0704
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_brief_type
+    - node.type.brief
+  module:
+    - options
+id: node.brief.field_brief_type
+field_name: field_brief_type
+entity_type: node
+bundle: brief
+label: Type
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

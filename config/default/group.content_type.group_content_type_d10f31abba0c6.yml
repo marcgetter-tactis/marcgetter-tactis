@@ -1,0 +1,19 @@
+uuid: 59e918d0-783b-4d55-b4e8-f3a59d98b3b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.organization
+    - node.type.case_document
+  module:
+    - gnode
+    - node
+id: group_content_type_d10f31abba0c6
+label: 'Organization: Group node (Case Document)'
+description: 'Adds <em class="placeholder">Case Document</em> content to groups both publicly and privately.'
+group_type: organization
+content_plugin: 'group_node:case_document'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

@@ -1,22 +1,20 @@
-uuid: e9bb5790-95f0-475d-8700-ab4f30467f73
+uuid: 61f54b02-a59b-4d8c-bf6e-ed94ab81160b
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - acquia_cms_video
-_core:
-  default_config_hash: vyn1UxiOe6zEPR1hEqzYVoCumqX0pRkHvz-zdXxjXPM
+  module:
+    - crop
+third_party_settings:
+  crop:
+    image_field: _none
 id: video
 label: Video
-description: 'Remotely hosted videos from external sources, e.g. YouTube, Vimeo.'
-source: 'oembed:video'
+description: 'A <em>Video</em> file is a moving visual recording.'
+source: video_file
 queue_thumbnail_downloads: false
 new_revision: true
 source_configuration:
-  source_field: field_media_oembed_video
-  thumbnails_directory: 'public://oembed_thumbnails'
-  providers:
-    - YouTube
-    - Vimeo
-field_map: {  }
+  source_field: field_media_video_file
+field_map:
+  name: name
+  filesize: field_media_video_file

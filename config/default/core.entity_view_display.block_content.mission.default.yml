@@ -11,9 +11,10 @@ dependencies:
     - field.field.block_content.mission.field_cta_style
     - field.field.block_content.mission.field_heading
     - field.field.block_content.mission.field_image
+    - field.field.block_content.mission.field_other_groups
     - field.field.block_content.mission.field_statistics
     - field.field.block_content.mission.field_statistics_header
-    - field.field.block_content.mission.og_audience
+    - field.field.block_content.mission.field_your_groups
   module:
     - entity_reference_revisions
     - link
@@ -28,17 +29,24 @@ content:
     type: entity_reference_entity_view
     label: hidden
     settings:
-      view_mode: default
+      view_mode: medium
       link: false
-    third_party_settings: {  }
-    weight: 7
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    weight: 0
     region: content
   field_body:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
   field_cta:
     type: link
@@ -50,14 +58,14 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 3
+    weight: 4
     region: content
   field_cta_style:
     type: list_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 4
+    weight: 5
     region: content
   field_heading:
     type: string
@@ -65,7 +73,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   field_image:
     type: entity_reference_entity_view
@@ -74,7 +82,7 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
   field_statistics:
     type: entity_reference_revisions_entity_view
@@ -83,7 +91,7 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 6
+    weight: 7
     region: content
   field_statistics_header:
     type: string
@@ -91,17 +99,11 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 5
-    region: content
-  og_audience:
-    type: entity_reference_label
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 8
+    weight: 6
     region: content
 hidden:
   field_background_class: true
+  field_other_groups: true
+  field_your_groups: true
   langcode: true
   search_api_excerpt: true

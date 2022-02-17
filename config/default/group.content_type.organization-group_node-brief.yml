@@ -1,0 +1,19 @@
+uuid: 8de3471f-fc68-4127-93de-75d27e0d95e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.organization
+    - node.type.brief
+  module:
+    - gnode
+    - node
+id: organization-group_node-brief
+label: 'Organization: Group node (Brief)'
+description: 'Adds <em class="placeholder">Brief</em> content to groups both publicly and privately.'
+group_type: organization
+content_plugin: 'group_node:brief'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

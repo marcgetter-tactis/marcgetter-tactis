@@ -1,0 +1,21 @@
+uuid: 51e4768b-fc40-4e1c-be95-98218732197e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_practice_area
+    - node.type.vacancy
+  module:
+    - options
+id: node.vacancy.field_practice_area
+field_name: field_practice_area
+entity_type: node
+bundle: vacancy
+label: 'Practice Area'
+description: 'Choose practices area(s) related to the position. Note, candidates will be able to search jobs based upon information provided. To select more than one practice area, click additional practice areas while pressing the ''Control'' key.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

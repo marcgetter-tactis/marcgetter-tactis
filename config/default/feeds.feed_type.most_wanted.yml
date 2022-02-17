@@ -1,0 +1,498 @@
+uuid: 7c185386-c0c7-4c0c-9bf6-09ef1b021f95
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.most_wanted.status
+    - core.base_field_override.node.most_wanted.title
+    - field.field.node.most_wanted.field_additional_information
+    - field.field.node.most_wanted.field_age_range
+    - field.field.node.most_wanted.field_aliases
+    - field.field.node.most_wanted.field_caution
+    - field.field.node.most_wanted.field_date_of_birth_used
+    - field.field.node.most_wanted.field_description
+    - field.field.node.most_wanted.field_details
+    - field.field.node.most_wanted.field_download_poster
+    - field.field.node.most_wanted.field_eyes
+    - field.field.node.most_wanted.field_hair
+    - field.field.node.most_wanted.field_height
+    - field.field.node.most_wanted.field_most_wanted_category
+    - field.field.node.most_wanted.field_most_wanted_images
+    - field.field.node.most_wanted.field_nationality
+    - field.field.node.most_wanted.field_place_of_birth
+    - field.field.node.most_wanted.field_race
+    - field.field.node.most_wanted.field_reward
+    - field.field.node.most_wanted.field_scars_and_marks
+    - field.field.node.most_wanted.field_sex
+    - field.field.node.most_wanted.field_suspects
+    - field.field.node.most_wanted.field_uid
+    - field.field.node.most_wanted.field_weight
+    - node.type.most_wanted
+  module:
+    - feeds_ex
+    - feeds_tamper
+    - node
+third_party_settings:
+  feeds_tamper:
+    tampers:
+      655bf361-b562-48da-b0e1-04ba00839376:
+        default_value: '1'
+        only_if_empty: false
+        uuid: 655bf361-b562-48da-b0e1-04ba00839376
+        plugin: default_value
+        source: status
+        weight: 0
+        label: 'Set value or default value'
+label: 'Most Wanted'
+id: most_wanted
+description: ''
+help: ''
+import_period: -1
+fetcher: http
+fetcher_configuration:
+  auto_detect_feeds: false
+  use_pubsubhubbub: false
+  always_download: false
+  fallback_hub: ''
+  request_timeout: 30
+parser: jsonpath
+parser_configuration:
+  sources:
+    title:
+      value: title
+      label: title
+    uid:
+      value: uid
+      label: uid
+    additional_information:
+      value: additional_information
+      label: additional_information
+    age_range:
+      value: age_range
+      label: age_range
+    aliases:
+      value: aliases
+      label: aliases
+    dates_of_birth_used:
+      value: dates_of_birth_used
+      label: dates_of_birth_used
+    description:
+      value: description
+      label: description
+    details:
+      value: details
+      label: details
+    _files_url_3:
+      value: '.files[*].url'
+      label: '.files[*].url'
+    _files_name_3:
+      value: '.files[*].name'
+      label: '.files[*].name'
+    eyes:
+      value: eyes
+      label: eyes
+    hair:
+      value: hair
+      label: hair
+    height:
+      value: height
+      label: height
+    nationality:
+      value: nationality
+      label: nationality
+    place_of_birth:
+      value: place_of_birth
+      label: place_of_birth
+    race:
+      value: race
+      label: race
+    reward_text:
+      value: reward_text
+      label: reward_text
+    scars_and_marks:
+      value: scars_and_marks
+      label: scars_and_marks
+    sex_1:
+      value: sex
+      label: sex
+    weight:
+      value: weight
+      label: weight
+    status:
+      value: status
+      label: status
+    suspects:
+      value: suspects
+      label: suspects
+    caution:
+      value: caution
+      label: caution
+    _subjects_:
+      value: '.subjects[*]'
+      label: '.subjects[*]'
+    _images_original:
+      value: '.images[*].original'
+      label: '.images[*].original'
+  context:
+    value: '$.items.*'
+  source_encoding:
+    - auto
+  display_errors: false
+  debug_mode: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: most_wanted
+  langcode: en
+  insert_new: 1
+  update_existing: 1
+  update_non_existent: _delete
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  title:
+    value: title
+    label: title
+    machine_name: title
+  uid:
+    value: uid
+    label: uid
+    machine_name: uid
+  additional_information:
+    value: additional_information
+    label: additional_information
+    machine_name: additional_information
+  age_range:
+    value: age_range
+    label: age_range
+    machine_name: age_range
+  aliases:
+    value: aliases
+    label: aliases
+    machine_name: aliases
+  dates_of_birth_used:
+    value: dates_of_birth_used
+    label: dates_of_birth_used
+    machine_name: dates_of_birth_used
+  description:
+    value: description
+    label: description
+    machine_name: description
+  details:
+    value: details
+    label: details
+    machine_name: details
+  files_name_:
+    value: 'files[''name'']'
+    label: 'files[''name'']'
+    machine_name: files_name_
+  files_url_:
+    value: 'files[''url'']'
+    label: 'files[''url'']'
+    machine_name: files_url_
+  eyes:
+    value: eyes
+    label: eyes
+    machine_name: eyes
+  field_offices:
+    value: field_offices
+    label: field_offices
+    machine_name: field_offices
+  hair:
+    value: hair
+    label: hair
+    machine_name: hair
+  height:
+    value: height
+    label: height
+    machine_name: height
+  images_original_:
+    value: 'images[''original'']'
+    label: 'images[''original'']'
+    machine_name: images_original_
+  nationality:
+    value: nationality
+    label: nationality
+    machine_name: nationality
+  occupations:
+    value: occupations
+    label: occupations
+    machine_name: occupations
+  place_of_birth:
+    value: place_of_birth
+    label: place_of_birth
+    machine_name: place_of_birth
+  race:
+    value: race
+    label: race
+    machine_name: race
+  reward_text:
+    value: reward_text
+    label: reward_text
+    machine_name: reward_text
+  scars_and_marks:
+    value: scars_and_marks
+    label: scars_and_marks
+    machine_name: scars_and_marks
+  sex:
+    value: sex
+    label: sex
+    machine_name: sex
+  sex_1:
+    value: sex
+    label: sex
+    machine_name: sex_1
+  suspects:
+    value: suspects
+    label: suspects
+    machine_name: suspects
+  weight:
+    value: weight
+    label: weight
+    machine_name: weight
+  '':
+    value: ''
+    label: ''
+    machine_name: ''
+  status:
+    value: status
+    label: status
+    machine_name: status
+  files:
+    value: files
+    label: files
+    machine_name: files
+  images:
+    value: images
+    label: images
+    machine_name: images
+  original:
+    value: original
+    label: original
+    machine_name: original
+  files_name:
+    value: files.name
+    label: files.name
+    machine_name: files_name
+  _items_files_name:
+    value: files
+    label: files
+    machine_name: _items_files_name
+  _items_files_name_1:
+    value: $.items.files.name
+    label: $.items.files.name
+    machine_name: _items_files_name_1
+  _files_url:
+    value: '.files[*].url'
+    label: '.files[*].url'
+    machine_name: _files_url
+  _files_url_1:
+    value: .files.url_1
+    label: .files.url_1
+    machine_name: _files_url_1
+  _files_name:
+    value: .files.name
+    label: .files.name
+    machine_name: _files_name
+  _files_url_2:
+    value: .files.url
+    label: .files.url
+    machine_name: _files_url_2
+  _files_url_3:
+    value: '.files[*].url'
+    label: '.files[*].url'
+    machine_name: _files_url_3
+  _files_name_3:
+    value: '.files[*].name'
+    label: '.files[*].name'
+    machine_name: _files_name_3
+  _images_original:
+    value: '.images[*].original'
+    label: '.images[*].original'
+    machine_name: _images_original
+  caution:
+    value: caution
+    label: caution
+    machine_name: caution
+  subjects:
+    value: subjects
+    label: subjects
+    machine_name: subjects
+  _subjects_:
+    value: '.subjects[*]'
+    label: '.subjects[*]'
+    machine_name: _subjects_
+mappings:
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_uid
+    map:
+      value: uid
+    settings:
+      language: null
+    unique:
+      value: '1'
+  -
+    target: field_additional_information
+    map:
+      value: additional_information
+    settings:
+      language: ''
+      format: full_html
+  -
+    target: field_age_range
+    map:
+      value: age_range
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_aliases
+    map:
+      value: aliases
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_date_of_birth_used
+    map:
+      value: dates_of_birth_used
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_description
+    map:
+      value: description
+    settings:
+      language: ''
+      format: full_html
+  -
+    target: field_details
+    map:
+      value: details
+    settings:
+      language: ''
+      format: full_html
+  -
+    target: field_download_poster
+    map:
+      uri: _files_url_3
+      title: _files_name_3
+    settings:
+      language: null
+  -
+    target: field_eyes
+    map:
+      value: eyes
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_hair
+    map:
+      value: hair
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_height
+    map:
+      value: height
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_nationality
+    map:
+      value: nationality
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_place_of_birth
+    map:
+      value: place_of_birth
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_race
+    map:
+      value: race
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_reward
+    map:
+      value: reward_text
+    settings:
+      language: ''
+      format: full_html
+  -
+    target: field_scars_and_marks
+    map:
+      value: scars_and_marks
+    settings:
+      language: ''
+      format: full_html
+  -
+    target: field_sex
+    map:
+      value: sex_1
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_weight
+    map:
+      value: weight
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: status
+    map:
+      value: status
+    settings:
+      language: null
+  -
+    target: field_suspects
+    map:
+      value: suspects
+    settings:
+      language: ''
+      format: full_html
+  -
+    target: field_caution
+    map:
+      value: caution
+    settings:
+      language: ''
+      format: full_html
+  -
+    target: field_most_wanted_category
+    map:
+      target_id: _subjects_
+    settings:
+      language: ''
+      reference_by: name
+      autocreate: '1'
+  -
+    target: field_most_wanted_images
+    map:
+      uri: _images_original
+      title: ''
+    settings:
+      language: null

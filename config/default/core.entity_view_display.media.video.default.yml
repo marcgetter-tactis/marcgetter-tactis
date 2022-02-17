@@ -1,53 +1,58 @@
-uuid: 18e61372-b7f0-46da-9134-1f37cc4a812e
+uuid: f79ce92e-fb22-4a0f-9299-3116c8c58131
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.video.field_categories
-    - field.field.media.video.field_media_oembed_video
-    - field.field.media.video.field_tags
-    - image.style.thumbnail
+    - field.field.media.video.field_media_cover_image
+    - field.field.media.video.field_media_in_library
+    - field.field.media.video.field_media_video_file
+    - field.field.media.video.field_other_groups
+    - field.field.media.video.field_your_groups
     - media.type.video
   module:
-    - image
-    - user
-_core:
-  default_config_hash: NhkfMu08aVPZxQm1-61vhiYVxjtLQShYS47bnXfCYg4
+    - file
 id: media.video.default
 targetEntityType: media
 bundle: video
 mode: default
 content:
-  created:
-    type: timestamp
-    label: hidden
+  field_media_video_file:
+    type: file_video
+    label: visually_hidden
     settings:
-      date_format: medium
-      custom_date_format: ''
-      timezone: ''
+      controls: true
+      autoplay: false
+      loop: false
+      multiple_file_display_type: tags
+      muted: false
+      width: 640
+      height: 480
     third_party_settings: {  }
     weight: 0
     region: content
-  thumbnail:
-    type: image
-    label: hidden
+  field_other_groups:
+    type: entity_reference_label
+    label: above
     settings:
-      image_link: ''
-      image_style: thumbnail
+      link: true
     third_party_settings: {  }
-    weight: 5
+    weight: 1
     region: content
-  uid:
-    type: author
-    label: hidden
-    settings: {  }
+  field_your_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
     third_party_settings: {  }
-    weight: 0
+    weight: 2
     region: content
 hidden:
-  field_categories: true
-  field_media_oembed_video: true
-  field_tags: true
+  created: true
+  entitygroupfield: true
+  field_media_cover_image: true
+  field_media_in_library: true
   langcode: true
   name: true
   search_api_excerpt: true
+  thumbnail: true
+  uid: true

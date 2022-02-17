@@ -1,0 +1,19 @@
+uuid: 5dc6b80f-e9c4-409a-a963-df95ba27778c
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.organization
+    - node.type.location
+  module:
+    - gnode
+    - node
+id: organization-group_node-location
+label: 'Organization: Group node (Location)'
+description: 'Adds <em class="placeholder">Location</em> content to groups both publicly and privately.'
+group_type: organization
+content_plugin: 'group_node:location'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

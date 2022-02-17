@@ -9,11 +9,12 @@ dependencies:
     - field.field.node.staff_profile.field_component
     - field.field.node.staff_profile.field_dates_service
     - field.field.node.staff_profile.field_name
+    - field.field.node.staff_profile.field_other_groups
     - field.field.node.staff_profile.field_portrait
     - field.field.node.staff_profile.field_portrait_download
     - field.field.node.staff_profile.field_position
     - field.field.node.staff_profile.field_teaser
-    - field.field.node.staff_profile.og_audience
+    - field.field.node.staff_profile.field_your_groups
     - node.type.staff_profile
   module:
     - text
@@ -23,6 +24,11 @@ targetEntityType: node
 bundle: staff_profile
 mode: teaser
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   field_name:
     type: string
     label: hidden
@@ -44,13 +50,15 @@ content:
     weight: 0
     region: content
 hidden:
+  entitygroupfield: true
   field_body: true
   field_byline: true
   field_component: true
   field_dates_service: true
+  field_other_groups: true
   field_portrait: true
   field_portrait_download: true
   field_position: true
+  field_your_groups: true
   langcode: true
-  og_audience: true
   search_api_excerpt: true

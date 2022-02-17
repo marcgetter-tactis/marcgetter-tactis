@@ -1,0 +1,19 @@
+uuid: 6fbc24d4-5d5c-41b4-bd37-bc81be7fd45c
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_anonymous_tip
+field_name: field_anonymous_tip
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

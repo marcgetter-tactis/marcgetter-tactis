@@ -1,0 +1,27 @@
+uuid: 5e9e0080-709a-48f7-848e-1791e34f4c84
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_destination
+field_name: field_destination
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: justice
+      label: justice.gov
+    -
+      value: dojnet
+      label: dojnet.doj.gov
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

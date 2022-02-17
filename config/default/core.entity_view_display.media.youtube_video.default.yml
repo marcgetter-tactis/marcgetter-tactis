@@ -1,0 +1,49 @@
+uuid: 5b7c8800-2a77-4b03-a228-51263ec292d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.youtube_video.field_media_oembed_video
+    - field.field.media.youtube_video.field_other_groups
+    - field.field.media.youtube_video.field_your_groups
+    - media.type.youtube_video
+  module:
+    - media
+id: media.youtube_video.default
+targetEntityType: media
+bundle: youtube_video
+mode: default
+content:
+  field_media_oembed_video:
+    type: oembed
+    label: visually_hidden
+    settings:
+      max_width: 0
+      max_height: 0
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_other_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_your_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  created: true
+  entitygroupfield: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

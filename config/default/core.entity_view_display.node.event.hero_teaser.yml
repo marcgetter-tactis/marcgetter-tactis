@@ -15,16 +15,16 @@ dependencies:
     - field.field.node.event.field_link
     - field.field.node.event.field_location
     - field.field.node.event.field_notes
+    - field.field.node.event.field_other_groups
     - field.field.node.event.field_press
     - field.field.node.event.field_registration
     - field.field.node.event.field_timezone
-    - field.field.node.event.og_audience
+    - field.field.node.event.field_your_groups
     - node.type.event
   module:
     - address
     - layout_builder
     - link
-    - og
     - options
     - text
     - user
@@ -37,6 +37,11 @@ targetEntityType: node
 bundle: event
 mode: hero_teaser
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   field_audience:
     type: list_default
     label: above
@@ -124,25 +129,13 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
-  og_audience:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 101
-    region: content
-  og_group:
-    type: og_group_subscribe
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 0
-    region: content
 hidden:
+  entitygroupfield: true
   field_attachment: true
   field_body: true
   field_datetime: true
   field_file_private_force: true
+  field_other_groups: true
+  field_your_groups: true
   langcode: true
   search_api_excerpt: true

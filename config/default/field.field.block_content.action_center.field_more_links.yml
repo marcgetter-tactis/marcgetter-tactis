@@ -1,0 +1,21 @@
+uuid: 716032e0-6c3d-4329-a054-8127590fa6a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.action_center
+    - field.storage.block_content.field_more_links
+id: block_content.action_center.field_more_links
+field_name: field_more_links
+entity_type: block_content
+bundle: action_center
+label: 'More Links Button Text'
+description: 'Enter the text that will display on the button to expand the section to show the remaining action items.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 'More Links'
+default_value_callback: ''
+settings: {  }
+field_type: string

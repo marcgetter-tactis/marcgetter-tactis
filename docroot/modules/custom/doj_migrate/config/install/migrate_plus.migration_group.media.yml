@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies: {  }
+id: media
+label: 'Media'
+description: 'Migrate Drupal 7 files to media'
+source_type: 'Drupal 7'
+module: null
+shared_configuration:
+  source:
+    key: migrate

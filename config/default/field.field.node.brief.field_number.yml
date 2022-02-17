@@ -1,0 +1,19 @@
+uuid: 89fad122-ec31-4dd0-bb70-bd2aff809723
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_number
+    - node.type.brief
+id: node.brief.field_number
+field_name: field_number
+entity_type: node
+bundle: brief
+label: 'Docket Number'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

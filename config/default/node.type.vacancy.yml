@@ -1,0 +1,35 @@
+uuid: fdc06289-3d59-40cd-88f2-44e269b9f93f
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - node_title_help_text
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: true
+    publish_past_date: error
+    publish_past_date_created: false
+    publish_required: true
+    publish_revision: true
+    publish_touch: false
+    show_message_after_update: true
+    unpublish_enable: true
+    unpublish_required: true
+    unpublish_revision: true
+  node_title_help_text:
+    title_help: ''
+name: 'Vacancy Announcement'
+type: vacancy
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

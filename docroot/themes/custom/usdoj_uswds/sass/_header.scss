@@ -4,7 +4,7 @@ header.usa-header--extended {
     background-color: color(primary-darker);
     max-width: 100%;
     min-height: 5rem;
-    @media (min-width: 64em) {
+    @include at-media(desktop) {
       height: 7.75rem;
       overflow: hidden;
     }
@@ -149,10 +149,10 @@ header.usa-header--extended {
       background-color: color(primary-darker);
       bottom: 1.6rem;
       justify-content: center;
-      margin-bottom: 1.6rem;
+      margin-bottom: -1.6rem;
       @include search-field;
-      .width-mobile {
-        border-top: 1px solid $gray-cool-50;
+      input.usa-input {
+        max-width: calc(100% - 2rem);
       }
     }
   }

@@ -1,0 +1,51 @@
+uuid: b3229d7b-7c9d-4c5f-8a27-2bc3e630b025
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.location.field_body
+    - field.field.node.location.field_district
+    - field.field.node.location.field_email
+    - field.field.node.location.field_end_date
+    - field.field.node.location.field_invisible
+    - field.field.node.location.field_language
+    - field.field.node.location.field_latlong
+    - field.field.node.location.field_link
+    - field.field.node.location.field_location
+    - field.field.node.location.field_other_groups
+    - field.field.node.location.field_start_date
+    - field.field.node.location.field_text
+    - field.field.node.location.field_uid
+    - field.field.node.location.field_your_groups
+    - node.type.location
+  module:
+    - user
+id: node.location.teaser
+targetEntityType: node
+bundle: location
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  entitygroupfield: true
+  field_body: true
+  field_district: true
+  field_email: true
+  field_end_date: true
+  field_invisible: true
+  field_language: true
+  field_latlong: true
+  field_link: true
+  field_location: true
+  field_other_groups: true
+  field_start_date: true
+  field_text: true
+  field_uid: true
+  field_your_groups: true
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,109 @@
+uuid: 5dbd5061-e907-488f-adeb-42b256a682e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.se2e
+    - field.field.media.video.field_media_cover_image
+    - field.field.media.video.field_media_in_library
+    - field.field.media.video.field_media_video_file
+    - field.field.media.video.field_other_groups
+    - field.field.media.video.field_your_groups
+    - media.type.video
+    - responsive_image.styles.de2e_standard
+  module:
+    - blazy
+_core:
+  default_config_hash: iuM-KUugFUBHnTQa0f-Uwqn6b4mpujIQUCG6v6dnzWE
+id: media.video.se2e
+targetEntityType: media
+bundle: video
+mode: se2e
+content:
+  field_media_cover_image:
+    type: blazy
+    label: hidden
+    settings:
+      caption:
+        title: '0'
+        alt: '0'
+      icon: ''
+      layout: ''
+      view_mode: ''
+      cache: 0
+      current_view_mode: se2e
+      skin: ''
+      fx: ''
+      lazy: ''
+      loading: lazy
+      preload: false
+      style: ''
+      background: false
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      responsive_image_style: de2e_standard
+      box_style: ''
+      image_style: ''
+      media_switch: ''
+      ratio: ''
+      thumbnail_style: ''
+      _uri: ''
+      breakpoints: {  }
+      sizes: ''
+      grid_header: ''
+      grid: '0'
+      grid_medium: '0'
+      grid_small: '0'
+    third_party_settings: {  }
+    weight: 1
+    region: ds_content
+  thumbnail:
+    type: blazy
+    label: hidden
+    settings:
+      caption:
+        title: '0'
+        alt: '0'
+      icon: ''
+      layout: ''
+      view_mode: ''
+      cache: 0
+      current_view_mode: se2e
+      skin: ''
+      fx: ''
+      lazy: ''
+      loading: lazy
+      preload: false
+      style: ''
+      background: false
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      responsive_image_style: de2e_standard
+      box_style: ''
+      image_style: ''
+      media_switch: ''
+      ratio: ''
+      thumbnail_style: ''
+      _uri: ''
+      breakpoints: {  }
+      sizes: ''
+      grid_header: ''
+      grid: '0'
+      grid_medium: '0'
+      grid_small: '0'
+    third_party_settings: {  }
+    weight: 0
+    region: ds_content
+hidden:
+  created: true
+  entitygroupfield: true
+  field_media_in_library: true
+  field_media_video_file: true
+  field_other_groups: true
+  field_your_groups: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  uid: true

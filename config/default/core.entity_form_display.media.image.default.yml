@@ -4,8 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.media.image.field_categories
+    - field.field.media.image.field_image_alignment
     - field.field.media.image.field_media_image
+    - field.field.media.image.field_media_in_library
+    - field.field.media.image.field_other_groups
     - field.field.media.image.field_tags
+    - field.field.media.image.field_your_groups
     - field.field.media.image.image
     - image.style.medium
     - media.type.image
@@ -32,6 +36,21 @@ third_party_settings:
         id: ''
         description: ''
         required_fields: true
+    group_organization:
+      children:
+        - field_your_groups
+        - field_other_groups
+      label: Organization
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
 _core:
   default_config_hash: DswrNLTtYwdNcwMDO7bacuaQXqWFAxeLOCcxxNjjPeg
 id: media.image.default
@@ -45,15 +64,29 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_image_alignment:
+    type: options_select
+    weight: 26
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_other_groups:
+    type: options_select
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_tags:
-    type: entity_reference_autocomplete_tags
+    type: options_select
     weight: 6
     region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
+    third_party_settings: {  }
+  field_your_groups:
+    type: options_select
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
   image:
     type: image_image
@@ -87,7 +120,9 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  entitygroupfield: true
   field_media_image: true
+  field_media_in_library: true
   path: true
   status: true
   uid: true

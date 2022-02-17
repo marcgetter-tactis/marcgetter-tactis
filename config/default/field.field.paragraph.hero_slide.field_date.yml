@@ -1,0 +1,21 @@
+uuid: 68f1f51b-6601-43c1-8cb3-99bac36c534a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_date
+    - paragraphs.paragraphs_type.hero_slide
+  module:
+    - datetime
+id: paragraph.hero_slide.field_date
+field_name: field_date
+entity_type: paragraph
+bundle: hero_slide
+label: Date
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

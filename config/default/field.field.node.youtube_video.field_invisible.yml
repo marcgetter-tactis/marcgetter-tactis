@@ -1,0 +1,29 @@
+uuid: fcfc86d1-ff7b-42b0-a66e-3a498adf019a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_invisible
+    - node.type.youtube_video
+    - taxonomy.vocabulary.invisible
+id: node.youtube_video.field_invisible
+field_name: field_invisible
+entity_type: node
+bundle: youtube_video
+label: 'Invisible Tags'
+description: 'This tags will not be visible to the public in any way whatsoever. They are only useful if you need to group videos in some way other than what is possible with the other fields (video category, component, etc.) If you need to add a tag to this list, contact your site administrators.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      invisible: invisible
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

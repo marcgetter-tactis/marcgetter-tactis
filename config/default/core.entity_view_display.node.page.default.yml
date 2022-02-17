@@ -3,10 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.page.feeds_item
     - field.field.node.page.field_body
     - field.field.node.page.field_left_navigation_menu
+    - field.field.node.page.field_other_groups
+    - field.field.node.page.field_your_groups
     - field.field.node.page.layout_builder__layout
-    - field.field.node.page.og_audience
     - node.type.page
   module:
     - layout_builder
@@ -23,7 +25,49 @@ third_party_settings:
         layout_settings:
           label: 'Full-Width Above 2-Column'
           context_mapping: {  }
-        components: {  }
+        components:
+          b1583eb1-fa6d-40dd-892a-a35a0646a275:
+            uuid: b1583eb1-fa6d-40dd-892a-a35a0646a275
+            region: content
+            configuration:
+              id: 'extra_field_block:node:page:content_moderation_control'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 0
+            additional: {  }
+          026e70a4-17d9-4a93-be49-c5c593bcf339:
+            uuid: 026e70a4-17d9-4a93-be49-c5c593bcf339
+            region: content
+            configuration:
+              id: 'field_block:node:page:field_other_groups'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          467c9d2a-b9ee-4b58-a772-ff12fda44afd:
+            uuid: 467c9d2a-b9ee-4b58-a772-ff12fda44afd
+            region: content
+            configuration:
+              id: 'field_block:node:page:field_your_groups'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
         third_party_settings: {  }
       -
         layout_id: layout_twocol_section
@@ -101,6 +145,11 @@ targetEntityType: node
 bundle: page
 mode: default
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   field_body:
     type: text_default
     label: above
@@ -116,20 +165,30 @@ content:
     third_party_settings: {  }
     weight: 103
     region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 100
-    region: content
-  og_audience:
+  field_other_groups:
     type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    weight: 101
+    weight: 105
+    region: content
+  field_your_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
     region: content
 hidden:
+  entitygroupfield: true
+  feeds_item: true
   langcode: true
   layout_builder__layout: true
   search_api_excerpt: true

@@ -756,6 +756,10 @@ $settings['entity_update_backup'] = TRUE;
  */
 $settings['migrate_node_migrate_type_classic'] = FALSE;
 
+if (file_exists('/var/www/site-php')) {
+    $settings['simplesamlphp_dir'] = "/var/www/html/" . $_ENV['AH_SITE_NAME'] . "/simplesamlphp";
+}
+
 /**
  * Load local development override configuration, if available.
  *

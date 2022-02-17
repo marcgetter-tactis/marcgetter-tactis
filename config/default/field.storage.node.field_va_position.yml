@@ -1,0 +1,30 @@
+uuid: aadb4f04-5017-46f7-87ce-3d3b63deb114
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_va_position
+field_name: field_va_position
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: attorney
+      label: Attorney
+    -
+      value: law_student_volunteer_academic_year
+      label: 'Law Student Volunteer, Academic Year'
+    -
+      value: law_student_volunteer_summer
+      label: 'Law Student Volunteer, Summer'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

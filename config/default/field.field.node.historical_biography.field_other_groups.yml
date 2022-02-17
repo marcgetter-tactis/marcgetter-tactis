@@ -1,0 +1,29 @@
+uuid: 11489f77-0ac2-4ef4-bf33-a49b6c4af277
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_other_groups
+    - group.type.organization
+    - node.type.historical_biography
+id: node.historical_biography.field_other_groups
+field_name: field_other_groups
+entity_type: node
+bundle: historical_biography
+label: 'Other Groups'
+description: 'As groups administrator, associate this content with groups you do not belong to.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:group'
+  handler_settings:
+    target_bundles:
+      organization: organization
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,29 @@
+uuid: f70ede84-2c8f-4f57-80ce-28760b292261
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.blank
+    - field.storage.node.field_your_groups
+    - group.type.organization
+id: block_content.blank.field_your_groups
+field_name: field_your_groups
+entity_type: block_content
+bundle: blank
+label: 'Your Groups'
+description: 'Associate this content with groups you belong to.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:group'
+  handler_settings:
+    target_bundles:
+      organization: organization
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

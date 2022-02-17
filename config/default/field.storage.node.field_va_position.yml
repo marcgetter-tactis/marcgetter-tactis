@@ -12,14 +12,14 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: '1'
-      label: '1'
+      value: attorney
+      label: Attorney
     -
-      value: '2'
-      label: '2'
+      value: law_student_volunteer_academic_year
+      label: 'Law Student Volunteer, Academic Year'
     -
-      value: '3'
-      label: '3'
+      value: law_student_volunteer_summer
+      label: 'Law Student Volunteer, Summer'
   allowed_values_function: ''
 module: options
 locked: false

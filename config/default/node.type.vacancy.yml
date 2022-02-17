@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - menu_ui
+    - node_title_help_text
     - scheduler
 third_party_settings:
   menu_ui:
@@ -23,7 +24,9 @@ third_party_settings:
     unpublish_enable: true
     unpublish_required: true
     unpublish_revision: true
-name: Vacancy
+  node_title_help_text:
+    title_help: ''
+name: 'Vacancy Announcement'
 type: vacancy
 description: ''
 help: ''

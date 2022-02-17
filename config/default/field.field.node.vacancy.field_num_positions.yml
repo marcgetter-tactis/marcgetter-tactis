@@ -10,7 +10,7 @@ field_name: field_num_positions
 entity_type: node
 bundle: vacancy
 label: 'Number of Positions'
-description: ''
+description: "<ul>\r\n<li><strong>For Attorney Positions: </strong>Indicate the specific number of positions being filled.</li>\r\n<li><strong>For Volunteer Internships: </strong>For volunteer positions, indicate the number of projected volunteer positions for spring, summer, and fall internships.</li>\r\n</ul>"
 required: false
 translatable: false
 default_value: {  }

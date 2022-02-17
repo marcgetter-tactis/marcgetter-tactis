@@ -10,7 +10,7 @@ field_name: field_salary
 entity_type: node
 bundle: vacancy
 label: Salary
-description: ''
+description: "<ul>\r\n<li><strong>For Attorney Positions: </strong>Include the appropriate grade and/or salary range, with locality pay adjustments, based upon the number of years of experience required for the position. See, OARM compendium for information about <a href=\"https://dojnet.doj.gov/oarm/compendium/3-1.php#3-point-1\" target=\"_blank\">starting salaries for attorneys</a>.\r\n<br/>\r\n*Do not include information on how starting salaries will be determined (e.g., previous salary), as salary determinations are made later in the hiring process.\r\n</li>\r\n<li><strong>For Volunteer Internships: </strong>Or, indicate if these are student volunteers, (uncompensated) and whether the office works with law schools that offer academic course credit or work-study.</li>\r\n</ul>"
 required: false
 translatable: false
 default_value: {  }

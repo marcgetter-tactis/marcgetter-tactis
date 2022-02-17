@@ -10,7 +10,7 @@ field_name: field_relocation_expenses
 entity_type: node
 bundle: vacancy
 label: 'Relocation Expenses'
-description: ''
+description: 'Indicate whether or not relocation expenses will be authorized.'
 required: false
 translatable: false
 default_value: {  }

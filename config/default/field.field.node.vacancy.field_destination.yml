@@ -1,0 +1,21 @@
+uuid: 29586293-8331-48ce-9991-f7fb1988236e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_destination
+    - node.type.vacancy
+  module:
+    - options
+id: node.vacancy.field_destination
+field_name: field_destination
+entity_type: node
+bundle: vacancy
+label: Destinations
+description: "<p>The Department's policy is to publicly advertise all career attorney vacancies, attorney supervisory and detail opportunities, and law student volunteer opportunities. Components seeking to limit the area of consideration and/or posting of an announcement must first seek approval from OARM.</p>\r\n<p>Attorney and law volunteer vacancies must be posted on justice.gov (<a target=\"_blank\" href=\"http://www.justice.gov/legal-careers/vacancies\">http://www.justice.gov/legal-careers/vacancies</a>). Attorney detail announcements, or vacancy announcements that are limited scope, must be posted on DOJNet (<a target=\"_blank\" href=\"http://dojnet.doj.gov/oarm/attvacancies.php\">http://dojnet.doj.gov/oarm/attvacancies.php</a>).</p>"
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

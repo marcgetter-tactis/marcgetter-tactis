@@ -14,9 +14,12 @@ function doj_migrate_uninstall() {
     'migrate_plus.migration.doj_migrate_file_public',
     'migrate_plus.migration.doj_migrate_taxonomy_terms',
     'migrate_plus.migration.doj_migrate_taxonomy_vocabulary',
+    'migrate_plus.migration.doj_migrate_user_role',
+    'migrate_plus.migration.doj_migrate_user',
     'migrate_plus.migration_group.default',
     'migrate_plus.migration_group.media',
     'migrate_plus.migration_group.taxonomy',
+    'migrate_plus.migration_group.user',
   ];
   foreach ($configs as $config) {
     \Drupal::configFactory()->getEditable($config)->delete();

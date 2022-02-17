@@ -10,7 +10,7 @@ field_name: field_travel
 entity_type: node
 bundle: vacancy
 label: Travel
-description: ''
+description: 'Outline specific travel requirements if applicable.'
 required: false
 translatable: false
 default_value: {  }

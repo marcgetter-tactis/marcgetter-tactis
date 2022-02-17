@@ -5,14 +5,14 @@ dependencies:
   config:
     - field.storage.node.field_hiring_org
     - node.type.vacancy
-    - taxonomy.vocabulary.hiring_groups_audience
+    - taxonomy.vocabulary.hiring_organizations
 id: node.vacancy.field_hiring_org
 field_name: field_hiring_org
 entity_type: node
 bundle: vacancy
-label: 'Hiring Groups Audience'
+label: 'Hiring Organization'
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
@@ -20,10 +20,10 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      hiring_groups_audience: hiring_groups_audience
+      hiring_organizations: hiring_organizations
     sort:
       field: name
       direction: asc
     auto_create: false
-    auto_create_bundle: ''
+    auto_create_bundle: hiring_groups_audience
 field_type: entity_reference

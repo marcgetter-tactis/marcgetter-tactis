@@ -1,9 +1,9 @@
-uuid: e2a293d5-eebc-42fb-8f78-77571283a75f
+uuid: e082699c-b7c3-4fc0-b6fb-5155c6aedd1e
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:general:58af1775-f564-48cb-b65e-42dfe980dae0'
+    - 'block_content:general:f1c61516-0f81-41e0-85f8-3a5b435466ff'
   module:
     - block_content
     - collapsiblock
@@ -18,9 +18,9 @@ theme: usdoj_uswds
 region: sidebar_first
 weight: -5
 provider: null
-plugin: 'block_content:58af1775-f564-48cb-b65e-42dfe980dae0'
+plugin: 'block_content:f1c61516-0f81-41e0-85f8-3a5b435466ff'
 settings:
-  id: 'block_content:58af1775-f564-48cb-b65e-42dfe980dae0'
+  id: 'block_content:f1c61516-0f81-41e0-85f8-3a5b435466ff'
   label: 'Connect with us'
   label_display: visible
   provider: block_content
@@ -31,4 +31,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: /news
+    pages: "/news\r\n/news/*"

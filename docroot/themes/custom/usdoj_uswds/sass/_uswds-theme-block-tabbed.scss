@@ -21,12 +21,14 @@ Tabbed Block on Homepage
 .block-tabbed {
   padding: 3rem 0;
   
-  .block-title {
-    font-weight: 700;
-  }
-
   .field_header {
-    display: none;
+    font-weight: 700;
+    @extend h2;
+    text-align: center;
+    &::after {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   .panels { 
@@ -63,7 +65,7 @@ Tabbed Block on Homepage
           span {
             color: color(primary-darker);
             font-weight: bold;
-            border-bottom: 3px solid color(warning);
+            border-bottom: .25rem solid color(warning);
             }
 
           ~ .panel-content {
@@ -82,9 +84,10 @@ Tabbed Block on Homepage
           margin: 0 auto;
           @media (min-width: 48rem) {
             display: inline;
-            padding: 0 0 1.85rem 0;
+            padding: 0 0 1.75rem 0;
             font-size: 1rem;
             max-width: max-content;
+            cursor: pointer;
           }
         }
       }
@@ -165,6 +168,8 @@ Tabbed Block on Homepage
                 height: 4rem;
                 justify-content: center;
                 align-items: center;
+                @include u-font-family("sans");
+                font-weight: bold;
               }
             } 
           }
@@ -178,16 +183,9 @@ Tabbed Block on Homepage
               padding: 0;
               height: 12rem;
               line-height: 12rem;
-              @media (min-width: 24em) {
-                height: 15rem;
-                line-height: 15rem;
-              }
               img {
                 max-height: 12rem;
                 vertical-align: middle;
-                @media (min-width: 24em) {
-                  max-height: 15rem;
-                }
               }
             }
             
@@ -202,6 +200,7 @@ Tabbed Block on Homepage
                 margin: 1rem auto 0;
                 font-weight: normal;
                 font-size: .9rem;
+                color: $gray-60;
               }
             }
             

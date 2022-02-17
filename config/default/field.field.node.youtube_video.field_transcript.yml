@@ -17,7 +17,7 @@ field_name: field_transcript
 entity_type: node
 bundle: youtube_video
 label: Transcript
-description: ''
+description: 'This field will be automatically populated from Youtube. However, you can manually paste text in here, if you would like. This is not displayed on the site - instead it is only used for the purposes of keyword searching on the videos landing page.'
 required: false
 translatable: true
 default_value: {  }

@@ -12,14 +12,41 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: '1'
-      label: 'Brief Type 1'
+      value: petition_for_writ_of_certiorari
+      label: 'Petition for Writ of Certiorari'
     -
-      value: '2'
-      label: 'Brief Type 2'
+      value: appendix_to_petition
+      label: 'Appendix to Petition'
     -
-      value: '3'
-      label: 'Brief Type 3'
+      value: petition_stage_reply_brief
+      label: 'Petition Stage Reply Brief'
+    -
+      value: petition_stage_amicus_brief_invitation
+      label: 'Petition Stage Amicus Brief (Invitation)'
+    -
+      value: petition_stage_amicus_brief_uninvited
+      label: 'Petition Stage Amicus Brief (Uninvited)'
+    -
+      value: petition_stage_supplemental_brief
+      label: 'Petition Stage Supplemental Brief'
+    -
+      value: petition_stage_response
+      label: 'Petition Stage Response'
+    -
+      value: merits_stage_brief
+      label: 'Merits Stage Brief'
+    -
+      value: merits_stage_reply_brief
+      label: 'Merits Stage Reply Brief'
+    -
+      value: merits_stage_amicus_brief
+      label: 'Merits Stage Amicus Brief'
+    -
+      value: post_argument_brief
+      label: 'Post Argument Brief'
+    -
+      value: original_actions_all
+      label: 'Original Actions: All'
   allowed_values_function: ''
 module: options
 locked: false

@@ -3,13 +3,37 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.hero_slide.field_badge
+    - field.field.paragraph.hero_slide.field_date
     - field.field.paragraph.hero_slide.field_featured_content
+    - field.field.paragraph.hero_slide.field_image
+    - field.field.paragraph.hero_slide.field_link
     - paragraphs.paragraphs_type.hero_slide
+  module:
+    - datetime
+    - link
 id: paragraph.hero_slide.default
 targetEntityType: paragraph
 bundle: hero_slide
 mode: default
 content:
+  field_badge:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_date:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: standard_date_format
+    third_party_settings: {  }
+    weight: 4
+    region: content
   field_featured_content:
     type: entity_reference_entity_view
     label: hidden
@@ -17,7 +41,28 @@ content:
       view_mode: hero_teaser
       link: false
     third_party_settings: {  }
-    weight: 5
+    weight: 0
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: large_landscape
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
     region: content
 hidden:
   search_api_excerpt: true

@@ -1,0 +1,19 @@
+uuid: 175ae574-5771-4a9b-977b-f6161c3a7768
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_badge
+    - paragraphs.paragraphs_type.hero_slide
+id: paragraph.hero_slide.field_badge
+field_name: field_badge
+entity_type: paragraph
+bundle: hero_slide
+label: Badge
+description: 'This text will appear above the title.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

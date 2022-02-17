@@ -33,34 +33,45 @@
     {{ form.search_api_fulltext }} 
   </div>
 {% endif %}
-<div class="grid-row filters">
-  <div class="grid-col-12 mobile-lg:grid-col-6">
-    {{ form.field_component }}
-  </div>
 
-  <div class="grid-col-12 mobile-lg:grid-col-6">
-    {{ form.langcode }}
-  </div>
+<div class="grid-container filters">
+  <div class="grid-row grid-gap">
+    <div class="grid-col-12 mobile-lg:grid-col-6">
+      {{ form.field_component }}
+    </div>
 
-  <div class="grid-col-12 mobile-lg:grid-col-6">
-    {{ form.field_topic }}
-  </div>
+    <div class="grid-col-12 mobile-lg:grid-col-6">
+      {{ form.langcode }}
+    </div>
+  
+    <div class="grid-col-12 mobile-lg:grid-col-6">
+      {{ form.field_topic }}
+    </div>
 
-  <div class="grid-col-12 mobile-lg:grid-col-6">
-    <div class="grid-row">
-      <div class="grid-col-6">
-        {{ form.start_date }}
-      </div>
-      <div class="grid-col-6">
-        {{ form.end_date }}
+    <div class="grid-col-12 mobile-lg:grid-col-6">
+      <div class="grid-row grid-gap">
+        <div class="grid-col-6">
+          {{ form.start_date }}
+        </div>
+        <div class="grid-col-6">
+          {{ form.end_date }}
+        </div>
       </div>
     </div>
+  
+    {% for item in form|children|slice(7)  %}
+      {{ item }}
+    {% endfor %}
   </div>
+</div>
 
-  {% for item in form|children|slice(6)  %}
-    {{ item }}
-    {# {{drupal_dump(item)}} #}
-  {% endfor %}
+<div class="view-results">
+  <div class="view-results-total">
+    {{ view.header.area.options.content.value }}
+  </div>
+  <div class="view-results-sort">
+    {{ form.sort_by }}
+  </div>
 </div>
 
 

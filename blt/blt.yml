@@ -13,6 +13,7 @@ git:
     - 'justicegov@svn-37631.prod.hosting.acquia.com:justicegov.git'
 deploy:
   tag_source: true
+simplesamlphp: true
 drush:
   aliases:
     remote: '${project.machine_name}gov.dev'
@@ -44,5 +45,6 @@ validate:
       - drupal_token
       - drupal_url
       - drupal_view
+      - glb_classes
     filters:
       - children

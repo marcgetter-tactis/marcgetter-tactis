@@ -1,9 +1,9 @@
 langcode: en
 status: true
 dependencies: {  }
-id: taxonomy
-label: 'Taxonomy'
-description: 'Migrate Drupal 7 Taxonomy'
+id: user
+label: 'User'
+description: 'Migrate Drupal 7 users'
 source_type: 'Drupal 7'
 module: null
 shared_configuration:

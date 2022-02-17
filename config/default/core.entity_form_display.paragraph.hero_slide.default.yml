@@ -3,23 +3,51 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.hero_slide.field_badge
+    - field.field.paragraph.hero_slide.field_date
     - field.field.paragraph.hero_slide.field_featured_content
+    - field.field.paragraph.hero_slide.field_image
+    - field.field.paragraph.hero_slide.field_link
     - paragraphs.paragraphs_type.hero_slide
+  module:
+    - datetime
+    - link
+    - media_library
 id: paragraph.hero_slide.default
 targetEntityType: paragraph
 bundle: hero_slide
 mode: default
 content:
-  field_featured_content:
-    type: entity_reference_autocomplete
-    weight: 5
+  field_badge:
+    type: string_textfield
+    weight: 0
     region: content
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_date:
+    type: datetime_default
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_image:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_link:
+    type: link_default
+    weight: 2
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
 hidden:
   created: true
+  field_featured_content: true
   status: true

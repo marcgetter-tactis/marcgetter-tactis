@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.timeline.field_group
     - field.field.node.timeline.field_other_groups
     - field.field.node.timeline.field_timeline_events
     - field.field.node.timeline.field_your_groups
@@ -42,16 +41,6 @@ content:
     weight: 10
     region: content
     settings: {  }
-    third_party_settings: {  }
-  field_group:
-    type: entity_reference_autocomplete
-    weight: 122
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
   field_other_groups:
     type: options_select

@@ -1,20 +1,20 @@
-uuid: 5653fc5c-9c29-4de6-92ac-4ea14a6feff5
+uuid: 1ba1ecb8-8eb8-49f3-85f5-9882c19e756a
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_link
+    - field.storage.node.field_links
     - node.type.resource
   module:
     - link
-id: node.resource.field_link
-field_name: field_link
+id: node.resource.field_links
+field_name: field_links
 entity_type: node
 bundle: resource
 label: Links
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

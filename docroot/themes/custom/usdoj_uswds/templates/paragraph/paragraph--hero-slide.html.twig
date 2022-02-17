@@ -1,0 +1,16 @@
+<article{{ attributes }}>
+
+    <div class="hero-wrapper">
+        <div class="hero-image">{{ content.field_image }}</div>
+        <div class="hero-text-wrapper">
+            <div class="hero-type">{{ content.field_badge }}</div>
+            <h2>
+               {{ content.field_link }}
+            </h2>
+            {% if content.field_date['#title'] is not empty %}
+            <div class="hero-date">{{ content.field_date }}</div>
+            {% endif %}
+        </div>
+    </div>
+
+</article>

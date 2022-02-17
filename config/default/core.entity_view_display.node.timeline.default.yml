@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.timeline.field_group
     - field.field.node.timeline.field_other_groups
     - field.field.node.timeline.field_timeline_events
     - field.field.node.timeline.field_your_groups
@@ -19,14 +18,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: -20
-    region: content
-  field_group:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 102
     region: content
   field_other_groups:
     type: entity_reference_label

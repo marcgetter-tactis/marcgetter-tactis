@@ -6,4 +6,8 @@ ignored_config_entities:
   - 'crop.type.focal_point:uuid'
   - purge.plugins
   - purge.logger_channels
+  - system.site.yml
+  - shield.settings
+  - siteimprove.domain.single.settings.yml
+  - siteimprove.settings.yml
 enable_export_filtering: true

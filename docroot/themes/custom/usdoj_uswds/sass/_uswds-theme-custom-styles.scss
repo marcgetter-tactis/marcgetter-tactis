@@ -803,13 +803,21 @@ header.usa-header--extended {
         }
       }
     }
-
     &.usdojMobileMenuSlider {
       .usdojMobileMenuSlider__activeChild {
         background-color: white;
       }
 
       .usa-nav__primary {
+
+        A{
+          &:not(.usa-button){
+            &:hover {
+              background-color: transparent;
+            }
+          }
+        }
+
         .usa-nav__primary-item {
           background-color: transparent;
 
@@ -825,6 +833,10 @@ header.usa-header--extended {
 
             &__hidden {
               display: none;
+            }
+
+            &__open {
+              background-color: $doj-darkgray;
             }
           }
 
@@ -949,11 +961,11 @@ header.usa-header--extended {
         @include add-background-svg("usa-icons-bg/expand_more--white");
 
         &:hover {
-          @include add-background-svg("usa-icons-bg/expand_more--doj-darkblue");
+          @include add-background-svg("doj-icon-expand_more--doj-darkblue","../images" );
         }
       }
       &[aria-expanded="true"] {
-        @include add-background-svg("usa-icons/expand_less--doj-darkblue");
+        @include add-background-svg("doj-icon-expand_less--doj-darkblue","../images");
         background-color: $theme-color-accent-warm;
         color: $doj-darkblue;
       }

@@ -57,6 +57,7 @@ Press Release Search
       }
     }
 
+    //keyword search
     .form-item-search-api-fulltext {
       background: $blue-cool-5;
       border-left: 3px solid color(primary-darker);
@@ -94,11 +95,13 @@ Press Release Search
         }
       }
 
+      //calendar icon color
       img.filter-primary-darker {
-        filter: invert(15%) sepia(7%) saturate(7494%) hue-rotate(182deg) brightness(96%) contrast(95%);
+        filter: brightness(0) saturate(100%) invert(12%) sepia(79%) saturate(889%) hue-rotate(184deg) brightness(95%) contrast(92%);
       }
     }
 
+    //sort title and date
     .form-item-sort-by {
       display: grid;
       grid-template-columns: 35% 65%;
@@ -118,6 +121,7 @@ Press Release Search
     } 
   }
 
+  //count of results from view
   .results-count {
     height: 6rem;
     display: flex;
@@ -126,21 +130,26 @@ Press Release Search
     color: color(primary-darker);
   }
 
+  //view results
   .views-row {
     border-top: 1px solid $gray-20;
     padding-top: 2rem;
+    
     .node-type {
       font-size: .8rem;
       padding-bottom: .5rem;
     }
+    
     h2.views-field-title {
       margin: 0;
       line-height: 1.5rem;
+    
       &:after {
         border-top-width: 2px;
         border-bottom: none;
         margin: .25rem 0;
       }
+    
       a {
         color: color(primary-darker); 
         font-size: 1.25rem;
@@ -150,9 +159,32 @@ Press Release Search
         }
       }
     }
+    
+    //published date
     .views-field-field-date-1 {
       padding-bottom: 2rem;
       font-size: .9rem;
     }  
+  }
+
+  //pagination
+  .usa-pagination {
+    font-weight: bold;
+    .usa-pagination__button {
+      color: $doj-coolblue;
+      border-radius: 2px;
+    }
+    .usa-current {
+      background-color: color(primary-darker);
+      color: $theme-color-accent-warm;
+    }
+    .usa-pagination__item {
+      span {
+        color: color(primary-darker);
+      }
+      svg.usa-icon {
+        filter: brightness(0) saturate(100%) invert(12%) sepia(79%) saturate(889%) hue-rotate(184deg) brightness(95%) contrast(92%); 
+      }
+    }
   }
 }

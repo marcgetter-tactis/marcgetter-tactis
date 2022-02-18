@@ -79,6 +79,32 @@ function usdoj_utilities_form_alter(&$form, FormStateInterface $form_state, $for
       }
       break;
 
+    case 'node_timeline_event_form':
+    case 'node_timeline_event_edit_form':
+
+      $form['#attached']['library'][] = 'usdoj_utilities/usdoj_admin';
+
+      $form['field_timeline_event_date']['#attributes']['class'][] = 'chosen-hide-monthday';
+
+      // Select date widget begins in 1900, so expand its reach.
+      $default_start_year = "1776";
+      $default_end_year = date("Y");
+      $default_year_range = "{$default_start_year} : {$default_end_year}";
+
+      $form['field_timeline_event_date']['widget'][0]['value']['#date_year_range'] = $default_year_range;
+      $form['field_timeline_event_date']['widget'][0]['end_value']['#date_year_range'] = $default_year_range;
+
+      // Set default dates only when adding new entities.
+      if ($form_id == 'node_timeline_event_form') {
+        $current_year = date("Y");
+        $default_date = strtotime("{$current_year}-01-01");
+        $default_datetime_obj = DrupalDateTime::createFromTimeStamp($default_date);
+
+        $form['field_timeline_event_date']['widget'][0]['value']['#default_value'] = $default_datetime_obj;
+        $form['field_timeline_event_date']['widget'][0]['end_value']['#default_value'] = $default_datetime_obj;
+      }
+      break;
+
   }
 
   return $form;

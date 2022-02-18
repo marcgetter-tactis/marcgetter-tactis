@@ -182,9 +182,11 @@ module:
   seckit: 0
   serialization: 0
   settings_tray: 0
+  shield: 0
   shortcode: 0
   simple_sitemap: 0
   simplesamlphp_auth: 0
+  siteimprove: 0
   sitewide_alert: 0
   slick: 0
   smart_sql_idmap: 0

@@ -12,7 +12,7 @@ entity_type: node
 bundle: most_wanted
 label: 'Your Groups'
 description: 'Associate this content with groups you belong to.'
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''

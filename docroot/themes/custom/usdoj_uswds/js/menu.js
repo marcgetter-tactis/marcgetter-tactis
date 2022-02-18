@@ -31,15 +31,17 @@
 
     }
   };
-  Drupal.behaviors.usdojMobileMenuSlider = {
+  Drupal.behaviors.usdojMMSlider = {
     attach: function (context, settings) {
 
-      once('usdojMobileMenuSlider', 'html', context).forEach(function (element) {
+      once('usdojMMSlider', 'html', context).forEach(function (element) {
 
         const header = context.getElementById("header");
         const nav = header.querySelector("nav.usa-nav");
         const menuClasses = {
-          mainWrapper: "usdojMobileMenuSlider",
+          mainWrapper: "usdojMobileMenuSlider", // This class is now added by
+                                                // default via twig file to fix
+                                                // browser inconsistencies
           activeChild: "usdojMobileMenuSlider__activeChild",
           itemOpen: "usdojMobileMenuSlider__open",
           itemHidden: "usdojMobileMenuSlider__hidden"
@@ -51,15 +53,14 @@
         const desktopBreakpoint = 1024;
         let parentBtn, nestedBtn, parentSiblings;
 
-
         if (!header && !nav) {
           return;
         }
 
         // Option 1 - Check if we are below the Desktop Breakpoint, before
         // applying the class
-        if (window.innerWidth < desktopBreakpoint) {
-          header.classList.add(menuClasses.mainWrapper)
+        if (window.innerWidth > desktopBreakpoint) {
+          header.classList.remove(menuClasses.mainWrapper)
         }
 
         // Option 2 - If Option 1 fails, we monitor for window resizing.
@@ -99,10 +100,10 @@
         }
         //If left open, close and reset menu to menu_level_0
         const resetOpenMenu = () => {
-          if(!!parentBtn === false || !!nestedBtn === false) {
+          if (!!parentBtn === false || !!nestedBtn === false) {
             return
           }
-          nestedBtn.setAttribute('aria-expanded','false');
+          nestedBtn.setAttribute('aria-expanded', 'false');
           toggleClasses("remove");
         }
 
@@ -128,11 +129,12 @@
 
 
         observer.observe(header);
-        menuBtn.addEventListener('click',resetOpenMenu);
-        nav.addEventListener('click', (evt)=>{
-          if(evt.target === evt.currentTarget) {
+        menuBtn.addEventListener('click', resetOpenMenu);
+        nav.addEventListener('click', (evt) => {
+          if (evt.target === evt.currentTarget) {
             resetOpenMenu();
-          }else{
+          }
+          else {
             triggerSlider(evt);
           }
         });

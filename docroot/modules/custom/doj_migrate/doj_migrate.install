@@ -10,8 +10,13 @@
  */
 function doj_migrate_uninstall() {
   $configs = [
+    'migrate_plus.migration.doj_migrate_file',
     'migrate_plus.migration.doj_migrate_file_private',
     'migrate_plus.migration.doj_migrate_file_public',
+    'migrate_plus.migration.doj_migrate_file_to_media_audio',
+    'migrate_plus.migration.doj_migrate_file_to_media_document',
+    'migrate_plus.migration.doj_migrate_file_to_media_image',
+    'migrate_plus.migration.doj_migrate_file_to_media_video',
     'migrate_plus.migration.doj_migrate_taxonomy_terms',
     'migrate_plus.migration.doj_migrate_taxonomy_vocabulary',
     'migrate_plus.migration.doj_migrate_user_role',

@@ -19,6 +19,21 @@ i.e.
 ----------------------------------------
 */
 
+//ToDo-NP: Clean up file structure.
+/*
+*******TABLE OF CONTENTS********
+
+TOC 00 - Shared Site-wide Styles
+TOC 01 - Primary MegaMenu
+
+*******TABLE OF CONTENTS********
+ */
+
+
+
+/************************************************
+TOC 00 - Shared Site-wide Styles - START
+************************************************/
 body {
   color: $theme-color-base;
 }
@@ -139,6 +154,7 @@ strong {
 hr {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
+  color: $gray-20;
 }
 
 aside {
@@ -242,6 +258,12 @@ aside {
   }
 }
 
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 //*******************
 //* Node fields START
 //*******************
@@ -314,6 +336,19 @@ aside {
   color: $gray-80;
 }
 
+.node-body {
+  color: $gray-70;
+  line-height: 1.6;
+  p {
+    margin-top:2.5em;
+    margin-bottom: 2.5em;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
 .event-date {
   margin-bottom: $node-field-spacing;
 }
@@ -340,6 +375,12 @@ aside {
   img {
     @extend .img-fluid;
   }
+}
+
+.node-summary {
+  color: $gray-70;
+  line-height:1.65;
+
 }
 
 .node-attachments {
@@ -439,6 +480,16 @@ aside {
       font-size: $theme-h6-font-size;
     }
   }
+}
+
+.node-transcript {
+  line-height: 1.6
+}
+
+.node-audio {
+  audio {
+      width: 100%;
+    }
 }
 
 .node-info-box {
@@ -703,8 +754,37 @@ aside {
   }
 }
 
+details {
+  border: 1px solid $gray-cool-20;
+  border-radius: 4px;
+  padding: .5em .5em 0;
+
+  &[open] {
+    padding: .5em;
+
+    summary {
+      border-bottom: 1px solid $gray-cool-20;
+      margin-bottom: .5em;
+    }
+  }
+
+  summary {
+    font-weight: bold;
+    margin: -.5em -.5em 0;
+    padding: .5em;
+  }
+}
+
+.img-responsive {
+  @include img-responsive;
+}
+
+
 /************************************************
-Primary Menu (with Images) - START
+TOC 00 - Shared Site-wide Styles - END
+************************************************/
+/************************************************
+TOC 01 - Primary Menu (with Images) - START
 ************************************************/
 
 header.usa-header--extended {
@@ -1020,5 +1100,5 @@ header.usa-header--extended {
   }
 }
 /************************************************
-Primary Menu (with Images) - END
+TOC01 - Primary Menu (with Images) - END
 ************************************************/

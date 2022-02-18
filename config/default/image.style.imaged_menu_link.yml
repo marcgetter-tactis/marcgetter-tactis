@@ -7,8 +7,8 @@ dependencies:
 name: imaged_menu_link
 label: 'Imaged Menu Link (215x200)'
 effects:
-  df76520a-1e0c-4daa-9364-66e8aacceca8:
-    uuid: df76520a-1e0c-4daa-9364-66e8aacceca8
+  538d9b15-9680-46b5-8e22-9f4d8f35cbad:
+    uuid: 538d9b15-9680-46b5-8e22-9f4d8f35cbad
     id: focal_point_scale_and_crop
     weight: 2
     data:

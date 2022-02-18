@@ -1,0 +1,17 @@
+uuid: f69019fe-8bef-4c85-8f1e-5efb2ed2d576
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: cover_image_950x520
+label: 'Cover Image (950 x 520)'
+effects:
+  29868189-6fa3-4dae-839d-4ce4bb4b2815:
+    uuid: 29868189-6fa3-4dae-839d-4ce4bb4b2815
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 950
+      height: 520
+      crop_type: focal_point

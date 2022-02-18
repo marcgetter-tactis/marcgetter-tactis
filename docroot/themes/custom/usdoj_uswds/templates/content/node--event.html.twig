@@ -111,23 +111,32 @@
 
     <div class="node-top">
       <div class="node-top-left">
-        <div class="node-date">{{ content.field_date }}</div>
+        <div class="event-date"><div><strong>Date:</strong></div>{{ content.field_datetime }}</div>
+        <div class="event-location"><div><strong>Location:</strong></div>{{ content.field_location }}</div>
+        <div class="node-component"><div><strong>DOJ Component</strong></div>{{ content.field_component }}</div>
       </div>
 
       <div class="node-top-right">
         <div class="node-info-box">
-          <strong>For Immediate Release</strong><br />
-          <span>Release Number:</span> {{ content.field_number[0] }}<br />
-          Office of Public Affairs<br />
-          <a href="mailto:publicaffairs@justice.gov">publicaffairs@justice.gov</a>
+          <div class="node-links">
+            <strong>Event Link{{ content.field_link|length > 1 ? 's' }}</strong><p>Learn more about {{label}} here</p>{{ content.field_link }}
+          </div>
+
+          <a href="{{ content.field_registration[0] }}" class="usa-button usa-button--active margin-top-3 icon-button">Register for Event <img src="/themes/custom/usdoj_uswds/assets/img/external-link-alt-hover.svg" width="20" height="20" alt="link icon" /></a>
         </div>
       </div>
     </div>
 
-    <div{{ content_attributes.addClass("node-body")}}>
+    <div class="node-notes">
+      {{ content.field_notes }}
+    </div>
+
+    <div class="node-contact-info"><h3 class="field-header">Event Contact Information</h3>{{ content.field_contact_info }}</div>
+    <div class="node-press-info"><h3 class="field-header">Press Information</h3>{{ content.field_press }}</div>
+
+    <div{{ content_attributes.addClass("node-body")}}><h3 class="field-header">Event Details</h3>
       {{ content.field_body }}
       </div>
-    <hr>
 
     {% if attachment|render|trim is not empty %}
     <div class="node-attachments">
@@ -135,8 +144,6 @@
       {{ usdojMacros.detailedAttachments(attachmentNode,"field__item") }}
     </div>
     {% endif %}
-
-    <div class="node-topics"><div><strong>Tags</strong></div>{{ content.field_topic }}</div>
-    <div class="node-component"><div><strong>Component or Office</strong></div>{{ content.field_component }}</div>
   </div>
+
   </article>

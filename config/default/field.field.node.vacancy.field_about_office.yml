@@ -17,7 +17,7 @@ field_name: field_about_office
 entity_type: node
 bundle: vacancy
 label: 'About the Office'
-description: ''
+description: 'Explain the essential mission of the office in clear language. In addition, specific to this vacancy, describe the work of the office, the kinds of cases that a candidate can expect to handle, the office environment, and the office’s receptivity to diversity of perspective and experience, etc.'
 required: false
 translatable: false
 default_value: {  }

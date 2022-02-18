@@ -10,7 +10,7 @@ field_name: field_job_id
 entity_type: node
 bundle: vacancy
 label: 'Job Announcement Number'
-description: ''
+description: 'A job announcement number is not required.'
 required: false
 translatable: false
 default_value: {  }

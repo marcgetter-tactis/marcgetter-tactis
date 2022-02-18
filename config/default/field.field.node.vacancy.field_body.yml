@@ -17,7 +17,7 @@ field_name: field_body
 entity_type: node
 bundle: vacancy
 label: 'Job Description'
-description: ''
+description: "<ul>\r\n<li><strong>For Attorney Positions: </strong>Be specific about role, range and focus of assignments, external clients, etc.  Indicate if the position is a detail, NTE, or other type of appointment and whether it may be extended or converted to permanent without further competition.</li>\r\n<li><strong>For Volunteer Internships: </strong>Describe the assignments a volunteer will receive, issues and cases involved, and with whom they work (internal and external).  Highlight any unique or noteworthy aspects/benefits of the internship (issues, stakes, variety, exposure, programs or training).</li>\r\n</ul>"
 required: false
 translatable: true
 default_value: {  }

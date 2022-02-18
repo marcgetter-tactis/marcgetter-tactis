@@ -17,7 +17,7 @@ field_name: field_application_process
 entity_type: node
 bundle: vacancy
 label: 'Application Process'
-description: ''
+description: 'Instruct candidates on how to apply, list any required submission materials (resume, cover letter, writing sample, list of references, transcript, etc.), contact information and deadline date. Provide a link to the hiring organization’s web site. And, for volunteer internships, provide preferred application deadlines for spring, summer and fall internships, and request that students indicate their dates of availability.'
 required: false
 translatable: false
 default_value: {  }

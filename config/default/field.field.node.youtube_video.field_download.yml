@@ -11,7 +11,7 @@ id: node.youtube_video.field_download
 field_name: field_download
 entity_type: node
 bundle: youtube_video
-label: Link
+label: 'Download Link'
 description: ''
 required: false
 translatable: false

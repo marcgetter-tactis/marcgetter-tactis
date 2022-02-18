@@ -50,6 +50,7 @@ module:
   default_content: 0
   devel: 0
   devel_entity_updates: 0
+  devel_generate: 0
   diff: 0
   doj_migrate: 0
   dropzonejs: 0

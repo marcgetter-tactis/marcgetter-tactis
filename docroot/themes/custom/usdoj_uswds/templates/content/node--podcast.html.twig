@@ -103,7 +103,7 @@
         {% endif %}
     </aside>
 
-    <div class="usa-layout-docs__main desktop:grid-col-9">
+    <div class="usa-layout-docs__main desktop:grid-col-9 node-content">
 
         {% if asideNav %}
             {# We need a different UI for the asideNav on mobile, so let's handle its styling differently #}
@@ -128,11 +128,11 @@
             {# {{ episodeType }} #}
             {# </div> #}
 
-            {% if date|render|trim is not empty %}
+            {% if date %}
                 <div class="node-date margin-bottom-7">{{ date }}</div>
             {% endif %}
 
-            {% if cover_art|render|trim is not empty %}
+            {% if cover_art %}
                 <div class="node-coverImage img-responsive margin-bottom-7">{{ cover_art }}</div>
             {% endif %}
 
@@ -155,7 +155,7 @@
                 </div>
             {% endif %}
 
-            {% if audio|render|trim is not empty %}
+            {% if audio %}
                 <div class="node-audio margin-bottom-7">
                     {{ audio }}
                 </div>
@@ -171,7 +171,7 @@
 
             <hr>
 
-            {% if attachment|render|trim is not empty %}
+            {% if attachment %}
                 <div class="node-attachments margin-bottom-7">
                     <div class="label text-bold">{{ attachmentNode['#items']|length == 1 ? "Attachment" : "Attachments" }}</div>
                     {{ usdojMacros.detailedAttachments(attachmentNode,"margin-y-2") }}
@@ -184,7 +184,7 @@
                     {{ credit }}</div>
             {% endif %}
 
-            <div class="node-component margin-bottom-7">
+            <div class="node-component">
                 <div class="label text-bold">Component or Office</div>
                 {{ component }}
             </div>

@@ -1,0 +1,17 @@
+uuid: 5f27801a-1221-4644-a619-2cf30568771b
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: teaser_image_950_x_520
+label: 'Teaser Image (950 x 520)'
+effects:
+  29868189-6fa3-4dae-839d-4ce4bb4b2815:
+    uuid: 29868189-6fa3-4dae-839d-4ce4bb4b2815
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 950
+      height: 520
+      crop_type: focal_point

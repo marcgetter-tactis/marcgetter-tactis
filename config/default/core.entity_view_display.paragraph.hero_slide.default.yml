@@ -8,10 +8,12 @@ dependencies:
     - field.field.paragraph.hero_slide.field_featured_content
     - field.field.paragraph.hero_slide.field_image
     - field.field.paragraph.hero_slide.field_link
+    - image.style.homepage_hero
     - paragraphs.paragraphs_type.hero_slide
   module:
     - datetime
     - link
+    - media
 id: paragraph.hero_slide.default
 targetEntityType: paragraph
 bundle: hero_slide
@@ -44,11 +46,11 @@ content:
     weight: 0
     region: content
   field_image:
-    type: entity_reference_entity_view
+    type: media_thumbnail
     label: hidden
     settings:
-      view_mode: large_landscape
-      link: false
+      image_link: ''
+      image_style: homepage_hero
     third_party_settings: {  }
     weight: 2
     region: content

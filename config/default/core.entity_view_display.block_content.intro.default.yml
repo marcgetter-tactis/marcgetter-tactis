@@ -1,0 +1,60 @@
+uuid: e04243d6-a595-48c0-a2fa-da9acbbdca64
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.intro
+    - field.field.block_content.intro.field_body
+    - field.field.block_content.intro.field_heading
+    - field.field.block_content.intro.field_image
+    - field.field.block_content.intro.field_other_groups
+    - field.field.block_content.intro.field_your_groups
+  module:
+    - text
+id: block_content.intro.default
+targetEntityType: block_content
+bundle: intro
+mode: default
+content:
+  field_body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_heading:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_image:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_other_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_your_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

@@ -1,13 +1,5 @@
-uuid: 4b13081e-e8ab-4cc4-aa02-41a9045fd92c
-langcode: en
-status: true
-dependencies: {  }
-_core:
-  default_config_hash: SSyZ26Y0hmj6Plhsy0iySGdD6vnH7vgfF6A0hVYg-Ss
-id: doj_migrate_file_to_media_image
+id: usdoj_migrate_file_to_media_image
 class: Drupal\migrate\Plugin\Migration
-field_plugin_method: null
-cck_plugin_method: null
 migration_tags:
   - 'Drupal 7'
   - Media
@@ -28,7 +20,7 @@ process:
   field_media_image/target_id:
     -
       plugin: migration_lookup
-      migration: doj_migrate_file
+      migration: usdoj_migrate_file
       source: fid
     -
       plugin: skip_on_empty
@@ -36,7 +28,7 @@ process:
   image/target_id:
     -
       plugin: migration_lookup
-      migration: doj_migrate_file
+      migration: usdoj_migrate_file
       source: fid
     -
       plugin: skip_on_empty
@@ -46,7 +38,7 @@ process:
   field_categories/target_id:
     -
       plugin: migration_lookup
-      migration: doj_migrate_taxonomy_terms
+      migration: usdoj_migrate_taxonomy_terms
       source: tid
     -
       plugin: skip_on_empty
@@ -61,4 +53,4 @@ destination:
   default_bundle: image
 migration_dependencies:
   required:
-    - doj_migrate_file
+    - usdoj_migrate_file

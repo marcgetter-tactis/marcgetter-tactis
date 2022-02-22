@@ -1,13 +1,5 @@
-uuid: 00395a2b-aa0a-45d4-a144-029eee7efd8c
-langcode: en
-status: true
-dependencies: {  }
-_core:
-  default_config_hash: k82Qnb7UYeCPrKfdaBXdAW4ErHeLqzvu_PcVx__8A14
-id: doj_migrate_file_to_media_video
+id: usdoj_migrate_file_to_media_video
 class: Drupal\migrate\Plugin\Migration
-field_plugin_method: null
-cck_plugin_method: null
 migration_tags:
   - 'Drupal 7'
   - Media
@@ -26,7 +18,7 @@ process:
   field_media_video_file/target_id:
     -
       plugin: migration_lookup
-      migration: doj_migrate_file
+      migration: usdoj_migrate_file
       source: fid
     -
       plugin: skip_on_empty
@@ -40,4 +32,4 @@ destination:
   default_bundle: video
 migration_dependencies:
   required:
-    - doj_migrate_file
+    - usdoj_migrate_file

@@ -1,8 +1,8 @@
-name: 'DOJ Drupal 7 to 9 Migration'
+name: 'USDOJ Drupal 7 to 9 Migration'
 type: module
-description: 'DOJ Drupal 7 to 9 Migration'
+description: 'USDOJ Drupal 7 to 9 Migration'
 core_version_requirement: ^9
-package: 'Custom'
+package: 'USDOJ'
 dependencies:
   - drupal:migrate_drupal
   - migrate_plus:migrate_plus

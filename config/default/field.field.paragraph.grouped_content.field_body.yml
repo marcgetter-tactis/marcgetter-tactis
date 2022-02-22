@@ -1,0 +1,25 @@
+uuid: e2da3ce5-8db6-45bc-9640-16fbec6abd4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body
+    - paragraphs.paragraphs_type.grouped_content
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+id: paragraph.grouped_content.field_body
+field_name: field_body
+entity_type: paragraph
+bundle: grouped_content
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

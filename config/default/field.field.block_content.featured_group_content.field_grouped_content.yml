@@ -1,0 +1,52 @@
+uuid: 3d0b6ac9-4093-4572-87fe-68a8f6e036bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.featured_group_content
+    - field.storage.block_content.field_grouped_content
+    - paragraphs.paragraphs_type.grouped_content
+  module:
+    - entity_reference_revisions
+id: block_content.featured_group_content.field_grouped_content
+field_name: field_grouped_content
+entity_type: block_content
+bundle: featured_group_content
+label: 'Grouped Content'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      grouped_content: grouped_content
+    negate: 0
+    target_bundles_drag_drop:
+      action_center_item:
+        weight: 9
+        enabled: false
+      card:
+        weight: 10
+        enabled: false
+      grouped_content:
+        weight: 11
+        enabled: true
+      hero_slide:
+        weight: 12
+        enabled: false
+      slide:
+        weight: 13
+        enabled: false
+      statistic:
+        weight: 14
+        enabled: false
+      tab:
+        weight: 15
+        enabled: false
+      witness:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

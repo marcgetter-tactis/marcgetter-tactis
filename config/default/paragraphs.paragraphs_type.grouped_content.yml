@@ -1,0 +1,10 @@
+uuid: 4c504013-2570-40cd-af27-64a5dc3451bb
+langcode: en
+status: true
+dependencies: {  }
+id: grouped_content
+label: 'Grouped Content'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

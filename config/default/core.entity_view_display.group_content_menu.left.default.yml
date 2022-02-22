@@ -1,0 +1,34 @@
+uuid: 7101078b-ca7a-4a2f-9cb1-d2afc36541e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.group_content_menu.left.field_override_parent_menu
+    - group_content_menu.group_content_menu_type.left
+id: group_content_menu.left.default
+targetEntityType: group_content_menu
+bundle: left
+mode: default
+content:
+  field_override_parent_menu:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: -4
+    region: content
+  label:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -5
+    region: content
+hidden:
+  entitygroupfield: true
+  langcode: true
+  search_api_excerpt: true

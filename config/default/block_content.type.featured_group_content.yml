@@ -1,0 +1,8 @@
+uuid: 3972dd4c-e636-4f64-8559-edc5929615c9
+langcode: en
+status: true
+dependencies: {  }
+id: featured_group_content
+label: 'Featured Group Content'
+revision: 1
+description: ''

@@ -1,0 +1,21 @@
+uuid: 791e713c-8f41-4a4b-9220-6417099262f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.featured_content
+    - field.storage.block_content.field_cta_style
+  module:
+    - options
+id: block_content.featured_content.field_cta_style
+field_name: field_cta_style
+entity_type: block_content
+bundle: featured_content
+label: 'CTA style'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

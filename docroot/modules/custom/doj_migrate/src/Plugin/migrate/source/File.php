@@ -37,7 +37,6 @@ class File extends DrupalSqlBase {
       ->fields('f')
       ->condition('f.uri', 'temporary://%', 'NOT LIKE')
       ->orderBy('f.timestamp');
-      //->range(0, 10);
 
     // Filter by scheme(s), if configured.
     if (isset($this->configuration['scheme'])) {
@@ -76,7 +75,11 @@ class File extends DrupalSqlBase {
   public function prepareRow(Row $row) {
     // Compute the filepath property, which is a physical representation of
     // the URI relative to the Drupal root.
-    $path = str_replace(['public:/', 'private:/'], [$this->publicPath, $this->privatePath], $row->getSourceProperty('uri'));
+    $path = str_replace(
+      ['public:/', 'private:/'],
+      [$this->publicPath, $this->privatePath],
+      $row->getSourceProperty('uri')
+     );
     // At this point, $path could be an absolute path or a relative path,
     // depending on how the scheme's variable was set. So we need to shear out
     // the source_base_path in order to make them all relative.

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3602b830d73c1f70e54c71eb69af9f2d",
+    "content-hash": "0db2999d401aa31c88cc0e7999480e48",
     "packages": [
         {
             "name": "acquia/acquia_cms",
@@ -4886,6 +4886,62 @@
             }
         },
         {
+            "name": "drupal/blockgroup",
+            "version": "1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/blockgroup.git",
+                "reference": "8.x-1.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/blockgroup-8.x-1.5.zip",
+                "reference": "8.x-1.5",
+                "shasum": "1b927d75d90a3df000c7569acce003374ec671ab"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.5",
+                    "datestamp": "1593778088",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "geek-merlin",
+                    "homepage": "https://www.drupal.org/user/229048"
+                },
+                {
+                    "name": "kiss.jozsef",
+                    "homepage": "https://www.drupal.org/user/2848443"
+                },
+                {
+                    "name": "leymannx",
+                    "homepage": "https://www.drupal.org/user/2482808"
+                },
+                {
+                    "name": "znerol",
+                    "homepage": "https://www.drupal.org/user/63999"
+                }
+            ],
+            "description": "Add block groups to block configuration page.",
+            "homepage": "https://www.drupal.org/project/blockgroup",
+            "support": {
+                "source": "https://git.drupalcode.org/project/blockgroup"
+            }
+        },
+        {
             "name": "drupal/cancel_button",
             "version": "1.2.0",
             "source": {
@@ -5711,6 +5767,58 @@
             "homepage": "https://www.drupal.org/project/collapsiblock",
             "support": {
                 "source": "https://git.drupalcode.org/project/collapsiblock"
+            }
+        },
+        {
+            "name": "drupal/colorapi",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/colorapi.git",
+                "reference": "c5f82908c81c17dcda17f2ad8a4d8abc3aedc67a"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0+10-dev",
+                    "datestamp": "1603457505",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Jay Friendly (Jaypan)",
+                    "homepage": "https://www.jaypan.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Neslee Canil Pinto",
+                    "homepage": "https://www.drupal.org/u/neslee-canil-pinto",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "podarok",
+                    "homepage": "https://www.drupal.org/user/116002"
+                }
+            ],
+            "description": "Provides a full set of functionality around the idea of a 'color' within Drupal, providing low level data types, an optional Color Field, and an optional Color Entity, and related functionality.",
+            "homepage": "https://drupal.org/project/colorapi",
+            "support": {
+                "source": "https://git.drupalcode.org/project/colorapi",
+                "issues": "https://drupal.org/project/issues/colorapi"
             }
         },
         {
@@ -14014,6 +14122,50 @@
             "support": {
                 "source": "https://cgit.drupalcode.org/simple_sitemap",
                 "issues": "https://drupal.org/project/issues/simple_sitemap"
+            }
+        },
+        {
+            "name": "drupal/simpler_quickedit",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/simpler_quickedit.git",
+                "reference": "1.0.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/simpler_quickedit-1.0.2.zip",
+                "reference": "1.0.2",
+                "shasum": "398c745e77f5a64031324484756b6780527756b6"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.2",
+                    "datestamp": "1619186615",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "vdsh",
+                    "homepage": "https://www.drupal.org/user/1270784"
+                }
+            ],
+            "description": "Improve the user experience of accessing the in place editor",
+            "homepage": "https://www.drupal.org/project/simpler_quickedit",
+            "support": {
+                "source": "https://git.drupalcode.org/project/simpler_quickedit"
             }
         },
         {
@@ -28953,6 +29105,7 @@
     "stability-flags": {
         "drupal/admin_theme": 10,
         "drupal/block_library": 15,
+        "drupal/colorapi": 20,
         "drupal/entitygroupfield": 15,
         "drupal/fast_404": 15,
         "drupal/feeds": 15,

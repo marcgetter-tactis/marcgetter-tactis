@@ -1,0 +1,55 @@
+uuid: 7fcb1f1a-8a42-4c7d-b0b5-a2c0e9efae53
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.cta
+    - field.storage.block_content.field_cta_links
+    - paragraphs.paragraphs_type.link
+  module:
+    - entity_reference_revisions
+id: block_content.cta.field_cta_links
+field_name: field_cta_links
+entity_type: block_content
+bundle: cta
+label: 'CTA Links'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      link: link
+    negate: 0
+    target_bundles_drag_drop:
+      action_center_item:
+        weight: 10
+        enabled: false
+      card:
+        weight: 11
+        enabled: false
+      grouped_content:
+        weight: 12
+        enabled: false
+      hero_slide:
+        weight: 13
+        enabled: false
+      link:
+        weight: 14
+        enabled: true
+      slide:
+        weight: 15
+        enabled: false
+      statistic:
+        weight: 16
+        enabled: false
+      tab:
+        weight: 17
+        enabled: false
+      witness:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions

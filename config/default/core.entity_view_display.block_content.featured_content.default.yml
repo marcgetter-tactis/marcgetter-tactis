@@ -1,0 +1,91 @@
+uuid: e79a488e-115b-4fbc-b6e3-8d2c4c744940
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.featured_content
+    - field.field.block_content.featured_content.field_background_class
+    - field.field.block_content.featured_content.field_body
+    - field.field.block_content.featured_content.field_cta
+    - field.field.block_content.featured_content.field_cta_style
+    - field.field.block_content.featured_content.field_heading
+    - field.field.block_content.featured_content.field_image
+    - field.field.block_content.featured_content.field_other_groups
+    - field.field.block_content.featured_content.field_your_groups
+  module:
+    - link
+    - options
+    - text
+id: block_content.featured_content.default
+targetEntityType: block_content
+bundle: featured_content
+mode: default
+content:
+  field_background_class:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_cta:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_cta_style:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_heading:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_image:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_other_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_your_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

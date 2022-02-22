@@ -1,0 +1,29 @@
+uuid: 35254240-9e72-4f75-893a-bf23142ebbeb
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.featured_group_content
+    - field.storage.block_content.field_your_groups
+    - group.type.organization
+id: block_content.featured_group_content.field_your_groups
+field_name: field_your_groups
+entity_type: block_content
+bundle: featured_group_content
+label: 'Your Groups'
+description: 'Associate this content with groups you belong to.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:group'
+  handler_settings:
+    target_bundles:
+      organization: organization
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

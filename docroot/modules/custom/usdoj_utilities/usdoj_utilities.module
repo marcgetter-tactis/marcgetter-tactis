@@ -92,7 +92,6 @@ function usdoj_utilities_form_alter(&$form, FormStateInterface $form_state, $for
       $default_year_range = "{$default_start_year} : {$default_end_year}";
 
       $form['field_timeline_event_date']['widget'][0]['value']['#date_year_range'] = $default_year_range;
-      $form['field_timeline_event_date']['widget'][0]['end_value']['#date_year_range'] = $default_year_range;
 
       // Set default dates only when adding new entities.
       if ($form_id == 'node_timeline_event_form') {
@@ -101,7 +100,6 @@ function usdoj_utilities_form_alter(&$form, FormStateInterface $form_state, $for
         $default_datetime_obj = DrupalDateTime::createFromTimeStamp($default_date);
 
         $form['field_timeline_event_date']['widget'][0]['value']['#default_value'] = $default_datetime_obj;
-        $form['field_timeline_event_date']['widget'][0]['end_value']['#default_value'] = $default_datetime_obj;
       }
       break;
 

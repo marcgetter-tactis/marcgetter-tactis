@@ -92,8 +92,12 @@
     }
   });
 
-  //news keyword search submit
+  //news keyword search submit form
   $('a.keyword-form').click(function() {
+    $('#views-exposed-form-news-page-1').submit();
+  });
+  //sort by select change submit form
+  $('select[name="sort_by"]').change(function() {
     $('#views-exposed-form-news-page-1').submit();
   });
 

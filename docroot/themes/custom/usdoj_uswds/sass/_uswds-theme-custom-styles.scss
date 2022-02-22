@@ -30,7 +30,6 @@ TOC 01 - Primary MegaMenu
  */
 
 
-
 /************************************************
 TOC 00 - Shared Site-wide Styles - START
 ************************************************/
@@ -192,7 +191,7 @@ aside {
       }
     }
   }
-  
+
 }
 
 .usa-button--outline {
@@ -300,7 +299,7 @@ aside {
   margin-bottom: $node-field-spacing;
 
   .node-top-left {
-    >div {
+    > div {
       margin-bottom: 1rem;
     }
   }
@@ -339,10 +338,12 @@ aside {
 .node-body {
   color: $gray-70;
   line-height: 1.6;
+
   p {
-    margin-top:2.5em;
+    margin-top: 2.5em;
     margin-bottom: 2.5em;
   }
+
   img {
     width: 100%;
     height: auto;
@@ -379,7 +380,7 @@ aside {
 
 .node-summary {
   color: $gray-70;
-  line-height:1.65;
+  line-height: 1.65;
 
 }
 
@@ -396,7 +397,7 @@ aside {
   margin-bottom: $node-field-spacing;
 
   .field__item {
-    margin: .25rem 0;
+    margin: .5rem 0;
 
     @include at-media(tablet) {
       display: inline;
@@ -427,7 +428,7 @@ aside {
 
 .node-links {
   .field__item {
-    margin: .5rem 0;  
+    margin: .5rem 0;
 
     a {
       @extend .external-link;
@@ -488,8 +489,8 @@ aside {
 
 .node-audio {
   audio {
-      width: 100%;
-    }
+    width: 100%;
+  }
 }
 
 .node-info-box {
@@ -499,6 +500,22 @@ aside {
 
   strong {
     color: $gray-80;
+  }
+}
+
+.node-author {
+  &__freeform {
+    > *,
+    .field_author_free {
+      display: inline;
+    }
+  }
+
+  &__staffProfile {
+    > *,
+    .field_author {
+      display: inline
+    }
   }
 }
 
@@ -810,8 +827,8 @@ header.usa-header--extended {
 
       .usa-nav__primary {
 
-        A{
-          &:not(.usa-button){
+        A {
+          &:not(.usa-button) {
             &:hover {
               background-color: transparent;
             }
@@ -961,11 +978,11 @@ header.usa-header--extended {
         @include add-background-svg("usa-icons-bg/expand_more--white");
 
         &:hover {
-          @include add-background-svg("doj-icon-expand_more--doj-darkblue","../images" );
+          @include add-background-svg("doj-icon-expand_more--doj-darkblue", "../images");
         }
       }
       &[aria-expanded="true"] {
-        @include add-background-svg("doj-icon-expand_less--doj-darkblue","../images");
+        @include add-background-svg("doj-icon-expand_less--doj-darkblue", "../images");
         background-color: $theme-color-accent-warm;
         color: $doj-darkblue;
       }
@@ -984,7 +1001,7 @@ header.usa-header--extended {
 
       @include at-media(desktop) {
         height: calc(
-          100% + 1px
+                100% + 1px
         ); //To compensate for 1px border bottom of source element (.usa-nav__submenu)
       }
     }
@@ -1111,6 +1128,7 @@ header.usa-header--extended {
     }
   }
 }
+
 /************************************************
 TOC01 - Primary Menu (with Images) - END
 ************************************************/

@@ -1,8 +1,13 @@
+uuid: 57be1385-a9f3-4f01-82c9-d8da54f81850
 langcode: en
 status: true
 dependencies: {  }
-id: doj_migrate_file
+_core:
+  default_config_hash: dXcWVpDz2x4rHfir88jtBzsPTkxOstihg_owLFkYsD4
+id: usdoj_migrate_file
 class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
 migration_tags:
   - 'Drupal 7'
   - Media
@@ -15,7 +20,7 @@ source:
     - public
     - private
   constants:
-    source_base_path: '/var/www/html/docroot/sites/default/files/www.justice.gov'
+    source_base_path: /var/www/html/docroot/sites/default/files/www.justice.gov
 process:
   fid: fid
   filename: filename
@@ -28,12 +33,7 @@ process:
         - filepath
     -
       plugin: urlencode
-  uri:
-    -
-      plugin: file_copy
-      source:
-        - '@source_full_path'
-        - uri
+  uri: uri
   filemime: filemime
   status: status
   created: timestamp
@@ -41,7 +41,7 @@ process:
   uid:
     -
       plugin: migration_lookup
-      migration: doj_migrate_user
+      migration: usdoj_migrate_user
       source: uid
     -
       plugin: default_value
@@ -51,4 +51,4 @@ destination:
 migration_dependencies:
   required: {  }
   optional:
-    - doj_migrate_user
+    - usdoj_migrate_user

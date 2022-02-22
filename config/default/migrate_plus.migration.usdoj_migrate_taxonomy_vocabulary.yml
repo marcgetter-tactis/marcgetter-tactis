@@ -1,10 +1,10 @@
-uuid: 961fb615-1dd6-4a3c-bddf-77364cbfdd38
+uuid: 7309dbcb-7f14-45dc-835f-174e43d0704e
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: 65UnuhmZDPh4NHNDVdpZYoRTS9ufsgCAzDzztmK_p28
-id: doj_migrate_taxonomy_vocabulary
+  default_config_hash: z6EfKm0mewshRXLBFKrmVF7s02LjpMiYnD1ZbISe1ac
+id: usdoj_migrate_taxonomy_vocabulary
 class: Drupal\migrate\Plugin\Migration
 field_plugin_method: null
 cck_plugin_method: null
@@ -28,22 +28,10 @@ process:
     -
       plugin: forum_vocabulary
       machine_name: forums
-  label:
-    -
-      plugin: get
-      source: name
-  name:
-    -
-      plugin: get
-      source: name
-  description:
-    -
-      plugin: get
-      source: description
-  weight:
-    -
-      plugin: get
-      source: weight
+  label: name
+  name: name
+  description: description
+  weight: weight
 destination:
   plugin: 'entity:taxonomy_vocabulary'
 migration_dependencies:

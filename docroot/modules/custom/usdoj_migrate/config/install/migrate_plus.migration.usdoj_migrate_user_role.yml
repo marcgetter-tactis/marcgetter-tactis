@@ -1,10 +1,7 @@
-uuid: 53cf8192-29ea-41ad-a8dc-e00c93bf5e20
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: zlSywUUsh6tiXJB5mfV5AoxlOnodl6gDuYZWR_g_AGQ
-id: doj_migrate_user_role
+id: usdoj_migrate_user_role
 class: Drupal\migrate\Plugin\Migration
 field_plugin_method: null
 cck_plugin_method: null
@@ -23,10 +20,7 @@ process:
       source: name
     -
       plugin: user_update_8002
-  label:
-    -
-      plugin: get
-      source: name
+  label: name
   permissions:
     -
       plugin: static_map
@@ -47,10 +41,7 @@ process:
         'edit own forum topics': 'edit own forum content'
     -
       plugin: flatten
-  weight:
-    -
-      plugin: get
-      source: weight
+  weight: weight
   skip_missing_permission_deprecation:
     -
       plugin: default_value

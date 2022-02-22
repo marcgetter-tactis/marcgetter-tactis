@@ -1,7 +1,7 @@
 langcode: en
 status: true
 dependencies: { }
-id: doj_migrate_user
+id: usdoj_migrate_user
 migration_tags:
   - 'Drupal 7'
   - User
@@ -11,42 +11,16 @@ label: 'User accounts'
 source:
   plugin: d7_user
 process:
-  uid:
-    -
-      plugin: get
-      source: uid
-  name:
-    -
-      plugin: get
-      source: name
-  pass:
-    -
-      plugin: get
-      source: pass
-  mail:
-    -
-      plugin: get
-      source: mail
-  created:
-    -
-      plugin: get
-      source: created
-  access:
-    -
-      plugin: get
-      source: access
-  login:
-    -
-      plugin: get
-      source: login
-  status:
-    -
-      plugin: get
-      source: status
-  timezone:
-    -
-      plugin: get
-      source: timezone
+  uid: uid
+  name: name
+  pass: pass
+  mail: mail
+  created: created
+  access: access
+  login: login
+  status: status
+  timezone: timezone
+  init: init
   langcode:
     -
       plugin: user_langcode
@@ -62,14 +36,10 @@ process:
       plugin: user_langcode
       source: language
       fallback_to_site_default: true
-  init:
-    -
-      plugin: get
-      source: init
   roles:
     -
       plugin: migration_lookup
-      migration: doj_migrate_user_role
+      migration: usdoj_migrate_user_role
       source: roles
   user_picture:
     -
@@ -78,7 +48,7 @@ process:
       default_value: null
     -
       plugin: migration_lookup
-      migration: doj_migrate_file
+      migration: usdoj_migrate_file
   field_metatag:
     -
       plugin: d7_metatag_entities
@@ -87,5 +57,5 @@ destination:
   plugin: 'entity:user'
 migration_dependencies:
   required:
-    - doj_migrate_user_role
+    - usdoj_migrate_user_role
   optional: {  }

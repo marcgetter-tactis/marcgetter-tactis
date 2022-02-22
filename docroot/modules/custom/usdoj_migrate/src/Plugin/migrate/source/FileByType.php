@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\doj_migrate\Plugin\migrate\source;
+namespace Drupal\usdoj_migrate\Plugin\migrate\source;
 
 /**
  * Drupal 7 file source from database.

@@ -1,10 +1,10 @@
-uuid: 0b100aa1-aa78-4902-96a4-1f422d09a752
+uuid: 62580be8-2fcc-4cbc-8a8b-05cbb8b3199f
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: uM1_Mz2vL99o8QxMnAZh1fBI4lDG5Y8ONVhZ_N7Y2lM
-id: doj_migrate_file_to_media_document
+  default_config_hash: Yo5q7fzrtbNNIQmOTjnZJIeQROgf8F73AHc5ikQS0uE
+id: usdoj_migrate_file_to_media_audio
 class: Drupal\migrate\Plugin\Migration
 field_plugin_method: null
 cck_plugin_method: null
@@ -16,30 +16,28 @@ migration_group: media
 label: 'Migrate Media audio entities'
 source:
   plugin: d7_file_by_type
-  scheme: public
-  type: document
+  scheme:
+    - public
+    - private
+  type: audio
   constants:
     source_base_path: /var/www/html/docroot/sites/default/files/www.justice.gov
 process:
-  field_media_file/target_id:
+  field_media_audio_file/target_id:
     -
       plugin: migration_lookup
-      migration: doj_migrate_file
+      migration: usdoj_migrate_file
       source: fid
     -
       plugin: skip_on_empty
       method: row
-  thumbnail/target_id:
-    plugin: migration_lookup
-    migration: doj_migrate_file
-    source: fid
   status: status
   created: timestamp
   changed: timestamp
   uid: uid
 destination:
   plugin: 'entity:media'
-  default_bundle: document
+  default_bundle: audio
 migration_dependencies:
   required:
-    - doj_migrate_file
+    - usdoj_migrate_file

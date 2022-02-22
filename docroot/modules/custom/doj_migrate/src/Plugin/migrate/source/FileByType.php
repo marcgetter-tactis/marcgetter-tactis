@@ -2,9 +2,6 @@
 
 namespace Drupal\doj_migrate\Plugin\migrate\source;
 
-use Drupal\migrate\Row;
-use Drupal\migrate_drupal\Plugin\migrate\source\DrupalSqlBase;
-
 /**
  * Drupal 7 file source from database.
  *

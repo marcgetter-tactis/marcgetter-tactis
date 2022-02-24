@@ -303,6 +303,13 @@ aside {
       margin-bottom: 1rem;
     }
   }
+  
+  .node-top-right {
+    strong {
+      display: block;
+      margin-bottom: .5rem;
+    }
+  }
 
   @include at-media(tablet) {
     display: flex;

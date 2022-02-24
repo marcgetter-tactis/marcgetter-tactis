@@ -114,10 +114,20 @@
     <div{{ content_attributes.addClass("node-body")}}>
       {{ content.field_body }}
       </div>
+
+    <div class="node-updated-date">Updated {{ node.changed.value|date("F j, Y") }}</div>
+
     <hr>
+
     <div class="node-location"><div><strong>Location</strong></div>{{ content.field_location }}</div>
+
+    {% if content.field_speaker|render|trim is not empty %}
     <div class="node-speaker"><div><strong>Speaker</strong></div>{{ content.field_speaker }}</div>
+    {% endif %}
+
+    {% if content.field_topic|render|trim is not empty %}
     <div class="node-topics"><div><strong>Topics</strong></div>{{ content.field_topic }}</div>
+    {% endif %}
 
     {% if attachment|render|trim is not empty %}
     <div class="node-attachments">
@@ -126,6 +136,9 @@
     </div>
     {% endif %}
 
+    {% if content.field_component|render|trim is not empty %}
     <div class="node-component"><div><strong>Component or Office</strong></div>{{ content.field_component }}</div>
+    {% endif %}
+
   </div>
   </article>

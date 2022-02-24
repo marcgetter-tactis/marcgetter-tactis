@@ -3,6 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - media.type.audio
+    - media.type.document
+    - media.type.image
+    - media.type.video
+    - media.type.youtube_video
     - node.type.blog_post
     - node.type.book
     - node.type.case
@@ -123,6 +128,12 @@ type_settings:
       to: review
       weight: 0
   entity_types:
+    media:
+      - audio
+      - document
+      - image
+      - video
+      - youtube_video
     node:
       - blog_post
       - book

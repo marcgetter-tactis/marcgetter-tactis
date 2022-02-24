@@ -16,7 +16,7 @@ id: node.podcast.field_buzzprout
 field_name: field_buzzprout
 entity_type: node
 bundle: podcast
-label: 'Buzzprout Embed'
+label: 'Buzzsprout Embed'
 description: ''
 required: false
 translatable: false

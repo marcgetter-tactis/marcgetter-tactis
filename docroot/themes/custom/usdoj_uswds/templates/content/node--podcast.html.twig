@@ -92,8 +92,10 @@
 {% set attachmentNode = node.field_attachment %}
 {% set credit = content.field_attribution %}
 {% set component = content.field_component %}
+{% set topics = content.field_topic %}
 {% set asideNav = marcToPreProcess ? dynamicSidebarMenu : 'sidebar-menu' %}
 {% set renderedAsideNav = drupal_menu(asideNav) %}
+{% set updatedDate = node.changed.value|date("F j, Y") %}
 
 <article {{ attributes.addClass(classes) }}>
     <aside class="usa-layout-docs__sidenav desktop:grid-col-3 display-none desktop:display-block desktop:grid-col-3 ">
@@ -169,6 +171,9 @@
                 </div>
             {% endif %}
 
+            {% if updatedDate|render|trim is not empty%}
+                <div class="node-updated-date">Updated {{ updatedDate }}</div>
+            {% endif %}
             <hr>
 
             {% if attachment|render|trim is not empty %}
@@ -183,7 +188,11 @@
                     <div class="label text-bold">Credit</div>
                     {{ credit }}</div>
             {% endif %}
-
+            {% if topics|render|trim is not empty%}
+                <div class="node-topics margin-bottom-7">
+                    <div class="label text-bold">Topics</div>
+                    {{ topics }}</div>
+            {% endif %}
             <div class="node-component">
                 <div class="label text-bold">Component or Office</div>
                 {{ component }}

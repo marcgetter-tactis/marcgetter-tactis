@@ -23,28 +23,51 @@ Featured Grouped Content Block
   .field__item:first-of-type .paragraph--type--grouped-content {
     margin-top: 0;
   }
+  
   .paragraph--type--grouped-content {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: auto;
-    padding: $article-padding;
     margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    @include at-media(desktop) {
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: auto;
+      padding: $article-padding;
+    }
+    
     @extend .block-body-background;
     
     .field_image {
-      grid-row: 1 / 4;
-      align-self: center;
+      grid-row: 1;
+      padding: 1.2rem;
+      @include at-media(desktop) {
+        grid-row: 1 / 4;
+        align-self: center;
+        padding: 0;
+      }
+      img {
+        @extend .img-responsive;
+        
+      }
     }
     
     .field_headline, .field_body, .field_cta {
-      padding-left: $article-padding;
+      padding: 0 1.2rem 1.2rem;
+      @include at-media(desktop) {
+        padding: 0 0 0 $article-padding;
+      }
     }
 
     .field_headline {
-      @extend h4;
-      @include u-font-family("sans");
+      font-size: $theme-h4-font-size;
       font-weight: bold;
       color: $doj-coolblue;
+    }
+
+    .field_body {
+      font-size: $theme-h6-font-size;
+      @include at-media(desktop) {
+        font-size: $theme-h5-font-size;
+      }
     }
 
     a.usa-button {

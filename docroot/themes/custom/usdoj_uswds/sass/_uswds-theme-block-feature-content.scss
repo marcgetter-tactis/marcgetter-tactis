@@ -1,0 +1,45 @@
+/*
+* * * * * ==============================
+* * * * * ==============================
+* * * * * ==============================
+* * * * * ==============================
+========================================
+========================================
+========================================
+----------------------------------------
+USWDS THEME CUSTOM STYLES
+----------------------------------------
+!! Copy this file to your project's
+   sass root. Don't edit the version
+   in node_modules.
+----------------------------------------
+Featured Content Block 
+  -find-help page
+----------------------------------------
+*/
+.block-featured_content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 6rem auto;
+  
+  h2.block-title {
+    text-align: left;
+    font-size: $theme-h1-font-size;
+    &:after {
+      margin: 1.5rem 0;
+    }
+  }
+  
+  .field_body {
+    @extend h4;
+    @include u-font-family("sans");
+    color: color(primary-darker);
+    line-height: 2rem;
+    padding-right: 3rem;
+  }
+
+  .field_image {
+    grid-column: 2;
+    grid-row: 1 / 3;
+  }
+}

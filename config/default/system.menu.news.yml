@@ -1,0 +1,10 @@
+uuid: be865d39-0475-4979-8f0b-194b10e8773d
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: HeM2kgdwhQNHcKA6aMb1DjzklrW0MOjQqBwb_b6GAZo
+id: news
+label: News
+description: ''
+locked: false

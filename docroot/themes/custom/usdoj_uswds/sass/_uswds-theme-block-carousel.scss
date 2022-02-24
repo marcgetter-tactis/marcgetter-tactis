@@ -1,0 +1,14 @@
+.block-carousel {
+  padding: 3rem 0;
+
+  .field_header {
+    @extend h2;
+    text-align: center;
+    font-weight: 700;
+
+    &::after {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

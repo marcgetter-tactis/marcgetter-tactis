@@ -49,7 +49,9 @@
         const state = {
           menuOpen: false,
         }
+        const regionHeader = header.querySelector(".region-header");
         const menuBtn = header.querySelector("#mobile-btn");
+
         const desktopBreakpoint = 1024;
         let parentBtn, nestedBtn, parentSiblings;
 
@@ -78,9 +80,6 @@
          *     "remove".
          */
         const toggleClasses = (operation) => {
-          if (!typeof operation === "string" && (!operation === "add" || !operation === "remove")) {
-            return;
-          }
 
           if (operation === "add") {
             parentBtn.classList.add(menuClasses.itemOpen);
@@ -118,7 +117,7 @@
 
           if (nestedBtn.getAttribute("aria-expanded") === "false") {
             toggleClasses("add")
-            state.menuOpen = true;
+            state.menuOpen = false;
           }
           if (nestedBtn.getAttribute("aria-expanded") === "true") {
             toggleClasses("remove");
@@ -130,6 +129,12 @@
 
         observer.observe(header);
         menuBtn.addEventListener('click', resetOpenMenu);
+        regionHeader.addEventListener('click', (evt) => {
+          if ((evt.target === evt.currentTarget) && (menuBtn.checked === true)) {
+            menuBtn.checked = false;
+            resetOpenMenu();
+          }
+        });
         nav.addEventListener('click', (evt) => {
           if (evt.target === evt.currentTarget) {
             resetOpenMenu();

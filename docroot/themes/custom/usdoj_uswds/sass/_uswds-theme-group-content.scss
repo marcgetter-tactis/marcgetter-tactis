@@ -1,0 +1,59 @@
+/*
+* * * * * ==============================
+* * * * * ==============================
+* * * * * ==============================
+* * * * * ==============================
+========================================
+========================================
+========================================
+----------------------------------------
+USWDS THEME CUSTOM STYLES
+----------------------------------------
+!! Copy this file to your project's
+   sass root. Don't edit the version
+   in node_modules.
+----------------------------------------
+Featured Grouped Content Block 
+  -find-help page
+----------------------------------------
+*/
+.block-featured_group_content {
+  
+  .paragraph--type--grouped-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    padding: $article-padding;
+    margin-top: 2rem;
+    @extend .block-body-background;
+    
+    .field_image {
+      grid-row: 1 / 4;
+      align-self: center;
+    }
+    
+    .field_headline, .field_body, .field_cta {
+      padding-left: $article-padding;
+    }
+
+    .field_headline {
+      @extend h4;
+      @include u-font-family("sans");
+      font-weight: bold;
+      color: $doj-coolblue;
+    }
+
+    a.usa-button {
+      background-color: color('primary-darker');
+      &:hover {
+        background-color: $blue-60v;
+      }
+      &:active {
+        background-color: $doj-coolblue;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

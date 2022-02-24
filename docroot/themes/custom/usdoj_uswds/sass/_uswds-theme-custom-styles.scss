@@ -796,6 +796,11 @@ details {
   @include img-responsive;
 }
 
+.block-body-background {
+  background: white;
+  border: 1px solid $theme-card-border-color;
+  box-shadow: 0 0 0.5rem rgb(0 0 0 / 17%); 
+}
 
 /************************************************
 TOC 00 - Shared Site-wide Styles - END

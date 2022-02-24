@@ -18,7 +18,11 @@ Featured Grouped Content Block
 ----------------------------------------
 */
 .block-featured_group_content {
-  
+  padding: 3.5rem 0;
+
+  .field__item:first-of-type .paragraph--type--grouped-content {
+    margin-top: 0;
+  }
   .paragraph--type--grouped-content {
     display: grid;
     grid-template-columns: 1fr 2fr;

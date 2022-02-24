@@ -16,6 +16,7 @@ dependencies:
     - field.field.node.podcast.field_image
     - field.field.node.podcast.field_other_groups
     - field.field.node.podcast.field_summary
+    - field.field.node.podcast.field_topic
     - field.field.node.podcast.field_transcript
     - field.field.node.podcast.field_your_groups
     - image.style.cover_image_950x520
@@ -181,6 +182,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 4
+    region: content
+  field_topic:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 14
     region: content
   field_transcript:
     type: text_default

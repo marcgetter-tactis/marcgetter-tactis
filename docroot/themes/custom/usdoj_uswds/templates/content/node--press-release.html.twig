@@ -114,19 +114,25 @@
         <div class="node-date">{{ content.field_date }}</div>
       </div>
 
+      {% if content.field_number|render|trim is not empty %}
       <div class="node-top-right">
         <div class="node-info-box">
-          <strong>For Immediate Release</strong><br />
+          <strong>For Immediate Release</strong>
           <span>Release Number:</span> {{ content.field_number[0] }}<br />
           Office of Public Affairs<br />
           <a href="mailto:publicaffairs@justice.gov">publicaffairs@justice.gov</a>
         </div>
       </div>
+      {% endif %}
+
     </div>
 
     <div{{ content_attributes.addClass("node-body")}}>
       {{ content.field_body }}
       </div>
+
+    <div class="node-updated-date">Updated {{ node.changed.value|date("F j, Y") }}</div>
+
     <hr>
 
     {% if attachment|render|trim is not empty %}
@@ -136,7 +142,12 @@
     </div>
     {% endif %}
 
-    <div class="node-topics"><div><strong>Tags</strong></div>{{ content.field_topic }}</div>
+    {% if content.field_topic|render|trim is not empty %}
+    <div class="node-topics"><div><strong>Topics</strong></div>{{ content.field_topic }}</div>
+    {% endif %}
+
+    {% if content.field_component|render|trim is not empty %}
     <div class="node-component"><div><strong>Component or Office</strong></div>{{ content.field_component }}</div>
+    {% endif %}
   </div>
   </article>

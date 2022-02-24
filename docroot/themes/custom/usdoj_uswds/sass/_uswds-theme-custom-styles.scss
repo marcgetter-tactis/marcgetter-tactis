@@ -27,7 +27,7 @@ TOC 00 - Shared Site-wide Styles
 TOC 01 - Primary MegaMenu
 
 *******TABLE OF CONTENTS********
- */
+*/
 
 
 /************************************************
@@ -517,6 +517,14 @@ aside {
       display: inline
     }
   }
+}
+
+.node-updated-date {
+  margin-bottom: $node-field-spacing;
+  font-style: italic;
+  color: $gray-60;
+  font-size: 15px;
+  font-weight: 300;
 }
 
 //*******************
@@ -1009,7 +1017,7 @@ header.usa-header--extended {
 
       @include at-media(desktop) {
         height: calc(
-                100% + 1px
+          100% + 1px
         ); //To compensate for 1px border bottom of source element (.usa-nav__submenu)
       }
     }

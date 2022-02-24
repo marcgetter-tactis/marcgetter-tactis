@@ -18,6 +18,7 @@ dependencies:
     - field.field.node.event.field_press
     - field.field.node.event.field_registration
     - field.field.node.event.field_timezone
+    - field.field.node.event.field_topic
     - field.field.node.event.field_your_groups
     - node.type.event
   module:
@@ -160,6 +161,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 3
+    region: content
+  field_topic:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 18
     region: content
   field_your_groups:
     type: entity_reference_label

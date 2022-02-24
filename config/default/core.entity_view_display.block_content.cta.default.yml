@@ -5,11 +5,13 @@ dependencies:
   config:
     - block_content.type.cta
     - field.field.block_content.cta.field_alignment
+    - field.field.block_content.cta.field_body
     - field.field.block_content.cta.field_cta_links
     - field.field.block_content.cta.field_heading
   module:
     - entity_reference_revisions
     - options
+    - text
 id: block_content.cta.default
 targetEntityType: block_content
 bundle: cta
@@ -21,6 +23,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 2
+    region: content
+  field_body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
     region: content
   field_cta_links:
     type: entity_reference_revisions_entity_view

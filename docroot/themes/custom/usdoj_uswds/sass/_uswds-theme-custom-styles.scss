@@ -854,6 +854,17 @@ header.usa-header--extended {
 
             &__open {
               background-color: $doj-darkgray;
+
+              A {
+                &:hover,
+                &:focus,
+                &:active {
+
+                  span {
+                    color: $doj-darkblue;
+                  }
+                }
+              }
             }
           }
 

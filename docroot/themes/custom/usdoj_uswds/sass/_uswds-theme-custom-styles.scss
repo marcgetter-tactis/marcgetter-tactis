@@ -761,6 +761,7 @@ aside {
   }
 }
 
+//block classes
 .bg-full-width {
   position: relative;
 
@@ -777,6 +778,13 @@ aside {
     z-index: -1;
   }
 }
+
+.block-body-background {
+  background: white;
+  border: 1px solid $theme-card-border-color;
+  box-shadow: 0 0 0.5rem rgb(0 0 0 / 17%);
+}
+//end block classes
 
 details {
   border: 1px solid $gray-cool-20;
@@ -803,11 +811,7 @@ details {
   @include img-responsive;
 }
 
-.block-body-background {
-  background: white;
-  border: 1px solid $theme-card-border-color;
-  box-shadow: 0 0 0.5rem rgb(0 0 0 / 17%);
-}
+
 
 /************************************************
 TOC 00 - Shared Site-wide Styles - END

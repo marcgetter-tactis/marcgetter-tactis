@@ -1,9 +1,9 @@
-uuid: 4f72ecd7-4fe8-4738-918e-bff7da2f811a
+uuid: 8c1f9ab5-2210-46cc-814e-a81767a7eee0
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: w67rZLja4n-ebY2_h2pOkz5WiJEzCDXWXg5S9--sxr8
+  default_config_hash: idsEeEdX-sA8Abx8fWcWrumoyjxL_NpMpAF9JHAp_oM
 id: taxonomy
 label: Taxonomy
 description: 'Migrate Drupal 7 Taxonomy'
@@ -11,4 +11,4 @@ source_type: 'Drupal 7'
 module: null
 shared_configuration:
   source:
-    key: migrate
+    key: d7

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ed8ae90c7bdc0041c57cf7e3416a36bc",
+    "content-hash": "e6bb0007fa99ecf1445c1a134e223339",
     "packages": [
         {
             "name": "acquia/acquia_cms",
@@ -11089,6 +11089,52 @@
             "support": {
                 "source": "git://git.drupal.org/project/media_bulk_upload.git",
                 "issues": "https://www.drupal.org/project/issues/media_bulk_upload"
+            }
+        },
+        {
+            "name": "drupal/media_embed_extra",
+            "version": "1.0.0-beta1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/media_embed_extra.git",
+                "reference": "1.0.0-beta1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/media_embed_extra-1.0.0-beta1.zip",
+                "reference": "1.0.0-beta1",
+                "shasum": "acfbfe8b6699e04563ac6a90bdab702c5dcd0437"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9",
+                "drupal/media": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-beta1",
+                    "datestamp": "1613522478",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Ericmaster",
+                    "homepage": "https://www.drupal.org/user/334757"
+                }
+            ],
+            "description": "Extra options for media embed widget.",
+            "homepage": "https://www.drupal.org/project/media_embed_extra",
+            "support": {
+                "source": "http://cgit.drupalcode.org/media_embed_extra",
+                "issues": "https://www.drupal.org/project/issues/media_embed_extra"
             }
         },
         {
@@ -29345,6 +29391,7 @@
         "drupal/groupmenu": 10,
         "drupal/inline_entity_form": 5,
         "drupal/media_bulk_upload": 15,
+        "drupal/media_embed_extra": 10,
         "drupal/media_migration": 15,
         "drupal/og": 15,
         "drupal/openstreetmap": 10,

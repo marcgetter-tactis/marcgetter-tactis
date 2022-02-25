@@ -1,0 +1,58 @@
+uuid: 0cf12046-5f8d-4cab-8f07-2a52eba1fd9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.offices
+    - field.storage.block_content.field_offices
+    - paragraphs.paragraphs_type.office
+  module:
+    - entity_reference_revisions
+id: block_content.offices.field_offices
+field_name: field_offices
+entity_type: block_content
+bundle: offices
+label: Offices
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      office: office
+    negate: 0
+    target_bundles_drag_drop:
+      action_center_item:
+        weight: 11
+        enabled: false
+      card:
+        weight: 12
+        enabled: false
+      grouped_content:
+        weight: 13
+        enabled: false
+      hero_slide:
+        weight: 14
+        enabled: false
+      link:
+        weight: 15
+        enabled: false
+      office:
+        weight: 16
+        enabled: true
+      slide:
+        weight: 17
+        enabled: false
+      statistic:
+        weight: 18
+        enabled: false
+      tab:
+        weight: 19
+        enabled: false
+      witness:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

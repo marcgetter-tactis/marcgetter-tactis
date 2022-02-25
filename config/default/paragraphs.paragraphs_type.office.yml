@@ -1,0 +1,10 @@
+uuid: 06516593-e343-4f96-8d67-3b8774fefeb4
+langcode: en
+status: true
+dependencies: {  }
+id: office
+label: Office
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

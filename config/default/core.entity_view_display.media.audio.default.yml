@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.field.media.audio.field_media_audio_file
     - field.field.media.audio.field_media_in_library
+    - field.field.media.audio.field_other_groups
+    - field.field.media.audio.field_your_groups
     - media.type.audio
   module:
     - file
@@ -23,6 +25,22 @@ content:
       multiple_file_display_type: tags
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_other_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_your_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
     region: content
 hidden:
   created: true

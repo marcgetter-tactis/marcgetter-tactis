@@ -1,0 +1,29 @@
+uuid: 64070bda-100b-4739-bb0d-b320d58f6473
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_your_groups
+    - group.type.organization
+    - node.type.book
+id: node.book.field_your_groups
+field_name: field_your_groups
+entity_type: node
+bundle: book
+label: 'Your Groups'
+description: 'Associate this content with groups you belong to.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:group'
+  handler_settings:
+    target_bundles:
+      organization: organization
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,34 @@
+uuid: f53049f8-9062-4c9d-9b69-350b8250a4d8
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:general:6bdfcc60-80aa-4338-9668-adad23f76d11'
+  module:
+    - block_content
+    - collapsiblock
+    - system
+  theme:
+    - usdoj_uswds
+third_party_settings:
+  collapsiblock:
+    collapse_action: 0
+id: forthepress
+theme: usdoj_uswds
+region: sidebar_first
+weight: -6
+provider: null
+plugin: 'block_content:6bdfcc60-80aa-4338-9668-adad23f76d11'
+settings:
+  id: 'block_content:6bdfcc60-80aa-4338-9668-adad23f76d11'
+  label: 'For the Press'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/news\r\n/news/*"

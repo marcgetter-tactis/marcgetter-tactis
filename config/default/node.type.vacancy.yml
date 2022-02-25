@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - menu_ui
+    - node_title_help_text
     - scheduler
 third_party_settings:
   menu_ui:
@@ -16,14 +17,16 @@ third_party_settings:
     publish_enable: true
     publish_past_date: error
     publish_past_date_created: false
-    publish_required: true
+    publish_required: false
     publish_revision: true
     publish_touch: false
     show_message_after_update: true
     unpublish_enable: true
-    unpublish_required: true
+    unpublish_required: false
     unpublish_revision: true
-name: Vacancy
+  node_title_help_text:
+    title_help: 'Attorney Examples: Attorney, AUSA, Uncompensated SA, General Counsel, Attorney Advisor, etc. Legal Volunteer Examples: Law Student Volunteer, Term (i.e. Fall 2018 or Summer 2019 or Spring 2019), Section or Branch [if applicable (i.e. Appellate Section)].'
+name: 'Vacancy Announcement'
 type: vacancy
 description: ''
 help: ''

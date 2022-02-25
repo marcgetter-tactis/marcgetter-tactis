@@ -3,6 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - media.type.audio
+    - media.type.document
+    - media.type.image
+    - media.type.video
+    - media.type.youtube_video
     - node.type.blog_post
     - node.type.book
     - node.type.case
@@ -14,7 +19,6 @@ dependencies:
     - node.type.historical_biography
     - node.type.image_gallery
     - node.type.landing_page
-    - node.type.most_wanted
     - node.type.opinion
     - node.type.page
     - node.type.podcast
@@ -124,6 +128,12 @@ type_settings:
       to: review
       weight: 0
   entity_types:
+    media:
+      - audio
+      - document
+      - image
+      - video
+      - youtube_video
     node:
       - blog_post
       - book
@@ -136,7 +146,6 @@ type_settings:
       - historical_biography
       - image_gallery
       - landing_page
-      - most_wanted
       - opinion
       - page
       - podcast

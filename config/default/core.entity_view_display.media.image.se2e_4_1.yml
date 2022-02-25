@@ -8,13 +8,14 @@ dependencies:
     - field.field.media.image.field_image_alignment
     - field.field.media.image.field_media_image
     - field.field.media.image.field_media_in_library
+    - field.field.media.image.field_other_groups
     - field.field.media.image.field_tags
+    - field.field.media.image.field_your_groups
     - field.field.media.image.image
     - media.type.image
     - responsive_image.styles.de2e_4_1
   module:
     - blazy
-    - ds
 _core:
   default_config_hash: SWCcapo6CdhgwodZ8giwG_tbLw5k_IPg16s93vQS4gw
 id: media.image.se2e_4_1
@@ -36,6 +37,9 @@ content:
       current_view_mode: se2e_4_1
       skin: ''
       fx: ''
+      lazy: ''
+      loading: lazy
+      preload: false
       style: ''
       background: false
       box_caption: ''
@@ -54,14 +58,7 @@ content:
       grid: '0'
       grid_medium: '0'
       grid_small: '0'
-    third_party_settings:
-      ds:
-        ft:
-          id: default
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
+    third_party_settings: {  }
     weight: 0
     region: content
 hidden:
@@ -70,7 +67,9 @@ hidden:
   field_categories: true
   field_image_alignment: true
   field_media_in_library: true
+  field_other_groups: true
   field_tags: true
+  field_your_groups: true
   image: true
   langcode: true
   name: true

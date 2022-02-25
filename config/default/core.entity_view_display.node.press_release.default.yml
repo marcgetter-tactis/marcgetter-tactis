@@ -13,32 +13,17 @@ dependencies:
     - field.field.node.press_release.field_image
     - field.field.node.press_release.field_invisible
     - field.field.node.press_release.field_number
+    - field.field.node.press_release.field_other_groups
     - field.field.node.press_release.field_subtitle
     - field.field.node.press_release.field_teaser
     - field.field.node.press_release.field_teaser_image
     - field.field.node.press_release.field_topic
+    - field.field.node.press_release.field_your_groups
     - node.type.press_release
   module:
     - datetime
-    - ds
-    - layout_builder
-    - layout_builder_restrictions
-    - layout_library
     - text
     - user
-third_party_settings:
-  layout_builder:
-    enabled: false
-    allow_custom: false
-  layout_library:
-    enable: false
-  layout_builder_restrictions:
-    allowed_block_categories: {  }
-    entity_view_mode_restriction:
-      allowed_layouts: {  }
-      blacklisted_blocks: {  }
-      whitelisted_blocks: {  }
-      restricted_categories: {  }
 id: node.press_release.default
 targetEntityType: node
 bundle: press_release
@@ -47,22 +32,14 @@ content:
   content_moderation_control:
     settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: -20
     region: content
   field_attachment:
     type: entity_reference_label
     label: hidden
     settings:
       link: true
-    third_party_settings:
-      ds:
-        ds_limit: ''
-        ft:
-          id: default
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
+    third_party_settings: {  }
     weight: 13
     region: content
   field_body:
@@ -70,7 +47,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 4
+    weight: 3
     region: content
   field_component:
     type: entity_reference_label
@@ -78,14 +55,14 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 8
+    weight: 7
     region: content
   field_contact:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 6
+    weight: 5
     region: content
   field_date:
     type: datetime_default
@@ -93,15 +70,8 @@ content:
     settings:
       timezone_override: ''
       format_type: standard_date_format
-    third_party_settings:
-      ds:
-        ft:
-          id: default
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
-    weight: 3
+    third_party_settings: {  }
+    weight: 2
     region: content
   field_feature_image:
     type: entity_reference_entity_view
@@ -110,7 +80,7 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
-    weight: 11
+    weight: 10
     region: content
   field_image:
     type: entity_reference_entity_view
@@ -127,7 +97,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 9
+    weight: 8
     region: content
   field_number:
     type: string
@@ -135,7 +105,15 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 10
+    weight: 9
+    region: content
+  field_other_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 15
     region: content
   field_subtitle:
     type: string
@@ -143,14 +121,23 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 2
+    weight: 1
     region: content
   field_teaser:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 5
+    weight: 4
+    region: content
+  field_teaser_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 14
     region: content
   field_topic:
     type: entity_reference_label
@@ -158,12 +145,20 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 7
+    weight: 6
+    region: content
+  field_your_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 16
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 0
     region: content
 hidden:
   entitygroupfield: true
@@ -174,7 +169,6 @@ hidden:
   field_pr_teaser: true
   field_pr_teaser_image: true
   field_pr_topic: true
-  field_teaser_image: true
   langcode: true
   pr_component: true
   pr_invisible: true

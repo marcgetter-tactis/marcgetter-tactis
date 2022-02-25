@@ -3,15 +3,19 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.field_background_color
+    - field.storage.node.field_background_image
     - field.storage.node.field_body
     - field.storage.node.field_image
     - field.storage.node.field_timeline_event_date
-    - node.type.timeline
+    - field.storage.node.field_timeline_event_date_alt
+    - image.style.coh_large_landscape
   module:
     - datetime
     - eva
     - media
     - node
+    - options
     - text
     - user
     - views_timelinejs
@@ -34,7 +38,7 @@ display:
           id: title
           table: node_field_data
           field: title
-          relationship: none
+          relationship: field_timeline_events
           group_type: group
           admin_label: ''
           entity_type: node
@@ -44,18 +48,36 @@ display:
           exclude: false
           alter:
             alter_text: false
+            text: ''
             make_link: false
+            path: ''
             absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
             word_boundary: false
             ellipsis: false
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
             strip_tags: false
             trim: false
+            preserve_tags: ''
             html: false
           element_type: ''
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -81,7 +103,7 @@ display:
           id: field_body
           table: node__field_body
           field: field_body
-          relationship: none
+          relationship: field_timeline_events
           group_type: group
           admin_label: ''
           plugin_id: field
@@ -143,7 +165,7 @@ display:
           id: field_timeline_event_date
           table: node__field_timeline_event_date
           field: field_timeline_event_date
-          relationship: none
+          relationship: field_timeline_events
           group_type: group
           admin_label: ''
           plugin_id: field
@@ -189,10 +211,10 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: datetime_default
+          type: datetime_custom
           settings:
             timezone_override: ''
-            format_type: html_year
+            date_format: 'Y'
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -207,7 +229,132 @@ display:
           id: field_image
           table: node__field_image
           field: field_image
-          relationship: none
+          relationship: field_timeline_events
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_entity_view
+          settings:
+            view_mode: default
+          group_column: target_id
+          group_columns: {  }
+          group_rows: false
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_background_color:
+          id: field_background_color
+          table: node__field_background_color
+          field: field_background_color
+          relationship: field_timeline_events
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: list_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_background_image:
+          id: field_background_image
+          table: node__field_background_image
+          field: field_background_image
+          relationship: field_timeline_events
           group_type: group
           admin_label: ''
           plugin_id: field
@@ -256,8 +403,71 @@ display:
           type: media_thumbnail
           settings:
             image_link: ''
-            image_style: ''
+            image_style: coh_large_landscape
           group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_timeline_event_date_alt:
+          id: field_timeline_event_date_alt
+          table: node__field_timeline_event_date_alt
+          field: field_timeline_event_date_alt
+          relationship: field_timeline_events
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -289,23 +499,7 @@ display:
         type: tag
         options: {  }
       empty: {  }
-      sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          entity_field: created
-          plugin_id: date
-          order: DESC
-          expose:
-            label: ''
-            field_identifier: ''
-          exposed: false
-          granularity: second
+      sorts: {  }
       arguments:
         nid:
           id: nid
@@ -343,32 +537,7 @@ display:
           validate_options: {  }
           break_phrase: false
           not: false
-      filters:
-        status:
-          id: status
-          table: node_field_data
-          field: status
-          entity_type: node
-          entity_field: status
-          plugin_id: boolean
-          value: '1'
-          group: 1
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          value:
-            timeline: timeline
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
+      filters: {  }
       style:
         type: timelinejs
         options:
@@ -377,7 +546,7 @@ display:
             height: 500px
             hash_bookmark: false
             start_at_end: false
-            scale_factor: !!float 2
+            scale_factor: !!float 0
             language: ''
             timenav_position: bottom
             timenav_height: ''
@@ -393,15 +562,15 @@ display:
             media: field_image
             group: ''
             start_date: field_timeline_event_date
-            end_date: field_timeline_event_date
-            display_date: ''
+            end_date: ''
+            display_date: field_timeline_event_date_alt
             text: field_body
             headline: title
-            background: ''
+            background: field_background_image
             type: ''
             unique_id: ''
-            background_color: ''
-            thumbnail: ''
+            background_color: field_background_color
+            thumbnail: field_image
       row:
         type: fields
         options:
@@ -439,9 +608,12 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.node.field_background_color'
+        - 'config:field.storage.node.field_background_image'
         - 'config:field.storage.node.field_body'
         - 'config:field.storage.node.field_image'
         - 'config:field.storage.node.field_timeline_event_date'
+        - 'config:field.storage.node.field_timeline_event_date_alt'
   entity_view_1:
     id: entity_view_1
     display_title: EVA
@@ -461,6 +633,9 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.node.field_background_color'
+        - 'config:field.storage.node.field_background_image'
         - 'config:field.storage.node.field_body'
         - 'config:field.storage.node.field_image'
         - 'config:field.storage.node.field_timeline_event_date'
+        - 'config:field.storage.node.field_timeline_event_date_alt'

@@ -1,0 +1,38 @@
+uuid: 2f8f02b2-9c47-4b78-aa79-50617ea6581d
+langcode: en
+status: true
+dependencies:
+  config:
+    - group_content_menu.group_content_menu_type.left
+  module:
+    - collapsiblock
+    - group
+    - group_content_menu
+  theme:
+    - usdoj_uswds
+third_party_settings:
+  collapsiblock:
+    collapse_action: 0
+id: leftnavigation
+theme: usdoj_uswds
+region: sidebar_first
+weight: -7
+provider: null
+plugin: 'group_content_menu:left'
+settings:
+  id: 'group_content_menu:left'
+  label: 'Left Navigation'
+  label_display: visible
+  provider: group_content_menu
+  context_mapping: {  }
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  'entity_bundle:group':
+    id: 'entity_bundle:group'
+    negate: false
+    context_mapping:
+      group: '@group.group_route_context:group'
+    bundles:
+      organization: organization

@@ -1,0 +1,23 @@
+uuid: 880b5ab4-5ea4-46dc-88d4-e8bb834c173f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group_content_menu.field_override_parent_menu
+    - group_content_menu.group_content_menu_type.main_
+id: group_content_menu.main_.field_override_parent_menu
+field_name: field_override_parent_menu
+entity_type: group_content_menu
+bundle: main_
+label: 'Override parent menu'
+description: 'If this is checked off, and the current page has a left menu, this menu will override the left menu on pages with this menu''s group in the "Your Groups" field.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

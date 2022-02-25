@@ -1,0 +1,29 @@
+uuid: b4faf294-ff3b-4a91-9486-fab6383f7505
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_component
+    - node.type.resource
+    - taxonomy.vocabulary.component
+id: node.resource.field_component
+field_name: field_component
+entity_type: node
+bundle: resource
+label: Component(s)
+description: 'Select any component categories that this resource should be associated with.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      component: component
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

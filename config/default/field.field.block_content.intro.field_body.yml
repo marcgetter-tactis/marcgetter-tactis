@@ -1,0 +1,25 @@
+uuid: 2b1360a3-7043-4b3d-b6ae-884fef8251c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.intro
+    - field.storage.block_content.field_body
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+id: block_content.intro.field_body
+field_name: field_body
+entity_type: block_content
+bundle: intro
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

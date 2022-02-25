@@ -10,6 +10,8 @@ dependencies:
     - field.field.block_content.blank.field_cta_style
     - field.field.block_content.blank.field_header
     - field.field.block_content.blank.field_media
+    - field.field.block_content.blank.field_other_groups
+    - field.field.block_content.blank.field_your_groups
   module:
     - link
     - options
@@ -64,5 +66,7 @@ content:
     region: content
 hidden:
   field_background_class: true
+  field_other_groups: true
+  field_your_groups: true
   langcode: true
   search_api_excerpt: true

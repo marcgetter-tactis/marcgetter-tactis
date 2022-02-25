@@ -6,10 +6,11 @@ dependencies:
     - core.entity_view_mode.media.browser_teaser
     - field.field.media.audio.field_media_audio_file
     - field.field.media.audio.field_media_in_library
+    - field.field.media.audio.field_other_groups
+    - field.field.media.audio.field_your_groups
     - image.style.d03_traditional
     - media.type.audio
   module:
-    - ds
     - svg_image
 _core:
   default_config_hash: qWhkw3khQjWDlvra4CBbJbFa32JdA5dP-Q5eejf1aiY
@@ -32,14 +33,11 @@ content:
     settings:
       image_link: ''
       image_style: d03_traditional
-    third_party_settings:
-      ds:
-        ft:
-          id: default
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
     weight: 0
     region: content
 hidden:
@@ -47,6 +45,8 @@ hidden:
   entitygroupfield: true
   field_media_audio_file: true
   field_media_in_library: true
+  field_other_groups: true
+  field_your_groups: true
   langcode: true
   search_api_excerpt: true
   uid: true

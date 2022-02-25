@@ -1,0 +1,34 @@
+uuid: fb1fc10e-8fc5-4ea0-bef9-7cc648b61080
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.group_content_menu.main_.field_override_parent_menu
+    - group_content_menu.group_content_menu_type.main_
+id: group_content_menu.main_.default
+targetEntityType: group_content_menu
+bundle: main_
+mode: default
+content:
+  field_override_parent_menu:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: -4
+    region: content
+  label:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -5
+    region: content
+hidden:
+  entitygroupfield: true
+  langcode: true
+  search_api_excerpt: true

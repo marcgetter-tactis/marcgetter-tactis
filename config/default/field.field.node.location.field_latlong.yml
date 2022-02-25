@@ -1,0 +1,38 @@
+uuid: a775bee4-f32e-4641-ad32-1f46e55db89d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_latlong
+    - node.type.location
+  module:
+    - geocoder_field
+    - geofield
+third_party_settings:
+  geocoder_field:
+    method: geocode
+    weight: 0
+    field: field_location
+    skip_not_empty_value: false
+    disabled: true
+    hidden: false
+    providers:
+      - googlemaps
+    dumper: wkt
+    delta_handling: default
+    failure:
+      handling: preserve
+      status_message: true
+      log: true
+id: node.location.field_latlong
+field_name: field_latlong
+entity_type: node
+bundle: location
+label: Latitude/Longitude
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geofield

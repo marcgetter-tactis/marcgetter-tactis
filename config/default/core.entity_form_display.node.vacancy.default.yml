@@ -7,12 +7,14 @@ dependencies:
     - field.field.node.vacancy.field_application_process
     - field.field.node.vacancy.field_body
     - field.field.node.vacancy.field_date
+    - field.field.node.vacancy.field_destination
     - field.field.node.vacancy.field_diversity
     - field.field.node.vacancy.field_hiring_office
     - field.field.node.vacancy.field_hiring_org
     - field.field.node.vacancy.field_job_id
     - field.field.node.vacancy.field_location
     - field.field.node.vacancy.field_num_positions
+    - field.field.node.vacancy.field_other_groups
     - field.field.node.vacancy.field_practice_area
     - field.field.node.vacancy.field_qualifications
     - field.field.node.vacancy.field_relocation_expenses
@@ -20,9 +22,12 @@ dependencies:
     - field.field.node.vacancy.field_show_diversity_statement
     - field.field.node.vacancy.field_travel
     - field.field.node.vacancy.field_va_position
+    - field.field.node.vacancy.field_your_groups
     - node.type.vacancy
+    - workflows.workflow.editorial
   module:
     - address
+    - content_moderation
     - datetime
     - field_group
     - path
@@ -77,6 +82,21 @@ third_party_settings:
         formatter: closed
         description: ''
         required_fields: true
+    group_organization:
+      children:
+        - field_your_groups
+        - field_other_groups
+      label: Organization
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
 id: node.vacancy.default
 targetEntityType: node
 bundle: vacancy
@@ -101,7 +121,7 @@ content:
         hide_guidelines: '0'
   field_application_process:
     type: text_textarea
-    weight: 40
+    weight: 41
     region: content
     settings:
       rows: 5
@@ -109,7 +129,7 @@ content:
     third_party_settings: {  }
   field_body:
     type: text_textarea
-    weight: 36
+    weight: 37
     region: content
     settings:
       rows: 5
@@ -117,16 +137,22 @@ content:
     third_party_settings: {  }
   field_date:
     type: datetime_datelist
-    weight: 41
+    weight: 42
     region: content
     settings:
       increment: 15
       date_order: YMD
       time_type: '24'
     third_party_settings: {  }
+  field_destination:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_diversity:
     type: text_textarea
-    weight: 34
+    weight: 35
     region: content
     settings:
       rows: 5
@@ -148,7 +174,7 @@ content:
     third_party_settings: {  }
   field_job_id:
     type: string_textfield
-    weight: 55
+    weight: 56
     region: content
     settings:
       size: 60
@@ -156,27 +182,33 @@ content:
     third_party_settings: {  }
   field_location:
     type: address_default
-    weight: 54
+    weight: 55
     region: content
     settings: {  }
     third_party_settings: {  }
   field_num_positions:
     type: string_textfield
-    weight: 35
+    weight: 36
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_other_groups:
+    type: options_select
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_practice_area:
     type: options_select
-    weight: 43
+    weight: 44
     region: content
     settings: {  }
     third_party_settings: {  }
   field_qualifications:
     type: text_textarea
-    weight: 37
+    weight: 38
     region: content
     settings:
       rows: 5
@@ -184,7 +216,7 @@ content:
     third_party_settings: {  }
   field_relocation_expenses:
     type: string_textfield
-    weight: 42
+    weight: 43
     region: content
     settings:
       size: 60
@@ -192,7 +224,7 @@ content:
     third_party_settings: {  }
   field_salary:
     type: string_textfield
-    weight: 38
+    weight: 39
     region: content
     settings:
       size: 60
@@ -200,14 +232,14 @@ content:
     third_party_settings: {  }
   field_show_diversity_statement:
     type: boolean_checkbox
-    weight: 33
+    weight: 34
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   field_travel:
     type: string_textfield
-    weight: 39
+    weight: 40
     region: content
     settings:
       size: 60
@@ -219,12 +251,24 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_your_groups:
+    type: options_select
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   langcode:
     type: language_select
     weight: 5
     region: content
     settings:
       include_locked: true
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 17
+    region: content
+    settings: {  }
     third_party_settings: {  }
   path:
     type: path
@@ -252,7 +296,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 20
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -272,7 +316,7 @@ content:
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 53
+    weight: 54
     region: content
     settings:
       size: 60
@@ -305,4 +349,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  entitygroupfield: true

@@ -10,12 +10,13 @@ dependencies:
     - field.field.node.brief.field_date
     - field.field.node.brief.field_federal_court
     - field.field.node.brief.field_number
+    - field.field.node.brief.field_other_groups
     - field.field.node.brief.field_sc_term
     - field.field.node.brief.field_topic
+    - field.field.node.brief.field_your_groups
     - node.type.brief
   module:
     - datetime
-    - ds
     - options
     - text
     - user
@@ -60,14 +61,7 @@ content:
     settings:
       timezone_override: ''
       format_type: html_date
-    third_party_settings:
-      ds:
-        ft:
-          id: default
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
+    third_party_settings: {  }
     weight: 3
     region: content
   field_federal_court:
@@ -85,6 +79,14 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
+  field_other_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
   field_sc_term:
     type: list_default
     label: hidden
@@ -99,6 +101,14 @@ content:
       link: true
     third_party_settings: {  }
     weight: 4
+    region: content
+  field_your_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 11
     region: content
   links:
     settings: {  }

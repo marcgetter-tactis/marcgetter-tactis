@@ -7,6 +7,8 @@ dependencies:
     - field.field.node.case_document.field_body
     - field.field.node.case_document.field_casedoc_type
     - field.field.node.case_document.field_date
+    - field.field.node.case_document.field_other_groups
+    - field.field.node.case_document.field_your_groups
     - node.type.case_document
   module:
     - datetime
@@ -18,6 +20,11 @@ targetEntityType: node
 bundle: case_document
 mode: default
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   field_attachment:
     type: entity_reference_label
     label: hidden
@@ -49,11 +56,28 @@ content:
     third_party_settings: {  }
     weight: 4
     region: content
+  field_other_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_your_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 9
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
     weight: 0
     region: content
 hidden:
+  entitygroupfield: true
   langcode: true
   search_api_excerpt: true

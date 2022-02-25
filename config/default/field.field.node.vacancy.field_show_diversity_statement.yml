@@ -10,7 +10,7 @@ field_name: field_show_diversity_statement
 entity_type: node
 bundle: vacancy
 label: 'Show Diversity Statement'
-description: ''
+description: 'The following statement will be included in the vacancy announcement unless you choose to remove it by unselecting the check box.'
 required: false
 translatable: false
 default_value:

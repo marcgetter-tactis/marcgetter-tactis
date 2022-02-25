@@ -1,0 +1,25 @@
+uuid: 5cb60973-8869-4726-903a-807fb298f129
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.cta
+    - field.storage.block_content.field_body
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+id: block_content.cta.field_body
+field_name: field_body
+entity_type: block_content
+bundle: cta
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

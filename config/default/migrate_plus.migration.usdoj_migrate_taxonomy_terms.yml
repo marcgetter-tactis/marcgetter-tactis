@@ -1,0 +1,90 @@
+uuid: ea1bd24c-7228-42e9-97fb-3f6a1bd36acb
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 1MkNEvFv27o7LWkHsyVIYsRF_WmknqnGhe5fNzcv4H0
+id: usdoj_migrate_taxonomy_terms
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Taxonomy
+  - doj
+migration_group: taxonomy
+label: 'Taxonomy terms'
+source:
+  plugin: d7_taxonomy_term
+  bundle:
+    - brief_topic
+    - case_violation
+    - component
+    - congressional_committee
+    - congressional_session
+    - court_decision_topic
+    - elder_svf_org
+    - guidance_notice
+    - guidance_topic
+    - hiring_organizations
+    - image_categories
+    - industry
+    - invisible
+    - language
+    - localized_translation
+    - non_doj_organization
+    - state_counties
+    - tags
+    - topic
+    - translation
+    - us_judicial_district
+    - us_state
+    - views_rss_itunes_category
+    - youtube_video_categories
+process:
+  tid: tid
+  d9_vid:
+    -
+      plugin: static_map
+      source: machine_name
+      map:
+        test_grouping: product_group
+      bypass: true
+  bundle: '@d9_vid'
+  vid: '@d9_vid'
+  name: name
+  description/value: description
+  description/format:
+    -
+      plugin: static_map
+      source: format
+      map:
+        filtered_html: basic_html
+      bypass: true
+  weight: weight
+  parent_id:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: parent
+    -
+      plugin: migration_lookup
+      migration:
+        - usdoj_migrate_taxonomy_terms
+  parent:
+    -
+      plugin: default_value
+      default_value: 0
+      source: '@parent_id'
+  changed: timestamp
+  langcode: language
+  field_metatag:
+    -
+      plugin: d7_metatag_entities
+      source: pseudo_metatag_entities
+destination:
+  plugin: 'entity:taxonomy_term'
+migration_dependencies:
+  required:
+    - usdoj_migrate_taxonomy_vocabulary
+  optional: {  }

@@ -11,8 +11,10 @@ dependencies:
     - field.field.node.youtube_video.field_download
     - field.field.node.youtube_video.field_image
     - field.field.node.youtube_video.field_invisible
+    - field.field.node.youtube_video.field_other_groups
     - field.field.node.youtube_video.field_transcript
     - field.field.node.youtube_video.field_video_category
+    - field.field.node.youtube_video.field_your_groups
     - field.field.node.youtube_video.field_youtube_video
     - node.type.youtube_video
   module:
@@ -36,8 +38,10 @@ hidden:
   field_download: true
   field_image: true
   field_invisible: true
+  field_other_groups: true
   field_transcript: true
   field_video_category: true
+  field_your_groups: true
   field_youtube_video: true
   langcode: true
   search_api_excerpt: true

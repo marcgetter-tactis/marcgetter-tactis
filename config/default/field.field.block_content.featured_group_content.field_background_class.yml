@@ -1,0 +1,21 @@
+uuid: 1c4d8c7c-aa6a-49fa-bad4-2b1fae9d00f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.featured_group_content
+    - field.storage.block_content.field_background_class
+  module:
+    - options
+id: block_content.featured_group_content.field_background_class
+field_name: field_background_class
+entity_type: block_content
+bundle: featured_group_content
+label: 'Background Color'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

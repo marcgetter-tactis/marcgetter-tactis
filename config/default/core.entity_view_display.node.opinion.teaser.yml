@@ -7,8 +7,10 @@ dependencies:
     - field.field.node.opinion.field_attachment
     - field.field.node.opinion.field_body
     - field.field.node.opinion.field_date
+    - field.field.node.opinion.field_other_groups
     - field.field.node.opinion.field_overview
     - field.field.node.opinion.field_single_attachment
+    - field.field.node.opinion.field_your_groups
     - node.type.opinion
   module:
     - user
@@ -32,7 +34,9 @@ hidden:
   field_attachment: true
   field_body: true
   field_date: true
+  field_other_groups: true
   field_overview: true
   field_single_attachment: true
+  field_your_groups: true
   langcode: true
   search_api_excerpt: true

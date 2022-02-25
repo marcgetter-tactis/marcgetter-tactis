@@ -1,0 +1,202 @@
+{#
+/**
+ * @file
+ * Theme override to display a node.
+ *
+ * Available variables:
+ * - node: The node entity with limited access to object properties and methods.
+ *   Only method names starting with "get", "has", or "is" and a few common
+ *   methods such as "id", "label", and "bundle" are available. For example:
+ *   - node.getCreatedTime() will return the node creation timestamp.
+ *   - node.hasField('field_example') returns TRUE if the node bundle includes
+ *     field_example. (This does not indicate the presence of a value in this
+ *     field.)
+ *   - node.isPublished() will return whether the node is published or not.
+ *   Calling other methods, such as node.delete(), will result in an exception.
+ *   See \Drupal\node\Entity\Node for a full list of public properties and
+ *   methods for the node object.
+ * - label: The title of the node.
+ * - content: All node items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - author_picture: The node author user entity, rendered using the "compact"
+ *   view mode.
+ * - metadata: Metadata for this node.
+ * - date: Themed creation date field.
+ * - author_name: Themed author name field.
+ * - url: Direct URL of the current node.
+ * - display_submitted: Whether submission information should be displayed.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - node: The current template type (also known as a "theming hook").
+ *   - node--type-[type]: The current node type. For example, if the node is an
+ *     "Article" it would result in "node--type-article". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - node--view-mode-[view_mode]: The View Mode of the node; for example, a
+ *     teaser would result in: "node--view-mode-teaser", and
+ *     full: "node--view-mode-full".
+ *   The following are controlled through the node publishing options.
+ *   - node--promoted: Appears on nodes promoted to the front page.
+ *   - node--sticky: Appears on nodes ordered above other non-sticky nodes in
+ *     teaser listings.
+ *   - node--unpublished: Appears on unpublished nodes visible only to site
+ *     admins.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - content_attributes: Same as attributes, except applied to the main
+ *   content tag that appears in the template.
+ * - author_attributes: Same as attributes, except applied to the author of
+ *   the node tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ * - view_mode: View mode; for example, "teaser" or "full".
+ * - teaser: Flag for the teaser state. Will be true if view_mode is 'teaser'.
+ * - page: Flag for the full page state. Will be true if view_mode is 'full'.
+ * - readmore: Flag for more state. Will be true if the teaser content of the
+ *   node cannot hold the main body content.
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @see template_preprocess_node()
+ *
+ * @todo Remove the id attribute (or make it a class), because if that gets
+ *   rendered twice on a page this is invalid CSS for example: two lists
+ *   in different view modes.
+ */
+#}
+
+{% import '@usdoj_uswds/macros/usdoj_uswds_macros.twig'as usdojMacros %}
+{% import '@uswds_base/navigation/menu--sidebar_first.html.twig'as sidebar_first %}
+
+{% set classes = [
+    "grid-row",
+    "grid-gap"
+] %}
+
+{% set episodeType = content.field_episode_type %}
+{% set date = content.field_date %}
+{% set summary = content.field_summary %}
+{% set cover_art = content.field_cover_art %}
+{% set body = content.field_body %}
+{% set images = content.field_image %}
+{% set transcript = content.field_transcript %}
+{% set audio = content.field_audio %}
+{% set buzzprout = node.field_buzzprout.value|raw %}
+{% set attachment = content.field_attachment %}
+{% set attachmentNode = node.field_attachment %}
+{% set credit = content.field_attribution %}
+{% set component = content.field_component %}
+{% set topics = content.field_topic %}
+{% set asideNav = marcToPreProcess ? dynamicSidebarMenu : 'sidebar-menu' %}
+{% set renderedAsideNav = drupal_menu(asideNav) %}
+{% set updatedDate = node.changed.value|date("F j, Y") %}
+
+<article {{ attributes.addClass(classes) }}>
+    <aside class="usa-layout-docs__sidenav desktop:grid-col-3 display-none desktop:display-block desktop:grid-col-3 ">
+        {% if asideNav %}
+            {# The base twig template from USWDS is fine, so let's reference it here #}
+            {{ sidebar_first.menu_links(renderedAsideNav['#items'],0,attributes) }}
+        {% endif %}
+    </aside>
+
+    <div class="usa-layout-docs__main desktop:grid-col-9 node-content">
+
+        {% if asideNav %}
+            {# We need a different UI for the asideNav on mobile, so let's handle its styling differently #}
+            {{ usdojMacros.mobileSideNav(asideNav,"News") }}
+        {% endif %}
+
+        <div class="node-type">{{ node.type.entity.label }}</div>
+        {{ title_prefix }}
+        {% if page %}
+            <h1 class="page-title">{{ label }}</h1>
+        {% else %}
+            <h2{{ title_attributes.addClass('margin-0') }}>
+                <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+            </h2>
+        {% endif %}
+        {{ title_suffix }}
+
+
+        <div{{ content_attributes }}>
+            {# <div class="node-episodeType margin-bottom-7"> #}
+            {# <div class="label text-bold">Episode Type:</div> #}
+            {# {{ episodeType }} #}
+            {# </div> #}
+
+            {% if date %}
+                <div class="node-date margin-bottom-7">{{ date }}</div>
+            {% endif %}
+
+            {% if cover_art %}
+                <div class="node-coverImage img-responsive margin-bottom-7">{{ cover_art }}</div>
+            {% endif %}
+
+            <div class="node-summary text-bold margin-bottom-7">{{ summary }}</div>
+
+            {% if body|render|trim is not empty %}
+                <div class="node-body">{{ body }}</div>
+            {% endif %}
+
+            {# {% if images|render|trim is not empty %} #}
+            {# <div>{{ images }}</div> #}
+            {# {% endif %} #}
+
+            {% if transcript|render|trim is not empty %}
+                <div class="node-transcript margin-bottom-7">
+                    <details>
+                        <summary>Transcript</summary>
+                        {{ transcript }}
+                    </details>
+                </div>
+            {% endif %}
+
+            {% if audio %}
+                <div class="node-audio margin-bottom-7">
+                    {{ audio }}
+                </div>
+            {% endif %}
+
+            {% if buzzprout|render|trim is not empty %}
+                <div class="node-buzzprout margin-bottom-7">
+                    {% autoescape false %}
+                        {{ buzzprout }}
+                    {% endautoescape %}
+                </div>
+            {% endif %}
+
+            {% if updatedDate|render|trim is not empty%}
+                <div class="node-updated-date">Updated {{ updatedDate }}</div>
+            {% endif %}
+            <hr>
+
+            {% if attachment|render|trim is not empty %}
+                <div class="node-attachments margin-bottom-7">
+                    <div class="label text-bold">{{ attachmentNode['#items']|length == 1 ? "Attachment" : "Attachments" }}</div>
+                    {{ usdojMacros.detailedAttachments(attachmentNode,"margin-y-2") }}
+                </div>
+            {% endif %}
+
+            {% if credit|render|trim is not empty %}
+                <div class="node-credit margin-bottom-7">
+                    <div class="label text-bold">Credit</div>
+                    {{ credit }}</div>
+            {% endif %}
+            {% if topics|render|trim is not empty%}
+                <div class="node-topics margin-bottom-7">
+                    <div class="label text-bold">Topics</div>
+                    {{ topics }}</div>
+            {% endif %}
+            <div class="node-component">
+                <div class="label text-bold">Component or Office</div>
+                {{ component }}
+            </div>
+        </div>
+    </div>
+</article>

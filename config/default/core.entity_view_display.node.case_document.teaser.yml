@@ -8,6 +8,8 @@ dependencies:
     - field.field.node.case_document.field_body
     - field.field.node.case_document.field_casedoc_type
     - field.field.node.case_document.field_date
+    - field.field.node.case_document.field_other_groups
+    - field.field.node.case_document.field_your_groups
     - node.type.case_document
   module:
     - user
@@ -16,15 +18,23 @@ targetEntityType: node
 bundle: case_document
 mode: teaser
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
     weight: 100
     region: content
 hidden:
+  entitygroupfield: true
   field_attachment: true
   field_body: true
   field_casedoc_type: true
   field_date: true
+  field_other_groups: true
+  field_your_groups: true
   langcode: true
   search_api_excerpt: true

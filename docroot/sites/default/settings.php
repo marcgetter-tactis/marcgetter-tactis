@@ -756,7 +756,9 @@ $settings['entity_update_backup'] = TRUE;
  */
 $settings['migrate_node_migrate_type_classic'] = FALSE;
 
-$settings['simplesamlphp_dir'] = '/mnt/www/html/justicegovdev/simplesamlphp';
+if (file_exists('/var/www/site-php')) {
+    $settings['simplesamlphp_dir'] = "/var/www/html/" . $_ENV['AH_SITE_NAME'] . "/simplesamlphp";
+}
 
 /**
  * Load local development override configuration, if available.
@@ -773,6 +775,11 @@ $settings['simplesamlphp_dir'] = '/mnt/www/html/justicegovdev/simplesamlphp';
  */
 
 require DRUPAL_ROOT . "/../vendor/acquia/blt/settings/blt.settings.php";
+
+// Settings to access the legacy database for migrations.
+if (file_exists('/var/www/site-php')) {
+  require '/var/www/site-php/justicegov/d7-settings.inc';
+}
 
 // Automatically generated include for settings managed by ddev.
 if (file_exists(__DIR__ . '/settings.ddev.php') && getenv('IS_DDEV_PROJECT') == 'true') {

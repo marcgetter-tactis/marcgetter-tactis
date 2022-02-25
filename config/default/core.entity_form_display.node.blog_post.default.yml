@@ -12,20 +12,40 @@ dependencies:
     - field.field.node.blog_post.field_file_private_force
     - field.field.node.blog_post.field_image
     - field.field.node.blog_post.field_invisible
+    - field.field.node.blog_post.field_other_groups
     - field.field.node.blog_post.field_social_image
     - field.field.node.blog_post.field_teaser
     - field.field.node.blog_post.field_teaser_image
     - field.field.node.blog_post.field_topic
+    - field.field.node.blog_post.field_your_groups
     - node.type.blog_post
     - workflows.workflow.editorial
   module:
     - content_moderation
     - datetime
+    - field_group
     - media_library
     - path
     - scheduler
     - scheduler_content_moderation_integration
     - text
+third_party_settings:
+  field_group:
+    group_organization:
+      children:
+        - field_your_groups
+        - field_other_groups
+      label: Organization
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
 id: node.blog_post.default
 targetEntityType: node
 bundle: blog_post
@@ -101,6 +121,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_other_groups:
+    type: options_select
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_social_image:
     type: media_library_widget
     weight: 8
@@ -124,6 +150,12 @@ content:
       media_types: {  }
     third_party_settings: {  }
   field_topic:
+    type: options_select
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_your_groups:
     type: options_select
     weight: 10
     region: content

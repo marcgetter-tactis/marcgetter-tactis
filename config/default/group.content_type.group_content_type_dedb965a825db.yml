@@ -1,0 +1,19 @@
+uuid: e7d37115-33d6-4f7e-a790-f96f804937dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.organization
+    - node.type.historical_biography
+  module:
+    - gnode
+    - node
+id: group_content_type_dedb965a825db
+label: 'Organization: Group node (Historical Biography)'
+description: 'Adds <em class="placeholder">Historical Biography</em> content to groups both publicly and privately.'
+group_type: organization
+content_plugin: 'group_node:historical_biography'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

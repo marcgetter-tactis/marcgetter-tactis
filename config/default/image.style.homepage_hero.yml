@@ -1,0 +1,15 @@
+uuid: f073a0e1-cc0b-4390-85e2-39bd982702d3
+langcode: en
+status: true
+dependencies: {  }
+name: homepage_hero
+label: 'Homepage hero'
+effects:
+  6b660fd3-2b61-4eca-ae67-da4948e3f91d:
+    uuid: 6b660fd3-2b61-4eca-ae67-da4948e3f91d
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1024
+      height: 450
+      anchor: center-center

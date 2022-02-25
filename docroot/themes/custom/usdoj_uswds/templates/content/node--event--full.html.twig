@@ -83,5 +83,16 @@
     <div{{ content_attributes }}>
       {{ content }}
     </div>
+
+      <!-- Resource Content here -->
+
+    <hr>
+
+    <div class="node-updated-date">Updated {{ node.changed.value|date("F j, Y") }}</div>
+
+    {% if content.field_topic|render|trim is not empty %}
+    <div class="node-topics"><div><strong>Topics</strong></div>{{ content.field_topic }}</div>
+    {% endif %}
+
   </div>
 </article>

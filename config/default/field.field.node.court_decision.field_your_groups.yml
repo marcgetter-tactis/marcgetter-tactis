@@ -1,0 +1,29 @@
+uuid: 62f80e11-4bba-45dd-abec-d45ffcaa375f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_your_groups
+    - group.type.organization
+    - node.type.court_decision
+id: node.court_decision.field_your_groups
+field_name: field_your_groups
+entity_type: node
+bundle: court_decision
+label: 'Your Groups'
+description: 'Associate this content with groups you belong to.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:group'
+  handler_settings:
+    target_bundles:
+      organization: organization
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

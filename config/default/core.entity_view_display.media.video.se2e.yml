@@ -7,32 +7,12 @@ dependencies:
     - field.field.media.video.field_media_cover_image
     - field.field.media.video.field_media_in_library
     - field.field.media.video.field_media_video_file
+    - field.field.media.video.field_other_groups
+    - field.field.media.video.field_your_groups
     - media.type.video
     - responsive_image.styles.de2e_standard
   module:
     - blazy
-    - ds
-third_party_settings:
-  ds:
-    layout:
-      id: ds_1col
-      library: null
-      disable_css: false
-      entity_classes: all_classes
-      settings:
-        classes:
-          layout_class: {  }
-        wrappers:
-          ds_content: div
-        outer_wrapper: div
-        attributes: ''
-        link_attribute: ''
-        link_custom: ''
-        label: ''
-    regions:
-      ds_content:
-        - thumbnail
-        - field_media_cover_image
 _core:
   default_config_hash: iuM-KUugFUBHnTQa0f-Uwqn6b4mpujIQUCG6v6dnzWE
 id: media.video.se2e
@@ -54,6 +34,9 @@ content:
       current_view_mode: se2e
       skin: ''
       fx: ''
+      lazy: ''
+      loading: lazy
+      preload: false
       style: ''
       background: false
       box_caption: ''
@@ -72,35 +55,7 @@ content:
       grid: '0'
       grid_medium: '0'
       grid_small: '0'
-    third_party_settings:
-      ds:
-        ft:
-          id: expert
-          settings:
-            lb: ''
-            lbw: false
-            lbw-el: ''
-            lbw-cl: ''
-            lbw-at: ''
-            lb-col: false
-            ow: true
-            ow-el: ''
-            ow-cl: 'media-cover-image video-player-icon'
-            ow-at: ''
-            ow-def-at: true
-            ow-def-cl: true
-            fis: false
-            fis-el: ''
-            fis-cl: ''
-            fis-at: ''
-            fis-def-at: false
-            fi: false
-            fi-el: ''
-            fi-cl: ''
-            fi-at: ''
-            fi-def-at: false
-            prefix: ''
-            suffix: ''
+    third_party_settings: {  }
     weight: 1
     region: ds_content
   thumbnail:
@@ -117,6 +72,9 @@ content:
       current_view_mode: se2e
       skin: ''
       fx: ''
+      lazy: ''
+      loading: lazy
+      preload: false
       style: ''
       background: false
       box_caption: ''
@@ -135,35 +93,7 @@ content:
       grid: '0'
       grid_medium: '0'
       grid_small: '0'
-    third_party_settings:
-      ds:
-        ft:
-          id: expert
-          settings:
-            lb: ''
-            lbw: false
-            lbw-el: ''
-            lbw-cl: ''
-            lbw-at: ''
-            lb-col: false
-            ow: true
-            ow-el: ''
-            ow-cl: 'media-cover-image video-player-icon'
-            ow-at: ''
-            ow-def-at: true
-            ow-def-cl: true
-            fis: false
-            fis-el: ''
-            fis-cl: ''
-            fis-at: ''
-            fis-def-at: false
-            fi: false
-            fi-el: ''
-            fi-cl: ''
-            fi-at: ''
-            fi-def-at: false
-            prefix: ''
-            suffix: ''
+    third_party_settings: {  }
     weight: 0
     region: ds_content
 hidden:
@@ -171,6 +101,8 @@ hidden:
   entitygroupfield: true
   field_media_in_library: true
   field_media_video_file: true
+  field_other_groups: true
+  field_your_groups: true
   langcode: true
   name: true
   search_api_excerpt: true

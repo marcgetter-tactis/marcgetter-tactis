@@ -8,69 +8,28 @@ dependencies:
     - field.field.media.image.field_image_alignment
     - field.field.media.image.field_media_image
     - field.field.media.image.field_media_in_library
+    - field.field.media.image.field_other_groups
     - field.field.media.image.field_tags
+    - field.field.media.image.field_your_groups
     - field.field.media.image.image
     - media.type.image
-    - responsive_image.styles.d02
-  module:
-    - blazy
-    - ds
 _core:
   default_config_hash: B_3ZX38D8xPuwltlHPk9VzXjMHwN_G0OyGcuVJoJMxg
 id: media.image.s02
 targetEntityType: media
 bundle: image
 mode: s02
-content:
-  field_media_image:
-    type: blazy
-    label: hidden
-    settings:
-      caption:
-        title: '0'
-        alt: '0'
-      icon: ''
-      layout: ''
-      view_mode: ''
-      cache: 0
-      current_view_mode: s02
-      skin: ''
-      fx: ''
-      style: ''
-      background: false
-      box_caption: ''
-      box_caption_custom: ''
-      box_media_style: ''
-      responsive_image_style: d02
-      box_style: ''
-      image_style: ''
-      media_switch: ''
-      ratio: ''
-      thumbnail_style: ''
-      _uri: ''
-      breakpoints: {  }
-      sizes: ''
-      grid_header: ''
-      grid: '0'
-      grid_medium: '0'
-      grid_small: '0'
-    third_party_settings:
-      ds:
-        ft:
-          id: default
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
-    weight: 0
-    region: content
+content: {  }
 hidden:
   created: true
   entitygroupfield: true
   field_categories: true
   field_image_alignment: true
+  field_media_image: true
   field_media_in_library: true
+  field_other_groups: true
   field_tags: true
+  field_your_groups: true
   image: true
   langcode: true
   name: true

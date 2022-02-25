@@ -18,10 +18,11 @@ dependencies:
     - field.field.node.most_wanted.field_field_office
     - field.field.node.most_wanted.field_hair
     - field.field.node.most_wanted.field_height
-    - field.field.node.most_wanted.field_images
     - field.field.node.most_wanted.field_most_wanted_category
+    - field.field.node.most_wanted.field_most_wanted_images
     - field.field.node.most_wanted.field_nationality
     - field.field.node.most_wanted.field_occupations
+    - field.field.node.most_wanted.field_other_groups
     - field.field.node.most_wanted.field_place_of_birth
     - field.field.node.most_wanted.field_race
     - field.field.node.most_wanted.field_reward
@@ -31,6 +32,7 @@ dependencies:
     - field.field.node.most_wanted.field_suspects
     - field.field.node.most_wanted.field_uid
     - field.field.node.most_wanted.field_weight
+    - field.field.node.most_wanted.field_your_groups
     - node.type.most_wanted
   module:
     - user
@@ -39,12 +41,18 @@ targetEntityType: node
 bundle: most_wanted
 mode: teaser
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
     weight: 100
     region: content
 hidden:
+  entitygroupfield: true
   feeds_item: true
   field_additional_information: true
   field_age_range: true
@@ -59,10 +67,11 @@ hidden:
   field_field_office: true
   field_hair: true
   field_height: true
-  field_images: true
   field_most_wanted_category: true
+  field_most_wanted_images: true
   field_nationality: true
   field_occupations: true
+  field_other_groups: true
   field_place_of_birth: true
   field_race: true
   field_reward: true
@@ -72,5 +81,6 @@ hidden:
   field_suspects: true
   field_uid: true
   field_weight: true
+  field_your_groups: true
   langcode: true
   search_api_excerpt: true

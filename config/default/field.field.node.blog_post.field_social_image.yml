@@ -11,7 +11,7 @@ field_name: field_social_image
 entity_type: node
 bundle: blog_post
 label: 'Social Media Image'
-description: ''
+description: 'This image will be used when the blog post is shared on Twitter, Facebook, etc.,'
 required: false
 translatable: false
 default_value: {  }

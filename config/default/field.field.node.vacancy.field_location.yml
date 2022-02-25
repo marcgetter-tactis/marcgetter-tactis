@@ -13,11 +13,11 @@ entity_type: node
 bundle: vacancy
 label: Location
 description: ''
-required: false
+required: true
 translatable: true
 default_value:
   -
-    langcode: ''
+    langcode: null
     country_code: US
     administrative_area: ''
     locality: ''
@@ -26,10 +26,10 @@ default_value:
     sorting_code: null
     address_line1: ''
     address_line2: ''
-    organization: ''
-    given_name: ''
+    organization: null
+    given_name: null
     additional_name: null
-    family_name: ''
+    family_name: null
 default_value_callback: ''
 settings:
   available_countries: {  }

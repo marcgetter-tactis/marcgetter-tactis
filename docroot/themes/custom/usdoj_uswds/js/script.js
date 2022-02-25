@@ -48,21 +48,51 @@
     attach: function (context, settings) {
 
       once('loadMoreItems', 'html', context ).forEach( function (element) {
-        $button = $('.action-center-cta button');
-        $hiddenItems = $('.action-center-items .action-icons-hidden');
+        var $button = $('.action-center-cta button');
+        var $itemsWrapper = $('.action-center-items .action-icons');
+        var $allItems = $('.action-center-items .action-icons >.field__item');
+        var $hiddenItems = $('.action-center-items .action-icon-hidden');
+        var $shownItems = $('.action-center-items .action-icon-shown');
 
-        if ($(".hide-more-button")[0]){
-          $button.hide();
+        //* Calculate and set the max height (used for the animation)
+        if ($(window).width() >=  1024 ) {
+          var iconsHeight = $itemsWrapper.height();
+          $itemsWrapper.css({"max-height":iconsHeight});
+
+          //* Remove bottom border of last row.
+          var lastRow = $shownItems.length % 3;
+          switch(lastRow) {
+            case 0:
+              //* Modify last 3 items
+              $shownItems.last().addClass("no-border");
+              $shownItems.eq(-2).addClass("no-border");
+              $shownItems.eq(-3).addClass("no-border");
+              break;
+            case 1:
+              //* Modify last item
+              $shownItems.last().addClass("no-border");
+              break;
+            default:
+              //* Modify last 2 items
+              $shownItems.last().addClass("no-border");
+              $shownItems.eq(-2).addClass("no-border");
+          } 
         }
 
         $button.click(function() {
-          $hiddenItems.addClass('show-icons');
+          $hiddenItems.removeClass('action-icon-hidden');
           $button.attr("disabled",true);
+
+          if ($(window).width() >=  1024 ) {
+            $('.action-icons').css({"max-height":1000});
+            $allItems.removeClass("no-border");
+          }
         });
       });
     }
   };
 
+  //tab block functionality
   $('.panel .block-tab').click(function() {
     var i = $(this).attr('id');
 
@@ -75,6 +105,7 @@
     $('#' + i + '-body').fadeIn('slow');
   })
 
+  //tab block mobile slick slider
   $(window).on('load resize', function()  {
     if($(window).width() < 768){
       $('.paragraph--type--tab .field__items').slick({
@@ -88,6 +119,15 @@
     }else{
       $(".paragraph--type--tab .field__items").slick("unslick");
     }
+  });
+
+  //news keyword search submit form
+  $('a.keyword-form').click(function() {
+    $('#views-exposed-form-news-page-1').submit();
+  });
+  //sort by select change submit form
+  $('select[name="sort_by"]').change(function() {
+    $('#views-exposed-form-news-page-1').submit();
   });
 
 })(jQuery);

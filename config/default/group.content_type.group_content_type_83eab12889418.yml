@@ -1,0 +1,19 @@
+uuid: fa50fa79-25d7-4282-a83c-36e97d1ade38
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.organization
+    - media.type.document
+  module:
+    - groupmedia
+    - media
+id: group_content_type_83eab12889418
+label: 'Organization: Group media (Document)'
+description: 'Adds <em class="placeholder">Document</em> content to groups both publicly and privately.'
+group_type: organization
+content_plugin: 'group_media:document'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

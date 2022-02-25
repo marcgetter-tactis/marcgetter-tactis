@@ -1,0 +1,27 @@
+.block-cta {
+  padding-bottom: 3rem;
+  h2.block-title {
+    font-size: 1.4rem;
+  }
+  .body {
+    margin-bottom: 2rem;
+  }
+  .field_cta a {
+    padding: .5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: color(primary-darker);
+    color: white;
+    @include at-media(desktop) {
+      padding: 0.5rem 1.25rem;
+    }
+    &:hover {
+      background-color: $blue-60v;
+    }
+    &:active {
+      background-color: $doj-coolblue;
+      border: none;
+    }
+  }
+}

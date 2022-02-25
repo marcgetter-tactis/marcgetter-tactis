@@ -1,0 +1,19 @@
+uuid: 1b722add-b5ab-4c1d-b6bb-fbb7e15b91e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.organization
+    - node.type.most_wanted
+  module:
+    - gnode
+    - node
+id: group_content_type_dd190f39507e1
+label: 'Organization: Group node (Most wanted)'
+description: 'Adds <em class="placeholder">Most wanted</em> content to groups both publicly and privately.'
+group_type: organization
+content_plugin: 'group_node:most_wanted'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

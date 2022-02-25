@@ -12,8 +12,8 @@ field_name: field_va_position
 entity_type: node
 bundle: vacancy
 label: Position
-description: ''
-required: false
+description: 'Candidates will be able to search jobs based upon the information in this field.'
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

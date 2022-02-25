@@ -71,20 +71,83 @@
 */
 #}
 
+{% import '@usdoj_uswds/macros/usdoj_uswds_macros.twig'as usdojMacros %}
+{% import '@uswds_base/navigation/menu--sidebar_first.html.twig'as sidebar_first %}
 
-<article{{ attributes }}>
-  <div class="node-type">{{ node.type.entity.label }}</div>
+{% set classes = [
+"grid-row",
+"grid-gap"
+] %}
 
-  {{ title_prefix }}
-  <h1 class="page-title">{{ label }}</h1>
-  {{ title_suffix }}
-  
-  <div class="node-date">{{ content.field_date }}</div>
+{% set attachment = content.field_attachment %}
+{% set attachmentNode = node.field_attachment %}
 
-  <div{{ content_attributes.addClass("node-body")}}>
-    {{ content.field_body }}
+{% set asideNav = marcToPreProcess ? dynamicSidebarMenu : 'sidebar-menu' %}
+{% set renderedAsideNav = drupal_menu(asideNav) %}
+
+<article{{ attributes.addClass(classes) }}>
+
+  {# Left sidebar #}
+  <aside class="usa-layout-docs__sidenav desktop:grid-col-3 display-none desktop:display-block desktop:grid-col-3 ">
+    {% if asideNav %}
+    {# The base twig template from USWDS is fine, so let's reference it here #}
+    {{ sidebar_first.menu_links(renderedAsideNav['#items'],0,attributes) }}
+    {% endif %}
+  </aside>
+
+  {# Main content #}
+  <div class="usa-layout-docs__main desktop:grid-col-9 node-content">
+
+    {% if asideNav %}
+    {# We need a different UI for the asideNav on mobile, so let's handle its styling differently #}
+    {{ usdojMacros.mobileSideNav(asideNav,"News") }}
+    {% endif %}
+
+    <div class="node-type">{{ node.type.entity.label }}</div>
+
+    {{ title_prefix }}
+    <h1 class="page-title">{{ label }}</h1>
+    {{ title_suffix }}
+
+    <div class="node-top">
+      <div class="node-top-left">
+        <div class="node-date">{{ content.field_date }}</div>
+      </div>
+
+      {% if content.field_number|render|trim is not empty %}
+      <div class="node-top-right">
+        <div class="node-info-box">
+          <strong>For Immediate Release</strong>
+          <span>Release Number:</span> {{ content.field_number[0] }}<br />
+          Office of Public Affairs<br />
+          <a href="mailto:publicaffairs@justice.gov">publicaffairs@justice.gov</a>
+        </div>
+      </div>
+      {% endif %}
+
     </div>
-  <hr>
-   <div class="node-attachments"><div><strong>Attachments</strong></div>{{ content.field_attachment }}</div>
-   <div class="node-component"><div><strong>Component or Office</strong></div>{{ content.field_component }}</div>
+
+    <div{{ content_attributes.addClass("node-body")}}>
+      {{ content.field_body }}
+      </div>
+
+    <div class="node-updated-date">Updated {{ node.changed.value|date("F j, Y") }}</div>
+
+    <hr>
+
+    {% if attachment|render|trim is not empty %}
+    <div class="node-attachments">
+      <strong>{{ attachmentNode['#items']|length == 1 ? "Attachment" : "Attachments" }}</strong>
+      {{ usdojMacros.detailedAttachments(attachmentNode,"field__item") }}
+    </div>
+    {% endif %}
+
+    {% if content.field_topic|render|trim is not empty %}
+    <div class="node-topics"><div><strong>Topics</strong></div>{{ content.field_topic }}</div>
+    {% endif %}
+
+    {% if content.field_component|render|trim is not empty %}
+    <div class="node-component"><div><strong>Component or Office</strong></div>{{ content.field_component }}</div>
+    {% endif %}
+  </div>
   </article>

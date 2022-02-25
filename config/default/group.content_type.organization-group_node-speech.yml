@@ -1,0 +1,19 @@
+uuid: cb798a49-bac3-4eb5-8123-882b3cb233f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.organization
+    - node.type.speech
+  module:
+    - gnode
+    - node
+id: organization-group_node-speech
+label: 'Organization: Group node (Speech)'
+description: 'Adds <em class="placeholder">Speech</em> content to groups both publicly and privately.'
+group_type: organization
+content_plugin: 'group_node:speech'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

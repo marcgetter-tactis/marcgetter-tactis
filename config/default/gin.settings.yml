@@ -15,7 +15,7 @@ third_party_settings:
 preset_accent_color: blue
 preset_focus_color: gin
 enable_darkmode: false
-classic_toolbar: classic
+classic_toolbar: vertical
 icon_default: true
 icon_path: ''
 high_contrast_mode: false

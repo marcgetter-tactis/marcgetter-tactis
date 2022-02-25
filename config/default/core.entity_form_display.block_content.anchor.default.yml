@@ -1,0 +1,79 @@
+uuid: 48c14351-3fda-4460-8afe-43fcc88e7125
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.anchor
+    - field.field.block_content.anchor.field_heading
+    - field.field.block_content.anchor.field_links
+    - field.field.block_content.anchor.field_other_groups
+    - field.field.block_content.anchor.field_your_groups
+  module:
+    - field_group
+    - link
+third_party_settings:
+  field_group:
+    group_organization:
+      children:
+        - field_your_groups
+        - field_other_groups
+      label: Organization
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+id: block_content.anchor.default
+targetEntityType: block_content
+bundle: anchor
+mode: default
+content:
+  field_heading:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_links:
+    type: link_default
+    weight: 5
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_other_groups:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_your_groups:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 6
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

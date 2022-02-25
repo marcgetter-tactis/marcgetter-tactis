@@ -1,0 +1,19 @@
+uuid: d71fd29e-42e0-4590-b3b2-2f6bbf974d91
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.offices
+    - field.storage.block_content.field_heading
+id: block_content.offices.field_heading
+field_name: field_heading
+entity_type: block_content
+bundle: offices
+label: Heading
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

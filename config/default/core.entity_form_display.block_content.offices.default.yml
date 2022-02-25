@@ -1,0 +1,99 @@
+uuid: 48404a87-0292-4450-bb90-38dbb96cdf62
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.offices
+    - field.field.block_content.offices.field_anchor
+    - field.field.block_content.offices.field_heading
+    - field.field.block_content.offices.field_offices
+    - field.field.block_content.offices.field_other_groups
+    - field.field.block_content.offices.field_your_groups
+  module:
+    - field_group
+    - paragraphs
+third_party_settings:
+  field_group:
+    group_organization:
+      children:
+        - field_your_groups
+        - field_other_groups
+      label: Organization
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+id: block_content.offices.default
+targetEntityType: block_content
+bundle: offices
+mode: default
+content:
+  field_anchor:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_heading:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_offices:
+    type: paragraphs
+    weight: 4
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: office
+      features:
+        add_above: add_above
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_other_groups:
+    type: options_select
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_your_groups:
+    type: options_select
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 3
+    region: content
+    settings:
+      include_locked: false
+    third_party_settings: {  }
+hidden: {  }

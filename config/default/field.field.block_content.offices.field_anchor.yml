@@ -1,0 +1,19 @@
+uuid: 65c48c38-7839-414b-870a-c9fd925c3e99
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.offices
+    - field.storage.block_content.field_anchor
+id: block_content.offices.field_anchor
+field_name: field_anchor
+entity_type: block_content
+bundle: offices
+label: Anchor
+description: 'Use this field to set an anchor link to use on page jump-to navigation.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

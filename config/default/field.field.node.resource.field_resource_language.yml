@@ -1,26 +1,26 @@
-uuid: b4faf294-ff3b-4a91-9486-fab6383f7505
+uuid: d0a27b2c-eae1-42ec-9660-b7b3f1ba0657
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_component
+    - field.storage.node.field_resource_language
     - node.type.resource
-    - taxonomy.vocabulary.component
-id: node.resource.field_component
-field_name: field_component
+    - taxonomy.vocabulary.language
+id: node.resource.field_resource_language
+field_name: field_resource_language
 entity_type: node
 bundle: resource
-label: Component(s)
-description: 'Select any component categories that this resource should be associated with.'
+label: Language
+description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      component: component
+      language: language
     sort:
       field: name
       direction: asc

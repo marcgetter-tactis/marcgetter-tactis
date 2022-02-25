@@ -72,4 +72,6 @@ content:
     settings:
       include_locked: true
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  body: true
+  field_background_class: true

@@ -30,7 +30,7 @@ third_party_settings:
       label: Organization
       region: content
       parent_name: ''
-      weight: 2
+      weight: 1
       format_type: fieldset
       format_settings:
         classes: ''
@@ -51,7 +51,7 @@ content:
     third_party_settings: {  }
   field_body:
     type: text_textarea
-    weight: 5
+    weight: 4
     region: content
     settings:
       rows: 5
@@ -59,19 +59,19 @@ content:
     third_party_settings: {  }
   field_date:
     type: datetime_default
-    weight: 3
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
   field_other_groups:
     type: options_select
-    weight: 8
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   field_overview:
     type: text_textarea
-    weight: 4
+    weight: 3
     region: content
     settings:
       rows: 6
@@ -79,27 +79,27 @@ content:
     third_party_settings: {  }
   field_single_attachment:
     type: media_library_widget
-    weight: 6
+    weight: 5
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_your_groups:
     type: options_select
-    weight: 7
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 1
+    weight: 6
     region: content
     settings:
-      include_locked: false
+      include_locked: true
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 18
+    weight: 100
     region: content
     settings: {  }
     third_party_settings: {  }

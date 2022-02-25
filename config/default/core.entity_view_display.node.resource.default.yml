@@ -10,7 +10,6 @@ dependencies:
     - field.field.node.resource.field_links
     - field.field.node.resource.field_other_groups
     - field.field.node.resource.field_resource_audience
-    - field.field.node.resource.field_resource_language
     - field.field.node.resource.field_resource_type
     - field.field.node.resource.field_your_groups
     - node.type.resource
@@ -91,14 +90,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 5
-    region: content
-  field_resource_language:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 10
     region: content
   field_resource_type:
     type: list_default

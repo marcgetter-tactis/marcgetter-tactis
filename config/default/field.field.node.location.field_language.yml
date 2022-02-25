@@ -1,0 +1,23 @@
+uuid: a16dab4d-8935-4f38-acbb-6014666adfea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_language
+    - node.type.location
+id: node.location.field_language
+field_name: field_language
+entity_type: node
+bundle: location
+label: Language
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:configurable_language'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

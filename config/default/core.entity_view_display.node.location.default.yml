@@ -8,10 +8,10 @@ dependencies:
     - field.field.node.location.field_email
     - field.field.node.location.field_end_date
     - field.field.node.location.field_invisible
-    - field.field.node.location.field_language
     - field.field.node.location.field_latlong
     - field.field.node.location.field_link
     - field.field.node.location.field_location
+    - field.field.node.location.field_location_language
     - field.field.node.location.field_other_groups
     - field.field.node.location.field_start_date
     - field.field.node.location.field_text
@@ -61,14 +61,6 @@ content:
     third_party_settings: {  }
     weight: 4
     region: content
-  field_language:
-    type: entity_reference_label
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 9
-    region: content
   field_latlong:
     type: geocoder_geofield_reverse_geocode
     label: hidden
@@ -99,6 +91,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_location_language:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 13
     region: content
   field_other_groups:
     type: entity_reference_label

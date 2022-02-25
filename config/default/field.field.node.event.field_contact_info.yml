@@ -6,16 +6,12 @@ dependencies:
     - field.storage.node.field_contact_info
     - node.type.event
   module:
-    - allowed_formats
     - text
-third_party_settings:
-  allowed_formats:
-    allowed_formats: {  }
 id: node.event.field_contact_info
 field_name: field_contact_info
 entity_type: node
 bundle: event
-label: 'Event Contact Infomation'
+label: 'Event Contact Info'
 description: ''
 required: false
 translatable: true

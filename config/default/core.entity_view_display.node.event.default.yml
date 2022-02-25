@@ -24,7 +24,6 @@ dependencies:
   module:
     - address
     - datetime_range
-    - ds
     - link
     - options
     - text
@@ -56,14 +55,14 @@ content:
     region: content
   field_body:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 15
     region: content
   field_component:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
@@ -71,7 +70,7 @@ content:
     region: content
   field_contact_info:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 12
@@ -116,7 +115,7 @@ content:
     region: content
   field_location:
     type: address_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 4
@@ -138,7 +137,7 @@ content:
     region: content
   field_press:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 7
@@ -165,7 +164,7 @@ content:
     region: content
   field_topic:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }

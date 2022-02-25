@@ -199,5 +199,6 @@ hooks:
   post-start:
     - exec: "ln -sf /var/www/html/vendor/acquia/blt/bin/blt /usr/bin/blt"
     - exec-host: "ddev auth ssh"
+    - exec-host: "ddev set_migrate_db"
   post-import-db:
     - exec: "drush uli"

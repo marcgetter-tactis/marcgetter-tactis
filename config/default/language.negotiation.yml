@@ -7,6 +7,10 @@ url:
   prefixes:
     en: ''
     '': null
+    ht: ht
+    es: es
   domains:
     en: ''
+    ht: ''
+    es: ''
 selected_langcode: site_default

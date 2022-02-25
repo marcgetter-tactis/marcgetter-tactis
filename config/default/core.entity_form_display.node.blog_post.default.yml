@@ -38,7 +38,7 @@ third_party_settings:
       label: Organization
       region: content
       parent_name: ''
-      weight: 2
+      weight: 1
       format_type: fieldset
       format_settings:
         classes: ''
@@ -59,14 +59,14 @@ content:
     third_party_settings: {  }
   field_attachment:
     type: media_library_widget
-    weight: 14
+    weight: 13
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_author:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 4
     region: content
     settings:
       match_operator: CONTAINS
@@ -76,7 +76,7 @@ content:
     third_party_settings: {  }
   field_author_free:
     type: string_textfield
-    weight: 6
+    weight: 5
     region: content
     settings:
       size: 60
@@ -84,7 +84,7 @@ content:
     third_party_settings: {  }
   field_body:
     type: text_textarea
-    weight: 10
+    weight: 9
     region: content
     settings:
       rows: 9
@@ -92,13 +92,13 @@ content:
     third_party_settings: {  }
   field_component:
     type: options_select
-    weight: 4
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
   field_date:
     type: datetime_default
-    weight: 3
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -110,33 +110,33 @@ content:
     third_party_settings: {  }
   field_image:
     type: media_library_widget
-    weight: 13
+    weight: 12
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_invisible:
     type: options_select
-    weight: 12
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   field_other_groups:
     type: options_select
-    weight: 12
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   field_social_image:
     type: media_library_widget
-    weight: 9
+    weight: 8
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_teaser:
     type: text_textarea
-    weight: 7
+    weight: 6
     region: content
     settings:
       rows: 5
@@ -144,14 +144,14 @@ content:
     third_party_settings: {  }
   field_teaser_image:
     type: media_library_widget
-    weight: 8
+    weight: 7
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_topic:
     type: options_select
-    weight: 11
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -163,14 +163,14 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 1
+    weight: 14
     region: content
     settings:
-      include_locked: false
+      include_locked: true
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 27
+    weight: 100
     region: content
     settings: {  }
     third_party_settings: {  }

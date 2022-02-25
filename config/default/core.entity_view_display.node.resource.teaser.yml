@@ -11,7 +11,6 @@ dependencies:
     - field.field.node.resource.field_links
     - field.field.node.resource.field_other_groups
     - field.field.node.resource.field_resource_audience
-    - field.field.node.resource.field_resource_language
     - field.field.node.resource.field_resource_type
     - field.field.node.resource.field_your_groups
     - node.type.resource
@@ -36,7 +35,6 @@ hidden:
   field_links: true
   field_other_groups: true
   field_resource_audience: true
-  field_resource_language: true
   field_resource_type: true
   field_your_groups: true
   langcode: true

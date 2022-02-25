@@ -1,16 +1,16 @@
-uuid: 51349b17-2c4d-45df-8e67-28c9bf562f51
+uuid: 5910e0a8-15c0-4c52-ba73-d2a256423086
 langcode: en
 status: true
 dependencies:
   module:
+    - language
     - node
-    - taxonomy
-id: node.field_resource_language
-field_name: field_resource_language
+id: node.field_language
+field_name: field_language
 entity_type: node
 type: entity_reference
 settings:
-  target_type: taxonomy_term
+  target_type: configurable_language
 module: core
 locked: false
 cardinality: 1

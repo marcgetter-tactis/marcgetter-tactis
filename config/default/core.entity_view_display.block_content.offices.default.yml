@@ -1,0 +1,77 @@
+uuid: a2c145f2-3f8b-491a-b08b-6def6478d791
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.offices
+    - field.field.block_content.offices.field_anchor
+    - field.field.block_content.offices.field_heading
+    - field.field.block_content.offices.field_offices
+    - field.field.block_content.offices.field_other_groups
+    - field.field.block_content.offices.field_your_groups
+  module:
+    - entity_reference_revisions
+    - field_group
+third_party_settings:
+  field_group:
+    group_organization:
+      children: {  }
+      label: Organization
+      parent_name: ''
+      region: hidden
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+id: block_content.offices.default
+targetEntityType: block_content
+bundle: offices
+mode: default
+content:
+  field_anchor:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_heading:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_offices:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_other_groups:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 22
+    region: content
+  field_your_groups:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 21
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

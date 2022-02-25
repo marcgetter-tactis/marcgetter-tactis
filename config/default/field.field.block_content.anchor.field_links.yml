@@ -1,0 +1,28 @@
+uuid: c37a6234-44d8-4ea6-943c-7a5e35c29202
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.anchor
+    - field.storage.block_content.field_links
+  module:
+    - link
+id: block_content.anchor.field_links
+field_name: field_links
+entity_type: block_content
+bundle: anchor
+label: Links
+description: 'Add links that will be used to link to sections on the page with an anchor defined.'
+required: true
+translatable: false
+default_value:
+  -
+    attributes: {  }
+    uri: 'internal:#'
+    title: ''
+    options: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 17
+field_type: link

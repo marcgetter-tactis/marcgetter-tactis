@@ -1,0 +1,8 @@
+uuid: 9e0eb6e8-9af4-459d-98c5-c5a8c5669396
+langcode: en
+status: true
+dependencies: {  }
+id: offices
+label: Offices
+revision: 1
+description: ''

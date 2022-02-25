@@ -1,0 +1,11 @@
+uuid: d09cf0d4-b12c-4fcc-85b2-7f1ea139432a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.offices
+id: block_content.offices
+target_entity_type_id: block_content
+target_bundle: offices
+default_langcode: site_default
+language_alterable: false

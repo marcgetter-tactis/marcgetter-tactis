@@ -1,0 +1,29 @@
+uuid: 3dea41ca-5700-4571-b210-7847f081bb61
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.offices
+    - field.storage.block_content.field_other_groups
+    - group.type.organization
+id: block_content.offices.field_other_groups
+field_name: field_other_groups
+entity_type: block_content
+bundle: offices
+label: 'Other Groups'
+description: 'As groups administrator, associate this content with groups you do not belong to.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:group'
+  handler_settings:
+    target_bundles:
+      organization: organization
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

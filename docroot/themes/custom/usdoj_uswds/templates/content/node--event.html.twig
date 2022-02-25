@@ -136,14 +136,25 @@
 
     <div{{ content_attributes.addClass("node-body")}}><h3 class="field-header">Event Details</h3>
       {{ content.field_body }}
-      </div>
-
+    </div>
+    
     {% if attachment|render|trim is not empty %}
     <div class="node-attachments">
       <strong>{{ attachmentNode['#items']|length == 1 ? "Attachment" : "Attachments" }}</strong>
       {{ usdojMacros.detailedAttachments(attachmentNode,"field__item") }}
     </div>
     {% endif %}
+
+    <!-- Resources Area -->
+
+    <hr>
+
+    <div class="node-updated-date">Updated {{ node.changed.value|date("F j, Y") }}</div>
+
+    {% if content.field_topic|render|trim is not empty %}
+    <div class="node-topics"><div><strong>Topics</strong></div>{{ content.field_topic }}</div>
+    {% endif %}
+
   </div>
 
   </article>

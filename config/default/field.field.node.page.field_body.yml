@@ -7,10 +7,14 @@ dependencies:
     - node.type.page
   module:
     - allowed_formats
+    - linkchecker
     - text
 third_party_settings:
   allowed_formats:
     allowed_formats: {  }
+  linkchecker:
+    scan: true
+    extractor: html_link_extractor
 id: node.page.field_body
 field_name: field_body
 entity_type: node

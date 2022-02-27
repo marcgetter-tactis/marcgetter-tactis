@@ -84,6 +84,7 @@
         "drupal/layout_builder_lock": "^1.1",
         "drupal/layout_builder_modal": "^1.1",
         "drupal/link_attributes": "^1.11",
+        "drupal/linkchecker": "^1.0@beta",
         "drupal/linkit": "^6",
         "drupal/media_bulk_upload": "^1.0@alpha",
         "drupal/media_embed_extra": "^1.0@beta",

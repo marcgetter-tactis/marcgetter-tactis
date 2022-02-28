@@ -237,6 +237,9 @@
             },
             "drupal/paragraphs": {
                 "Integrity constraint violation: 1048 Column 'langcode' cannot be null": "https://www.drupal.org/files/issues/2021-03-01/2901390-76-integrity-constraint-violation-paragraph.patch"
+            },
+            "drupal/gin_lb": {
+            "Fix issue with adding images in layout builder blocks": "patches/gin_lb_fix_media_add.patch"
             }
         },
         "violinist": {

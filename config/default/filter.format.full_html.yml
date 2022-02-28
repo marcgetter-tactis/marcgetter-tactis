@@ -40,7 +40,7 @@ filters:
       filter_html_nofollow: false
   media_embed:
     id: media_embed
-    provider: media
+    provider: media_embed_extra
     status: true
     weight: -43
     settings:

@@ -164,7 +164,7 @@ content:
     region: content
   field_topic:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }

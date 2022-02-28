@@ -1,0 +1,4 @@
+usdoj-gin-styles:
+  css:
+    theme:
+      css/usdoj_gin_styles.css: {}

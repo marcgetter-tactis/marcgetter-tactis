@@ -775,9 +775,9 @@ if (file_exists('/var/www/site-php')) {
  */
 
 // Settings to access the legacy database for migrations.
-if (file_exists('/var/www/site-php')) {
-  require '/var/www/site-php/justicegov/d7-settings.inc';
-}
+#if (file_exists('/var/www/site-php')) {
+#  require '/var/www/site-php/justicegov/d7-settings.inc';
+#}
 
 require DRUPAL_ROOT . "/../vendor/acquia/blt/settings/blt.settings.php";
 

@@ -244,4 +244,5 @@ theme:
   uswds_base: 0
   usdoj_uswds: 0
   gin: 0
+  usdoj_gin: 0
 profile: acquia_cms

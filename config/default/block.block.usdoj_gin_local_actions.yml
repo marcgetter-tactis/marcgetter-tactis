@@ -1,0 +1,20 @@
+uuid: 0e8d5d42-bd2d-423d-8d37-c42e462e6c01
+langcode: en
+status: true
+dependencies:
+  theme:
+    - usdoj_gin
+_core:
+  default_config_hash: OQ9aJ-4qVwK1x00o9EOYK4eFDjQr_HLpbPiJaPSVZiQ
+id: usdoj_gin_local_actions
+theme: usdoj_gin
+region: content
+weight: -10
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

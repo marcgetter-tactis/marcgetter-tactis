@@ -1,0 +1,20 @@
+uuid: 8ae5d26f-d4a2-42f3-911e-09d3b076bddd
+langcode: en
+status: true
+dependencies:
+  theme:
+    - usdoj_gin
+_core:
+  default_config_hash: HLQY2xgby8K3vN_98hiOSasOhm9pdCsH234-s0duJ8Q
+id: usdoj_gin_page_title
+theme: usdoj_gin
+region: header
+weight: -30
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

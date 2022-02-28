@@ -1,0 +1,22 @@
+uuid: 7f935d43-eafc-4450-b288-b7f47787716f
+langcode: en
+status: true
+dependencies:
+  theme:
+    - usdoj_gin
+_core:
+  default_config_hash: Hh01DLj9k7UnNdPpOQXHZHW7GHf2OPNDQyCJF7_R9ac
+id: usdoj_gin_primary_local_tasks
+theme: usdoj_gin
+region: header
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

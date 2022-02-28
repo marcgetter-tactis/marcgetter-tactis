@@ -7,7 +7,6 @@ dependencies:
     - field.field.block_content.blank.field_background_class
     - field.field.block_content.blank.field_body
     - field.field.block_content.blank.field_cta
-    - field.field.block_content.blank.field_cta_style
     - field.field.block_content.blank.field_header
     - field.field.block_content.blank.field_media
     - field.field.block_content.blank.field_other_groups
@@ -60,12 +59,6 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
-    third_party_settings: {  }
-  field_cta_style:
-    type: options_select
-    weight: 7
-    region: content
-    settings: {  }
     third_party_settings: {  }
   field_header:
     type: string_textfield

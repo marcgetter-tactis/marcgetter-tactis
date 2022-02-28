@@ -8,7 +8,6 @@ dependencies:
     - field.field.block_content.mission.field_background_image
     - field.field.block_content.mission.field_body
     - field.field.block_content.mission.field_cta
-    - field.field.block_content.mission.field_cta_style
     - field.field.block_content.mission.field_heading
     - field.field.block_content.mission.field_image
     - field.field.block_content.mission.field_other_groups
@@ -21,7 +20,6 @@ dependencies:
     - layout_builder_restrictions
     - layout_discovery
     - link
-    - options
     - text
 third_party_settings:
   layout_builder:
@@ -124,21 +122,6 @@ third_party_settings:
                   target: ''
                 third_party_settings: {  }
             weight: 4
-            additional: {  }
-          2bacff59-01d6-4369-b8b6-148a2037826e:
-            uuid: 2bacff59-01d6-4369-b8b6-148a2037826e
-            region: content
-            configuration:
-              id: 'field_block:block_content:mission:field_cta_style'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: list_default
-                label: hidden
-                settings: {  }
-                third_party_settings: {  }
-            weight: 5
             additional: {  }
           2499a91d-f17c-4f01-ad0f-205452933882:
             uuid: 2499a91d-f17c-4f01-ad0f-205452933882
@@ -265,21 +248,6 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 12
             additional: {  }
-          6bbc6fd4-bbe2-418c-afa3-e8a48e26f2ec:
-            uuid: 6bbc6fd4-bbe2-418c-afa3-e8a48e26f2ec
-            region: content
-            configuration:
-              id: 'field_block:block_content:mission:field_cta_style'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: list_default
-                label: hidden
-                settings: {  }
-                third_party_settings: {  }
-            weight: 13
-            additional: {  }
           dbb732e3-cc4a-4266-83c7-01cba5e3d7c1:
             uuid: dbb732e3-cc4a-4266-83c7-01cba5e3d7c1
             region: content
@@ -360,13 +328,6 @@ content:
       target: ''
     third_party_settings: {  }
     weight: 4
-    region: content
-  field_cta_style:
-    type: list_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 5
     region: content
   field_heading:
     type: string

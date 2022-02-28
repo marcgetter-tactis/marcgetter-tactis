@@ -7,6 +7,7 @@ core_version_requirement: ^8.8 || ^9 || ^10
 libraries:
   - claro/global-styling
   - gin/gin
+#  - usdoj_gin/usdoj-gin-styles
 
 # Regions
 regions:

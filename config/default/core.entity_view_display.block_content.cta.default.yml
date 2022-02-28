@@ -4,52 +4,45 @@ status: true
 dependencies:
   config:
     - block_content.type.cta
+    - field.field.block_content.cta.body
     - field.field.block_content.cta.field_alignment
-    - field.field.block_content.cta.field_body
+    - field.field.block_content.cta.field_background_class
     - field.field.block_content.cta.field_cta_links
     - field.field.block_content.cta.field_heading
   module:
     - entity_reference_revisions
-    - options
     - text
 id: block_content.cta.default
 targetEntityType: block_content
 bundle: cta
 mode: default
 content:
-  field_alignment:
-    type: list_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 2
-    region: content
-  field_body:
+  body:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 3
+    weight: 1
     region: content
   field_cta_links:
     type: entity_reference_revisions_entity_view
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   field_heading:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     weight: 0
     region: content
 hidden:
-  body: true
+  field_alignment: true
   field_background_class: true
   langcode: true
   search_api_excerpt: true

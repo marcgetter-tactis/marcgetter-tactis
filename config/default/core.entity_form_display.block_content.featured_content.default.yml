@@ -7,7 +7,6 @@ dependencies:
     - field.field.block_content.featured_content.field_background_class
     - field.field.block_content.featured_content.field_body
     - field.field.block_content.featured_content.field_cta
-    - field.field.block_content.featured_content.field_cta_style
     - field.field.block_content.featured_content.field_heading
     - field.field.block_content.featured_content.field_image
     - field.field.block_content.featured_content.field_other_groups
@@ -60,12 +59,6 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
-    third_party_settings: {  }
-  field_cta_style:
-    type: options_select
-    weight: 6
-    region: content
-    settings: {  }
     third_party_settings: {  }
   field_heading:
     type: string_textfield

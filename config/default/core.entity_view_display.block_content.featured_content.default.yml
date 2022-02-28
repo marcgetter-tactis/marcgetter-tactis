@@ -7,7 +7,6 @@ dependencies:
     - field.field.block_content.featured_content.field_background_class
     - field.field.block_content.featured_content.field_body
     - field.field.block_content.featured_content.field_cta
-    - field.field.block_content.featured_content.field_cta_style
     - field.field.block_content.featured_content.field_heading
     - field.field.block_content.featured_content.field_image
     - field.field.block_content.featured_content.field_other_groups
@@ -46,7 +45,6 @@ content:
 hidden:
   field_background_class: true
   field_cta: true
-  field_cta_style: true
   field_other_groups: true
   field_your_groups: true
   langcode: true

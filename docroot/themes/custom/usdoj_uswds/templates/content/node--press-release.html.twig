@@ -89,11 +89,11 @@
 
   {# Left sidebar #}
   <!--<aside class="usa-layout-docs__sidenav desktop:grid-col-3 display-none desktop:display-block desktop:grid-col-3 ">
-    {% if asideNav %}
-    {# The base twig template from USWDS is fine, so let's reference it here #}
-    {{ sidebar_first.menu_links(renderedAsideNav['#items'],0,attributes) }}
-    {% endif %}
-  </aside>-->
+{% if asideNav %}
+{# The base twig template from USWDS is fine, so let's reference it here #}
+{{ sidebar_first.menu_links(renderedAsideNav['#items'],0,attributes) }}
+{% endif %}
+</aside>-->
 
   {# Main content #}
   <div class="node-content">
@@ -114,16 +114,16 @@
         <div class="node-date">{{ content.field_date }}</div>
       </div>
 
-      {% if content.field_number|render|trim is not empty %}
       <div class="node-top-right">
         <div class="node-info-box">
           <strong>For Immediate Release</strong>
+          {% if content.field_number|render|trim is not empty %}
           <span>Release Number:</span> {{ content.field_number[0] }}<br />
+          {% endif %}
           Office of Public Affairs<br />
           <a href="mailto:publicaffairs@justice.gov">publicaffairs@justice.gov</a>
         </div>
       </div>
-      {% endif %}
 
     </div>
 

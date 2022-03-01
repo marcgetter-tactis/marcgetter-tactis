@@ -1,0 +1,20 @@
+uuid: feaf21f4-b349-4aa4-ba9a-9f0aab569051
+langcode: en
+status: true
+dependencies:
+  module:
+    - group
+    - node
+id: node.parent_group
+field_name: parent_group
+entity_type: node
+type: entity_reference
+settings:
+  target_type: group
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

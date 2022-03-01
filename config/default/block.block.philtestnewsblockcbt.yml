@@ -1,0 +1,34 @@
+uuid: 0f92644a-47cb-4193-b3a5-23b5ef214c23
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:news:8d942226-f9d7-4592-b22e-879ddf0ae1c9'
+  module:
+    - block_content
+    - collapsiblock
+    - system
+  theme:
+    - usdoj_uswds
+third_party_settings:
+  collapsiblock:
+    collapse_action: 0
+id: philtestnewsblockcbt
+theme: usdoj_uswds
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:8d942226-f9d7-4592-b22e-879ddf0ae1c9'
+settings:
+  id: 'block_content:8d942226-f9d7-4592-b22e-879ddf0ae1c9'
+  label: 'Phil Test News Block Events Only'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /news-test

@@ -1,0 +1,78 @@
+uuid: df91222f-0bcd-4095-8eb0-6317fc9bca8a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.news
+    - field.storage.block_content.field_view
+    - views.view.news
+  module:
+    - viewsreference
+id: block_content.news.field_view
+field_name: field_view
+entity_type: block_content
+bundle: news
+label: View
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    options:
+      title: 0
+      argument: ''
+    display_id: block_1
+    argument: null
+    title: 0
+    data: null
+    target_uuid: 7e80d8fa-c95c-4932-acc9-de5d5c34209d
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+  plugin_types:
+    block: block
+    default: 0
+    page: 0
+    feed: 0
+    entity_reference: 0
+    entity_browser: 0
+    entity_view: 0
+    embed: 0
+  preselect_views:
+    news: news
+    block_content: 0
+    content: 0
+    content_moderation_dashboard_in_review: 0
+    content_recent: 0
+    feeds_feed: 0
+    files: 0
+    frontpage: 0
+    group_content_menus: 0
+    group_media: 0
+    group_members: 0
+    group_nodes: 0
+    group_terms: 0
+    hero_content: 0
+    media: 0
+    media_library: 0
+    moderated_content: 0
+    moderation_dashboard_recently_created: 0
+    moderation_dashboard_recent_changes: 0
+    most_wanted: 0
+    redirect: 0
+    scheduler_scheduled_content: 0
+    taxonomy_term: 0
+    timeline: 0
+    tmgmt_job_items: 0
+    tmgmt_job_messages: 0
+    tmgmt_job_overview: 0
+    tmgmt_translation_all_job_items: 0
+    user_admin_people: 0
+    uswds_entity_references: 0
+    watchdog: 0
+    who_s_new: 0
+    who_s_online: 0
+field_type: viewsreference

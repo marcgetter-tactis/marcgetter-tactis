@@ -26,3 +26,6 @@ regions:
 
 libraries:
   - 'usdoj_uswds/assets'
+
+dependencies:
+  - drupal:usdoj_utilities

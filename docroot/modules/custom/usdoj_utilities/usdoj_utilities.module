@@ -5,8 +5,186 @@
  * Contains implementations of hooks.
  */
 
+use Drupal\Core\Block\BlockPluginInterface;
+use Drupal\Core\Breadcrumb\Breadcrumb;
 use Drupal\core\DateTime\DrupalDateTime;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\views\ViewExecutable;
+use Drupal\views\Plugin\views\query\QueryPluginBase;
+
+/**
+ * Helper function to array of node types.
+ */
+function usdoj_utilities_get_node_types() {
+  return [
+    'blog_post' => [
+      'singular' => 'Blog',
+      'plural' => 'Blogs',
+    ],
+    'event' => [
+      'singular' => 'Event',
+      'plural' => 'Events',
+    ],
+    'image_gallery' => [
+      'singular' => 'Photo Gallery',
+      'plural' => 'Photo Galleries',
+    ],
+    'podcast' => [
+      'singular' => 'Podcast',
+      'plural' => 'Podcasts',    
+    ],  
+    'press_release' => [
+      'singular' => 'Press Release',
+      'plural' => 'Press Releases',    
+    ],
+    'speech' => [
+      'singular' => 'Speech',
+      'plural' => 'Speeches',    
+    ],
+    'testimony' => [
+      'singular' => 'Testimony',
+      'plural' => 'Testimonies',    
+    ],
+    'youtube_video' => [
+      'singular' => 'Video',
+      'plural' => 'Videos',    
+    ],
+  ];
+}
+
+/**
+ * Helper function to get node type display name from machine name.
+ */
+function usdoj_utilities_get_node_type_display_name($machine_name, $version='plural') {
+  $node_types = usdoj_utilities_get_node_types();
+
+  if (isset($node_types[$machine_name][$version])) {
+    return $node_types[$machine_name][$version];
+  } else {
+    return null;
+  }
+}
+
+/**
+ * Helper function to get uri parts from url
+ */
+function usdoj_utilities_get_uri_segments() {
+  $path_segments = [];
+
+  // get current request
+  $request = \Drupal::request();
+  
+  // get path info from current request
+  $path_info = $request->getPathInfo();
+  
+  // convert path elements to array
+  $path_segments = explode("/", $path_info);
+
+  if (count($path_segments)) {
+    // remove first path_segment, if empty
+    if (empty($path_segments[0])) {
+      $path_segments = array_slice($path_segments, 1);
+    }
+  }
+
+  return $path_segments;
+}
+
+/**
+ * Helper function to convert field values into contextual filter
+ * to be consumed by a view
+ */
+function usdoj_utilites_get_view_argument($field_value) {
+  $values = [];
+
+  if (count($field_value)) {
+    foreach ($field_value as $idx => $field_values) {
+      if (isset($field_values['value'])) {
+        $values[] = $field_values['value'];
+      } else if (isset($field_values['target_id'])) {
+        $values[] = $field_values['target_id'];
+      }
+    }
+  }
+
+  return implode("+", $values);
+}
+
+/**
+ * Implements hook_block_build_alter().
+ */
+function usdoj_utilities_block_build_alter(array &$build, BlockPluginInterface $block) {
+  // get plugin id for this block
+  $block_plugin_id = $block->getPluginId();
+
+  if (strpos($block_plugin_id, ":") !== false) {
+
+    // create an array of parts in the block plugin id
+    $block_plugin_id_parts = explode(":", $block_plugin_id);
+
+    if (is_array($block_plugin_id_parts) && count($block_plugin_id_parts) == 2) {
+
+      $block_plugin_base_id = $block_plugin_id_parts[0];
+      $block_plugin_uuid = $block_plugin_id_parts[1];
+
+      if ($block_plugin_base_id == "block_content") {
+
+        // get block content
+        $block_content_array = \Drupal::entityTypeManager()
+          ->getStorage('block_content')
+          ->loadByProperties(['uuid' => $block_plugin_uuid]);       
+        
+        // set block content to object
+        $block_content = reset($block_content_array);
+
+        // get block type value
+        $block_type_value = $block_content->type->getValue();
+
+        // determine block type
+        if (isset($block_type_value[0]['target_id'])) {
+          $block_type = $block_type_value[0]['target_id'];
+
+          if ($block_type == 'news') {
+            // use block instance input values to set view arg array to be used when constructing view
+            $_REQUEST['news_block_configuration'] = [
+              'news_view_arguments' => [
+                usdoj_utilites_get_view_argument($block_content->field_content_type->getValue()),
+                usdoj_utilites_get_view_argument($block_content->field_component->getValue()),
+                usdoj_utilites_get_view_argument($block_content->field_topic->getValue()),
+              ],
+            ];
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_view_pre_view().
+ */
+function usdoj_utilities_views_pre_view(ViewExecutable $view, $display_id, array &$args) {
+  // get unique id of this view
+  $view_id = $view->id();
+
+  if ($view_id == 'news' && $display_id == 'block_1') {
+    // see if news view args were set during the block build
+    if (isset($_REQUEST['news_block_configuration']['news_view_arguments'])) {
+      $news_view_args = $_REQUEST['news_block_configuration']['news_view_arguments'];
+
+      // iterate through args set during block build
+      foreach ($news_view_args as $nidx => $arg) {
+        if (!empty($arg)) {
+          // override view arg
+          $args[$nidx] = $arg;
+        }
+      }     
+    }
+  }
+}
 
 /**
  * Implements hook_form_alter().

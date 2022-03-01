@@ -1,0 +1,64 @@
+uuid: 6b1d2aaf-302c-43f5-a73c-7c517bc121fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.news
+    - field.field.block_content.news.body
+    - field.field.block_content.news.field_component
+    - field.field.block_content.news.field_content_type
+    - field.field.block_content.news.field_cta
+    - field.field.block_content.news.field_header
+    - field.field.block_content.news.field_topic
+    - field.field.block_content.news.field_view
+  module:
+    - link
+    - text
+    - viewsreference
+id: block_content.news.default
+targetEntityType: block_content
+bundle: news
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_cta:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_header:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_view:
+    type: viewsreference_formatter
+    label: hidden
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  field_component: true
+  field_content_type: true
+  field_topic: true
+  langcode: true
+  search_api_excerpt: true

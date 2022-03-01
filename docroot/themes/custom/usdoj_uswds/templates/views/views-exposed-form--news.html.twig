@@ -5,12 +5,14 @@
  *
  * Available variables:
  * - form: A render element representing the form.
+ * - views_exposed_form.title: Title based on selected entity type
  *
  * @see template_preprocess_views_exposed_form()
  *
  * @ingroup themeable
  */
 #}
+
 {% if q is not empty %}
   {#
     This ensures that, if clean URLs are off, the 'q' is added first,
@@ -27,7 +29,8 @@
   </label>
 </div>
 
-<h2>All News</h2>  
+<h2>{{ views_exposed_form.title }}</h2>  
+
 {% if form.search_api_fulltext %}
   <div class="keyword-search">
     {{ form.search_api_fulltext }} 

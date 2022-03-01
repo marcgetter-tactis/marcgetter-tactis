@@ -4,6 +4,10 @@ status: true
 dependencies: {  }
 id: cache_purger
 label: 'Cache Purger'
-weight: -5
+weight: 9
 is_admin: null
-permissions: {  }
+permissions:
+  - 'purge on-screen'
+  - 'purge page block'
+  - 'show text format dropdown'
+  - 'use manual purge blocks'

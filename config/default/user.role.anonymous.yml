@@ -3,16 +3,37 @@ langcode: en
 status: true
 dependencies:
   module:
-    - media
-    - sitewide_alert
     - system
 _core:
   default_config_hash: KYARbYeGRZ-INq-rg4NeHiuEYecKAgslhGiPztbR-fY
 id: anonymous
 label: 'Anonymous user'
-weight: -10
+weight: 0
 is_admin: false
 permissions:
   - 'access content'
-  - 'view media'
-  - 'view published sitewide alert entities'
+  - 'access protected page password screen'
+  - 'diff view changes'
+  - 'download any audio files'
+  - 'download any document files'
+  - 'download any image files'
+  - 'download any video files'
+  - 'eck view elder_resource prosecutor_sample entities'
+  - 'eck view elder_resource researcher_resource entities'
+  - 'eck view elder_resource statute entities'
+  - 'eck view elder_resource svf_resource entities'
+  - 'show text format dropdown'
+  - 'use search_api_sorts'
+  - 'use usasearch hosted block'
+  - 'view api_v1 blog_entries index documentation'
+  - 'view api_v1 blog_entries retrieve documentation'
+  - 'view api_v1 press_releases index documentation'
+  - 'view api_v1 press_releases retrieve documentation'
+  - 'view api_v1 speeches index documentation'
+  - 'view api_v1 speeches retrieve documentation'
+  - 'view api_v1 vacancy_announcements index documentation'
+  - 'view api_v1 vacancy_announcements retrieve documentation'
+  - 'view field_image_attribution'
+  - 'view files'
+  - 'view own field_image_attribution'
+  - 'view services documentation'

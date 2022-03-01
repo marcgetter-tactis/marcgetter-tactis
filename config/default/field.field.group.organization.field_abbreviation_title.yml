@@ -1,0 +1,19 @@
+uuid: 1b1716e8-f709-444c-8ef5-a3286cbea2e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_abbreviation_title
+    - group.type.organization
+id: group.organization.field_abbreviation_title
+field_name: field_abbreviation_title
+entity_type: group
+bundle: organization
+label: 'Group Abbreviation Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

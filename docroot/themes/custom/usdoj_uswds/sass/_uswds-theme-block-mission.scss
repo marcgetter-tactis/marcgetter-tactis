@@ -20,10 +20,6 @@ Mission Block
 .block-mission {
   padding: 3rem 0;
 
-  h2.block-title {
-    display: none;
-  }
-
   //DOJ seal
   .field_image {
     float: left;
@@ -47,16 +43,6 @@ Mission Block
   .field_heading {
     @extend h2;
     font-weight: bold;
-    
-    &:after {
-      content: "";
-      width: 3rem;
-      display: flex;
-      border-top: 1px solid color(warning);
-      border-bottom: 1px solid color(warning);
-      height: .3rem;
-      margin: 1.25rem 0;
-    }
   }
 
   //block body

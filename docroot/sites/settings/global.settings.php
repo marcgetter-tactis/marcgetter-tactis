@@ -7,6 +7,11 @@
 
 use Acquia\Blt\Robo\Common\EnvironmentDetector;
 
+// Increase memory for cli / drush commands only.
+if (PHP_SAPI === 'cli') {
+  ini_set('memory_limit', '-1');
+}
+
 if (EnvironmentDetector::isDevEnv()) {
   // Adding D7 database for migration - DEV.
   $databases['d7']['default'] = [

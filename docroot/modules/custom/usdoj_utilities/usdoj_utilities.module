@@ -87,7 +87,7 @@ function usdoj_utilities_get_uri_segments() {
   // get path info from ajax call when form is refreshed by filters
   if ($path_info == '/views/ajax') {
     if (isset($_POST['view_path'])) {
-      $path_info =$_POST['view_path'];
+      $path_info = $_POST['view_path'];
     } 
   }
   

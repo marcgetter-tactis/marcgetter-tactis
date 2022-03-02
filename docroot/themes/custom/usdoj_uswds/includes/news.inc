@@ -23,20 +23,20 @@ function usdoj_uswds_preprocess_views_exposed_form(&$variables) {
   // get id of this form
   $form_id = $form['form_id'];
 
-  // TODO: get path args from utility function
+  // get uri segments
   $uri_segments = usdoj_utilities_get_uri_segments();
 
   if (is_array($uri_segments) && count($uri_segments)) {
 
     switch ($uri_segments[0]) {
       case 'news': {
+        // determine index of node type
+        $uri_segment_index = count($uri_segments) - 1;
 
-        if (count($uri_segments) == 1) {
-          $form_title = "All News";
-        } else {
-          $form_title = usdoj_utilities_get_node_type_display_name($uri_segments[1], 'plural');
-        }
+        // get form title based on node type
+        $form_title = usdoj_utilities_get_node_type_display_name($uri_segments[$uri_segment_index], 'plural');
 
+        // set var to be consumed by exposed form template
         $variables['views_exposed_form']['title'] = $form_title;
 
         break;

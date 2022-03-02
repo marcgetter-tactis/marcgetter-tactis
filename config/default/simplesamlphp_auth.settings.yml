@@ -1,14 +1,14 @@
 _core:
   default_config_hash: RMy8ch2MOT68bCD63OGZQRdMk2pD6UXPEZMuCIisbfs
 langcode: en
-activate: false
+activate: true
 auth_source: default-sp
 login_link_display_name: 'Federated login'
 login_link_show: true
-user_name: 'urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress'
-unique_id: 'urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress'
-mail_attr: 'urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress'
-header_no_cache: false
+user_name: 'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress'
+unique_id: 'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress'
+mail_attr: 'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress'
+header_no_cache: true
 role:
   population: ''
   eval_every_time: false

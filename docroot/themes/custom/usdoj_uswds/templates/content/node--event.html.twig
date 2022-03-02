@@ -88,15 +88,15 @@
 <article{{ attributes.addClass(classes) }}>
 
   {# Left sidebar #}
-  <aside class="usa-layout-docs__sidenav desktop:grid-col-3 display-none desktop:display-block desktop:grid-col-3 ">
+  <!--<aside class="usa-layout-docs__sidenav desktop:grid-col-3 display-none desktop:display-block desktop:grid-col-3 ">
     {% if asideNav %}
     {# The base twig template from USWDS is fine, so let's reference it here #}
     {{ sidebar_first.menu_links(renderedAsideNav['#items'],0,attributes) }}
     {% endif %}
-  </aside>
+  </aside> -->
 
   {# Main content #}
-  <div class="usa-layout-docs__main desktop:grid-col-9 node-content">
+  <div class="node-content">
 
     {% if asideNav %}
     {# We need a different UI for the asideNav on mobile, so let's handle its styling differently #}

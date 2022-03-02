@@ -32,6 +32,10 @@ function usdoj_utilities_get_node_types() {
       'singular' => 'Photo Gallery',
       'plural' => 'Photo Galleries',
     ],
+    'news' => [
+      'singular' => 'News',
+      'plural' => 'All News',
+    ],
     'podcast' => [
       'singular' => 'Podcast',
       'plural' => 'Podcasts',    
@@ -79,6 +83,13 @@ function usdoj_utilities_get_uri_segments() {
   
   // get path info from current request
   $path_info = $request->getPathInfo();
+
+  // get path info from ajax call when form is refreshed by filters
+  if ($path_info == '/views/ajax') {
+    if (isset($_POST['view_path'])) {
+      $path_info = $_POST['view_path'];
+    } 
+  }
   
   // convert path elements to array
   $path_segments = explode("/", $path_info);

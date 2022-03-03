@@ -1,27 +1,81 @@
 .block-cta {
   padding-bottom: 3rem;
-  h2.block-title {
-    font-size: 1.4rem;
+  
+  &.text-align-center {
+    .field_heading::after {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
+  
+  .field_heading {
+    font-size: 1.4rem;
+    @extend h2;
+  }
+  
   .body {
     margin-bottom: 2rem;
   }
-  .field_cta a {
-    padding: .5rem;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: bold;
-    background-color: color(primary-darker);
-    color: white;
+  
+  //cta button links
+  .field__items {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
     @include at-media(desktop) {
-      padding: 0.5rem 1.25rem;
+      flex-direction: row;
+      gap: 1rem;
+      text-align: left;
     }
-    &:hover {
-      background-color: $blue-60v;
-    }
-    &:active {
-      background-color: $doj-coolblue;
-      border: none;
+    
+  
+    .paragraph--type--link {
+      a {
+        padding: .5rem;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: bold;
+        background-repeat: no-repeat;
+        @include at-media(desktop) {
+          padding: 0.5rem 1.25rem;
+        }
+        &.usa-button { 
+          background-color: color(primary-darker);
+          color: white;
+          &:hover {
+            background-color: $blue-60v;
+          }
+          &:active {
+            background-color: $doj-coolblue;
+            border: none;
+          }
+        }
+        &.usa-button--outline {
+          background-color: transparent;
+          color: $doj-coolblue;
+          border-width: 2px;
+          &:hover {
+            background-color: $blue-60v;
+            color: white;
+          }
+          &:active {
+            background-color: $doj-coolblue;
+            border: none;
+          
+          }
+        }
+        &.org_chart {
+          background-image: url('/themes/custom/usdoj_uswds/assets/img/doj-icon-offices-org-chart.svg');
+          background-position: .5rem;
+          padding-left: 2.5rem;
+        }
+        &.pdf {
+          background-image: url('/themes/custom/usdoj_uswds/assets/img/doj-icon-offices-pdf.svg');
+          background-position: .5rem;
+          padding-left: 2.5rem;
+        }
+      }
     }
   }
 }

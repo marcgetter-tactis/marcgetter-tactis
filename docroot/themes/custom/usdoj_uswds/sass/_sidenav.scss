@@ -3,19 +3,8 @@
     display: none;
 
     @include at-media(desktop) {
-    display: block;
-    border-bottom: none;
-    
-      //left nav title
-      &:before {
-        content: "News";
-        font-weight: bold;
-        color: color(primary-darker);
-        font-size: 1.25rem;
-        line-height: 2rem;
-        margin: 2rem 0 .5rem;
-        display: block;
-      }
+      display: block;
+      border-bottom: none;
 
       .usa-sidenav__item {
         border-top: 1px solid $gray-20;
@@ -102,16 +91,16 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    
+
   }
 
   #sidenav-expand:checked + label.expand {
     .expand-title{
       background-color: $blue-cool-5;
-        &:after {
-          content: "-";
-        }
+      &:after {
+        content: "-";
       }
+    }
     ul.menu--sidebar-menu {
       display: block;
       position: relative;

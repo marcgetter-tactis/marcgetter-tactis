@@ -38,15 +38,11 @@
     }
   }
 
-  h2.block-title {
+  h2.block-title { 
     font-size: 1.5rem;
     text-align: left;
     margin-top: 2rem;
-    &:after {
-      margin: 1rem 0;
-      border-top-width: 2px;
-      border-bottom-width: 2px;
-    } 
+    @include gold-lines(1rem, 0);
   }
   a {
     font-size: .9rem;

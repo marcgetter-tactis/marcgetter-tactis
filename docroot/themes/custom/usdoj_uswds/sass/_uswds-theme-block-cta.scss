@@ -2,9 +2,8 @@
   padding-bottom: 3rem;
   
   &.text-align-center {
-    .field_heading::after {
-      margin-left: auto;
-      margin-right: auto;
+    .field_heading {
+      @include gold-lines(1.25rem, auto);
     }
   }
   

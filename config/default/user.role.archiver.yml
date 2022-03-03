@@ -1,0 +1,14 @@
+uuid: ad6a449a-8784-4ba6-a824-32a0be8a2717
+langcode: en
+status: true
+dependencies: {  }
+id: archiver
+label: archiver
+weight: 11
+is_admin: null
+permissions:
+  - 'create field_archived'
+  - 'edit field_archived'
+  - 'edit own field_archived'
+  - 'view field_archived'
+  - 'view own field_archived'

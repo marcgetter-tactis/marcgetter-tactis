@@ -18,6 +18,7 @@ dependencies:
     - field.field.node.component_group.more_galleries
     - field.field.node.component_group.more_news
     - field.field.node.component_group.more_videos
+    - field.field.node.component_group.parent_group
     - node.type.component_group
   module:
     - user
@@ -53,4 +54,5 @@ hidden:
   more_galleries: true
   more_news: true
   more_videos: true
+  parent_group: true
   search_api_excerpt: true

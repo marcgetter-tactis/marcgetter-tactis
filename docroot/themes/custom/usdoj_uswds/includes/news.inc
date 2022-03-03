@@ -12,6 +12,40 @@ use Drupal\Core\Form\FormStateInterface;
  */
 
 /**
+ * Implements hook_preprocess_views_exposed_form().
+ */
+function usdoj_uswds_preprocess_views_exposed_form(&$variables) {
+  $form_title = "";
+
+  // get this form
+  $form = &$variables['form'];
+
+  // get id of this form
+  $form_id = $form['form_id'];
+
+  // get uri segments
+  $uri_segments = usdoj_utilities_get_uri_segments();
+
+  if (is_array($uri_segments) && count($uri_segments)) {
+
+    switch ($uri_segments[0]) {
+      case 'news': {
+        // determine index of node type
+        $uri_segment_index = count($uri_segments) - 1;
+
+        // get form title based on node type
+        $form_title = usdoj_utilities_get_node_type_display_name($uri_segments[$uri_segment_index], 'plural');
+
+        // set var to be consumed by exposed form template
+        $variables['views_exposed_form']['title'] = $form_title;
+
+        break;
+      }
+    }
+  }
+}
+
+/**
  * Implements hook_form_alter().
  */
 function usdoj_uswds_form_alter(&$form, FormStateInterface $form_state, $form_id) {

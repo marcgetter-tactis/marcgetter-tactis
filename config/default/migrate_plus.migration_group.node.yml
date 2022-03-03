@@ -1,0 +1,14 @@
+uuid: 846c8aee-25c8-4c51-bc8c-20f528e2a9c8
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: oiKLFZYeECERuOP2OlG8C0iYLfzbcfn-qDCBTUL_bGI
+id: node
+label: Node
+description: 'Migrate Drupal 7 nodes'
+source_type: 'Drupal 7'
+module: null
+shared_configuration:
+  source:
+    key: d7

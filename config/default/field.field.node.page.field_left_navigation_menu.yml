@@ -10,7 +10,7 @@ field_name: field_left_navigation_menu
 entity_type: node
 bundle: page
 label: 'Left Navigation Menu'
-description: ''
+description: 'If you would like to add a non-group menu from Structure -> Menus, then set it here. This menu will override the group menu.'
 required: false
 translatable: false
 default_value: {  }

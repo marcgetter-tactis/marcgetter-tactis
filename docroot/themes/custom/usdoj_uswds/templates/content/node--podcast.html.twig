@@ -98,14 +98,15 @@
 {% set updatedDate = node.changed.value|date("F j, Y") %}
 
 <article {{ attributes.addClass(classes) }}>
-    <aside class="usa-layout-docs__sidenav desktop:grid-col-3 display-none desktop:display-block desktop:grid-col-3 ">
+    {#    Below would render the <sidebar-menu> using  <menu--sidebar_first.html.twig>. This method has been disabled as the sidebar menu is rendered outside this template via Block Layouts in Drupal#}
+    {#<aside class="usa-layout-docs__sidenav desktop:grid-col-3 display-none desktop:display-block desktop:grid-col-3 ">
         {% if asideNav %}
-            {# The base twig template from USWDS is fine, so let's reference it here #}
+            #}{# The base twig template from USWDS is fine, so let's reference it here #}{#
             {{ sidebar_first.menu_links(renderedAsideNav['#items'],0,attributes) }}
         {% endif %}
-    </aside>
+    </aside>#}
 
-    <div class="usa-layout-docs__main desktop:grid-col-9 node-content">
+    <div class="usa-layout-docs__main desktop:grid-col-fill node-content">
 
         {% if asideNav %}
             {# We need a different UI for the asideNav on mobile, so let's handle its styling differently #}
@@ -149,11 +150,22 @@
             {# {% endif %} #}
 
             {% if transcript|render|trim is not empty %}
-                <div class="node-transcript margin-bottom-7">
-                    <details>
-                        <summary>Transcript</summary>
-                        {{ transcript }}
-                    </details>
+                <div class="usa-accordion margin-bottom-7">
+                    <!-- Use the accurate heading level to maintain the document outline -->
+                    <div class="usa-accordion__item">
+                        <h4 class="usa-accordion__heading">
+                            <button
+                                    class="usa-accordion__button"
+                                    aria-expanded="false"
+                                    aria-controls="transcript-{{ node.nid.value }}"
+                            >
+                                Transcript
+                            </button>
+                        </h4>
+                        <div id="transcript-{{ node.nid.value }}" class="usa-accordion__content usa-prose">
+                            {{ transcript }}
+                        </div>
+                    </div>
                 </div>
             {% endif %}
 

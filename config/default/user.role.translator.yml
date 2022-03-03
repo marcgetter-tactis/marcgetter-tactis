@@ -1,9 +1,16 @@
 uuid: dbc48190-7bd2-4af8-a5e3-358b3b7b1a62
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - locale
 id: translator
 label: Translator
-weight: -4
+weight: 10
 is_admin: null
-permissions: {  }
+permissions:
+  - 'edit terms in 11'
+  - 'edit terms in 6'
+  - 'show text format dropdown'
+  - 'translate interface'
+  - 'translate user-defined strings'

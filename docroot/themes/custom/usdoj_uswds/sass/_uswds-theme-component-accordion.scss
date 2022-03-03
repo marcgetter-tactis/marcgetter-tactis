@@ -1,0 +1,86 @@
+/*
+* * * * * ==============================
+* * * * * ==============================
+* * * * * ==============================
+* * * * * ==============================
+========================================
+========================================
+========================================
+----------------------------------------
+USWDS THEME CUSTOM STYLES
+----------------------------------------
+!! Copy this file to your project's
+sass root. Don't edit the version
+in node_modules.
+----------------------------------------
+Accordion
+----------------------------------------
+*/
+.usa-accordion {
+
+  &__item {
+    margin-top: .5rem;
+    border-width: 1px 1px 1px 4px;
+    border-style: solid;
+    border-color: $gray-20;
+    border-left-color: $theme-color-accent-warm;
+
+    .usa-accordion__heading {
+      margin-top: 0;
+
+      BUTTON {
+        padding: 1em 3.5em 1em 1em;
+        background-color: inherit;
+        position: relative;
+        background-image: none;
+
+        &:after {
+          content: '⌃';
+          font-weight: lighter;
+          color: $blue-60v;
+          position: absolute;
+          width: 26px;
+          height: 26px;
+          border: 1.5px solid $doj-darkblue;
+          border-radius: 50%;
+          display: flex;
+          flex-flow: row nowrap;
+          align-items: center;
+          justify-content: center;
+          padding-top:.25em;
+          transform: rotate(180deg);
+          margin: auto 0;
+          top: 0;
+          bottom: 0;
+          right: 1em;
+        }
+
+        &[aria-expanded=true]{
+          &:after {
+            transform: rotate(0);
+          }
+        }
+
+        @include at-media(desktop) {
+          padding: 1.5em
+        }
+
+      }
+    }
+
+    .usa-accordion__content {
+      padding: 1em;
+
+      @include at-media(desktop) {
+        padding: 0 1.5em 1.5em;
+      }
+    }
+
+    .usa-accordion__heading,
+    .usa-accordion__content {
+      background-color: #fff;
+    }
+
+  }
+
+}

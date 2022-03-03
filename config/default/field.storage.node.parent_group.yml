@@ -1,16 +1,16 @@
-uuid: 1d5cd66f-b258-490e-95d2-714814bc879b
+uuid: feaf21f4-b349-4aa4-ba9a-9f0aab569051
 langcode: en
 status: true
 dependencies:
   module:
+    - group
     - node
-    - system
-id: node.field_left_navigation_menu
-field_name: field_left_navigation_menu
+id: node.parent_group
+field_name: parent_group
 entity_type: node
 type: entity_reference
 settings:
-  target_type: menu
+  target_type: group
 module: core
 locked: false
 cardinality: 1

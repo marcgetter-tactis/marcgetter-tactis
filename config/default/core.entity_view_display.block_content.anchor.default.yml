@@ -21,7 +21,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 1
+    weight: 0
     region: content
   field_links:
     type: link
@@ -33,24 +33,10 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 0
-    region: content
-  field_other_groups:
-    type: entity_reference_label
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 3
-    region: content
-  field_your_groups:
-    type: entity_reference_label
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 2
+    weight: 1
     region: content
 hidden:
+  field_other_groups: true
+  field_your_groups: true
   langcode: true
   search_api_excerpt: true

@@ -59,10 +59,7 @@
       display: none;
     }
     .body {
-      background-color: $taupe-bg;
-      border-left: 4px solid $theme-color-accent-warm;
-      padding: 1rem;  
-      margin-top: 2rem;
+      @extend .yellow-background;
       p:first-of-type {
         margin-top: 0;
       }

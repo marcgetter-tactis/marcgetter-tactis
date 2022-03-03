@@ -26,7 +26,7 @@ $config['technicalcontact_email'] = "john.cunningham@acquia.com";
 
 // Change these for your installation.
 $config['secretsalt'] = 'mysecretsalt';
-$config['auth.adminpassword'] = 'mysupersecret';
+$config['auth.adminpassword'] = 'y@Jn$a2+!PZ-&Ffc';
 
 /**
  * Support SSL Redirects to SAML login pages.

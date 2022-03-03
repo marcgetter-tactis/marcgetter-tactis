@@ -1437,6 +1437,7 @@ display:
             podcast: podcast
             press_release: press_release
             speech: speech
+            youtube_video: youtube_video
           group: 1
           exposed: false
           expose:

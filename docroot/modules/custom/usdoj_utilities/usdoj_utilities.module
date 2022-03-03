@@ -6,14 +6,31 @@
  */
 
 use Drupal\Core\Block\BlockPluginInterface;
-use Drupal\Core\Breadcrumb\Breadcrumb;
 use Drupal\core\DateTime\DrupalDateTime;
-use Drupal\Core\Entity\EntityInterface;
-use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\views\ViewExecutable;
-use Drupal\views\Plugin\views\query\QueryPluginBase;
+use Symfony\Cmf\Component\Routing\RouteObjectInterface;
+
+/**
+ * Helper function to get page title.
+ */
+function usdoj_utilities_get_page_title() {
+  $request = \Drupal::request();
+  $route = \Drupal::routeMatch()->getRouteObject();
+
+  return \Drupal::service('title_resolver')->getTitle($request, $route);
+}
+
+/**
+ * Helper function to set page title.
+ */
+function usdoj_utilities_set_page_title($title) {
+  $request = \Drupal::request();
+
+  if ($route == $request->attributes->get(RouteObjectInterface::ROUTE_OBJECT)) {
+    $route->setDefault('_title', $title);
+  }
+}
 
 /**
  * Helper function to array of node types.
@@ -38,23 +55,23 @@ function usdoj_utilities_get_node_types() {
     ],
     'podcast' => [
       'singular' => 'Podcast',
-      'plural' => 'Podcasts',    
-    ],  
+      'plural' => 'Podcasts',
+    ],
     'press_release' => [
       'singular' => 'Press Release',
-      'plural' => 'Press Releases',    
+      'plural' => 'Press Releases',
     ],
     'speech' => [
       'singular' => 'Speech',
-      'plural' => 'Speeches',    
+      'plural' => 'Speeches',
     ],
     'testimony' => [
       'singular' => 'Testimony',
-      'plural' => 'Testimonies',    
+      'plural' => 'Testimonies',
     ],
     'youtube_video' => [
       'singular' => 'Video',
-      'plural' => 'Videos',    
+      'plural' => 'Videos',
     ],
   ];
 }
@@ -62,40 +79,42 @@ function usdoj_utilities_get_node_types() {
 /**
  * Helper function to get node type display name from machine name.
  */
-function usdoj_utilities_get_node_type_display_name($machine_name, $version='plural') {
+function usdoj_utilities_get_node_type_display_name($machine_name, $version = 'plural') {
   $node_types = usdoj_utilities_get_node_types();
 
   if (isset($node_types[$machine_name][$version])) {
     return $node_types[$machine_name][$version];
-  } else {
-    return null;
+  }
+  else {
+    return NULL;
   }
 }
 
 /**
- * Helper function to get uri parts from url
+ * Helper function to get uri parts from url.
  */
 function usdoj_utilities_get_uri_segments() {
   $path_segments = [];
 
-  // get current request
   $request = \Drupal::request();
-  
-  // get path info from current request
+
+  // Get path info from current request.
   $path_info = $request->getPathInfo();
 
-  // get path info from ajax call when form is refreshed by filters
+  // Get path info from ajax call when form is refreshed by filters.
   if ($path_info == '/views/ajax') {
-    if (isset($_POST['view_path'])) {
-      $path_info = $_POST['view_path'];
-    } 
+    $view_path = \Drupal::service('path.current')->getPath();
+
+    if (!empty($view_path)) {
+      $path_info = $view_path;
+    }
   }
-  
-  // convert path elements to array
+
+  // Convert path elements to array.
   $path_segments = explode("/", $path_info);
 
   if (count($path_segments)) {
-    // remove first path_segment, if empty
+    // Remove first path_segment, if empty.
     if (empty($path_segments[0])) {
       $path_segments = array_slice($path_segments, 1);
     }
@@ -105,17 +124,17 @@ function usdoj_utilities_get_uri_segments() {
 }
 
 /**
- * Helper function to convert field values into contextual filter
- * to be consumed by a view
+ * Helper function to convert field values into contextual filter.
  */
 function usdoj_utilites_get_view_argument($field_value) {
   $values = [];
 
   if (count($field_value)) {
-    foreach ($field_value as $idx => $field_values) {
+    foreach ($field_value as $field_values) {
       if (isset($field_values['value'])) {
         $values[] = $field_values['value'];
-      } else if (isset($field_values['target_id'])) {
+      }
+      elseif (isset($field_values['target_id'])) {
         $values[] = $field_values['target_id'];
       }
     }
@@ -128,12 +147,12 @@ function usdoj_utilites_get_view_argument($field_value) {
  * Implements hook_block_build_alter().
  */
 function usdoj_utilities_block_build_alter(array &$build, BlockPluginInterface $block) {
-  // get plugin id for this block
+  // Get plugin id for this block.
   $block_plugin_id = $block->getPluginId();
 
-  if (strpos($block_plugin_id, ":") !== false) {
+  if (strpos($block_plugin_id, ":") !== FALSE) {
 
-    // create an array of parts in the block plugin id
+    // Create an array of parts in the block plugin id.
     $block_plugin_id_parts = explode(":", $block_plugin_id);
 
     if (is_array($block_plugin_id_parts) && count($block_plugin_id_parts) == 2) {
@@ -143,30 +162,33 @@ function usdoj_utilities_block_build_alter(array &$build, BlockPluginInterface $
 
       if ($block_plugin_base_id == "block_content") {
 
-        // get block content
+        // Get block content.
         $block_content_array = \Drupal::entityTypeManager()
           ->getStorage('block_content')
-          ->loadByProperties(['uuid' => $block_plugin_uuid]);       
-        
-        // set block content to object
+          ->loadByProperties(['uuid' => $block_plugin_uuid]);
+
+        // Set block content to object.
         $block_content = reset($block_content_array);
 
-        // get block type value
+        // Get block type value.
         $block_type_value = $block_content->type->getValue();
 
-        // determine block type
+        // Determine block type.
         if (isset($block_type_value[0]['target_id'])) {
           $block_type = $block_type_value[0]['target_id'];
 
           if ($block_type == 'news') {
-            // use block instance input values to set view arg array to be used when constructing view
-            $_REQUEST['news_block_configuration'] = [
-              'news_view_arguments' => [
-                usdoj_utilites_get_view_argument($block_content->field_content_type->getValue()),
-                usdoj_utilites_get_view_argument($block_content->field_component->getValue()),
-                usdoj_utilites_get_view_argument($block_content->field_topic->getValue()),
-              ],
-            ];
+            $content_type = usdoj_utilites_get_view_argument($block_content->field_content_type->getValue());
+            $component = usdoj_utilites_get_view_argument($block_content->field_component->getValue());
+            $topic = usdoj_utilites_get_view_argument($block_content->field_topic->getValue());
+
+            $request = \Drupal::request();
+
+            // Use block instance input values to set view arg array
+            // to be used when constructing view.
+            $request->request->set('news_filter_content_type', $content_type);
+            $request->request->set('news_filter_component', $component);
+            $request->request->set('news_filter_topic', $topic);
           }
         }
       }
@@ -178,21 +200,27 @@ function usdoj_utilities_block_build_alter(array &$build, BlockPluginInterface $
  * Implements hook_view_pre_view().
  */
 function usdoj_utilities_views_pre_view(ViewExecutable $view, $display_id, array &$args) {
-  // get unique id of this view
+  // Get unique id of this view.
   $view_id = $view->id();
 
+  // See if news view args were set during the block build.
   if ($view_id == 'news' && $display_id == 'block_1') {
-    // see if news view args were set during the block build
-    if (isset($_REQUEST['news_block_configuration']['news_view_arguments'])) {
-      $news_view_args = $_REQUEST['news_block_configuration']['news_view_arguments'];
+    $request = \Drupal::request();
 
-      // iterate through args set during block build
-      foreach ($news_view_args as $nidx => $arg) {
-        if (!empty($arg)) {
-          // override view arg
-          $args[$nidx] = $arg;
-        }
-      }     
+    $news_filters = [
+      'news_filter_content_type',
+      'news_filter_component',
+      'news_filter_topic',
+    ];
+
+    // Iterate through filters set during block build.
+    foreach ($news_filters as $nidx => $arg) {
+      $filter = $request->request->get($arg);
+
+      if (!empty($filter)) {
+        // Override view arg if filter was chosen.
+        $args[$nidx] = $filter;
+      }
     }
   }
 }

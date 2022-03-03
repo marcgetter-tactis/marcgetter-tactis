@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.landing_page.field_left_navigation_menu
     - field.field.node.landing_page.field_other_groups
     - field.field.node.landing_page.field_your_groups
     - field.field.node.landing_page.layout_builder__layout
@@ -28,7 +27,6 @@ content:
     region: content
 hidden:
   entitygroupfield: true
-  field_left_navigation_menu: true
   field_other_groups: true
   field_your_groups: true
   langcode: true

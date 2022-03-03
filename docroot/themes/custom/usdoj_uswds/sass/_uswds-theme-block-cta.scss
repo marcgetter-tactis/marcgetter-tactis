@@ -27,7 +27,6 @@
       gap: 1rem;
       text-align: left;
     }
-    
   
     .paragraph--type--link {
       a {
@@ -39,6 +38,8 @@
         @include at-media(desktop) {
           padding: 0.5rem 1.25rem;
         }
+
+        //dark-blue button
         &.usa-button { 
           background-color: color(primary-darker);
           color: white;
@@ -50,6 +51,8 @@
             border: none;
           }
         }
+
+        //outline button
         &.usa-button--outline {
           background-color: transparent;
           color: $doj-coolblue;
@@ -64,11 +67,15 @@
           
           }
         }
+
+        //org chart icon
         &.org_chart {
           background-image: url('/themes/custom/usdoj_uswds/assets/img/doj-icon-offices-org-chart.svg');
           background-position: .5rem;
           padding-left: 2.5rem;
         }
+
+        //pdf icon
         &.pdf {
           background-image: url('/themes/custom/usdoj_uswds/assets/img/doj-icon-offices-pdf.svg');
           background-position: .5rem;

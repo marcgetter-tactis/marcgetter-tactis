@@ -150,11 +150,22 @@
             {# {% endif %} #}
 
             {% if transcript|render|trim is not empty %}
-                <div class="node-transcript margin-bottom-7">
-                    <details>
-                        <summary>Transcript</summary>
-                        {{ transcript }}
-                    </details>
+                <div class="usa-accordion margin-bottom-7">
+                    <!-- Use the accurate heading level to maintain the document outline -->
+                    <div class="usa-accordion__item">
+                        <h4 class="usa-accordion__heading">
+                            <button
+                                    class="usa-accordion__button"
+                                    aria-expanded="false"
+                                    aria-controls="transcript-{{ node.nid.value }}"
+                            >
+                                Transcript
+                            </button>
+                        </h4>
+                        <div id="transcript-{{ node.nid.value }}" class="usa-accordion__content usa-prose">
+                            {{ transcript }}
+                        </div>
+                    </div>
                 </div>
             {% endif %}
 

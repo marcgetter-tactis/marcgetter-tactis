@@ -1,0 +1,123 @@
+uuid: 04572a0f-314f-48d0-8b01-d37e9c18b88a
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: OO-DLRCzEXJ_tyHJIQK-K4V1a51ibpOU90C-d7-PKqI
+id: usdoj_migrate_node_complete_blog_post
+class: Drupal\node\Plugin\migrate\D7NodeTranslation
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: node
+label: 'Node complete (Blog Post)'
+source:
+  plugin: d7_node_complete
+  node_type: blog_entry
+process:
+  nid: tnid
+  vid: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title: title
+  uid: uid
+  status: status
+  created: created
+  changed: timestamp
+  promote: promote
+  sticky: sticky
+  revision_uid: revision_uid
+  revision_log: log
+  revision_timestamp: timestamp
+  content_translation_source: source_langcode
+  comment_node_blog_post/0/status: comment
+  field_body: field_blog_body
+  field_teaser: field_blog_teaser
+  field_teaser_image:
+    -
+      plugin: sub_process
+      source: field_blog_teaser_image
+      process:
+        target_id: fid
+        alt: alt
+        title: title
+        width: width
+        height: height
+  field_attachments:
+    -
+      plugin: sub_process
+      source: field_blog_attachments
+      process:
+        target_id: fid
+        display: display
+        description: description
+  field_image:
+    -
+      plugin: sub_process
+      source: field_blog_image
+      process:
+        target_id: fid
+        alt: alt
+        title: title
+        width: width
+        height: height
+  field_component:
+    -
+      plugin: sub_process
+      source: field_blog_component
+      process:
+        target_id: tid
+  field_topic:
+    -
+      plugin: sub_process
+      source: field_blog_topic
+      process:
+        target_id: tid
+  field_date:
+    -
+      plugin: sub_process
+      source: field_blog_date
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: Y-m-d
+          source: value
+  field_archived: field_archived
+  field_invisible:
+    -
+      plugin: sub_process
+      source: field_blog_invisible
+      process:
+        target_id: tid
+  field_author: field_blog_author
+  field_author_free: field_blog_author_free
+  field_social_image:
+    -
+      plugin: sub_process
+      source: field_blog_social_image
+      process:
+        target_id: fid
+        alt: alt
+        title: title
+        width: width
+        height: height
+  field_file_private_force: field_file_private_force
+destination:
+  plugin: 'entity_complete:node'
+  translations: true
+  default_bundle: blog_post
+migration_dependencies:
+  required:
+    - usdoj_migrate_user
+    - upgrade_language
+  optional:
+    - usdoj_migrate_field_instance
+    - usdoj_migrate_metatag_field_node
+    - usdoj_migrate_metatag_field_instance_node_blog_entry
+    - usdoj_migrate_metatag_field_instance_widget_settings_node_blog_post

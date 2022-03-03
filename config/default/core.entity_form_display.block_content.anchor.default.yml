@@ -20,7 +20,7 @@ third_party_settings:
       label: Organization
       region: content
       parent_name: ''
-      weight: 1
+      weight: 2
       format_type: fieldset
       format_settings:
         classes: ''
@@ -35,7 +35,7 @@ mode: default
 content:
   field_heading:
     type: string_textfield
-    weight: 4
+    weight: 0
     region: content
     settings:
       size: 60
@@ -43,7 +43,7 @@ content:
     third_party_settings: {  }
   field_links:
     type: link_default
-    weight: 5
+    weight: 3
     region: content
     settings:
       placeholder_url: ''
@@ -63,7 +63,7 @@ content:
     third_party_settings: {  }
   info:
     type: string_textfield
-    weight: 0
+    weight: 1
     region: content
     settings:
       size: 60
@@ -71,7 +71,7 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 6
+    weight: 4
     region: content
     settings:
       include_locked: true

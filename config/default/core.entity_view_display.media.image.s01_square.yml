@@ -12,14 +12,35 @@ dependencies:
     - field.field.media.image.field_tags
     - field.field.media.image.field_your_groups
     - field.field.media.image.image
+    - image.style.d01_square
     - media.type.image
+  module:
+    - svg_image
 _core:
   default_config_hash: kAe9ktGbF9yb23zdEaeeVJ01tTdrwlcVj4IgBEaeT2A
 id: media.image.s01_square
 targetEntityType: media
 bundle: image
 mode: s01_square
-content: {  }
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: d01_square
+      svg_attributes:
+        width: 70
+        height: 70
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
 hidden:
   created: true
   entitygroupfield: true
@@ -30,7 +51,6 @@ hidden:
   field_other_groups: true
   field_tags: true
   field_your_groups: true
-  image: true
   langcode: true
   name: true
   search_api_excerpt: true

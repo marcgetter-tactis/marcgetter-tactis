@@ -12,20 +12,11 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: ''
+      value: usa-button
       label: Regular
     -
       value: usa-button--outline
       label: 'Ghost Button'
-    -
-      value: 'usa-button--outline usa-button--inverse'
-      label: 'Dark BG Button'
-    -
-      value: usa-button--big
-      label: 'Big Button'
-    -
-      value: 'usa-button--big usa-button--unstyled'
-      label: Unstyled
   allowed_values_function: ''
 module: options
 locked: false

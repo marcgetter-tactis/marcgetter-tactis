@@ -1,4 +1,4 @@
-uuid: 22ff2587-e129-4f04-92a1-7ea61717ef19
+uuid: 59aaff19-1642-4a38-abb2-19fe31c7b3dc
 langcode: en
 status: true
 dependencies:
@@ -13,9 +13,11 @@ entity_type: paragraph
 bundle: link
 label: 'CTA style'
 description: ''
-required: false
+required: true
 translatable: true
-default_value: {  }
+default_value:
+  -
+    value: usa-button
 default_value_callback: ''
 settings: {  }
 field_type: list_string

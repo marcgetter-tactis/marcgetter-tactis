@@ -74,7 +74,6 @@ h6 {
 h1,
 h2 {
   color: $doj-darkblue;
-
   &:after {
     content: "";
     width: 3.25rem;
@@ -97,6 +96,26 @@ h2 {
 
 h1 {
   line-height: 1.3;
+}
+
+.gold-lines {
+  &:after {
+    content: "";
+    width: 3.25rem;
+    display: block;
+    border-top: 2px solid color(warning);
+    border-bottom: 2px solid color(warning);
+    height: 0.5rem;
+    margin: 1.5rem 0;
+  }
+}
+
+.gold-line {
+  @extend .gold-lines;
+  &:after {
+    border-bottom: none;
+    margin: .25rem 0;
+  }
 }
 
 a {
@@ -563,6 +582,25 @@ blockquote {
 //* Node fields END
 //*******************
 
+//***********************************
+//* Layout Builder START -basic page
+//***********************************
+
+.block-layout-builder {
+  &.block-field-blocknodepagetitle {
+    @extend h1;
+    @extend .gold-line;
+  }
+  
+  .field_body {
+    line-height: 1.5rem;
+  }
+}
+
+//************************
+//* Layout Builder END
+//************************
+
 .slick-dots {
   margin-bottom: 0;
 }
@@ -811,6 +849,13 @@ blockquote {
   background: white;
   border: 1px solid $theme-card-border-color;
   box-shadow: 0 0 0.5rem rgb(0 0 0 / 17%);
+}
+
+.yellow-background {
+  background-color: #f6f6f2;
+  border-left: 4px solid #ffbe2e;
+  padding: 1rem;
+  margin-top: 2rem;
 }
 
 .block-field-blocknodepagetitle {

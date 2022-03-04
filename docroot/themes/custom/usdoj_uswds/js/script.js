@@ -51,8 +51,8 @@
             mobileFirst: true,
             responsive: [
               {
-                  breakpoint: 769,
-                  settings: 'unslick'
+                breakpoint: 769,
+                settings: 'unslick'
               }
             ]
           });
@@ -112,6 +112,27 @@
             $allItems.removeClass("no-border");
           }
         });
+      });
+    }
+  };
+
+  //* This creates a "mobile menu" out of menus placed in the first column in a two column layout. It also moves layout blocks below the second column.
+  Drupal.behaviors.mobileMenu = {
+    attach: function (context, settings) {
+
+      once('mobileNav', 'html', context).forEach( function (element) {
+        if ($(window).width() <  640 ) {
+          var $heading = $(".layout--twocol-section .layout__region--first nav  > h2");
+          var $menu = $heading.siblings(".menu");
+          var $blocks = $heading.parent("nav").siblings(".block");
+          var $section = $heading.closest(".layout")
+          
+          $section.children(".layout__region").last().append($blocks);
+
+          $heading.click(function() {
+            $(this).toggleClass("open");
+          });          
+        }
       });
     }
   };

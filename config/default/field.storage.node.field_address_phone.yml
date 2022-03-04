@@ -1,16 +1,16 @@
-uuid: 087cc7c3-01ee-4830-9a4a-16e477720994
+uuid: a145b550-6c9d-4101-b5d6-6ec854a2b872
 langcode: en
 status: true
 dependencies:
   module:
+    - address_phonenumber
     - node
-    - text
-id: node.field_buzzprout
-field_name: field_buzzprout
+id: node.field_address_phone
+field_name: field_address_phone
 entity_type: node
-type: text_long
+type: address_phone_number_item
 settings: {  }
-module: text
+module: address_phonenumber
 locked: false
 cardinality: 1
 translatable: true

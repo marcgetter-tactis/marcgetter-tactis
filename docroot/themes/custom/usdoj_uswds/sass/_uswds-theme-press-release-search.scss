@@ -145,13 +145,8 @@ Press Release Search
     h2.views-field-title {
       margin: 0;
       line-height: 1.5rem;
-    
-      &:after {
-        border-top-width: 2px;
-        border-bottom: none;
-        margin: .25rem 0;
-      }
-    
+      @include gold-lines(1rem, 0, $border-bottom: false);
+          
       a {
         color: color(primary-darker); 
         font-size: 1.25rem;

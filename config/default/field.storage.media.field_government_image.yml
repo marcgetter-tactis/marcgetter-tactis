@@ -1,0 +1,18 @@
+uuid: 901ed2d4-4027-4333-9c4a-34c0baa44450
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.field_government_image
+field_name: field_government_image
+entity_type: media
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -4,7 +4,10 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.browser_teaser
+    - field.field.media.image.field_caption
     - field.field.media.image.field_categories
+    - field.field.media.image.field_credit
+    - field.field.media.image.field_government_image
     - field.field.media.image.field_image_alignment
     - field.field.media.image.field_media_image
     - field.field.media.image.field_media_in_library
@@ -23,6 +26,11 @@ targetEntityType: media
 bundle: image
 mode: browser_teaser
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   field_media_image:
     type: image
     label: hidden
@@ -47,7 +55,10 @@ content:
 hidden:
   created: true
   entitygroupfield: true
+  field_caption: true
   field_categories: true
+  field_credit: true
+  field_government_image: true
   field_image_alignment: true
   field_media_in_library: true
   field_other_groups: true

@@ -7,7 +7,7 @@ dependencies:
     - field.field.node.podcast.field_attribution
     - field.field.node.podcast.field_audio
     - field.field.node.podcast.field_body
-    - field.field.node.podcast.field_buzzprout
+    - field.field.node.podcast.field_buzzsprout
     - field.field.node.podcast.field_component
     - field.field.node.podcast.field_cover_art
     - field.field.node.podcast.field_date
@@ -42,7 +42,7 @@ hidden:
   field_attribution: true
   field_audio: true
   field_body: true
-  field_buzzprout: true
+  field_buzzsprout: true
   field_component: true
   field_cover_art: true
   field_date: true

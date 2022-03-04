@@ -7,7 +7,7 @@ dependencies:
     - field.field.node.podcast.field_attribution
     - field.field.node.podcast.field_audio
     - field.field.node.podcast.field_body
-    - field.field.node.podcast.field_buzzprout
+    - field.field.node.podcast.field_buzzsprout
     - field.field.node.podcast.field_component
     - field.field.node.podcast.field_cover_art
     - field.field.node.podcast.field_date
@@ -90,7 +90,7 @@ content:
       allowed_formats:
         hide_help: '0'
         hide_guidelines: '0'
-  field_buzzprout:
+  field_buzzsprout:
     type: text_textarea
     weight: 12
     region: content

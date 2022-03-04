@@ -5,8 +5,8 @@ dependencies:
   module:
     - node
     - text
-id: node.field_buzzprout
-field_name: field_buzzprout
+id: node.field_buzzsprout
+field_name: field_buzzsprout
 entity_type: node
 type: text_long
 settings: {  }

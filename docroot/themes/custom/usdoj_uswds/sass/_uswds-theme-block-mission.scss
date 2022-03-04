@@ -23,6 +23,7 @@ Mission Block
   //DOJ seal
   .field_image {
     float: left;
+    @include grid-col(4);
     @media (max-width: 47.99em) {
       float: none;
     }
@@ -43,12 +44,18 @@ Mission Block
   .field_heading {
     @extend h2;
     font-weight: bold;
+    display: inline-block;
+   
   }
 
   //block body
   .field_body {
-    @include grid-row(8);
-    
+    @include grid-col(8);
+    @include grid-offset(4);
+    @media (max-width: 47.99em) {
+      @include grid-col(fill);
+      @include grid-offset(none);
+    }
     ul {
       padding-left: 0;
     

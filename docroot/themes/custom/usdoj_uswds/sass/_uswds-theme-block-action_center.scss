@@ -5,11 +5,7 @@
     @extend h2;
     text-align: center;
     font-weight: 700;
-
-    &::after {
-      margin-left: auto;
-      margin-right: auto;
-    }
+    @include gold-lines(1.25rem, auto);
   }
 
   .action-center-items {

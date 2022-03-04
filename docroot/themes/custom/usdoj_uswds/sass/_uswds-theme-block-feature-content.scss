@@ -26,18 +26,14 @@ Featured Content Block
     grid-template-rows: 6rem auto;
   }
   
-  h2.block-title {
-    text-align: left;
-    font-size: $theme-h3-font-size;
+  .field_heading {
+    @extend h3;
+    color: color(primary-darker);
     margin: 1rem 0;
+    @include gold-lines(1.25rem, 0);
     @include at-media(desktop) {
       font-size: $theme-h1-font-size;
-    }
-    &:after {
-      margin: 1rem 0;
-      @include at-media(desktop) {
-        margin: 1.5rem 0;
-      }
+      @include gold-lines(2rem, 0);
     }
   }
   

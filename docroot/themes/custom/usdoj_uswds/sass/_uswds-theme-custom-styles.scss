@@ -74,48 +74,11 @@ h6 {
 h1,
 h2 {
   color: $doj-darkblue;
-  &:after {
-    content: "";
-    width: 3.25rem;
-    display: flex;
-    border-top: 2px solid color(warning);
-    border-bottom: 2px solid color(warning);
-    height: 0.6rem;
-    margin: 1.5rem 0;
-  }
-
-  &.block-title {
-    text-align: center;
-    margin-top: 0;
-
-    &::after {
-      margin: 1.5rem auto;
-    }
-  }
+  @include gold-lines(1.5rem, 0);
 }
 
 h1 {
   line-height: 1.3;
-}
-
-.gold-lines {
-  &:after {
-    content: "";
-    width: 3.25rem;
-    display: block;
-    border-top: 2px solid color(warning);
-    border-bottom: 2px solid color(warning);
-    height: 0.5rem;
-    margin: 1.5rem 0;
-  }
-}
-
-.gold-line {
-  @extend .gold-lines;
-  &:after {
-    border-bottom: none;
-    margin: .25rem 0;
-  }
 }
 
 a {
@@ -589,7 +552,7 @@ blockquote {
 .block-layout-builder {
   &.block-field-blocknodepagetitle {
     @extend h1;
-    @extend .gold-line;
+    @include gold-lines(1.5rem, 0);
   }
   
   .field_body {

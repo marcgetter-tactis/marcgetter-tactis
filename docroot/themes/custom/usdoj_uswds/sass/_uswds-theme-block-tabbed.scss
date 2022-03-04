@@ -25,10 +25,7 @@ Tabbed Block on Homepage
     font-weight: 700;
     @extend h2;
     text-align: center;
-    &::after {
-      margin-left: auto;
-      margin-right: auto;
-    }
+    @include gold-lines(1.25rem, auto);
   }
 
   .panels { 

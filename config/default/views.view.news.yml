@@ -996,7 +996,7 @@ display:
               search_api_fulltext:
                 plugin_id: default
                 advanced:
-                  placeholder_text: 'Enter keywords here'
+                  placeholder_text: ''
                   rewrite:
                     filter_rewrite_values: ''
                   collapsible: false
@@ -1121,17 +1121,25 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              administrator: '0'
-              developer: '0'
-              site_builder: '0'
-              content_administrator: '0'
-              content_author: '0'
-              content_editor: '0'
               user_administrator: '0'
+              arhchiver: '0'
+              administrator: '0'
               anonymous: '0'
+              global_administrator: '0'
+              site_architect: '0'
+              cache_purger: '0'
+              translator: '0'
+              archiver: '0'
+              special_content_creator: '0'
             expose_fields: false
-            placeholder: 'Enter keywords here'
+            placeholder: ''
             searched_fields_id: search_api_fulltext_searched_fields
+            autocomplete_filter: 0
+            autocomplete_min_chars: '0'
+            autocomplete_items: '10'
+            autocomplete_raw_suggestion: 1
+            autocomplete_raw_dropdown: 1
+            autocomplete_dependent: 0
           is_grouped: false
           group_info:
             label: 'Fulltext search'
@@ -1437,7 +1445,6 @@ display:
             podcast: podcast
             press_release: press_release
             speech: speech
-            youtube_video: youtube_video
           group: 1
           exposed: false
           expose:

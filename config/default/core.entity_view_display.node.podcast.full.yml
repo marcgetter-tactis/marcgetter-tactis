@@ -8,7 +8,7 @@ dependencies:
     - field.field.node.podcast.field_attribution
     - field.field.node.podcast.field_audio
     - field.field.node.podcast.field_body
-    - field.field.node.podcast.field_buzzprout
+    - field.field.node.podcast.field_buzzsprout
     - field.field.node.podcast.field_component
     - field.field.node.podcast.field_cover_art
     - field.field.node.podcast.field_date
@@ -79,7 +79,7 @@ content:
     third_party_settings: {  }
     weight: 6
     region: content
-  field_buzzprout:
+  field_buzzsprout:
     type: text_default
     label: hidden
     settings: {  }
@@ -132,7 +132,6 @@ content:
       overlay: ''
       title: ''
       vanilla: false
-      icon: ''
       layout: ''
       view_mode: ''
       cache: 0
@@ -154,12 +153,13 @@ content:
       ratio: ''
       thumbnail_style: ''
       _uri: ''
-      breakpoints: {  }
-      sizes: ''
       grid_header: ''
       grid: ''
       grid_medium: ''
       grid_small: ''
+      breakpoints: {  }
+      icon: ''
+      sizes: ''
       overridables: {  }
       thumbnail: ''
       optionset_thumbnail: ''

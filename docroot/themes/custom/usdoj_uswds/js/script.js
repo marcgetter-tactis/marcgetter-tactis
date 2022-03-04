@@ -129,6 +129,11 @@
     $('#' + i + '-body').fadeIn('slow');
   })
 
+  //Placeholder text
+  $('input#edit-search-api-fulltext').val('Enter keywords here');
+  $('input#edit-search-api-fulltext').click( function() {
+    $(this).val('');
+  })
   //news keyword search submit form
   $('a.keyword-form').click(function() {
     $('#views-exposed-form-news-page-1').submit();

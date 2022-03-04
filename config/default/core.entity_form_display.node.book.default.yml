@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.book.body
     - field.field.node.book.field_attachment
     - field.field.node.book.field_body
     - field.field.node.book.field_hide_children
@@ -11,7 +12,6 @@ dependencies:
     - field.field.node.book.field_other_groups
     - field.field.node.book.field_your_groups
     - node.type.book
-    - workflows.workflow.editorial
   module:
     - content_moderation
     - field_group
@@ -183,4 +183,5 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  body: true
   entitygroupfield: true

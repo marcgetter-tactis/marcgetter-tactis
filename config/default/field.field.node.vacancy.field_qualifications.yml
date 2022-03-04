@@ -17,7 +17,7 @@ field_name: field_qualifications
 entity_type: node
 bundle: vacancy
 label: Qualifications
-description: ''
+description: "<ul>\r\n<li><strong>For Attorney Positions: </strong>Outline required and preferred qualifications in this section.  <strong>All attorney vacancy announcements MUST include the following language:</strong> applicants must have a J.D. degree, be an active member of the bar (any U.S. jurisdiction), and have at least 1* year post-J.D. legal or other relevant experience.  <u>*Note:</u>  The required number of years of experience can be increased.  However, all applicants must have at least one year of post-J.D. experience, except for uncompensated Special Attorneys, where the 1 year requirement does not apply. </li>\r\n<li><strong>For Volunteer Internships: </strong>Outline who is eligible to apply:  first-, second- or third-year law students, joint degree or LL.M. students; describe your ideal candidate and be specific about essential skills/experience and any U.S. citizenship/security requirements.  The description should also include the minimum number of weeks required for spring, summer, or fall internships. </li>\r\n</ul>"
 required: false
 translatable: false
 default_value: {  }

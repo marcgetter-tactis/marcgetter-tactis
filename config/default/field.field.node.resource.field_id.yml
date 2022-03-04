@@ -10,7 +10,7 @@ field_name: field_id
 entity_type: node
 bundle: resource
 label: ID
-description: ''
+description: 'Enter a DOJ id that represents this resource. Example: SF 269A'
 required: false
 translatable: false
 default_value: {  }

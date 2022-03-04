@@ -1,0 +1,3 @@
+#!/bin/bash
+drush ev "\Drupal::state()->set('source_db', ['key' => 'd7','target' => 'default',]);"
+drush ev "\Drupal::state()->set('migrate.fallback_state_key', 'source_db');"

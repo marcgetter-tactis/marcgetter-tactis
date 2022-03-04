@@ -1,0 +1,14 @@
+uuid: a741a619-19d8-4199-8a24-c804fad15409
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.archiver
+  module:
+    - user
+id: user_add_role_action.archiver
+label: 'Add the archiver role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: archiver

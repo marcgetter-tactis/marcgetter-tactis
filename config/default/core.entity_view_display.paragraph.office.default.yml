@@ -1,0 +1,42 @@
+uuid: 9dd62b99-a44a-4e70-b7c5-f9968e6292c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.office.field_body
+    - field.field.paragraph.office.field_headline
+    - field.field.paragraph.office.field_image
+    - paragraphs.paragraphs_type.office
+  module:
+    - text
+id: paragraph.office.default
+targetEntityType: paragraph
+bundle: office
+mode: default
+content:
+  field_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_headline:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

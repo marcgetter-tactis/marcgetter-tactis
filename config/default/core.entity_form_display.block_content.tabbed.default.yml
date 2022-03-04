@@ -6,7 +6,6 @@ dependencies:
     - block_content.type.tabbed
     - field.field.block_content.tabbed.field_background_class
     - field.field.block_content.tabbed.field_cta
-    - field.field.block_content.tabbed.field_cta_style
     - field.field.block_content.tabbed.field_header
     - field.field.block_content.tabbed.field_other_groups
     - field.field.block_content.tabbed.field_tabs
@@ -50,12 +49,6 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
-    third_party_settings: {  }
-  field_cta_style:
-    type: options_select
-    weight: 32
-    region: content
-    settings: {  }
     third_party_settings: {  }
   field_header:
     type: string_textfield

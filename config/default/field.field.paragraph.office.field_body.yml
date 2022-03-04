@@ -1,0 +1,25 @@
+uuid: 36212e2c-b296-4135-b646-a4f77b2a7aa1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body
+    - paragraphs.paragraphs_type.office
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+id: paragraph.office.field_body
+field_name: field_body
+entity_type: paragraph
+bundle: office
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

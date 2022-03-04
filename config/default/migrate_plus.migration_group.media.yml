@@ -1,9 +1,9 @@
-uuid: 36c26382-6612-4ab6-ba1f-03d4560f3a74
+uuid: 51ca44ee-5fc3-4efe-8a22-254e12b200de
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: baRNP7mFt4uIc4QQgRy2o9zTxyQb_dx2fQvum-w4Tfo
+  default_config_hash: VoW24X0l3mEK7RHDjQb7BQrrn-7jt5JLU-AkFwzPhLY
 id: media
 label: Media
 description: 'Migrate Drupal 7 files to media'
@@ -11,4 +11,4 @@ source_type: 'Drupal 7'
 module: null
 shared_configuration:
   source:
-    key: migrate
+    key: d7

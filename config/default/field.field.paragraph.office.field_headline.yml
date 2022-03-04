@@ -1,0 +1,19 @@
+uuid: ecedae44-8b2e-4685-bde5-81706fffa232
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_headline
+    - paragraphs.paragraphs_type.office
+id: paragraph.office.field_headline
+field_name: field_headline
+entity_type: paragraph
+bundle: office
+label: Headline
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

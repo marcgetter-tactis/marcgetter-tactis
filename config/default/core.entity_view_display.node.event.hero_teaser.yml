@@ -19,6 +19,7 @@ dependencies:
     - field.field.node.event.field_press
     - field.field.node.event.field_registration
     - field.field.node.event.field_timezone
+    - field.field.node.event.field_topic
     - field.field.node.event.field_your_groups
     - node.type.event
   module:
@@ -136,6 +137,7 @@ hidden:
   field_datetime: true
   field_file_private_force: true
   field_other_groups: true
+  field_topic: true
   field_your_groups: true
   langcode: true
   search_api_excerpt: true

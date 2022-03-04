@@ -1,0 +1,62 @@
+_core:
+  default_config_hash: t5W6QbLZA8s7VAoHDDldhRB2Emm1blOGOOKHMV855Gk
+token: 1dbeac95ae194e33ade582a175092e7e
+domain_plugin_id: siteimprovedomain_simple
+prepublish_enabled: true
+api_username: stephen.b.fanning@usdoj.gov
+api_key: 52d270efa4cefbb97fb283982e21689e
+enabled_content_types:
+  blog_post: blog_post
+  book: book
+  brief: brief
+  case: case
+  case_document: case_document
+  case_multi_defendant: case_multi_defendant
+  component_group: component_group
+  consent_decree: consent_decree
+  court_decision: court_decision
+  event: event
+  historical_biography: historical_biography
+  image_gallery: image_gallery
+  landing_page: landing_page
+  location: location
+  opinion: opinion
+  page: page
+  podcast: podcast
+  press_release: press_release
+  resource: resource
+  speech: speech
+  staff_profile: staff_profile
+  testimony: testimony
+  timeline: timeline
+  timeline_event: timeline_event
+  vacancy: vacancy
+  youtube_video: youtube_video
+  most_wanted: '0'
+enabled_taxonomies:
+  brief_topic: brief_topic
+  case_violation: case_violation
+  component: component
+  congressional_committee: congressional_committee
+  congressional_session: congressional_session
+  court_decision_topic: court_decision_topic
+  elder_svf_org: elder_svf_org
+  guidance_notice: guidance_notice
+  guidance_topic: guidance_topic
+  hiring_groups_audience: hiring_groups_audience
+  hiring_organizations: hiring_organizations
+  image_categories: image_categories
+  industry: industry
+  invisible: invisible
+  language: language
+  most_wanted_categories: most_wanted_categories
+  non_doj_organization: non_doj_organization
+  state_counties: state_counties
+  tags: tags
+  topic: topic
+  us_judicial_district: us_judicial_district
+  us_state: us_state
+  uswds_breakpoints: uswds_breakpoints
+  uswds_classes: uswds_classes
+  views_rss_itunes_category: views_rss_itunes_category
+  youtube_video_categories: youtube_video_categories

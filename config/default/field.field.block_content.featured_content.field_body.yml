@@ -1,0 +1,25 @@
+uuid: f650f355-3778-499b-936d-911c34142214
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.featured_content
+    - field.storage.block_content.field_body
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+id: block_content.featured_content.field_body
+field_name: field_body
+entity_type: block_content
+bundle: featured_content
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

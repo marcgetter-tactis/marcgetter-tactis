@@ -1,0 +1,45 @@
+uuid: 26dcb2ea-8710-41f6-8c85-40ca6696c1ac
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: QONyF-TFDwPws24dK3zPMnimm-iD2T-3MYLVTWmNhVw
+id: usdoj_migrate_file_to_media_document
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Media
+  - doj
+migration_group: media
+label: 'Migrate Media audio entities'
+source:
+  plugin: d7_file_by_type
+  scheme: public
+  type: document
+  constants:
+    source_base_path: /var/www/html/docroot/sites/default/files/www.justice.gov
+process:
+  field_media_file/target_id:
+    -
+      plugin: migration_lookup
+      migration: usdoj_migrate_file
+      source: fid
+    -
+      plugin: skip_on_empty
+      method: row
+  thumbnail/target_id:
+    plugin: migration_lookup
+    migration: usdoj_migrate_file
+    source: fid
+  status: status
+  created: timestamp
+  changed: timestamp
+  uid: uid
+destination:
+  plugin: 'entity:media'
+  default_bundle: document
+migration_dependencies:
+  required:
+    - usdoj_migrate_file

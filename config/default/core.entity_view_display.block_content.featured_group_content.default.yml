@@ -1,0 +1,41 @@
+uuid: c57d6281-e942-420b-aa5f-0b4e43e6e716
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.featured_group_content
+    - field.field.block_content.featured_group_content.field_background_class
+    - field.field.block_content.featured_group_content.field_grouped_content
+    - field.field.block_content.featured_group_content.field_heading
+    - field.field.block_content.featured_group_content.field_other_groups
+    - field.field.block_content.featured_group_content.field_your_groups
+  module:
+    - entity_reference_revisions
+id: block_content.featured_group_content.default
+targetEntityType: block_content
+bundle: featured_group_content
+mode: default
+content:
+  field_grouped_content:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_heading:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_background_class: true
+  field_other_groups: true
+  field_your_groups: true
+  langcode: true
+  search_api_excerpt: true

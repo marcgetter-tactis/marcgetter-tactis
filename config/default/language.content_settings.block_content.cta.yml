@@ -1,0 +1,11 @@
+uuid: a4c1318b-9b63-406e-918c-350b90b4961b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.cta
+id: block_content.cta
+target_entity_type_id: block_content
+target_bundle: cta
+default_langcode: site_default
+language_alterable: false

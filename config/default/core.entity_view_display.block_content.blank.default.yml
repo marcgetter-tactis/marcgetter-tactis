@@ -7,14 +7,12 @@ dependencies:
     - field.field.block_content.blank.field_background_class
     - field.field.block_content.blank.field_body
     - field.field.block_content.blank.field_cta
-    - field.field.block_content.blank.field_cta_style
     - field.field.block_content.blank.field_header
     - field.field.block_content.blank.field_media
     - field.field.block_content.blank.field_other_groups
     - field.field.block_content.blank.field_your_groups
   module:
     - link
-    - options
     - text
 id: block_content.blank.default
 targetEntityType: block_content
@@ -39,13 +37,6 @@ content:
       target: ''
     third_party_settings: {  }
     weight: 3
-    region: content
-  field_cta_style:
-    type: list_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 4
     region: content
   field_header:
     type: string

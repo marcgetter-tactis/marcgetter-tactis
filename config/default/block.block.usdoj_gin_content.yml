@@ -1,0 +1,22 @@
+uuid: be6dad82-fc33-491d-afe4-d0f7d3c90a9b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - usdoj_gin
+_core:
+  default_config_hash: hBHXB7hC05XU7pDYzETt-GUcpFlogK1gkjyAsg0Ym58
+id: usdoj_gin_content
+theme: usdoj_gin
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -5,12 +5,13 @@ dependencies:
   config:
     - field.field.node.page.feeds_item
     - field.field.node.page.field_body
-    - field.field.node.page.field_left_navigation_menu
     - field.field.node.page.field_other_groups
     - field.field.node.page.field_your_groups
     - field.field.node.page.layout_builder__layout
+    - group_content_menu.group_content_menu_type.left
     - node.type.page
   module:
+    - group_content_menu
     - layout_builder
     - layout_discovery
     - text
@@ -36,38 +37,6 @@ third_party_settings:
                 entity: layout_builder.entity
             weight: 0
             additional: {  }
-          026e70a4-17d9-4a93-be49-c5c593bcf339:
-            uuid: 026e70a4-17d9-4a93-be49-c5c593bcf339
-            region: content
-            configuration:
-              id: 'field_block:node:page:field_other_groups'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: entity_reference_label
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
-            weight: 1
-            additional: {  }
-          467c9d2a-b9ee-4b58-a772-ff12fda44afd:
-            uuid: 467c9d2a-b9ee-4b58-a772-ff12fda44afd
-            region: content
-            configuration:
-              id: 'field_block:node:page:field_your_groups'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: entity_reference_label
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
-            weight: 2
-            additional: {  }
         third_party_settings: {  }
       -
         layout_id: layout_twocol_section
@@ -76,25 +45,6 @@ third_party_settings:
           context_mapping: {  }
           column_widths: 33-67
         components:
-          0ecc3d8c-3f51-49e0-9a14-7dc9aa280f6e:
-            uuid: 0ecc3d8c-3f51-49e0-9a14-7dc9aa280f6e
-            region: first
-            configuration:
-              id: 'field_block:node:page:field_left_navigation_menu'
-              label: 'Left Navigation Menu'
-              label_display: visible
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: entity_reference_label
-                label: hidden
-                settings:
-                  link: true
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
           68111353-eb56-4378-bbfa-486dec8c747d:
             uuid: 68111353-eb56-4378-bbfa-486dec8c747d
             region: second
@@ -132,6 +82,20 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 2
             additional: {  }
+          bf19b107-ed5c-4949-bb46-241bee8b3149:
+            uuid: bf19b107-ed5c-4949-bb46-241bee8b3149
+            region: first
+            configuration:
+              id: 'group_content_menu:left'
+              label: 'Left Navigation'
+              label_display: '0'
+              provider: group_content_menu
+              context_mapping: {  }
+              level: 1
+              depth: 0
+              expand_all_items: false
+            weight: 0
+            additional: {  }
         third_party_settings: {  }
       -
         layout_id: layout_onecol
@@ -156,14 +120,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 104
-    region: content
-  field_left_navigation_menu:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 103
     region: content
   field_other_groups:
     type: entity_reference_label

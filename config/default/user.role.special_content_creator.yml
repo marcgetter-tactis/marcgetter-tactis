@@ -1,9 +1,16 @@
 uuid: 676c2ca3-a957-4e38-bff2-cc2bcf11a4fa
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - node.type.case_multi_defendant
+  module:
+    - node
 id: special_content_creator
 label: 'Special Content Creator'
-weight: -2
+weight: 12
 is_admin: null
-permissions: {  }
+permissions:
+  - 'create case_multi_defendant content'
+  - 'delete any case_multi_defendant content'
+  - 'edit any case_multi_defendant content'

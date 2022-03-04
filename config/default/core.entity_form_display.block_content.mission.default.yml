@@ -8,7 +8,6 @@ dependencies:
     - field.field.block_content.mission.field_background_image
     - field.field.block_content.mission.field_body
     - field.field.block_content.mission.field_cta
-    - field.field.block_content.mission.field_cta_style
     - field.field.block_content.mission.field_heading
     - field.field.block_content.mission.field_image
     - field.field.block_content.mission.field_other_groups
@@ -30,7 +29,7 @@ third_party_settings:
       label: Organization
       region: content
       parent_name: ''
-      weight: 1
+      weight: 3
       format_type: fieldset
       format_settings:
         classes: ''
@@ -58,7 +57,7 @@ content:
     third_party_settings: {  }
   field_body:
     type: text_textarea
-    weight: 3
+    weight: 4
     region: content
     settings:
       rows: 5
@@ -66,21 +65,15 @@ content:
     third_party_settings: {  }
   field_cta:
     type: link_default
-    weight: 5
+    weight: 6
     region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-  field_cta_style:
-    type: options_select
-    weight: 6
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_heading:
     type: string_textfield
-    weight: 2
+    weight: 0
     region: content
     settings:
       size: 60
@@ -88,7 +81,7 @@ content:
     third_party_settings: {  }
   field_image:
     type: media_library_widget
-    weight: 4
+    weight: 5
     region: content
     settings:
       media_types: {  }
@@ -133,7 +126,7 @@ content:
     third_party_settings: {  }
   info:
     type: string_textfield
-    weight: 0
+    weight: 1
     region: content
     settings:
       size: 60
@@ -141,7 +134,7 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 1
+    weight: 2
     region: content
     settings:
       include_locked: true

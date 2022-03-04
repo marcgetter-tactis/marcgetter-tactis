@@ -1,0 +1,33 @@
+uuid: d9d02d2c-b766-49f5-809f-55116f96bbc8
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+id: block_content.field_content_type
+field_name: field_content_type
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: event
+      label: Event
+    -
+      value: press_release
+      label: 'Press Release'
+    -
+      value: speech
+      label: Speech
+    -
+      value: youtube_video
+      label: 'Youtube Video'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

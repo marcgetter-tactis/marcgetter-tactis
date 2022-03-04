@@ -1,0 +1,18 @@
+uuid: da81f725-500b-4f80-9591-c6fb87d9827d
+langcode: en
+status: true
+dependencies:
+  module:
+    - group_content_menu
+id: group_content_menu.field_override_parent_menu
+field_name: field_override_parent_menu
+entity_type: group_content_menu
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

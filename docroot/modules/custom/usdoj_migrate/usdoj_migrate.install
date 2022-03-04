@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Install/uninstall functions for usdoj_migrate module.
+ */
+
+/**
+ * Implements hook_uninstall().
+ */
+function usdoj_migrate_uninstall() {
+  $configs = [
+    'migrate_plus.migration_group.default',
+    'migrate_plus.migration_group.language',
+    'migrate_plus.migration_group.media',
+    'migrate_plus.migration_group.node',
+    'migrate_plus.migration_group.taxonomy',
+    'migrate_plus.migration_group.user',
+    'migrate_plus.migration.usdoj_migrate_file',
+    'migrate_plus.migration.usdoj_migrate_file_to_media_audio',
+    'migrate_plus.migration.usdoj_migrate_file_to_media_document',
+    'migrate_plus.migration.usdoj_migrate_file_to_media_image',
+    'migrate_plus.migration.usdoj_migrate_file_to_media_video',
+    'migrate_plus.migration.usdoj_migrate_language_prefixes_and_domains',
+    'migrate_plus.migration.usdoj_migrate_language',
+    'migrate_plus.migration.usdoj_migrate_node_complete_blog_post',
+    'migrate_plus.migration.usdoj_migrate_node_complete_press_release',
+    'migrate_plus.migration.usdoj_migrate_taxonomy_terms',
+    'migrate_plus.migration.usdoj_migrate_taxonomy_vocabulary',
+    'migrate_plus.migration.usdoj_migrate_user_role',
+    'migrate_plus.migration.usdoj_migrate_user',
+  ];
+  foreach ($configs as $config) {
+    \Drupal::configFactory()->getEditable($config)->delete();
+  }
+}

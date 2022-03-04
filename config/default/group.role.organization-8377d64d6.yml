@@ -1,0 +1,17 @@
+uuid: 191e40a3-cf3d-43a7-a06c-4829a4bb3b55
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.organization
+  enforced:
+    config:
+      - user.role.archiver
+id: organization-8377d64d6
+label: archiver
+weight: 11
+internal: true
+audience: outsider
+group_type: organization
+permissions_ui: false
+permissions: {  }

@@ -7,16 +7,20 @@ dependencies:
     - node.type.page
   module:
     - allowed_formats
+    - linkchecker
     - text
 third_party_settings:
   allowed_formats:
     allowed_formats: {  }
+  linkchecker:
+    scan: true
+    extractor: html_link_extractor
 id: node.page.field_body
 field_name: field_body
 entity_type: node
 bundle: page
 label: Body
-description: ''
+description: 'If you would like to add a non-group menu from Structure -> Menus, then set it here. This menu will override the group menu.'
 required: false
 translatable: true
 default_value: {  }

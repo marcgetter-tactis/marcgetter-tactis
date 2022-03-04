@@ -8,7 +8,7 @@
 /**
  * Database configuration.
  */
-$databases['migrate']['default'] = [
+$databases['d7']['default'] = [
   'database' => 'db',
   'username' => 'db',
   'password' => 'db',
@@ -17,3 +17,4 @@ $databases['migrate']['default'] = [
   'driver' => 'mysql',
   'prefix' => '',
 ];
+$settings['container_yamls'][] = __DIR__ . '/local.services.yml';

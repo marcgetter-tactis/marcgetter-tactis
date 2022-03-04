@@ -1,0 +1,64 @@
+uuid: 48432ca6-6722-4a75-9a26-695e09ad3000
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: rwIVkfrb4FCfLogBubCjv1yVOhqDh6gQrU4rMcSfMa8
+id: usdoj_migrate_file_to_media_image
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Media
+  - doj
+migration_group: media
+label: 'Migrate Media image entities'
+source:
+  plugin: d7_file_by_type
+  scheme:
+    - public
+    - private
+  type: image
+  get_alt: true
+  get_title: true
+  constants:
+    source_base_path: /var/www/html/docroot/sites/default/files/www.justice.gov
+process:
+  field_media_image/target_id:
+    -
+      plugin: migration_lookup
+      migration: usdoj_migrate_file
+      source: fid
+    -
+      plugin: skip_on_empty
+      method: row
+  image/target_id:
+    -
+      plugin: migration_lookup
+      migration: usdoj_migrate_file
+      source: fid
+    -
+      plugin: skip_on_empty
+      method: row
+  image/alt: alt
+  image/title: title
+  field_categories/target_id:
+    -
+      plugin: migration_lookup
+      migration: usdoj_migrate_taxonomy_terms
+      source: tid
+    -
+      plugin: skip_on_empty
+      method: process
+      source: parent
+  status: status
+  created: timestamp
+  changed: timestamp
+  uid: uid
+destination:
+  plugin: 'entity:media'
+  default_bundle: image
+migration_dependencies:
+  required:
+    - usdoj_migrate_file

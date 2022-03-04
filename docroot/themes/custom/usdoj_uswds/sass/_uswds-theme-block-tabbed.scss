@@ -25,17 +25,12 @@ Tabbed Block on Homepage
     font-weight: 700;
     @extend h2;
     text-align: center;
-    &::after {
-      margin-left: auto;
-      margin-right: auto;
-    }
+    @include gold-lines(1.25rem, auto);
   }
 
   .panels { 
+    @extend .block-body-background;
     position: relative;
-    background: white;
-    border: 1px solid #eaeaea;
-    box-shadow: 0 0 0.5rem rgb(0 0 0 / 17%); 
     height: 36rem;
     @media (min-width: 24em) {
       height: 40rem;

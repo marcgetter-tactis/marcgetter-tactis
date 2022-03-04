@@ -17,7 +17,7 @@ field_name: field_media_file
 entity_type: media
 bundle: document
 label: File
-description: ''
+description: "Before attaching a PDF or other file, evaluate metadata included with the file. Metadata should not include a personal name or location.<br><br>\r\nThese four metadata fields are required for accessibility:<br><br>\r\n<ul>\r\n<li>Title: Descriptive name of the document\r\n<li>Author: Name of Component (use full name instead of acronym, optionally add acronym in parentheses)</li>\r\n<li>Subject/Description: Useful for providing more detail than the title but can be the same as the title.</li>\r\n<li>Keywords: Consider things like important words from the Title, Subject/Description and some of the headings in the document (at least the main chapter/section headings)</li>\r\n<ul>\r\n<li>Use a semicolon to separate keywords instead of a comma (ex: justice; doj;)</li>\r\n<li>Do not use parentheses around keywords, just type out the keyword (ex: justice)</li>\r\n</ul>\r\n</ul>\r\n<a href=\"https://dojnet.doj.gov/webdevelopment/file-names.php#pdf\">More about PDF Metadata</a><br><br>"
 required: true
 translatable: true
 default_value: {  }
@@ -26,7 +26,7 @@ settings:
   handler: 'default:file'
   handler_settings: {  }
   file_directory: '[date:custom:Y]-[date:custom:m]'
-  file_extensions: 'csv txt rtf pdf doc docx xls xlsx ppt pptx pps odt ods odp'
+  file_extensions: 'pdf txt rtf doc docx xls xlsx csv mp3 mp4 wpd wp qpw xml ppt pptx wmv ods zip xht tex tiff tif bmp json'
   max_filesize: ''
   description_field: false
 field_type: file

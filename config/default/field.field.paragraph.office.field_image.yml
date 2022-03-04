@@ -1,0 +1,33 @@
+uuid: a23ee33b-6d97-48a7-ac1f-39cd5fde31e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image
+    - media.type.image
+    - paragraphs.paragraphs_type.office
+  content:
+    - 'media:image:5681b761-8a0e-41af-b801-d9918a158899'
+id: paragraph.office.field_image
+field_name: field_image
+entity_type: paragraph
+bundle: office
+label: 'Office Seal'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    target_uuid: 5681b761-8a0e-41af-b801-d9918a158899
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,22 @@
+uuid: 7045efd3-7085-43fb-9cf7-684682fc1d97
+langcode: en
+status: true
+dependencies:
+  theme:
+    - usdoj_gin
+_core:
+  default_config_hash: BCWhood0xXFQYqxFgL1spXdb9KeIuXH1YvTdjIEedDg
+id: usdoj_gin_secondary_local_tasks
+theme: usdoj_gin
+region: pre_content
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

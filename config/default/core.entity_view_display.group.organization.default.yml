@@ -1,0 +1,43 @@
+uuid: 61139059-da84-498c-8d52-cb95c24658bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.group.organization.field_abbreviation
+    - field.field.group.organization.field_abbreviation_title
+    - group.type.organization
+id: group.organization.default
+targetEntityType: group
+bundle: organization
+mode: default
+content:
+  field_abbreviation:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -4
+    region: content
+  field_abbreviation_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -3
+    region: content
+  label:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -5
+    region: content
+hidden:
+  changed: true
+  created: true
+  langcode: true
+  search_api_excerpt: true
+  uid: true

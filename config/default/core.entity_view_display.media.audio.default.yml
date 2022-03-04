@@ -15,6 +15,11 @@ targetEntityType: media
 bundle: audio
 mode: default
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
   field_media_audio_file:
     type: file_audio
     label: visually_hidden
@@ -24,28 +29,14 @@ content:
       loop: false
       multiple_file_display_type: tags
     third_party_settings: {  }
-    weight: 0
-    region: content
-  field_other_groups:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
     weight: 1
-    region: content
-  field_your_groups:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 2
     region: content
 hidden:
   created: true
   entitygroupfield: true
   field_media_in_library: true
+  field_other_groups: true
+  field_your_groups: true
   langcode: true
   name: true
   search_api_excerpt: true

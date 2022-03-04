@@ -1,9 +1,9 @@
-uuid: ec56ba0b-9bd6-4c4d-a63e-ce05965192ba
+uuid: 914b1791-f5de-4090-b77e-9881851eea6c
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: b1UcFqB_6nVhQVJcZDXalRD57y0IW-a28LNsWQse-1w
+  default_config_hash: GAG9kJ8IBiE7f0N8IJ0woFJvcnisLOlMEmPkXpBfSTw
 id: user
 label: User
 description: 'Migrate Drupal 7 users'
@@ -11,4 +11,4 @@ source_type: 'Drupal 7'
 module: null
 shared_configuration:
   source:
-    key: migrate
+    key: d7

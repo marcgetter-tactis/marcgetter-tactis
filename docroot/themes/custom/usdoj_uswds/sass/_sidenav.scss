@@ -3,19 +3,8 @@
     display: none;
 
     @include at-media(desktop) {
-    display: block;
-    border-bottom: none;
-    
-      //left nav title
-      &:before {
-        content: "News";
-        font-weight: bold;
-        color: color(primary-darker);
-        font-size: 1.25rem;
-        line-height: 2rem;
-        margin: 2rem 0 .5rem;
-        display: block;
-      }
+      display: block;
+      border-bottom: none;
 
       .usa-sidenav__item {
         border-top: 1px solid $gray-20;
@@ -38,15 +27,11 @@
     }
   }
 
-  h2.block-title {
+  h2.block-title { 
     font-size: 1.5rem;
     text-align: left;
     margin-top: 2rem;
-    &:after {
-      margin: 1rem 0;
-      border-top-width: 2px;
-      border-bottom-width: 2px;
-    } 
+    @include gold-lines(1rem, 0);
   }
   a {
     font-size: .9rem;
@@ -59,10 +44,7 @@
       display: none;
     }
     .body {
-      background-color: $taupe-bg;
-      border-left: 4px solid $theme-color-accent-warm;
-      padding: 1rem;  
-      margin-top: 2rem;
+      @extend .yellow-background;
       p:first-of-type {
         margin-top: 0;
       }
@@ -88,11 +70,14 @@
       height: 100%;
       padding: 0 1rem;
       border-left: 4px solid color(primary-darker);
+      color: $doj-darkblue;
+
       &:after {
         content: "+";
         font-size: 1.5rem;
         font-weight: bold;
-        color: $blue-60v;        
+        color: $blue-60v
+
       }
     }
   }
@@ -102,16 +87,16 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    
+
   }
 
   #sidenav-expand:checked + label.expand {
     .expand-title{
       background-color: $blue-cool-5;
-        &:after {
-          content: "-";
-        }
+      &:after {
+        content: "-";
       }
+    }
     ul.menu--sidebar-menu {
       display: block;
       position: relative;

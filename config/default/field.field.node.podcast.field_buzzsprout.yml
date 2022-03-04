@@ -1,0 +1,26 @@
+uuid: a890a86f-f16f-41cb-ba6f-ef2980ed2e4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_buzzsprout
+    - node.type.podcast
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - plain_text
+id: node.podcast.field_buzzsprout
+field_name: field_buzzsprout
+entity_type: node
+bundle: podcast
+label: 'Buzzsprout Embed'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

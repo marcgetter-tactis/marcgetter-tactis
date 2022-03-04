@@ -48,3 +48,5 @@ validate:
       - glb_classes
     filters:
       - children
+      - file_url
+      - format_size

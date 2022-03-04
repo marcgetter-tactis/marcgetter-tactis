@@ -1,0 +1,45 @@
+uuid: c2e0feeb-eada-45f4-82af-e0682ce279c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.link.field_cta
+    - field.field.paragraph.link.field_cta_icon
+    - field.field.paragraph.link.field_cta_style
+    - paragraphs.paragraphs_type.link
+  module:
+    - link
+    - options
+id: paragraph.link.default
+targetEntityType: paragraph
+bundle: link
+mode: default
+content:
+  field_cta:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_cta_icon:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_cta_style:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  search_api_excerpt: true

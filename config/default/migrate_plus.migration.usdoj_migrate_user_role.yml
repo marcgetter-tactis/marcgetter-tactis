@@ -1,0 +1,56 @@
+uuid: 9b9e1382-7fc9-496e-9531-ff439ee832bd
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: DrHvtW0MKKEcBrMhGQxhZmHrUMAvTOzC4fw8RnyFW_Y
+id: usdoj_migrate_user_role
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Configuration
+  - doj
+migration_group: user
+label: 'User roles'
+source:
+  plugin: d7_user_role
+process:
+  id:
+    -
+      plugin: machine_name
+      source: name
+    -
+      plugin: user_update_8002
+  label: name
+  permissions:
+    -
+      plugin: static_map
+      source: permissions
+      bypass: true
+      map:
+        'use PHP for block visibility': 'use PHP for settings'
+        'administer site-wide contact form': 'administer contact forms'
+        'post comments without approval': 'skip comment approval'
+        'edit own blog entries': 'edit own blog content'
+        'edit any blog entry': 'edit any blog content'
+        'delete own blog entries': 'delete own blog content'
+        'delete any blog entry': 'delete any blog content'
+        'create forum topics': 'create forum content'
+        'delete any forum topic': 'delete any forum content'
+        'delete own forum topics': 'delete own forum content'
+        'edit any forum topic': 'edit any forum content'
+        'edit own forum topics': 'edit own forum content'
+    -
+      plugin: flatten
+  weight: weight
+  skip_missing_permission_deprecation:
+    -
+      plugin: default_value
+      default_value: true
+destination:
+  plugin: 'entity:user_role'
+migration_dependencies:
+  required: {  }
+  optional: {  }

@@ -1,45 +1,73 @@
 @mixin center-ver($offset:50) {
-    position: absolute;
-    top: $offset * 1%;
-    transform: translateY(-$offset * 1%);
+  position: absolute;
+  top: $offset * 1%;
+  transform: translateY(-$offset * 1%);
 }
+
 
 @mixin center-hor($offset:50) {
-    position: absolute;
-    left: $offset * 1%;
-    transform: translateX(-$offset * 1%);
+  position: absolute;
+  left: $offset * 1%;
+  transform: translateX(-$offset * 1%);
 }
 
+
 @mixin center-both($offsetX:50, $offsetY:50) {
-    position: absolute;
-    left: $offsetX * 1%;
-    top: $offsetY * 1%;
-    transform: translate((-$offsetX * 1%),(-$offsetY * 1%));
+  position: absolute;
+  left: $offsetX * 1%;
+  top: $offsetY * 1%;
+  transform: translate((-$offsetX * 1%), (-$offsetY * 1%));
 }
 
 @mixin search-field {
-    .usa-input {
-        border: 1px solid white;
-        border-top-left-radius: .25rem;
-        border-bottom-left-radius: .25rem;
+  .usa-input {
+    border: 1px solid white;
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+  }
+
+  button.usa-button {
+    background-color: color(warning);
+    min-width: 2rem;
+    padding: 0 0.75rem;
+
+    &:hover {
+      background-color: color(warning-dark);
     }
-    
-    button.usa-button {
-        background-color: color(warning);
-        min-width: 2rem;
-        padding: 0 0.75rem;
-        
-        &:hover {
-            background-color: color(warning-dark);
-        }
-        
-        img.usa-search__submit-icon {
-            width: auto;
-            height: auto;
-        }
+
+    img.usa-search__submit-icon {
+      width: auto;
+      height: auto;
     }
+  }
 }
 
 @mixin transition($duration) {
-    transition-duration: $duration;
+  transition-duration: $duration;
+}
+
+@mixin img-responsive {
+    width: 100%;
+    height: auto;
+
+    :where(img) {
+      width: 100%;
+      height: auto;
+    }
+}
+
+@mixin gold-lines($margin-top-bottom, $margin-left-right, $border-bottom: true) {
+  @if $border-bottom {
+    &:after { border-bottom: 2px solid color(warning); }
+  } @else {
+    &:after { border-bottom: none; }
+  }
+  &:after {
+    content: "";
+    width: 3.25rem;
+    display: block;
+    border-top: 2px solid color(warning);
+    height: 0.5rem;
+    margin: $margin-top-bottom $margin-left-right;
+  }
 }

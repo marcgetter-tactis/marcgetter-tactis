@@ -11,8 +11,8 @@ field_name: field_component
 entity_type: node
 bundle: resource
 label: Component(s)
-description: ''
-required: true
+description: 'Select any component categories that this resource should be associated with.'
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''

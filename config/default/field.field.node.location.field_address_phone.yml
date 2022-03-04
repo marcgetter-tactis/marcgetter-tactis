@@ -1,35 +1,21 @@
-uuid: d6988464-7a38-4506-b57e-4d5bfda1d5b0
+uuid: 70fcdb8c-77cb-4ac3-a64b-71bb95b471cf
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_location
+    - field.storage.node.field_address_phone
     - node.type.location
   module:
-    - address
-id: node.location.field_location
-field_name: field_location
+    - address_phonenumber
+id: node.location.field_address_phone
+field_name: field_address_phone
 entity_type: node
 bundle: location
-label: Address
+label: 'Address And Phone'
 description: ''
 required: false
-translatable: true
-default_value:
-  -
-    langcode: null
-    country_code: US
-    administrative_area: ''
-    locality: ''
-    dependent_locality: null
-    postal_code: ''
-    sorting_code: null
-    address_line1: ''
-    address_line2: ''
-    organization: ''
-    given_name: ''
-    additional_name: null
-    family_name: ''
+translatable: false
+default_value: {  }
 default_value_callback: ''
 settings:
   available_countries: {  }
@@ -58,4 +44,4 @@ settings:
     administrativeArea:
       override: optional
   fields: {  }
-field_type: address
+field_type: address_phone_number_item

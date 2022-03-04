@@ -1,0 +1,19 @@
+uuid: a145b550-6c9d-4101-b5d6-6ec854a2b872
+langcode: en
+status: true
+dependencies:
+  module:
+    - address_phonenumber
+    - node
+id: node.field_address_phone
+field_name: field_address_phone
+entity_type: node
+type: address_phone_number_item
+settings: {  }
+module: address_phonenumber
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

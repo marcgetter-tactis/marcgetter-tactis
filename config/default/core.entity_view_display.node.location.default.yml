@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.location.field_address_phone
     - field.field.node.location.field_body
     - field.field.node.location.field_district
     - field.field.node.location.field_email
@@ -11,7 +12,6 @@ dependencies:
     - field.field.node.location.field_language
     - field.field.node.location.field_latlong
     - field.field.node.location.field_link
-    - field.field.node.location.field_location
     - field.field.node.location.field_other_groups
     - field.field.node.location.field_start_date
     - field.field.node.location.field_text
@@ -19,7 +19,7 @@ dependencies:
     - field.field.node.location.field_your_groups
     - node.type.location
   module:
-    - address
+    - address_phonenumber
     - datetime
     - geocoder_geofield
     - link
@@ -30,6 +30,13 @@ targetEntityType: node
 bundle: location
 mode: default
 content:
+  field_address_phone:
+    type: address_phone_number_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 13
+    region: content
   field_body:
     type: text_default
     label: hidden
@@ -92,13 +99,6 @@ content:
       target: ''
     third_party_settings: {  }
     weight: 7
-    region: content
-  field_location:
-    type: address_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 1
     region: content
   field_other_groups:
     type: entity_reference_label

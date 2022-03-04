@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9c01b4614b58a12a638a0fbe439eb438",
+    "content-hash": "3c0424b4d41a485abbb195182d070783",
     "packages": [
         {
             "name": "acquia/acquia_cms",
@@ -9569,7 +9569,7 @@
             "extra": {
                 "drupal": {
                     "version": "8.x-1.1",
-                    "datestamp": "1625840228",
+                    "datestamp": "1625840906",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"

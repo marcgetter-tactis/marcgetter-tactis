@@ -1,3 +1,3 @@
 #!/bin/bash
 blt "$@"
-[ "$@" == "drupal:sync:default:db" ] && drush uli
+if [[ "$@" == "drupal:sync:default:db" ]]; then drush uli; fi

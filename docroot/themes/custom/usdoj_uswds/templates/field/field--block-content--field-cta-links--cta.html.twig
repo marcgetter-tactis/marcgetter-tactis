@@ -34,6 +34,8 @@
    * - label_display: The display settings for the label.
    *
    * @see template_preprocess_field()
+   *
+   * explanation: removed extra classes from cta block paragraph links
    */
   #}
   {%
@@ -41,13 +43,19 @@
     label_display == 'visually_hidden' ? 'usa-sr-only',
   ]
   %}
+
   
   {% if label_hidden %}
-    {% for item in items %}
-      <div{{ attributes.addClass(field_name) }}>
-       <a href="{{ item.content['#url']|render }}" {% if item.content['#options']['external'] %} target="_blank" {% endif %} class="{{ drupal_entity('paragraph', 'field_cta_style', 0) }}">{{ item.content['#title'] }}</a>
-       
+    {% if multiple %}
+      {% for item in items %}
+        {{ item.content }} 
+      {% endfor %} 
+    {% else %}
+      {% for item in items %}
+      <div>
+        <div{{ attributes.addClass(field_name) }}>{{ item.content }}</div>
       </div>
-    {% endfor %}
+      {% endfor %}
+    {% endif %}
   {% endif %}
   

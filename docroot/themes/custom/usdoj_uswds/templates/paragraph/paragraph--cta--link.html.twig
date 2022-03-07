@@ -36,6 +36,8 @@
  * @see template_preprocess_paragraph()
  *
  * @ingroup themeable
+ *
+ * explanation: link buttons in cta block
  */
 #}
 {%
@@ -52,7 +54,7 @@
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
 
-      <a href="{{ content.field_cta['#items'].uri }}" class="{{ content.field_cta_style['#items'].getString() }} {{ content.field_cta_icon['#items'].getString() }}">
+      <a href="{{ content.field_cta['0']['#url'] }}" class="{{ content.field_cta_style['#items'].getString() }} {{ content.field_cta_icon['#items'].getString() }}">
         {{ content.field_cta['#items'].title }}
       </a> 
      

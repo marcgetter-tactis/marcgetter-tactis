@@ -9,7 +9,6 @@ dependencies:
     - field.field.node.press_release.field_component
     - field.field.node.press_release.field_contact
     - field.field.node.press_release.field_date
-    - field.field.node.press_release.field_feature_image
     - field.field.node.press_release.field_file_private_force
     - field.field.node.press_release.field_image
     - field.field.node.press_release.field_invisible
@@ -47,15 +46,6 @@ content:
       format_type: standard_date_format
     third_party_settings: {  }
     weight: 1
-    region: content
-  field_feature_image:
-    type: entity_reference_entity_view
-    label: hidden
-    settings:
-      view_mode: large_landscape
-      link: false
-    third_party_settings: {  }
-    weight: 0
     region: content
 hidden:
   entitygroupfield: true

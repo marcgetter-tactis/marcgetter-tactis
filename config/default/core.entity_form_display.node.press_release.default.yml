@@ -8,7 +8,6 @@ dependencies:
     - field.field.node.press_release.field_component
     - field.field.node.press_release.field_contact
     - field.field.node.press_release.field_date
-    - field.field.node.press_release.field_feature_image
     - field.field.node.press_release.field_file_private_force
     - field.field.node.press_release.field_image
     - field.field.node.press_release.field_invisible
@@ -92,13 +91,6 @@ content:
     weight: 4
     region: content
     settings: {  }
-    third_party_settings: {  }
-  field_feature_image:
-    type: media_library_widget
-    weight: 5
-    region: content
-    settings:
-      media_types: {  }
     third_party_settings: {  }
   field_image:
     type: media_library_widget

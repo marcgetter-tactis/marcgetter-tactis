@@ -815,10 +815,20 @@ blockquote {
 }
 
 .yellow-background {
-  background-color: #f6f6f2;
-  border-left: 4px solid #ffbe2e;
+  background-color: $taupe-bg;
+  border-left: 4px solid $theme-color-accent-warm;
   padding: 1rem;
   margin-top: 2rem;
+
+  p {
+    &:first-of-type {
+      margin-top: .25rem;
+    }
+
+    &:last-of-type {
+      margin-bottom: .25rem;
+    }
+  }
 }
 
 .block-field-blocknodepagetitle {
@@ -855,7 +865,6 @@ blockquote {
 //*****************************
 //* Layout builder styles START
 //*****************************
-
 
 .layout--twocol-section {
   .layout__region--first {
@@ -924,7 +933,6 @@ blockquote {
             }
           }
         }
-
       }
 
       @include at-media(tablet) {
@@ -952,6 +960,16 @@ blockquote {
           }
         }
       }
+    }
+  }
+
+  @include at-media(tablet) {
+    .layout__region--first {
+      padding-right: 1rem;
+    }
+    
+    .layout__region--second {
+      padding-left: 1rem;
     }
   }
 }

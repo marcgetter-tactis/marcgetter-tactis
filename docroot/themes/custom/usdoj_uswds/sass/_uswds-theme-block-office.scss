@@ -8,6 +8,7 @@
     margin-bottom: 3rem;
   }
   .field__items {
+    &[hidden] { display: none;}
     @include grid-row;
     @include grid-gap(6);
     .field__item {

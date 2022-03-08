@@ -96,7 +96,7 @@ ul {
     li {
       display: inline-block;
       list-style: none;
-      margin-right: 1.5rem;
+      margin-right: 1rem;
     }
 
     img {
@@ -112,7 +112,7 @@ ul {
     margin: 0;
 
     li {
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
       line-height: 1;
 
       @include at-media(desktop) {
@@ -177,6 +177,18 @@ blockquote {
 
 .accent-warm {
   color: $theme-color-accent-warm;
+}
+
+.icon-link {
+  &:hover {
+    svg {
+      fill: $theme-color-accent-warm;
+    }
+  }
+  svg {
+    vertical-align: middle;
+    margin-right: .25rem;
+  }
 }
 
 .usa-section {
@@ -971,7 +983,7 @@ blockquote {
     .layout__region--first {
       padding-right: 1rem;
     }
-    
+
     .layout__region--second {
       padding-left: 1rem;
     }

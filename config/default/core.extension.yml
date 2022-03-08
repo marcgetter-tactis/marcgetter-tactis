@@ -97,8 +97,6 @@ module:
   google_tag: 0
   group: 0
   group_content_menu: 0
-  group_taxonomy: 0
-  group_term: 0
   groupmedia: 0
   hal: 0
   history: 0

@@ -1,0 +1,25 @@
+uuid: 0a695813-539b-4ef8-b78b-6959ad9d3cc2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_answer
+    - paragraphs.paragraphs_type.question
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+id: paragraph.question.field_answer
+field_name: field_answer
+entity_type: paragraph
+bundle: question
+label: Answer
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,11 @@
+uuid: aba1dd99-dbb2-47fe-a7c6-959a8ecf5ffa
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.civil_division
+id: taxonomy_term.civil_division
+target_entity_type_id: taxonomy_term
+target_bundle: civil_division
+default_langcode: site_default
+language_alterable: false

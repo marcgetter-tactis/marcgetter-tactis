@@ -87,7 +87,7 @@
 {% set images = content.field_image %}
 {% set transcript = content.field_transcript %}
 {% set audio = content.field_audio %}
-{% set buzzprout = node.field_buzzprout.value|raw %}
+{% set buzzsprout = node.field_buzzsprout.value|raw %}
 {% set attachment = content.field_attachment %}
 {% set attachmentNode = node.field_attachment %}
 {% set credit = content.field_attribution %}
@@ -175,10 +175,10 @@
                 </div>
             {% endif %}
 
-            {% if buzzprout|render|trim is not empty %}
-                <div class="node-buzzprout margin-bottom-7">
+            {% if buzzsprout|render|trim is not empty %}
+                <div class="node-buzzsprout margin-bottom-7">
                     {% autoescape false %}
-                        {{ buzzprout }}
+                        {{ buzzsprout }}
                     {% endautoescape %}
                 </div>
             {% endif %}

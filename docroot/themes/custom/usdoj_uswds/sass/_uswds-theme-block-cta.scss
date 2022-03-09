@@ -76,4 +76,20 @@
       }
     }
   }
+
+  &.bg-primary-darker {
+    .field_heading, .body {
+      color: white;
+    }
+    
+    .paragraph--type--link {
+      a.usa-button {
+        color: color(primary-darker);
+        background-color: color(warning);
+        &:hover {
+          background-color: white;
+        }
+      }
+    } 
+  }
 }

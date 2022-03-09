@@ -86,6 +86,20 @@
     }
   };
 
+  Drupal.behaviors.imageGalleryInit = {
+    attach: function (context, settings) {
+
+      once('imageGalleryInit', 'html', context ).forEach( function (element) {
+        var $gallery = $('.image-gallery-node .slick');
+
+        var totalImages = $gallery.attr('data-slick-count');        
+        var $slide = $gallery.find('.slide__media');
+
+        $slide.append("<div class='total-images'><span>"+totalImages+"</span><img src='/themes/custom/usdoj_uswds/assets/img/usa-icons/image.svg' alt='image icon' width='30' height='30' /></div>");
+      });
+    }
+  };
+
   //* Show more action center icons when the button is clicked.
   Drupal.behaviors.loadMoreItemsInit = {
     attach: function (context, settings) {

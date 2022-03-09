@@ -613,6 +613,11 @@ details {
         }
       }
     }
+    
+    .slide__caption {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 }
 
@@ -625,6 +630,9 @@ details {
 }
 
 #colorbox {
+  color: white;
+  font-size: 15px;
+
   #cboxContent {
     pointer-events: none;
   }
@@ -635,6 +643,7 @@ details {
     width: 50px;
     height: 50px;
     background-color: transparent;
+    background: none;
     border-radius: 50%;
     border: 3px solid black;
     color: transparent;
@@ -680,6 +689,54 @@ details {
     background-size: 22px;
     background-repeat: no-repeat;
     background-position: center;
+    pointer-events: all;
+    cursor: pointer;
+  }
+
+  #cboxSlideshow {
+    display: none !important;
+  }
+
+  #cboxCurrent {
+    position: absolute;
+    bottom: -2.5rem;
+    font-weight: 600;
+    font-size: $theme-h5-font-size;
+
+    &::after {
+      content: url('/themes/custom/usdoj_uswds/assets/img/usa-icons/image.svg');
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: .25rem;
+      filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(182deg) brightness(113%) contrast(101%);
+
+    }
+  }
+
+  #cboxTitle {
+    top: 3rem;
+    position: relative;
+    font-size: $theme-h5-font-size;
+    width: 100%;
+    line-height: 1.6;
+
+    p {
+      margin-top: 0;
+    }
+
+    .photo-caption {
+      border-top: 1px solid white;
+      padding-top: 1rem;
+      display: block;
+
+      &:empty {
+        display: none !important;
+      }
+    }
+
+    .photo-credit {
+      font-style: italic;
+    }
   }
 }
 

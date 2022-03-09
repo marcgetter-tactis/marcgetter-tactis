@@ -2,7 +2,7 @@ _core:
   default_config_hash: z9fpiPdcb_DibvWKiwbxYAfwJU76aExbMN6tWzeP6-Q
 ignored_config_entities:
   - 'language.entity.*'
-  - 'taxonomy.vocabulary.civil_division'
+  - taxonomy.vocabulary.civil_division
   - 'media.type.image:uuid'
   - 'crop.type.focal_point:uuid'
   - purge.plugins

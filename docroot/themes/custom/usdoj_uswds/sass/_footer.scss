@@ -61,10 +61,14 @@
 
   .footer-social-block {
     a {
-      fill: $theme-color-accent-warm;
+      svg {
+        fill: $theme-color-accent-warm;
+      }
     
       &:hover {
-        fill: white;
+        svg {
+          fill: white;
+        }
       }
     }
     
@@ -116,9 +120,6 @@
     }
   }
 
-  p {
-    margin-top: 0;
-  }
 
   .blocks-wrapper {
     >div {

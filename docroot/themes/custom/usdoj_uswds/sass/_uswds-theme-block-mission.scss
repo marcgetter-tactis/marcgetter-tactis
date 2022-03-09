@@ -63,6 +63,7 @@ Mission Block
         display: grid;
         grid-template-columns: 1rem auto;
         padding-bottom: 1rem; 
+        font-weight: 600;
         
         &:before {
           content: "";

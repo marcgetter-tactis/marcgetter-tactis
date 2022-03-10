@@ -245,6 +245,9 @@
             },
             "drupal/gin_lb": {
                 "Fix issue with adding images in layout builder blocks": "patches/gin_lb_fix_media_add.patch"
+            },
+            "drupal/migrate_tools": {
+                "Add migrate:status extra option": "patches/add-migrate-status-extra-option.patch"
             }
         },
         "violinist": {

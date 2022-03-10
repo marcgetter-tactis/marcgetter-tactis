@@ -169,11 +169,14 @@
     $('#' + i + '-body').fadeIn('slow');
   })
 
-  //Placeholder text
-  $('input#edit-search-api-fulltext').val('Enter keywords here');
-  $('input#edit-search-api-fulltext').click( function() {
+  //Placeholder text news keyword search
+  $('input#edit-search-api-fulltext').val('Enter keywords here').click( function() {
     $(this).val('');
-  })
+  });
+
+  //Placeholder text start date
+  $('input#edit-start-date, input#edit-end-date').attr('placeholder','mm/dd/yyyy');
+
   //news keyword search submit form
   $('a.keyword-form').click(function() {
     $('#views-exposed-form-news-page-1').submit();

@@ -702,7 +702,7 @@ details {
 
   }
 
-  @include at-media(tablet) {
+  @include at-media(tablet-lg) {
     .colorbox-title {
       max-width: unset;
       top: -3.5rem;

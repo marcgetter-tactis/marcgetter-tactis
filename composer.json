@@ -244,7 +244,10 @@
                 "Integrity constraint violation: 1048 Column 'langcode' cannot be null": "https://www.drupal.org/files/issues/2021-03-01/2901390-76-integrity-constraint-violation-paragraph.patch"
             },
             "drupal/gin_lb": {
-            "Fix issue with adding images in layout builder blocks": "patches/gin_lb_fix_media_add.patch"
+                "Fix issue with adding images in layout builder blocks": "patches/gin_lb_fix_media_add.patch"
+            },
+            "drupal/migrate_tools": {
+                "Add migrate:status extra option": "patches/add-migrate-status-extra-option.patch"
             }
         },
         "violinist": {
@@ -293,7 +296,8 @@
         ],
         "post-drupal-scaffold-cmd": [
             "cd docroot && patch -p1 <../patches/htaccess-https.patch",
-            "cd docroot && patch -p1 <../patches/htaccess-saml.patch"
+            "cd docroot && patch -p1 <../patches/htaccess-saml.patch",
+            "cd vendor/commerceguys/addressing/resources/subdivision && patch -p0 <../../../../../patches/multiple-locations.patch"
         ]
     },
     "require-dev": {

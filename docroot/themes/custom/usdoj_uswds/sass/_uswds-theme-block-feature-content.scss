@@ -14,7 +14,7 @@ USWDS THEME CUSTOM STYLES
    in node_modules.
 ----------------------------------------
 Featured Content Block 
-  -find-help page
+  -find-help, priorities page
 ----------------------------------------
 */
 .block-featured_content {
@@ -57,6 +57,13 @@ Featured Content Block
     }
     img {
       @extend .img-responsive;
+    }
+  }
+
+  //featured navy background
+  &.bg-primary-darker {
+    .field_heading, .field_body {
+      color: white;
     }
   }
 }

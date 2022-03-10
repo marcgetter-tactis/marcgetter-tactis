@@ -1232,7 +1232,7 @@ display:
           exposed: true
           expose:
             operator_id: langcode_op
-            label: Language
+            label: 'Filter by Language'
             description: ''
             use_operator: false
             operator: langcode_op
@@ -1244,15 +1244,16 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
               user_administrator: '0'
+              arhchiver: '0'
+              administrator: '0'
+              anonymous: '0'
               global_administrator: '0'
               site_architect: '0'
               cache_purger: '0'
               translator: '0'
-              arhchiver: '0'
+              archiver: '0'
               special_content_creator: '0'
-              administrator: '0'
             min_placeholder: ''
             max_placeholder: ''
             placeholder: ''

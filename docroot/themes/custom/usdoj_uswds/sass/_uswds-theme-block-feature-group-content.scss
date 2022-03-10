@@ -36,7 +36,7 @@ Featured Grouped Content Block
     display: grid;
     grid-template-columns: 1fr;
     @include at-media(desktop) {
-      grid-template-columns: 1fr 2fr;
+      grid-template-columns: auto auto;
       grid-template-rows: auto;
       padding: $article-padding;
     }
@@ -44,7 +44,7 @@ Featured Grouped Content Block
     @extend .block-body-background;
     
     .field_image {
-      grid-row: 1;
+      grid-column: 1;
       padding: 1.2rem;
       @include at-media(desktop) {
         grid-row: 1 / 4;
@@ -68,27 +68,32 @@ Featured Grouped Content Block
       font-size: $theme-h4-font-size;
       font-weight: bold;
       color: $doj-coolblue;
+      grid-row: 1;
     }
 
     .field_body {
       font-size: $theme-h6-font-size;
       @include at-media(desktop) {
         font-size: $theme-h5-font-size;
+        grid-row: 2;
       }
     }
 
-    a.usa-button {
-      background-color: color('primary-darker');
-      &:hover {
-        background-color: $blue-60v;
+    .field_cta {
+      grid-row: 3;
+      a.usa-button {
+        background-color: color('primary-darker');
+        &:hover {
+          background-color: $blue-60v;
+        }
+        &:active {
+          background-color: $doj-coolblue;
+        }
+        &:focus {
+          outline: none;
+        }
       }
-      &:active {
-        background-color: $doj-coolblue;
-      }
-      &:focus {
-        outline: none;
-      }
-    }
+    } 
   }
 
   &.bg-primary-darker {

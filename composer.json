@@ -296,7 +296,8 @@
         ],
         "post-drupal-scaffold-cmd": [
             "cd docroot && patch -p1 <../patches/htaccess-https.patch",
-            "cd docroot && patch -p1 <../patches/htaccess-saml.patch"
+            "cd docroot && patch -p1 <../patches/htaccess-saml.patch",
+            "cd vendor/commerceguys/addressing/resources/subdivision && patch -p0 <../../../../../patches/multiple-locations.patch"
         ]
     },
     "require-dev": {

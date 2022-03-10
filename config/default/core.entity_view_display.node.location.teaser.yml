@@ -13,7 +13,6 @@ dependencies:
     - field.field.node.location.field_language
     - field.field.node.location.field_latlong
     - field.field.node.location.field_link
-    - field.field.node.location.field_location_language
     - field.field.node.location.field_other_groups
     - field.field.node.location.field_start_date
     - field.field.node.location.field_text

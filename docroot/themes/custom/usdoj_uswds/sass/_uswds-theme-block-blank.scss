@@ -18,66 +18,71 @@ Blank Block
 */
 
 .block-blank {
-    padding: 3rem 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 6rem auto 5rem;
-    @media (max-width: 47.99em) {
-      grid-template-columns: 1fr;
-      grid-template-rows: auto auto auto 5rem;
-    }
+  padding: 3rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 6rem auto 5rem;
+  @media (max-width: 47.99em) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto 5rem;
+  }
 
-    h2.block-title {
-      display: none;
-    }
-    
-    .field_media {
-      grid-column: 2;
-      grid-row: 1 / 4;
-      align-self: center;
-      @media (max-width: 47.99rem) {
-        grid-column: 1;
-        grid-row: 2;
-      }
-      .image {
-        float: right;
-        @media (max-width: 47.99em) {
-          float: none;
-        }
-        img {
-          object-fit: contain;
-        }
-      }
-    }
+  h2.block-title {
+    display: none;
+  }
   
-    .field_header {
-      color: white;
-      font-family: 'Source Serif Pro';
-      font-weight: bold;
-      font-size: 2rem;
-      //float: left;
-      @include gold-lines(1.75rem, 0)
+  .field_media {
+    grid-column: 2;
+    grid-row: 1 / 4;
+    align-self: center;
+    @media (max-width: 47.99rem) {
+      grid-column: 1;
+      grid-row: 2;
     }
-    
-    .field_body {
-      color: white;
-      line-height: 1.5;
-    }
-  
-    .field_cta {
-      margin-top: 2rem;
-      margin-bottom: 2rem;
-      a {
-        background-color: color(warning);
-        color: color(primary-darker);
-        padding: 0.5rem 1.25rem;
-        border-radius: 2px;
-        text-decoration: none;
-        font-weight: bold;
-        &:hover {
-          color: color(primary-darker);
-          background: white;
-        }
+    .image {
+      float: right;
+      @media (max-width: 47.99em) {
+        float: none;
+      }
+      img {
+        object-fit: contain;
       }
     }
   }
+
+  .field_header {
+    font-family: 'Source Serif Pro';
+    font-weight: bold;
+    font-size: 2rem;
+    //float: left;
+    @include gold-lines(1.75rem, 0)
+  }
+  
+  .field_body {
+    line-height: 1.5;
+  }
+
+  .field_cta {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    a {
+      background-color: color(warning);
+      color: color(primary-darker);
+      padding: 0.5rem 1.25rem;
+      border-radius: 2px;
+      text-decoration: none;
+      font-weight: bold;
+      &:hover {
+        color: color(primary-darker);
+        background: white;
+      }
+    }
+  }
+
+  //blank block navy background
+  &.bg-primary-darker {
+    .field_header, .field_body {
+      color: white;
+    }
+  }
+}

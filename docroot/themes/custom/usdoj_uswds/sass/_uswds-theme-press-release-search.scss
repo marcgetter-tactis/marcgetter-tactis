@@ -31,12 +31,12 @@ Press Release Search
       border-width: 0;
     }  
 
-    input, .chosen-container-multi {
+    input:not(.form-submit), .chosen-container-multi {
       border: 1px solid $gray-warm-20;
       border-radius: 3px;
       max-width: 100%;
       height: inherit;
-      color: $gray-20;
+      color: $gray-60;
       font-size: $theme-h6-font-size;
       li.search-choice {
         background: $doj-coolblue;
@@ -59,6 +59,14 @@ Press Release Search
       }
     }
 
+    //dates 
+    input#edit-start-date, input#edit-end-date {
+      color: color(primary-darker);
+      &::placeholder {
+        color: $gray-60;
+      }
+    }
+
     //keyword search
     .form-item-search-api-fulltext {
       background: $blue-cool-5;
@@ -77,6 +85,8 @@ Press Release Search
         color: white;
         text-decoration: none;
         font-size: .9rem;
+        top: 1px;
+        border-radius: 0 3px 3px 0;
       }
     }
 

@@ -1,0 +1,21 @@
+diff --git a/src/Commands/MigrateToolsCommands.php b/src/Commands/MigrateToolsCommands.php
+index 9a15372..b49d940 100644
+--- a/src/Commands/MigrateToolsCommands.php
++++ b/src/Commands/MigrateToolsCommands.php
+@@ -190,6 +190,8 @@ class MigrateToolsCommands extends DrushCommands {
+    * @option names-only Only return names, not all the details (faster)
+    * @option continue-on-failure When a migration fails, continue processing
+    *   remaining migrations.
++   * @option extra Add custom options to the connect string
++   *   (e.g. --extra=--skip-column-names)
+    *
+    * @default $options []
+    *
+@@ -227,6 +229,7 @@ class MigrateToolsCommands extends DrushCommands {
+     'tag' => self::REQ,
+     'names-only' => FALSE,
+     'continue-on-failure' => FALSE,
++    'extra' => self::REQ,
+   ]) {
+     $names_only = $options['names-only'];
+ 

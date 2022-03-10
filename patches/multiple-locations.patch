@@ -1,0 +1,15 @@
+--- US.json
++++ US.json
+@@ -299,6 +299,11 @@
+ 			"name": "Wyoming",
+ 			"iso_code": "US-WY",
+ 			"postal_code_pattern": "82|83[01]|83414"
++		},
++		"ML": {
++			"name": "Multiple locations",
++			"iso_code": "US-ML",
++			"postal_code_pattern": "00000"
+ 		}
+ 	}
+ }
+\ No newline at end of file

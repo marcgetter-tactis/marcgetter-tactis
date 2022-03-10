@@ -613,10 +613,9 @@ details {
         }
       }
     }
-    
+
     .slide__caption {
-      padding-left: 0;
-      padding-right: 0;
+      padding: 1rem 0;
     }
   }
 }
@@ -632,12 +631,13 @@ details {
 #colorbox {
   color: white;
   font-size: 15px;
-  
+
   .colorbox-title {
     font-size: $theme-h4-font-size;
     font-weight: 700;
     position: absolute;
-    top: -3.5rem;
+    top: -4.5rem;
+    max-width: 90%;
   }
 
   #cboxContent {
@@ -646,23 +646,24 @@ details {
 
   #cboxPrevious,
   #cboxNext {
-    @include center-ver();
-    width: 50px;
-    height: 50px;
+    position: absolute;
+    width: 25px;
+    height: 25px;
     background-color: transparent;
     background: none;
     border-radius: 50%;
-    border: 3px solid black;
+    border: 2px solid black;
     color: transparent;
     cursor: pointer;
     filter: invert(78%) sepia(91%) saturate(727%) hue-rotate(328deg) brightness(97%) contrast(108%);
     outline: inherit;
     pointer-events: all;
+    bottom: -2.25rem;
 
     &::before {
       content: "";
       background-image: url('../assets/img/chevron-right.svg');
-      background-size: 15px;
+      background-size: 7px;
       background-repeat: no-repeat;
       background-position: center;
       height: 100%;
@@ -671,7 +672,7 @@ details {
   }
 
   #cboxPrevious {
-    left: -4rem;
+    right: 2rem;
 
     &::before {
       transform: rotate(180deg);
@@ -679,25 +680,63 @@ details {
   }
 
   #cboxNext {
-    right: -4rem;
+    right: 0;
   }
 
   #cboxClose {
     position: absolute;
-    top: -4rem;
-    right: -4rem;
-    width: 50px;
-    height: 50px;
+    top: -3rem;
+    right: 0;
+    width: 25px;
+    height: 25px;
     background-color: transparent;
-    border: 3px solid white;
+    border: 2px solid white;
     border-radius: 50%;
     color: transparent;
     background-image: url('../assets/img/close-white-alt.svg');
-    background-size: 22px;
+    background-size: 10px;
     background-repeat: no-repeat;
     background-position: center;
     pointer-events: all;
     cursor: pointer;
+
+  }
+
+  @include at-media(tablet) {
+    .colorbox-title {
+      max-width: unset;
+      top: -3.5rem;
+    }
+
+    #cboxPrevious,
+    #cboxNext {
+      @include center-ver();
+      width: 50px;
+      height: 50px;
+      border-width: 3px;
+
+      &::before {
+        background-size: 15px;
+      }
+    }
+
+    #cboxPrevious {
+      left: -4rem;
+      right: 0;
+    }
+
+    #cboxNext {
+      right: -4rem;
+    }
+
+    #cboxClose {
+      width: 50px;
+      height: 50px;
+      background-size: 22px;
+      border-width: 3px;
+      top: -4rem;
+      right: -4rem;
+    }
   }
 
   #cboxSlideshow {

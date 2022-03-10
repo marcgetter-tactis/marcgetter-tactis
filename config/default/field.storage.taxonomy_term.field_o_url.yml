@@ -1,0 +1,23 @@
+uuid: b99e2135-4386-42dd-a8d7-3111f0282d19
+langcode: und
+status: true
+dependencies:
+  module:
+    - taxonomy
+_core:
+  default_config_hash: wSOhpAkV8LR2oInZb4ETfdp1yR4A2IIEaeW_z7RyukI
+id: taxonomy_term.field_o_url
+field_name: field_o_url
+entity_type: taxonomy_term
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: true
+custom_storage: false

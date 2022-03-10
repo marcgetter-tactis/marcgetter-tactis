@@ -1,19 +1,19 @@
-uuid: bcef0ed5-e1e7-409e-82ba-47a200e9d303
+uuid: 6e90b963-c23e-4390-bc0b-313d5bed4dfd
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.parent_group
+    - block_content.type.faq
+    - field.storage.block_content.field_your_groups
     - group.type.organization
-    - node.type.component_group
-id: node.component_group.parent_group
-field_name: parent_group
-entity_type: node
-bundle: component_group
-label: 'Parent Group'
-description: 'If this is a sub-organization, add the parent organization here.'
-required: false
-translatable: false
+id: block_content.faq.field_your_groups
+field_name: field_your_groups
+entity_type: block_content
+bundle: faq
+label: 'Your Groups'
+description: 'Associate this content with groups you belong to.'
+required: true
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

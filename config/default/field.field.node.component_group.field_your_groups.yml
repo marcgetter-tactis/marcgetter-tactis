@@ -11,7 +11,7 @@ field_name: field_your_groups
 entity_type: node
 bundle: component_group
 label: 'Your Groups'
-description: 'Associate this content with groups you belong to.'
+description: 'Associate this content with groups you belong to. If this is a sub-organization, add the parent organization here.'
 required: true
 translatable: false
 default_value: {  }

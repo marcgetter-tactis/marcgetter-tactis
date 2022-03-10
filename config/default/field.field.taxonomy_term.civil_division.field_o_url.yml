@@ -1,0 +1,19 @@
+uuid: ef3a0fa6-29a7-4552-8d79-1267f131a4ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_o_url
+    - taxonomy.vocabulary.civil_division
+id: taxonomy_term.civil_division.field_o_url
+field_name: field_o_url
+entity_type: taxonomy_term
+bundle: civil_division
+label: URL
+description: 'Add a link to this organigram item.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

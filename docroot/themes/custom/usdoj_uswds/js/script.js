@@ -39,6 +39,25 @@
           });
         }
 
+        if ($(".most-wanted-view")[0]){
+          $('.item-list ul').slick({
+            infinite: true,
+            dots: true,
+            arrows: false,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            responsive: [
+              {
+                breakpoint: 1024,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                }
+              }
+            ]
+          });
+        }
+
         //tab block mobile slick slider
         if ($('.paragraph--type--tab .field__items')[0]){
           $('.paragraph--type--tab .field__items').slick({
@@ -126,7 +145,7 @@
           var $menu = $heading.siblings(".menu");
           var $blocks = $heading.parent("nav").siblings(".block");
           var $section = $heading.closest(".layout")
-          
+
           $section.children(".layout__region").last().append($blocks);
 
           $heading.click(function() {
@@ -150,11 +169,14 @@
     $('#' + i + '-body').fadeIn('slow');
   })
 
-  //Placeholder text
-  $('input#edit-search-api-fulltext').val('Enter keywords here');
-  $('input#edit-search-api-fulltext').click( function() {
+  //Placeholder text news keyword search
+  $('input#edit-search-api-fulltext').val('Enter keywords here').click( function() {
     $(this).val('');
-  })
+  });
+
+  //Placeholder text start date
+  $('input#edit-start-date, input#edit-end-date').attr('placeholder','mm/dd/yyyy');
+
   //news keyword search submit form
   $('a.keyword-form').click(function() {
     $('#views-exposed-form-news-page-1').submit();

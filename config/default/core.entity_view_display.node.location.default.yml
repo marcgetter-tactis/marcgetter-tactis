@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.location.field_language
     - field.field.node.location.field_latlong
     - field.field.node.location.field_link
+    - field.field.node.location.field_location_language
     - field.field.node.location.field_other_groups
     - field.field.node.location.field_start_date
     - field.field.node.location.field_text
@@ -32,10 +33,10 @@ mode: default
 content:
   field_address_phone:
     type: address_phone_number_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 13
+    weight: 1
     region: content
   field_body:
     type: text_default
@@ -100,13 +101,21 @@ content:
     third_party_settings: {  }
     weight: 7
     region: content
+  field_location_language:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 14
+    region: content
   field_other_groups:
     type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    weight: 11
+    weight: 12
     region: content
   field_start_date:
     type: datetime_default
@@ -125,13 +134,21 @@ content:
     third_party_settings: {  }
     weight: 5
     region: content
+  field_uid:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 11
+    region: content
   field_your_groups:
     type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    weight: 12
+    weight: 13
     region: content
   links:
     settings: {  }
@@ -141,6 +158,5 @@ content:
 hidden:
   entitygroupfield: true
   field_invisible: true
-  field_uid: true
   langcode: true
   search_api_excerpt: true

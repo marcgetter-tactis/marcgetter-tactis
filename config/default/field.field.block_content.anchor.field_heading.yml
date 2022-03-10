@@ -10,7 +10,7 @@ field_name: field_heading
 entity_type: block_content
 bundle: anchor
 label: Heading
-description: ''
+description: 'If needed, enter title of block here.  The "Title" field is for administrative purposes only.'
 required: false
 translatable: true
 default_value: {  }

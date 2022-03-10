@@ -242,7 +242,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '<img src="{{ field_most_wanted_images__uri }}" width="150" height="150">'
+            text: '<img src="{{ field_most_wanted_images__uri }}" width="300" height="300">'
             make_link: false
             path: ''
             absolute: false
@@ -280,7 +280,7 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: uri
-          type: link
+          type: link_separate
           settings:
             trim_length: 80
             url_only: true
@@ -463,23 +463,9 @@ display:
           output_url_as_text: false
           absolute: false
       pager:
-        type: mini
+        type: none
         options:
           offset: 0
-          items_per_page: 21
-          total_pages: null
-          id: 0
-          tags:
-            next: ››
-            previous: ‹‹
-          expose:
-            items_per_page: false
-            items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
-            offset: false
-            offset_label: Offset
       exposed_form:
         type: basic
         options:
@@ -595,16 +581,14 @@ display:
           limit: true
           error_message: true
       style:
-        type: grid
+        type: html_list
         options:
           grouping: {  }
-          columns: 3
-          automatic_width: true
-          alignment: horizontal
-          row_class_custom: ''
-          row_class_default: true
-          col_class_custom: ''
-          col_class_default: true
+          row_class: ''
+          default_row_class: true
+          type: ul
+          wrapper_class: item-list
+          class: ''
       row:
         type: fields
       query:
@@ -616,7 +600,7 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
-      css_class: ''
+      css_class: most-wanted-view
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -626,7 +610,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - url.query_args
         - user
         - 'user.node_grants:view'
         - user.permissions
@@ -642,23 +625,10 @@ display:
     position: 1
     display_options:
       pager:
-        type: mini
+        type: some
         options:
           offset: 0
-          items_per_page: 3
-          total_pages: null
-          id: 0
-          tags:
-            next: ››
-            previous: ‹‹
-          expose:
-            items_per_page: false
-            items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
-            offset: false
-            offset_label: Offset
+          items_per_page: 10
       filters:
         status:
           id: status
@@ -700,7 +670,6 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -898,7 +867,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - url.query_args
         - user
         - 'user.node_grants:view'
         - user.permissions

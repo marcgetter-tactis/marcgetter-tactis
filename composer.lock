@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "46531a91b0e9304287b49e1b5484c2f0",
+    "content-hash": "a3828a2e3d6b825c1cc314c17973bdd8",
     "packages": [
         {
             "name": "acquia/acquia_cms",
@@ -5207,16 +5207,16 @@
                     "homepage": "https://www.drupal.org/user/502018"
                 },
                 {
-                    "name": "arshadcn",
-                    "homepage": "https://www.drupal.org/user/571032"
-                },
-                {
                     "name": "kalman.hosszu",
                     "homepage": "https://www.drupal.org/user/267481"
                 },
                 {
                     "name": "nagy.balint",
                     "homepage": "https://www.drupal.org/user/1763952"
+                },
+                {
+                    "name": "shadcn",
+                    "homepage": "https://www.drupal.org/user/571032"
                 },
                 {
                     "name": "supercabbageuk",
@@ -5284,16 +5284,16 @@
                     "homepage": "https://www.drupal.org/user/502018"
                 },
                 {
-                    "name": "arshadcn",
-                    "homepage": "https://www.drupal.org/user/571032"
-                },
-                {
                     "name": "kalman.hosszu",
                     "homepage": "https://www.drupal.org/user/267481"
                 },
                 {
                     "name": "nagy.balint",
                     "homepage": "https://www.drupal.org/user/1763952"
+                },
+                {
+                    "name": "shadcn",
+                    "homepage": "https://www.drupal.org/user/571032"
                 },
                 {
                     "name": "supercabbageuk",
@@ -9152,30 +9152,27 @@
         },
         {
             "name": "drupal/gin",
-            "version": "3.0.0-alpha37",
+            "version": "dev-3.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/gin.git",
-                "reference": "8.x-3.0-alpha37"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/gin-8.x-3.0-alpha37.zip",
-                "reference": "8.x-3.0-alpha37",
-                "shasum": "56f7226618f7e45697ee799e5e02c57d79cb3b1a"
+                "reference": "6b223015c07714e95e44e383dac23efd61332f92"
             },
             "require": {
-                "drupal/core": "^8.8 || ^9 || ^10",
+                "drupal/core": "^8.9 || ^9 || ^10",
                 "drupal/gin_toolbar": "^1.0@beta"
             },
             "type": "drupal-theme",
             "extra": {
+                "branch-alias": {
+                    "dev-3.x": "3.x-dev"
+                },
                 "drupal": {
-                    "version": "8.x-3.0-alpha37",
-                    "datestamp": "1632767973",
+                    "version": "8.x-3.0-alpha37+71-dev",
+                    "datestamp": "1646644271",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Alpha releases are not covered by Drupal security advisories."
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -12710,6 +12707,56 @@
             "homepage": "https://www.drupal.org/project/optional_end_date",
             "support": {
                 "source": "https://git.drupalcode.org/project/optional_end_date"
+            }
+        },
+        {
+            "name": "drupal/organigrams",
+            "version": "2.0.0-alpha4",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/organigrams.git",
+                "reference": "8.x-2.0-alpha4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/organigrams-8.x-2.0-alpha4.zip",
+                "reference": "8.x-2.0-alpha4",
+                "shasum": "5f64ff62189c71dfe82d2494bd13a23fef005bdc"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.0-alpha4",
+                    "datestamp": "1603901416",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Patrick Scheffer (PatrickScheffer)",
+                    "homepage": "https://www.drupal.org/u/patrickscheffer",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Organigrams provides the ability to easily create and manage organization charts, also knows as organigrams or organograms.",
+            "homepage": "https://drupal.org/project/organigrams",
+            "keywords": [
+                "Drupal",
+                "organigrams"
+            ],
+            "support": {
+                "source": "https://cgit.drupalcode.org/organigrams",
+                "issues": "https://drupal.org/project/issues/organigrams"
             }
         },
         {
@@ -29562,7 +29609,7 @@
         "drupal/feeds_ex": 15,
         "drupal/feeds_tamper": 10,
         "drupal/field_tools": 15,
-        "drupal/gin": 15,
+        "drupal/gin": 20,
         "drupal/gin_lb": 10,
         "drupal/group_taxonomy": 10,
         "drupal/group_term": 15,
@@ -29575,6 +29622,7 @@
         "drupal/media_migration": 15,
         "drupal/og": 15,
         "drupal/openstreetmap": 10,
+        "drupal/organigrams": 15,
         "drupal/pathologic": 15,
         "drupal/term_merge_manager": 10,
         "drupal/uswds_ckeditor_integration": 10,

@@ -96,7 +96,7 @@ ul {
     li {
       display: inline-block;
       list-style: none;
-      margin-right: 1.5rem;
+      margin-right: 1rem;
     }
 
     img {
@@ -112,7 +112,7 @@ ul {
     margin: 0;
 
     li {
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
       line-height: 1;
 
       @include at-media(desktop) {
@@ -171,12 +171,49 @@ blockquote {
   margin-right: 0;
 }
 
+details {
+  border: 1px solid $gray-cool-20;
+  border-radius: 4px;
+  padding: .5em .5em 0;
+
+  &[open] {
+    padding: .5em;
+
+    summary {
+      border-bottom: 1px solid $gray-cool-20;
+      margin-bottom: .5em;
+    }
+  }
+
+  summary {
+    font-weight: bold;
+    margin: -.5em -.5em 0;
+    padding: .5em;
+  }
+}
+
+.img-responsive {
+  @include img-responsive;
+}
+
 #mobile-sidenav {
   margin-bottom: $article-padding;
 }
 
 .accent-warm {
   color: $theme-color-accent-warm;
+}
+
+.icon-link {
+  &:hover {
+    svg {
+      fill: $theme-color-accent-warm;
+    }
+  }
+  svg {
+    vertical-align: middle;
+    margin-right: .25rem;
+  }
 }
 
 .usa-section {
@@ -545,26 +582,45 @@ blockquote {
 //* Node fields END
 //*******************
 
-//***********************************
-//* Layout Builder START -basic page
-//***********************************
 
-.block-layout-builder {
-  &.block-field-blocknodepagetitle {
-    @extend h1;
-    @include gold-lines(1.5rem, 0);
+
+.slick-dots {
+  padding: 0;
+  list-style: none;
+  bottom: 2rem;
+  margin-bottom: 0;
+  text-align: center;
+
+  li {
+    display: inline-block;
+    margin: 0 0.25rem;
+
+    &.slick-active {
+      button {
+        background-color: $theme-color-accent-warm;
+      }
+    }
+
+    button {
+      color: transparent;
+      background-color: $doj-darkblue;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: none;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
   }
 
-  .field_body {
-    line-height: 1.5rem;
+  @include at-media(desktop) {
+    bottom: 0;
   }
 }
 
-//************************
-//* Layout Builder END
-//************************
-
-.slick-dots {
+.usa-card {
   margin-bottom: 0;
 }
 
@@ -650,31 +706,17 @@ blockquote {
 
   .slick-dots {
     @include center-hor();
-    padding: 0;
-    list-style: none;
     top: 44%;
 
     li {
-      display: inline-block;
-      margin: 0 0.25rem;
-
       &.slick-active {
         button {
           background-color: $theme-color-accent-warm;
-        }
+        }  
       }
-
+      
       button {
-        color: transparent;
         background-color: white;
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        border: none;
-
-        &:hover {
-          cursor: pointer;
-        }
       }
     }
 
@@ -693,51 +735,11 @@ blockquote {
   }
 }
 
-.slides-slideshow {
-  .slick-dots {
-    padding: 0;
-    list-style: none;
-    bottom: 2rem;
-    text-align: center;
-
-    li {
-      display: inline-block;
-      margin: 0 0.25rem;
-
-      &.slick-active {
-        button {
-          background-color: $theme-color-accent-warm;
-        }
-      }
-
-      button {
-        color: transparent;
-        background-color: $doj-darkblue;
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        border: none;
-
-        &:hover {
-          cursor: pointer;
-        }
-      }
-    }
-
-    @include at-media(desktop) {
-      bottom: 0;
-    }
-  }
-
-  .usa-card {
-    margin-bottom: 0;
-  }
-}
-
 .usa-card__container {
   border-color: $theme-card-border-color;
   box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.17);
   margin-bottom: 0.5rem;
+  min-height: 620px;
 
   .usa-card__body {
     color: $gray-80;
@@ -749,6 +751,7 @@ blockquote {
       color: $doj-coolblue;
       font-size: $theme-h4-font-size;
       margin-bottom: 10px;
+      line-height: 1.2;
     }
 
     p {
@@ -769,20 +772,12 @@ blockquote {
       font-size: 15px;
       font-weight: 500;
     }
-
-    @include at-media(desktop) {
-      min-height: 350px;
-    }
   }
 
   .usa-card__footer {
     a {
       color: $blue-60v;
       font-weight: 600;
-    }
-
-    @include at-media(desktop) {
-      min-height: 60px;
     }
   }
 }
@@ -865,6 +860,22 @@ blockquote {
 //*****************************
 //* Layout builder styles START
 //*****************************
+
+.block-layout-builder {
+  &.block-field-blocknodepagetitle {
+    @extend h1;
+    @include gold-lines(1.5rem, 0);
+  }
+
+  .field_body {
+    line-height: 1.5rem;
+  }
+}
+
+//* This is needed to contain slick slider in layout builder.
+.layout__region {
+  width: 100%;
+}
 
 .layout--twocol-section {
   .layout__region--first {
@@ -967,7 +978,7 @@ blockquote {
     .layout__region--first {
       padding-right: 1rem;
     }
-    
+
     .layout__region--second {
       padding-left: 1rem;
     }
@@ -978,31 +989,52 @@ blockquote {
 //* Layout builder styles END
 //*****************************
 
-details {
-  border: 1px solid $gray-cool-20;
-  border-radius: 4px;
-  padding: .5em .5em 0;
 
-  &[open] {
-    padding: .5em;
 
-    summary {
-      border-bottom: 1px solid $gray-cool-20;
-      margin-bottom: .5em;
+//* Views styles
+
+.most-wanted-view {
+  .slick-slide {
+    @extend .usa-card__container;
+    min-height: 620px;
+    margin-bottom: 2rem;
+
+    .views-field-field-most-wanted-images {
+      padding-top: 1.5rem;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+
+      img {
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        aspect-ratio: 1/1;
+      }
+    }
+
+    .views-field-title {
+      @include u-font-family("sans");
+      color: $doj-coolblue;
+      font-size: $theme-h4-font-size;
+      margin-bottom: 10px;
+      padding-top: .5rem;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .views-field-nothing {
+      @extend .usa-card__body;
+      min-height: unset;
+    }
+
+    .views-field-view-node {
+      @extend .usa-card__footer;
     }
   }
-
-  summary {
-    font-weight: bold;
-    margin: -.5em -.5em 0;
-    padding: .5em;
-  }
 }
-
-.img-responsive {
-  @include img-responsive;
-}
-
 
 
 /************************************************
@@ -1154,9 +1186,6 @@ header.usa-header--extended {
       @include remove-bar;
     }
 
-    @include at-media-max(desktop) {
-
-    }
     @include at-media(desktop) {
       > .usa-nav__link {
         &:hover {

@@ -20,6 +20,13 @@ Featured Grouped Content Block
 .block-featured_group_content {
   padding: 3.5rem 0;
 
+  .field_heading {
+    @include gold-lines(1.25rem, auto);
+    @extend h2;
+    text-align: center;
+    font-weight: bold;
+  }
+
   .field__item:first-of-type .paragraph--type--grouped-content {
     margin-top: 0;
   }
@@ -81,6 +88,12 @@ Featured Grouped Content Block
       &:focus {
         outline: none;
       }
+    }
+  }
+
+  &.bg-primary-darker {
+    .field_heading {
+      color: white;
     }
   }
 }

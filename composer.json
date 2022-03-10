@@ -66,7 +66,7 @@
         "drupal/feeds_tamper": "^2.0@beta",
         "drupal/field_tools": "^1.0@alpha",
         "drupal/filehash": "^1.7",
-        "drupal/gin": "^3.0@alpha",
+        "drupal/gin": "3.x-dev@dev",
         "drupal/gin_lb": "^1.0@beta",
         "drupal/google_tag": "^1.4",
         "drupal/group": "^1.4",
@@ -103,6 +103,7 @@
         "drupal/og_sm": "^2.0",
         "drupal/openstreetmap": "^1.0@beta",
         "drupal/optional_end_date": "^1.2",
+        "drupal/organigrams": "^2.0@alpha",
         "drupal/pathologic": "^1.0@alpha",
         "drupal/promote_disable": "^2.0",
         "drupal/reroute_email": "^2",
@@ -243,7 +244,10 @@
                 "Integrity constraint violation: 1048 Column 'langcode' cannot be null": "https://www.drupal.org/files/issues/2021-03-01/2901390-76-integrity-constraint-violation-paragraph.patch"
             },
             "drupal/gin_lb": {
-            "Fix issue with adding images in layout builder blocks": "patches/gin_lb_fix_media_add.patch"
+                "Fix issue with adding images in layout builder blocks": "patches/gin_lb_fix_media_add.patch"
+            },
+            "drupal/migrate_tools": {
+                "Add migrate:status extra option": "patches/add-migrate-status-extra-option.patch"
             }
         },
         "violinist": {
@@ -292,7 +296,8 @@
         ],
         "post-drupal-scaffold-cmd": [
             "cd docroot && patch -p1 <../patches/htaccess-https.patch",
-            "cd docroot && patch -p1 <../patches/htaccess-saml.patch"
+            "cd docroot && patch -p1 <../patches/htaccess-saml.patch",
+            "cd vendor/commerceguys/addressing/resources/subdivision && patch --backup --forward --silent <../../../../../patches/multiple-locations.patch"
         ]
     },
     "require-dev": {

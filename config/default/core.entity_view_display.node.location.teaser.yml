@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.location.field_language
     - field.field.node.location.field_latlong
     - field.field.node.location.field_link
+    - field.field.node.location.field_location_language
     - field.field.node.location.field_other_groups
     - field.field.node.location.field_start_date
     - field.field.node.location.field_text
@@ -42,6 +43,7 @@ hidden:
   field_language: true
   field_latlong: true
   field_link: true
+  field_location_language: true
   field_other_groups: true
   field_start_date: true
   field_text: true

@@ -81,4 +81,34 @@
     margin-top: 2rem;
     text-align: center;
   }
+
+  &.bg-primary-darker {
+    .field_heading {
+      color: white;
+    }
+    .action-center-items {
+      a {
+        color: white
+      }
+      .action-icons > .field__item:hover {
+        .paragraph--type--action-center-item {
+          background-color: white;
+          color: $doj-darkblue;
+
+          a {
+            color: $doj-darkblue;
+          }
+        }
+      }
+    }
+    button.usa-button.usa-button--outline {
+      color: $doj-darkblue;
+      background-color: color(warning);
+      border: none;
+      box-shadow: none;
+      &:hover {
+        background-color: white;
+      }
+    }
+  }
 }

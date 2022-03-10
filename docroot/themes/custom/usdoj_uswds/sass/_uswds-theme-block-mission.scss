@@ -45,7 +45,6 @@ Mission Block
     @extend h2;
     font-weight: bold;
     display: inline-block;
-   
   }
 
   //block body
@@ -64,10 +63,10 @@ Mission Block
         display: grid;
         grid-template-columns: 1rem auto;
         padding-bottom: 1rem; 
+        font-weight: 600;
         
         &:before {
           content: "";
-          height: .8rem;
           width: .8rem;
           background-image: url('/themes/custom/usdoj_uswds/assets/img/usa-icons/star.svg');
           background-size: contain;
@@ -98,6 +97,91 @@ Mission Block
       border-radius: 2px;
       text-decoration: none;
       font-weight: bold;
+    }
+  }
+
+  //by the nunbers - homepage content
+  .field_statistics_header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    
+    &:after {
+      content: "";
+      border-bottom: 1px solid;
+      width: calc(100% - 15rem);
+      height: 1rem;
+    }
+
+    @media (max-width: 47.99em) {
+      font-size: 1rem;
+      &:after {
+        height: .5rem;
+        width: calc(100% - 10rem);
+      }
+    }
+  }
+
+  //statistics - homepage content
+  .field__items {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+
+    .field__item {
+      padding-bottom: 1rem;
+      @media (max-width: 47.99em) {
+        @include grid-col(6);
+      }
+      
+      .field_statistic {
+        font-size: 2rem;
+        margin-bottom: .5rem;
+        font-weight: 500;
+        @media (max-width: 47.99em) {
+          font-size: 2rem;
+        }
+      }
+      
+      .field_statistic_caption {
+        letter-spacing: 1px;
+        @media (max-width: 47.99em) {
+          font-size: .9rem;
+        }
+      }
+    }
+  }
+
+  //background image
+  .field_background_image {
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    left: 50%;
+    right: 50%;
+    margin: 0 -50vw;
+    pointer-events: none;
+    overflow: hidden;
+    
+    .image {
+      position: relative;
+      top: -10rem;
+      @media (max-width: 47.99em) {
+        right: -20%;
+      }
+    
+      img {
+        max-width: inherit;
+        opacity: 0.05;
+        float: right;
+        @media (max-width: 47.99em) {
+          float: none;
+        }
+      }
     }
   }
 
@@ -139,92 +223,24 @@ Mission Block
     //by the nunbers - homepage content
     .field_statistics_header {
       color: color(blue-10);
-      font-size: 1.5rem;
-      font-weight: bold;
-      display: flex;
-      justify-content: space-between;
-      
       &:after {
-        content: "";
-        border-bottom: 1px solid color(blue-10);
-        width: calc(100% - 15rem);
-        height: 1rem;
-      }
-
-      @media (max-width: 47.99em) {
-        font-size: 1rem;
-        &:after {
-          height: .5rem;
-          width: calc(100% - 10rem);
-        }
+        border-color: color(blue-10);
       }
     }
 
     //statistics - homepage content
-    .field__items {
-      display: flex;
-      justify-content: space-evenly;
-      text-align: center;
-      margin-top: 2rem;
-      flex-wrap: wrap;
-
-      .field__item {
-        padding-bottom: 1rem;
-        @media (max-width: 47.99em) {
-          @include grid-col(6);
-        }
+    .field__items .field__item {
         
-        .field_statistic {
-          color: color(warning);
-          font-size: 2rem;
-          margin-bottom: .5rem;
-          font-weight: 500;
-          @media (max-width: 47.99em) {
-            font-size: 2rem;
-          }
-        }
-        
-        .field_statistic_caption {
-          color: white;
-          letter-spacing: 1px;
-          @media (max-width: 47.99em) {
-            font-size: .9rem;
-          }
-        }
+      .field_statistic {
+        color: color(warning);
       }
-    }
-
-    //background image
-    .field_background_image {
-      width: 100vw;
-      position: absolute;
-      top: 0;
-      height: 100%;
-      left: 50%;
-      right: 50%;
-      margin: 0 -50vw;
-      pointer-events: none;
-      overflow: hidden;
       
-      .image {
-        position: relative;
-        top: -10rem;
-        @media (max-width: 47.99em) {
-          right: -20%;
-        }
-      
-        img {
-          max-width: inherit;
-          opacity: 0.05;
-          float: right;
-          @media (max-width: 47.99em) {
-            float: none;
-          }
-        }
+      .field_statistic_caption {
+        color: white;
       }
     }
   }
-  
+
   //mission block white background
   &.bg-white {
     .field_heading {
@@ -263,5 +279,26 @@ Mission Block
         border: none;
       }
     }
-  }   
+  }
+  
+  //mission block taupe and light blue
+  &.bg-base-lighter, &.bg-primary-lightest {
+    .field_cta a {
+      color: white;
+      background: color(primary-darker);
+      &:hover {
+        color: white;
+        background: $blue-60v;
+      }
+      
+      &:active {
+        color: white;
+        background: $doj-coolblue;
+      }
+      
+      &:focus {
+        border: none;
+      }
+    }
+  }
 }

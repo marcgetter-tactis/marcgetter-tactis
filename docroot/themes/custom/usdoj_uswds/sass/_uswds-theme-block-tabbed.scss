@@ -172,6 +172,7 @@ Tabbed Block on Homepage
           .usa-card__container {
             border: none;
             box-shadow: none;
+            min-height: auto;
             
             //slider images
             .usa-card__media--inset {
@@ -270,6 +271,13 @@ Tabbed Block on Homepage
     }
     &:focus {
       outline: none;
+    }
+  }
+
+  //tabbed block navy background
+  &.bg-primary-darker {
+    .field_header {
+      color: white;
     }
   }
 }

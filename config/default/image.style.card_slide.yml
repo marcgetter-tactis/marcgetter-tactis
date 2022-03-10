@@ -1,0 +1,15 @@
+uuid: 14c6e4bf-df63-4531-b22d-5a25f2e4c02a
+langcode: en
+status: true
+dependencies: {  }
+name: card_slide
+label: 'Card slide'
+effects:
+  d1b7e217-c52c-46f0-aa2e-5cf81f2baf23:
+    uuid: d1b7e217-c52c-46f0-aa2e-5cf81f2baf23
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 600
+      anchor: center-center

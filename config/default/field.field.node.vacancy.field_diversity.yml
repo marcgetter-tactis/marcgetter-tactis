@@ -20,7 +20,10 @@ label: 'Diversity Statement'
 description: ''
 required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    value: "<p>Our office places a high value on diversity of experiences and perspectives and encourages applications from all qualified individuals from all ethnic and racial backgrounds, veterans, LGBT individuals, and persons with disabilities.</p>\r\n"
+    format: wysiwyg
 default_value_callback: ''
 settings: {  }
 field_type: text_long

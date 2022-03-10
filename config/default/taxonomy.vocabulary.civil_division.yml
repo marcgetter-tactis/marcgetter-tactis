@@ -1,0 +1,13 @@
+uuid: 92f3847b-04b8-4b36-a8f1-3418a772c09d
+langcode: en
+status: true
+dependencies:
+  module:
+    - organigrams
+third_party_settings:
+  organigrams:
+    is_organigram: true
+name: 'Civil Division'
+vid: civil_division
+description: ''
+weight: 0

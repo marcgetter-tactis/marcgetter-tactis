@@ -11,7 +11,7 @@ dependencies:
 third_party_settings:
   allowed_formats:
     allowed_formats:
-      - plain_text
+      - code_html
 id: node.podcast.field_buzzsprout
 field_name: field_buzzsprout
 entity_type: node

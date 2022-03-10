@@ -91,6 +91,13 @@
 
       once('imageGalleryInit', 'html', context ).forEach( function (element) {
         var $gallery = $('.image-gallery-node .slick');
+        var $galleryTitle = $('.image-gallery-node h1').first().html();
+        setTimeout(function() {
+          var $colorbox = $('#colorbox');
+          $colorbox.prepend("<div class='colorbox-title'>"+$galleryTitle+"</div>");
+        }, 1000);
+
+
 
         var totalImages = $gallery.attr('data-slick-count');        
         var $slide = $gallery.find('.slide__media');

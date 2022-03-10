@@ -13,9 +13,11 @@ allow_single_deselect: false
 disabled_themes:
   claro: '0'
   acquia_claro: '0'
+  gin: '0'
   uswds_base: '0'
+  usdoj_gin: '0'
   usdoj_uswds: '0'
 chosen_include: 2
-placeholder_text_multiple: 'Choose some options'
+placeholder_text_multiple: 'Click to select options'
 placeholder_text_single: 'Choose an option'
 no_results_text: 'No results match'

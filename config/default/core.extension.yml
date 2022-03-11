@@ -38,6 +38,7 @@ module:
   collapse_text: 0
   collapsiblock: 0
   colorapi: 0
+  colorbox: 0
   config: 0
   config_filter: 0
   config_ignore: 0

@@ -21,9 +21,11 @@
  
   
   .paragraph--type--link {
-    display: inline-block;
     margin-right: 1rem;
+    display: inline-block;
+    
     a {
+      display: block;
       padding: .75rem;
       border-radius: 4px;
       text-decoration: none;
@@ -37,9 +39,11 @@
       &.usa-button { 
         background-color: color(primary-darker);
         color: white;
+        
         &:hover {
           background-color: $blue-60v;
         }
+        
         &:active {
           background-color: $doj-coolblue;
           border: none;
@@ -51,10 +55,12 @@
         background-color: transparent;
         color: $doj-coolblue;
         border-width: 2px;
+        
         &:hover {
           background-color: $blue-60v;
           color: white;
         }
+        
         &:active {
           background-color: $doj-coolblue;
           border: none;

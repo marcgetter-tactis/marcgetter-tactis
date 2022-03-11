@@ -44,11 +44,8 @@ view_mode ? 'block--view-mode-' ~ view_mode|clean_class,
 
 {% set aria = elements.content['#block_content'].id() %}
 
-{% if 'block-offices' in classes %}
-  <div {{ attributes.addClass(classes, 'usa_accordion') }} aria-multiselectable="true">
-{% else %}
-  <div{{ attributes.addClass(classes) }}>
-{% endif %}
+<div{{ attributes.addClass(classes) }}>
+
   {{ title_prefix }}
   {% if label %}
   <h2{{ title_attributes }} class="block-title">{{ label }}</h2>

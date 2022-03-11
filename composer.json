@@ -249,6 +249,9 @@
             },
             "drupal/migrate_tools": {
                 "Add migrate:status extra option": "patches/add-migrate-status-extra-option.patch"
+            },
+            "commerceguys/addressing": {
+                "Add extra option to US states": "patches/multiple-locations.patch"
             }
         },
         "violinist": {
@@ -297,8 +300,7 @@
         ],
         "post-drupal-scaffold-cmd": [
             "cd docroot && patch -p1 <../patches/htaccess-https.patch",
-            "cd docroot && patch -p1 <../patches/htaccess-saml.patch",
-            "cd vendor/commerceguys/addressing/resources/subdivision && patch --backup --forward --silent <../../../../../patches/multiple-locations.patch"
+            "cd docroot && patch -p1 <../patches/htaccess-saml.patch"
         ]
     },
     "require-dev": {

@@ -1,0 +1,111 @@
+uuid: b110b58f-4dbd-4070-b4d9-e08eee643772
+langcode: en
+status: true
+dependencies: {  }
+id: usdoj_migrate_node_complete_speech
+class: Drupal\node\Plugin\migrate\D7NodeTranslation
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+  - doj
+migration_group: node
+label: 'Node complete (Speech)'
+source:
+  plugin: d7_node_complete
+  node_type: speech
+process:
+  nid: tnid
+  vid: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title: title
+  uid: uid
+  status: status
+  created: created
+  changed: timestamp
+  promote: promote
+  sticky: sticky
+  revision_uid: revision_uid
+  revision_log: log
+  revision_timestamp: timestamp
+  content_translation_source: source_langcode
+  comment_node_speech/0/status: comment
+  field_body: field_pr_body
+  field_body/format:
+    -
+      plugin: migration_lookup
+      migration: d7_filter_format
+      source: format
+  field_teaser: field_pr_teaser
+  field_attachment:
+    -
+      plugin: sub_process
+      source: field_speech_attachment
+      process:
+        target_id: fid
+        display: display
+        description: description
+  field_image:
+    -
+      plugin: sub_process
+      source: field_speech_image
+      process:
+        target_id: fid
+        alt: alt
+        title: title
+        width: width
+        height: height
+  field_location:
+    -
+      plugin: addressfield
+      source: field_speech_location
+  field_component:
+    -
+      plugin: sub_process
+      source: field_pr_component
+      process:
+        target_id: tid
+  field_date:
+    -
+      plugin: sub_process
+      source: field_pr_date
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: Y-m-d
+          source: value
+  field_topic:
+    -
+      plugin: sub_process
+      source: field_pr_topic
+      process:
+        target_id: tid
+  field_archived: field_archived
+  field_speaker: field_speech_speaker
+  field_invisible:
+    -
+      plugin: sub_process
+      source: field_pr_invisible
+      process:
+        target_id: tid
+  field_file_private_force: field_file_private_force
+destination:
+  plugin: 'entity_complete:node'
+  translations: true
+  default_bundle: speech
+migration_dependencies:
+  required:
+    - usdoj_migrate_filter_format
+    - usdoj_migrate_user
+    - usdoj_migrate_language
+  optional:
+    - usdoj_migrate_field_instance
+    - usdoj_migrate_metatag_field_node
+    - usdoj_migrate_metatag_field_instance_node_speech
+    - usdoj_migrate_metatag_field_instance_widget_settings_node_speech

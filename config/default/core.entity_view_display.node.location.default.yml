@@ -101,14 +101,6 @@ content:
     third_party_settings: {  }
     weight: 7
     region: content
-  field_location_language:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 14
-    region: content
   field_other_groups:
     type: entity_reference_label
     label: above
@@ -158,5 +150,6 @@ content:
 hidden:
   entitygroupfield: true
   field_invisible: true
+  field_location_language: true
   langcode: true
   search_api_excerpt: true

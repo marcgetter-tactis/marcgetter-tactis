@@ -8,7 +8,9 @@
     font-size: $theme-h4-font-size;
     font-weight: bold;
     color: $doj-coolblue;
-    margin-bottom: 3rem;
+    @include at-media(desktop) {
+      margin-bottom: 3rem;
+    }
   }
   
   .field__items {

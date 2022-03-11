@@ -43,6 +43,7 @@
         "drupal/clamav": "^2.0",
         "drupal/collapse_text": "^2.0",
         "drupal/colorapi": "1.x-dev@dev",
+        "drupal/colorbox": "^1.8",
         "drupal/config_ignore": "^2.3",
         "drupal/config_split": "^2",
         "drupal/core-composer-scaffold": "^9",
@@ -248,6 +249,9 @@
             },
             "drupal/migrate_tools": {
                 "Add migrate:status extra option": "patches/add-migrate-status-extra-option.patch"
+            },
+            "commerceguys/addressing": {
+                "Add extra option to US states": "patches/multiple-locations.patch"
             }
         },
         "violinist": {
@@ -296,8 +300,7 @@
         ],
         "post-drupal-scaffold-cmd": [
             "cd docroot && patch -p1 <../patches/htaccess-https.patch",
-            "cd docroot && patch -p1 <../patches/htaccess-saml.patch",
-            "cd vendor/commerceguys/addressing/resources/subdivision && patch --backup --forward --silent <../../../../../patches/multiple-locations.patch"
+            "cd docroot && patch -p1 <../patches/htaccess-saml.patch"
         ]
     },
     "require-dev": {

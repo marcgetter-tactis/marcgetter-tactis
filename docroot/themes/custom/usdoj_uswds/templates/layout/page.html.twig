@@ -48,12 +48,12 @@
 * @see html.html.twig
 */
 #}
-{% if government_banner %}
-    {% block government_banner %}
-        <section class="usa-banner">
-            {{ government_banner }}
-        </section>
-    {% endblock %}
+
+{# Render the 'official website block' #}
+{% if  drupal_entity('block_content', 481) %}
+<section class="usa-banner">
+  {{ drupal_entity('block_content', 481) }}
+</section>
 {% endif %}
 
 <div class="usa-overlay"></div>

@@ -1,0 +1,189 @@
+uuid: f0c97729-9560-4601-87b1-7a474b58049a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_fbi_field_office
+field_name: field_fbi_field_office
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: albany
+      label: Albany
+    -
+      value: albuquerque
+      label: Albuquerque
+    -
+      value: anchorage
+      label: Anchorage
+    -
+      value: atlanta
+      label: Atlanta
+    -
+      value: baltimore
+      label: Baltimore
+    -
+      value: birmingham
+      label: Birmingham
+    -
+      value: boston
+      label: Boston
+    -
+      value: buffalo
+      label: Buffalo
+    -
+      value: charlotte
+      label: Charlotte
+    -
+      value: chicago
+      label: Chicago
+    -
+      value: cincinnati
+      label: Cincinnati
+    -
+      value: cleveland
+      label: Cleveland
+    -
+      value: columbia
+      label: Columbia
+    -
+      value: dallas
+      label: Dallas
+    -
+      value: denver
+      label: Denver
+    -
+      value: detroit
+      label: Detroit
+    -
+      value: elpaso
+      label: 'El Paso'
+    -
+      value: honolulu
+      label: Honolulu
+    -
+      value: houston
+      label: Houston
+    -
+      value: indianapolis
+      label: Indianapolis
+    -
+      value: jackson
+      label: Jackson
+    -
+      value: jacksonville
+      label: Jacksonville
+    -
+      value: kansascity
+      label: 'Kansas City'
+    -
+      value: knoxville
+      label: Knoxville
+    -
+      value: lasvegas
+      label: 'Las Vegas'
+    -
+      value: littlerock
+      label: 'Little Rock'
+    -
+      value: losangeles
+      label: 'Los Angeles'
+    -
+      value: louisville
+      label: Louisville
+    -
+      value: memphis
+      label: Memphis
+    -
+      value: miami
+      label: Miami
+    -
+      value: milwaukee
+      label: Milwaukee
+    -
+      value: minneapolis
+      label: Minneapolis
+    -
+      value: mobile
+      label: Mobile
+    -
+      value: newhaven
+      label: 'New Haven'
+    -
+      value: neworleans
+      label: 'New Orleans'
+    -
+      value: newyork
+      label: 'New York'
+    -
+      value: newark
+      label: Newark
+    -
+      value: norfolk
+      label: Norfolk
+    -
+      value: oklahomacity
+      label: 'Oklahoma City'
+    -
+      value: omaha
+      label: Omaha
+    -
+      value: philadelphia
+      label: Philadelphia
+    -
+      value: phoenix
+      label: Phoenix
+    -
+      value: pittsburgh
+      label: Pittsburgh
+    -
+      value: portland
+      label: Portland
+    -
+      value: richmond
+      label: Richmond
+    -
+      value: sacramento
+      label: Sacramento
+    -
+      value: saltlakecity
+      label: 'Salt Lake City'
+    -
+      value: sanantonio
+      label: 'San Antonio'
+    -
+      value: sandiego
+      label: 'San Diego'
+    -
+      value: sanfrancisco
+      label: 'San Francisco'
+    -
+      value: sanjuan
+      label: 'San Juan'
+    -
+      value: seattle
+      label: Seattle
+    -
+      value: springfield
+      label: Springfield
+    -
+      value: stlouis
+      label: 'St. Louis'
+    -
+      value: tampa
+      label: Tampa
+    -
+      value: washingtondc
+      label: 'Washington D.C.'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -5,36 +5,24 @@ dependencies:
   config:
     - field.field.node.most_wanted.feeds_item
     - field.field.node.most_wanted.field_additional_information
-    - field.field.node.most_wanted.field_age_range
-    - field.field.node.most_wanted.field_aliases
-    - field.field.node.most_wanted.field_anonymous_tip
     - field.field.node.most_wanted.field_caution
-    - field.field.node.most_wanted.field_date_of_birth_used
+    - field.field.node.most_wanted.field_dea_field_office
     - field.field.node.most_wanted.field_description
     - field.field.node.most_wanted.field_details
-    - field.field.node.most_wanted.field_download_poster
-    - field.field.node.most_wanted.field_eyes
-    - field.field.node.most_wanted.field_field_office
-    - field.field.node.most_wanted.field_hair
-    - field.field.node.most_wanted.field_height
+    - field.field.node.most_wanted.field_fbi_field_office
+    - field.field.node.most_wanted.field_locations
+    - field.field.node.most_wanted.field_modified_date
     - field.field.node.most_wanted.field_most_wanted_category
     - field.field.node.most_wanted.field_most_wanted_images
-    - field.field.node.most_wanted.field_nationality
-    - field.field.node.most_wanted.field_occupations
+    - field.field.node.most_wanted.field_most_wanted_url
     - field.field.node.most_wanted.field_other_groups
-    - field.field.node.most_wanted.field_place_of_birth
-    - field.field.node.most_wanted.field_race
     - field.field.node.most_wanted.field_reward
-    - field.field.node.most_wanted.field_scars_and_marks
-    - field.field.node.most_wanted.field_sex
-    - field.field.node.most_wanted.field_submit_a_tip
-    - field.field.node.most_wanted.field_suspects
     - field.field.node.most_wanted.field_uid
-    - field.field.node.most_wanted.field_weight
     - field.field.node.most_wanted.field_your_groups
     - node.type.most_wanted
   module:
     - link
+    - options
     - text
     - user
 id: node.most_wanted.default
@@ -54,34 +42,6 @@ content:
     third_party_settings: {  }
     weight: 21
     region: content
-  field_age_range:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 20
-    region: content
-  field_aliases:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 4
-    region: content
-  field_anonymous_tip:
-    type: link
-    label: above
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    weight: 19
-    region: content
   field_caution:
     type: text_default
     label: above
@@ -89,13 +49,13 @@ content:
     third_party_settings: {  }
     weight: 24
     region: content
-  field_date_of_birth_used:
+  field_dea_field_office:
     type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 5
+    weight: 34
     region: content
   field_description:
     type: text_default
@@ -111,53 +71,30 @@ content:
     third_party_settings: {  }
     weight: 16
     region: content
-  field_download_poster:
-    type: link
+  field_fbi_field_office:
+    type: list_default
     label: above
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
+    settings: {  }
     third_party_settings: {  }
-    weight: 2
+    weight: 33
     region: content
-  field_eyes:
+  field_locations:
     type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 8
+    weight: 30
     region: content
-  field_field_office:
-    type: link
+  field_modified_date:
+    type: timestamp
     label: above
     settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
     third_party_settings: {  }
-    weight: 18
-    region: content
-  field_hair:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 7
-    region: content
-  field_height:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 9
+    weight: 31
     region: content
   field_most_wanted_category:
     type: entity_reference_label
@@ -179,21 +116,17 @@ content:
     third_party_settings: {  }
     weight: 27
     region: content
-  field_nationality:
-    type: string
+  field_most_wanted_url:
+    type: link
     label: above
     settings:
-      link_to_entity: false
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
     third_party_settings: {  }
-    weight: 13
-    region: content
-  field_occupations:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 22
+    weight: 32
     region: content
   field_other_groups:
     type: entity_reference_label
@@ -203,65 +136,12 @@ content:
     third_party_settings: {  }
     weight: 28
     region: content
-  field_place_of_birth:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 6
-    region: content
-  field_race:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 12
-    region: content
   field_reward:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 15
-    region: content
-  field_scars_and_marks:
-    type: text_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 14
-    region: content
-  field_sex:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 11
-    region: content
-  field_submit_a_tip:
-    type: text_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 17
-    region: content
-  field_suspects:
-    type: text_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 23
-    region: content
-  field_weight:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 10
     region: content
   field_your_groups:
     type: entity_reference_label

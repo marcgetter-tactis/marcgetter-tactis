@@ -5,6 +5,9 @@
  * Contains usdoj_most_wanted.module.
  */
 
+use Drupal\node\Entity\Node;
+use Drupal\taxonomy\Entity\Term;
+
 /**
  * Runs most wanted feeds on cron.
  */
@@ -33,6 +36,26 @@ function usdoj_most_wanted_cron() {
       $feed->save();
       $feed->import();
       $feed->delete();
+
+      // Keep only results that are tagged as top ten most wanted.
+      // Not the most ideal solution to retain only the top ten most
+      // wanted results but the endpoint doesnt accept
+      // 'subjects' as a parameter for some reason.
+      $nids = \Drupal::entityQuery('node')->condition('type', 'most_wanted')->execute();
+      $nodes = Node::loadMultiple($nids);
+      foreach ($nodes as $node) {
+        if (($node->get('field_most_wanted_category')->isEmpty())) {
+          $node->delete();
+        }
+        else {
+          $tid = $node->get('field_most_wanted_category')->getValue();
+          $name = Term::load($tid[0]['target_id'])->get('name')->value;
+          if ($name !== 'Ten Most Wanted Fugitives') {
+            $node->delete();
+          }
+        }
+      }
+
       $i++;
     } while ($i <= $pages);
   }

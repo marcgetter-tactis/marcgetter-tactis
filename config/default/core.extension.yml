@@ -196,6 +196,7 @@ module:
   siteimprove: 0
   sitewide_alert: 0
   slick: 0
+  slick_ui: 0
   smart_sql_idmap: 0
   smart_trim: 0
   social_media_links: 0

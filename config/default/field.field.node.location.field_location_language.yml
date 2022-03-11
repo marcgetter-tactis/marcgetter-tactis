@@ -10,7 +10,7 @@ id: node.location.field_location_language
 field_name: field_location_language
 entity_type: node
 bundle: location
-label: 'Location Language'
+label: Language
 description: ''
 required: false
 translatable: false

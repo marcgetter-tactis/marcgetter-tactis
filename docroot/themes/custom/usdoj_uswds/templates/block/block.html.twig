@@ -42,8 +42,6 @@ view_mode ? 'block--view-mode-' ~ view_mode|clean_class,
 ]
 %}
 
-{% set aria = elements.content['#block_content'].id() %}
-
 <div{{ attributes.addClass(classes) }}>
 
   {{ title_prefix }}

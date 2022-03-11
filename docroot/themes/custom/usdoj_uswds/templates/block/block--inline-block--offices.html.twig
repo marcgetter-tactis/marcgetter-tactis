@@ -43,7 +43,15 @@ view_mode ? 'block--view-mode-' ~ view_mode|clean_class,
 %}
 
 
+
 <div {{ attributes.addClass(classes, 'usa-accordion') }} aria-multiselectable="true">
+
+  {{ title_prefix }}
+    {% if label %}
+    <h2{{ title_attributes }} class="block-title">{{ label }}</h2>
+    {% endif %}
+  {{ title_suffix }}
+
   <div class="usa-accordion__item">
   {% block content %}
   
@@ -51,7 +59,7 @@ view_mode ? 'block--view-mode-' ~ view_mode|clean_class,
     <button class="usa-accordion__button desktop:display-none" aria-expanded="false" aria-controls="{{ content['#block_content'].id() }}">
       {{ content.field_heading }}
     </button>
-    <div class="display-none desktop:display-block">
+    <div id="{{ content['#block_content'].field_anchor.value }}" class="display-none desktop:display-block">
       {{ content.field_heading }}
     </div>
   </div>

@@ -4,7 +4,7 @@
 
       once('executeSlick', 'html', context).forEach( function (element) {
 
-        if ($(".hero-slideshow")[0]){
+        if ($(".hero-slideshow-slick")[0]){
           $('.hero-slideshow').slick({
             infinite: true,
             dots: true,

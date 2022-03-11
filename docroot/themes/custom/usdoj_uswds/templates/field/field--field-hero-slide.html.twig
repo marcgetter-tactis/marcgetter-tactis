@@ -44,7 +44,7 @@
 
 {% if label_hidden %}
   {% if multiple %}
-    <div class="field__items {{ (items|length>1) ? 'hero-slideshow' }}">
+    <div class="field__items hero-slideshow {{ (items|length>1) ? 'hero-slideshow-slick' }}">
       {% for item in items %}
         <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
       {% endfor %}

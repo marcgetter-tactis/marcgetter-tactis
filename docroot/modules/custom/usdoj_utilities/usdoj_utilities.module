@@ -370,5 +370,36 @@ function usdoj_utilities_node_insert(Node $node) {
       $group->addContent($node, 'group_node:component_group');
 
       break;
+
+    default:
+      // Check if this bundle has Your Groups field.
+      if ($node->hasField('field_your_groups')) {
+        // Get group id from node.
+        $group_id = $node->get('field_your_groups')->target_id;
+
+        if (!empty($group_id)) {
+          // Load group.
+          $group = Group::load($group_id);
+
+          // Link node to group.
+          $group->addContent($node, "group_node:{$bundle}");
+        }
+      }
+
+      // Check if this bundle has Other Groups field.
+      if ($node->hasField('field_other_groups')) {
+        // Get group id from node.
+        $group_id = $node->get('field_other_groups')->target_id;
+
+        if (!empty($group_id)) {
+          // Load group.
+          $group = Group::load($group_id);
+
+          // Link node to group.
+          $group->addContent($node, "group_node:{$bundle}");
+        }
+      }
+
+      break;
   }
 }

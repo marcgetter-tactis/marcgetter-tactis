@@ -353,10 +353,14 @@ function usdoj_utilities_node_insert(Node $node) {
         'type' => 'organization',
       ]);
 
-      // Set group field values.
+      // Set group values.
       $group->set('label', $title);
       $group->set('status', $status);
-      $group->set('uid', $uid);
+
+      // Set ownership to current user.
+      $group->setOwnerId($uid);
+
+      // Set group field values.
       $group->set('field_abbreviation', $abbreviation);
 
       // Save group.

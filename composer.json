@@ -85,6 +85,7 @@
         "drupal/layout_builder_browser": "^1.4",
         "drupal/layout_builder_lock": "^1.1",
         "drupal/layout_builder_modal": "^1.1",
+        "drupal/legal": "^2.0",
         "drupal/link_attributes": "^1.11",
         "drupal/linkchecker": "^1.0@beta",
         "drupal/linkit": "^6",

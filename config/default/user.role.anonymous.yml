@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
+    - legal
     - system
 _core:
   default_config_hash: KYARbYeGRZ-INq-rg4NeHiuEYecKAgslhGiPztbR-fY
@@ -25,6 +26,7 @@ permissions:
   - 'show text format dropdown'
   - 'use search_api_sorts'
   - 'use usasearch hosted block'
+  - 'view Terms and Conditions'
   - 'view api_v1 blog_entries index documentation'
   - 'view api_v1 blog_entries retrieve documentation'
   - 'view api_v1 press_releases index documentation'

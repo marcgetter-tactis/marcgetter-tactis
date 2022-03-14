@@ -118,6 +118,7 @@ module:
   layout_builder_admin_theme: 0
   layout_builder_restrictions: 0
   layout_discovery: 0
+  legal: 0
   link: 0
   link_attributes: 0
   linkchecker: 0

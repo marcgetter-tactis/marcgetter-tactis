@@ -1,16 +1,16 @@
-uuid: 76a112c2-5252-42d8-9711-cdb8a142b72b
+uuid: e09fdf64-8af9-43fe-b13e-77fc74a7204f
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_district
+    - field.storage.node.field_location_language
     - node.type.location
-    - taxonomy.vocabulary.us_judicial_district
-id: node.location.field_district
-field_name: field_district
+    - taxonomy.vocabulary.language
+id: node.location.field_location_language
+field_name: field_location_language
 entity_type: node
 bundle: location
-label: 'Judicial District'
+label: Language
 description: ''
 required: false
 translatable: false
@@ -20,7 +20,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      us_judicial_district: us_judicial_district
+      language: language
     sort:
       field: name
       direction: asc

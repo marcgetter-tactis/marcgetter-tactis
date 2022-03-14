@@ -8,6 +8,8 @@
 use Drupal\Core\Block\BlockPluginInterface;
 use Drupal\core\DateTime\DrupalDateTime;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\group\Entity\Group;
+use Drupal\node\Entity\Node;
 use Drupal\views\ViewExecutable;
 use Symfony\Cmf\Component\Routing\RouteObjectInterface;
 
@@ -323,4 +325,78 @@ function usdoj_utilities_form_alter(&$form, FormStateInterface $form_state, $for
   }
 
   return $form;
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_insert().
+ */
+function usdoj_utilities_node_insert(Node $node) {
+  $bundle = $node->bundle();
+
+  switch ($bundle) {
+    // Create matching group when organization is created.
+    case 'component_group':
+      // Get ID of current user.
+      $uid = \Drupal::currentUser()->id();
+
+      // Get title from new node.
+      $title = $node->get('title')->value;
+
+      // Get abbreviation from new node.
+      $abbreviation = $node->get('field_abbreviation')->value;
+
+      // Get status from new node.
+      $status = ($node->get('status')->value == TRUE) ? TRUE : FALSE;
+
+      // Create new group.
+      $group = Group::create([
+        'type' => 'organization',
+      ]);
+
+      // Set group values.
+      $group->set('label', $title);
+      $group->set('status', $status);
+
+      // Set ownership to current user.
+      $group->setOwnerId($uid);
+
+      // Set group field values.
+      $group->set('field_abbreviation', $abbreviation);
+
+      // Save group.
+      $group->save();
+
+      // Link node to group.
+      $group->addContent($node, 'group_node:component_group');
+
+      break;
+  }
+
+  // Check if this new bundle has Your Groups field.
+  if ($node->hasField('field_your_groups')) {
+    // Get group id from node.
+    $group_id = $node->get('field_your_groups')->target_id;
+
+    if (!empty($group_id)) {
+      // Load group.
+      $group = Group::load($group_id);
+
+      // Link node to group.
+      $group->addContent($node, "group_node:{$bundle}");
+    }
+  }
+
+  // Check if this new bundle has Other Groups field.
+  if ($node->hasField('field_other_groups')) {
+    // Get group id from node.
+    $group_id = $node->get('field_other_groups')->target_id;
+
+    if (!empty($group_id)) {
+      // Load group.
+      $group = Group::load($group_id);
+
+      // Link node to group.
+      $group->addContent($node, "group_node:{$bundle}");
+    }
+  }
 }

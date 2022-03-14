@@ -1,17 +1,17 @@
-uuid: 10e81603-edcd-43c5-9467-404783a649ff
+uuid: e56cb7a1-6236-4b93-b56d-73ff94c69382
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_field_office
+    - field.storage.node.field_most_wanted_url
     - node.type.most_wanted
   module:
     - link
-id: node.most_wanted.field_field_office
-field_name: field_field_office
+id: node.most_wanted.field_most_wanted_url
+field_name: field_most_wanted_url
 entity_type: node
 bundle: most_wanted
-label: 'Field Office'
+label: 'Most Wanted URL'
 description: ''
 required: false
 translatable: false
@@ -19,5 +19,5 @@ default_value: {  }
 default_value_callback: ''
 settings:
   title: 1
-  link_type: 17
+  link_type: 16
 field_type: link

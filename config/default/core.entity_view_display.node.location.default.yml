@@ -9,9 +9,9 @@ dependencies:
     - field.field.node.location.field_email
     - field.field.node.location.field_end_date
     - field.field.node.location.field_invisible
-    - field.field.node.location.field_language
     - field.field.node.location.field_latlong
     - field.field.node.location.field_link
+    - field.field.node.location.field_location_language
     - field.field.node.location.field_other_groups
     - field.field.node.location.field_start_date
     - field.field.node.location.field_text
@@ -20,8 +20,6 @@ dependencies:
     - node.type.location
   module:
     - address_phonenumber
-    - datetime
-    - geocoder_geofield
     - link
     - text
     - user
@@ -32,23 +30,15 @@ mode: default
 content:
   field_address_phone:
     type: address_phone_number_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 13
+    weight: 0
     region: content
   field_body:
     type: text_default
     label: hidden
     settings: {  }
-    third_party_settings: {  }
-    weight: 6
-    region: content
-  field_district:
-    type: entity_reference_label
-    label: hidden
-    settings:
-      link: true
     third_party_settings: {  }
     weight: 2
     region: content
@@ -57,36 +47,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 8
-    region: content
-  field_end_date:
-    type: datetime_default
-    label: hidden
-    settings:
-      timezone_override: ''
-      format_type: standard_date_format
-    third_party_settings: {  }
-    weight: 4
-    region: content
-  field_language:
-    type: entity_reference_label
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 9
-    region: content
-  field_latlong:
-    type: geocoder_geofield_reverse_geocode
-    label: hidden
-    settings:
-      providers:
-        googlemaps:
-          checked: '1'
-          weight: '0'
-      dumper: wkt
-    third_party_settings: {  }
-    weight: 10
+    weight: 3
     region: content
   field_link:
     type: link
@@ -98,49 +59,20 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 7
-    region: content
-  field_other_groups:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 11
-    region: content
-  field_start_date:
-    type: datetime_default
-    label: hidden
-    settings:
-      timezone_override: ''
-      format_type: standard_date_format
-    third_party_settings: {  }
-    weight: 3
-    region: content
-  field_text:
-    type: string
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 5
-    region: content
-  field_your_groups:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 12
-    region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
 hidden:
   entitygroupfield: true
+  field_district: true
+  field_end_date: true
   field_invisible: true
+  field_latlong: true
+  field_location_language: true
+  field_other_groups: true
+  field_start_date: true
+  field_text: true
   field_uid: true
+  field_your_groups: true
   langcode: true
+  links: true
   search_api_excerpt: true

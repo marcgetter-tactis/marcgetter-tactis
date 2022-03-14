@@ -1,16 +1,14 @@
-uuid: 5910e0a8-15c0-4c52-ba73-d2a256423086
+uuid: ca3d8e29-30e4-4447-8ff5-1b3b4c7c8566
 langcode: en
 status: true
 dependencies:
   module:
-    - language
     - node
-id: node.field_language
-field_name: field_language
+id: node.field_modified_date
+field_name: field_modified_date
 entity_type: node
-type: entity_reference
-settings:
-  target_type: configurable_language
+type: timestamp
+settings: {  }
 module: core
 locked: false
 cardinality: 1

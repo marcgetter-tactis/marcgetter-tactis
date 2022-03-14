@@ -1,5 +1,5 @@
---- US.json
-+++ US.json
+--- resources/subdivision/US.json
++++ resources/subdivision/US.json
 @@ -299,6 +299,11 @@
  			"name": "Wyoming",
  			"iso_code": "US-WY",

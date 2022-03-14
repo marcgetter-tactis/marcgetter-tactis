@@ -1,0 +1,49 @@
+uuid: 87a44dd3-2518-42c5-af14-5f612be4a077
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: UDvVs1JOV0ZZkOwTYGJD_HKt-pcp3kS8AVtHrWngzYU
+id: usdoj_migrate_filter_format
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Configuration
+  - doj
+migration_group: block
+label: 'Filter format configuration'
+source:
+  plugin: d7_filter_format
+process:
+  format: format
+  status: status
+  name: name
+  cache: cache
+  weight: weight
+  filters:
+    -
+      plugin: sub_process
+      source: filters
+      key: '@id'
+      process:
+        id:
+          plugin: filter_id
+          bypass: true
+          source: name
+          map:
+            editor_caption: filter_caption
+            editor_align: filter_align
+        settings:
+          plugin: filter_settings
+          source: settings
+        status:
+          plugin: default_value
+          default_value: true
+        weight: weight
+destination:
+  plugin: 'entity:filter_format'
+migration_dependencies:
+  required: {  }
+  optional: {  }

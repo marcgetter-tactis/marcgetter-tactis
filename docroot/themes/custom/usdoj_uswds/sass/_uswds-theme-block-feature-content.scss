@@ -18,15 +18,17 @@ Featured Content Block
 ----------------------------------------
 */
 .block-featured_content {
+  //@include grid-row;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   @include at-media(desktop) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto auto;
     grid-template-rows: 6rem auto;
   }
   
   .field_heading {
+    
     @extend h3;
     color: color(primary-darker);
     margin: 1rem 0;
@@ -41,11 +43,10 @@ Featured Content Block
     font-size: 1.2rem;
     color: color(primary-darker);
     line-height: 1.5;
-    padding-right: 0;
     @include at-media(desktop) {
-      padding-right: 3rem;
       font-size: $theme-h4-font-size;
       line-height: 2rem;
+      grid-column: 1;
     }
   }
 

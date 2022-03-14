@@ -207,4 +207,10 @@
     $('#views-exposed-form-news-page-1').submit();
   });
 
+  //Our Office - expand all link
+  $('input#expand').click( function() {
+    $('button.usa-accordion__button').attr('aria-expanded', 'true');
+    $('.usa-accordion__content').removeAttr('hidden');
+  });
+
 })(jQuery);

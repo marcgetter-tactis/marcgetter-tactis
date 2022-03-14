@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e428d08d3bdf24f14617fae273508b8b",
+    "content-hash": "e0ea9cb336a319886e929e2680e42dbf",
     "packages": [
         {
             "name": "acquia/acquia_cms",
@@ -18917,6 +18917,15 @@
             "time": "2021-07-21T13:50:14+00:00"
         },
         {
+            "name": "jackmoore/colorbox",
+            "version": "1.6.4",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/jackmoore/colorbox/archive/1.6.4.zip"
+            },
+            "type": "drupal-library"
+        },
+        {
             "name": "justinrainbow/json-schema",
             "version": "5.2.11",
             "source": {
@@ -29705,5 +29714,5 @@
     "platform-overrides": {
         "php": "7.4"
     },
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.2.0"
 }

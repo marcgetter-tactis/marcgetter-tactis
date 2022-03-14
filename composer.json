@@ -143,6 +143,7 @@
         "drupal/xmlsitemap": "^1.2",
         "drush/drush": "^10.6",
         "furf/jquery-ui-touch-punch": "^1.0",
+        "jackmoore/colorbox": "1.6.4",
         "oomphinc/composer-installers-extender": "^1.1 || ^2"
     },
     "config": {
@@ -285,6 +286,18 @@
                     "url": "https://github.com/furf/jquery-ui-touch-punch.git",
                     "type": "git",
                     "reference": "master"
+                }
+            }
+        },
+        "colorbox": {
+            "type": "package",
+            "package": {
+                "name": "jackmoore/colorbox",
+                "version": "1.6.4",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/jackmoore/colorbox/archive/1.6.4.zip",
+                    "type": "zip"
                 }
             }
         }

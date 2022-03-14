@@ -5,35 +5,21 @@ dependencies:
   config:
     - field.field.node.most_wanted.feeds_item
     - field.field.node.most_wanted.field_additional_information
-    - field.field.node.most_wanted.field_age_range
-    - field.field.node.most_wanted.field_aliases
-    - field.field.node.most_wanted.field_anonymous_tip
     - field.field.node.most_wanted.field_caution
-    - field.field.node.most_wanted.field_date_of_birth_used
+    - field.field.node.most_wanted.field_dea_field_office
     - field.field.node.most_wanted.field_description
     - field.field.node.most_wanted.field_details
-    - field.field.node.most_wanted.field_download_poster
-    - field.field.node.most_wanted.field_eyes
-    - field.field.node.most_wanted.field_field_office
-    - field.field.node.most_wanted.field_hair
-    - field.field.node.most_wanted.field_height
+    - field.field.node.most_wanted.field_fbi_field_office
+    - field.field.node.most_wanted.field_locations
+    - field.field.node.most_wanted.field_modified_date
     - field.field.node.most_wanted.field_most_wanted_category
     - field.field.node.most_wanted.field_most_wanted_images
-    - field.field.node.most_wanted.field_nationality
-    - field.field.node.most_wanted.field_occupations
+    - field.field.node.most_wanted.field_most_wanted_url
     - field.field.node.most_wanted.field_other_groups
-    - field.field.node.most_wanted.field_place_of_birth
-    - field.field.node.most_wanted.field_race
     - field.field.node.most_wanted.field_reward
-    - field.field.node.most_wanted.field_scars_and_marks
-    - field.field.node.most_wanted.field_sex
-    - field.field.node.most_wanted.field_submit_a_tip
-    - field.field.node.most_wanted.field_suspects
     - field.field.node.most_wanted.field_uid
-    - field.field.node.most_wanted.field_weight
     - field.field.node.most_wanted.field_your_groups
     - node.type.most_wanted
-    - workflows.workflow.editorial
   module:
     - content_moderation
     - field_group
@@ -78,30 +64,6 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-  field_age_range:
-    type: string_textfield
-    weight: 143
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_aliases:
-    type: string_textfield
-    weight: 122
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_anonymous_tip:
-    type: link_default
-    weight: 141
-    region: content
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
   field_caution:
     type: text_textarea
     weight: 147
@@ -110,9 +72,9 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-  field_date_of_birth_used:
+  field_dea_field_office:
     type: string_textfield
-    weight: 128
+    weight: 155
     region: content
     settings:
       size: 60
@@ -134,45 +96,25 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-  field_download_poster:
-    type: link_default
-    weight: 127
+  field_fbi_field_office:
+    type: options_select
+    weight: 154
     region: content
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
+    settings: {  }
     third_party_settings: {  }
-  field_eyes:
+  field_locations:
     type: string_textfield
-    weight: 131
+    weight: 151
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_field_office:
-    type: link_default
-    weight: 142
+  field_modified_date:
+    type: datetime_timestamp
+    weight: 152
     region: content
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-  field_hair:
-    type: string_textfield
-    weight: 130
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_height:
-    type: string_textfield
-    weight: 132
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   field_most_wanted_category:
     type: entity_reference_autocomplete
@@ -192,43 +134,19 @@ content:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-  field_nationality:
-    type: string_textfield
-    weight: 136
+  field_most_wanted_url:
+    type: link_default
+    weight: 153
     region: content
     settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_occupations:
-    type: string_textfield
-    weight: 145
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
+      placeholder_url: ''
+      placeholder_title: ''
     third_party_settings: {  }
   field_other_groups:
     type: options_select
     weight: 11
     region: content
     settings: {  }
-    third_party_settings: {  }
-  field_place_of_birth:
-    type: string_textfield
-    weight: 129
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_race:
-    type: string_textfield
-    weight: 135
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
   field_reward:
     type: text_textarea
@@ -238,49 +156,9 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-  field_scars_and_marks:
-    type: text_textarea
-    weight: 137
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-  field_sex:
-    type: string_textfield
-    weight: 134
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_submit_a_tip:
-    type: text_textarea
-    weight: 140
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-  field_suspects:
-    type: text_textarea
-    weight: 146
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
   field_uid:
     type: string_textfield
     weight: 124
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_weight:
-    type: string_textfield
-    weight: 133
     region: content
     settings:
       size: 60

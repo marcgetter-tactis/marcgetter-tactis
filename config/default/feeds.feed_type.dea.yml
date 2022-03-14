@@ -1,4 +1,4 @@
-uuid: 7c185386-c0c7-4c0c-9bf6-09ef1b021f95
+uuid: 26ed1d89-43b9-4727-b681-76de17e27168
 langcode: en
 status: true
 dependencies:
@@ -7,16 +7,14 @@ dependencies:
     - core.base_field_override.node.most_wanted.title
     - field.field.node.most_wanted.field_additional_information
     - field.field.node.most_wanted.field_caution
-    - field.field.node.most_wanted.field_description
+    - field.field.node.most_wanted.field_dea_field_office
     - field.field.node.most_wanted.field_details
-    - field.field.node.most_wanted.field_fbi_field_office
     - field.field.node.most_wanted.field_locations
     - field.field.node.most_wanted.field_modified_date
     - field.field.node.most_wanted.field_most_wanted_category
     - field.field.node.most_wanted.field_most_wanted_images
     - field.field.node.most_wanted.field_most_wanted_url
     - field.field.node.most_wanted.field_reward
-    - field.field.node.most_wanted.field_uid
     - node.type.most_wanted
   module:
     - feeds_ex
@@ -40,22 +38,85 @@ third_party_settings:
         source: fugitive_details
         weight: 0
         label: Rewrite
-label: 'FBI Most Wanted'
-id: most_wanted
+      c01ad78c-927e-42c1-811f-650ce5442c8c:
+        find: '<a href='
+        replace: ''
+        case_sensitive: false
+        word_boundaries: false
+        whole: false
+        uuid: c01ad78c-927e-42c1-811f-650ce5442c8c
+        plugin: find_replace
+        source: image
+        weight: -10
+        label: 'Find replace'
+      6fce71aa-fb6c-4bf3-baab-8366e13e5c9b:
+        find: '"'
+        replace: ''
+        case_sensitive: false
+        word_boundaries: false
+        whole: false
+        uuid: 6fce71aa-fb6c-4bf3-baab-8366e13e5c9b
+        plugin: find_replace
+        source: image
+        weight: -9
+        label: 'Find replace'
+      e69f6602-a11f-42dc-8c90-8f3aa13877e3:
+        find: '></a>'
+        replace: ''
+        case_sensitive: false
+        word_boundaries: false
+        whole: false
+        uuid: e69f6602-a11f-42dc-8c90-8f3aa13877e3
+        plugin: find_replace
+        source: image
+        weight: -7
+        label: 'Find replace'
+      b9aebd86-e25f-45e9-ae7b-e0b289b607de:
+        method: rawurldecode
+        uuid: b9aebd86-e25f-45e9-ae7b-e0b289b607de
+        plugin: url_decode
+        source: image
+        weight: -6
+        label: 'URL Decode'
+      717c680a-cd47-44cb-8661-7150dc843e6c:
+        find: '/(?<=\>)(.*?)(?=\<)/'
+        replace: ''
+        limit: null
+        uuid: 717c680a-cd47-44cb-8661-7150dc843e6c
+        plugin: find_replace_regex
+        source: image
+        weight: -8
+        label: 'Find replace REGEX'
+      bc2325b3-9cb8-44c5-979d-c1049f8bf90d:
+        operation: strtoupper
+        uuid: bc2325b3-9cb8-44c5-979d-c1049f8bf90d
+        plugin: convert_case
+        source: title
+        weight: 0
+        label: 'Convert case'
+      4f38075c-e54d-4071-b1ea-3b8ba460c5f6:
+        text: 'Ten Most Wanted Fugitives'
+        uuid: 4f38075c-e54d-4071-b1ea-3b8ba460c5f6
+        plugin: rewrite
+        source: _subjects_
+        weight: 0
+        label: Rewrite
+label: 'DEA Most Wanted'
+id: dea
 description: ''
 help: ''
-import_period: -1
+import_period: 86400
 fetcher: http
 fetcher_configuration:
   auto_detect_feeds: false
   use_pubsubhubbub: false
-  always_download: false
+  always_download: true
   fallback_hub: ''
   request_timeout: 30
 parser: jsonpath
 parser_configuration:
   context:
-    value: '$.items.*'
+    value: '$.*'
   source_encoding:
     - auto
   display_errors: false
@@ -319,23 +380,26 @@ custom_sources:
     label: 'Fugitive Details'
     machine_name: fugitive_details
     type: blank
-  field_offices_0_:
-    value: 'field_offices[0]'
-    label: 'field_offices[0]'
-    machine_name: field_offices_0_
+  path:
+    value: path
+    label: path
+    machine_name: path
+    type: json
+  image:
+    value: image
+    label: image
+    machine_name: image
+    type: json
+  field_offices_dea:
+    value: field_offices
+    label: field_offices
+    machine_name: field_offices_dea
     type: json
 mappings:
   -
     target: title
     map:
       value: title
-    settings:
-      language: null
-    unique: {  }
-  -
-    target: field_uid
-    map:
-      value: uid
     settings:
       language: null
     unique:
@@ -348,16 +412,9 @@ mappings:
       language: ''
       format: full_html
   -
-    target: field_description
-    map:
-      value: description
-    settings:
-      language: ''
-      format: full_html
-  -
     target: field_details
     map:
-      value: details
+      value: description
     settings:
       language: ''
       format: full_html
@@ -392,7 +449,7 @@ mappings:
   -
     target: field_most_wanted_images
     map:
-      uri: _images_original
+      uri: image
       title: ''
     settings:
       language: null
@@ -427,13 +484,14 @@ mappings:
   -
     target: field_most_wanted_url
     map:
-      uri: url
+      uri: path
       title: fugitive_details
     settings:
       language: null
   -
-    target: field_fbi_field_office
+    target: field_dea_field_office
     map:
-      value: field_offices_0_
+      value: field_offices_dea
     settings:
       language: null
+    unique: {  }

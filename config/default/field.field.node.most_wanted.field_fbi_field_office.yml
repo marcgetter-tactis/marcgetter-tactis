@@ -1,21 +1,21 @@
-uuid: f83df6ea-542e-43fa-a7f1-81e3b5942547
+uuid: 3b97969d-e2a5-4a77-9deb-d06b57c3090b
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_suspects
+    - field.storage.node.field_fbi_field_office
     - node.type.most_wanted
   module:
-    - text
-id: node.most_wanted.field_suspects
-field_name: field_suspects
+    - options
+id: node.most_wanted.field_fbi_field_office
+field_name: field_fbi_field_office
 entity_type: node
 bundle: most_wanted
-label: Suspects
+label: 'FBI Field Office'
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: text_long
+field_type: list_string

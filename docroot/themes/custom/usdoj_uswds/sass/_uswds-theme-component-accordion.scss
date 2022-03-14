@@ -83,4 +83,31 @@ Accordion
 
   }
 
+  &.block-offices {
+    margin-top: 0;
+
+    .usa-accordion__item {
+      border: 1px solid $gray-20;
+      border-bottom: none;
+      margin-top: 0;
+      @include at-media(desktop) {
+        border: none;
+      }
+
+      .usa-accordion__button {
+        color: $doj-coolblue;
+      }
+
+      .usa-accordion__content {
+        overflow: inherit;
+        &[hidden] { 
+          display: none;
+    
+          @include at-media(desktop) {
+            display: block;
+          }
+        }
+      }
+    }
+  }
 }

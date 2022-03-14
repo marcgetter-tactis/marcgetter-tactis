@@ -41,7 +41,9 @@ bundle ? 'block--type-' ~ bundle|clean_class,
 view_mode ? 'block--view-mode-' ~ view_mode|clean_class,
 ]
 %}
+
 <div{{ attributes.addClass(classes) }}>
+
   {{ title_prefix }}
   {% if label %}
   <h2{{ title_attributes }} class="block-title">{{ label }}</h2>
@@ -51,3 +53,5 @@ view_mode ? 'block--view-mode-' ~ view_mode|clean_class,
   {{ content }}      
   {% endblock %}
 </div>
+
+

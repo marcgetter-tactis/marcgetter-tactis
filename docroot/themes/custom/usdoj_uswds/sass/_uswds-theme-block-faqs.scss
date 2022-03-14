@@ -1,0 +1,111 @@
+/*
+* * * * * ==============================
+* * * * * ==============================
+* * * * * ==============================
+* * * * * ==============================
+========================================
+========================================
+========================================
+----------------------------------------
+USWDS THEME CUSTOM STYLES
+----------------------------------------
+!! Copy this file to your project's
+   sass root. Don't edit the version
+   in node_modules.
+----------------------------------------
+Tabbed Block on Homepage
+
+----------------------------------------
+*/
+//Local Mixins
+@mixin pseudo-position {
+  position: absolute;
+  margin-left: -2em;
+}
+@mixin content-position {
+  position: relative;
+  padding-left: 3.5em;
+}
+
+
+.faq-mainWrapper {
+  h3 {
+    @extend h2;
+    margin-bottom: .5em;
+    @include gold-lines(1.25rem, auto);
+  }
+
+  //Toggling Button
+  .accordion-grouping {
+
+    &__expandBtn {
+      text-align: right;
+
+      .accordion-grouping__btn {
+        margin-right: 0;
+      }
+
+    }
+  }
+
+  //CTA-Button
+  .field_cta a {
+    width: 12.5rem;
+    display: block;
+    text-align: center;
+    margin: 2rem auto 1rem;
+    padding: 0.75rem 1.25rem;
+    border: 2px solid $doj-coolblue;
+    border-radius: 0.25rem;
+    font-weight: bold;
+    color: $doj-coolblue;
+    text-decoration: none;
+
+    &:hover {
+      color: white;
+    }
+
+    &:active {
+      background: $doj-darkblue;
+      border-color: $doj-darkblue;
+    }
+
+  }
+
+
+  //Actual FAQs
+
+  .paragraph-questions {
+    &.paragraph-faqs {
+      padding: 1rem 0;
+
+      .usa-accordion {
+        &__heading {
+          BUTTON {
+            @include content-position;
+
+            &::before {
+              content: "Q.";
+              @include pseudo-position;
+
+            }
+
+          }
+        }
+
+        &__content {
+          @include content-position;
+
+
+          &::before {
+            content: "A.";
+            @include pseudo-position;
+
+          }
+        }
+
+      }
+
+    }
+  }
+}

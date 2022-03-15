@@ -586,6 +586,7 @@ details {
 
 .image-gallery-node {
   .slick {
+    margin-bottom: 1rem;
     .media__icon--litebox {
       display: none;
     }
@@ -650,37 +651,23 @@ details {
     width: 25px;
     height: 25px;
     background-color: transparent;
-    background: none;
-    border-radius: 50%;
-    border: 2px solid black;
+    border: none;
     color: transparent;
     cursor: pointer;
-    filter: invert(78%) sepia(91%) saturate(727%) hue-rotate(328deg) brightness(97%) contrast(108%);
-    outline: inherit;
     pointer-events: all;
     bottom: -2.25rem;
-
-    &::before {
-      content: "";
-      background-image: url('../assets/img/chevron-right.svg');
-      background-size: 7px;
-      background-repeat: no-repeat;
-      background-position: center;
-      height: 100%;
-      display: block;
-    }
+    background-size: 25px;
+    background-repeat: no-repeat;
   }
 
   #cboxPrevious {
     right: 2rem;
-
-    &::before {
-      transform: rotate(180deg);
-    }
+    background-image: url('../images/doj-gallery-yellow-left-arrow.svg');
   }
 
   #cboxNext {
     right: 0;
+    background-image: url('../images/doj-gallery-yellow-right-arrow.svg');
   }
 
   #cboxClose {
@@ -690,11 +677,10 @@ details {
     width: 25px;
     height: 25px;
     background-color: transparent;
-    border: 2px solid white;
-    border-radius: 50%;
+    border: none;
     color: transparent;
-    background-image: url('../assets/img/close-white-alt.svg');
-    background-size: 10px;
+    background-image: url('../images/doj-gallery-white-close.svg');
+    background-size: 25px;
     background-repeat: no-repeat;
     background-position: center;
     pointer-events: all;
@@ -711,8 +697,8 @@ details {
     #cboxPrevious,
     #cboxNext {
       @include center-ver();
-      width: 50px;
-      height: 50px;
+      width: 25px;
+      height: 25px;
       border-width: 3px;
 
       &::before {
@@ -720,6 +706,33 @@ details {
       }
     }
 
+    #cboxPrevious {
+      left: -2.5rem;
+      right: 0;
+    }
+
+    #cboxNext {
+      right: -2.5rem;
+    }
+
+    #cboxClose {
+      width: 25px;
+      height: 25px;
+      background-size: 25px;
+      top: -4rem;
+      right: -2.5rem;
+    }
+  }
+
+  @include at-media(desktop) {
+    #cboxPrevious, 
+    #cboxNext,
+    #cboxClose {
+      width: 50px;
+      height: 50px;
+      background-size: 50px;
+    }
+    
     #cboxPrevious {
       left: -4rem;
       right: 0;
@@ -730,11 +743,6 @@ details {
     }
 
     #cboxClose {
-      width: 50px;
-      height: 50px;
-      background-size: 22px;
-      border-width: 3px;
-      top: -4rem;
       right: -4rem;
     }
   }

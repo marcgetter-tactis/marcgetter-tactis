@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1c7ed35e19a47a8ffc181d48015b1484",
+    "content-hash": "8db7efc7adfa57eb2b4618ee8be70ffc",
     "packages": [
         {
             "name": "acquia/acquia_cms",
@@ -29121,6 +29121,16 @@
             "time": "2021-07-28T10:34:58+00:00"
         },
         {
+            "name": "thinktandem/migrate_booster",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thinktandem/migrate_booster.git",
+                "reference": "main"
+            },
+            "type": "drupal-module"
+        },
+        {
             "name": "twig/extensions",
             "version": "v1.5.4",
             "source": {
@@ -29912,5 +29922,5 @@
     "platform-overrides": {
         "php": "7.4"
     },
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.2.0"
 }

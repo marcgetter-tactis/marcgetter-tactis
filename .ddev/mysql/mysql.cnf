@@ -1,0 +1,16 @@
+[mysqld]
+innodb_log_file_size           = 128M
+innodb_buffer_pool_instances   = 1
+query_cache_limit              = 128M
+query_cache_min_res_unit       = 8192
+query_cache_type               = 0
+query_cache_size               = 0
+join_buffer_size               = 8M
+max_allowed_packet             = 32M
+max_connections                = 1000
+max_heap_table_size            = 128M
+open_files_limit               = 1048576
+performance_schema             = ON
+sort_buffer_size               = 8M
+table_open_cache               = 1048575
+tmp_table_size                 = 128M

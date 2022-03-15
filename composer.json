@@ -147,7 +147,8 @@
         "drush/drush": "^10.6",
         "furf/jquery-ui-touch-punch": "^1.0",
         "jackmoore/colorbox": "1.6.4",
-        "oomphinc/composer-installers-extender": "^1.1 || ^2"
+        "oomphinc/composer-installers-extender": "^1.1 || ^2",
+        "thinktandem/migrate_booster": "^1.0"
     },
     "config": {
         "platform": {
@@ -301,6 +302,19 @@
                 "dist": {
                     "url": "https://github.com/jackmoore/colorbox/archive/1.6.4.zip",
                     "type": "zip"
+                }
+            }
+        },
+        "migrate_booster": {
+            "type": "package",
+            "package": {
+                "name": "thinktandem/migrate_booster",
+                "version": "1.0.0",
+                "type": "drupal-module",
+                "source": {
+                    "url": "https://github.com/thinktandem/migrate_booster.git",
+                    "type": "git",
+                    "reference": "main"
                 }
             }
         }

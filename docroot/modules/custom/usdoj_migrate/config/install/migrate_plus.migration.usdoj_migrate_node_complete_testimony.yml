@@ -1,0 +1,75 @@
+langcode: en
+status: true
+dependencies: {  }
+id: usdoj_migrate_node_complete_testimony
+class: Drupal\node\Plugin\migrate\D7NodeTranslation
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+  - doj
+migration_group: node
+label: 'Node complete (Testimony)'
+source:
+  plugin: d7_node_complete
+  node_type: testimony
+process:
+  nid: tnid
+  vid: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title: title
+  uid: node_uid
+  status: status
+  created: created
+  changed: changed
+  promote: promote
+  sticky: sticky
+  revision_uid: revision_uid
+  revision_log: log
+  revision_timestamp: timestamp
+  content_translation_source: source_langcode
+  comment_node_testimony/0/status: comment
+  field_committee:
+    -
+      plugin: sub_process
+      source: field_testimony_committee
+      process:
+        target_id: tid
+  field_date:
+    -
+      plugin: sub_process
+      source: field_testimony_date
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: Y-m-d
+          source: value
+  field_session:
+    -
+      plugin: sub_process
+      source: field_testimony_session
+      process:
+        target_id: tid
+  field_subject: field_testimony_subject
+  field_witness: field_testimony_witness
+  field_archived: field_archived
+destination:
+  plugin: 'entity_complete:node'
+  translations: true
+  default_bundle: testimony
+migration_dependencies:
+  required:
+    - usdoj_migrate_user
+    - usdoj_migrate_node_type
+    - usdoj_migrate_language
+  optional:
+    - usdoj_migrate_field_instance
+    - usdoj_migrate_metatag_field_node
+    - usdoj_migrate_metatag_field_instance_node_testimony
+    - usdoj_migrate_metatag_field_instance_widget_settings_node_testimony

@@ -11,7 +11,7 @@ id: block_content.featured_content.field_cta
 field_name: field_cta
 entity_type: block_content
 bundle: featured_content
-label: CTA
+label: 'Calll To Action'
 description: ''
 required: false
 translatable: true

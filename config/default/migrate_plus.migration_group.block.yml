@@ -1,0 +1,10 @@
+uuid: de4c866e-3790-4467-9c7a-7765803ac95b
+langcode: en
+status: true
+dependencies: {  }
+id: block
+label: block
+description: ''
+source_type: null
+module: null
+shared_configuration: null

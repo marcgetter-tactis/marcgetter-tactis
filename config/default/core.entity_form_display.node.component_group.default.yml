@@ -32,13 +32,12 @@ third_party_settings:
   field_group:
     group_organization:
       children:
-        - parent_group
         - field_your_groups
         - field_other_groups
       label: Organization
       region: content
       parent_name: ''
-      weight: 1
+      weight: 2
       format_type: fieldset
       format_settings:
         classes: ''
@@ -59,7 +58,7 @@ content:
     third_party_settings: {  }
   field_abbreviation:
     type: string_textfield
-    weight: 3
+    weight: 4
     region: content
     settings:
       size: 60
@@ -67,7 +66,7 @@ content:
     third_party_settings: {  }
   field_abbreviation_title:
     type: string_textfield
-    weight: 4
+    weight: 5
     region: content
     settings:
       size: 60
@@ -91,14 +90,14 @@ content:
     third_party_settings: {  }
   field_logo:
     type: media_library_widget
-    weight: 5
+    weight: 6
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_more_events:
     type: link_default
-    weight: 13
+    weight: 14
     region: content
     settings:
       placeholder_url: ''
@@ -106,7 +105,7 @@ content:
     third_party_settings: {  }
   field_organization_type:
     type: options_select
-    weight: 2
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -124,10 +123,10 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 14
+    weight: 1
     region: content
     settings:
-      include_locked: true
+      include_locked: false
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
@@ -145,7 +144,7 @@ content:
     third_party_settings: {  }
   more_galleries:
     type: link_default
-    weight: 10
+    weight: 11
     region: content
     settings:
       placeholder_url: ''
@@ -153,7 +152,7 @@ content:
     third_party_settings: {  }
   more_news:
     type: link_default
-    weight: 11
+    weight: 12
     region: content
     settings:
       placeholder_url: ''
@@ -161,7 +160,7 @@ content:
     third_party_settings: {  }
   more_videos:
     type: link_default
-    weight: 12
+    weight: 13
     region: content
     settings:
       placeholder_url: ''
@@ -213,6 +212,11 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete

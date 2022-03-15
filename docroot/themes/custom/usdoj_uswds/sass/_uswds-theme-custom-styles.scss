@@ -241,6 +241,10 @@ details {
 
 }
 
+.usa-button--active:hover {
+  background-color: $blue-60v;
+}
+
 .usa-button--outline {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -423,6 +427,13 @@ details {
 
 .node-notes {
   margin-bottom: $node-field-spacing;
+  .field_notes p {
+    font-size: $theme-h6-font-size;
+    color: color(primary-darker);
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid color(warning);
+  }
 }
 
 .node-body {

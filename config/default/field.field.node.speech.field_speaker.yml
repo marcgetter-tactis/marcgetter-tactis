@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.node.field_speaker
     - node.type.speech
-    - node.type.staff_profile
 id: node.speech.field_speaker
 field_name: field_speaker
 entity_type: node
@@ -17,13 +16,10 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:node'
+  handler: views
   handler_settings:
-    target_bundles:
-      staff_profile: staff_profile
-    sort:
-      field: _none
-      direction: ASC
-    auto_create: false
-    auto_create_bundle: ''
+    view:
+      view_name: organization_staff
+      display_name: entity_reference_1
+      arguments: {  }
 field_type: entity_reference

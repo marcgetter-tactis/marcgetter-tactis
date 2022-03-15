@@ -16,6 +16,7 @@ dependencies:
     - datetime
     - ds
     - slick
+    - text
     - user
 id: node.image_gallery.default
 targetEntityType: node
@@ -25,7 +26,22 @@ content:
   content_moderation_control:
     settings: {  }
     third_party_settings: {  }
+    weight: 3
+    region: content
+  field_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
     weight: 2
+    region: content
+  field_component:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
     region: content
   field_date:
     type: datetime_default
@@ -115,12 +131,10 @@ content:
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 3
+    weight: 4
     region: content
 hidden:
   entitygroupfield: true
-  field_body: true
-  field_component: true
   field_other_groups: true
   field_related: true
   field_your_groups: true

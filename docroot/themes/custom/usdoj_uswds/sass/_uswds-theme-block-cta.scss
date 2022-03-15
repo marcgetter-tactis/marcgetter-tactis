@@ -70,16 +70,22 @@
 
       //org chart icon
       &.org_chart {
-        background-image: url('/themes/custom/usdoj_uswds/assets/img/doj-icon-offices-org-chart.svg');
+        background-image: url('../images/doj-icon-offices-org-chart.svg');
         background-position: .5rem;
         padding-left: 2.5rem;
+        &:hover {
+          background-image: url('../images/doj-icon-offices-org-chart-hover.svg');
+        }
       }
 
       //pdf icon
       &.pdf {
-        background-image: url('/themes/custom/usdoj_uswds/assets/img/doj-icon-offices-pdf.svg');
+        background-image: url('../images/doj-icon-offices-pdf.svg');
         background-position: .5rem;
         padding-left: 2.5rem;
+        &:hover {
+          background-image: url('../images/doj-icon-offices-pdf-hover.svg');
+        }
       }
     }
   }

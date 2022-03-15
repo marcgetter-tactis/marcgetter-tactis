@@ -999,6 +999,9 @@ details {
     a {
       color: $blue-60v;
       font-weight: 600;
+      &:hover {
+        color: color(primary-darker);
+      }
     }
   }
 }

@@ -662,12 +662,12 @@ details {
 
   #cboxPrevious {
     right: 2rem;
-    background-image: url('../assets/img/doj-gallery-yellow-left-arrow.svg');
+    background-image: url('../images/doj-gallery-yellow-left-arrow.svg');
   }
 
   #cboxNext {
     right: 0;
-    background-image: url('../assets/img/doj-gallery-yellow-right-arrow.svg');
+    background-image: url('../images/doj-gallery-yellow-right-arrow.svg');
   }
 
   #cboxClose {
@@ -679,23 +679,13 @@ details {
     background-color: transparent;
     border: none;
     color: transparent;
-    background-image: url('../assets/img/doj-gallery-white-close.svg');
+    background-image: url('../images/doj-gallery-white-close.svg');
     background-size: 25px;
     background-repeat: no-repeat;
     background-position: center;
     pointer-events: all;
     cursor: pointer;
 
-  }
-
-  @include at-media(desktop) {
-    #cboxPrevious, 
-    #cboxNext,
-    #cboxClose {
-      width: 50px;
-      height: 50px;
-      background-size: 50px;
-    }
   }
 
   @include at-media(tablet-lg) {
@@ -731,6 +721,29 @@ details {
       background-size: 25px;
       top: -4rem;
       right: -2.5rem;
+    }
+  }
+
+  @include at-media(desktop) {
+    #cboxPrevious, 
+    #cboxNext,
+    #cboxClose {
+      width: 50px;
+      height: 50px;
+      background-size: 50px;
+    }
+    
+    #cboxPrevious {
+      left: -4rem;
+      right: 0;
+    }
+
+    #cboxNext {
+      right: -4rem;
+    }
+
+    #cboxClose {
+      right: -4rem;
     }
   }
 

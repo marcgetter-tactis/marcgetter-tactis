@@ -21,7 +21,6 @@ dependencies:
     - taxonomy
     - text
     - user
-    - views_autocomplete_filters
 id: most_wanted
 label: 'Most Wanted'
 module: views
@@ -982,11 +981,11 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: 'FBI Field Office'
+          label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: "{% if field_fbi_field_office is empty %}\r\n    {{ field_fbi_field_office }}\r\n{% else %}\r\n  FBI Field Office: \r\n{% endif %}"
             make_link: false
             path: ''
             absolute: false
@@ -1015,13 +1014,13 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
           hide_empty: true
-          empty_zero: false
+          empty_zero: true
           hide_alter_empty: true
           click_sort_column: value
           type: list_default
@@ -1044,11 +1043,11 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: 'DEA Field Office'
+          label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: "{% if field_dea_field_office is empty %}\r\n    \r\n{% else %}\r\n  DEA Field Office: {{ field_dea_field_office }}\r\n{% endif %}"
             make_link: false
             path: ''
             absolute: false
@@ -1077,13 +1076,13 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
           hide_empty: true
-          empty_zero: false
+          empty_zero: true
           hide_alter_empty: true
           click_sort_column: value
           type: string

@@ -1,16 +1,16 @@
-uuid: a145b550-6c9d-4101-b5d6-6ec854a2b872
+uuid: 079bc2e9-b0df-47b1-94c1-9d7cef8bcb2a
 langcode: en
 status: true
 dependencies:
   module:
-    - address_phonenumber
     - node
-id: node.field_address_phone
-field_name: field_address_phone
+    - usdoj_utilities
+id: node.field_location_address
+field_name: field_location_address
 entity_type: node
 type: address_phone_number_item
 settings: {  }
-module: address_phonenumber
+module: usdoj_utilities
 locked: false
 cardinality: 1
 translatable: true

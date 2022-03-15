@@ -71,6 +71,7 @@
 */
 #}
 
+
 <article{{ attributes.addClass("image-gallery-node") }}>
   <div class="node-content">
 
@@ -83,11 +84,18 @@
     <div class="node-date">{{ content.field_date }}</div>
     
     <div{{ content_attributes }}>
-      {{ content|without('field_date') }}
+      {{ content|without('field_date', 'field_component') }}
     </div>
-    
+   
     <div class="node-updated-date">Updated {{ node.changed.value|date("F j, Y") }}</div>
 
     <hr>
+  
+     <div class="node-topics margin-bottom-7">
+      <div class="label text-bold">Component or Office</div>
+      {{ content.field_component }}
+    </div>
+  
+    
   </div>
 </article>

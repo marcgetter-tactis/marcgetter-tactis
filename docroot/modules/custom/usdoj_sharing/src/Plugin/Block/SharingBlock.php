@@ -6,7 +6,6 @@ use Drupal\Core\Block\BlockBase;
 use Drupal\Core\URL;
 use Symfony\Cmf\Component\Routing\RouteObjectInterface;
 
-
 /**
  * Provides a 'Example: uppercase this please' block.
  *
@@ -23,11 +22,12 @@ class SharingBlock extends BlockBase {
   public function build() {
 
     $url = Url::fromRoute('<current>');
+    // phpcs:ignore
     $request = \Drupal::request();
     if ($route = $request->attributes->get(RouteObjectInterface::ROUTE_OBJECT)) {
+      // phpcs:ignore
       $title = \Drupal::service('title_resolver')->getTitle($request, $route);
     }
-
 
     return [
       '#theme' => 'sharing_block',

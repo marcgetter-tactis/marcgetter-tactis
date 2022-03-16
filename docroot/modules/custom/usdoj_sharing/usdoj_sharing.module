@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function usdoj_sharing_theme() {
+  return [
+    'sharing_block' => [
+      'variables' => [
+        'title' => NULL,
+        'url' => NULL,
+      ],
+    ],
+  ];
+}

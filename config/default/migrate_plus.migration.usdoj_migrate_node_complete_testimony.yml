@@ -1,9 +1,7 @@
-uuid: 25816cb8-c68e-4323-bd14-e0e123ac2612
+uuid: 2bd05fc3-2128-4709-a92d-85b9bfb862b0
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: XqzWXwri_ZjwY-4ZZr1X64_afe1B5jvMJSFaWjAZZEI
 id: usdoj_migrate_node_complete_testimony
 class: Drupal\node\Plugin\migrate\D7NodeTranslation
 field_plugin_method: null
@@ -26,8 +24,15 @@ process:
       source: language
       default_value: und
   title: title
-  uid: node_uid
-  status: status
+  uid: uid
+  status:
+    -
+      plugin: default_value
+      default_value: 1
+  moderation_state:
+    -
+      plugin: default_value
+      default_value: published
   created: created
   changed: changed
   promote: promote
@@ -69,8 +74,8 @@ destination:
 migration_dependencies:
   required:
     - usdoj_migrate_user
-    - usdoj_migrate_node_type
     - usdoj_migrate_language
+    - usdoj_migrate_taxonomy_terms
   optional:
     - usdoj_migrate_field_instance
     - usdoj_migrate_metatag_field_node

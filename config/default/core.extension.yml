@@ -218,6 +218,7 @@ module:
   usdoj_media: 0
   usdoj_migrate: 0
   usdoj_most_wanted: 0
+  usdoj_sharing: 0
   usdoj_utilities: 0
   user: 0
   username_enumeration_prevention: 0

@@ -1,0 +1,5 @@
+name: 'USDOJ Sharing Module'
+description: 'Creates a share block to be placed on pages.'
+package: 'USDOJ'
+type: module
+core_version_requirement: ^9

@@ -29,6 +29,7 @@ function usdoj_migrate_uninstall() {
     'migrate_plus.migration.usdoj_migrate_node_complete_podcast',
     'migrate_plus.migration.usdoj_migrate_node_complete_press_release',
     'migrate_plus.migration.usdoj_migrate_node_complete_speech',
+    'migrate_plus.migration.usdoj_migrate_node_complete_staff_profile',
     'migrate_plus.migration.usdoj_migrate_node_complete_testimony',
     'migrate_plus.migration.usdoj_migrate_taxonomy_terms',
     'migrate_plus.migration.usdoj_migrate_taxonomy_vocabulary',

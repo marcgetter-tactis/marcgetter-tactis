@@ -1,4 +1,4 @@
-uuid: a775bee4-f32e-4641-ad32-1f46e55db89d
+uuid: bb00be68-c155-47cb-b4f8-9bde563eb948
 langcode: en
 status: true
 dependencies:
@@ -12,7 +12,7 @@ third_party_settings:
   geocoder_field:
     method: geocode
     weight: 0
-    field: field_location
+    field: moderation_state
     skip_not_empty_value: false
     disabled: true
     hidden: false
@@ -24,6 +24,8 @@ third_party_settings:
       handling: preserve
       status_message: true
       log: true
+    reverse_geocode:
+      field: ''
 id: node.location.field_latlong
 field_name: field_latlong
 entity_type: node

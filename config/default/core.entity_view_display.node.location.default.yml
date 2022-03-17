@@ -19,6 +19,7 @@ dependencies:
     - field.field.node.location.field_your_groups
     - node.type.location
   module:
+    - geofield
     - link
     - text
     - usdoj_utilities
@@ -41,6 +42,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 3
+    region: content
+  field_latlong:
+    type: geofield_default
+    label: above
+    settings:
+      output_format: wkt
+      output_escape: true
+    third_party_settings: {  }
+    weight: 6
     region: content
   field_link:
     type: link
@@ -66,7 +76,6 @@ hidden:
   field_district: true
   field_end_date: true
   field_invisible: true
-  field_latlong: true
   field_location_language: true
   field_other_groups: true
   field_start_date: true

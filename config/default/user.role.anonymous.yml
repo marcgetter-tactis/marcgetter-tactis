@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - legal
+    - media
     - system
 _core:
   default_config_hash: KYARbYeGRZ-INq-rg4NeHiuEYecKAgslhGiPztbR-fY
@@ -37,5 +38,6 @@ permissions:
   - 'view api_v1 vacancy_announcements retrieve documentation'
   - 'view field_image_attribution'
   - 'view files'
+  - 'view media'
   - 'view own field_image_attribution'
   - 'view services documentation'

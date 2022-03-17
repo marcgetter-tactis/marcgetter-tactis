@@ -22,6 +22,7 @@ dependencies:
     - content_moderation
     - datetime
     - field_group
+    - geofield
     - link
     - path
     - scheduler
@@ -89,6 +90,13 @@ content:
     weight: 13
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_latlong:
+    type: geofield_latlon
+    weight: 27
+    region: content
+    settings:
+      html5_geolocation: false
     third_party_settings: {  }
   field_link:
     type: link_default
@@ -230,5 +238,4 @@ content:
     third_party_settings: {  }
 hidden:
   entitygroupfield: true
-  field_latlong: true
   field_uid: true

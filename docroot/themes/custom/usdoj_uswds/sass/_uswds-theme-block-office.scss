@@ -7,9 +7,10 @@
   .field_heading {
     font-size: $theme-h4-font-size;
     font-weight: bold;
-    color: $doj-coolblue;
+    color: color(primary-darker);
     @include at-media(desktop) {
       margin-bottom: 3rem;
+      color: $doj-coolblue;
     }
   }
   

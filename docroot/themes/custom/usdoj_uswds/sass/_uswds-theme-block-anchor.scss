@@ -1,5 +1,8 @@
 .block-anchor {
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
+  @include at-media(desktop) {
+    margin-bottom: 4rem;
+  }
   
   > div {
     @include at-media(desktop) {

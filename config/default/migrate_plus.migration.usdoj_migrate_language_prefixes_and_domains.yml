@@ -1,9 +1,7 @@
-uuid: 743e6354-1a82-4c76-bc2a-08081ae6ea2d
+uuid: c2c59c50-c66a-4d7e-9aa6-ba17888813a6
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: q2T_hEfQ9YxDqNCc5VusyF8s6RztMPvJLDctUtgNJ5U
 id: usdoj_migrate_language_prefixes_and_domains
 class: Drupal\migrate\Plugin\Migration
 field_plugin_method: null
@@ -11,6 +9,7 @@ cck_plugin_method: null
 migration_tags:
   - 'Drupal 7'
   - Configuration
+  - doj
 migration_group: language
 label: 'Language prefixes and domains'
 source:

@@ -237,7 +237,8 @@
         },
         "patches": {
             "drupal/core": {
-                "Workaround for Call to a member function getLabel() after enabling layout_builder": "https://www.drupal.org/files/issues/2020-04-08/2985882-field-85.patch"
+                "Workaround for Call to a member function getLabel() after enabling layout_builder": "https://www.drupal.org/files/issues/2020-04-08/2985882-field-85.patch",
+                "Filter published nodes only for complete node migrations": "patches/filter_published_nodes_only.patch"
             },
             "drupal/og": {
                 "Allow default profile delete ": "patches/mg_og.patch"

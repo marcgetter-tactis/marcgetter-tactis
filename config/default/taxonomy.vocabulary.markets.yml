@@ -1,0 +1,8 @@
+uuid: ebd41db2-3f3a-4d2f-bbf6-ddc0ebbcd5c4
+langcode: en
+status: true
+dependencies: {  }
+name: Markets
+vid: markets
+description: ''
+weight: 0

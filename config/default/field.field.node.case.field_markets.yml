@@ -1,29 +1,29 @@
-uuid: 3120b22a-c557-4e97-b792-0586267234bf
+uuid: f7636f71-ac5c-4a6b-aa8c-e504d3a67013
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_documents
+    - field.storage.node.field_markets
     - node.type.case
-    - node.type.case_document
-id: node.case.field_documents
-field_name: field_documents
+    - taxonomy.vocabulary.markets
+id: node.case.field_markets
+field_name: field_markets
 entity_type: node
 bundle: case
-label: 'Case Documents'
+label: Markets
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:node'
+  handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      case_document: case_document
+      markets: markets
     sort:
-      field: _none
-      direction: ASC
+      field: name
+      direction: asc
     auto_create: false
     auto_create_bundle: ''
 field_type: entity_reference

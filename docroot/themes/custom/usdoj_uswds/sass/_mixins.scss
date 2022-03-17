@@ -71,3 +71,80 @@
     margin: $margin-top-bottom $margin-left-right;
   }
 }
+
+@mixin menu-initial-bg-caret-insert {
+  //use in combination with @mixin insert-menu-bg-caret
+  content: "";
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background-repeat: no-repeat;
+  background-size: 0.4rem;
+}
+
+@mixin insert-menu-bg-caret($position) {
+  background-image: url("../assets/img/chevron-right-white.svg");
+  #{$position}: 1.25rem;
+  @if $position == "right" {
+  background-position: right 0 center;
+  }
+  @if $position == "left" {
+    background-position: center center;
+    border-radius: 50%;
+    border: 1px solid white;
+    transform: rotate(180deg) translate(0, 50%);
+  }
+}
+
+@mixin menu-button-with-chevron-horizontal {
+  &.usa-accordion__button {
+    &[aria-expanded] {
+      position: relative;
+      background-image: none;
+      width: 100%;
+    }
+
+    &[aria-expanded="false"]::after,
+    &[aria-expanded="true"]::before {
+      @include menu-initial-bg-caret-insert;
+    }
+
+    &[aria-expanded="false"]::after {
+      background-image: url("../assets/img/chevron-right-white.svg");
+      right: 1.25rem;
+      background-position: right 0 center;
+    }
+
+    &[aria-expanded="true"] {
+      text-align: center;
+    }
+
+    &[aria-expanded="true"]::before {
+      @include insert-menu-bg-caret("left")
+    }
+  }
+}
+
+@mixin menu-button-with-chevron-vertical {
+    color: white;
+    font-size: 0.94rem;
+    height: 100%;
+
+    &:hover {
+      color: $doj-darkblue;
+    }
+    &[aria-expanded="false"] {
+      @include add-background-svg("usa-icons-bg/expand_more--white");
+
+      &:hover {
+        @include add-background-svg("doj-icon-expand_more--doj-darkblue", "../images");
+      }
+    }
+    &[aria-expanded="true"] {
+      @include add-background-svg("doj-icon-expand_less--doj-darkblue", "../images");
+      background-color: $theme-color-accent-warm;
+      color: $doj-darkblue;
+    }
+}

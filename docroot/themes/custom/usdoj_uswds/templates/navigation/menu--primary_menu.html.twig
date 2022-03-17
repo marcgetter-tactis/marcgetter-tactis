@@ -22,19 +22,18 @@
 {% import _self as menus %}
 {% import '@usdoj_uswds/macros/usdoj_uswds_macros.twig'as usdojMacros %}
 
-
 {#
 We call a macro which calls itself to render the full tree.
 @see http://twig.sensiolabs.org/doc/tags/macro.html
 #}
-{{ menus.menu_links(items, 0, megamenu, 0, NULL, duplicate_parent, NULL, mega_display_second, attributes) }}
+{% block menu_arguments %}
+    {{ menus.menu_links(items, 0, megamenu, 0, NULL, duplicate_parent, NULL, mega_display_second, attributes, 0) }}
+{% endblock %}
 
-{% macro menu_links(items, menu_level, megamenu, button_id, parent, duplicate_parent, region, mega_display_second, attributes) %}
-
+{% macro menu_links(items, menu_level, megamenu, button_id, parent, duplicate_parent, region, mega_display_second, attributes, menu_identifier_class = "menu-primary") %}
     {% set childHasImage = null %}
 
     {% import _self as menus %}
-
 
     {% if parent.url.getOption('attributes') %}
         {% set link_attributes = create_attribute(parent.url.getOption('attributes')) %}
@@ -50,11 +49,11 @@ We call a macro which calls itself to render the full tree.
         {% endfor %}
 
         {% if menu_level == 0 %}
-            <ul class="usa-nav__primary usa-accordion margin-0 menu_level__0" role="navigation">
+            <ul class="usa-nav__primary usa-accordion {{ menu_identifier_class|clean_class }} margin-0 menu_level__0" role="navigation">
 
         {% elseif megamenu and menu_level == 1 and childHasImage %}
 
-            <div id="extended-mega-nav-section-{{ button_id }}" class="usa-nav__submenu usa-megamenu menu_level__1" hidden="">
+            <div id="extended-mega-nav-section-{{ menu_identifier_class|clean_class }}-{{ button_id }}" class="usa-nav__submenu usa-megamenu menu_level__1" hidden="">
             {% if duplicate_parent %}
                 <div class="grid-row grid-gap-4">
                     <div class="desktop:grid-col-3">
@@ -73,7 +72,7 @@ We call a macro which calls itself to render the full tree.
             </div>
 
         {% elseif megamenu and menu_level == 1 and not childHasImage %}
-            <div id="basic-nav-section-{{ button_id }}" class="usa-nav__submenu menu_level__1" hidden="">
+            <div id="basic-nav-section-{{ menu_identifier_class|clean_class }}-{{ button_id }}" class="usa-nav__submenu menu_level__1" hidden="">
             {% if duplicate_parent %}
                 <div class="grid-row grid-gap-4">
                     <div class="desktop:grid-col-fill">
@@ -92,7 +91,7 @@ We call a macro which calls itself to render the full tree.
             </div>
 
         {% else %}
-            <ul id="basic-nav-section-{{ button_id }}" class="usa-nav__submenu{% if menu_level > 1 %}-list{% endif %}"{% if menu_level == 1  %} hidden=""{% endif %}>
+            <ul id="basic-nav-section-{{ menu_identifier_class|clean_class }}-{{ button_id }}" class="usa-nav__submenu{% if menu_level > 1 %}-list{% endif %}"{% if menu_level == 1  %} hidden=""{% endif %}>
                 {% if duplicate_parent and megamenu == 0 %}
                     <li class="usa-nav__submenu-item">
                         {{ link_attributes }}
@@ -135,13 +134,13 @@ We call a macro which calls itself to render the full tree.
 {#                    </div>#}
 {#                {% endif %}#}
             {% else %}
-                <li class="{% if menu_level == 0 %}usa-nav__primary-item{% else %}usa-nav__submenu-item{% endif %}">
+                <li class="{% if menu_level == 0 %}usa-nav__primary-item{% else %}usa-nav__submenu-item {{ item.content.menuLinkHasImage? "image_attached" }}{% endif %}">
             {% endif %}
 
             {% if menu_level == 0 and item.below %}
                 <button class="usa-accordion__button usa-nav__link {% if item.in_active_trail %}usa-current{% endif %}"
                     aria-expanded="false"
-                    aria-controls="{% if megamenu and item.content.childMenuLinkHasImage  %}extended-mega-nav-section-{% else %}basic-nav-section-{% endif %}{{ loop.index }}">
+                    aria-controls="{% if megamenu and item.content.childMenuLinkHasImage  %}extended-mega-nav-section-{{ menu_identifier_class|clean_class }}-{% else %}basic-nav-section-{{ menu_identifier_class|clean_class }}-{% endif %}{{ loop.index }}">
                     <span>{{ item.title }}</span>
                 </button>
             {% endif %}
@@ -149,7 +148,7 @@ We call a macro which calls itself to render the full tree.
             {# Original Line. Commented out to dispable menu_level => 2   #}
             {# {% if item.below and ((megamenu and menu_level == 1) or menu_level == 0) %}#}
             {% if item.below and menu_level == 0 %}
-                {{ menus.menu_links(item.below, menu_level + 1, megamenu, loop.index, item, duplicate_parent, NULL, mega_display_second, attributes) }}
+                {{ menus.menu_links(item.below, menu_level + 1, megamenu, loop.index, item, duplicate_parent, NULL, mega_display_second, attributes,menu_identifier_class) }}
             {% else %}
                 {% if megamenu and menu_level == 1 %}
                     <div class="usa-nav__submenu-item {{ item.content.menuLinkHasImage ? "menu_link_imaged" :"no_menu_link_imaged" }}">
@@ -162,11 +161,12 @@ We call a macro which calls itself to render the full tree.
                 ]
                 %}
                 <a href="{{ item.url }}"{% if menu_level == 0 %} {{ link_attributes.addClass(item_classes)}} {% else %} {{ link_attributes}} {% endif %}>
-
-                    {% if item.content.menuLinkHasImage %}
+                    {% if item.content.menuLinkHasImage and menu_identifier_class=='menu-primary' %}
                         {{ usdojMacros.renderImagedHeaderMenu(item) }}
+                    {% elseif item.content.menuLinkHasImage and menu_identifier_class != 'menu-primary' %}
+                        {# If a menu item has an image, and not the menu-primary, we don't need render anything #}
                     {% else %}
-                    <span class="no_menu_link_imaged__title">{{ item.title }}</span>
+                        <span class="no_menu_link_imaged__title">{{ item.title }}</span>
                     {% endif %}
                 </a>
                 {% if megamenu and menu_level == 1 %}
@@ -192,3 +192,59 @@ We call a macro which calls itself to render the full tree.
     {% endif %}
 
 {% endmacro %}
+
+<div class="mobile-utils">
+    <div class="mobile-utils__inner display-block desktop:display-none">
+        {{ drupal_menu('utilities') }}
+    </div>
+</div>
+
+{% if menu_name == "test-usao-groups-menu"  %}
+{#    ToDo-NP: Port this section to different template specifically for USAO once active #}
+{#    We only do this because USWDS theme will not allow a theme suggestion to override menu--primary_menu.html.twig. #}
+{#    This content is sourced from <menu--test-usao-groups-menu.html.twig> and should move back there once theme bug is fixed#}
+    {% set menu = marcToPreProcess ? dynamicSidebarMenu : 'main' %}
+    {% set renderedMainMenu = drupal_menu('main') %}
+{#    The above variables will not be needed once ported to a seperate template file#}
+{{ devel_breakpoint(renderedMainMenu,renderedMainMenu['#items']) }}
+
+    <div class="nested-primary-menu usaDoj-menu no-overlay desktop:display-none">
+        <div class="grid-container">
+            <div class="grid-row">
+                <div class="grid-col-fill position-relative">
+                    <button class="nested-primary-menu__btn menu-btn padding-105 bg-primary-darker text-white border-0 display-flex display-flex position-relative z-200" aria-expanded="false" aria-controls="above-header-wrapper">
+                    <span class="nested-primary-menu__btn__icon_text">DOJ Menu
+                        <span class="nested-primary-menu__btn__icon_open">
+                            <img src="/themes/custom/usdoj_uswds/images/doj-icon-hamburger-menu.svg" alt="open menu icon">
+
+                        </span>
+                        <span class="nested-primary-menu__btn__icon_close display-none">
+                            <img src="/themes/custom/usdoj_uswds/images/doj-icon-hamburger-close.svg"
+                                 alt="open menu icon">
+                        </span>
+                    </span>
+                    </button>
+                    <div id="nested-primary-wrapper" class="menu-wrapper menu-wrapper__slider position-absolute z-200 top-0 left-0" hidden="">
+                        <div class="menu_header text-center font-family-heading text-bold">
+                            <a href="/" title="U.S. Department of Justice Homepage">
+                                <img class="height-4 width-auto"
+                                     src="/themes/custom/usdoj_uswds/images/doj-main-seal-logo.svg" alt="">U.S. Department
+                                of Justice
+                            </a>
+                        </div>
+
+{#                        {% embed '@usdoj_uswds/navigation/menu--primary_menu.html.twig' %}
+                            {% block menu_arguments %}
+                                #}{# We still need to import _self as <menus>. If not, block replacement in embed won't identify itself as a menu #}{#
+                                {% import _self as menus %}
+                                {{ menus.menu_links(items, 0, NULL, 0, NULL, duplicate_parent, NULL, mega_display_second, attributes,"menu-above-header") }}
+                            {% endblock %}
+                        {% endembed %}#}
+                        {{ menu.menu_links(renderedMainMenu['#items'], 0, NULL, 0, NULL, duplicate_parent, NULL, mega_display_second, attributes,"nested-primary-menu") }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endif %}

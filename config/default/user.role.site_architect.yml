@@ -19,10 +19,12 @@ dependencies:
     - group
     - honeypot
     - image
+    - legal
     - linkchecker
     - locale
     - metatag
     - node
+    - panels
     - path
     - pathauto
     - redirect

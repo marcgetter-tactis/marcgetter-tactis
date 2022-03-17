@@ -83,7 +83,7 @@ Featured Grouped Content Block
       grid-row: 3;
       a.usa-button {
         background-color: color('primary-darker');
-        line-height: 1.5rem;
+        line-height: 1.5rem; 
         @include at-media(desktop) {
           line-height: 1rem;
         }

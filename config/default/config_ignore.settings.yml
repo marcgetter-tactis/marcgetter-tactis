@@ -2,13 +2,14 @@ _core:
   default_config_hash: z9fpiPdcb_DibvWKiwbxYAfwJU76aExbMN6tWzeP6-Q
 ignored_config_entities:
   - 'language.entity.*'
-  - taxonomy.vocabulary.civil_division
   - 'media.type.image:uuid'
   - 'crop.type.focal_point:uuid'
   - purge.plugins
   - purge.logger_channels
   - shield.settings
-  - siteimprove.domain.single.settings.yml
-  - siteimprove.settings.yml
+  - siteimprove.domain.single.settings
+  - siteimprove.settings
   - extlink.settings
+  - stage_file_proxy.settings
+  - migrate_booster.settings
 enable_export_filtering: true

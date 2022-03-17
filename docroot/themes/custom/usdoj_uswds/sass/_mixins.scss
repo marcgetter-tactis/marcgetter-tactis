@@ -57,11 +57,6 @@
 }
 
 @mixin gold-lines($margin-top-bottom, $margin-left-right, $border-bottom: true) {
-  @if $border-bottom {
-    &:after { border-bottom: 2px solid color(warning); }
-  } @else {
-    &:after { border-bottom: none; }
-  }
   &:after {
     content: "";
     width: 3.25rem;
@@ -69,6 +64,14 @@
     border-top: 2px solid color(warning);
     height: 0.5rem;
     margin: $margin-top-bottom $margin-left-right;
+  }
+  @if $border-bottom {
+    &:after { border-bottom: 2px solid color(warning); }
+  } @else {
+    &:after { 
+      border-bottom: none;
+      height: 0;
+    }
   }
 }
 

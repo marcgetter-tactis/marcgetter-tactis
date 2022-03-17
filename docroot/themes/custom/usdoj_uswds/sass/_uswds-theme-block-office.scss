@@ -27,7 +27,7 @@
         display: grid;
         grid-template-columns: 4.25rem auto;
         grid-template-rows: auto auto;
-        column-gap: .5rem;
+        column-gap: .8rem;
         margin-bottom: 1.5rem;
   
         .field_image {
@@ -35,7 +35,7 @@
         }
   
         .field_headline {
-          @include gold-lines(1rem, 0, $border-bottom: false);
+          @include gold-lines(.6rem, 0, $border-bottom: false);
           @extend h4;
           color: color(primary-darker);
           font-weight: bold;

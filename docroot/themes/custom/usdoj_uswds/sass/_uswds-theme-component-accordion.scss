@@ -85,13 +85,17 @@ Accordion
 
   &.block-offices {
     margin-top: 0;
+    &:before {
+      border-top: 1px solid $gray-20;
+    }
 
     .usa-accordion__item {
-      border: 1px solid $gray-20;
-      border-bottom: none;
+      border: none;
+      border-top: 1px solid $gray-20;
       margin-top: 0;
       @include at-media(desktop) {
         border: none;
+        border-top: 1px solid $gray-20;
       }
 
       .usa-accordion__button {

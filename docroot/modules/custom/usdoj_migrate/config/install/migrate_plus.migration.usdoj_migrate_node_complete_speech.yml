@@ -24,9 +24,16 @@ process:
       default_value: und
   title: title
   uid: uid
-  status: status
+  status:
+    -
+      plugin: default_value
+      default_value: 1
+  moderation_state:
+    -
+      plugin: default_value
+      default_value: 'published'
   created: created
-  changed: timestamp
+  changed: changed
   promote: promote
   sticky: sticky
   revision_uid: revision_uid
@@ -41,6 +48,11 @@ process:
       migration: d7_filter_format
       source: format
   field_teaser: field_pr_teaser
+  field_teaser/format:
+    -
+      plugin: migration_lookup
+      migration: d7_filter_format
+      source: format
   field_attachment:
     -
       plugin: sub_process
@@ -100,9 +112,10 @@ destination:
   default_bundle: speech
 migration_dependencies:
   required:
-    - usdoj_migrate_filter_format
     - usdoj_migrate_user
     - usdoj_migrate_language
+    - usdoj_migrate_taxonomy_terms
+    - usdoj_migrate_file_to_media_image
   optional:
     - usdoj_migrate_field_instance
     - usdoj_migrate_metatag_field_node

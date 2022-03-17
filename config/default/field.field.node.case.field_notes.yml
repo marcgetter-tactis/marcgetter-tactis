@@ -1,0 +1,26 @@
+uuid: 5a4ce022-1afc-4082-97a2-1158a4eee272
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_notes
+    - node.type.case
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - wysiwyg
+id: node.case.field_notes
+field_name: field_notes
+entity_type: node
+bundle: case
+label: 'Image with caption'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

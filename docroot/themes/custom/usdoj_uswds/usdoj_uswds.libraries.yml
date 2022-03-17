@@ -10,3 +10,8 @@ assets:
   dependencies:
     - core/jquery
     - core/jquery.once
+
+faqs:
+  version: version
+  js:
+    js/faqs.js: {}

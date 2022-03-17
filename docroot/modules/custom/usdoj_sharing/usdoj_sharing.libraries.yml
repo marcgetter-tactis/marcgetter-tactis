@@ -1,0 +1,10 @@
+usdoj_sharing:
+  version: VERSION
+  css:
+    theme:
+      css/usdoj_sharing.base.css: {}
+  js:
+    js/usdoj_sharing.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once

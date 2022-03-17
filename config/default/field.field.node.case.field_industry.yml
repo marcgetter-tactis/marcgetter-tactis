@@ -10,7 +10,7 @@ id: node.case.field_industry
 field_name: field_industry
 entity_type: node
 bundle: case
-label: 'Industry Code'
+label: 'Industry Code(s)'
 description: ''
 required: false
 translatable: false

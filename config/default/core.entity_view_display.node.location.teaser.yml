@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.location.field_address_phone
     - field.field.node.location.field_body
     - field.field.node.location.field_district
     - field.field.node.location.field_email
@@ -12,6 +11,7 @@ dependencies:
     - field.field.node.location.field_invisible
     - field.field.node.location.field_latlong
     - field.field.node.location.field_link
+    - field.field.node.location.field_location_address
     - field.field.node.location.field_location_language
     - field.field.node.location.field_other_groups
     - field.field.node.location.field_start_date
@@ -33,7 +33,6 @@ content:
     region: content
 hidden:
   entitygroupfield: true
-  field_address_phone: true
   field_body: true
   field_district: true
   field_email: true
@@ -41,6 +40,7 @@ hidden:
   field_invisible: true
   field_latlong: true
   field_link: true
+  field_location_address: true
   field_location_language: true
   field_other_groups: true
   field_start_date: true

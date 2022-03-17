@@ -1,0 +1,29 @@
+uuid: 942a20a4-3ba4-449d-a1d1-3581da07ce23
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_case_documents
+    - media.type.document
+    - node.type.case
+id: node.case.field_case_documents
+field_name: field_case_documents
+entity_type: node
+bundle: case
+label: 'Case Documents'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      document: document
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,54 @@
+diff --git a/extlink.module b/extlink.module
+index e52a3ec..4547ad3 100644
+--- a/extlink.module
++++ b/extlink.module
+@@ -104,7 +104,7 @@ function _extlink_get_settings_from_config(Config $config) {
+     'extNoreferrer'       => ((isset($settings['extlink_noreferrer'])) ? $settings['extlink_noreferrer'] : FALSE),
+     'extFollowNoOverride' => ((isset($settings['extlink_follow_no_override'])) ? $settings['extlink_follow_no_override'] : FALSE),
+     'extClass'            => ((isset($settings['extlink_class'])) ? $settings['extlink_class'] : 'ext'),
+-    'extLabel'            => ((isset($settings['extlink_label'])) ? Html::escape($settings['extlink_label']) : t('(link is external)')),
++    'extLabel'            => ((isset($settings['extlink_tooltip_text'])) ? Html::escape($settings['extlink_tooltip_text']) : t('(link is external)')),
+     'extImgClass'         => ((isset($settings['extlink_img_class'])) ? $settings['extlink_img_class'] : FALSE),
+     'extSubdomains'       => ((isset($settings['extlink_subdomains'])) ? $settings['extlink_subdomains'] : TRUE),
+     'extExclude'          => ((isset($settings['extlink_exclude'])) ? $settings['extlink_exclude'] : ''),
+diff --git a/src/Form/ExtlinkAdminSettingsForm.php b/src/Form/ExtlinkAdminSettingsForm.php
+index 73c21a5..543b05e 100644
+--- a/src/Form/ExtlinkAdminSettingsForm.php
++++ b/src/Form/ExtlinkAdminSettingsForm.php
+@@ -185,6 +185,27 @@ class ExtlinkAdminSettingsForm extends ConfigFormBase {
+       ],
+     ];
+ 
++    $form['extlink_tooltip'] = [
++      '#type' => 'checkbox',
++      '#title' => $this->t('Display a tooltip warning when you hover over any external link.'),
++      '#default_value' => $config->get('extlink_tooltip'),
++    ];
++
++    $form['extlink_tooltip_text'] = [
++      '#type' => 'textarea',
++      '#title' => $this->t('Text to display when you hover over external links.'),
++      '#rows' => 3,
++      '#default_value' => $config->get('extlink_tooltip_text'),
++      '#description' => $this->t('Text to display when you hover over external links.'),
++      '#wysiwyg' => FALSE,
++      '#states' => [
++        // Only show this field when user opts to display a tooltip warning.
++        'visible' => [
++          ':input[name="extlink_tooltip"]' => ['checked' => TRUE],
++        ],
++      ],
++    ];
++
+     $form['extlink_alert'] = [
+       '#type' => 'checkbox',
+       '#title' => $this->t('Display a pop-up warning when any external link is clicked.'),
+@@ -307,6 +328,8 @@ class ExtlinkAdminSettingsForm extends ConfigFormBase {
+       ->set('extlink_exclude_admin_routes', $values['extlink_exclude_admin_routes'])
+       ->set('extlink_include', $values['extlink_include'])
+       ->set('extlink_exclude', $values['extlink_exclude'])
++      ->set('extlink_tooltip_text', $values['extlink_tooltip_text'])
++      ->set('extlink_tooltip', $values['extlink_tooltip'])
+       ->set('extlink_alert_text', $values['extlink_alert_text'])
+       ->set('extlink_alert', $values['extlink_alert'])
+       ->set('extlink_target', $values['extlink_target'])

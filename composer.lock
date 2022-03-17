@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "53c247553a35fd52d12099e9616f739b",
+    "content-hash": "4997c4f9fb2783883c66a93a0440fe90",
     "packages": [
         {
             "name": "acquia/acquia_cms",
@@ -9286,11 +9286,17 @@
         },
         {
             "name": "drupal/gin",
-            "version": "dev-3.x",
+            "version": "3.0.0-beta1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/gin.git",
-                "reference": "fae37424477565bd7de0a00b5c8e9c47e9e27227"
+                "reference": "8.x-3.0-beta1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/gin-8.x-3.0-beta1.zip",
+                "reference": "8.x-3.0-beta1",
+                "shasum": "dbe47c411408c6877b8b4c04e45f82b7c229a786"
             },
             "require": {
                 "drupal/core": "^8.9 || ^9 || ^10",
@@ -9298,15 +9304,12 @@
             },
             "type": "drupal-theme",
             "extra": {
-                "branch-alias": {
-                    "dev-3.x": "3.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-3.0-alpha37+72-dev",
-                    "datestamp": "1646748821",
+                    "version": "8.x-3.0-beta1",
+                    "datestamp": "1646986688",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "message": "Beta releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -29118,6 +29121,16 @@
             "time": "2021-07-28T10:34:58+00:00"
         },
         {
+            "name": "thinktandem/migrate_booster",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thinktandem/migrate_booster.git",
+                "reference": "main"
+            },
+            "type": "drupal-module"
+        },
+        {
             "name": "twig/extensions",
             "version": "v1.5.4",
             "source": {
@@ -29880,7 +29893,7 @@
         "drupal/feeds_ex": 15,
         "drupal/feeds_tamper": 10,
         "drupal/field_tools": 15,
-        "drupal/gin": 20,
+        "drupal/gin": 10,
         "drupal/gin_lb": 10,
         "drupal/group_taxonomy": 10,
         "drupal/group_term": 15,

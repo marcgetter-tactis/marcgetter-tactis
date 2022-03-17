@@ -150,4 +150,7 @@
     <div class="node-component"><div><strong>Component or Office</strong></div>{{ content.field_component }}</div>
     {% endif %}
   </div>
+  <div>
+    {{ drupal_entity('block', 'views_block__related_content__block_1', check_access=false) }}
+  </div>
   </article>

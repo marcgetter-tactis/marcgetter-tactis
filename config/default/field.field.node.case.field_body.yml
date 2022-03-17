@@ -16,7 +16,7 @@ id: node.case.field_body
 field_name: field_body
 entity_type: node
 bundle: case
-label: Body
+label: 'More Information'
 description: ''
 required: false
 translatable: true

@@ -1,9 +1,7 @@
-uuid: 0d66f3a0-7778-4abc-b228-8e18c45dd5ca
+uuid: c8477e96-af23-421b-b716-d1ae3527ea22
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: h2rZJS169gLCNUMxYk_Aw5qLHlvyK0zuB4JkxB3_9Bk
 id: usdoj_migrate_node_complete_press_release
 class: Drupal\node\Plugin\migrate\D7NodeTranslation
 field_plugin_method: null
@@ -11,6 +9,7 @@ cck_plugin_method: null
 migration_tags:
   - 'Drupal 7'
   - Content
+  - doj
 migration_group: node
 label: 'Node complete (Press Release)'
 source:
@@ -26,10 +25,17 @@ process:
       default_value: und
   title: title
   field_subtitle: field_pr_subtitle
-  uid: node_uid
-  status: status
+  uid: uid
+  status:
+    -
+      plugin: default_value
+      default_value: 1
+  moderation_state:
+    -
+      plugin: default_value
+      default_value: published
   created: created
-  changed: timestamp
+  changed: changed
   promote: promote
   sticky: sticky
   revision_uid: revision_uid
@@ -39,6 +45,11 @@ process:
   comment_node_press_release/0/status: comment
   field_teaser: field_pr_teaser
   field_body: field_pr_body
+  field_body/format:
+    -
+      plugin: migration_lookup
+      migration: d7_filter_format
+      source: format
   field_contact: field_pr_contact
   field_attachment:
     -
@@ -106,6 +117,8 @@ migration_dependencies:
   required:
     - usdoj_migrate_user
     - usdoj_migrate_language
+    - usdoj_migrate_taxonomy_terms
+    - usdoj_migrate_file_to_media_image
   optional:
     - usdoj_migrate_field_instance
     - usdoj_migrate_metatag_field_node

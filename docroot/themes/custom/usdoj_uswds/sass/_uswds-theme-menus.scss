@@ -1,0 +1,586 @@
+/*
+* * * * * ==============================
+* * * * * ==============================
+* * * * * ==============================
+* * * * * ==============================
+========================================
+========================================
+========================================
+----------------------------------------
+USWDS THEME CUSTOM STYLES
+----------------------------------------
+!! Copy this file to your project's
+sass root. Don't edit the version
+in node_modules.
+----------------------------------------
+Menu Styling
+----------------------------------------
+*/
+
+/*Utility Menu */
+.menu--utilities { //UL Element
+  LI {
+    A {
+      &.icon {
+        display: flex !important;
+        flex-flow: row nowrap;
+        align-items: center;
+
+        &.icon-globe {
+
+          &:before {
+            content: '';
+            height: 1rem;
+            width: 1rem;
+            margin: auto 1em auto 0;
+            background-repeat: no-repeat;
+            background-image: url('/themes/custom/usdoj_uswds/images/doj-icon-globe-white.svg');
+            background-position: center center;
+          }
+
+          &:hover {
+            &:before {
+              background-image: url('/themes/custom/usdoj_uswds/images/doj-icon-globe.svg');
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
+
+
+header.usa-header--extended {
+  @include at-media-max(desktop) {
+    #mobile-btn:checked {
+      & + label.hamburger {
+        & > nav.usa-nav {
+          ul {
+            .usa-nav__submenu-item {
+              a {
+                //This level of nesting is need to override original styling from _header.scss
+                color: $doj-darkblue;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .mobile-utils {
+      &__inner {
+        .menu--utilities {
+          margin: 0;
+
+          LI {
+
+            A {
+              padding-top:.9em !important;
+              padding-bottom: .9em !important;
+              display:block;
+              font-weight: normal !important;
+              text-decoration: none;
+
+            }
+
+            &:first-of-type {
+              A {
+                padding-top: 1.8rem !important;
+              }
+            }
+
+            &:hover,
+            &:focus {
+              background-color: transparent;
+            }
+          }
+        }
+      }
+    }
+
+    &.usdojMobileMenuSlider {
+      .usdojMobileMenuSlider__activeChild {
+        background-color: white;
+      }
+
+      .usa-nav__primary {
+
+        A {
+          &:not(.usa-button) {
+            &:hover {
+              background-color: transparent;
+            }
+          }
+        }
+
+        .usa-nav__primary-item {
+
+          background-color: transparent;
+
+          transition: margin-left, height;
+          @include transition(2s);
+          transition-timing-function: ease-out;
+
+          .usa-current {
+            color: $theme-color-accent-warm;
+          }
+
+          &.usdojMobileMenuSlider {
+            &__offCanvas {
+              margin-left: -100%;
+              height: 0;
+            }
+
+            &__hidden {
+              display: none;
+            }
+
+            &__open {
+              background-color: $doj-darkgray;
+
+              A {
+                &:hover,
+                &:focus,
+                &:active {
+
+                  span {
+                    color: $doj-darkblue;
+                  }
+                }
+              }
+            }
+          }
+
+          A {
+            line-height: 1.375em;
+            padding-top: 0.675em;
+            padding-bottom: 0.675em;
+
+            &:hover,
+            &:focus,
+            &:active {
+              background-color: transparent;
+
+              span {
+                color: $theme-color-accent-warm;
+              }
+            }
+          }
+
+          button {
+            &[aria-expanded] {
+              position: relative;
+              background-image: none;
+              width: 100%;
+            }
+
+            &[aria-expanded="false"]::after,
+            &[aria-expanded="true"]::before {
+              content: "";
+              position: absolute;
+              width: 1.5rem;
+              height: 1.5rem;
+              top: 50%;
+              transform: translateY(-50%);
+              background-repeat: no-repeat;
+              background-size: 0.4rem;
+            }
+
+            &[aria-expanded="false"]::after {
+              background-image: url("../assets/img/chevron-right-white.svg");
+              right: 1.25rem;
+              background-position: right 0 center;
+            }
+
+            &[aria-expanded="true"] {
+              text-align: center;
+            }
+
+            &[aria-expanded="true"]::before {
+              background-image: url("../assets/img/chevron-right-white.svg");
+              left: 1.25rem;
+              background-position: center center;
+              border-radius: 50%;
+              border: 1px solid white;
+              transform: rotate(180deg) translate(0, 50%);
+            }
+          }
+
+          .usa-nav__submenu {
+            .non_imaged_links__container {
+              .individual_menu_level__1 {
+                &:first-child {
+                  padding-top: 1em;
+                }
+
+                .usa-nav__submenu-item {
+                  border-top-color: transparent;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .usa-nav__primary-item {
+    > .usa-current {
+      @include remove-bar;
+    }
+
+    @include at-media-max(desktop) {
+
+    }
+    @include at-media(desktop) {
+      > .usa-nav__link {
+        &:hover {
+          @include remove-bar;
+        }
+      }
+    }
+
+  }
+}
+
+.usa-nav__primary {
+  button {
+    @include at-media-max(desktop) {
+      color: white;
+      font-weight: bold;
+
+      &[aria-expanded="false"] {
+        @include add-background-svg("usa-icons-bg/add--white");
+      }
+      &[aria-expanded="true"] {
+        @include add-background-svg("usa-icons-bg/remove--white");
+      }
+      &:hover {
+        background-color: $doj-darkgray;
+        color: $theme-color-accent-warm;
+      }
+    }
+    @include at-media(desktop) {
+      color: white;
+      font-size: 0.94rem;
+      height: 100%;
+
+      &:hover {
+        color: $doj-darkblue;
+      }
+      &[aria-expanded="false"] {
+        @include add-background-svg("usa-icons-bg/expand_more--white");
+
+        &:hover {
+          @include add-background-svg("doj-icon-expand_more--doj-darkblue", "../images");
+        }
+      }
+      &[aria-expanded="true"] {
+        @include add-background-svg("doj-icon-expand_less--doj-darkblue", "../images");
+        background-color: $theme-color-accent-warm;
+        color: $doj-darkblue;
+      }
+    }
+  }
+}
+
+.usa-megamenu {
+  &.usa-nav__submenu {
+    top: 100%;
+
+    &::before,
+    &::after {
+      background-color: inherit;
+      border-bottom: inherit;
+
+      @include at-media(desktop) {
+        height: calc(
+                100% + 1px
+        ); //To compensate for 1px border bottom of source element (.usa-nav__submenu)
+      }
+    }
+
+    @include at-media(desktop) {
+      border-bottom: 1px solid $gray-warm-30;
+
+      a {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.usa-nav__submenu {
+  background-color: white;
+
+  @include at-media(desktop) {
+    border: 1px solid $gray-warm-30;
+    border-top: 0;
+  }
+
+  .usa-nav__submenu-item {
+    font-size: 0.9375rem;
+
+    a {
+      color: $theme-link-color;
+      font-weight: bold;
+      display: block;
+
+      &:hover {
+        color: $doj-darkblue;
+      }
+    }
+
+    @include at-media(desktop) {
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.menu_link_imaged {
+  @include at-media-max(desktop) {
+    display: none;
+  }
+  display: inline-block;
+  max-width: 215px;
+
+  &__content {
+    position: relative;
+    overflow: hidden;
+    display: block;
+  }
+
+  &__link_title {
+    text-align: center;
+    width: 100%;
+    //display: inline-block;
+    font-size: 1rem;
+    min-height: 50px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding: 0 12.5px;
+  }
+
+  &__media {
+    .field_menu_link {
+      &_image {
+        line-height: 0;
+      }
+    }
+  }
+
+  &__captions {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.75);
+    width: 100%;
+    bottom: 0;
+    padding: 1em;
+    font-size: 0.875rem;
+  }
+
+  &__caption_header {
+    color: $theme-color-accent-warm;
+  }
+
+  &__caption_subHeader {
+    color: white;
+    font-weight: normal;
+  }
+
+  a {
+    &:hover {
+      .menu_link_imaged {
+        &__link_title {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.no_menu_link_image__link_title {
+  margin-bottom: 1rem;
+}
+
+.non_imaged_links__container {
+  @include at-media(desktop) {
+    .individual_menu_level__1 {
+      margin-top: 0.875em;
+
+      A {
+        line-height: 1.8;
+      }
+    }
+
+    > .individual_menu_level__1 {
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+/*Above Header Menu */
+$menuWidth: 340;
+.above-header-menu {
+  @include at-media-max(desktop) {
+    display: none;
+  }
+
+  background-color: $doj-darkblue;
+  border-bottom: 1px solid $gray-cool-50;
+
+  &__btn {
+    align-items: center;
+    column-gap: .5em;
+
+    &[aria-expanded="false"] {}
+    &[aria-expanded="true"] {
+      background-color: $doj-darkgray;
+      margin-left: #{$menuWidth}px;
+
+      .above-header-menu__btn__icon {
+        &_open { display:none}
+        &_close {display:inline-block;}
+      }
+    }
+    IMG {
+      height: 22px;
+      width: auto;
+    }
+  }
+  .menu-wrapper__slider {
+    background-color: $doj-darkgray;
+    width: #{$menuWidth}px;
+    border:1px solid $gray-cool-50;
+
+    A {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .menu_header {
+      A {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        column-gap: 1em;
+        padding: .5em;
+      }
+    }
+
+    .usa-nav__primary {
+      display: block;
+      margin-left: 0;
+
+
+      &-item {
+        //Normally an <li>
+        border-top: 1px solid $gray-cool-50;
+        &:last-of-type {
+          border-bottom:1px solid $gray-cool-50;
+        }
+
+        .usa-current {
+          color: $theme-color-accent-warm
+        }
+
+        .usa-nav__link {
+          // Targeting all children <li> and <button> elements
+            &:hover {
+              color: $theme-color-accent-warm;
+            }
+        }
+        BUTTON {
+
+          position: relative;
+
+          // Button controlling dropdown
+          &[aria-expanded=false] {
+            background-image: url("../assets/img/chevron-right-white.svg");
+            background-repeat: no-repeat;
+            background-size: 0.4rem;
+          }
+
+          &[aria-expanded=true] {
+            text-align: center;
+            color: $theme-color-accent-warm;
+            background-color: $doj-darkgray;
+
+            &::before {
+              @include menu-initial-bg-caret-insert;
+              @include insert-menu-bg-caret("left");
+            }
+          }
+
+        }
+
+        .usa-nav__submenu {
+          //Sub-menu collection of links. Anything past <megamenu_level_0>. Normally a <UL> element.
+          position: relative;
+          width: 100%;
+          padding:0;
+
+          &-item {
+            margin: 0;
+
+            &.image_attached {
+              display: none;
+            }
+
+            A {
+              padding:1em;
+              color: $doj-darkblue;
+
+              SPAN {
+                &:not(.no_menu_link_imaged__title) {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+
+      }
+    }
+    .mobile-utils {
+      &__inner {
+        @include at-media(desktop){
+          display: block;
+        }
+        .menu--utilities {//UL Element
+          list-style: none;
+
+          LI {
+            A {
+              padding: 1em;
+              display: block;
+              font-size:.875rem;
+              position: relative;
+
+              &.icon {
+
+                &:hover {
+                  color: $theme-color-accent-warm;
+                }
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+/* Shared Classes Across Multiple Menus */
+.menuItem__hidden {
+  display: none;
+}
+

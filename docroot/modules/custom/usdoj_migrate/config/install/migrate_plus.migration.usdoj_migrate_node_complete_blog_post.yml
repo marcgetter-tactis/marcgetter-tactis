@@ -8,6 +8,7 @@ cck_plugin_method: null
 migration_tags:
   - 'Drupal 7'
   - Content
+  - doj
 migration_group: node
 label: 'Node complete (Blog Post)'
 source:
@@ -23,9 +24,16 @@ process:
       default_value: und
   title: title
   uid: uid
-  status: status
+  status:
+    -
+      plugin: default_value
+      default_value: 1
+  moderation_state:
+    -
+      plugin: default_value
+      default_value: 'published'
   created: created
-  changed: timestamp
+  changed: changed
   promote: promote
   sticky: sticky
   revision_uid: revision_uid
@@ -34,7 +42,17 @@ process:
   content_translation_source: source_langcode
   comment_node_blog_post/0/status: comment
   field_body: field_blog_body
+  field_body/format:
+    -
+      plugin: migration_lookup
+      migration: d7_filter_format
+      source: format
   field_teaser: field_blog_teaser
+  field_teaser/format:
+    -
+      plugin: migration_lookup
+      migration: d7_filter_format
+      source: format
   field_teaser_image:
     -
       plugin: sub_process
@@ -92,7 +110,12 @@ process:
       source: field_blog_invisible
       process:
         target_id: tid
-  field_author: field_blog_author
+  field_author:
+    -
+      plugin: sub_process
+      source: field_blog_author
+      process:
+        target_id: nid
   field_author_free: field_blog_author_free
   field_social_image:
     -
@@ -112,7 +135,9 @@ destination:
 migration_dependencies:
   required:
     - usdoj_migrate_user
-    - upgrade_language
+    - usdoj_migrate_language
+    - usdoj_migrate_taxonomy_terms
+    - usdoj_migrate_file_to_media_image
   optional:
     - usdoj_migrate_field_instance
     - usdoj_migrate_metatag_field_node

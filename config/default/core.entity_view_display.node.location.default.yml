@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.location.field_address_phone
     - field.field.node.location.field_body
     - field.field.node.location.field_district
     - field.field.node.location.field_email
@@ -11,6 +10,7 @@ dependencies:
     - field.field.node.location.field_invisible
     - field.field.node.location.field_latlong
     - field.field.node.location.field_link
+    - field.field.node.location.field_location_address
     - field.field.node.location.field_location_language
     - field.field.node.location.field_other_groups
     - field.field.node.location.field_start_date
@@ -19,22 +19,16 @@ dependencies:
     - field.field.node.location.field_your_groups
     - node.type.location
   module:
-    - address_phonenumber
+    - geofield
     - link
     - text
+    - usdoj_utilities
     - user
 id: node.location.default
 targetEntityType: node
 bundle: location
 mode: default
 content:
-  field_address_phone:
-    type: address_phone_number_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 0
-    region: content
   field_body:
     type: text_default
     label: hidden
@@ -49,6 +43,15 @@ content:
     third_party_settings: {  }
     weight: 3
     region: content
+  field_latlong:
+    type: geofield_default
+    label: above
+    settings:
+      output_format: wkt
+      output_escape: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
   field_link:
     type: link
     label: hidden
@@ -61,12 +64,18 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
+  field_location_address:
+    type: address_phone_number_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
 hidden:
   entitygroupfield: true
   field_district: true
   field_end_date: true
   field_invisible: true
-  field_latlong: true
   field_location_language: true
   field_other_groups: true
   field_start_date: true

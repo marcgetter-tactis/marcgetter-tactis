@@ -19,16 +19,6 @@ i.e.
 ----------------------------------------
 */
 
-//ToDo-NP: Clean up file structure.
-/*
-*******TABLE OF CONTENTS********
-
-TOC 00 - Shared Site-wide Styles
-TOC 01 - Primary MegaMenu
-
-*******TABLE OF CONTENTS********
-*/
-
 
 /************************************************
 TOC 00 - Shared Site-wide Styles - START
@@ -241,6 +231,10 @@ details {
 
 }
 
+.usa-button--active:hover {
+  background-color: $blue-60v;
+}
+
 .usa-button--outline {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -312,10 +306,10 @@ details {
 
 //*******************
 //* Node fields START
-//*******************
+//*******************/
 
 .node-content {
-  //* similar to .block-field-blocknodepagefield-body
+  // similar to .block-field-blocknodepagefield-body
   color: $gray-70;
   line-height: 1.6;
   margin-top: $article-padding;
@@ -423,6 +417,13 @@ details {
 
 .node-notes {
   margin-bottom: $node-field-spacing;
+  .field_notes p {
+    font-size: $theme-h6-font-size;
+    color: color(primary-darker);
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid color(warning);
+  }
 }
 
 .node-body {
@@ -578,14 +579,31 @@ details {
   font-weight: 300;
 }
 
+.node-industry, .node-markets, .node-violation {
+  .field__item {
+    display: flex;
+    align-items: center;
+    &:before {
+      content: "";
+      display: inline-block;
+      width: .5rem;
+      height: .5rem;
+      background-color: $doj-coolblue;
+      border-radius: 50%;
+      margin-right: .5rem;
+    }
+  }
+}
+
 //*******************
 //* Node fields END
-//*******************
+//*******************/
 
 
 
 .image-gallery-node {
   .slick {
+    margin-bottom: -5rem;
     .media__icon--litebox {
       display: none;
     }
@@ -650,37 +668,23 @@ details {
     width: 25px;
     height: 25px;
     background-color: transparent;
-    background: none;
-    border-radius: 50%;
-    border: 2px solid black;
+    border: none;
     color: transparent;
     cursor: pointer;
-    filter: invert(78%) sepia(91%) saturate(727%) hue-rotate(328deg) brightness(97%) contrast(108%);
-    outline: inherit;
     pointer-events: all;
     bottom: -2.25rem;
-
-    &::before {
-      content: "";
-      background-image: url('../assets/img/chevron-right.svg');
-      background-size: 7px;
-      background-repeat: no-repeat;
-      background-position: center;
-      height: 100%;
-      display: block;
-    }
+    background-size: 25px;
+    background-repeat: no-repeat;
   }
 
   #cboxPrevious {
     right: 2rem;
-
-    &::before {
-      transform: rotate(180deg);
-    }
+    background-image: url('../images/doj-gallery-yellow-left-arrow.svg');
   }
 
   #cboxNext {
     right: 0;
+    background-image: url('../images/doj-gallery-yellow-right-arrow.svg');
   }
 
   #cboxClose {
@@ -690,11 +694,10 @@ details {
     width: 25px;
     height: 25px;
     background-color: transparent;
-    border: 2px solid white;
-    border-radius: 50%;
+    border: none;
     color: transparent;
-    background-image: url('../assets/img/close-white-alt.svg');
-    background-size: 10px;
+    background-image: url('../images/doj-gallery-white-close.svg');
+    background-size: 25px;
     background-repeat: no-repeat;
     background-position: center;
     pointer-events: all;
@@ -711,13 +714,40 @@ details {
     #cboxPrevious,
     #cboxNext {
       @include center-ver();
-      width: 50px;
-      height: 50px;
+      width: 25px;
+      height: 25px;
       border-width: 3px;
 
       &::before {
         background-size: 15px;
       }
+    }
+
+    #cboxPrevious {
+      left: -2.5rem;
+      right: 0;
+    }
+
+    #cboxNext {
+      right: -2.5rem;
+    }
+
+    #cboxClose {
+      width: 25px;
+      height: 25px;
+      background-size: 25px;
+      top: -4rem;
+      right: -2.5rem;
+    }
+  }
+
+  @include at-media(desktop) {
+    #cboxPrevious,
+    #cboxNext,
+    #cboxClose {
+      width: 50px;
+      height: 50px;
+      background-size: 50px;
     }
 
     #cboxPrevious {
@@ -730,11 +760,6 @@ details {
     }
 
     #cboxClose {
-      width: 50px;
-      height: 50px;
-      background-size: 22px;
-      border-width: 3px;
-      top: -4rem;
       right: -4rem;
     }
   }
@@ -914,7 +939,7 @@ details {
       &.slick-active {
         button {
           background-color: $theme-color-accent-warm;
-        }  
+        }
       }
 
       button {
@@ -980,6 +1005,9 @@ details {
     a {
       color: $blue-60v;
       font-weight: 600;
+      &:hover {
+        color: color(primary-darker);
+      }
     }
   }
 }
@@ -1238,347 +1266,23 @@ details {
   }
 }
 
+.usdoj_overlay {
+  height: 100vw;
+  width: 100vw;
+  display: block;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 0.15s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+
+  &.show {
+    opacity:1 ;
+    visibility: visible;
+  }
+}
+
 
 /************************************************
 TOC 00 - Shared Site-wide Styles - END
-************************************************/
-/************************************************
-TOC 01 - Primary Menu (with Images) - START
-************************************************/
-
-header.usa-header--extended {
-  @include at-media-max(desktop) {
-    #mobile-btn:checked {
-      & + label.hamburger {
-        & > nav.usa-nav {
-          ul {
-            .usa-nav__submenu-item {
-              a {
-                //This level of nesting is need to override original styling from _header.scss
-                color: $doj-darkblue;
-              }
-            }
-          }
-        }
-      }
-    }
-    &.usdojMobileMenuSlider {
-      .usdojMobileMenuSlider__activeChild {
-        background-color: white;
-      }
-
-      .usa-nav__primary {
-
-        A {
-          &:not(.usa-button) {
-            &:hover {
-              background-color: transparent;
-            }
-          }
-        }
-
-        .usa-nav__primary-item {
-          background-color: transparent;
-
-          transition: margin-left, height;
-          @include transition(2s);
-          transition-timing-function: ease-out;
-
-          &.usdojMobileMenuSlider {
-            &__offCanvas {
-              margin-left: -100%;
-              height: 0;
-            }
-
-            &__hidden {
-              display: none;
-            }
-
-            &__open {
-              background-color: $doj-darkgray;
-
-              A {
-                &:hover,
-                &:focus,
-                &:active {
-
-                  span {
-                    color: $doj-darkblue;
-                  }
-                }
-              }
-            }
-          }
-
-          A {
-            line-height: 1.375em;
-            padding-top: 0.675em;
-            padding-bottom: 0.675em;
-
-            &:hover,
-            &:focus,
-            &:active {
-              background-color: transparent;
-
-              span {
-                color: $theme-color-accent-warm;
-              }
-            }
-          }
-
-          button {
-            &[aria-expanded] {
-              position: relative;
-              background-image: none;
-              width: 100%;
-            }
-
-            &[aria-expanded="false"]::after,
-            &[aria-expanded="true"]::before {
-              content: "";
-              position: absolute;
-              width: 1.5rem;
-              height: 1.5rem;
-              top: 50%;
-              transform: translateY(-50%);
-              background-repeat: no-repeat;
-              background-size: 0.4rem;
-            }
-
-            &[aria-expanded="false"]::after {
-              background-image: url("../assets/img/chevron-right-white.svg");
-              right: 1.25rem;
-              background-position: right 0 center;
-            }
-
-            &[aria-expanded="true"] {
-              text-align: center;
-            }
-
-            &[aria-expanded="true"]::before {
-              background-image: url("../assets/img/chevron-right-white.svg");
-              left: 1.25rem;
-              background-position: center center;
-              border-radius: 50%;
-              border: 1px solid white;
-              transform: rotate(180deg) translate(0, 50%);
-            }
-          }
-
-          .usa-nav__submenu {
-            .non_imaged_links__container {
-              .individual_menu_level__1 {
-                &:first-child {
-                  padding-top: 1em;
-                }
-
-                .usa-nav__submenu-item {
-                  border-top-color: transparent;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .usa-nav__primary-item {
-    > .usa-current {
-      @include remove-bar;
-    }
-
-    @include at-media(desktop) {
-      > .usa-nav__link {
-        &:hover {
-          @include remove-bar;
-        }
-      }
-    }
-
-  }
-}
-
-.usa-nav__primary {
-  button {
-    @include at-media-max(desktop) {
-      color: white;
-      font-weight: bold;
-
-      &[aria-expanded="false"] {
-        @include add-background-svg("usa-icons-bg/add--white");
-      }
-      &[aria-expanded="true"] {
-        @include add-background-svg("usa-icons-bg/remove--white");
-      }
-      &:hover {
-        background-color: $doj-darkgray;
-        color: $theme-color-accent-warm;
-      }
-    }
-    @include at-media(desktop) {
-      color: white;
-      font-size: 0.94rem;
-      height: 100%;
-
-      &:hover {
-        color: $doj-darkblue;
-      }
-      &[aria-expanded="false"] {
-        @include add-background-svg("usa-icons-bg/expand_more--white");
-
-        &:hover {
-          @include add-background-svg("doj-icon-expand_more--doj-darkblue", "../images");
-        }
-      }
-      &[aria-expanded="true"] {
-        @include add-background-svg("doj-icon-expand_less--doj-darkblue", "../images");
-        background-color: $theme-color-accent-warm;
-        color: $doj-darkblue;
-      }
-    }
-  }
-}
-
-.usa-megamenu {
-  &.usa-nav__submenu {
-    top: 100%;
-
-    &::before,
-    &::after {
-      background-color: inherit;
-      border-bottom: inherit;
-
-      @include at-media(desktop) {
-        height: calc(
-          100% + 1px
-        ); //To compensate for 1px border bottom of source element (.usa-nav__submenu)
-      }
-    }
-
-    @include at-media(desktop) {
-      border-bottom: 1px solid $gray-warm-30;
-
-      a {
-        display: inline-block;
-      }
-    }
-  }
-}
-
-.usa-nav__submenu {
-  background-color: white;
-
-  @include at-media(desktop) {
-    border: 1px solid $gray-warm-30;
-    border-top: 0;
-  }
-
-  .usa-nav__submenu-item {
-    font-size: 0.9375rem;
-
-    a {
-      color: $theme-link-color;
-      font-weight: bold;
-      display: block;
-
-      &:hover {
-        color: $doj-darkblue;
-      }
-    }
-
-    @include at-media(desktop) {
-      &:hover {
-        background-color: transparent;
-      }
-    }
-  }
-}
-
-.menu_link_imaged {
-  @include at-media-max(desktop) {
-    display: none;
-  }
-  display: inline-block;
-  max-width: 215px;
-
-  &__content {
-    position: relative;
-    overflow: hidden;
-    display: block;
-  }
-
-  &__link_title {
-    text-align: center;
-    width: 100%;
-    //display: inline-block;
-    font-size: 1rem;
-    min-height: 50px;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    padding: 0 12.5px;
-  }
-
-  &__media {
-    .field_menu_link {
-      &_image {
-        line-height: 0;
-      }
-    }
-  }
-
-  &__captions {
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.75);
-    width: 100%;
-    bottom: 0;
-    padding: 1em;
-    font-size: 0.875rem;
-  }
-
-  &__caption_header {
-    color: $theme-color-accent-warm;
-  }
-
-  &__caption_subHeader {
-    color: white;
-    font-weight: normal;
-  }
-
-  a {
-    &:hover {
-      .menu_link_imaged {
-        &__link_title {
-          text-decoration: underline;
-        }
-      }
-    }
-  }
-}
-
-.no_menu_link_image__link_title {
-  margin-bottom: 1rem;
-}
-
-.non_imaged_links__container {
-  @include at-media(desktop) {
-    .individual_menu_level__1 {
-      margin-top: 0.875em;
-
-      A {
-        line-height: 1.8;
-      }
-    }
-
-    > .individual_menu_level__1 {
-      &:first-child {
-        margin-top: 0;
-      }
-    }
-  }
-}
-
-/************************************************
-TOC01 - Primary Menu (with Images) - END
 ************************************************/

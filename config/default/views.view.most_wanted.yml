@@ -21,7 +21,6 @@ dependencies:
     - taxonomy
     - text
     - user
-    - views_autocomplete_filters
 id: most_wanted
 label: 'Most Wanted'
 module: views
@@ -600,16 +599,14 @@ display:
           limit: true
           error_message: true
       style:
-        type: grid
+        type: html_list
         options:
           grouping: {  }
-          columns: 3
-          automatic_width: true
-          alignment: horizontal
-          row_class_custom: ''
-          row_class_default: true
-          col_class_custom: ''
-          col_class_default: true
+          row_class: ''
+          default_row_class: true
+          type: ul
+          wrapper_class: item-list
+          class: ''
       row:
         type: fields
       query:
@@ -621,7 +618,7 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
-      css_class: ''
+      css_class: most-wanted-view
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -982,11 +979,11 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: 'FBI Field Office'
-          exclude: false
+          label: ''
+          exclude: true
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: "{% if field_fbi_field_office is empty %}\r\n    {{ field_fbi_field_office }}\r\n{% else %}\r\n  FBI Field Office: \r\n{% endif %}"
             make_link: false
             path: ''
             absolute: false
@@ -1015,13 +1012,13 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
           hide_empty: true
-          empty_zero: false
+          empty_zero: true
           hide_alter_empty: true
           click_sort_column: value
           type: list_default
@@ -1044,11 +1041,11 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: 'DEA Field Office'
-          exclude: false
+          label: ''
+          exclude: true
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: "{% if field_dea_field_office is empty %}\r\n    \r\n{% else %}\r\n  DEA Field Office: {{ field_dea_field_office }}\r\n{% endif %}"
             make_link: false
             path: ''
             absolute: false
@@ -1077,13 +1074,13 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
           hide_empty: true
-          empty_zero: false
+          empty_zero: true
           hide_alter_empty: true
           click_sort_column: value
           type: string
@@ -1157,7 +1154,7 @@ display:
           admin_label: ''
           plugin_id: field
           label: 'Suspected Location/s'
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -1248,14 +1245,14 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
-          element_class: ''
+          element_type: div
+          element_class: views-field-view-node
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false
@@ -1279,23 +1276,10 @@ display:
           separator: ', '
           field_api_classes: false
       pager:
-        type: mini
+        type: some
         options:
           offset: 0
-          items_per_page: 3
-          total_pages: null
-          id: 0
-          tags:
-            next: ››
-            previous: ‹‹
-          expose:
-            items_per_page: false
-            items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
-            offset: false
-            offset_label: Offset
+          items_per_page: 10
       sorts:
         field_modified_date_value:
           id: field_modified_date_value
@@ -1348,12 +1332,13 @@ display:
         filter_groups: false
       display_extenders: {  }
       block_description: 'Most Wanted Block'
+      allow:
+        items_per_page: true
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags:

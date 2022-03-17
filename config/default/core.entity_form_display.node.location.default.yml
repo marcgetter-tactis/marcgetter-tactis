@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.location.field_address_phone
     - field.field.node.location.field_body
     - field.field.node.location.field_district
     - field.field.node.location.field_email
@@ -11,6 +10,7 @@ dependencies:
     - field.field.node.location.field_invisible
     - field.field.node.location.field_latlong
     - field.field.node.location.field_link
+    - field.field.node.location.field_location_address
     - field.field.node.location.field_location_language
     - field.field.node.location.field_other_groups
     - field.field.node.location.field_start_date
@@ -19,15 +19,16 @@ dependencies:
     - field.field.node.location.field_your_groups
     - node.type.location
   module:
-    - address_phonenumber
     - content_moderation
     - datetime
     - field_group
+    - geofield
     - link
     - path
     - scheduler
     - scheduler_content_moderation_integration
     - text
+    - usdoj_utilities
 third_party_settings:
   field_group:
     group_organization:
@@ -52,19 +53,13 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 13
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_address_phone:
-    type: address_phone_number_default
-    weight: 1
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
   field_body:
     type: text_textarea
-    weight: 7
+    weight: 8
     region: content
     settings:
       rows: 5
@@ -72,13 +67,13 @@ content:
     third_party_settings: {  }
   field_district:
     type: options_select
-    weight: 3
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
   field_email:
     type: email_default
-    weight: 9
+    weight: 10
     region: content
     settings:
       placeholder: ''
@@ -86,45 +81,58 @@ content:
     third_party_settings: {  }
   field_end_date:
     type: datetime_default
-    weight: 5
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
   field_invisible:
     type: options_select
-    weight: 11
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_latlong:
+    type: geofield_latlon
+    weight: 27
+    region: content
+    settings:
+      html5_geolocation: false
+    third_party_settings: {  }
   field_link:
     type: link_default
-    weight: 8
+    weight: 9
     region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
+  field_location_address:
+    type: address_phone_number_default
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_location_language:
     type: options_select
-    weight: 10
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
   field_other_groups:
     type: options_select
-    weight: 11
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
   field_start_date:
     type: datetime_default
-    weight: 4
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
   field_text:
     type: string_textfield
-    weight: 6
+    weight: 7
     region: content
     settings:
       size: 60
@@ -132,51 +140,58 @@ content:
     third_party_settings: {  }
   field_your_groups:
     type: options_select
-    weight: 10
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: false
+    third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 22
+    weight: 24
     region: content
     settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 18
+    weight: 20
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 14
+    weight: 16
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 19
+    weight: 21
     region: content
     settings: {  }
     third_party_settings: {  }
   publish_state:
     type: scheduler_moderation
-    weight: 16
+    weight: 18
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 23
+    weight: 25
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 15
+    weight: 17
     region: content
     settings:
       display_label: true
@@ -189,9 +204,14 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  translation:
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 12
+    weight: 14
     region: content
     settings:
       match_operator: CONTAINS
@@ -201,23 +221,21 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 20
+    weight: 22
     region: content
     settings: {  }
     third_party_settings: {  }
   unpublish_state:
     type: scheduler_moderation
-    weight: 17
+    weight: 19
     region: content
     settings: {  }
     third_party_settings: {  }
   url_redirects:
-    weight: 21
+    weight: 23
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   entitygroupfield: true
-  field_latlong: true
   field_uid: true
-  langcode: true

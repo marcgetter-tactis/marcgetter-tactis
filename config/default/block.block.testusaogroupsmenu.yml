@@ -1,0 +1,33 @@
+uuid: 7fa848cd-1c4e-408b-8017-1293d2525ff3
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.test-usao-groups-menu
+  module:
+    - collapsiblock
+    - system
+  theme:
+    - usdoj_uswds
+third_party_settings:
+  collapsiblock:
+    collapse_action: 0
+id: testusaogroupsmenu
+theme: usdoj_uswds
+region: primary_menu
+weight: -9
+provider: null
+plugin: 'system_menu_block:test-usao-groups-menu'
+settings:
+  id: 'system_menu_block:test-usao-groups-menu'
+  label: 'Test USAO Groups Menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /test-basic-page-0

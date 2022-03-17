@@ -10,7 +10,7 @@ id: node.case.field_component
 field_name: field_component
 entity_type: node
 bundle: case
-label: Component
+label: 'DOJ Component'
 description: ''
 required: false
 translatable: true

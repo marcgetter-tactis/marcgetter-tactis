@@ -21,6 +21,19 @@
     {% endfor %}
 {% endmacro %}
 
+{#Renders a list of documents showing <document mime type> and <file size>#}
+{% macro detailedDocuments(documents,wrapperClasses) %}
+    {% for item in documents %}
+        <div class="{{ wrapperClasses }}">
+            {% set filename = item|file_url|split('.') %}
+            {% set filextension = filename[1]|join('')|upper %}
+            <a href="{{ item|file_url(false) }}" hreflang="{{ item.langcode | default ('en') }}">
+                {{ item.entity.name.value }}
+            </a><span class="font-body-2xs">&nbsp;&nbsp;[{{ filextension }}, {{ item.entity.field_media_file.entity.getSize()|format_size() }}]</span>
+        </div>
+    {% endfor %}
+{% endmacro %}
+
 
 {#Renders a styled menu initially collapsed.#}
 {% macro mobileSideNav(menuName,title) %}
@@ -65,4 +78,8 @@
             </div>
         </div>
     {% endif %}
+{% endmacro %}
+
+{#Renders Accordion Style Fields#}
+{% macro accordion(items) %}
 {% endmacro %}

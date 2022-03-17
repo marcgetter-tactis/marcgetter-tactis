@@ -345,6 +345,9 @@ function usdoj_utilities_node_insert(Node $node) {
       // Get abbreviation from new node.
       $abbreviation = $node->get('field_abbreviation')->value;
 
+      // Get abbreviation title from new node.
+      $abbreviation_title = $node->get('field_abbreviation_title')->value;
+
       // Get status from new node.
       $status = ($node->get('status')->value == TRUE) ? TRUE : FALSE;
 
@@ -362,6 +365,7 @@ function usdoj_utilities_node_insert(Node $node) {
 
       // Set group field values.
       $group->set('field_abbreviation', $abbreviation);
+      $group->set('field_abbreviation_title', $abbreviation_title);
 
       // Save group.
       $group->save();

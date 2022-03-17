@@ -1,6 +1,6 @@
-uuid: f773a9e2-4ead-4259-b43f-429dbf83bb62
+uuid: 419fb4b7-9c82-4581-a297-5bc094bd7c68
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.related_content_

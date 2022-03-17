@@ -58,7 +58,7 @@ Featured Grouped Content Block
     }
     
     .field_headline, .field_body, .field_cta {
-      padding: 0 1.2rem 1.2rem;
+      padding: 1.2rem;
       @include at-media(desktop) {
         padding: 0 0 0 $article-padding;
       }
@@ -83,6 +83,10 @@ Featured Grouped Content Block
       grid-row: 3;
       a.usa-button {
         background-color: color('primary-darker');
+        line-height: 1.5rem;
+        @include at-media(desktop) {
+          line-height: 1rem;
+        }
         &:hover {
           background-color: $blue-60v;
         }

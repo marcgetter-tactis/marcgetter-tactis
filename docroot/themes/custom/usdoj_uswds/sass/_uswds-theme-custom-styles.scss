@@ -316,10 +316,10 @@ details {
 
 //*******************
 //* Node fields START
-//*******************
+//*******************/
 
 .node-content {
-  //* similar to .block-field-blocknodepagefield-body
+  // similar to .block-field-blocknodepagefield-body
   color: $gray-70;
   line-height: 1.6;
   margin-top: $article-padding;
@@ -589,9 +589,25 @@ details {
   font-weight: 300;
 }
 
+.node-industry, .node-markets, .node-violation {
+  .field__item {
+    display: flex;
+    align-items: center;
+    &:before {
+      content: "";
+      display: inline-block;
+      width: .5rem;
+      height: .5rem;
+      background-color: $doj-coolblue;
+      border-radius: 50%;
+      margin-right: .5rem;
+    }
+  }
+}
+
 //*******************
 //* Node fields END
-//*******************
+//*******************/
 
 
 

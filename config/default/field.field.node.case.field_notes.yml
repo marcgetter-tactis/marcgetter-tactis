@@ -1,9 +1,9 @@
-uuid: bfd496a1-d04e-4621-a435-f02bc5761092
+uuid: 5a4ce022-1afc-4082-97a2-1158a4eee272
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_body
+    - field.storage.node.field_notes
     - node.type.case
   module:
     - allowed_formats
@@ -12,11 +12,11 @@ third_party_settings:
   allowed_formats:
     allowed_formats:
       - wysiwyg
-id: node.case.field_body
-field_name: field_body
+id: node.case.field_notes
+field_name: field_notes
 entity_type: node
 bundle: case
-label: 'More Information'
+label: 'Image with caption'
 description: ''
 required: false
 translatable: true

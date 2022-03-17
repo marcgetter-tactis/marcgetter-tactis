@@ -143,6 +143,7 @@ datasource_settings:
         - press_release
         - speech
         - staff_profile
+        - youtube_video
     languages:
       default: true
       selected: {  }

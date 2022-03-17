@@ -1,8 +1,8 @@
-uuid: c8477e96-af23-421b-b716-d1ae3527ea22
+uuid: 7950bb4b-7ecd-4d61-bd83-0abaa5b8b273
 langcode: en
 status: true
 dependencies: {  }
-id: usdoj_migrate_node_complete_press_release
+id: usdoj_migrate_node_complete_staff_profile
 class: Drupal\node\Plugin\migrate\D7NodeTranslation
 field_plugin_method: null
 cck_plugin_method: null
@@ -11,12 +11,12 @@ migration_tags:
   - Content
   - doj
 migration_group: node
-label: 'Node complete (Press Release)'
+label: 'Node complete (Staff Profile)'
 source:
   plugin: d7_node_complete
-  node_type: press_release
+  node_type: staff_profile
 process:
-  nid: nid
+  nid: tnid
   vid: vid
   langcode:
     -
@@ -24,7 +24,6 @@ process:
       source: language
       default_value: und
   title: title
-  field_subtitle: field_pr_subtitle
   uid: uid
   status:
     -
@@ -42,77 +41,68 @@ process:
   revision_log: log
   revision_timestamp: timestamp
   content_translation_source: source_langcode
-  comment_node_press_release/0/status: comment
-  field_teaser: field_pr_teaser
-  field_body: field_pr_body
+  comment_node_staff_profile/0/status: comment
+  field_body: field_staff_body
   field_body/format:
     -
       plugin: migration_lookup
       migration: d7_filter_format
       source: format
-  field_contact: field_pr_contact
-  field_attachment:
+  field_portrait:
     -
       plugin: sub_process
-      source: field_pr_attachment
-      process:
-        target_id: fid
-        display: display
-        description: description
-  field_image:
-    -
-      plugin: sub_process
-      source: field_pr_image
+      source: field_staff_image
       process:
         target_id: fid
         alt: alt
         title: title
         width: width
         height: height
-  field_number: field_pr_number
-  field_date:
+  field_teaser: field_staff_teaser
+  field_teaser/format:
+    -
+      plugin: migration_lookup
+      migration: d7_filter_format
+      source: format
+  field_staff_position: field_staff_position
+  field_name: field_staff_name
+  field_archived: field_archived
+  field_byline: field_staff_byline
+  field_portrait_download:
     -
       plugin: sub_process
-      source: field_pr_date
+      source: field_staff_image_download
+      process:
+        target_id: fid
+        alt: alt
+        title: title
+        width: width
+        height: height
+  field_component:
+    -
+      plugin: sub_process
+      source: field_staff_component
+      process:
+        target_id: tid
+  field_dates_of_service:
+    -
+      plugin: sub_process
+      source: field_staff_dates_of_service
       process:
         value:
           plugin: format_date
           from_format: 'Y-m-d H:i:s'
-          to_format: Y-m-d
+          to_format: 'Y'
           source: value
-  field_component:
-    -
-      plugin: sub_process
-      source: field_pr_component
-      process:
-        target_id: tid
-  field_topic:
-    -
-      plugin: sub_process
-      source: field_pr_topic
-      process:
-        target_id: tid
-  field_invisible:
-    -
-      plugin: sub_process
-      source: field_pr_invisible
-      process:
-        target_id: tid
-  field_teaser_image:
-    -
-      plugin: sub_process
-      source: field_pr_teaser_image
-      process:
-        target_id: fid
-        alt: alt
-        title: title
-        width: width
-        height: height
-  field_file_private_force: field_file_private_force
+        end_value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: 'Y'
+          source: value2
 destination:
   plugin: 'entity_complete:node'
   translations: true
-  default_bundle: press_release
+  default_bundle: staff_profile
 migration_dependencies:
   required:
     - usdoj_migrate_user
@@ -122,5 +112,5 @@ migration_dependencies:
   optional:
     - usdoj_migrate_field_instance
     - usdoj_migrate_metatag_field_node
-    - usdoj_migrate_metatag_field_instance_node_press_release
-    - usdoj_migrate_metatag_field_instance_widget_settings_node_press_release
+    - usdoj_migrate_metatag_field_instance_node_staff_profile
+    - usdoj_migrate_metatag_field_instance_widget_settings_node_staff_profile

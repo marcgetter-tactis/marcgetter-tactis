@@ -1,4 +1,4 @@
-uuid: eeebb4af-e384-4dd7-81e5-e1ce604224e5
+uuid: 3e0e4ae8-7c05-40db-b02c-b7dffb4bdf0c
 langcode: en
 status: true
 dependencies: {  }
@@ -24,10 +24,17 @@ process:
       source: language
       default_value: und
   title: title
-  uid: node_uid
-  status: status
+  uid: uid
+  status:
+    -
+      plugin: default_value
+      default_value: 1
+  moderation_state:
+    -
+      plugin: default_value
+      default_value: published
   created: created
-  changed: timestamp
+  changed: changed
   promote: promote
   sticky: sticky
   revision_uid: revision_uid
@@ -120,9 +127,10 @@ destination:
   default_bundle: podcast
 migration_dependencies:
   required:
-    - usdoj_migrate_filter_format
     - usdoj_migrate_user
     - usdoj_migrate_language
+    - usdoj_migrate_taxonomy_terms
+    - usdoj_migrate_file_to_media_image
   optional:
     - usdoj_migrate_field_instance
     - usdoj_migrate_metatag_field_node

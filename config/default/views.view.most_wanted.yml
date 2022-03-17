@@ -1276,9 +1276,10 @@ display:
           separator: ', '
           field_api_classes: false
       pager:
-        type: none
+        type: some
         options:
           offset: 0
+          items_per_page: 10
       sorts:
         field_modified_date_value:
           id: field_modified_date_value
@@ -1331,6 +1332,8 @@ display:
         filter_groups: false
       display_extenders: {  }
       block_description: 'Most Wanted Block'
+      allow:
+        items_per_page: true
     cache_metadata:
       max-age: -1
       contexts:

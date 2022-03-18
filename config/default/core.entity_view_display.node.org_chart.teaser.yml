@@ -4,24 +4,24 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.org_chart.body
+    - field.field.node.org_chart.field_collapse
+    - field.field.node.org_chart.field_displays
+    - field.field.node.org_chart.field_footer_displays
+    - field.field.node.org_chart.field_imagemap
+    - field.field.node.org_chart.field_org_chart_footer
+    - field.field.node.org_chart.field_org_chart_header
+    - field.field.node.org_chart.field_org_chart_image
+    - field.field.node.org_chart.field_organizations
+    - field.field.node.org_chart.field_other_groups
+    - field.field.node.org_chart.field_your_groups
     - node.type.org_chart
   module:
-    - text
     - user
 id: node.org_chart.teaser
 targetEntityType: node
 bundle: org_chart
 mode: teaser
 content:
-  body:
-    type: text_summary_or_trimmed
-    label: hidden
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
-    weight: 101
-    region: content
   links:
     settings: {  }
     third_party_settings: {  }
@@ -29,5 +29,15 @@ content:
     region: content
 hidden:
   entitygroupfield: true
+  field_collapse: true
+  field_displays: true
+  field_footer_displays: true
+  field_imagemap: true
+  field_org_chart_footer: true
+  field_org_chart_header: true
+  field_org_chart_image: true
+  field_organizations: true
+  field_other_groups: true
+  field_your_groups: true
   langcode: true
   search_api_excerpt: true

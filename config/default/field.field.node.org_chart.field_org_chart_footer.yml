@@ -1,0 +1,25 @@
+uuid: f5e37d5a-dd29-475d-b456-669ae1b60f22
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_org_chart_footer
+    - node.type.org_chart
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+id: node.org_chart.field_org_chart_footer
+field_name: field_org_chart_footer
+entity_type: node
+bundle: org_chart
+label: Footer
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

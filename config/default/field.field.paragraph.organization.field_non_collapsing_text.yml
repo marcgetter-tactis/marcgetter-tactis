@@ -1,0 +1,21 @@
+uuid: 4c318b34-9931-4a61-a232-17c36249d4f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_non_collapsing_text
+    - paragraphs.paragraphs_type.organization
+  module:
+    - text
+id: paragraph.organization.field_non_collapsing_text
+field_name: field_non_collapsing_text
+entity_type: paragraph
+bundle: organization
+label: 'Non-Collapsing Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

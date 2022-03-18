@@ -3,9 +3,20 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.org_chart.body
+    - field.field.node.org_chart.field_collapse
+    - field.field.node.org_chart.field_displays
+    - field.field.node.org_chart.field_footer_displays
+    - field.field.node.org_chart.field_imagemap
+    - field.field.node.org_chart.field_org_chart_footer
+    - field.field.node.org_chart.field_org_chart_header
+    - field.field.node.org_chart.field_org_chart_image
+    - field.field.node.org_chart.field_organizations
+    - field.field.node.org_chart.field_other_groups
+    - field.field.node.org_chart.field_your_groups
     - node.type.org_chart
   module:
+    - entity_reference_revisions
+    - options
     - text
     - user
 id: node.org_chart.default
@@ -13,10 +24,82 @@ targetEntityType: node
 bundle: org_chart
 mode: default
 content:
-  body:
-    type: text_default
-    label: hidden
+  field_collapse:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_displays:
+    type: list_default
+    label: above
     settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_footer_displays:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_imagemap:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_org_chart_footer:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_org_chart_header:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_org_chart_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_organizations:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  field_other_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_your_groups:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
     third_party_settings: {  }
     weight: 101
     region: content

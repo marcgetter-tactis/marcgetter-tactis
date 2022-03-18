@@ -1,0 +1,25 @@
+uuid: 2cf54340-1084-4ba0-829b-6d4e707a7717
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.organization
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+id: paragraph.organization.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: organization
+label: Description
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

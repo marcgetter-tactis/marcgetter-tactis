@@ -50,3 +50,4 @@ validate:
       - children
       - file_url
       - format_size
+      - check_markup

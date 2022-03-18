@@ -206,7 +206,6 @@ We call a macro which calls itself to render the full tree.
     {% set menu = marcToPreProcess ? dynamicSidebarMenu : 'main' %}
     {% set renderedMainMenu = drupal_menu('main') %}
 {#    The above variables will not be needed once ported to a seperate template file#}
-{{ devel_breakpoint(renderedMainMenu,renderedMainMenu['#items']) }}
 
     <div class="nested-primary-menu usaDoj-menu no-overlay desktop:display-none">
         <div class="grid-container">

@@ -87,15 +87,17 @@ Accordion
     margin-top: 0;
     &:before {
       border-top: 1px solid $gray-20;
+      @include at-media(tablet) {
+        border-top: none;
+      }
     }
 
     .usa-accordion__item {
       border: none;
       border-top: 1px solid $gray-20;
       margin-top: 0;
-      @include at-media(desktop) {
+      @include at-media(tablet) {
         border: none;
-        border-top: 1px solid $gray-20;
       }
 
       .usa-accordion__button {
@@ -107,7 +109,7 @@ Accordion
         &[hidden] { 
           display: none;
     
-          @include at-media(desktop) {
+          @include at-media(tablet) {
             display: block;
           }
         }

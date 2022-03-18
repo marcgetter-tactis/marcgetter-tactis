@@ -56,10 +56,10 @@ view_mode ? 'block--view-mode-' ~ view_mode|clean_class,
   {% block content %}
   
   <div class="usa-accordion__heading">
-    <button class="usa-accordion__button desktop:display-none" aria-expanded="false" aria-controls="{{ content['#block_content'].id() }}">
+    <button class="usa-accordion__button tablet:display-none" aria-expanded="false" aria-controls="{{ content['#block_content'].id() }}">
       {{ content.field_heading }}
     </button>
-    <div id="{{ content['#block_content'].field_anchor.value }}" class="display-none desktop:display-block">
+    <div id="{{ content['#block_content'].field_anchor.value }}" class="display-none tablet:display-block">
       {{ content.field_heading }}
     </div>
   </div>

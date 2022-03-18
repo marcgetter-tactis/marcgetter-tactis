@@ -462,9 +462,10 @@ display:
       query:
         type: views_query
         options:
-          bypass_access: false
-          skip_access: false
-          preserve_facet_query_args: false
+          contextual_filters_or: true
+          skip_access: 0
+          bypass_access: 0
+          preserve_facet_query_args: 0
       relationships: {  }
       header: {  }
       footer: {  }
@@ -475,7 +476,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - url.path
         - 'user.node_grants:view'
       tags:
         - 'config:field.storage.node.field_body'
@@ -487,13 +487,13 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
+      block_hide_empty: true
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - url.path
         - 'user.node_grants:view'
       tags:
         - 'config:field.storage.node.field_body'

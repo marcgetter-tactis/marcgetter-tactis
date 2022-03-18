@@ -9,7 +9,7 @@ field_name: field_author_free
 entity_type: node
 type: string
 settings:
-  max_length: 128
+  max_length: 1024
   case_sensitive: false
   is_ascii: false
 module: core

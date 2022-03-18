@@ -7,22 +7,24 @@ dependencies:
     - field.field.node.location.field_district
     - field.field.node.location.field_email
     - field.field.node.location.field_end_date
+    - field.field.node.location.field_extension
     - field.field.node.location.field_invisible
     - field.field.node.location.field_latlong
     - field.field.node.location.field_link
-    - field.field.node.location.field_location_address
+    - field.field.node.location.field_location
     - field.field.node.location.field_location_language
     - field.field.node.location.field_other_groups
+    - field.field.node.location.field_phone_number
     - field.field.node.location.field_start_date
     - field.field.node.location.field_text
     - field.field.node.location.field_uid
     - field.field.node.location.field_your_groups
     - node.type.location
   module:
+    - address
     - geofield
     - link
     - text
-    - usdoj_utilities
     - user
 id: node.location.default
 targetEntityType: node
@@ -42,6 +44,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 3
+    region: content
+  field_extension:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 9
     region: content
   field_latlong:
     type: geofield_default
@@ -64,12 +74,20 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
-  field_location_address:
-    type: address_phone_number_default
+  field_location:
+    type: address_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 4
+    weight: 7
+    region: content
+  field_phone_number:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 8
     region: content
 hidden:
   entitygroupfield: true

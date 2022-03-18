@@ -1,23 +1,23 @@
-uuid: 6ba37c50-bcc7-4015-8d36-6bb6a005cd57
+uuid: 7e9613b6-bd30-4e14-b9c6-9a787d5e6233
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_location_address
+    - field.storage.node.field_location
     - node.type.location
   module:
-    - usdoj_utilities
-id: node.location.field_location_address
-field_name: field_location_address
+    - address
+id: node.location.field_location
+field_name: field_location
 entity_type: node
 bundle: location
 label: Address
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value:
   -
-    langcode: en
+    langcode: null
     country_code: US
     administrative_area: ''
     locality: ''
@@ -27,10 +27,9 @@ default_value:
     address_line1: ''
     address_line2: ''
     organization: ''
-    given_name: null
+    given_name: ''
     additional_name: null
-    family_name: null
-    address_phonenumber: ''
+    family_name: ''
 default_value_callback: ''
 settings:
   available_countries: {  }
@@ -51,7 +50,7 @@ settings:
     postalCode:
       override: optional
     sortingCode:
-      override: hidden
+      override: optional
     dependentLocality:
       override: optional
     locality:
@@ -59,4 +58,4 @@ settings:
     administrativeArea:
       override: optional
   fields: {  }
-field_type: address_phone_number_item
+field_type: address

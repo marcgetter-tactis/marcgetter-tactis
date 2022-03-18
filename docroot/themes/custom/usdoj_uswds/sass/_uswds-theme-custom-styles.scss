@@ -603,7 +603,7 @@ details {
 
 .image-gallery-node {
   .slick {
-    margin-bottom: -5rem;
+    
     .media__icon--litebox {
       display: none;
     }
@@ -653,9 +653,10 @@ details {
   .colorbox-title {
     font-size: $theme-h4-font-size;
     font-weight: 700;
-    position: absolute;
+    //position: absolute;
     top: -4.5rem;
     max-width: 90%;
+    margin-bottom: 1rem;;
   }
 
   #cboxContent {
@@ -672,7 +673,7 @@ details {
     color: transparent;
     cursor: pointer;
     pointer-events: all;
-    bottom: -2.25rem;
+    //bottom: -2.25rem;
     background-size: 25px;
     background-repeat: no-repeat;
   }
@@ -770,7 +771,7 @@ details {
 
   #cboxCurrent {
     position: absolute;
-    bottom: -2.5rem;
+    //bottom: -2.5rem;
     font-weight: 600;
     font-size: $theme-h5-font-size;
 

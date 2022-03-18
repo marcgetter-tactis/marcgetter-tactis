@@ -16,7 +16,7 @@ custom:
   initialheight: '250'
   overlayclose: false
   returnfocus: true
-  fixed: true
+  fixed: false
   scrolling: false
   slideshow:
     slideshow: 1

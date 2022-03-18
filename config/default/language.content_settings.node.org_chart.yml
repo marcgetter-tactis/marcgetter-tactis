@@ -1,0 +1,16 @@
+uuid: e54ba39e-177e-4da4-b959-2cb5b8e46376
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.org_chart
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.org_chart
+target_entity_type_id: node
+target_bundle: org_chart
+default_langcode: site_default
+language_alterable: true

@@ -12,7 +12,7 @@ third_party_settings:
   geocoder_field:
     method: geocode
     weight: 0
-    field: moderation_state
+    field: field_location
     skip_not_empty_value: false
     disabled: true
     hidden: false
@@ -24,8 +24,6 @@ third_party_settings:
       handling: preserve
       status_message: true
       log: true
-    reverse_geocode:
-      field: ''
 id: node.location.field_latlong
 field_name: field_latlong
 entity_type: node

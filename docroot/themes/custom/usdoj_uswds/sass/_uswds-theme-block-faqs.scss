@@ -22,28 +22,55 @@ Tabbed Block on Homepage
   position: absolute;
   margin-left: -2em;
 }
+
 @mixin content-position {
   position: relative;
   padding-left: 3.5em;
+  padding-right: 3.5em;
 }
 
 
 .faq-mainWrapper {
+  h2,
+  h3 {
+    &.text-center {
+      @include gold-lines(1.25rem, auto);
+    }
+  }
+
   h3 {
     @extend h2;
     margin-bottom: .5em;
-    @include gold-lines(1.25rem, auto);
   }
+
+  background-color: $taupe-bg;
+  padding-top: 4.2rem;
+  padding-bottom: 3rem;
 
   //Toggling Button
   .accordion-grouping {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding-left: 1.3125rem;
+    padding-right: 1.3125rem;
+
+    @include at-media(desktop) {
+      padding-left: 5.25rem;
+      padding-right: 5.25rem;
+    }
 
     &__expandBtn {
-      text-align: right;
+      text-align: center;
 
       .accordion-grouping__btn {
         margin-right: 0;
       }
+
+      @include at-media(desktop) {
+        text-align: right;
+      }
+
 
     }
   }
@@ -74,7 +101,6 @@ Tabbed Block on Homepage
 
 
   //Actual FAQs
-
   .paragraph-questions {
     &.paragraph-faqs {
       padding: 1rem 0;
@@ -90,16 +116,35 @@ Tabbed Block on Homepage
 
             }
 
+            &::after {
+              @include at-media-max(desktop) {
+                margin: 0;
+                top: .85em;
+                bottom: revert;
+              }
+            }
+
+            @include at-media(desktop) {
+              padding-right: 5.5rem;
+            }
           }
         }
 
         &__content {
           @include content-position;
-
+          padding-right: 3.75rem;
 
           &::before {
             content: "A.";
             @include pseudo-position;
+
+          }
+
+          P {
+            max-width: 40.625rem;
+          }
+
+          @include at-media(desktop) {
 
           }
         }

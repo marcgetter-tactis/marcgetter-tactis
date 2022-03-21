@@ -23,12 +23,14 @@
             allAccordionHeaders.forEach(header => header.setAttribute("aria-expanded","true"));
             allAccordionBodies.forEach(body=> body.hidden = false);
             expandAllBtn.setAttribute("aria-expanded","true");
-            ariaStatus.setAttribute("aria-label","All items in this group are currently open")
+            ariaStatus.setAttribute("aria-label","All items in this group are currently open");
+            expandAllBtn.textContent = "[Close All -]";
           }else{
             allAccordionHeaders.forEach(header => header.setAttribute("aria-expanded","false"));
             allAccordionBodies.forEach(body=> body.hidden = true);
             expandAllBtn.setAttribute("aria-expanded","false");
-            ariaStatus.setAttribute("aria-label","All items in this group are currently closed")
+            ariaStatus.setAttribute("aria-label","All items in this group are currently closed");
+            expandAllBtn.textContent = "[Expand All +]";
 
           }
         }

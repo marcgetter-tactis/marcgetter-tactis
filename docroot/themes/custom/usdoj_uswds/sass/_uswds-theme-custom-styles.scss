@@ -417,7 +417,7 @@ details {
 
 .node-notes {
   margin-bottom: $node-field-spacing;
-  .field_notes p {
+  figcaption {
     font-size: $theme-h6-font-size;
     color: color(primary-darker);
     margin-top: 1rem;

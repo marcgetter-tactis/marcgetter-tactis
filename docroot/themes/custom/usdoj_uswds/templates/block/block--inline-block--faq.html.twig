@@ -54,11 +54,11 @@ set classes = [
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {% if label %}
-  <h2{{ title_attributes }} class="block-title text-center">{{ label }}</h2>
+  <h3{{ title_attributes }} class="block-title text-center">{{ label }}</h3>
   {% endif %}
   {{ title_suffix }}
   {% block content %}
-    <h3 class="text-center">{{ heading }}</h3>
+    {% if heading|render|trim is not empty %}<h3 class="text-center">{{ heading }}</h3>{% endif %}
 
     <div class="accordion-grouping accordion-grouping__withExpandBtn">
 

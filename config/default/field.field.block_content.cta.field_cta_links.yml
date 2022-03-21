@@ -12,7 +12,7 @@ id: block_content.cta.field_cta_links
 field_name: field_cta_links
 entity_type: block_content
 bundle: cta
-label: 'CTA Links'
+label: 'Call to Action Links'
 description: ''
 required: false
 translatable: false
@@ -40,6 +40,15 @@ settings:
       link:
         weight: 14
         enabled: true
+      office:
+        weight: 18
+        enabled: false
+      organization:
+        weight: 19
+        enabled: false
+      question:
+        weight: 20
+        enabled: false
       slide:
         weight: 15
         enabled: false

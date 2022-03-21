@@ -11,8 +11,8 @@ id: paragraph.link.field_cta_style
 field_name: field_cta_style
 entity_type: paragraph
 bundle: link
-label: 'CTA style'
-description: ''
+label: 'Call to Action style'
+description: 'Select a style to apply to Call to Action.'
 required: true
 translatable: true
 default_value:

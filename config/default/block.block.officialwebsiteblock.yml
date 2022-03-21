@@ -1,0 +1,29 @@
+uuid: bbdca483-ff3f-4852-a387-f1c75dcfccc5
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:general:cf80a841-8f63-498b-a586-e232db0db256'
+  module:
+    - block_content
+    - collapsiblock
+  theme:
+    - usdoj_uswds
+third_party_settings:
+  collapsiblock:
+    collapse_action: 0
+id: officialwebsiteblock
+theme: usdoj_uswds
+region: header_top
+weight: -10
+provider: null
+plugin: 'block_content:cf80a841-8f63-498b-a586-e232db0db256'
+settings:
+  id: 'block_content:cf80a841-8f63-498b-a586-e232db0db256'
+  label: 'Official website block'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

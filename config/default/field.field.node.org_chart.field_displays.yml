@@ -1,0 +1,21 @@
+uuid: 3d7cbb44-3441-49a1-858b-f25b13805431
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_displays
+    - node.type.org_chart
+  module:
+    - options
+id: node.org_chart.field_displays
+field_name: field_displays
+entity_type: node
+bundle: org_chart
+label: Displays
+description: 'Choose which displays are available for this Org Chart. The list view is required.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

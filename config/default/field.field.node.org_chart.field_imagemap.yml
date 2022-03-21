@@ -1,0 +1,19 @@
+uuid: 0d0ed675-2c44-43c6-a7ee-61ac6ebcaeaf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_imagemap
+    - node.type.org_chart
+id: node.org_chart.field_imagemap
+field_name: field_imagemap
+entity_type: node
+bundle: org_chart
+label: 'Map Areas'
+description: "This is where the area(s) for the image map are specified.\r\n<em>Examples:</em><br />\r\n<area shape=\"rect\" coords=\"311,-1,461,47\" alt=\"Office of the Attorney General\">\r\n<area shape=\"rect\" coords=\"310,52,459,97\" alt=\"Office of the Deputy Attorney General\">\r\n\r\nIn order to associate an <area> tag with an organization, the organization must have a \"Title\" that <em>exactly matches</em> the area's \"alt\" tag."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

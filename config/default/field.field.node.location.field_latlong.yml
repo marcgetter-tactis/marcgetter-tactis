@@ -15,7 +15,7 @@ third_party_settings:
     field: field_location
     skip_not_empty_value: false
     disabled: true
-    hidden: false
+    hidden: true
     providers:
       - googlemaps
     dumper: wkt

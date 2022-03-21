@@ -1,0 +1,27 @@
+uuid: 52ce8fc8-f9d2-45da-a336-32e491d43d89
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_displays
+field_name: field_displays
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: chart
+      label: Chart
+    -
+      value: map
+      label: 'Chart (but displays as "Map View")'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

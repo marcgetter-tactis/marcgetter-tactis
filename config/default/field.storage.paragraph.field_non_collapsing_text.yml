@@ -1,0 +1,19 @@
+uuid: 9cb0d06b-7931-4f69-b373-212f06cf95f6
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_non_collapsing_text
+field_name: field_non_collapsing_text
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

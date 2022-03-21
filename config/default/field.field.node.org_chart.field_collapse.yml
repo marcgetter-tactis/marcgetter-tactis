@@ -1,0 +1,23 @@
+uuid: f95327eb-c05d-40eb-98d2-50763529b12f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_collapse
+    - node.type.org_chart
+id: node.org_chart.field_collapse
+field_name: field_collapse
+entity_type: node
+bundle: org_chart
+label: 'Collapse items in List view'
+description: 'Check this box to convert all items into "click-to-expand" titles, in the List view.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

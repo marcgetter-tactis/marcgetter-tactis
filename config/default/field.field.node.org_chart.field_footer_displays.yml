@@ -1,0 +1,21 @@
+uuid: 85a50355-c767-4919-89d5-eece541ea264
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_footer_displays
+    - node.type.org_chart
+  module:
+    - options
+id: node.org_chart.field_footer_displays
+field_name: field_footer_displays
+entity_type: node
+bundle: org_chart
+label: 'Footer Displays On'
+description: 'Choose which displays will show the footer. If none are selected, all displays will show the footer.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

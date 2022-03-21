@@ -1,0 +1,64 @@
+uuid: c3434aa2-8d46-4f1c-8d75-fe8ec6c6b349
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_organizations
+    - node.type.org_chart
+    - paragraphs.paragraphs_type.organization
+  module:
+    - entity_reference_revisions
+id: node.org_chart.field_organizations
+field_name: field_organizations
+entity_type: node
+bundle: org_chart
+label: Organizations
+description: 'Organizations to show in the list view of this Org Chart.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      organization: organization
+    negate: 0
+    target_bundles_drag_drop:
+      action_center_item:
+        weight: 13
+        enabled: false
+      card:
+        weight: 14
+        enabled: false
+      grouped_content:
+        weight: 15
+        enabled: false
+      hero_slide:
+        weight: 16
+        enabled: false
+      link:
+        weight: 17
+        enabled: false
+      office:
+        weight: 18
+        enabled: false
+      organization:
+        weight: 19
+        enabled: true
+      question:
+        weight: 20
+        enabled: false
+      slide:
+        weight: 21
+        enabled: false
+      statistic:
+        weight: 22
+        enabled: false
+      tab:
+        weight: 23
+        enabled: false
+      witness:
+        weight: 24
+        enabled: false
+field_type: entity_reference_revisions

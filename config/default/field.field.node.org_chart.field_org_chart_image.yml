@@ -1,0 +1,29 @@
+uuid: 16a3f30e-571f-4a45-98c1-ca7e3e75bdd2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_org_chart_image
+    - media.type.image
+    - node.type.org_chart
+id: node.org_chart.field_org_chart_image
+field_name: field_org_chart_image
+entity_type: node
+bundle: org_chart
+label: 'Chart Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

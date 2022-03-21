@@ -1,0 +1,43 @@
+uuid: 39df70ca-0335-4bd8-8b91-17be104d3577
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.organization.field_description
+    - field.field.paragraph.organization.field_image
+    - field.field.paragraph.organization.field_non_collapsing_text
+    - paragraphs.paragraphs_type.organization
+  module:
+    - media_library
+    - text
+id: paragraph.organization.default
+targetEntityType: paragraph
+bundle: organization
+mode: default
+content:
+  field_description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_image:
+    type: media_library_widget
+    weight: 0
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_non_collapsing_text:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

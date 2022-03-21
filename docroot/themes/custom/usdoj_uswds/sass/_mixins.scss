@@ -4,13 +4,11 @@
   transform: translateY(-$offset * 1%);
 }
 
-
 @mixin center-hor($offset:50) {
   position: absolute;
   left: $offset * 1%;
   transform: translateX(-$offset * 1%);
 }
-
 
 @mixin center-both($offsetX:50, $offsetY:50) {
   position: absolute;

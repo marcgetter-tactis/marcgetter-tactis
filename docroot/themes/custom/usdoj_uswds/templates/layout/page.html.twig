@@ -148,9 +148,11 @@
 
             {% if page.breadcrumb or page.highlighted or page.help %}
                 {% block breadcrumb %}
-                    <div class="grid-row">
-                        {{ page.breadcrumb }}
-                    </div>
+                  <div class="breadcrumb-wrapper display-none desktop:display-block">
+                      <div class="grid-row">
+                          {{ page.breadcrumb }}
+                      </div>
+                  </div>
                 {% endblock %}
 
                 {% block highlighted %}

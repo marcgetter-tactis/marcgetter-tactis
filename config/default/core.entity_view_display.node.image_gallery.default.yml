@@ -57,7 +57,7 @@ content:
     label: hidden
     settings:
       caption:
-        field_caption: field_caption
+        field_caption: '0'
         field_categories: '0'
         field_credit: '0'
         field_government_image: '0'

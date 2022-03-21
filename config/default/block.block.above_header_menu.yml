@@ -15,7 +15,7 @@ third_party_settings:
 id: above_header_menu
 theme: usdoj_uswds
 region: header_top
-weight: 0
+weight: -9
 provider: null
 plugin: 'system_menu_block:main'
 settings:

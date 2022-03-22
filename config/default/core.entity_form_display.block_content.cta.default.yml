@@ -11,6 +11,7 @@ dependencies:
     - field.field.block_content.cta.field_heading
     - field.field.block_content.cta.field_subheading
   module:
+    - allowed_formats
     - paragraphs
     - text
 id: block_content.cta.default
@@ -27,7 +28,10 @@ content:
       summary_rows: 3
       placeholder: ''
       show_summary: false
-    third_party_settings: {  }
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '0'
   field_alignment:
     type: options_buttons
     weight: 6

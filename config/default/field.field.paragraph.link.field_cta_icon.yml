@@ -11,8 +11,8 @@ id: paragraph.link.field_cta_icon
 field_name: field_cta_icon
 entity_type: paragraph
 bundle: link
-label: 'CTA Icon'
-description: ''
+label: 'Call to Action Icon'
+description: 'Select an icon to display with Call to Action link.'
 required: false
 translatable: false
 default_value: {  }

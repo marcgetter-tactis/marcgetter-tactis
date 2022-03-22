@@ -11,7 +11,7 @@ id: paragraph.link.field_cta
 field_name: field_cta
 entity_type: paragraph
 bundle: link
-label: CTA
+label: 'Call to Action'
 description: ''
 required: false
 translatable: true

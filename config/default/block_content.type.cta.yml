@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: cta
-label: CTA
+label: 'Call to Action'
 revision: 1
 description: ''

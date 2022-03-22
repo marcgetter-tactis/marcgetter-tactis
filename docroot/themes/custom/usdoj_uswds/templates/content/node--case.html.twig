@@ -110,7 +110,7 @@
     <h1 class="page-title">{{ label }}</h1>
     {{ title_suffix }}
 
-    
+    <div class="node-share">{{ drupal_block('sharing_block', wrapper=false) }}</div>
     <div class="case-date margin-bottom-2"><div><strong>Case Open Date</strong></div>{{ content.field_date }}</div>
     <div class="incident-date margin-bottom-2"><div><strong>Incident Date</strong></div>{{ content.field_closed_date }}</div>
     <div class="node-component margin-bottom-2"><div><strong>DOJ Component</strong></div>{{ content.field_component }}</div>

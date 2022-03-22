@@ -128,6 +128,7 @@
 
             {% if date is not empty %}
                 <div class="node-date margin-bottom-3">{{ date }}</div>
+                <div class="node-share">{{ drupal_block('sharing_block', wrapper=false) }}</div>
             {% endif %}
 
             {% if author_freeForm|render|trim %}<div class="node-author__freeform margin-bottom-5 font-body-2xs"><span>Courtesy of </span> {{ author_freeForm }}</div>{% endif %}

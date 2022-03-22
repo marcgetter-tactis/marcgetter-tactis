@@ -248,6 +248,35 @@ details {
 }
 
 
+.breadcrumb-wrapper {
+  @extend .bg-full-width;
+
+  &::before {
+    background-color: #F0F0F0 !important;
+    border-bottom: 1px solid $gray-warm-30;
+  }
+
+  .usa-breadcrumb__list {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+
+    li {
+      color: $gray-70;
+      font-size: $theme-h6-font-size;
+
+      &::after {
+        font-size: 18px;
+        bottom: -.25rem;
+      }
+    }
+
+    a {
+      color: $theme-link-color;
+    }
+  }
+}
+
+
 .icon-button {
   display: flex;
   align-items: center;
@@ -603,7 +632,7 @@ details {
 
 .image-gallery-node {
   .slick {
-    
+
     .media__icon--litebox {
       display: none;
     }

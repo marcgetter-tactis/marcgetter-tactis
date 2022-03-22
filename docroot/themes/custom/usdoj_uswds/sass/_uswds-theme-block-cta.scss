@@ -1,5 +1,5 @@
 .block-cta {
-  padding-bottom: 3rem;
+  padding-bottom: 2.25rem;
   
   &.text-align-center {
     .field_heading {
@@ -19,7 +19,7 @@
       display: block;
       font-weight: bold;
       color: color(primary-darker);
-      margin-bottom: 1rem;
+      margin-bottom: .5rem;
     }
   }
   
@@ -34,6 +34,7 @@
     @include at-media(tablet) {
       margin-right: 1rem;
       display: inline-block;
+      margin-bottom: 0;
     }
     
     a {

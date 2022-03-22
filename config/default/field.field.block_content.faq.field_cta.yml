@@ -11,7 +11,7 @@ id: block_content.faq.field_cta
 field_name: field_cta
 entity_type: block_content
 bundle: faq
-label: CTA
+label: 'Call to Action'
 description: ''
 required: false
 translatable: true

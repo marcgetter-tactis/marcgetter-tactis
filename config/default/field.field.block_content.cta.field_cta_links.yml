@@ -12,8 +12,8 @@ id: block_content.cta.field_cta_links
 field_name: field_cta_links
 entity_type: block_content
 bundle: cta
-label: 'Call to Action Links'
-description: ''
+label: 'Call to Action'
+description: 'This call to action (CTA) will appear as a linked button that tells the user to take specified action. Use strong action words that provide direction like  “Read More” or “Learn More About [x]”.'
 required: false
 translatable: false
 default_value: {  }

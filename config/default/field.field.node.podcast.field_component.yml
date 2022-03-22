@@ -11,7 +11,7 @@ field_name: field_component
 entity_type: node
 bundle: podcast
 label: Component
-description: ''
+description: 'Select one or more components. To add a component, click on the field container and select a component from the drop-down list. To remove a component, click on (X) for that component.'
 required: true
 translatable: true
 default_value: {  }

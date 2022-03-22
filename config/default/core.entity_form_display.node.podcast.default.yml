@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.podcast.field_archived
     - field.field.node.podcast.field_attachment
     - field.field.node.podcast.field_attribution
     - field.field.node.podcast.field_audio
@@ -56,6 +57,13 @@ content:
     weight: 17
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_archived:
+    type: boolean_checkbox
+    weight: 28
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   field_attachment:
     type: media_library_widget

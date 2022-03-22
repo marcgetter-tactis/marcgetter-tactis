@@ -1,0 +1,21 @@
+uuid: 3f4e01f0-75a2-4152-afcb-0f901480881f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_archived
+    - node.type.podcast
+id: node.podcast.field_archived
+field_name: field_archived
+entity_type: node
+bundle: podcast
+label: Archived
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.podcast.field_archived
     - field.field.node.podcast.field_attachment
     - field.field.node.podcast.field_attribution
     - field.field.node.podcast.field_audio
@@ -30,6 +31,16 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_archived:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 2
     region: content
   links:
     settings: {  }

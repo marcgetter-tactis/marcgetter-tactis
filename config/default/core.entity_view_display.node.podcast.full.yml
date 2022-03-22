@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.full
+    - field.field.node.podcast.field_archived
     - field.field.node.podcast.field_attachment
     - field.field.node.podcast.field_attribution
     - field.field.node.podcast.field_audio
@@ -205,6 +206,7 @@ content:
     region: content
 hidden:
   entitygroupfield: true
+  field_archived: true
   field_other_groups: true
   field_your_groups: true
   langcode: true

@@ -201,4 +201,7 @@ hooks:
     - exec-host: "ddev auth ssh"
     - exec-host: "ddev set_migrate_db"
   post-import-db:
+    - exec: "drush en stage_file_proxy"
+    - exec: "drush cset stage_file_proxy.settings origin https://justicegovdev.prod.acquia-sites.com/ -y"
+    - exec: "echo 'Stage File Proxy origin set to https://justicegovdev.prod.acquia-sites.com/.' && echo"
     - exec: "drush uli"

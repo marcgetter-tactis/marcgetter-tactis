@@ -8,16 +8,15 @@
     @include at-media(desktop) {
       background-color: $taupe-bg;
       border-left: 4px solid $theme-color-accent-warm;
-      padding: 1rem;
       margin-top: 2rem;
       margin-top: 0;
-      padding-left: 2rem;
     }
-    
   
     .field_heading {
       font-weight: bold;
       display: none;  
+      color: color(primary-darker);
+      padding: 2rem 2rem 1rem;
       @include at-media(desktop) {
         display: block;
       }
@@ -28,14 +27,24 @@
     display: none;  
     @include at-media(desktop) {
       display: grid;
-      grid-template-rows: repeat(4, 1fr);
+      grid-template-rows: repeat(4, auto);
       grid-auto-flow: column;
-      grid-template-columns: repeat(3, auto);
+      grid-template-columns: repeat(3, 13.25rem);
+      column-gap: 2rem;
+      padding-bottom: 1.5rem;
+      
       .field__item {
         padding-bottom: 1rem;
-        padding-right: 2rem;
-        margin-right: 2rem;
         border-right: 1px solid $gray-warm-20;
+        font-weight: 600;
+        padding-left: 1rem;
+
+        //first-column
+        &:nth-child(-n+4) {
+          padding-left: 2rem;
+        }
+        
+        //third column
         &:nth-last-child(-n+3) {
           border-right: none;
           margin-right: 0;

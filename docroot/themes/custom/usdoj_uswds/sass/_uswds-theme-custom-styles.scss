@@ -413,6 +413,10 @@ details {
   color: $gray-80;
 }
 
+.node-share {
+  margin-bottom: $node-field-spacing;
+}
+
 .node-body {
   color: $gray-70;
   line-height: 1.6;
@@ -1319,9 +1323,10 @@ details {
   #usdoj-sharing-toggle {
     background-color: $doj-coolblue;
     color: white;
-    padding: 0.5rem 0 .5rem 1rem;
     font-weight: 600;
     font-size: $theme-h6-font-size;
+    display: block;
+    padding-left: 1rem;
 
     &:hover {
       cursor: pointer;
@@ -1334,8 +1339,12 @@ details {
     .toggle-icon {
       border-left: 1px solid white;
       display: inline-block;
-      padding: .5rem;
+      padding: .375rem 1rem;
       margin-left: .5rem;
+
+      img {
+        display: inline-block;
+      }
     }
   }
 

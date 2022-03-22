@@ -82,6 +82,7 @@
     {{ title_suffix }}
 
     <div class="node-date">{{ content.field_date }}</div>
+    <div class="node-share">{{ drupal_block('sharing_block', wrapper=false) }}</div>
     
     <div{{ content_attributes }}>
       {{ content|without('field_date', 'field_component') }}

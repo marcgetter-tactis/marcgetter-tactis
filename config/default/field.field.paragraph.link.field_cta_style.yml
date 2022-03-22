@@ -12,7 +12,7 @@ field_name: field_cta_style
 entity_type: paragraph
 bundle: link
 label: 'Call to Action style'
-description: 'Select a style to apply to Call to Action.'
+description: ''
 required: true
 translatable: true
 default_value:

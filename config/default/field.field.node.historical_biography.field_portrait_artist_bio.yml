@@ -1,0 +1,26 @@
+uuid: 0d957a0e-4a44-432f-afd0-92c739f5265b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_portrait_artist_bio
+    - node.type.historical_biography
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - wysiwyg
+id: node.historical_biography.field_portrait_artist_bio
+field_name: field_portrait_artist_bio
+entity_type: node
+bundle: historical_biography
+label: 'Portrait Artist Bio'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

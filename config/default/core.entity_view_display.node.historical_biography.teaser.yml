@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.historical_biography.field_other_groups
     - field.field.node.historical_biography.field_portrait
     - field.field.node.historical_biography.field_portrait_artist
+    - field.field.node.historical_biography.field_portrait_artist_bio
     - field.field.node.historical_biography.field_portrait_download
     - field.field.node.historical_biography.field_teaser
     - field.field.node.historical_biography.field_your_groups
@@ -43,6 +44,7 @@ hidden:
   field_other_groups: true
   field_portrait: true
   field_portrait_artist: true
+  field_portrait_artist_bio: true
   field_portrait_download: true
   field_teaser: true
   field_your_groups: true

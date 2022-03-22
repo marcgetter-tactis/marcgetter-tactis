@@ -12,6 +12,16 @@
     @extend h2;
     font-weight: bold;
   }
+
+  .field_subheading {
+    display: none;
+    @include at-media(tablet) {
+      display: block;
+      font-weight: bold;
+      color: color(primary-darker);
+      margin-bottom: 1rem;
+    }
+  }
   
   .body {
     margin-bottom: 2rem;
@@ -21,7 +31,7 @@
   .paragraph--type--link {
     display: block;
     margin-bottom: 1rem;
-    @include at-media(desktop) {
+    @include at-media(tablet) {
       margin-right: 1rem;
       display: inline-block;
     }
@@ -90,7 +100,7 @@
       //pdf icon
       &.pdf {
         max-height: 44px;
-        @include at-media(desktop) {
+        @include at-media(tablet) {
           position: relative;
           top: 4px;
         }

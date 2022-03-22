@@ -1,0 +1,19 @@
+uuid: 2d3a86f9-7805-4618-bff8-ede07891e127
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.cta
+    - field.storage.block_content.field_subheading
+id: block_content.cta.field_subheading
+field_name: field_subheading
+entity_type: block_content
+bundle: cta
+label: Subheading
+description: 'For a CTA Heading that is bold and gray.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

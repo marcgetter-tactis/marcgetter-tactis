@@ -11,8 +11,8 @@ id: paragraph.card.field_cta
 field_name: field_cta
 entity_type: paragraph
 bundle: card
-label: CTA
-description: ''
+label: 'Call to Action'
+description: 'This call to action (CTA) will appear as a linked button that tells the user to take specified action. Use strong action words that provide direction like  “Read More” or “Learn More About [x]”.'
 required: false
 translatable: false
 default_value: {  }

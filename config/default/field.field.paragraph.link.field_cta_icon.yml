@@ -12,7 +12,7 @@ field_name: field_cta_icon
 entity_type: paragraph
 bundle: link
 label: 'Call to Action Icon'
-description: 'Select an icon to display with Call to Action link.'
+description: ''
 required: false
 translatable: false
 default_value: {  }

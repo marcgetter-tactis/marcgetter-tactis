@@ -436,20 +436,22 @@ function _usdoj_utilities_group_menu_has_parent_override(GroupContentMenu $group
  * Helper function to add new menu to page layout.
  */
 function _usdoj_utilities_alter_layout_left_menu(array $layout, $new_menu_html) {
-  if (count($layout)) {
+  if (is_array($layout) && count($layout)) {
     foreach ($layout as $items_index => $items) {
-      if (count($items)) {
+      if (is_array($items) && count($items)) {
         foreach ($items as $item_label => $item) {
-          if (count($item)) {
+          if (is_array($item) && count($item)) {
             foreach ($item as $item_uuid => $keys) {
-              foreach ($keys as $key) {
-                if (isset($key['contexts'])) {
-                  if (count($key['contexts'])) {
-                    foreach ($key['contexts'] as $key_context) {
-                      if (strpos($key_context, 'group-menu-left') !== FALSE) {
-                        $layout[$items_index][$item_label][$item_uuid]['content']['#markup'] = $new_menu_html;
+              if (is_array($keys) && count($keys)) {
+                foreach ($keys as $key) {
+                  if (isset($key['contexts'])) {
+                    if (is_array($key['contexts'])) {
+                      foreach ($key['contexts'] as $key_context) {
+                        if (strpos($key_context, 'group-menu-left') !== FALSE) {
+                          $layout[$items_index][$item_label][$item_uuid]['content']['#markup'] = $new_menu_html;
 
-                        return $layout;
+                          return $layout;
+                        }
                       }
                     }
                   }
@@ -500,18 +502,20 @@ function _usdoj_utilities_get_group_menu_left_uuid(array $layout) {
  * Helper function to determine if page layout has left menu block.
  */
 function _usdoj_utilities_has_group_menu_left(array $layout) {
-  if (count($layout)) {
+  if (is_array($layout) && count($layout)) {
     foreach ($layout as $items) {
-      if (count($items)) {
+      if (is_array($items) && count($items)) {
         foreach ($items as $item) {
-          if (count($item)) {
+          if (is_array($item) && count($item)) {
             foreach ($item as $keys) {
-              foreach ($keys as $key) {
-                if (isset($key['contexts'])) {
-                  if (count($key['contexts'])) {
-                    foreach ($key['contexts'] as $key_context) {
-                      if (strpos($key_context, 'group-menu-left') !== FALSE) {
-                        return TRUE;
+              if (is_array($keys) && count($keys)) {
+                foreach ($keys as $key) {
+                  if (isset($key['contexts'])) {
+                    if (is_array($key['contexts']) && count($key['contexts'])) {
+                      foreach ($key['contexts'] as $key_context) {
+                        if (strpos($key_context, 'group-menu-left') !== FALSE) {
+                          return TRUE;
+                        }
                       }
                     }
                   }
@@ -680,30 +684,39 @@ function _usdoj_utilities_get_group_left_menu_id($group_id) {
   for ($i = 0; $i < 9; $i++) {
     $group = _usdoj_utilities_get_entity_by_id('group', $new_group_id);
 
-    $group_title = $group->get('label')->value;
+    if (!empty($group) && isset($group->get('label')->value)) {
+      $group_title = $group->get('label')->value;
 
-    $left_menu_id = _usdoj_utilities_get_menu_id($group, 'Left Navigation');
+      if (!empty($group_title)) {
 
-    $group_content_menu_left = _usdoj_utilities_get_group_content_menu($left_menu_id);
+        $left_menu_id = _usdoj_utilities_get_menu_id($group, 'Left Navigation');
 
-    $left_menu_has_parent_override = _usdoj_utilities_group_menu_has_parent_override($group_content_menu_left);
+        if (is_numeric($left_menu_id)) {
+          $group_content_menu_left = _usdoj_utilities_get_group_content_menu($left_menu_id);
 
-    $organization = _usdoj_utilities_get_entity_by_properties('node', [
-      'type' => 'component_group',
-      'title' => $group_title,
-    ]);
+          $left_menu_has_parent_override = _usdoj_utilities_group_menu_has_parent_override($group_content_menu_left);
 
-    if ($organization) {
+          $organization = _usdoj_utilities_get_entity_by_properties('node', [
+            'type' => 'component_group',
+            'title' => $group_title,
+          ]);
 
-      $organization_group_id = _usdoj_utilities_get_entity_group_id($organization);
+          if ($organization) {
 
-      $organization_name = $organization->get('title')->value;
+            $organization_group_id = _usdoj_utilities_get_entity_group_id($organization);
 
-      if (($group_title == $organization_name) && $left_menu_has_parent_override) {
-        return $new_group_id;
+            if (isset($organization->get('title')->value)) {
+              $organization_name = $organization->get('title')->value;
+
+              if (($group_title == $organization_name) && $left_menu_has_parent_override) {
+                return $new_group_id;
+              }
+
+              $new_group_id = $organization_group_id;
+            }
+          }
+        }
       }
-
-      $new_group_id = $organization_group_id;
     }
   }
 
@@ -717,28 +730,42 @@ function _usdoj_utilities_set_left_group_menu(array &$build, EntityInterface $en
 
   $entity_group_id = _usdoj_utilities_get_entity_group_id($entity);
 
-  $group_id = _usdoj_utilities_get_group_left_menu_id($entity_group_id);
+  if (is_numeric($entity_group_id)) {
+    $group_id = _usdoj_utilities_get_group_left_menu_id($entity_group_id);
 
-  $group = _usdoj_utilities_get_entity_by_id('group', $group_id);
+    if (is_numeric($group_id)) {
 
-  $menu_id = _usdoj_utilities_get_menu_id($group, 'Left Navigation');
+      $group = _usdoj_utilities_get_entity_by_id('group', $group_id);
 
-  $menu_name = _usdoj_utilities_get_menu_name($menu_id);
+      if ($group) {
 
-  $layout = $build['_layout_builder'];
+        $menu_id = _usdoj_utilities_get_menu_id($group, 'Left Navigation');
 
-  $menu_tree = \Drupal::menuTree();
+        if ($menu_id) {
 
-  $menu_params = $menu_tree->getCurrentRouteMenuTreeParameters($menu_name);
+          $menu_name = _usdoj_utilities_get_menu_name($menu_id);
 
-  $tree = $menu_tree->load($menu_name, $menu_params);
+          if ($menu_name) {
 
-  $new_menu = $menu_tree->build($tree);
+            $layout = $build['_layout_builder'];
 
-  $new_menu_html = \Drupal::service('renderer')->render($new_menu);
+            $menu_tree = \Drupal::menuTree();
 
-  if (!empty($new_menu_html)) {
-    $build['_layout_builder'] = _usdoj_utilities_alter_layout_left_menu($layout, $new_menu_html);
+            $menu_params = $menu_tree->getCurrentRouteMenuTreeParameters($menu_name);
+
+            $tree = $menu_tree->load($menu_name, $menu_params);
+
+            $new_menu = $menu_tree->build($tree);
+
+            $new_menu_html = \Drupal::service('renderer')->render($new_menu);
+
+            if (!empty($new_menu_html)) {
+              $build['_layout_builder'] = _usdoj_utilities_alter_layout_left_menu($layout, $new_menu_html);
+            }
+          }
+        }
+      }
+    }
   }
 }
 

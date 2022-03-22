@@ -1,3 +1,9 @@
 #!/bin/bash
 blt "$@"
-if [[ "$@" == "drupal:sync:default:db" ]]; then drush uli; fi
+if [[ "$@" == "drupal:sync:default:db" ]]; then
+  drush en stage_file_proxy
+  drush cset stage_file_proxy.settings origin https://justicegovdev.prod.acquia-sites.com/ -y
+  echo "Stage File Proxy origin set to https://justicegovdev.prod.acquia-sites.com/."
+  echo
+  drush uli
+fi

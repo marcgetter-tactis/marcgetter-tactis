@@ -1,9 +1,9 @@
 ARG BASE_IMAGE
 FROM $BASE_IMAGE
 
-ENV ACLI_VERSION=1.24.0
+ENV ACLI_VERSION=1.25.1
 ENV NVM_DIR=/usr/local/nvm
-ENV NODE_VERSION=v14.19.0
+ENV NODE_VERSION=v14.19.1
 ENV NVM_VERSION=0.39.1
 
 RUN curl -sLO https://github.com/acquia/cli/releases/download/${ACLI_VERSION}/acli.phar && \

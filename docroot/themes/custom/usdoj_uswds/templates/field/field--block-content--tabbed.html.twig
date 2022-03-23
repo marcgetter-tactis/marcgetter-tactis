@@ -45,20 +45,34 @@
 {% if label_hidden %}
   {% if multiple %}
     <div{{ attributes.addClass('field__items', 'panels') }}>
+      <div class="panel-titles">
+        {% for item in items %}
+          <div  {{ item.attributes.addClass('field__item', 'panel-title') }}> 
+            {% if loop.index == 1 %}
+              <div id="panel-{{loop.index}}" class="block-tab active">
+                {{ item.content['#paragraph'].field_headline.value }}
+              </div>
+            {% else %}
+              <div id="panel-{{loop.index}}" class="block-tab">
+                {{ item.content['#paragraph'].field_headline.value }}
+              </div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+
       {% for item in items %}
-        <div  {{ item.attributes.addClass('field__item', 'panel') }}> 
-          {% if loop.index == 1 %}
-            <div id="panel-{{loop.index}}" class="block-tab active">
-              <span>{{ item.content['#paragraph'].field_headline.value }}</span>
-            </div>
-          {% else %}
-            <div id="panel-{{loop.index}}" class="block-tab">
-              <span>{{ item.content['#paragraph'].field_headline.value }}</span>
-            </div>
-          {% endif %}
-          <div id="panel-{{loop.index}}-body"class="panel-content">{{ item.content }}</div>
-        </div>
+        {% if loop.index == 1 %}
+          <div id="panel-{{loop.index}}-body"class="panel-content active">
+            {{ item.content }}
+          </div>
+        {% else %}
+          <div id="panel-{{loop.index}}-body"class="panel-content">
+            {{ item.content }}
+          </div>
+        {% endif %}
       {% endfor %}
+
     </div>
   {% else %}
     {% for item in items %}

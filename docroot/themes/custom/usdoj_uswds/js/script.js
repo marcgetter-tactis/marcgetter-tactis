@@ -178,16 +178,19 @@
   };
 
   //tab block functionality
-  $('.panel .block-tab').click(function() {
-    var i = $(this).attr('id');
+  $('.panels .block-tab').click(function() {
+    var $id = $(this).attr('id');
+    var $title = $('.panels .block-tab');
+    var $panel = $('.panels .panel-content');
 
-    if ($('.panel .block-tab').hasClass('active')) {
-      $('.panel .block-tab').removeClass('active');
-      $('.panel-content').hide();
+    if ($title.hasClass('active')) {
+      $title.removeClass('active');
+      $panel.removeClass('active');
+      //$('.panel-content').hide();
     }
 
     $(this).addClass('active');
-    $('#' + i + '-body').fadeIn('slow');
+    $('#' + $id + '-body').addClass('active');
   })
 
   //Placeholder text news keyword search

@@ -1,7 +1,9 @@
-uuid: 3e0e4ae8-7c05-40db-b02c-b7dffb4bdf0c
+uuid: ff9b8a73-4150-4786-b3bc-c5a6ea99091f
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: PtgeZT5IlnwIGXh2A4nhjy1Sdzc2oDcuF4pMBk45VwU
 id: usdoj_migrate_node_complete_podcast
 class: Drupal\node\Plugin\migrate\D7NodeTranslation
 field_plugin_method: null
@@ -53,7 +55,10 @@ process:
       plugin: sub_process
       source: field_podcast_attachment
       process:
-        target_id: fid
+        target_id:
+          plugin: migration_lookup
+          migration: usdoj_migrate_file_to_media_document
+          source: fid
         display: display
         description: description
   field_attribution: field_podcast_attribution
@@ -62,7 +67,10 @@ process:
       plugin: sub_process
       source: field_podcast_audio
       process:
-        target_id: fid
+        target_id:
+          plugin: migration_lookup
+          migration: usdoj_migrate_file_to_media_audio
+          source: fid
         display: display
         description: description
   field_cover_art:
@@ -70,7 +78,10 @@ process:
       plugin: sub_process
       source: field_podcast_cover_art
       process:
-        target_id: fid
+        target_id:
+          plugin: migration_lookup
+          migration: usdoj_migrate_file_to_media_image
+          source: fid
         alt: alt
         title: title
         width: width
@@ -90,7 +101,10 @@ process:
       plugin: sub_process
       source: field_podcast_image
       process:
-        target_id: fid
+        target_id:
+          plugin: migration_lookup
+          migration: usdoj_migrate_file_to_media_image
+          source: fid
         alt: alt
         title: title
         width: width
@@ -130,6 +144,8 @@ migration_dependencies:
     - usdoj_migrate_user
     - usdoj_migrate_language
     - usdoj_migrate_taxonomy_terms
+    - usdoj_migrate_file_to_media_audio
+    - usdoj_migrate_file_to_media_document
     - usdoj_migrate_file_to_media_image
   optional:
     - usdoj_migrate_field_instance

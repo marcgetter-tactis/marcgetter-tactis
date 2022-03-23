@@ -11,7 +11,19 @@ additional_fqdns: []
 mariadb_version: "10.3"
 mysql_version: ""
 nfs_mount_enabled: false
-mutagen_enabled: false
+mutagen_enabled: true
+hooks:
+  post-import-db:
+  - exec: drush en stage_file_proxy
+  - exec: drush cset stage_file_proxy.settings origin https://justicegovdev.prod.acquia-sites.com/
+      -y
+  - exec: echo 'Stage File Proxy origin set to https://justicegovdev.prod.acquia-sites.com/.'
+      && echo
+  - exec: drush uli
+  post-start:
+  - exec: ln -sf /var/www/html/vendor/acquia/blt/bin/blt /usr/bin/blt
+  - exec-host: ddev auth ssh
+  - exec-host: ddev set_migrate_db
 use_dns_when_possible: true
 composer_version: ""
 web_environment: []
@@ -195,13 +207,3 @@ web_environment: []
 # post-import-db:
 #   - exec: drush cr
 #   - exec: drush updb
-hooks:
-  post-start:
-    - exec: "ln -sf /var/www/html/vendor/acquia/blt/bin/blt /usr/bin/blt"
-    - exec-host: "ddev auth ssh"
-    - exec-host: "ddev set_migrate_db"
-  post-import-db:
-    - exec: "drush en stage_file_proxy"
-    - exec: "drush cset stage_file_proxy.settings origin https://justicegovdev.prod.acquia-sites.com/ -y"
-    - exec: "echo 'Stage File Proxy origin set to https://justicegovdev.prod.acquia-sites.com/.' && echo"
-    - exec: "drush uli"

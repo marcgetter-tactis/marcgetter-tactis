@@ -83,7 +83,12 @@
 {% set attachmentNode = node.field_attachment %}
 
 {% set documents = content.field_case_documents %}
-{% set documentsNode = node.field_case_documents %}
+
+{% set industry = content.field_industry %}
+{% set markets = content.field_markets %}
+{% set violation = content.field_violation %}
+{% set link = content.field_link %}
+{% set body = content.field_body %}
 
 {% set asideNav = marcToPreProcess ? dynamicSidebarMenu : 'sidebar-menu' %}
 {% set renderedAsideNav = drupal_menu(asideNav) %}
@@ -116,16 +121,41 @@
     <div class="node-component margin-bottom-2"><div><strong>DOJ Component</strong></div>{{ content.field_component }}</div>
     <div class="node-overview"><div><strong>Overview</strong></div>{{ content.field_overview }}</div>
     <div class="node-court margin-bottom-2"><div><strong>Federal Court</strong></div>{{ content.field_federal_court }}</div>
-    <div class="node-industry margin-bottom-2"><div><strong>Industry Code(s)</strong></div>{{ content.field_industry }}</div>
-    <div class="node-markets margin-bottom-2"><div><strong>Market(s)</strong></div>{{ content.field_markets }}</div>
-    <div class="node-violation margin-bottom-2"><div><strong>Case Violation(s)</strong></div>{{ content.field_violation }}</div>
-    <div class="node-link margin-bottom-2"><div><strong>Link</strong></div>{{ content.field_link }}</div>
+
+    {% if industry|render|trim is not empty %}
+      <div class="node-industry margin-bottom-2">
+        <div><strong>Industry Code(s)</strong></div>
+        {{ industry }}
+      </div>
+    {% endif %}
+    
+    {% if markets|render|trim is not empty %}
+      <div class="node-markets margin-bottom-2">
+        <div><strong>Market(s)</strong></div>
+        {{ markets }}
+      </div>
+    {% endif %}
+    
+    {% if violation|render|trim is not empty %}
+      <div class="node-violation margin-bottom-2">
+        <div><strong>Case Violation(s)</strong></div>
+        {{ violation }}
+      </div>
+    {% endif %}
+    
+    {% if link|render|trim is not empty %}
+      <div class="node-link margin-bottom-2">
+        <div><strong>Link</strong></div>
+        {{ link }}
+      </div>
+    {% endif %}
   
-      
-    <div{{ content_attributes.addClass("node-body")}}>
-      <strong>More Information</strong>
-      {{ content.field_body }}
-    </div>
+    {% if link|render|trim is not empty %}
+      <div{{ content_attributes.addClass("node-body")}}>
+        <strong>More Information</strong>
+        {{ body }}
+      </div>
+    {% endif %}
 
     <div class="node-notes">
       {{ content.field_notes }}
@@ -134,8 +164,8 @@
     {% if documents|render|trim is not empty %}
  
       <div class="node-documents margin-bottom-2">
-        <strong>{{ documentsNode['#items']|length == 1 ? "Case Document" : "Case Documents" }}</strong>
-        {{ usdojMacros.detailedDocuments(documentsNode,"field__item") }}
+      <strong>Case Documents</strong>
+        {{ documents }}
       </div>
     {% endif %}
 

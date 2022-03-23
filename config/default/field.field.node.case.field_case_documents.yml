@@ -1,11 +1,11 @@
-uuid: 942a20a4-3ba4-449d-a1d1-3581da07ce23
+uuid: 9549a9c8-f006-4d4a-a86c-ad119fd38e6a
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_case_documents
-    - media.type.document
     - node.type.case
+    - node.type.case_document
 id: node.case.field_case_documents
 field_name: field_case_documents
 entity_type: node
@@ -17,10 +17,10 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:media'
+  handler: 'default:node'
   handler_settings:
     target_bundles:
-      document: document
+      case_document: case_document
     sort:
       field: _none
       direction: ASC

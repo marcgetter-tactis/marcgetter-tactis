@@ -52,7 +52,10 @@ process:
       plugin: sub_process
       source: field_podcast_attachment
       process:
-        target_id: fid
+        target_id:
+          plugin: migration_lookup
+          migration: usdoj_migrate_file_to_media_document
+          source: fid
         display: display
         description: description
   field_attribution: field_podcast_attribution
@@ -61,7 +64,10 @@ process:
       plugin: sub_process
       source: field_podcast_audio
       process:
-        target_id: fid
+        target_id:
+          plugin: migration_lookup
+          migration: usdoj_migrate_file_to_media_audio
+          source: fid
         display: display
         description: description
   field_cover_art:
@@ -69,7 +75,10 @@ process:
       plugin: sub_process
       source: field_podcast_cover_art
       process:
-        target_id: fid
+        target_id:
+          plugin: migration_lookup
+          migration: usdoj_migrate_file_to_media_image
+          source: fid
         alt: alt
         title: title
         width: width
@@ -89,7 +98,10 @@ process:
       plugin: sub_process
       source: field_podcast_image
       process:
-        target_id: fid
+        target_id:
+          plugin: migration_lookup
+          migration: usdoj_migrate_file_to_media_image
+          source: fid
         alt: alt
         title: title
         width: width
@@ -129,6 +141,8 @@ migration_dependencies:
     - usdoj_migrate_user
     - usdoj_migrate_language
     - usdoj_migrate_taxonomy_terms
+    - usdoj_migrate_file_to_media_audio
+    - usdoj_migrate_file_to_media_document
     - usdoj_migrate_file_to_media_image
   optional:
     - usdoj_migrate_field_instance

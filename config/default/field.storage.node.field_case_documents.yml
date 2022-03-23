@@ -1,16 +1,15 @@
-uuid: d4b8c118-6854-49ee-9442-028d60ad456a
+uuid: a34442f9-bcd2-47c7-8fa1-9e21c7617dc0
 langcode: en
 status: true
 dependencies:
   module:
-    - media
     - node
 id: node.field_case_documents
 field_name: field_case_documents
 entity_type: node
 type: entity_reference
 settings:
-  target_type: media
+  target_type: node
 module: core
 locked: false
 cardinality: -1

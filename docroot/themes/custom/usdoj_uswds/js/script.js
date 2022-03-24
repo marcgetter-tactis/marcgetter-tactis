@@ -59,8 +59,15 @@
         }
 
         //tab block mobile slick slider
+        var slickNum = 0;
         if ($('.paragraph--type--tab .field__items')[0]){
-          $('.paragraph--type--tab .field__items').slick({
+          
+          $('.paragraph--type--tab .field__items').each(function () {
+            slickNum++;
+            $(this).addClass( 'slider-' + slickNum);
+          });
+          
+          $('[class*="slider-"]').slick({
             dots: true,
             infinite: false,
             prevArrow: false,
@@ -75,11 +82,13 @@
               }
             ]
           });
+            
           $(window).resize(function(){
             if($(window).width() < 768) {
-              $('.paragraph--type--tab .field__items')[0].slick.refresh();
+              $('[class*="slider-"]').slick('refresh');
             }
           });
+
         }
 
       })

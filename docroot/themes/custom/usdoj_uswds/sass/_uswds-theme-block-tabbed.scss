@@ -69,22 +69,18 @@ Tabbed Block on Homepage
     
     //content of each tab
     .panel-content { 
-      display: none;
-      left: 0; 
-      top: 5rem; 
-      bottom: 0; 
-      right: 0;
-      padding: 0;
-      border-top: 1px solid $gray-10;
+      visibility: collapse;      
+      height: 0;
+      
       &.active {
-        display: block;
-      }
-      @media (min-width: 48em) {
-        padding: 1rem 3rem 3rem;
+        visibility: visible;
+        height: 100%;
       }
 
-      
       .paragraph--type--tab {
+        @include at-media(desktop) {
+          padding: 1rem 3rem 3rem;
+        }
         
         .field_headline {
           display: none;
@@ -100,7 +96,7 @@ Tabbed Block on Homepage
           list-style: none;
           bottom: 2rem;
           text-align: center;
-          margin: 0 auto;
+          margin: 2rem auto;
           
           li {
             display: inline-block;

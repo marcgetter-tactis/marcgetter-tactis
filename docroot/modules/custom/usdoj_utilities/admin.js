@@ -9,8 +9,8 @@
     $(selector).val('').trigger("chosen:updated");
   });
 
-  $('.chosen-hide-day, .chosen-hide-month-day').find('select.form-select').change( function() {
-    var this_name = $(this).attr('name');
+  $('.chosen-hide-day, .chosen-hide-monthday').find('select.form-select').change( function() {
+   var this_name = $(this).attr('name');
     var suffix = {
       'year': '[year]',
       'month': '[month]',

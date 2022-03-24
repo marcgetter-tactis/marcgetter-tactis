@@ -1,0 +1,106 @@
+uuid: 03d1fcf1-da87-44bf-8756-b1abd65542e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.staff_profile.field_body
+    - field.field.node.staff_profile.field_byline
+    - field.field.node.staff_profile.field_component
+    - field.field.node.staff_profile.field_dates_service
+    - field.field.node.staff_profile.field_name
+    - field.field.node.staff_profile.field_other_groups
+    - field.field.node.staff_profile.field_portrait
+    - field.field.node.staff_profile.field_portrait_download
+    - field.field.node.staff_profile.field_position
+    - field.field.node.staff_profile.field_teaser
+    - field.field.node.staff_profile.field_your_groups
+    - image.style.staff_profile_portrait_230x250
+    - node.type.staff_profile
+  module:
+    - datetime_range
+    - layout_builder
+    - media
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.staff_profile.full
+targetEntityType: node
+bundle: staff_profile
+mode: full
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_component:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_dates_service:
+    type: daterange_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: medium
+      separator: '-'
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_portrait:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: staff_profile_portrait_230x250
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_portrait_download:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_position:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  entitygroupfield: true
+  field_byline: true
+  field_other_groups: true
+  field_teaser: true
+  field_your_groups: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

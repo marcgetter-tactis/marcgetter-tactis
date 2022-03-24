@@ -79,23 +79,20 @@
     "grid-gap"
 ] %}
 
-{% set episodeType = content.field_episode_type %}
-{% set date = content.field_date %}
-{% set summary = content.field_summary %}
-{% set cover_art = content.field_cover_art %}
+{{ devel_breakpoint() }}
+{% set name = content.field_name %}
+{% set position = content.field_position %}
+{% set portrait = content.field_portrait %}
+{% set portrait_download = content.field_portrait_download %}
+{% set portrait_download_url = node.field_portrait_download|file_url %}
 {% set body = content.field_body %}
-{% set images = content.field_image %}
-{% set transcript = content.field_transcript %}
-{% set audio = content.field_audio %}
-{% set buzzsprout = node.field_buzzsprout.value|raw %}
-{% set attachment = content.field_attachment %}
-{% set attachmentNode = node.field_attachment %}
-{% set credit = content.field_attribution %}
-{% set component = content.field_component %}
-{% set topics = content.field_topic %}
-{% set asideNav = marcToPreProcess ? dynamicSidebarMenu : 'sidebar-menu' %}
-{% set renderedAsideNav = drupal_menu(asideNav) %}
 {% set updatedDate = node.changed.value|date("F j, Y") %}
+{% set serviceDate = content.field_dates_service %}
+{% set component = content.field_component %}
+
+
+{% set asideNav = 'sidebar-menu' %}
+{% set renderedAsideNav = drupal_menu(asideNav) %}
 
 <article {{ attributes.addClass(classes) }}>
     {#    Below would render the <sidebar-menu> using  <menu--sidebar_first.html.twig>. This method has been disabled as the sidebar menu is rendered outside this template via Block Layouts in Drupal#}
@@ -108,107 +105,42 @@
 
     <div class="usa-layout-docs__main desktop:grid-col-fill node-content">
 
-{#        {% if asideNav %}
-            #}{# We need a different UI for the asideNav on mobile, so let's handle its styling differently #}{#
-            {{ usdojMacros.mobileSideNav(asideNav,"News") }}
-        {% endif %}#}
+{#        {% if asideNav %}#}
+{#            #}{# We need a different UI for the asideNav on mobile, so let's handle its styling differently #}
+{#            {{ usdojMacros.mobileSideNav(asideNav,"News") }}#}
+{#        {% endif %}#}
 
-        <div class="node-type">{{ node.type.entity.label }}</div>
-        {{ title_prefix }}
-        {% if page %}
-            <h1 class="page-title">{{ label }}</h1>
-        {% else %}
-            <h2{{ title_attributes.addClass('margin-0') }}>
-                <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-            </h2>
-        {% endif %}
-        {{ title_suffix }}
+        <div class="profile-details profile-details__wrapper display-flex margin-bottom-4">
+            {% if portrait|render|trim is not empty%}
+                <div class="profile-details__media"><div class="node-profile-image">{{ portrait }}</div></div>
+            {% endif %}
+            <div class="profile-details__details">
+                <div class="node-type">{{ node.type.entity.label }}</div>
 
+                {{ title_prefix }}
+                {% if page %}
+                    <h1 class="page-title">{{ name|render|trim is not empty ? name : label}}</h1>
+                {% else %}
+                    <h2{{ title_attributes.addClass('margin-0 page-title') }}>
+                        <a href="{{ url }}" rel="bookmark">{{ name|render|trim is not empty ? name : label}}</a>
+                    </h2>
+                {% endif %}
+                {{ title_suffix }}
+                <div class="node-position margin-bottom-1">{{ position }}</div>
+                {% if portrait|render|trim is not empty %}<div class="node-download margin-bottom-1"><a href="{{ portrait_download_url }}" title="download portrait image" download >Download Image</a></div>{% endif %}
+{#                <div class="node-share margin-bottom-2">{{ drupal_block('sharing_block') }}</div>#}
+            </div>
+        </div>
 
         <div{{ content_attributes }}>
-            {# <div class="node-episodeType margin-bottom-7"> #}
-            {# <div class="label text-bold">Episode Type:</div> #}
-            {# {{ episodeType }} #}
-            {# </div> #}
-
-            {% if date %}
-                <div class="node-date margin-bottom-7">{{ date }}</div>
-            {% endif %}
-
-            {% if cover_art %}
-                <div class="node-coverImage img-responsive margin-bottom-7">{{ cover_art }}</div>
-            {% endif %}
 
             {% if body|render|trim is not empty %}
                 <div class="node-body">{{ body }}</div>
             {% endif %}
 
-            {# {% if images|render|trim is not empty %} #}
-            {# <div>{{ images }}</div> #}
-            {# {% endif %} #}
-
-
-            {% if audio %}
-                <div class="node-audio margin-bottom-7">
-                    {{ audio }}
-                </div>
-            {% endif %}
-
-            {% if buzzsprout|render|trim is not empty %}
-                <div class="node-buzzsprout margin-bottom-7">
-                    <div class="node-buzzsprout__policy margin-bottom-105">Review the <a href="https://www.buzzsprout.com/privacy">Buzzsprout Privacy Policy</a>.</div>
-                    {% autoescape false %}
-                        {{ buzzsprout }}
-                    {% endautoescape %}
-                </div>
-            {% endif %}
-
-            {% if transcript|render|trim is not empty %}
-                <div class="usa-accordion margin-bottom-7">
-                    <!-- Use the accurate heading level to maintain the document outline -->
-                    <div class="usa-accordion__item">
-                        <h4 class="usa-accordion__heading">
-                            <button
-                                    class="usa-accordion__button"
-                                    aria-expanded="false"
-                                    aria-controls="transcript-{{ node.nid.value }}"
-                            >
-                                Transcript
-                            </button>
-                        </h4>
-                        <div id="transcript-{{ node.nid.value }}" class="usa-accordion__content usa-prose">
-                            {{ transcript }}
-                        </div>
-                    </div>
-                </div>
-            {% endif %}
-
             {% if updatedDate|render|trim is not empty%}
                 <div class="node-updated-date">Updated {{ updatedDate }}</div>
             {% endif %}
-            <hr>
-
-            {% if attachment|render|trim is not empty %}
-                <div class="node-attachments margin-bottom-7">
-                    <div class="label text-bold">{{ attachmentNode['#items']|length == 1 ? "Attachment" : "Attachments" }}</div>
-                    {{ usdojMacros.detailedAttachments(attachmentNode,"margin-y-2") }}
-                </div>
-            {% endif %}
-
-            {% if credit|render|trim is not empty %}
-                <div class="node-credit margin-bottom-7">
-                    <div class="label text-bold">Credit</div>
-                    {{ credit }}</div>
-            {% endif %}
-            {% if topics|render|trim is not empty%}
-                <div class="node-topics margin-bottom-7">
-                    <div class="label text-bold">Topics</div>
-                    {{ topics }}</div>
-            {% endif %}
-            <div class="node-component">
-                <div class="label text-bold">Component or Office</div>
-                {{ component }}
-            </div>
         </div>
     </div>
 </article>

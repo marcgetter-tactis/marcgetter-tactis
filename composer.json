@@ -97,7 +97,6 @@
         "drupal/media_migration": "^1.0@alpha",
         "drupal/media_revisions_ui": "^2.0",
         "drupal/menu_item_extras": "^2.16",
-        "drupal/migrate_file_to_media": "^2.0",
         "drupal/migrate_tools": "^5.1",
         "drupal/migrate_upgrade": "^3.2",
         "drupal/mysql56": "^1.0",

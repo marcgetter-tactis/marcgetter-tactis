@@ -20,7 +20,7 @@ i.e.
 */
 
 /************************************************
-ABLE OF CONTENTS - START
+TABLE OF CONTENTS - START
 ************************************************
 
   TOC 00 - Shared Site-wide Styles
@@ -30,12 +30,6 @@ ABLE OF CONTENTS - START
 /************************************************
 TABLE OF CONTENTS - END
 ************************************************/
-
-
-
-
-
-
 
 /************************************************
 TOC 00 - Shared Site-wide Styles - START
@@ -136,18 +130,19 @@ ul {
     margin-left: 20px;
 
     li {
-      margin-bottom: .25rem;
+      margin-bottom: 0.25rem;
 
       &::before {
         content: "";
         background-image: url("/themes/custom/usdoj_uswds/assets/img/usa-icons/star.svg");
-        filter: invert(92%) sepia(22%) saturate(4749%) hue-rotate(331deg) brightness(102%) contrast(106%);
+        filter: invert(92%) sepia(22%) saturate(4749%) hue-rotate(331deg)
+          brightness(102%) contrast(106%);
         background-size: contain;
         background-repeat: no-repeat;
         width: 14px;
         height: 14px;
         display: inline-block;
-        margin-right: .5rem;
+        margin-right: 0.5rem;
       }
     }
   }
@@ -181,21 +176,21 @@ blockquote {
 details {
   border: 1px solid $gray-cool-20;
   border-radius: 4px;
-  padding: .5em .5em 0;
+  padding: 0.5em 0.5em 0;
 
   &[open] {
-    padding: .5em;
+    padding: 0.5em;
 
     summary {
       border-bottom: 1px solid $gray-cool-20;
-      margin-bottom: .5em;
+      margin-bottom: 0.5em;
     }
   }
 
   summary {
     font-weight: bold;
-    margin: -.5em -.5em 0;
-    padding: .5em;
+    margin: -0.5em -0.5em 0;
+    padding: 0.5em;
   }
 }
 
@@ -219,7 +214,7 @@ details {
   }
   svg {
     vertical-align: middle;
-    margin-right: .25rem;
+    margin-right: 0.25rem;
   }
 }
 
@@ -240,12 +235,11 @@ details {
     .usa-sidenav {
       &::before {
         @include at-media(desktop) {
-          margin: 0 0 .5rem;
+          margin: 0 0 0.5rem;
         }
       }
     }
   }
-
 }
 
 .usa-button--active:hover {
@@ -264,18 +258,17 @@ details {
   }
 }
 
-
 .breadcrumb-wrapper {
   @extend .bg-full-width;
 
   &::before {
-    background-color: #F0F0F0 !important;
+    background-color: #f0f0f0 !important;
     border-bottom: 1px solid $gray-warm-30;
   }
 
   .usa-breadcrumb__list {
-    margin-top: .5rem;
-    margin-bottom: .5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 
     li {
       color: $gray-70;
@@ -283,7 +276,7 @@ details {
 
       &::after {
         font-size: 18px;
-        bottom: -.25rem;
+        bottom: -0.25rem;
       }
     }
 
@@ -293,14 +286,13 @@ details {
   }
 }
 
-
 .icon-button {
   display: flex;
   align-items: center;
   justify-content: center;
 
   img {
-    margin: 0 .5rem;
+    margin: 0 0.5rem;
   }
 }
 
@@ -353,7 +345,9 @@ details {
 //*******************
 //* Node fields START
 //*******************/
-
+.label {
+  margin-bottom: 0.5em;
+}
 .node-content {
   // similar to .block-field-blocknodepagefield-body
   color: $gray-70;
@@ -367,7 +361,7 @@ details {
 
   .field-header {
     font-size: $theme-h4-font-size;
-    margin: 0 0 .25rem 0;
+    margin: 0 0 0.25rem 0;
     color: $doj-darkblue;
     font-family: font-family($theme-body-font-family);
   }
@@ -395,7 +389,7 @@ details {
   .node-top-right {
     strong {
       display: block;
-      margin-bottom: .5rem;
+      margin-bottom: 0.5rem;
     }
   }
 
@@ -487,7 +481,6 @@ details {
 .node-summary {
   color: $gray-70;
   line-height: 1.65;
-
 }
 
 .node-attachments {
@@ -495,7 +488,7 @@ details {
 
   .field__item {
     display: block;
-    margin: .25rem 0;
+    margin: 0.25rem 0;
   }
 }
 
@@ -503,7 +496,7 @@ details {
   margin-bottom: $node-field-spacing;
 
   .field__item {
-    margin: .5rem 0;
+    margin: 0.5rem 0;
 
     @include at-media(tablet) {
       display: inline;
@@ -524,7 +517,7 @@ details {
   margin-bottom: $node-field-spacing;
 
   .address {
-    margin: .75rem 0;
+    margin: 0.75rem 0;
   }
 }
 
@@ -534,7 +527,7 @@ details {
 
 .node-links {
   .field__item {
-    margin: .5rem 0;
+    margin: 0.5rem 0;
 
     a {
       @extend .external-link;
@@ -549,7 +542,7 @@ details {
     background-size: contain;
     width: 20px;
     height: 20px;
-    margin-left: .5rem;
+    margin-left: 0.5rem;
     background-repeat: no-repeat;
     display: inline-block;
     vertical-align: middle;
@@ -560,7 +553,7 @@ details {
   margin-bottom: $node-field-spacing;
 
   .field_speaker {
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -569,16 +562,15 @@ details {
 
   .field__item {
     display: inline-block;
-    margin: .25rem 1rem .25rem 0;
+    margin: 0.25rem 1rem 0.25rem 0;
 
     @include at-media(tablet) {
-      margin: .75rem 1rem .75rem 0;
-
+      margin: 0.75rem 1rem 0.75rem 0;
     }
 
     a {
       display: block;
-      padding: .75rem 1.25rem;
+      padding: 0.75rem 1.25rem;
       background-color: $blue-cool-5;
       border-left: 4px solid $doj-darkblue;
       text-decoration: none;
@@ -616,7 +608,7 @@ details {
   &__staffProfile {
     > *,
     .field_author {
-      display: inline
+      display: inline;
     }
   }
 }
@@ -629,18 +621,20 @@ details {
   font-weight: 300;
 }
 
-.node-industry, .node-markets, .node-violation {
+.node-industry,
+.node-markets,
+.node-violation {
   .field__item {
     display: flex;
     align-items: center;
     &:before {
       content: "";
       display: inline-block;
-      width: .5rem;
-      height: .5rem;
+      width: 0.5rem;
+      height: 0.5rem;
       background-color: $doj-coolblue;
       border-radius: 50%;
-      margin-right: .5rem;
+      margin-right: 0.5rem;
     }
   }
 }
@@ -649,11 +643,8 @@ details {
 //* Node fields END
 //*******************/
 
-
-
 .image-gallery-node {
   .slick {
-
     .media__icon--litebox {
       display: none;
     }
@@ -669,15 +660,16 @@ details {
         left: 1rem;
         color: white;
         background-color: $doj-coolblue;
-        padding: .5rem .75rem;
+        padding: 0.5rem 0.75rem;
         border-radius: 2rem;
         font-weight: 700;
         font-size: $theme-h6-font-size;
         pointer-events: none;
 
         img {
-          margin-left: .25rem;
-          filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(208deg) brightness(101%) contrast(101%);
+          margin-left: 0.25rem;
+          filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(208deg)
+            brightness(101%) contrast(101%);
         }
       }
     }
@@ -706,7 +698,7 @@ details {
     //position: absolute;
     top: -4.5rem;
     max-width: 90%;
-    margin-bottom: 1rem;;
+    margin-bottom: 1rem;
   }
 
   #cboxContent {
@@ -730,12 +722,12 @@ details {
 
   #cboxPrevious {
     right: 2rem;
-    background-image: url('../images/doj-gallery-yellow-left-arrow.svg');
+    background-image: url("../images/doj-gallery-yellow-left-arrow.svg");
   }
 
   #cboxNext {
     right: 0;
-    background-image: url('../images/doj-gallery-yellow-right-arrow.svg');
+    background-image: url("../images/doj-gallery-yellow-right-arrow.svg");
   }
 
   #cboxClose {
@@ -747,13 +739,12 @@ details {
     background-color: transparent;
     border: none;
     color: transparent;
-    background-image: url('../images/doj-gallery-white-close.svg');
+    background-image: url("../images/doj-gallery-white-close.svg");
     background-size: 25px;
     background-repeat: no-repeat;
     background-position: center;
     pointer-events: all;
     cursor: pointer;
-
   }
 
   @include at-media(tablet-lg) {
@@ -826,12 +817,12 @@ details {
     font-size: $theme-h5-font-size;
 
     &::after {
-      content: url('/themes/custom/usdoj_uswds/assets/img/usa-icons/image.svg');
+      content: url("/themes/custom/usdoj_uswds/assets/img/usa-icons/image.svg");
       display: inline-block;
       vertical-align: middle;
-      margin-left: .25rem;
-      filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(182deg) brightness(113%) contrast(101%);
-
+      margin-left: 0.25rem;
+      filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(182deg)
+        brightness(113%) contrast(101%);
     }
   }
 
@@ -1098,11 +1089,11 @@ details {
 
   p {
     &:first-of-type {
-      margin-top: .25rem;
+      margin-top: 0.25rem;
     }
 
     &:last-of-type {
-      margin-bottom: .25rem;
+      margin-bottom: 0.25rem;
     }
   }
 }
@@ -1116,11 +1107,16 @@ details {
   color: $gray-70;
   line-height: 1.6;
 
-  h1,h2,h3,h4,h5,h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-size: $theme-h4-font-size;
     color: $doj-darkblue;
     font-family: font-family($theme-body-font-family);
-    margin: 2rem 0 .5rem;
+    margin: 2rem 0 0.5rem;
   }
 
   img {
@@ -1135,8 +1131,6 @@ details {
 //*********************
 //* Block classes END
 //*********************
-
-
 
 //*****************************
 //* Layout builder styles START
@@ -1164,7 +1158,7 @@ details {
       > h2 {
         font-size: 15px;
         font-family: font-family($theme-body-font-family);
-        padding: 1.25rem .75rem;
+        padding: 1.25rem 0.75rem;
         border: thin solid $gray-warm-30;
         cursor: pointer;
         display: flex;
@@ -1176,27 +1170,27 @@ details {
         &::after {
           content: "";
           border: none;
-          background-image: url('/themes/custom/usdoj_uswds/assets/img/plus.svg');
-          filter: invert(26%) sepia(50%) saturate(2692%) hue-rotate(184deg) brightness(95%) contrast(101%);
+          background-image: url("/themes/custom/usdoj_uswds/assets/img/plus.svg");
+          filter: invert(26%) sepia(50%) saturate(2692%) hue-rotate(184deg)
+            brightness(95%) contrast(101%);
           background-size: contain;
           background-repeat: no-repeat;
           background-position: center;
           height: 12px;
           width: 12px;
           margin: 0;
-        }  
+        }
 
         &.open {
           background-color: $blue-cool-5;
 
           &::after {
-            background-image: url('/themes/custom/usdoj_uswds/assets/img/minus.svg');
+            background-image: url("/themes/custom/usdoj_uswds/assets/img/minus.svg");
           }
 
           + .menu {
             max-height: 1000px;
             transition: max-height 1s;
-
           }
         }
       }
@@ -1205,7 +1199,7 @@ details {
         list-style: none;
         max-height: 0;
         overflow: hidden;
-        transition: max-height .5s;
+        transition: max-height 0.5s;
         margin-top: 0;
 
         li {
@@ -1270,8 +1264,6 @@ details {
 //* Layout builder styles END
 //*****************************
 
-
-
 //* Views styles
 
 .most-wanted-view {
@@ -1299,7 +1291,7 @@ details {
       color: $doj-coolblue;
       font-size: $theme-h4-font-size;
       margin-bottom: 10px;
-      padding-top: .5rem;
+      padding-top: 0.5rem;
       padding-left: 1.5rem;
       padding-right: 1.5rem;
       font-weight: 600;
@@ -1328,7 +1320,7 @@ details {
   visibility: hidden;
 
   &.show {
-    opacity:1 ;
+    opacity: 1;
     visibility: visible;
   }
 }
@@ -1356,8 +1348,8 @@ details {
     .toggle-icon {
       border-left: 1px solid white;
       display: inline-block;
-      padding: .375rem 1rem;
-      margin-left: .5rem;
+      padding: 0.375rem 1rem;
+      margin-left: 0.5rem;
 
       img {
         display: inline-block;
@@ -1380,7 +1372,7 @@ details {
       display: flex;
       text-decoration: none;
       font-weight: 600;
-      padding: .5rem 1rem;
+      padding: 0.5rem 1rem;
       font-size: 13px;
 
       &:hover {
@@ -1394,43 +1386,39 @@ details {
   }
 }
 
+/************************************************
+  TOC 00 - Shared Site-wide Styles - END
+  ************************************************/
 
 /************************************************
-TOC 00 - Shared Site-wide Styles - END
-************************************************/
-
-/************************************************
-TOC 01 - Content Type: Node Profile - START
-************************************************/
+  TOC 01 - Content Type: Node Profile - START
+  ************************************************/
 .profile-details {
+  flex-flow: column;
+  row-gap: 1.5rem;
 
-    flex-flow: column;
-    row-gap: 1.5rem;
-
-    .profile-details {
-      &__media{
-        IMG {
-          min-width: 230px;
-        }
-      }
-      &__details{
-        .page-title {
-          margin-top: 8px;
-        }
-
+    &__media {
+      IMG {
+        min-width: 230px;
       }
     }
 
-
-    @include at-media(tablet) {
-      flex-flow: row nowrap;
-      column-gap: 1.5rem;
-      row-gap: 0;
+    &__details {
+      .page-title {
+        margin-top: 8px;
+      }
+      .node-share {
+        margin-bottom: 0;
+      }
     }
 
-
+  @include at-media(desktop) {
+    flex-flow: row nowrap;
+    column-gap: 1.5rem;
+    row-gap: 0;
+  }
 }
 
 /************************************************
-TOC 01 - Content Type: Node Profile - START
-************************************************/
+  TOC 01 - Content Type: Node Profile - END
+  ************************************************/

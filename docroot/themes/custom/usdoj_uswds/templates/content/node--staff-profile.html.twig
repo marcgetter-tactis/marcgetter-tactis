@@ -79,98 +79,82 @@
     "grid-gap"
 ] %}
 
-{% set author_freeForm = content.field_author_free %}
-{% set author_staffProfile = content.field_author %}
-{% set date = content.field_date %}
-{% set teaser = content.field_teaser %}
-{% set teaserImage = content.field_teaser_image %}
-{% set socialMediaImage = content.field_social_image %}
+{% set name = content.field_name %}
+{% set position = content.field_position %}
+{% set portrait = content.field_portrait %}
+{% set portrait_download = content.field_portrait_download %}
+{% set portrait_download_url = node.field_portrait_download|file_url %}
 {% set body = content.field_body %}
-{% set images = content.field_image %}
-{% set invisibleTags = content.field_invisible %}
-{% set attachment = content.field_attachment %}
-{% set attachmentNode = node.field_attachment %}
-{% set topics = content.field_topic %}
-{% set component = content.field_component %}
-{% set asideNav = marcToPreProcess ? dynamicSidebarMenu : 'sidebar-menu' %}
-{% set renderedAsideNav = drupal_menu(asideNav) %}
 {% set updatedDate = node.changed.value|date("F j, Y") %}
+{% set serviceDateStart = content.field_dates_service['#items'][0].value %}
+{% set serviceDateEnd = content.field_dates_service['#items'][0].end_value %}
+{% set component = content.field_component %}
+
+
+{% set asideNav = 'sidebar-menu' %}
+{% set renderedAsideNav = drupal_menu(asideNav) %}
 
 <article {{ attributes.addClass(classes) }}>
-{#    Previous method for rending the sidemenu within our twig template.
-    <aside class="usa-layout-docs__sidenav desktop:grid-col-3 display-none desktop:display-block desktop:grid-col-3 ">
+    {# Below would render the <sidebar-menu> using  <menu--sidebar_first.html.twig>. This method has been disabled as the sidebar menu is rendered outside this template via Block Layouts in Drupal #}
+    {# <aside class="usa-layout-docs__sidenav desktop:grid-col-3 display-none desktop:display-block desktop:grid-col-3 ">
         {% if asideNav %}
-            #}{# The base twig template from USWDS is fine, so let's reference it here #}{#
-            {{ sidebar_first.menu_links(renderedAsideNav['#items'],0,attributes) }}
-        {% endif %}
-    </aside>#}
+    #}{# The base twig template from USWDS is fine, so let's reference it here #}{#
+    {{ sidebar_first.menu_links(renderedAsideNav['#items'],0,attributes) }}
+{% endif %}
+</aside> #}
 
     <div class="usa-layout-docs__main desktop:grid-col-fill node-content">
 
-{#        {% if asideNav %}
-            #}{# We need a different UI for the asideNav on mobile, so let's handle its styling differently #}{#
-            {{ usdojMacros.mobileSideNav(asideNav,"News") }}
-        {% endif %}#}
+        {# {% if asideNav %} #}
+        {# #}{# We need a different UI for the asideNav on mobile, so let's handle its styling differently #}
+        {# {{ usdojMacros.mobileSideNav(asideNav,"News") }} #}
+        {# {% endif %} #}
 
-        <div class="node-type">{{ node.type.entity.label }}</div>
-        {{ title_prefix }}
-        {% if page %}
-            <h1 class="page-title">{{ label }}</h1>
-        {% else %}
-            <h2{{ title_attributes.addClass('margin-0') }}>
-                <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-            </h2>
-        {% endif %}
-        {{ title_suffix }}
+        <div class="profile-details profile-details__wrapper display-flex margin-bottom-4">
+            {% if portrait|render|trim is not empty %}
+                <div class="profile-details__media">
+                    <div class="node-profile-image">{{ portrait }}</div>
+                </div>
+            {% endif %}
+            <div class="profile-details__details">
+                <div class="node-type">{{ node.type.entity.label }}</div>
 
+                {{ title_prefix }}
+                {% if page %}
+                    <h1 class="page-title">{{ name|render|trim is not empty ? name : label }}</h1>
+                {% else %}
+                    <h2{{ title_attributes.addClass('margin-0 page-title') }}>
+                        <a href="{{ url }}" rel="bookmark">{{ name|render|trim is not empty ? name : label }}</a>
+                    </h2>
+                {% endif %}
+                {{ title_suffix }}
+                <div class="node-position margin-bottom-1">{{ position }}</div>
+                {% if portrait|render|trim is not empty %}
+                    <div class="node-download margin-bottom-1"><a href="{{ portrait_download_url }}"
+                                                                  title="download portrait image" download>Download
+                            Image</a></div>
+                {% endif %}
+                <div class="node-share">{{ drupal_block('sharing_block', wrapper=false) }}</div>
+            </div>
+        </div>
 
         <div{{ content_attributes }}>
-
-            {% if date is not empty %}
-                <div class="node-date margin-bottom-3">{{ date }}</div>
-                <div class="node-share">{{ drupal_block('sharing_block', wrapper=false) }}</div>
-            {% endif %}
-
-            {% if author_freeForm|render|trim %}<div class="node-author__freeform margin-bottom-5 font-body-2xs"><span>Courtesy of </span> {{ author_freeForm }}</div>{% endif %}
-            {% if author_staffProfile|render|trim %}<div class="node-author__staffProfile margin-bottom-5 font-body-2xs"><span>Courtesy of </span>{{ author_staffProfile }}</div>{% endif %}
-
-            {% if teaserImage %}
-                <div class="node-teaserImage img-responsive margin-bottom-7">{{ teaserImage }}</div>
-            {% endif %}
-
-            <div class="node-teaser text-bold margin-bottom-7">{{ teaser }}</div>
 
             {% if body|render|trim is not empty %}
                 <div class="node-body">{{ body }}</div>
             {% endif %}
 
-            {# {% if images|render|trim is not empty %} #}
-            {# <div>{{ images }}</div> #}
-            {# {% endif %} #}
+            <div class="node-dates-service margin-bottom-4">
+                <div class="label text-bold">Dates of Service</div>
+                <span class="date-start">{{ serviceDateStart|slice(0,4) }}</span> - <span
+                        class="date-end">{{ serviceDateEnd ? serviceDateEnd|slice(0,4) : 'Present' }}</span>
+            </div>
 
-            {% if updatedDate|render|trim is not empty%}
+            {% if updatedDate|render|trim is not empty %}
                 <div class="node-updated-date">Updated {{ updatedDate }}</div>
             {% endif %}
 
-            <hr>
 
-            {% if attachment|render|trim is not empty%}
-                <div class="node-attachments margin-bottom-7">
-                    <div class="label text-bold">{{ attachmentNode['#items']|length == 1 ? "Attachment" : "Attachments" }}</div>
-                    {{ usdojMacros.detailedAttachments(attachmentNode,"margin-y-2") }}
-                </div>
-            {% endif %}
-
-            {% if topics|render|trim is not empty%}
-                <div class="node-topics margin-bottom-7">
-                    <div class="label text-bold">Topics</div>
-                    {{ topics }}</div>
-            {% endif %}
-
-            <div class="node-component">
-                <div class="label text-bold margin-bottom-1">Component or Office</div>
-                {{ component }}
-            </div>
         </div>
     </div>
 </article>

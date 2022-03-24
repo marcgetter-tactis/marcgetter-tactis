@@ -19,6 +19,23 @@ i.e.
 ----------------------------------------
 */
 
+/************************************************
+TABLE OF CONTENTS - START
+************************************************
+
+  TOC 00 - Shared Site-wide Styles
+  TOC 01 - Content Type: Profile Page
+
+
+/************************************************
+TABLE OF CONTENTS - END
+************************************************/
+
+
+
+
+
+
 
 /************************************************
 TOC 00 - Shared Site-wide Styles - START
@@ -336,7 +353,9 @@ details {
 //*******************
 //* Node fields START
 //*******************/
-
+.label {
+  margin-bottom: .5em;
+}
 .node-content {
   // similar to .block-field-blocknodepagefield-body
   color: $gray-70;
@@ -1380,4 +1399,40 @@ details {
 
 /************************************************
 TOC 00 - Shared Site-wide Styles - END
+************************************************/
+
+/************************************************
+TOC 01 - Content Type: Node Profile - START
+************************************************/
+.profile-details {
+
+    flex-flow: column;
+    row-gap: 1.5rem;
+
+    .profile-details {
+      &__media{
+        IMG {
+          min-width: 230px;
+        }
+      }
+      &__details{
+        .page-title {
+          margin-top: 8px;
+        }
+
+      }
+    }
+
+
+    @include at-media(tablet) {
+      flex-flow: row nowrap;
+      column-gap: 1.5rem;
+      row-gap: 0;
+    }
+
+
+}
+
+/************************************************
+TOC 01 - Content Type: Node Profile - END
 ************************************************/

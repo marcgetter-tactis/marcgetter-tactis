@@ -49,7 +49,6 @@ settings:
           items:
             - Undo
             - Redo
-            - Accordion
             - ShowBlocks
             - Maximize
             - Table

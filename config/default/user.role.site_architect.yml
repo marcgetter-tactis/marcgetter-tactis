@@ -7,6 +7,7 @@ dependencies:
     - filter.format.full_html
     - filter.format.wysiwyg
     - node.type.case_multi_defendant
+    - node.type.org_chart
   module:
     - block
     - book
@@ -33,6 +34,7 @@ dependencies:
     - seckit
     - shield
     - siteimprove
+    - stage_file_proxy
     - system
     - taxonomy
     - views_ui

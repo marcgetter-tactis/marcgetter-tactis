@@ -97,7 +97,6 @@
         "drupal/media_migration": "^1.0@alpha",
         "drupal/media_revisions_ui": "^2.0",
         "drupal/menu_item_extras": "^2.16",
-        "drupal/migrate_file_to_media": "^2.0",
         "drupal/migrate_tools": "^5.1",
         "drupal/migrate_upgrade": "^3.2",
         "drupal/mysql56": "^1.0",
@@ -146,6 +145,7 @@
         "drupal/workbench": "^1.3",
         "drupal/xmlsitemap": "^1.2",
         "drush/drush": "^10.6",
+        "etienne-martin/mapify": "^1.0",
         "furf/jquery-ui-touch-punch": "^1.0",
         "jackmoore/colorbox": "1.6.4",
         "oomphinc/composer-installers-extender": "^1.1 || ^2",
@@ -320,6 +320,19 @@
                     "url": "https://github.com/thinktandem/migrate_booster.git",
                     "type": "git",
                     "reference": "main"
+                }
+            }
+        },
+        "mapify": {
+            "type": "package",
+            "package": {
+                "name": "etienne-martin/mapify",
+                "version": "1.0.0",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/etienne-martin/Mapify.git",
+                    "type": "git",
+                    "reference": "master"
                 }
             }
         }

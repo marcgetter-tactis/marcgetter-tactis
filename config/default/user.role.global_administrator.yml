@@ -5,6 +5,7 @@ dependencies:
   config:
     - filter.format.wysiwyg
     - node.type.case_multi_defendant
+    - node.type.org_chart
   module:
     - devel
     - filter

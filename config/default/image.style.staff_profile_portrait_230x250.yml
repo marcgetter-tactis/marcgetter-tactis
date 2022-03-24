@@ -1,0 +1,17 @@
+uuid: e42540a1-b4a5-4ea0-852c-c890d941a5cb
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: staff_profile_portrait_230x250
+label: 'Staff Profile Portrait (230x250)'
+effects:
+  c6ff38d0-2a5a-4b03-a425-7343cc9fbfce:
+    uuid: c6ff38d0-2a5a-4b03-a425-7343cc9fbfce
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 230
+      height: 250
+      crop_type: focal_point

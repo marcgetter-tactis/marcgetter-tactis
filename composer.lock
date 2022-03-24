@@ -17999,6 +17999,16 @@
             "time": "2021-12-13T16:54:56+00:00"
         },
         {
+            "name": "etienne-martin/mapify",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/etienne-martin/Mapify.git",
+                "reference": "master"
+            },
+            "type": "drupal-library"
+        },
+        {
             "name": "ezyang/htmlpurifier",
             "version": "v4.14.0",
             "source": {

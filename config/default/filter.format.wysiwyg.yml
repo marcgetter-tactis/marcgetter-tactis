@@ -37,7 +37,9 @@ filters:
       loading: ''
       preload: false
       background: false
+      box_media_style: ''
       responsive_image_style: ''
+      box_style: ''
       image_style: ''
       media_switch: ''
       ratio: ''

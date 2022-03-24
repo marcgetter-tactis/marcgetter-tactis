@@ -111,6 +111,7 @@
     {{ title_suffix }}
 
     <div class="node-date">{{ content.field_date }}</div>
+    <div class="node-share">{{ drupal_block('sharing_block', wrapper=false) }}</div>
 
     <div{{ content_attributes.addClass("node-body")}}>
       {{ content.field_body }}

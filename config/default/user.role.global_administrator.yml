@@ -8,6 +8,7 @@ dependencies:
     - node.type.org_chart
   module:
     - devel
+    - field_permissions
     - filter
     - group
     - linkchecker
@@ -65,6 +66,7 @@ permissions:
   - 'change layouts in place editing'
   - 'create case_multi_defendant content'
   - 'create field_archived'
+  - 'create field_other_groups'
   - 'create fieldable general_info'
   - 'create fieldable govdelivery'
   - 'create fieldable image'
@@ -147,6 +149,7 @@ permissions:
   - 'edit any webform content'
   - 'edit field_archived'
   - 'edit field_image_attribution'
+  - 'edit field_other_groups'
   - 'edit fieldable general_info'
   - 'edit fieldable govdelivery'
   - 'edit fieldable image'
@@ -156,6 +159,7 @@ permissions:
   - 'edit fieldable usasearch'
   - 'edit meta tags'
   - 'edit own field_archived'
+  - 'edit own field_other_groups'
   - 'edit own image_map content'
   - 'edit own opendata_dataset content'
   - 'edit own org_chart content'
@@ -227,9 +231,11 @@ permissions:
   - 'use workbench_moderation needs review tab'
   - 'view all unpublished content'
   - 'view field_archived'
+  - 'view field_other_groups'
   - 'view moderation history'
   - 'view moderation messages'
   - 'view own field_archived'
+  - 'view own field_other_groups'
   - 'view own files'
   - 'view pane admin links'
   - 'view scheduled content'

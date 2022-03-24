@@ -1427,7 +1427,7 @@ TOC 01 - Content Type: Node Profile - START
     }
 
 
-    @include at-media(tablet) {
+    @include at-media(desktop) {
       flex-flow: row nowrap;
       column-gap: 1.5rem;
       row-gap: 0;
